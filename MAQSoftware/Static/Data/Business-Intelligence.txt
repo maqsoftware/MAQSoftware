@@ -1,0 +1,41 @@
+<h1 class="DataTitle SemiBold Color58585a">Business Intelligence</h1>
+<article class="LeftArticle">
+    <img class="BlockTag ExpertiseImage" src="../../Static/Images/Expertise/Expertise-BI.jpg" alt="Business Intelligence" title="Business Intelligence" />
+    <p class="DataSubContent">Thanks to our marketing domain expertise, we have successfully delivered a wide range of solutions including 
+	campaign management, website optimization, data analysis, and data warehousing. We have also delivered multiple database applications 
+	using data from a range of sales, and marketing databases of Microsoft Corporation.</p>
+    <p class="DataSubContent SemiBold Color3f3f3f">Marketing campaign setup, reporting, and analysis</p>
+    <ul class="MarginTop5 CircleBullets">
+        <li>Plan and setup integrated infrastructure for your campaigns</li>
+        <li>Analyze web traffic data beyond traditional click stream reports</li>
+        <li>Actionable metrics, benchmarking, and visualization</li>
+    </ul>
+    <p class="DataSubContent SemiBold Color3f3f3f">Optimization</p>
+    <ul class="MarginTop5 CircleBullets">        
+        <li>Controlled experiments leveraging A/B, and multivariate testing</li>
+        <li>Optimize site structure and information architecture</li>
+        <li>Develop and conduct user surveys, site usability, and user experience analysis</li>
+    </ul>
+    <p class="DataSubContent SemiBold Color3f3f3f">Data analysis services</p>
+    <ul class="MarginTop5 CircleBullets">
+        <li>Segment, personalize, and pattern behaviors</li>
+        <li>Multi-campaign attributions and multi-channel analytics</li>
+        <li>Competitive intelligence analysis</li>
+    </ul>
+	<p class="DataSubContent SemiBold Color3f3f3f">Data warehousing and data mining </p>
+    <ul class="MarginTop5 CircleBullets">
+        <li>Design, build, and maintain ETL packages, data marts, and OLAP cubes</li>
+        <li>Data mining and predictive analysis</li>
+    </ul>
+	<p class="DataSubContent SemiBold Color3f3f3f">Reports</p>
+    <ul class="MarginTop5 CircleBullets">
+        <li>Actionable dashboards, scorecards, and production reports</li>
+        <li>Design and develop applications to provide Single Sign On (SSO) facility</li>
+        <li>Enable ad hoc reporting and publishing capabilities</li>
+        <li>Develop custom dashboards, and reports integrated on SharePoint environment</li>
+        <li>Automated reports verification using Visual Studio Coded UI</li>
+    </ul>
+</article>
+<article class="RightArticle">
+	<img class="ProfileImage BlockTag MarginTop35 PadLeft4" src="../Static/Images/Expertise/SQL-Server.png" alt="SQL Server 2012 Business Intelligence" title="SQL Server 2012 Business Intelligence" />
+</article>

@@ -1,0 +1,36 @@
+<h1 class="DataTitle SemiBold Color58585a">SharePoint</h1>
+<article class="LeftArticle">
+    <img class="BlockTag ExpertiseImage" src="../../Static/Images/Expertise/Expertise-Sharepoint.jpg" alt="SharePoint" title="SharePoint" />
+    <p class="DataSubContent">MAQ Software has delivered over 100 SharePoint projects. 
+	We have a large team with vast experience in delivering SharePoint projects for various teams at Microsoft Corporation. 
+	We have processes and tools for fast paced SharePoint 2013 content migration, development and test.</p>
+    <p class="MarginTop35 SemiBold Color3f3f3f">SharePoint 2013</p>
+    <ul class="MarginTop5 CircleBullets">
+        <li>70-488, 70-331, and 70-332 certified team of developers and administrators</li>
+        <li>Web Content Management and search features</li>
+        <li>Delivered projects leveraging on latest SharePoint offerings &#45; Cross site publishing, Web Content Management, Display Templates, Content Search Web parts, etc.</li>
+        <li>Developed SharePoint apps &#45; available for download via <a class="BackLink" target="_blank" href="https://store.office.com/">Office store</a></li>
+    </ul>
+    <p class="MarginTop35 SemiBold Color3f3f3f">SharePoint Online</p>
+    <ul class="MarginTop5 CircleBullets">
+        <li>Delivered projects on SharePoint Online for various teams in Microsoft</li>
+        <li>Developed Windows store apps and mobile apps leveraging integrated with SharePoint Online sites</li>
+    </ul>
+    <p class="MarginTop35 SemiBold Color3f3f3f">Services</p>
+    <p class="MarginTop5 PadLeft10">SharePoint 2013, SharePoint Online</p>
+    <ul class="MarginTop5 CircleBullets">
+        <li>Branding SharePoint sites</li>
+        <li>Improving content management by developing portals for people to access information </li>
+        <li>Improving people collaboration by designing and developing efficient authoring, publishing and approval workflows</li>
+        <li>Implementing framework for preview, authoring, rendering and publishing content (e.g. Content Services Platform)</li>
+        <li>Migrating from Microsoft Office SharePoint Server 2007 to SharePoint Server 2010 to SharePoint 2013</li>
+        <li>Developing SharePoint 2013 Line of Business Apps</li>
+        <li>Hosting on corporate infrastructure to enable self-management with limited support from IT teams</li>
+        <li>Integrating Active Directory Federation Service for single click log on</li>
+        <li>Creating and deploying custom web parts for specific requirements</li>
+        <li>Implementing Business Intelligence reports in aiding decision making</li>
+    </ul>
+</article>
+<article class="RightArticle">
+	<img class="ProfileImage BlockTag MarginTop35" src="../Static/Images/Expertise/Sharepoint.png" alt="SharePoint" title="SharePoint" />
+</article>
