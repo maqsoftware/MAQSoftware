@@ -1,0 +1,95 @@
+﻿<h1 class="DataTitle SemiBold Color58585a">Our Achievements</h1>
+<section class="Clear TopMargin LeftArticle FullWidth">
+    <aside class="RecognitionImage FloatLeft">
+        <img src="../../Static/Images/Recognition/Amazon_Partner.png" alt="Amazon Consulting Partner, 2014" title="Amazon Consulting Partner, 2014" />
+    </aside>
+    <aside class="RecognitionContent FloatLeft">
+        <p class="SemiBold Color3f3f3f">Amazon Consulting Partner, 2014</p>
+        <p>
+            MAQ Software is a Consulting Partner for the Amazon Web Services based on our technical expertise and verified client references.                            
+        </p>
+    </aside>
+</section>
+<section class="Clear TopMargin LeftArticle FullWidth">
+    <aside class="RecognitionImage FloatLeft">
+        <img src="../../Static/Images/Recognition/BSI.png" alt="ISO 27001:2005 – Information Security, 2012" title="ISO 27001:2005 – Information Security, 2012" />
+    </aside>
+    <aside class="RecognitionContent FloatLeft">
+        <p class="SemiBold Color3f3f3f">ISO 27001:2005 – Information Security, 2012</p>
+        <p>
+            MAQ Software was certified ISO 27001:2005 by British Standards Institution.                            
+        </p>
+        <p class="DataSubContent">
+            ISO 27001 standards, the only auditable international standard, provides an 
+            ISMS model for adequate and proportionate security controls to protect information assets.
+        </p>
+    </aside>
+</section>
+<section class="Clear TopMargin LeftArticle FullWidth">
+    <aside class="RecognitionImage FloatLeft">
+        <img src="../../Static/Images/Recognition/Inc5000.png" alt="Inc. 5000, Fastest Growing Companies in America, 2007-2012" title="Inc. 5000, Fastest Growing Companies in America, 2007-2012" />
+    </aside>
+    <aside class="RecognitionContent FloatLeft">
+        <p class="SemiBold Color3f3f3f">Inc. 5000, Fastest Growing Companies in America, 2007-2012</p>
+        <p>
+            In 2012, MAQ Software was ranked as one of the fastest growing private companies in America for six years in a row.
+        </p>
+        <p class="DataSubContent">With this accomplishment, MAQ Software joined the rarified company of enterprises who have appeared on the list multiple times.</p>
+        <p class="DataSubContent">
+            For more than 30 years, Inc.’s list has served as evidence of the significant accomplishments of enterprises such as Intuit, 
+            Zappos, Under Armour, Microsoft, Jamba Juice, Timberland, Visa, Clif Bar, Patagonia and Oracle.
+        </p>
+    </aside>
+</section>
+<section class="Clear TopMargin LeftArticle FullWidth">
+    <aside class="RecognitionImage FloatLeft">
+        <img src="../../Static/Images/Recognition/MSPreferred.png" alt="Microsoft Preferred Vendor, 2005-2011" title="Microsoft Preferred Vendor, 2005-2011" />
+    </aside>
+    <aside class="RecognitionContent FloatLeft">
+        <p class="SemiBold Color3f3f3f">Microsoft Preferred Vendor, 2005-2011</p>
+        <p>
+            MAQ Software is a preferred vendor for Microsoft since 2005. This confirms Microsoft’s trust in our quality and delivery model.
+        </p>
+    </aside>
+</section>
+<section class="Clear TopMargin LeftArticle FullWidth">
+    <aside class="RecognitionImage FloatLeft">
+        <img src="../../Static/Images/Recognition/CMMI.png" alt="SEI CMMI - Level 3, 2009" title="SEI CMMI - Level 3, 2009" />
+    </aside>
+    <aside class="RecognitionContent FloatLeft">
+        <p class="SemiBold Color3f3f3f">SEI CMMI - Level 3, 2009</p>
+        <p>
+            MAQ Software was certified SEI CMMI Level 3 by QAI India.                            
+        </p>
+        <p class="DataSubContent">
+            At Level 3, defined and documented standard processes are established and subject to some degree of improvement over time. These standard processes are used to establish consistency of process performance across the organization.
+        </p>
+    </aside>
+</section>
+<section class="Clear TopMargin LeftArticle FullWidth">
+    <aside class="RecognitionImage FloatLeft">
+        <img src="../../Static/Images/Recognition/Partner.png" alt="Microsoft Partner" title="Microsoft Silver Partner for Business Intelligence, Application Development and Collaboration and Content" />
+    </aside>
+    <aside class="RecognitionContent FloatLeft">
+        <p class="SemiBold Color3f3f3f">Microsoft Silver Partner for Business Intelligence, Application Development and Collaboration and Content</p>
+        <p>
+            Microsoft silver competency, awarded by Microsoft, validates MAQ Software’s skill set in Business Intelligence, Application Development and Collaboration and Content.
+        </p>
+    </aside>
+</section>
+<section class="Clear TopMargin LeftArticle FullWidth">
+    <aside class="RecognitionImage FloatLeft">
+        <img src="../../Static/Images/Recognition/FastestGrowing.png" alt="Puget Sound Business" title="Puget Sound Business Journal's 100 Fastest-Growing Private Companies in Washington State, 2005-2010" />
+    </aside>
+    <aside class="RecognitionContent FloatLeft">
+        <p class="SemiBold Color3f3f3f">Puget Sound Business Journal's 100 Fastest-Growing Private Companies in Washington State, 2005-2010</p>
+        <p>
+            MAQ Software is recognized as one of the fastest growing private companies in Washington State for five consecutive years.
+            (To make the Puget Sound Business Journal’s list of 100 Fastest-Growing Private Companies, a company must have achieved rapid growth for three years).
+        </p>
+        <p class="DataSubContent">
+            MAQ Software is also featured in the Hall of Fame. (For companies that have made to the list four or more years, the Business Journal 
+            acknowledges by adding them to the Hall of Fame).
+        </p>
+    </aside>
+</section>

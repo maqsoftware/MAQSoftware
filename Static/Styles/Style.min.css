@@ -1,0 +1,1307 @@
+﻿html {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    overflow-y: scroll;
+}
+
+.Loading {
+    background: url(../Images/Loading.gif) no-repeat center center;
+}
+
+.dvBackground {
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.PagePadding {
+    padding-top: 62px;
+    padding-bottom: 200px;
+}
+
+.MobileNavExpand {
+    margin-left: 5px;
+    margin-top: -20px;
+    width: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+.MobileNavIcon {
+    width: 30px;
+    display: none;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+    .MobileNavIcon > p {
+        background-color: #bb141a;
+        height: 3px;
+        margin: 3px 0;
+    }
+
+#MainContainer {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+    #MainContainer * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        behavior: url(boxsizing.htc);
+    }
+
+.dvLimitedWith {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#dvHeader {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 100px;
+    background-color: #fff;
+    z-index: 1000;
+    border-bottom: 2px solid #CCC;
+}
+
+#PageContainer {
+    margin-top: 100px;
+    background: url(../Images/bg.png) repeat;
+}
+
+#dvFooter {
+    background-color: #424344;
+    overflow: hidden;
+}
+
+.HdrContainer {
+    margin-top: 15px;
+}
+
+    .HdrContainer a {
+        padding: 5px 0;
+    }
+
+#SiteNavigation .HdrItemSpace {
+    margin-left: 6%;
+}
+
+#SiteNavigation .SecondlevelNav {
+    display: none;
+}
+
+.aSiteLinks {
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #222;
+}
+
+.dvSiteMap {
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+.pSiteMapTitle {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 17px;
+}
+
+.dvSiteMap .pSiteMapTitle:hover {
+    cursor: pointer;
+    color: #a7a7a7;
+}
+
+.aSiteMapLink {
+    display: block;
+    font-size: 14px;
+    color: #a7a7a7;
+    cursor: pointer;
+}
+
+.aSiteMapLink {
+    margin-bottom: 20px;
+}
+
+.pMoveDown {
+    margin-top: 53px;
+    margin-bottom: 0;
+}
+
+.dvSiteMap .aSiteMapLink:hover {
+    color: #fff;
+}
+
+.dvSiteMapLast {
+    margin-left: 15px;
+}
+
+.SiteMapHolder {
+    width: 79%;
+}
+
+.dvFollowUS {
+    width: 160px;
+    margin-top: 50px;
+}
+
+.imgFollowUS {
+    margin: 15px 10px 0 0;
+}
+
+a .imgFollowUS {
+    margin-top: 0;
+}
+
+#dvCopyright {
+    font-size: 14px;
+    color: #ccc;
+    margin: 30px 0;
+}
+
+.FBLikeText {
+    color: #fff;
+    font-size: 12px;
+    height: 30px;
+    width: 120px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.FBButton {
+    height: 20px;
+    width: 80px;
+    overflow: hidden;
+}
+
+.dvSliderHolder {
+    height: 425px;
+    background-color: #ddd;
+    position: relative;
+}
+
+#ExpertiseWrapper {
+    position: relative;
+    padding-top: 38.1%;
+    overflow: hidden;
+    border-top: 4px solid #bb141a;
+    background-size: 100% 100%;
+}
+
+.MainContent .pTagLine {
+    line-height: 27px;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.slideImage .ActiveBullet {
+    background-color: #0072c6 !important;
+}
+
+.MobileDisplay {
+    padding: 20px 0 10px 38%;
+    display: none;
+}
+
+#ExpertiseWrapper .slideImage {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    width: 172px;
+    height: 15px;
+    z-index: 2;
+}
+
+.MobileDisplay .MoveExpertiseSlider {
+    margin-right: 20px;
+    background-color: #ccc;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.MobileDisplay .ActiveBullet {
+    background-color: #595959 !important;
+}
+
+.MoveExpertiseSlider {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    margin-right: 13px;
+    cursor: pointer;
+    -moz-box-shadow: 0 0 1px 1px #999;
+    -webkit-box-shadow: 0 0 1px 1px #999;
+    box-shadow: 0 0 1px 1px #999;
+}
+
+#ContinuousDeliveryBullets {
+    width: 120px;
+    overflow: hidden;
+    float: right;
+    margin-top: 12px;
+}
+
+    #ContinuousDeliveryBullets .CDSliderBullet {
+        -webkit-border-radius: 13px;
+        -moz-border-radius: 13px;
+        border-radius: 13px;
+        width: 13px;
+        height: 13px;
+        background: #c9c9c9;
+        margin-left: 13px;
+        cursor: pointer;
+    }
+
+    #ContinuousDeliveryBullets .ActiveBullet {
+        background-color: #0072c6;
+    }
+
+.DisabledColor {
+    color: #ccc !important;
+    cursor: default !important;
+}
+
+.ClientSlider {
+    height: 100px;
+    overflow: hidden;
+}
+
+#leftArrClick, #rightArrClick {
+    width: 40px;
+    height: 100px;
+    cursor: pointer;
+}
+
+#rightArrClick {
+    background: url(../Images/Slider/Arrow-Right.png) no-repeat center center;
+}
+
+#leftArrClick {
+    background: url(../Images/Slider/Arrow-Left.png) no-repeat center center;
+}
+
+.SliderArrow img {
+    margin-top: 40px;
+}
+
+.ClientImageWrapper {
+    width: 92%;
+    overflow: hidden;
+    height: 100px;
+}
+
+#ClientImageBanner {
+    position: relative;
+    height: 100%;
+    width: 200%;
+    overflow: hidden;
+}
+
+#innerSliderDiv {
+    position: absolute;
+    left: 340px;
+    z-index: 0;
+}
+
+.inDiv {
+    height: 100%;
+    width: 186px;
+}
+
+#div1 {
+    background: url(../Images/Slider/Amazon-Logo.png) no-repeat center center;
+}
+
+#div2 {
+    background: url(../Images/Slider/MS-Logo.png) no-repeat center center;
+}
+
+#div3 {
+    background: url(../Images/Slider/Aristos-Logo.png) no-repeat center center;
+}
+
+#div4 {
+    background: url(../Images/Slider/BharatPetroleum_Logo.png) no-repeat center center;
+}
+
+#div5 {
+    background: url(../Images/Slider/Resmed-Logo.png) no-repeat center center;
+}
+
+#div6 {
+    background: url(../Images/Slider/SwedishLogo.png) no-repeat center center;
+}
+
+#div7 {
+    background: url(../Images/Slider/Tmobile-Logo.png) no-repeat center center;
+}
+
+#div8 {
+    background: url(../Images/Slider/HTC-Logo.png) no-repeat center center;
+}
+
+#div9 {
+    background: url(../Images/Slider/Wunderman-Logo.png) no-repeat center center;
+}
+
+#div10 {
+    background: url(../Images/Slider/WashingtonYouthLogo.png) no-repeat center center;
+}
+
+.dvExpertiseSlider {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../Images/Slider/Business-Intelligence.jpg) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+#BackSlider {
+    left: 1000px;
+}
+
+.dvExpertiseSlider .dvSliderContent {
+    width: 600px;
+    top: 86.5px;
+    position: absolute;
+    left: 5%;
+}
+
+.pSliderContentTitle {
+    font-size: 57px;
+    color: #fff;
+}
+
+.pSliderContent {
+    font-size: 21px;
+    color: #fff;
+    margin-top: 13px;
+    line-height: 30px;
+    width: 400px;
+}
+
+.pLearnMore {
+    font-size: 16px;
+    color: #2092e7;
+    margin-top: 5%;
+    cursor: pointer;
+    width: 130px;
+}
+
+.pTagLine {
+    font-size: 21px;
+    color: #3f3f3f;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.MainContent .pStatsHolder {
+    margin-top: 13px;
+}
+
+.spStats {
+    font-size: 48px;
+    color: #bb141a;
+}
+
+.spDesc {
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+    color: #595959;
+    line-height: 23px;
+}
+
+.MainContent {
+    padding: 0 40px;
+}
+
+.MgnR65 {
+    margin-right: 6%;
+}
+
+.dvContentHolder {
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+    .dvContentHolder > div {
+        border-top: 5px solid #555;
+        width: 413px;
+        border-top-color: #0072c6;
+        padding-top: 10px;
+    }
+
+.pContentTitle {
+    font-size: 21px;
+    margin-top: 8px;
+    color: #0072c6;
+}
+
+.pSubContent {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#ShowNews {
+    margin-top: 15px;
+}
+
+.pContent {
+    min-height: 80px;
+    height: auto !important;
+    height: 80px;
+    margin-top: 10px;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.dvClients {
+    height: 100px;
+    margin-top: 90px;
+    background-color: #fff;
+}
+
+.Pad40 {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.Pad13 {
+    padding-top: 13px;
+}
+
+.FacebookPlugin {
+    height: 25px;
+}
+
+.dvDeliveryApproachIcon, .FacebookPlugin, .AddressSpacing {
+    margin-top: 15px;
+}
+
+    .dvDeliveryApproachIcon .CDIcon {
+        margin-left: 9%;
+        background-repeat: no-repeat;
+    }
+
+    .dvDeliveryApproachIcon #CD0 {
+        width: 42px;
+        height: 42px;
+        background-position: -42px 0;
+        margin-top: 5px;
+        background-repeat: no-repeat;
+    }
+
+    .dvDeliveryApproachIcon #CD1 {
+        width: 28px;
+        height: 42px;
+        background-position: 0 0;
+    }
+
+    .dvDeliveryApproachIcon #CD2 {
+        width: 30px;
+        height: 42px;
+        background-position: 0 0;
+    }
+
+    .dvDeliveryApproachIcon #CD3 {
+        width: 40px;
+        height: 42px;
+        background-position: 0 0;
+        margin-top: 10px;
+    }
+
+.CDBulletHolder {
+    overflow: hidden;
+    height: 33px;
+}
+
+.Clear {
+    clear: both;
+}
+
+#PageNavLink a {
+    display: block;
+    margin-bottom: 32px;
+    text-transform: none;
+    margin-top: 5px;
+}
+
+#DataSection {
+    margin-left: 10px;
+    width: 78%;
+    min-height: 500px;
+    height: auto !important;
+    height: 500px;
+}
+
+.Margin5Less {
+    margin-top: -5px;
+}
+
+.SemiBold {
+    font-family: "Segoe UI Semibold",Tahoma,Verdana,Arial,sans-serif;
+}
+
+.FontSize24 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.DataTitle {
+    font-size: 40px;
+    margin-top: -4px;
+}
+
+.Datatagline {
+    font-size: 24px;
+    line-height: 30px;
+    color: #3f3f3f;
+}
+
+.AboutTagLine {
+    font-style: italic;
+    color: #bb141a;
+    margin-top: 30px;
+    font-size: 35px;
+    line-height: 40px;
+}
+
+.BlockTag {
+    display: block;
+}
+
+.DataContent {
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+.AboutImage, .ExpertiseImage {
+    width: 100%;
+}
+
+.LeftArticle {
+    font-size: 16px;
+    line-height: 25px;
+    color: #595959;
+    width: 68%;
+    float: left;
+}
+
+.FullWidth {
+    width: 100%;
+    clear: both;
+}
+
+.RightArticle {
+    width: 28%;
+    float: right;
+    margin-left: 0;
+}
+
+    .RightArticle .spStats {
+        color: #0072c6;
+    }
+
+    .RightArticle .pStatsHolder {
+        margin-top: 18px;
+    }
+
+.ClientImage {
+    float: left;
+    width: 48%;
+    height: 150px;
+    border: 1px solid silver;
+    cursor: pointer;
+    margin: 0 5px 5px 0;
+}
+
+#Client1 {
+    background: url(../Images/Slider/MS-Logo.png) no-repeat center center;
+}
+
+#Client2 {
+    background: url(../Images/Slider/Wunderman-Logo.png) no-repeat center center;
+}
+
+#Client3 {
+    background: url(../Images/Slider/Amazon-Logo.png) no-repeat center center;
+}
+
+#Client4 {
+    background: url(../Images/Slider/HTC-Logo.png) no-repeat center center;
+}
+
+#Client5 {
+    background: url(../Images/Slider/Tmobile-Logo.png) no-repeat center center;
+}
+
+#Client6 {
+    background: url(../Images/Slider/Aristos-Logo.png) no-repeat center center;
+}
+
+#Client7 {
+    background: url(../Images/Slider/Resmed-Logo.png) no-repeat center center;
+}
+
+#Client8 {
+    background: url(../Images/Slider/WashingtonYouthLogo.png) no-repeat center center;
+}
+
+#Client9 {
+    background: url(../Images/Slider/SwedishLogo.png) no-repeat center center;
+}
+
+#Client10 {
+    background: url(../Images/Slider/BharatPetroleum_Logo.png) no-repeat center center;
+}
+
+.Testimonial {
+    font-style: italic;
+    font-size: 16px;
+    color: #0072c6;
+    line-height: 24px;
+    margin-top: 35px;
+}
+
+.MgntPeople {
+    margin-top: 60px;
+}
+
+.PersonDesg {
+    font-size: 16px;
+    margin-top: 9px;
+    color: #3f3f3f;
+}
+
+.PersonDescHolder {
+    margin-top: 9px;
+    border-top: 1px solid #595959;
+    padding-top: 9px;
+    overflow: hidden;
+}
+
+.PersonImg {
+    width: 194px;
+    height: 269px;
+    margin-top: 8px;
+    background-color: silver;
+}
+
+.CEO {
+    background: url(../Images/Management/Rajeev.jpg) no-repeat;
+}
+
+.PC {
+    background: url(../Images/Management/Arpita.jpg) no-repeat;
+}
+
+.PersonDesc {
+    width: 475px;
+    margin-left: 25px;
+}
+
+.RecognitionImage {
+    width: 130px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.RecognitionContent {
+    width: 73%;
+    margin-left: 5%;
+}
+
+.TopMargin {
+    margin-top: 70px !important;
+    overflow: hidden;
+}
+
+#WinAzureImg {
+    margin-left: -2px;
+}
+
+.PadLeft4 {
+    line-height: 23px;
+    color: #595959;
+}
+
+.PadLeft10 {
+    padding-left: 10px;
+}
+
+.Pad10 {
+    padding-top: 10px;
+}
+
+.Pad15 {
+    padding-top: 15px;
+}
+
+.tabInActive {
+    color: #868686;
+}
+
+.Font24px {
+    font-size: 24px;
+    color: #3f3f3f;
+}
+
+.MarginBoT35 {
+    margin-bottom: 35px;
+}
+
+.MarginTop94 {
+    margin-top: 94px;
+}
+
+.MarginTop5 {
+    margin-top: 5px;
+}
+
+.CircleBullets {
+    list-style-type: disc;
+    padding-left: 35px;
+}
+
+.PosAbsolute {
+    position: absolute;
+}
+
+.PosRelative {
+    position: relative;
+}
+
+.AppDevSlider {
+    width: 75%;
+    height: 74px;
+}
+
+.AppDevSliderLabel {
+    color: #0072c6;
+    width: 22%;
+    margin-top: 15px;
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+.AppDevNavLeftArrow, .AppDevNavRightArrow {
+    width: 25px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.AppDevNavRightArrow {
+    background: url(../Images/Slider/Arrow-Right.png) no-repeat right center;
+}
+
+.AppDevNavLeftArrow {
+    background: url(../Images/Slider/Arrow-Left.png) no-repeat left center;
+}
+
+.AppDevContent {
+    width: 281px;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+}
+
+.AppSliderContentWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+    .AppSliderContentWrapper img {
+        z-index: 0;
+        position: absolute;
+        left: 0;
+    }
+
+.DeliveryApproachSwitch {
+    float: left;
+    padding-left: 25px;
+    cursor: pointer;
+    background: url(../Images/Profile/Tick-gray.png) no-repeat 0 0;
+}
+
+    .DeliveryApproachSwitch:hover {
+        color: #0072c6;
+        background: url(../Images/Profile/TickMark.png) no-repeat 0 0;
+    }
+
+#ProfileData {
+    min-height: 500px;
+    height: auto !important;
+    height: 500px;
+}
+
+.CarrersDataSection {
+    font-size: 16px;
+    line-height: 25px;
+    width: 70%;
+}
+
+#CareerLinks {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.CarrersTabs {
+    margin-right: 10%;
+    font-size: 21px;
+    color: #0072c6;
+}
+
+    .CarrersTabs:nth-child(3), .CarrersTabs:first-child + a + a {
+        margin-right: 0;
+    }
+
+.MarginLeftTop {
+    margin-left: -25px;
+    margin-top: 25px;
+}
+
+#CareersRightTab {
+    width: 250px;
+}
+
+.CareersRight {
+    width: 25%;
+    margin-left: 5%;
+}
+
+    .CareersRight div p, #CareersRightTab ul, .ImageTitle {
+        line-height: 23px;
+        color: #595959;
+    }
+
+.ImageTitle {
+    margin-top: 5px;
+}
+
+#CareersRightTitle {
+    margin-top: 105px;
+}
+
+.MarginUp {
+    margin-top: -38px;
+    font-size: 16px;
+}
+
+.BorderBottom {
+    border-bottom: 1px dotted #595959;
+    width: 100%;
+    clear: both;
+    padding-bottom: 10px;
+}
+
+.LoadingHeight {
+    min-height: 300px;
+    height: auto !important;
+    height: 300px;
+    overflow: visible;
+    padding-top: 5px;
+}
+
+#CareerLinkHolder .pTagLine {
+    font-size: 18px;
+}
+
+#CareerLinkHolder b, #CareerLinkHolder b span {
+    font-size: 16px;
+    color: #222;
+    line-height: 23px;
+}
+
+.DataSubContent {
+    margin-top: 15px;
+}
+
+.SecondNav {
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.MarginBoT25 {
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+
+#BreadCrumb {
+}
+
+.RedmondMainTab, #CareersBlockTag {
+    clear: both;
+    margin-top: 25px;
+}
+
+#CareersBlockTag {
+    width: 100%;
+}
+
+.Font20 {
+    font-size: 20px;
+}
+
+.Colorred {
+    color: #bb141a;
+}
+
+.Segoe20 {
+    font-size: 20px;
+    color: #bb141a;
+}
+
+.Font16 a {
+    cursor: pointer;
+    color: #bb141a;
+}
+
+.NewsContent {
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.PubDate {
+    font-size: 13px;
+    color: #222;
+    margin: 10px 0;
+}
+
+b {
+    font-weight: 700;
+}
+
+#LoadPageNews {
+    min-height: 500px;
+    height: auto !important;
+    height: 500px;
+}
+
+#LoadingDiv {
+    position: absolute;
+    left: 650px;
+    top: 440px;
+}
+
+#CareerLoading {
+    position: absolute;
+    top: 750px;
+    left: 600px;
+}
+
+#ClientContainer {
+    position: absolute;
+    left: 50px;
+}
+
+.AddressHolder aside {
+    width: 31.3%;
+}
+
+    .AddressHolder aside img {
+        width: 100%;
+    }
+
+.ML30 {
+    margin: 0 3%;
+}
+
+.VwMap {
+    color: #0072c6;
+}
+
+.AddressHolder .VwMap {
+    margin-top: 7px;
+    margin-right: 5%;
+    cursor: pointer;
+}
+
+.Address {
+    margin-top: 18px;
+    color: #595959;
+    padding-top: 18px;
+}
+
+    .Address a {
+        height: 20px;
+    }
+
+.addressContent {
+    margin-bottom: 8px;
+}
+
+#Direction {
+    width: 35%;
+}
+
+#MapDirection {
+    overflow: hidden;
+    display: none;
+}
+
+#MapContainer {
+    width: 60%;
+    margin-left: 5%;
+}
+
+#myMap {
+    position: relative;
+    width: 100%;
+}
+
+.HYDDirection {
+    list-style: decimal;
+    margin-left: 2em;
+}
+
+    .HYDDirection li {
+        list-style: decimal outside;
+        margin: 1em;
+    }
+
+.CurrentAddress {
+    font-size: 16px;
+    line-height: 24px;
+    color: #7c7c7c;
+}
+
+.DirectionTitle {
+    margin: 20px 0 10px;
+}
+
+.DirectionContainer {
+    min-height: 100px;
+    height: auto !important;
+    height: 100px;
+}
+
+.DirectionTitle, .DirectionContainer {
+    font-size: 14px;
+    color: #595959;
+}
+
+.Button {
+    width: 20%;
+    background-color: #0072c6;
+    text-align: center;
+    margin-left: 2%;
+    color: #fff;
+    cursor: pointer;
+    padding: 3px 0 5px;
+}
+
+#FromAddress {
+    width: 50%;
+}
+
+.title {
+    font-size: 24px;
+    color: #222;
+    width: 635px;
+    margin-bottom: 10px;
+}
+
+.content {
+    width: 635px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #595959;
+    line-height: 23px;
+}
+
+.NewsItem {
+    width: 635px;
+    margin-right: 46px;
+}
+
+.date {
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.asideNewsContent {
+    width: 220px;
+    margin-top: 20px;
+}
+
+.NextPrevious {
+    clear: both;
+    font-size: 20px;
+    color: #bb141a;
+}
+
+.NewsLink a {
+    font-size: 13px;
+    color: #bb141a;
+    line-height: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.title1 {
+    font-size: 24px;
+    color: #222;
+    width: 635px;
+}
+
+.NewsContent1 {
+    font-size: 16px;
+    color: #222;
+}
+
+.hide, ::-ms-clear {
+    display: none;
+    overflow: hidden;
+    height: 0;
+}
+
+#u_0_3 span, .FBButton span {
+    color: #fff !important;
+}
+
+.FloatLeft {
+    float: left;
+}
+
+#FaceSlider {
+    left: 0;
+}
+
+#dvContent2 .ReadMore:hover, .Font16 a:hover, .NewsLink a:hover, .BackLink:hover, .HoverGreen:hover, .Colorred:hover {
+    color: #8d0d12;
+}
+
+.Active, .aSiteLinks:hover, #CareerLinks a:hover {
+    color: #bb141a;
+}
+
+.m30 {
+    margin-top: 30px;
+}
+
+.SliderArrow, #SiteLogo, .BackLink, .Segoe20, #ClientImageBanner div, .footSliderImg1, #dvContent2 .ReadMore, .AppSliderContentWrapper img, .AppDevLeftArrow img, .AppDevRightArrow img, .SecondNav, .Pointer, .ProfileClick, .ExpertiseClick, #DeliveryApproachLink, #DeliveryApproachLink *, .Colorred, .CarrersTabs {
+    cursor: pointer;
+}
+
+.titlePress {
+    margin-top: 50px;
+}
+
+.OverflowHide, .AddressHolder {
+    overflow: hidden;
+}
+
+#dvContent2 .pContentTitle {
+    color: #0072c6;
+}
+
+.FloatRight, .NextPrevious #next {
+    float: right;
+}
+
+.NavSection {
+    width: 20%;
+}
+
+.Praise {
+    margin-top: 18px;
+}
+
+#DataSection .LeftArticle {
+    margin-top: 25px;
+}
+
+.ProfileImage, .MarginTop35, #Pagination {
+    margin-top: 35px;
+}
+
+.tabActive, .BackLink {
+    color: #bb141a;
+    cursor: pointer;
+}
+
+.DeliveryApproach .tabActive {
+    color: #0072c6;
+    background: url(../Images/Profile/TickMark.png) no-repeat 0 0;
+}
+
+#CareerLinkHolder span, .Font16, .Font16 div, .Font16 span, .Font16 div {
+    font-size: 16px;
+    color: #595959;
+    line-height: 23px;
+}
+
+.newsTitle, .maintitle1 {
+    font-size: 40px;
+    color: #3f3f3f;
+    margin-bottom: 20px;
+    margin-top: -8px;
+}
+
+#ProfileData {
+    color: #595959;
+}
+
+    #ProfileData b {
+        color: #222;
+    }
+
+    #ProfileData ul {
+        list-style: circle;
+    }
+
+        #ProfileData ul li {
+            list-style: decimal outside;
+            margin: 1em;
+        }
+
+.JobTitle {
+    font-size: 14px;
+}
+
+.Color222 {
+    color: #222;
+}
+
+.Color58585a {
+    color: #58585a;
+}
+
+.Color595959 {
+    color: #595959;
+}
+
+.Color3f3f3f {
+    color: #3f3f3f;
+}
+
+.GetDir {
+    display: none;
+}
+
+.AppDevTechLogo {
+    width: 20%;
+    float: left;
+}
+
+.GlyphMgn {
+    margin-left: -5px;
+}
+
+.GlyphMgn-bi {
+    margin-left: -2px;
+}

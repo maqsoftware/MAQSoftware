@@ -1,0 +1,15 @@
+﻿{
+  "ignore": [],
+  "options": {
+    "predef": {
+      "document": true,
+      "$": true,
+      "window": true,
+      "setTimeout": true,
+      "DOMParser": true,
+      "getParameterByName": true,
+      "location": true,
+      "navigator": true
+    }
+  }
+}
