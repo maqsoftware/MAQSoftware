@@ -1,0 +1,192 @@
+<h1 class="DataTitle SemiBold Color58585a">App Development</h1>
+<article class="LeftArticle">
+    <img class="BlockTag ExpertiseImage" src="../../Static/Images/Expertise/Expertise-App-Dev.jpg" alt="App Development" title="App Development" />
+    <section class="OverflowHide">
+        <p class="Datatagline SemiBold m30 Color58585a">Windows Phone 8</p>
+        <p class="Pad10">We have over six years of experience in mobile application development across different platforms, including Windows Phone 8, iPhone, and Android. We understand how platforms evolve, and how to develop for scalability across platforms. We have already deployed over a hundred mobile applications and we are ready to take on your mobile project.</p>
+        <p class="DataSubContent">We develop and market several in-house applications/ products for various mobile platforms which can be accessed through <a class="SliderArrow BackLink" target="_blank" href="http://www.edgeq.com/">http://www.edgeq.com/</a>. Some of our mobile products are:</p>
+        <ol class="Pad15 PadLeft10">
+            <li>1. Traffic Edge</li>
+            <li>2. Dialogs</li>
+            <li>3. Translate Edge</li>
+            <li>4. 2012 Apocalypse</li>
+        </ol>
+        <div class="SliderHolder m30">
+            <p class="AppDevSliderLabel FloatLeft">Phone Apps Delivered</p>
+            <div class="AppDevSlider FloatLeft">
+                <div id="WinPhoneLeftArrow" class="AppDevNavLeftArrow FloatLeft">
+                </div>
+                <div id="WPSlider" class="AppDevContent FloatLeft">
+                    <div class="AppSliderContentWrapper">
+                        <a target="_blank" href="http://www.edgeq.com/WindowsPhone8/MysteriousPlaces.aspx">
+                            <img alt="Mysterious Places" title="Mysterious Places" src="../Static/Images/Expertise/AppDevSlider/WinPhone/MysteriousPlaces.jpg" />
+                        </a>
+                        <a target="_blank" href="http://www.edgeq.com/iPhone/MythsandLegends.aspx">
+                            <img alt="Myths and Legends" title="Myths and Legends" src="../Static/Images/Expertise/AppDevSlider/WinPhone/MythsandLegends.jpg" />
+                        </a>
+                        <a target="_blank" href="http://www.edgeq.com/WindowsPhone8/PhotoHub.aspx">
+                            <img alt="Photo Hub" title="Photo Hub" src="../Static/Images/Expertise/AppDevSlider/WinPhone/PhotoHub.jpg" />
+                        </a>
+                        <a target="_blank" href="http://www.edgeq.com/WindowsPhone8/PlasticAnalyzer.aspx">
+                            <img alt="Plastic Analyzer" title="Plastic Analyzer" src="../Static/Images/Expertise/AppDevSlider/WinPhone/PlasticAnalyzer.jpg" />
+                        </a>
+                        <a target="_blank" href="http://www.edgeq.com/WindowsPhone8/TranslateEdge.aspx">
+                            <img alt="Translate Edge" title="Translate Edge" src="../Static/Images/Expertise/AppDevSlider/WinPhone/TranslateEdge.jpg" />
+                        </a>
+                    </div>
+                </div>
+                <div id="WinPhoneRightArrow" class="AppDevNavRightArrow FloatLeft">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="Clear m30 OverflowHide">
+        <p class="Datatagline SemiBold m30 Color58585a">Windows 8 App Development</p>
+        <p class="Pad10">We have expertise in building both retail and LOB apps for Windows 8. We have integrated Federated Authentication, SharePoint Online and used Windows RT encryption in our apps. We have expertise in using both JavaScript and C# in our apps.</p>
+        <div class="SliderHolder m30">
+            <p class="AppDevSliderLabel FloatLeft">Windows 8 Apps Delivered</p>
+            <div class="AppDevSlider FloatRight">
+                <div id="Win8LeftArrow" class="AppDevNavLeftArrow FloatLeft">
+                </div>
+                <div id="Win8Slider" class="AppDevContent FloatLeft">
+                    <div class="AppSliderContentWrapper">
+                        <a target="_blank" href="http://apps.microsoft.com/windows/en-us/app/f2c85ade-0f2f-4dac-9c34-02c5bad491d9">
+                            <img id="Win8Img1" alt="New Year Resolutions" title="New Year Resolutions" src="../Static/Images/Expertise/AppDevSlider/Win8App/NYR.png" />
+                        </a>
+                        <a target="_blank" href="http://apps.microsoft.com/windows/en-us/app/0bac01a1-c46d-4198-b20b-1b3052f251e8">
+                            <img id="Win8Img2" alt="Croatian Dialogs" title="Croatian Dialogs" src="../Static/Images/Expertise/AppDevSlider/Win8App/CroatianDialogs.png" />
+                        </a>
+                        <a target="_blank" href="http://apps.microsoft.com/windows/en-us/app/11eb14fe-600a-4232-b553-80ba426707a4">
+                            <img id="Win8Img3" alt="Memories" title="Memories" src="../Static/Images/Expertise/AppDevSlider/Win8App/Memories.png" />
+                        </a>
+                        <a target="_blank" href="http://apps.microsoft.com/windows/en-us/app/3a13eef2-c386-43a8-9483-a702792c7966">
+                            <img id="Win8Img4" alt="Unit Convertor" title="Unit Convertor" src="../Static/Images/Expertise/AppDevSlider/Win8App/UnitConvertor.png" />
+                        </a>
+                        <a target="_blank" href="http://apps.microsoft.com/windows/en-us/app/291b5a9c-9092-4d53-b370-2efd217e7541">
+                            <img id="Win8Img5" alt="The Bible" title="The Bible" src="../Static/Images/Expertise/AppDevSlider/Win8App/TheBible.png" />
+                        </a>
+                    </div>
+                </div>
+                <div id="Win8RightArrow" class="AppDevNavRightArrow FloatLeft">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="Clear m30 OverflowHide">
+        <p class="Datatagline SemiBold m30 Color58585a">Office 2013 App Development</p>
+        <p class="Pad10">We have been a part of the Office 2013 Technology Adoption Program (TAP) and one of the first organizations to have our app on the Office App Store. With over 4,000 downloads across SharePoint 2013 and Office 2013 apps, we have built our expertise in this area.</p>
+        <div class="SliderHolder m30">
+            <p class="AppDevSliderLabel FloatLeft">Office Apps Delivered</p>
+            <div class="AppDevSlider FloatRight">
+                <div id="OfficeLeftArrow" class="AppDevNavLeftArrow FloatLeft">
+                </div>
+                <div id="OfficeContent" class="AppDevContent FloatLeft">
+                    <div class="AppSliderContentWrapper">
+                        <a target="_blank" href="https://store.office.com/save-custom-formula-WA104011853.aspx">
+                            <img alt="Formula Green Excel" title="Formula Green Excel" src="../Static/Images/Expertise/AppDevSlider/OfficeApp/FormulaGreenExcel.png" />
+                        </a>
+                        <a target="_blank" href="https://store.office.com/taskit-WA103755433.aspx">
+                            <img alt="Task It" title="Task It" src="../Static/Images/Expertise/AppDevSlider/OfficeApp/TaskItLogoWord.png" />
+                        </a>
+                        <a target="_blank" href="https://store.office.com/unit-converter-WA104019807.aspx">
+                            <img alt="Unit Convertor Excel" title="Unit Convertor Excel" src="../Static/Images/Expertise/AppDevSlider/OfficeApp/UnitConverterExcel.png" />
+                        </a>
+                        <a target="_blank" href="https://store.office.com/wordcalc-WA103699714.aspx">
+                            <img alt="Word Calc" title="Word Calc" src="../Static/Images/Expertise/AppDevSlider/OfficeApp/WordCalcLogoWord.png" />
+                        </a>
+                        <a target="_blank" href="https://store.office.com/word-of-the-day-WA103795939.aspx">
+                            <img alt="Word of the day" title="Word of the day" src="../Static/Images/Expertise/AppDevSlider/OfficeApp/WordOfTheDayExcel.png" />
+                        </a>
+                    </div>
+                </div>
+                <div id="OfficeRightArrow" class="AppDevNavRightArrow FloatLeft">
+                </div>
+            </div>
+        </div>
+    </section>
+    <p class="SemiBold m30">Apps on the <a class="SliderArrow BackLink" target="_blank" href="https://store.office.com/">Office Store</a></p>
+</article>
+<article class="RightArticle">
+    <div class="AppDevTechLogo">
+		<img class="ProfileImage BlockTag MarginTop35" src="../Static/Images/Expertise/Office.png" alt="Microsoft Office" title="Microsoft Office" />
+		<img class="ProfileImage BlockTag MarginTop35" src="../Static/Images/Expertise/Windows-Phone.png" alt="Windows Phone" title="Windows Phone" />
+		<img id="WinAzureImg" class="ProfileImage BlockTag MarginTop35" src="../Static/Images/Expertise/Windows-8.png" alt="Windows 8" title="Windows 8" />
+	</div>
+</article>
+<script type="text/javascript">
+    $(document).ready(function () {        
+        var oWPSlider = {
+            images: $("#WPSlider img"),
+            iPos: 0,
+            width: 103,
+            iCurrentMoved: 0
+        };
+        var oW8Slider = {
+            images: $("#Win8Slider img"),
+            iPos: 0,
+            width: 103,
+            iCurrentMoved: 0
+        };
+        var oOfficeSlider = {
+            images: $("#OfficeContent img"),
+            iPos: 0,
+            width: 103,
+            iCurrentMoved: 0
+        };
+        oWPSlider.iTotalImages = oWPSlider.images.length;
+        oW8Slider.iTotalImages = oW8Slider.images.length;
+        oOfficeSlider.iTotalImages = oOfficeSlider.images.length;
+        function SetImagePosition(oSlider) {
+            oSlider.images.each(function (index) {
+                $(this).css("left", oSlider.iPos + "px").attr("data-index", index);
+                oSlider.iPos += oSlider.width;
+            });
+        }
+        function MoveLeft(oSlider) {
+            if (!oSlider.images.is(":animated")) {
+                oSlider.iCurrentMoved--;
+                if (oSlider.iCurrentMoved < 0) {
+                    oSlider.iCurrentMoved = oWPSlider.iTotalImages + oSlider.iCurrentMoved;
+                }
+                $(oSlider.images[oSlider.iCurrentMoved]).css("left", "-=" + (oWPSlider.iTotalImages * oSlider.width) + "px");
+                oSlider.images.animate({ left: "+=" + oSlider.width + "px" }, 300);
+            }
+        }
+        function MoveRight(oSlider) {
+            if (!oSlider.images.is(":animated")) {
+                oSlider.images.animate({ left: "-=" + oSlider.width + "px" }, 300);
+                $(oSlider.images).promise().done(function () {
+                    if (oSlider.iCurrentMoved >= oSlider.iTotalImages) {
+                        oSlider.iCurrentMoved = 0;
+                    }
+                    $(oSlider.images[oSlider.iCurrentMoved]).css("left", "+=" + (oSlider.iTotalImages * oSlider.width) + "px");
+                    oSlider.iCurrentMoved++;
+                });
+            }
+        }
+        $("#WinPhoneLeftArrow").click(function () {
+            MoveLeft(oWPSlider);
+        });
+        $("#WinPhoneRightArrow").click(function () {
+            MoveRight(oWPSlider);
+        });
+        $("#Win8LeftArrow").click(function () {
+            MoveLeft(oW8Slider);
+        });
+        $("#Win8RightArrow").click(function () {
+            MoveRight(oW8Slider);
+        });
+        $("#OfficeLeftArrow").click(function () {
+            MoveLeft(oOfficeSlider);
+        });
+        $("#OfficeRightArrow").click(function () {
+            MoveRight(oOfficeSlider);
+        });
+        function InitAppSlider() {
+            SetImagePosition(oWPSlider);
+            SetImagePosition(oW8Slider);
+            SetImagePosition(oOfficeSlider);
+        }                    
+        InitAppSlider();
+    });
+</script>

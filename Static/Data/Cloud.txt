@@ -1,0 +1,19 @@
+<h1 class="DataTitle SemiBold Color58585a">Cloud</h1>
+<article class="LeftArticle">
+    <img class="BlockTag ExpertiseImage" src="../../Static/Images/Expertise/Expertise-Cloud.jpg" alt="Cloud" title="Cloud" />
+    <p class="DataSubContent">We have been developing applications on Azure since it was released in 2010. 
+	We help you optimize and manage your cloud solutions in order to reduce the amount of time required to manage, maintain and deploy them and help you reduce your overall costs.</p>
+	<p class="MarginTop35 SemiBold Color3f3f3f">Services</p>
+    <ul class="CircleBullets">
+		<li>Develop and host custom applications with low cost strategy and high availability</li>
+		<li>Migrate existing applications to Azure</li>
+		<li>Enable transition of existing cloud applications to Azure</li>
+		<li>Upgrade and maintain applications on Azure</li>
+		<li>Optimize cloud solutions for faster access, enhancing user experience</li>
+		<li>Ensure secure applications comply with latest industry standards</li>
+    </ul>
+</article>
+<article class="RightArticle">
+    <img class="ProfileImage BlockTag MarginTop35 PadLeft4" src="../Static/Images/Expertise/Windows-Azure.png" alt="Microsoft Azure" title="Microsoft Azure" />
+	<img class="ProfileImage BlockTag MarginTop35 PadLeft4" src="../Static/Images/Expertise/AWS_logo.png" alt="Amazon Web Services" title="Amazon Web Services" />
+</article>

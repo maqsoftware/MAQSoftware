@@ -1,0 +1,24 @@
+﻿.MoveExpertiseSlider {
+    width: 15px;
+    height: 15px;
+    margin-right: 13px;
+    cursor: pointer;
+    background: url(../Images/Slider/circle.png) no-repeat center center;
+}
+
+.slideImage .ActiveBullet {
+    background: url(../Images/Slider/circle-exp.png) no-repeat center center;
+}
+
+#ContinuousDeliveryBullets .CDSliderBullet {
+    width: 13px;
+    height: 13px;
+    background: #c9c9c9;
+    margin-left: 13px;
+    cursor: pointer;
+    background: url(../Images/Slider/circle-cdd.png) no-repeat center center;
+}
+
+#ContinuousDeliveryBullets .ActiveBullet {
+    background: url(../Images/Slider/circle-cd.png) no-repeat center center;
+}

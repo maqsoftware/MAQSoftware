@@ -1,0 +1,45 @@
+<h1 class="DataTitle SemiBold Color58585a">User Experience Design</h1>
+<article class="LeftArticle">
+    <img class="BlockTag ExpertiseImage" src="../../Static/Images/Expertise/Expertise-UXDesign.jpg" alt="UX Design" title="UX Design" />
+    <p class="DataSubContent">At MAQ Software, a team of graphics and usability experts understands your requirements in person and interacts with multiple stakeholders to help you come up with a richer concept. We have been delivering high traffic websites at Microsoft for over thirteen years and are experts in Microsoft branding standards.</p>
+    <p class="DataSubContent SemiBold Color3f3f3f">Brand experience assessment</p>
+    <ul class="MarginTop5 CircleBullets">
+        <li>User studies and online surveys</li>
+        <li>Competitive analysis</li>
+        <li>Online experience assessment</li>
+    </ul>
+    <p class="DataSubContent SemiBold Color3f3f3f">UI design</p>
+    <ul class="MarginTop5 CircleBullets">
+        <li>Requirements analysis including creative brief and usability goals documentation</li>
+        <li>Brand style guide and content discussions</li>
+        <li>Information architecture</li>
+        <li>Storyboards for stakeholder feedback</li>
+        <li>Websites compliant with HTML5 and CSS3</li>
+    </ul>
+    <p class="DataSubContent SemiBold Color3f3f3f">Optimization</p>
+    <ul class="MarginTop5 CircleBullets">
+        <li>User studies and online surveys</li>
+        <li>Competitive analysis</li>
+        <li>Online experience assessment</li>
+    </ul>	           
+</article>
+<article class="RightArticle m30">
+	<div class = "UXImageCtr">
+		<img class="BlockTag" src="../Static/Images/Expertise/ResponsiveDesign.png" alt="Responsive Web Design" title="Responsive Web Design" />
+		<p class="ImageTitle">Responsive Web Design</p>
+	</div>
+	<div class = "UXImageCtr">
+		<img class="ProfileImage BlockTag MarginTop35" src="../Static/Images/Expertise/Mobile-UX.png" alt="Mobile UX, IA and Visual Design" title="Mobile UX, IA and Visual Design" />
+		<p class="ImageTitle">
+		Mobile UX, IA<br />
+		and Visual Design
+	</p>
+	</div>
+	<div class = "UXImageCtr">
+		<img class="ProfileImage BlockTag MarginTop35" src="../Static/Images/Expertise/Windows8.png" alt="Windows 8 Apps UI/UX Design" title="Windows 8 Apps UI/UX Design" />
+		<p class="ImageTitle">
+		Windows 8 Apps<br />
+		UI/UX Design
+		</p>	
+	</div>
+</article>
