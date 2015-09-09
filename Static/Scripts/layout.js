@@ -1,4 +1,4 @@
-﻿/*globals navigator,getParameterByName*/
+﻿/*globals navigator,getParameterByName,console*/
 //Google analytics code
 //var _gaq = _gaq || [];
 //_gaq.push(['_setAccount', 'UA-7928102-1']);
@@ -79,23 +79,28 @@ function careersInHyd() {
     oBreadCrumb = $("#BreadCrumb");
     oJobTitle = $("#JobTitle");
     sBreadCrumbtext = oBreadCrumb.html();
-    oBreadCrumb.html(sBreadCrumbtext.replace("@title", sJobPost));
-    oJobTitle.html(oJobTitle.html().replace("@title", sJobPost));
-    queryParam = getParameterByName("q");
-    if (queryParam) {
-        $.ajax({
-            url: 'http://www.blogger.com/feeds/2523158019509365490/posts/default/-/Openings - Hyderabad',
-            type: 'GET',
-            dataType: "jsonp",
-            success: function (msg) {
-                loadNews(msg, queryParam, oBreadCrumb, oJobTitle, "#Careers?q=Hyderabad");
-            },
-            complete: function () {
-                $("#ProfileData").removeClass("Loading");
-            }
-        });
-    } else {
-        window.location.href = "#Careers?q=Hyderabad";
+    try {
+        oBreadCrumb.html(sBreadCrumbtext.replace("@title", sJobPost));
+        oJobTitle.html(oJobTitle.html().replace("@title", sJobPost));
+        queryParam = getParameterByName("q");
+        if (queryParam) {
+            $.ajax({
+                url: 'http://www.blogger.com/feeds/2523158019509365490/posts/default/-/Openings - Hyderabad',
+                type: 'GET',
+                dataType: "jsonp",
+                success: function (msg) {
+                    loadNews(msg, queryParam, oBreadCrumb, oJobTitle, "#Careers?q=Hyderabad");
+                },
+                complete: function () {
+                    $("#ProfileData").removeClass("Loading");
+                }
+            });
+        } else {
+            window.location.href = "#Careers?q=Hyderabad";
+        }
+    } catch (ex) {
+        console.log(ex.message);
+        setTimeout(careersInHyd, 100);
     }
 }
 
@@ -107,23 +112,28 @@ function careersInMumbai() {
     oBreadCrumb = $("#BreadCrumb");
     oJobTitle = $("#JobTitle");
     sBreadCrumbtext = oBreadCrumb.html();
-    oBreadCrumb.html(sBreadCrumbtext.replace("@title", sJobPost));
-    oJobTitle.html(oJobTitle.html().replace("@title", sJobPost));
-    queryParam = getParameterByName("q");
-    if (queryParam) {
-        $.ajax({
-            url: 'http://www.blogger.com/feeds/2523158019509365490/posts/default/-/Openings - Mumbai',
-            type: 'GET',
-            dataType: "jsonp",
-            success: function (msg) {
-                loadNews(msg, queryParam, oBreadCrumb, oJobTitle, "#Careers?q=Mumbai");
-            },
-            complete: function () {
-                $("#ProfileData").removeClass("Loading");
-            }
-        });
-    } else {
-        window.location.href = "#Careers?q=Mumbai";
+    try {
+        oBreadCrumb.html(sBreadCrumbtext.replace("@title", sJobPost));
+        oJobTitle.html(oJobTitle.html().replace("@title", sJobPost));
+        queryParam = getParameterByName("q");
+        if (queryParam) {
+            $.ajax({
+                url: 'http://www.blogger.com/feeds/2523158019509365490/posts/default/-/Openings - Mumbai',
+                type: 'GET',
+                dataType: "jsonp",
+                success: function (msg) {
+                    loadNews(msg, queryParam, oBreadCrumb, oJobTitle, "#Careers?q=Mumbai");
+                },
+                complete: function () {
+                    $("#ProfileData").removeClass("Loading");
+                }
+            });
+        } else {
+            window.location.href = "#Careers?q=Mumbai";
+        }
+    } catch (ex) {
+        console.log(ex.message);
+        setTimeout(careersInMumbai, 100);
     }
 }
 
