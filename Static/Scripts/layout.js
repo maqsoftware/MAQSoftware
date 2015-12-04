@@ -1,28 +1,28 @@
-﻿/*globals navigator,getParameterByName,console*/
+/*globals navigator,getParameterByName,console*/
 //Google analytics code
-//var _gaq = _gaq || [];
-//_gaq.push(['_setAccount', 'UA-7928102-1']);
-//_gaq.push(['_trackPageview']);
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-7928102-1']);
+_gaq.push(['_trackPageview']);
 
-//(function () {
-//    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-//    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-//    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-//})();
-//(function () {
-//    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-//        var msViewportStyle = document.createElement("style");
-//        msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));
-//        document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
-//    }
-//})();
-//(function (d, s, id) {
-//    var js, fjs = d.getElementsByTagName(s)[0];
-//    if (d.getElementById(id)) return;
-//    js = d.createElement(s); js.id = id;
-//    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-//    fjs.parentNode.insertBefore(js, fjs);
-//}(document, 'script', 'facebook-jssdk'));
+(function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+(function () {
+    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement("style");
+        msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));
+        document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+    }
+})();
+(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 
 ////Application insights code
 //window.appInsights = { queue: [], applicationInsightsId: null, accountId: null, appUserId: null, configUrl: null, start: function (n) { function u(n, t) { n[t] = function () { var i = arguments; n.queue.push(function () { n[t].apply(n, i) }) } } function f(n) { var t = document.createElement("script"); return t.type = "text/javascript", t.src = n, t.async = !0, t } function r() { i.appendChild(f("//az416426.vo.msecnd.net/scripts/ai.0.js")) } var i, t; this.applicationInsightsId = n; u(this, "logEvent"); u(this, "logPageView"); i = document.getElementsByTagName("script")[0].parentNode; this.configUrl === null ? r() : (t = f(this.configUrl), t.onload = r, t.onerror = r, i.appendChild(t)); this.start = function () { } } };

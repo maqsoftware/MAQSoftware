@@ -1,2 +1,2 @@
-# MAQ Software
-MAQ Software website (http://maqsoftware.com)
+# maqsoftwaremain.github.io
+MAQ Software Website

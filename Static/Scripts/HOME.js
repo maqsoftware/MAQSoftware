@@ -1,5 +1,5 @@
 ﻿/*jslint plusplus: true */
-/// <reference path="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js?v=20150909" />
+/// <reference path="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js" />
 /*globals clearInterval,setInterval*/
 (function () {
     "use strict";
