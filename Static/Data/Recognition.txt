@@ -12,12 +12,12 @@
 </section>
 <section class="Clear TopMargin LeftArticle FullWidth">
     <aside class="RecognitionImage FloatLeft">
-        <img src="../../Static/Images/Recognition/BSI.png" alt="ISO 27001:2005 – Information Security, 2012" title="ISO 27001:2005 – Information Security, 2012" />
+        <img src="../../Static/Images/Recognition/BSI.png" alt="ISO 27001:2013 – Information Security, 2015" title="ISO 27001:2013 – Information Security, 2015" />
     </aside>
     <aside class="RecognitionContent FloatLeft">
-        <p class="SemiBold Color3f3f3f">ISO 27001:2005 – Information Security, 2012</p>
+        <p class="SemiBold Color3f3f3f">ISO 27001:2013 – Information Security, 2015</p>
         <p>
-            MAQ Software was certified ISO 27001:2005 by British Standards Institution.                            
+            MAQ Software was certified ISO 27001:2013 by British Standards Institution.                            
         </p>
         <p class="DataSubContent">
             ISO 27001 standards, the only auditable international standard, provides an 
@@ -27,12 +27,12 @@
 </section>
 <section class="Clear TopMargin LeftArticle FullWidth">
     <aside class="RecognitionImage FloatLeft">
-        <img src="../../Static/Images/Recognition/Inc5000.png" alt="Inc. 5000, Fastest Growing Companies in America, 2007-2012" title="Inc. 5000, Fastest Growing Companies in America, 2007-2012" />
+        <img src="../../Static/Images/Recognition/Inc5000.png" alt="Inc. 5000, Fastest Growing Companies in America, 2007-2012" title="Inc. 5000, Fastest Growing Companies in America, 2007-2015" />
     </aside>
     <aside class="RecognitionContent FloatLeft">
-        <p class="SemiBold Color3f3f3f">Inc. 5000, Fastest Growing Companies in America, 2007-2012</p>
+        <p class="SemiBold Color3f3f3f">Inc. 5000, Fastest Growing Companies in America, 2007-2015</p>
         <p>
-            In 2012, MAQ Software was ranked as one of the fastest growing private companies in America for six years in a row.
+            In 2015, MAQ Software was ranked as one of the fastest growing private companies in America for seven years in a row.
         </p>
         <p class="DataSubContent">With this accomplishment, MAQ Software joined the rarified company of enterprises who have appeared on the list multiple times.</p>
         <p class="DataSubContent">

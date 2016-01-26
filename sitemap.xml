@@ -5,24 +5,24 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>http://www.maqsoftware.com/default.html</loc>
+    <loc>http://www.maqsoftware.com/index.html</loc>
   </url>
   <url>
-    <loc>http://www.maqsoftware.com/default.html#Expertise</loc>
+    <loc>http://www.maqsoftware.com/index.html#Expertise</loc>
   </url>  
   <url>
-    <loc>http://www.maqsoftware.com/default.html#Profile</loc>
+    <loc>http://www.maqsoftware.com/index.html#Profile</loc>
   </url> 
   <url>
-    <loc>http://www.maqsoftware.com/default.html#Careers</loc>
+    <loc>http://www.maqsoftware.com/index.html#Careers</loc>
   </url>  
   <url>
-    <loc>http://www.maqsoftware.com/default.html#CareerinUS</loc>
+    <loc>http://www.maqsoftware.com/index.html#CareerinUS</loc>
   </url>
   <url>
-    <loc>http://www.maqsoftware.com/default.html#Contactus</loc>
+    <loc>http://www.maqsoftware.com/index.html#Contactus</loc>
   </url>
   <url>
-    <loc>http://www.maqsoftware.com/default.html#News</loc>
+    <loc>http://www.maqsoftware.com/index.html#News</loc>
   </url>
 </urlset>
