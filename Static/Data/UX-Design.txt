@@ -36,9 +36,9 @@
 	</p>
 	</div>
 	<div class = "UXImageCtr">
-		<img class="ProfileImage BlockTag MarginTop35" src="../Static/Images/Expertise/Windows8.png" alt="Windows 8 Apps UI/UX Design" title="Windows 8 Apps UI/UX Design" />
+		<img class="ProfileImage BlockTag MarginTop35" src="../Static/Images/Expertise/Windows8.png" alt="Windows Store Apps UI/UX Design" title="Windows Store Apps UI/UX Design" />
 		<p class="ImageTitle">
-		Windows 8 Apps<br />
+		Windows Store Apps<br />
 		UI/UX Design
 		</p>	
 	</div>
