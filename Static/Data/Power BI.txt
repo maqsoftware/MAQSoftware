@@ -1,0 +1,32 @@
+<h1 class="DataTitle SemiBold Color58585a">Visual Insights</h1>
+<article class="LeftArticle">
+    <img class="BlockTag ExpertiseImage" src="../../Static/Images/Expertise/website_banner_powerbi_2.jpg" alt="Visual Insights" title="Visual Insights" />
+    <p class="DataSubContent">In 2015 alone, MAQ Software delivered over 10 Power BI projects and developed multiple Power BI components. We were also associated with the product team in testing and validating features. Due to this experience, as well as our 10+ years as a 
+Microsoft Preferred Vendor, we hold a comprehensive understanding of Power BI's functions and capabilities. With this in-depth knowledge of the underlying systems, our team is uniquely positioned to maximize your Power BI experience. </p>
+    <p class="DataSubContent SemiBold Color3f3f3f">Services</p>
+    <ul class="MarginTop5 CircleBullets">
+        <li>Create custom dashboards and their underlying databases</li>
+        <li>Migrate existing applications to Power BI</li>
+        <li>Transform data by enabling users to create interactive reports</li>
+        <li>Improve business collaboration by providing the ability to share reports quickly and easily </li>
+    </ul>
+    <p class="DataSubContent SemiBold Color3f3f3f">Customizations</p>
+    <ul class="MarginTop5 CircleBullets">
+        <li>Maximize your existing data collection systems with components that pull several data points into powerful, multidimensional visualizations</li>
+        <li>Track critical business functions according to your tailored benchmarks</li>
+        <li>Monitor the trends that are important to your organization </li>
+        <li>Gauge progress toward customized goals to see where your organization has made headway and identify areas of improvement </li>
+        
+    </ul>
+    <p class="DataSubContent SemiBold Color3f3f3f">UI Design</p>
+    <ul class="MarginTop5 CircleBullets">
+        <li>Storyboard to obtain feedback from your organization's stakeholders and tailor the final product to your needs</li>
+        <li>Structure your dashboards, visuals and reports to be user-friendly</li>
+        <li>Design a functional and usable shared information environment that is accessible to people from all levels of your organization, from business analysts to the executive team </li>
+    </ul>	           
+</article>
+<article class="RightArticle">
+	<img class="ProfileImage BlockTag MarginTop35 PadLeft4" src="../Static/Images/Expertise/PowerBI.png" alt="Power BI" title="Power BI" />
+	<img class="ProfileImage BlockTag MarginTop35 PadLeft4" src="../Static/Images/Expertise/Quicksight.jpg" alt="Amazon Quicksight" title="Amazon Quicksight" />
+	<img class="ProfileImage BlockTag MarginTop35 PadLeft4" src="../Static/Images/Expertise/html5-css-javascript.png" alt="HTML5-CSS-JavaScript" title="HTML5-CSS-JavaScript" />
+</article>

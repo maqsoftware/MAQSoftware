@@ -102,7 +102,7 @@
 }
 
 .dvSiteMap {
-    margin-right: 50px;
+    margin-right: 40px;
     margin-top: 50px;
 }
 
@@ -143,20 +143,20 @@
 }
 
 .SiteMapHolder {
-    width: 79%;
+    width: 74%;
 }
 
 .dvFollowUS {
-    width: 160px;
     margin-top: 50px;
 }
 
 .imgFollowUS {
-    margin: 15px 10px 0 0;
+    margin: 15px 5px 0 0;
 }
 
 a .imgFollowUS {
     margin-top: 0;
+    margin-bottom: 10px;
 }
 
 #dvCopyright {
@@ -339,7 +339,7 @@ a .imgFollowUS {
 }
 
 #div6 {
-    background: url(../Images/Slider/SwedishLogo.png) no-repeat center center;
+    background: url(../Images/Slider/Google-logo.png) no-repeat center center;
 }
 
 #div7 {
@@ -363,7 +363,7 @@ a .imgFollowUS {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: url(../Images/Slider/Business-Intelligence.jpg) no-repeat 0 0;
+    background: url(../Images/Slider/Cloud.jpg) no-repeat 0 0;
     background-size: 100% 100%;
 }
 
@@ -428,7 +428,7 @@ a .imgFollowUS {
 }
 
 .MgnR65 {
-    margin-right: 6%;
+    margin-right: 13%;
 }
 
 .dvContentHolder {
@@ -578,6 +578,14 @@ a .imgFollowUS {
     line-height: 40px;
 }
 
+.ClientCont .AboutTagLine{
+    margin-top: 0;
+}
+
+.ClientCont .MarginTop5 {
+    margin-bottom: 15px;
+}
+
 .BlockTag {
     display: block;
 }
@@ -665,6 +673,10 @@ a .imgFollowUS {
 
 #Client10 {
     background: url(../Images/Slider/BharatPetroleum_Logo.png) no-repeat center center;
+}
+
+#Client11 {
+    background: url(../Images/Slider/Google-logo.png) no-repeat center center;
 }
 
 .Testimonial {
@@ -773,6 +785,7 @@ a .imgFollowUS {
 .CircleBullets {
     list-style-type: disc;
     padding-left: 35px;
+    color: #595959;
 }
 
 .PosAbsolute {
@@ -1304,4 +1317,28 @@ b {
 
 .GlyphMgn-bi {
     margin-left: -2px;
+}
+
+.subData {
+    display: block;
+    height: 62px;
+    line-height: 20px;
+    overflow: hidden;
+}
+img.WhyMAQ {
+    cursor: pointer;
+}
+
+/*Overrides*/
+i {
+    font-style: italic;
+}
+a img {
+    cursor: pointer;
+}
+.aSiteLinks{
+    color: #222;
+}
+.selectedTab{
+    color: #bb141a;
 }

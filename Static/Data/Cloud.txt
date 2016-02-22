@@ -14,6 +14,6 @@
     </ul>
 </article>
 <article class="RightArticle">
-    <img class="ProfileImage BlockTag MarginTop35 PadLeft4" src="../Static/Images/Expertise/Windows-Azure.png" alt="Microsoft Azure" title="Microsoft Azure" />
+    <img class="ProfileImage BlockTag MarginTop35 PadLeft4" src="../Static/Images/Expertise/Windows-Azure.jpg" alt="Microsoft Azure" title="Microsoft Azure" />
 	<img class="ProfileImage BlockTag MarginTop35 PadLeft4" src="../Static/Images/Expertise/AWS_logo.png" alt="Amazon Web Services" title="Amazon Web Services" />
 </article>
