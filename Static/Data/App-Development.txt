@@ -42,7 +42,7 @@
     </section>
     <section class="Clear m30 OverflowHide">
         <p class="Datatagline SemiBold m30 Color58585a">Windows App Development</p>
-        <p class="Pad10">We have expertise in building both retail and LOB apps for Windows. We have integrated Federated Authentication, SharePoint Online and used Windows RT encryption in our apps. We have expertise in using both JavaScript and C# in our apps.</p>
+        <p class="Pad10">We have expertise in building both retail and enterprise apps for Windows. We have integrated Federated Authentication, SharePoint Online and used Windows RT encryption in our apps. We have expertise in using both JavaScript and C# in our apps.</p>
         <div class="SliderHolder m30">
             <p class="AppDevSliderLabel FloatLeft">Windows Apps Delivered</p>
             <div class="AppDevSlider FloatRight">

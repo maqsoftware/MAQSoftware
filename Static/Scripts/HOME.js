@@ -20,7 +20,7 @@
                       "Optimized data warehouse, customized  reports, dashboards, faster and better decision making",
                       "Rich data visualizations, custom dashboards, and intuitive report generation keep you on the cutting edge of new trends and emerging markets",
                       "Portal branding, customizations,  <br />self-service capabilities, better content management, and collaboration",
-                      "Retail and LOB applications for Windows 8, Windows Phone 8, iPhone, iPad, Office apps, and SharePoint apps",
+                      "Retail and Enterprise apps for Windows Store, Windows Phone, Android, iPhone, iPad, Office, and SharePoint",
                       "Brand marketing websites, rich media production work, innovative and attractive applications to increase user adoption and retention"],
         current: 0,
         next: 1,
