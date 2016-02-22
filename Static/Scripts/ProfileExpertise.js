@@ -8,11 +8,12 @@
         pagelink4: "Client.txt"
     },
         oExpertise = {
-            pagelink0: "Business-Intelligence.txt",
-            pagelink1: "SharePoint.txt",
-            pagelink2: "App-Development.txt",
-            pagelink3: "Cloud.txt",
-            pagelink4: "UX-Design.txt"
+            pagelink0: "Cloud.txt",
+            pagelink1: "Business-Intelligence.txt",
+            pagelink2: "Power BI.txt",
+            pagelink3: "SharePoint.txt",
+            pagelink4: "App-Development.txt",
+            pagelink5: "UX-Design.txt"
         };
     if (-1 !== window.location.hash.toLowerCase().indexOf("#expertise")) {
         oPageNavLinks = oExpertise;

@@ -2,9 +2,9 @@
 <article class="LeftArticle">
     <img class="BlockTag ExpertiseImage" src="../../Static/Images/Expertise/Expertise-App-Dev.jpg" alt="App Development" title="App Development" />
     <section class="OverflowHide">
-        <p class="Datatagline SemiBold m30 Color58585a">Windows Phone 8</p>
-        <p class="Pad10">We have over six years of experience in mobile application development across different platforms, including Windows Phone 8, iPhone, and Android. We understand how platforms evolve, and how to develop for scalability across platforms. We have already deployed over a hundred mobile applications and we are ready to take on your mobile project.</p>
-        <p class="DataSubContent">We develop and market several in-house applications/ products for various mobile platforms which can be accessed through <a class="SliderArrow BackLink" target="_blank" href="http://www.edgeq.com/">http://www.edgeq.com/</a>. Some of our mobile products are:</p>
+        <p class="Datatagline SemiBold m30 Color58585a">Windows Phone</p>
+        <p class="Pad10">We have over six years of experience in mobile application development across different platforms, including Windows Phone, iPhone, and Android. We understand how platforms evolve, and how to develop for scalability across platforms. We have already deployed over a hundred mobile applications and we are ready to take on your mobile project.</p>
+        <p class="DataSubContent">Some of our mobile products are:</p>
         <ol class="Pad15 PadLeft10">
             <li>1. Traffic Edge</li>
             <li>2. Dialogs</li>
@@ -41,10 +41,10 @@
         </div>
     </section>
     <section class="Clear m30 OverflowHide">
-        <p class="Datatagline SemiBold m30 Color58585a">Windows 8 App Development</p>
-        <p class="Pad10">We have expertise in building both retail and LOB apps for Windows 8. We have integrated Federated Authentication, SharePoint Online and used Windows RT encryption in our apps. We have expertise in using both JavaScript and C# in our apps.</p>
+        <p class="Datatagline SemiBold m30 Color58585a">Windows App Development</p>
+        <p class="Pad10">We have expertise in building both retail and LOB apps for Windows. We have integrated Federated Authentication, SharePoint Online and used Windows RT encryption in our apps. We have expertise in using both JavaScript and C# in our apps.</p>
         <div class="SliderHolder m30">
-            <p class="AppDevSliderLabel FloatLeft">Windows 8 Apps Delivered</p>
+            <p class="AppDevSliderLabel FloatLeft">Windows Apps Delivered</p>
             <div class="AppDevSlider FloatRight">
                 <div id="Win8LeftArrow" class="AppDevNavLeftArrow FloatLeft">
                 </div>
@@ -73,8 +73,8 @@
         </div>
     </section>
     <section class="Clear m30 OverflowHide">
-        <p class="Datatagline SemiBold m30 Color58585a">Office 2013 App Development</p>
-        <p class="Pad10">We have been a part of the Office 2013 Technology Adoption Program (TAP) and one of the first organizations to have our app on the Office App Store. With over 4,000 downloads across SharePoint 2013 and Office 2013 apps, we have built our expertise in this area.</p>
+        <p class="Datatagline SemiBold m30 Color58585a">Office App Development</p>
+        <p class="Pad10">We have been a part of the Office Technology Adoption Program (TAP) and one of the first organizations to have our app on the Office App Store. With over 4,000 downloads across SharePoint and Office apps, we have built our expertise in this area.</p>
         <div class="SliderHolder m30">
             <p class="AppDevSliderLabel FloatLeft">Office Apps Delivered</p>
             <div class="AppDevSlider FloatRight">
@@ -108,9 +108,11 @@
 </article>
 <article class="RightArticle">
     <div class="AppDevTechLogo">
+		<img class="ProfileImage BlockTag MarginTop35" src="../Static/Images/Expertise/AppStore8_2x.png" alt="App Store" title="App Store" />
+		<img class="ProfileImage BlockTag MarginTop35" src="../Static/Images/Expertise/Google_Play_logo.png" alt="Google Play" title="Google Play" />
 		<img class="ProfileImage BlockTag MarginTop35" src="../Static/Images/Expertise/Office.png" alt="Microsoft Office" title="Microsoft Office" />
 		<img class="ProfileImage BlockTag MarginTop35" src="../Static/Images/Expertise/Windows-Phone.png" alt="Windows Phone" title="Windows Phone" />
-		<img id="WinAzureImg" class="ProfileImage BlockTag MarginTop35" src="../Static/Images/Expertise/Windows-8.png" alt="Windows 8" title="Windows 8" />
+		<img id="WinAzureImg" class="ProfileImage BlockTag MarginTop35" src="../Static/Images/Expertise/Windows-8.png" alt="Windows" title="Windows" />
 	</div>
 </article>
 <script type="text/javascript">

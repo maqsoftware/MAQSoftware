@@ -549,7 +549,6 @@
         padding: 12px 0;
         background-color: #bb141a;
         border-top: 1px solid #fff;
-        color: #fff;
         padding-left: 25px;
     }
 
@@ -630,6 +629,12 @@
     .MobileDisplay {
         display: block;
         padding-left: 38%;
+    }
+    .aSiteLinks:hover{
+        color: #fff;
+    }
+    .selectedTab{
+        color: #fff;
     }
 }
 

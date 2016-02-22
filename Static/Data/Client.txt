@@ -1,14 +1,30 @@
 ﻿<h1 class="DataTitle SemiBold Color58585a">Our Clients</h1>
-<article class="LeftArticle">
+<article class="LeftArticle ClientCont">
+	<h3 class="AboutTagLine Datatagline SemiBold">Why do our clients choose to work with us?</h3>
+    <p class="DataSubContent SemiBold Color3f3f3f">Confidence in our delivery</p>
+    <ul class="MarginTop5 CircleBullets">
+        <li>Responsiveness and accountability</li>
+        <li>Past delivery record</li>
+        <li>Continuous build process</li>
+    </ul>
+    <p class="DataSubContent SemiBold Color3f3f3f">Reduced time to market</p>
+    <ul class="MarginTop5 CircleBullets">        
+        <li>Agile delivery methodology </li>
+        <li>Our technical expertise, business domain knowledge and ability to align with business processes</li>
+        <li>Willingness and ability to accommodate feedback</li>
+    </ul>
+    <p class="DataSubContent SemiBold Color3f3f3f">Good quality</p>
+    <ul class="MarginTop5 CircleBullets">
+        <li>Strong commitment to customer success</li>
+        <li>Complete visibility to project status and full transparency throughout delivery cycle</li>
+        <li>Use of latest technologies</li>
+    </ul>
 	<a target="_blank" href='http://www.microsoft.com/' ><div id="Client1" class="ClientImage" title="Microsoft"></div></a>
-	<a target="_blank" href='http://www.wunderman.com/' ><div class="ClientImage" id="Client2" title="Wunderman"></div></a>
+	<a target="_blank" href='http://www.google.com/' ><div id="Client11" class="ClientImage" title="Google"></div></a>	
 	<a target="_blank" href='http://www.amazon.com/webservices/'><div id="Client3" class="ClientImage" title="Amazon"></div></a>
+	<a target="_blank" href='http://www.t-mobile.com/'><div id="Client5" class="ClientImage" title="T-Mobile"></div></a>
 	<a target="_blank" href='http://www.htc.com/in/'><div id="Client4" class="ClientImage" title="HTC"></div></a>
-	<a target="_blank" href='http://www.t-mobile.com/'><div id="Client5" class="ClientImage" title="T-Mobile"></div></a>	
-	<a target="_blank" href='http://www.resmed.com/us/index.html'><div id="Client7" class="ClientImage" title="Resmed"></div></a>
-	<a target="_blank" href='http://www.washingtonyouthsoccer.org/'><div id="Client8" class="ClientImage" title="Washington Youth Soccer"></div></a>
-	<a target="_blank" href='http://www.swedish.org/'><div id="Client9" class="ClientImage" title="Swedish"></div></a>
-	<a target="_blank" href='http://www.bharatpetroleum.com/'><div id="Client10" class="ClientImage" title="Bharat Petroleum"></div></a>
+	<a target="_blank" href='http://www.wunderman.com/' ><div class="ClientImage" id="Client2" title="Wunderman"></div></a>
 </article>
 <article class="RightArticle">
     <h3 class="Datatagline SemiBold Praise">Praise</h3>
