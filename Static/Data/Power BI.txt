@@ -1,28 +1,37 @@
 <h1 class="DataTitle SemiBold Color58585a">Visual Insights</h1>
 <article class="LeftArticle">
     <img class="BlockTag ExpertiseImage" src="../../Static/Images/Expertise/website_banner_powerbi_2.jpg" alt="Visual Insights" title="Visual Insights" />
-    <p class="DataSubContent">In 2015 alone, MAQ Software delivered over 10 Power BI projects and developed multiple Power BI components. We were also associated with the product team in testing and validating features. Due to this experience, as well as our 10+ years as a 
-Microsoft Preferred Vendor, we hold a comprehensive understanding of Power BI's functions and capabilities. With this in-depth knowledge of the underlying systems, our team is uniquely positioned to maximize your Power BI experience. </p>
+    <p class="DataSubContent">The visual insights landscape is being rapidly disrupted by Microsoft Power BI and Amazon QuickSight are rapidly disrupting the visual insights landscape.</p>	<p class="DataSubContent">Microsoft Power BI enables you to find and visualize data, share discoveries, and collaborate in intuitive new ways. Power BI transforms your company's data into rich visuals for you to collect and organize so you can focus on what matters to you.</p>	<p class="DataSubContent">Amazon QuickSight, along similar lines, is a service that makes it easy to build visualizations, perform ad-hoc analysies , and quickly get business insights from data. Amazon QuickSight uses a new, Super-fast, Parallel, In-memory Calculation Engine ("SPICE") to perform advanced calculations and render visualizations rapidly.</p>
+	<p class="Datatagline SemiBold m30 Color58585a">Preferred Partner for Power BI</p>
+	<p class="DataSubContent">We use Power BI in solutions that provide insights into large datasets. We reduced customer report development time by using Power BI instead of traditional custom techniques. We partner with the Power BI development team to test and validate the technology with large and complex datasets. As one of the preferred partners for Power BI, we have released multiple <a class="SliderArrow BackLink viLinks" href="https://app.powerbi.com/visuals" target="_blank">Power BI components</a>, including:</p>
+    <ul class="MarginTop5 CircleBullets">
+        <li><a class="SliderArrow BackLink viLinks" href="https://app.powerbi.com/visuals/show/LinearGauge1450736844786" target="_blank">Linear gauge</a>: Create at-a-glance visualization to compare your progress against identified goals and warning zones. By allowing you to include multiple data points, the component provides the ability to illustrate trend details, such as monthly or year-to-date completion rates. The pointer notes targets and the colored bar shows the current progress toward those goals.</li>
+        <li><a class="SliderArrow BackLink viLinks" href="https://app.powerbi.com/visuals/show/HorizontalFunnel1449177164235" target="_blank">Horizontal Funnel</a>: Horizontal Funnel allows you to visualize a customizable primary measure as colored bars. Use this component to display a number of metric types, such as sales stages, time or geographic locations. A second customizable value is displayed beneath the colored bars. This feature provides you the ability to track an additional metric against your primary measure. The component includes the option to create a tool tip, which you may tailor to your specific needs.</li>
+    </ul>
+	<p class="DataSubContent">Due to this experience, as well as our 10+ years as a Microsoft Preferred Supplier, we hold a comprehensive understanding of Power BI's functions and capabilities. With this in-depth knowledge of the underlying systems, our team is uniquely positioned to maximize your Power BI experience.</p>
+
+    <p class="Datatagline SemiBold m30 Color58585a">Our Offerings</p>
+
     <p class="DataSubContent SemiBold Color3f3f3f">Services</p>
     <ul class="MarginTop5 CircleBullets">
-        <li>Create custom dashboards and their underlying databases</li>
-        <li>Migrate existing applications to Power BI</li>
+        <li>Migrate existing reports and applications </li>
+        <li>Create custom dashboards and transform their underlying databases</li>
         <li>Transform data by enabling users to create interactive reports</li>
-        <li>Improve business collaboration by providing the ability to share reports quickly and easily </li>
+        <li>Improve business collaboration by providing the ability to share reports quickly and easily</li>
     </ul>
     <p class="DataSubContent SemiBold Color3f3f3f">Customizations</p>
     <ul class="MarginTop5 CircleBullets">
         <li>Maximize your existing data collection systems with components that pull several data points into powerful, multidimensional visualizations</li>
         <li>Track critical business functions according to your tailored benchmarks</li>
-        <li>Monitor the trends that are important to your organization </li>
-        <li>Gauge progress toward customized goals to see where your organization has made headway and identify areas of improvement </li>
+        <li>Monitor the trends that are important to your organization</li>
+        <li>Gauge progress toward customized goals to see where your organization has made headway and identify areas of improvement</li>
         
     </ul>
     <p class="DataSubContent SemiBold Color3f3f3f">UI Design</p>
     <ul class="MarginTop5 CircleBullets">
         <li>Storyboard to obtain feedback from your organization's stakeholders and tailor the final product to your needs</li>
-        <li>Structure your dashboards, visuals and reports to be user-friendly</li>
-        <li>Design a functional and usable shared information environment that is accessible to people from all levels of your organization, from business analysts to the executive team </li>
+        <li>Create user-friendly your dashboards, visuals and reports to be user-friendly</li>
+        <li>Design a functional and usable shared information environment that is accessible to people from all levels of your organization, from business analysts to the executive team</li>
     </ul>	           
 </article>
 <article class="RightArticle">

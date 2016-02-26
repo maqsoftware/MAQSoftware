@@ -1339,3 +1339,7 @@ a img {
 .selectedTab{
     color: #bb141a;
 }
+.viLinks {
+    color: #0563C0;
+    text-decoration: underline;
+}
