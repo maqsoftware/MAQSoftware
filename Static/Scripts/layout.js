@@ -56,7 +56,7 @@ function loadNews(sNewsData, queryParam, oBreadCrumb, oJobTitle, career) {
     try {
         var parser = new DOMParser(),
             oNewsData = parser.parseFromString(sNewsData, "text/xml"),
-            entry1 = oNewsData.getElementsByTagName('entry').item(queryParam),
+            entry1 = oNewsData.getElementsByTagName('entry').item(parseInt(queryParam)),
             sContent = '<div class="BorderBottom"><p class="SemiBold">' + entry1.getElementsByTagName('content')[0].childNodes[0].nodeValue + '</p></div>';
         oBreadCrumb.css("display", "block");
         oJobTitle.css("display", "block");

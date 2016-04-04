@@ -17,7 +17,7 @@
     <ul class="MarginTop5 CircleBullets">
         <li>Strong commitment to customer success</li>
         <li>Complete visibility to project status and full transparency throughout delivery cycle</li>
-        <li>Use of latest technologies</li>
+        <li>Use of the latest technologies</li>
     </ul>
 	<a target="_blank" href='http://www.microsoft.com/' ><div id="Client1" class="ClientImage" title="Microsoft"></div></a>
 	<a target="_blank" href='http://www.google.com/' ><div id="Client11" class="ClientImage" title="Google"></div></a>	
