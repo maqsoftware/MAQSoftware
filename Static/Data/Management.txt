@@ -2,7 +2,7 @@
 <article class="LeftArticle FullWidth">
     <section>        
         <h3 class="PersonName SemiBold Datatagline Margin5Less Color58585a">Rajeev Agarwal</h3>
-        <h5 class="PersonDesg">CEO and Founder</h5>        
+        <h5 class="PersonDesg">Founder and Managing Consultant</h5>        
         <div class="PersonDescHolder">            
                 <p>As the founder and the managing consultant of MAQ Software, Rajeev works with customers to plan and develop innovative applications on various technology platforms. 
                 Prior to founding MAQ Software, Rajeev worked at Microsoft Corporation in several product management groups including Visual C++, Microsoft Windows NT and 

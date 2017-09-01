@@ -4,12 +4,12 @@
         <a href="http://www.inc.com/profile/maq-software" target="_blank"><img src="../../Static/Images/Recognition/Inc5000.png" alt="Inc. 5000, Fastest Growing Companies in America, 2007-2012" title="Inc. 5000, Fastest Growing Companies in America, 2007-2015" /></a>
     </aside>
     <aside class="RecognitionContent FloatLeft">
-        <p class="SemiBold Color3f3f3f">7 Time Honoree, <i class="SemiBold">Inc. 5000</i>, Fastest Growing Companies in America</p>
+        <p class="SemiBold Color3f3f3f">Seven Time Honoree, <i class="SemiBold">Inc. 5000</i>, Fastest Growing Companies in America</p>
         <p>
-            MAQ Software is honored to be listed on the prestigious <i>Inc. 5000</i> list for the 7th time, a rare achievement. Since 2007, Inc. magazine has recognized 20,263 unique companies on its <i>Inc. 5000</i> list based on the sales growth of the companies. Only 585 companies have appeared on the <i>Inc. 5000</i> list seven or more times.</p>
+            MAQ Software is honored to be listed on the prestigious <i>Inc. 5000</i> list for the 7th time, a rare achievement. Since 2007, Inc. magazine has recognized 20,263 unique companies on its <i>Inc. 5000</i> list based on the sales growth of the companies. Less than 3% (585) of the companies have appeared on the <i>Inc. 5000</i> list seven or more times.</p>
         <p class="DataSubContent">
             For more than 30 years, <i>Inc.’s</i> list has served as evidence of the significant accomplishments of enterprises such as Intuit, 
-            Zappos, Under Armour, Microsoft, Jamba Juice, Timberland, Visa, Clif Bar, Patagonia and Oracle.
+            Zappos, Under Armor, Microsoft, Jamba Juice, Timberland, Visa, Clif Bar, Patagonia and Oracle.
         </p>
     </aside>
 </section>
@@ -33,9 +33,9 @@
         <a href="https://pinpoint.microsoft.com/en-us/companies/4295523993" target="_blank"><img src="../../Static/Images/Recognition/Partner.png" alt="Microsoft Partner" title="Microsoft Gold Partner for Data Analytics, Data Platform and Application Development" width="133" /></a>
     </aside>
     <aside class="RecognitionContent FloatLeft">
-        <p class="SemiBold Color3f3f3f">Microsoft Gold Certified Partner</p>
+        <p class="SemiBold Color3f3f3f">Microsoft Gold Partner</p>
         <p>
-            Microsoft recognizes MAQ Software as a Partner with Gold competencies in Data Analytics, Data Platform and Application Development which acknowledges our competency and expertise in Microsoft solutions.
+            Microsoft recognizes MAQ Software as a Partner with Gold competencies in Data Analytics, Data Platform and Application Development which certifies our expertise in delivering solutions based on the latest Microsoft products.
 			</p>
     </aside>
 </section>
@@ -57,7 +57,7 @@
     <aside class="RecognitionContent FloatLeft">
         <p class="SemiBold Color3f3f3f">Microsoft Preferred Supplier</p>
         <p>
-            MAQ Software is a preferred supplier for Microsoft since 2005. This confirms Microsoft’s trust in our quality and delivery model.
+            MAQ Software is a preferred supplier for Microsoft since 2000. Our supplier status confirms the confidence Microsoft Corporation has in our quality and delivery model.
         </p>
     </aside>
 </section>

@@ -320,6 +320,8 @@ a .imgFollowUS {
 
 #div1 {
     background: url(../Images/Slider/Amazon-Logo.png) no-repeat center center;
+    margin-top: 14px;
+    height: calc(100% - 14px);
 }
 
 #div2 {
@@ -340,6 +342,8 @@ a .imgFollowUS {
 
 #div6 {
     background: url(../Images/Slider/Google-logo.png) no-repeat center center;
+    margin-top: 7px;
+    height: calc(100% - 7px);
 }
 
 #div7 {
@@ -352,6 +356,7 @@ a .imgFollowUS {
 
 #div9 {
     background: url(../Images/Slider/Wunderman-Logo.png) no-repeat center center;
+    background-size: 89%;
 }
 
 #div10 {
@@ -1338,4 +1343,8 @@ a img {
 }
 .selectedTab{
     color: #bb141a;
+}
+.viLinks {
+    color: #0563C0;
+    text-decoration: underline;
 }

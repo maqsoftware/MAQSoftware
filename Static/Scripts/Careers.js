@@ -40,6 +40,10 @@
                 title: {
                     "#text": "Systems Engineer"
                 }
+            }, {
+                title: {
+                    "#text": "Development Operations Engineer"
+                }
             }
         ],
         oNewsData = null,
@@ -132,14 +136,14 @@ function showJobPage(sJobLocation, iJobID, sjobPost) {
     "use strict";
     sJobLocation = sJobLocation.toLowerCase();
     switch (sJobLocation) {
-    case "redmond":
-        window.location.href = "#CareerinUS?q=" + iJobID + "&pn=" + sjobPost;
-        break;
-    case "hyderabad":
-        window.location.href = "#CareersinHyd?q=" + iJobID + "&pn=" + sjobPost;
-        break;
-    case "mumbai":
-        window.location.href = "#CareersinMumbai?q=" + iJobID + "&pn=" + sjobPost;
-        break;
+        case "redmond":
+            window.location.href = "#CareerinUS?q=" + iJobID + "&pn=" + sjobPost;
+            break;
+        case "hyderabad":
+            window.location.href = "#CareersinHyd?q=" + iJobID + "&pn=" + sjobPost;
+            break;
+        case "mumbai":
+            window.location.href = "#CareersinMumbai?q=" + iJobID + "&pn=" + sjobPost;
+            break;
     }
 }

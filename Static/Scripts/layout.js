@@ -56,7 +56,7 @@ function loadNews(sNewsData, queryParam, oBreadCrumb, oJobTitle, career) {
     try {
         var parser = new DOMParser(),
             oNewsData = parser.parseFromString(sNewsData, "text/xml"),
-            entry1 = oNewsData.getElementsByTagName('entry').item(queryParam),
+            entry1 = oNewsData.getElementsByTagName('entry').item(parseInt(queryParam)),
             sContent = '<div class="BorderBottom"><p class="SemiBold">' + entry1.getElementsByTagName('content')[0].childNodes[0].nodeValue + '</p></div>';
         oBreadCrumb.css("display", "block");
         oJobTitle.css("display", "block");
@@ -153,17 +153,14 @@ function redirect() {
         loadPage('CareersinHyd');
         $('.CareersTab').addClass('selectedTab');
         document.title = 'Careers in Hyderabad - MAQ Software';
-        setTimeout(careersInHyd, 100);
     } else if (-1 !== hashVal.toLowerCase().indexOf('#careersinmumbai'.toLowerCase())) {
         loadPage('CareersinMumbai');
         $('.CareersTab').addClass('selectedTab');
         document.title = 'Careers in Mumbai - MAQ Software';
-        setTimeout(careersInMumbai, 100);
     } else if (-1 !== hashVal.toLowerCase().indexOf('#careerinus'.toLowerCase())) {
         loadPage('CareerinUS');
         $('.CareersTab').addClass('selectedTab');
         document.title = 'Careers in US - MAQ Software';
-        setTimeout(careersInUS, 100);
     } else if (-1 !== hashVal.toLowerCase().indexOf('#careers'.toLowerCase())) {
         loadPage('Careers');
         $('.CareersTab').addClass('selectedTab');
@@ -187,16 +184,16 @@ function loadNewsMainPage() {
         dataType: 'jsonp',
         success: function (sResponse) {
             loadNewsMain(sResponse);
-        }        
+        }
     });
 }
 function loadNewsMain(sNewsData) {
     try {
-             var parser = new DOMParser();
+        var parser = new DOMParser();
         oNewsData = parser.parseFromString(sNewsData, "text/xml");
         iTotalNews = oNewsData.getElementsByTagName('entry').length;
-               renderNewsMain();
-          } catch (ignore) {
+        renderNewsMain();
+    } catch (ignore) {
     }
 }
 function renderNewsMain() {
