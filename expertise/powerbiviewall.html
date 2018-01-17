@@ -123,7 +123,7 @@
         </header>
         <!-- End Header -->
         <!-- CONTENT --------------------------------------------------------------------------------->
-        <section id="body" class="ls-point01em">
+        <section id="body" class=" ">
         <!-- Intro Section -->
         <section class="inner-intro dark-bg bg-image overlay-dark parallax parallax-background1" data-background-img="../img/Banners/BI.jpg">
             <div class="container text-center">
@@ -138,7 +138,7 @@
             <div class="container">
                 <!-- work Filter -->
                 <div class="row">
-                    <ul class="col container-filter pbi-vall-container-filter ls-point01em categories-filter">
+                    <ul class="col container-filter pbi-vall-container-filter   categories-filter">
                         <li><a class="categories active" data-filter="*">All</a></li>
                         <li><a class="categories" data-filter=".gauge">Gauges</a></li>
                         <li><a class="categories" data-filter=".kpi">KPIs</a></li>
@@ -194,7 +194,7 @@
                             <img alt="Cynlindrical Gauge" src="../img/PowerBI/Cylindrical_Gauge.png" class="item-container">
                             <div class="item-mask">
                                 <div class="item-caption text-center" style="color:white;">
-                                    <div>Track current values against a target with an intuitive 3D cylinder visual</div>
+                                    <div>Display a single metric against a target value or capacity with an intuitive 3D cylinder visual </div>
                                     <a data-toggle="modal" data-target="#modelCylindricalGaugeChart" class="btn btn-line-xs btn-white-line"><i class="fa"></i>Learn More</a>
                                 </div>
                             </div>
@@ -332,7 +332,7 @@
                             <img alt="KPI Ticker" src="../img/PowerBI/KPI_Ticker.png" class="item-container">
                             <div class="item-mask">
                                 <div class="item-caption text-center" style="color:white;">
-                                    <div> Automatically flipping visual that allows you to view various metrics along with trend indicators</div>
+                                    <div> Display multiple KPIs in an automatically rotating visual</div>
                                     <a data-toggle="modal" data-target="#modelKPITickerChart" class="btn btn-line-xs btn-white-line"><i class="fa"></i>Learn More</a>
                                 </div>
                             </div>
@@ -346,7 +346,7 @@
                             <img alt="Linear Gauge" src="../img/PowerBI/Linear_Gauge.png" class="item-container">
                             <div class="item-mask">
                                 <div class="item-caption text-center" style="color:white;">
-                                    <div>Create at-a-glance visualization to compare your progress against identified goals and warning zones</div>
+                                    <div>Compare your progress against targeted goals</div>
                                     <a data-toggle="modal" data-target="#modelLinearGaugeChart" class="btn btn-line-xs btn-white-line"><i class="fa"></i>Learn More</a>
                                 </div>
                             </div>
@@ -431,7 +431,7 @@
                             <img alt="Thermometer" src="../img/PowerBI/Thermometer.png" class="item-container">
                             <div class="item-mask">
                                 <div class="item-caption text-center" style="color:white;">
-                                    <div>This chart shows a graphical representation of value against threshold</div>
+                                    <div>Represent progress toward goals with a highly customizable thermometer graphic.</div>
                                     <a data-toggle="modal" data-target="#modelThermometerChart" class="btn btn-line-xs btn-white-line"><i class="fa"></i>Learn More</a>
                                 </div>
                             </div>
@@ -557,23 +557,39 @@
                         <a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-6 product_img">
-                                <img alt="Cylindrical Gauge" title="Cylindrical Gauge" src="../img/PowerBI/Cylindrical_Gauge_GIF.gif" class="img-responsive">
-                            </div>
-                            <div class="col-md-6 product_content">
-                                <p>Tracks current values against a target with an intuitive 3D cylinder visual. The cylindrical gauge's fill line gives users an easy way to understand how actual values weigh against a target capacity. The tool is useful for evaluating inventory, fuel, or other repository levels.</p>
-                                <p>Features:</p>
-                                <ul class="CircleBullets">
-                                    <li>Actual value display. For added clarity, the fill line's actual value is listed below the cylinder.</li>
-                                    <li>Tick marks. Users may adjust or disable this feature. By default, tick values are enabled, with the minimum set to 0 and the maximum set to 100.</li>
-                                    <li>Max threshold definition. Users may include a maximum threshold to see whether the actual value is over capacity.</li>
-                                    <li>Scroll bar. When height restrictions limit how much of the gauge is visible, a vertical scroll bar allows users to navigate up and down.</li>
-                                </ul>
-                                <a href="https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380874?tab=Overview" target="_blank" class="btn btn-md btn-black-line ">See in AppSource</a>
+                            <div class="row">
+                                <div class="col-md-6 product_img">
+                                    <img alt="Cylindrical Gauge" title="Cylindrical Gauge" src="../img/PowerBI/Cylindrical_Gauge_GIF.gif" class="img-responsive">
+                                </div>
+                                <div class="col-md-6 product_content">
+                                    <p>
+                                            Use Cylindrical Gauge by MAQ Software to show how actual values compare against available capacity. This visual can be used to monitor, and track inventory sold, budget spent, or other capacity used.
+                                    </p>
+                                    <p>Features of this visual include:</p>
+                                    <ul >
+                                        <li>
+                                                Adjust or disable tick marks under the configurations tab. 
+                                        </li>
+                                        <li>
+                                                Define the minimum and maximum values of the tick marks. 
+                                        </li>
+                                        <li>
+                                                Customize the fill and border color of the cylinder.
+                                        </li>
+                                        <li>
+                                                Navigate the visual with a vertical scroll bar, when height restrictions limit visibility. 
+                                        </li>
+                                        <li>
+                                                The actual value of the fill line, listed below the cylinder for added clarity.
+                                        </li>
+                                    </ul>
+                                    <p>
+                                            For any feature requests or questions about this visual, please send an e-mail to our team at Support@MAQSoftware.com.
+                                    </p>
+                                    <a href="https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380874?tab=Overview" target="_blank" class="btn btn-md btn-black-line ">See in AppSource</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -684,7 +700,7 @@
                             </div>
                             <div class="col-md-6 product_content">
                                 <p>Combines benefits of showing point distribution along with actual values. The following formatting options are provided in this visual:</p>
-                                <ul class="CircleBullets">
+                                <ul >
                                     <li>Show or hide points in the chart</li>
                                     <li>Show or hide histogram bars</li>
                                     <li>Show or hide X-axis</li>
@@ -736,7 +752,7 @@
                                 <p>Transforms dense statistical data into clear networks of categories and relationships. Reveal connections in your data with a storytelling visual. In this intuitive graph, nodes represent categories and vertices represent relationships between categories. The bigger the node or vertex, the larger the value.</p>
                                 <p>Journey Chart's customizable node colors make it easy for viewers to distinguish between categories. Users can also enable text labels and tooltips for each node to provide additional information, such as a category's title and value. The color and size of text labels are adjustable. The option to enable a legend gives you the opportunity to clarify complex graphs that describe many types of data and categories.</p>
                                 <p>You can use the visual for numerous scenarios, including:</p>
-                                <ul class="CircleBullets">
+                                <ul >
                                     <li>Explaining a process' flow</li>
                                     <li>Uncovering underlying patterns</li>
                 swd                    <li>Highlighting subcategories stemming from a single source</li>
@@ -757,16 +773,35 @@
                         <a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-6 product_img">
-                                <img alt="KPI Column" title="KPI Column" src="../img/PowerBI/KPI_Column_GIF.gif" class="img-responsive">
-                            </div>
-                            <div class="col-md-6 product_content">
-                                <p>Column chart where each column behaves as an indicator when compared with a line. Column color updates dynamically based on the difference in column height and respective target line value. Adding common threshold value exists for all columns. For upcoming values, the same target line can be used for forecasting and the column is displayed in a translucent color to indicate forecasted values.</p>
-                                <a href="https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380996?tab=Overview" target="_blank" class="btn btn-md btn-black-line ">See in AppSource</a>
+                            <div class="row">
+                                <div class="col-md-6 product_img">
+                                    <img alt="KPI Column" title="KPI Column" src="../img/PowerBI/KPI_Column_GIF.gif" class="img-responsive">
+                                </div>
+                                <div class="col-md-6 product_content">
+                                    <p>
+                                            KPI Column by MAQ Software is a combination bar and line chart; columns represent performance and lines represent KPI targets. Column color changes dynamically based on degree of achievement against the target line's value. 
+                                    </p>
+                                    <p>
+                                            Key features:
+                                    </p>
+                                    <ul>
+                                        <li>
+                                                Include an optional target value that's common for all columns.
+                                        </li>
+                                        <li>
+                                                Represent forecasted data in columns, using the same target line.
+                                        </li>
+                                        <li>
+                                                Display forecasted columns in a translucent color to differentiate them from actual values.
+                                        </li>
+                                    </ul>
+                                    <p>
+                                            For any feature requests or questions about this visual, please send an e-mail to our team at Support@MAQSoftware.com.
+                                    </p>
+                                    <a href="https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380996?tab=Overview" target="_blank" class="btn btn-md btn-black-line ">See in AppSource</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -807,7 +842,20 @@
                                 <img alt="KPI Ticker" title="KPI Ticker" src="../img/PowerBI/KPI_Ticker_GIF.gif" class="img-responsive">
                             </div>
                             <div class="col-md-6 product_content">
-                                <p>Automatically flipping visual that allows you to view various metrics along with trend indicators. KPI Ticker allows you to configure a set of metrics that will be shown in rotation. It also allows you to specify trend indicators that show the percentage or value drop or increase. Suitable for applications that focus on key metrics and the metric value increase or decrease. Visually attractive with ability to change colors of tiles and trend indicators.</p>
+                                <p>
+                                        Save space and optimize performance to display multiple KPIs in a series of rotating tiles. Show the percentage increase or decrease for each value, with the option of a color-coded trend indicator to quickly alert viewers of positive, negative, and neutral changes.                                    
+                                    </p>      
+                                    <p>
+                                            Key features:
+                                    </p>
+                                    <ul >
+                                        <li>Adjust the number of tiles in each row and their background color.</li>
+                                        <li>Change font size and color.</li>
+                                        <li>Customize color of positive, negative, and neutral trend indicators.</li>
+                                    </ul>
+                                <p>
+                                        For any feature requests or questions about this visual, please send an e-mail to our team at Support@MAQSoftware.com.
+                                </p>
                                 <a href="https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380946?tab=Overview" target="_blank" class="btn btn-md btn-black-line ">See in AppSource</a>
                             </div>
                         </div>
@@ -823,16 +871,40 @@
                         <a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-6 product_img">
-                                <img alt="Linear Gauge" title="Linear Gauge" src="../img/PowerBI/Linear_Gauge_GIF.gif" class="img-responsive">
-                            </div>
-                            <div class="col-md-6 product_content">
-                                <p>Create at-a-glance visualization to compare your progress against identified goals and warning zones. This visual allows you to include multiple data points. The component provides the ability to illustrate trend details such as monthly or year-to-date completion rates. The pointer notes targets, and the colored bar shows the current progress toward those goals. Best suited for showing progress as compared to a target.</p>
-                                <a href="https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380821?tab=Overview" target="_blank" class="btn btn-md btn-black-line ">See in AppSource</a>
+                            <div class="row">
+                                <div class="col-md-6 product_img">
+                                    <img alt="Linear Gauge" title="Linear Gauge" src="../img/PowerBI/Linear_Gauge_GIF.gif" class="img-responsive">
+                                </div>
+                                <div class="col-md-6 product_content">
+                                    <p>
+                                            Linear Gauge by MAQ Software shows progress toward a target value, making it a useful tool for illustrating monthly or year-to-date (YTD) completion rates.
+                                    </p>
+                                    <p>
+                                            Target value is signified by a pointer. Above the gauge, view the present value, percentage toward completion, and two optional trend values. 
+                                    </p>
+                                    <p>
+                                            Key features:
+                                    </p>  
+                                    <ul>
+                                            <li>
+                                                    Set the minimum and maximum value of the metric.
+                                            </li>
+                                            <li>
+                                                    Customize the color of the gauge and data labels.
+                                            </li>
+                                            <li>
+                                                    Choose from six options for the unit of the metric.
+                                            </li>
+                                    </ul>
+                                    <p> 
+                                            For any feature requests or questions about this visual, please send an e-mail to our team at Support@MAQSoftware.com.
+                                            
+                                    </p>
+
+                                    <a href="https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380821?tab=Overview" target="_blank" class="btn btn-md btn-black-line ">See in AppSource</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -851,7 +923,7 @@
                             <div class="col-md-6 product_content">
                                 <p>Represent data in separate quadrants to show distribution of data and items that share common traits. This visual is useful for plotting data that contains three measures using an X-axis, a Y-axis, and a bubble size that represents the value of the third measure.</p>
                                 <p>The formatting options below are provided for the visual:</p>
-                                <ul class="CircleBullets">
+                                <ul >
                                     <li>Set color of each bubble.</li>
                                     <li>Legends setting: on/off, position, title, color and text size.</li>
                                     <li>Formatting option for quadrants and quadrant lines: four Quadrant names, X-Axis division line, Y-Axis division line and Dotted/solid.</li>
@@ -880,7 +952,7 @@
                             <div class="col-md-6 product_content">
                                 <p>Represents data as slices, where sizes are relative to data. The size of each slice is determined by the slice value relative to the sum of the values of all slices. Each data series that you plot in the chart adds a ring to the chart. The rings have different colors for easy representation of the data slices in the chart.</p>
                                 <p>Key features:</p>
-                                <ul class="CircleBullets">
+                                <ul >
                                     <li>Ability to turn on animation to focus on specific slices. The animation visually pulls slices out of the ring chart.</li>
                                     <li>Dynamic indicator displayed along with the summary at the center of ring. Threshold values define the color and direction of the indicator.</li>
                                     <li>Ability to display primary and secondary measures in legends with indicators.</li>
@@ -967,16 +1039,35 @@
                         <a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-6 product_img">
-                                <img alt="Thermometer" title="Thermometer" src="../img/PowerBI/Thermometer_GIF.gif" class="img-responsive">
-                            </div>
-                            <div class="col-md-6 product_content">
-                                <p>Shows a graphical representation of a value against a threshold. Allows you to configure threshold values and render data per the threshold. Thermometer is a good way to represent data when you have the actual value and the target value (maximum threshold).</p>
-                                <a href="https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380847?tab=Overview" target="_blank" class="btn btn-md btn-black-line ">See in AppSource</a>
+                            <div class="row">
+                                <div class="col-md-6 product_img">
+                                    <img alt="Thermometer" title="Thermometer" src="../img/PowerBI/Thermometer_GIF.gif" class="img-responsive">
+                                </div>
+                                <div class="col-md-6 product_content">
+                                    <p>
+                                            Whether measuring event registration or online conversions, Thermometer by MAQ Software is the perfect tool for visualizing progress toward your target goal.
+                                    </p>
+                                    <p>    
+                                            Key features:
+                                    </p>
+                                    <ul>
+                                        <li>
+                                                Set the fill and border color of the thermometer.
+                                        </li>
+                                        <li>
+                                                Adjust the minimum and maximum value of the scale.
+                                        </li>
+                                        <li>
+                                                Turn off the tick bar for a minimalist look.
+                                        </li>
+                                    </ul>
+                                    <p>
+                                            For any feature requests or questions about this visual, please send an e-mail to our team at Support@MAQSoftware.com.
+                                    </p>
+                                    <a href="https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380847?tab=Overview" target="_blank" class="btn btn-md btn-black-line ">See in AppSource</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1038,7 +1129,7 @@
                                 <p>Box and whisker charts are most commonly used in statistical analysis like comparing medical trial results or teachers' test scores et. al. It consists of two parts—the main body called the Box and the thin vertical lines coming out of the Box called Whiskers. The first quartile forms the bottom and the third quartile forms the top of the Box. The Whiskers connect the minimum and the maximum values to the Box. In addition to showing median, first and third quartile and maximum and minimum values, the Box and Whisker Chart is also used to depict Mean, Standard Deviation and Quartile Deviation.</p>
                                 <p>While other Power BI Box plots have the capability to display these statistics data, Box Plot by MAQ Software provides more details and clarity of the figures by providing more user controls and capabilities to suit the exact needs of the use case like ability to add parent axis and flip visual horizontally or vertically based on reporting requirement.</p>
                                 <p>Other common feature includes:</p>
-                                <ul class="CircleBullets">
+                                <ul >
                                     <li>Option to enable/disable - mean dot and median line</li>
                                     <li>Option to choose the type of quartile - inclusive/exclusive</li>
                                     <li>Option to choose type of whiskers - Min/Max, < 1.5 IQR, > 1.5 IQR or custom</li>
@@ -1060,7 +1151,7 @@
         </section>
         <!-- END CONTENT ---------------------------------------------------------------------------->
         <!-- FOOTER -->
-        <footer class="footer ls-point01em pt-60">
+        <footer class="footer   pt-60">
             <div class="container">
                 <div class="row mb-30">
                     <div class="col-md-5  col-sm-4 mb-30">
