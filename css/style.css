@@ -1,4 +1,4 @@
-@import url("./plugin/flexslider.css");
+﻿@import url("./plugin/flexslider.css");
 @import url("./plugin/owl.carousel.css");
 @import url("./plugin/mediaelementplayer.css");
 @import url("./plugin/colorbox.css");
@@ -5499,4 +5499,7 @@ ul.nav-tabs {
 }
 .item-mask>.item-caption{
     padding-top:20%;
+}
+.demo{
+    height:100vh !important;
 }
