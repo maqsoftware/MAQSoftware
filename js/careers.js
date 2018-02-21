@@ -54,7 +54,7 @@ function loadIndiaCareers(sNewsData) {
             oTempData[0]= oNewsData.getElementsByTagName('entry');
             //oNewsData.feed.entry = oTempData;
         }
-        IndiarenderTitle(oNewsData.getElementsByTagName('entry'));
+        renderIndiaTitle(oNewsData.getElementsByTagName('entry'));
 
     } catch (exception) {
         oIndiaJobPostSection.html(sNoJobMessage).removeClass("Loading").removeClass("LoadingHeight");
@@ -74,7 +74,7 @@ function loadRedmondCareers(sNewsData) {
         if(oNewsData.getElementsByTagName('feed') && !oNewsData.getElementsByTagName('entry').length) {
             oTempData[0]= oNewsData.getElementsByTagName('entry');
         }
-        RedmondrenderTitle(oNewsData.getElementsByTagName('entry'));
+        renderRedmondTitle(oNewsData.getElementsByTagName('entry'));
 
     } catch (exception) {
         oRedmondJobPostSection.html(sNoJobMessage).removeClass("Loading").removeClass("LoadingHeight");
@@ -85,7 +85,7 @@ function loadRedmondCareers(sNewsData) {
     accordion();
 }
 
-function IndiarenderTitle(oData) {
+function renderIndiaTitle(oData) {
     var oCurrentPost;
     oIndiaJobPostSection.html("").removeClass("Loading").removeClass("LoadingHeight");
     for (iIterator = 0; iIterator < oData.length; iIterator++) {
@@ -95,7 +95,7 @@ function IndiarenderTitle(oData) {
     $("#tabs-2 .accordion *").removeAttr('style');
 }
 
-function RedmondrenderTitle(oData) {
+function renderRedmondTitle(oData) {
     var oCurrentPost;
     oRedmondJobPostSection.html("").removeClass("Loading").removeClass("LoadingHeight");
     for (iIterator = 0; iIterator < oData.length; iIterator++) {
