@@ -1,28 +1,47 @@
-﻿var oJobPostSection,
+﻿var oIndiaJobPostSection,
+    oRedmondJobPostSection,
     oNewsData = null,
 sTemplate = '<div class="accordion-section"><h6 class="accordion-title">@title</h6><div class="accordion-content">@content</div></div>'
     , sNoJobMessage = '<p class="DataSubContent Color595959">No job openings available at this location.<br />Please come back and check again soon.</p>'
     , sJobServiceIssue = '<p class="DataSubContent Color595959">Issue in connecting to job-post service.<br />Try loading the section again.</p>';
 
 function careersConstructor() {
-    oJobPostSection = $("#tabs-2 .accordion");
-    var feedUrl = "https://www.blogger.com/feeds/2523158019509365490/posts/default/-/Openings - India";
+    oIndiaJobPostSection = $("#tabs-2 .accordion");
+    oRedmondJobPostSection = $("#tabs-1 .accordion");
+
+    var IndiafeedUrl = "https://www.blogger.com/feeds/2523158019509365490/posts/default/-/Openings - India";
+    var RedmondfeedUrl = "https://www.blogger.com/feeds/2523158019509365490/posts/default/-/Openings - Redmond";
     $.ajax({
-        url: feedUrl,
+        url: IndiafeedUrl,
         type: 'GET',
         dataType: "jsonp",
         success: function (msg) {
             if (msg) {
                 loadIndiaCareers(msg);
             } else {
-                oJobPostSection.html(sNoJobMessage).removeClass("Loading").removeClass("LoadingHeight");
+                oIndiaJobPostSection.html(sNoJobMessage).removeClass("Loading").removeClass("LoadingHeight");
             }
         },
         error: function () {
-            oJobPostSection.html(sJobServiceIssue).removeClass("Loading").removeClass("LoadingHeight");
+            oIndiaJobPostSection.html(sJobServiceIssue).removeClass("Loading").removeClass("LoadingHeight");
         }
     });
-    
+    $.ajax({
+        url: RedmondfeedUrl,
+        type: 'GET',
+        dataType: "jsonp",
+        success: function (msg) {
+            if(msg) {
+                loadRedmondCareers(msg);
+            } else {
+                oRedmondJobPostSection.html(sNoJobMessage).removeClass("Loading").removeClass("LoadingHeight");
+            }
+        },
+        error: function () {
+            oRedmondJobPostSection.html(sJobServiceIssue).removeClass("Loading").removeClass("LoadingHeight");
+        }
+    });
+
 }
 
 function loadIndiaCareers(sNewsData) {
@@ -32,33 +51,64 @@ function loadIndiaCareers(sNewsData) {
         oNewsData = parser.parseFromString(sNewsData, "text/xml");
 
         if (oNewsData.getElementsByTagName('feed') && !oNewsData.getElementsByTagName('entry').length) {
-            oTempData[0] = oNewsData.getElementsByTagName('entry');
+            oTempData[0]= oNewsData.getElementsByTagName('entry');
             //oNewsData.feed.entry = oTempData;
         }
-        renderTitle(oNewsData.getElementsByTagName('entry'));
+        IndiarenderTitle(oNewsData.getElementsByTagName('entry'));
 
     } catch (exception) {
-        oJobPostSection.html(sNoJobMessage).removeClass("Loading").removeClass("LoadingHeight");
+        oIndiaJobPostSection.html(sNoJobMessage).removeClass("Loading").removeClass("LoadingHeight");
     }
     // unbind already binded click event
     $('.accordion .accordion-section .accordion-title').unbind('click');
-    
+
     accordion();
 }
-function renderTitle(oData) {
+
+function loadRedmondCareers(sNewsData) {
+    var oTempData = [], parser;
+    try {
+        parser = new DOMParser();
+        oNewsData = parser.parseFromString(sNewsData, "text/xml");
+
+        if(oNewsData.getElementsByTagName('feed') && !oNewsData.getElementsByTagName('entry').length) {
+            oTempData[0]= oNewsData.getElementsByTagName('entry');
+        }
+        RedmondrenderTitle(oNewsData.getElementsByTagName('entry'));
+
+    } catch (exception) {
+        oRedmondJobPostSection.html(sNoJobMessage).removeClass("Loading").removeClass("LoadingHeight");
+    }
+    // unbind already binded click event
+    $('.accordion .accordion-section .accordion-title').unbind('click');
+
+    accordion();
+}
+
+function IndiarenderTitle(oData) {
     var oCurrentPost;
-    oJobPostSection.html("").removeClass("Loading").removeClass("LoadingHeight");
+    oIndiaJobPostSection.html("").removeClass("Loading").removeClass("LoadingHeight");
     for (iIterator = 0; iIterator < oData.length; iIterator++) {
         oCurrentPost = oData.item(iIterator);
-        oJobPostSection.append(sTemplate.replace(/@title/g, oCurrentPost.getElementsByTagName("title")[0].childNodes[0].nodeValue).replace(/@content/g, oCurrentPost.getElementsByTagName("content")[0].childNodes[0].nodeValue));
+        oIndiaJobPostSection.append(sTemplate.replace(/@title/g, oCurrentPost.getElementsByTagName("title")[0].childNodes[0].nodeValue).replace(/@content/g, oCurrentPost.getElementsByTagName("content")[0].childNodes[0].nodeValue));
     }
     $("#tabs-2 .accordion *").removeAttr('style');
+}
+
+function RedmondrenderTitle(oData) {
+    var oCurrentPost;
+    oRedmondJobPostSection.html("").removeClass("Loading").removeClass("LoadingHeight");
+    for (iIterator = 0; iIterator < oData.length; iIterator++) {
+        oCurrentPost = oData.item(iIterator);
+        oRedmondJobPostSection.append(sTemplate.replace(/@title/g, oCurrentPost.getElementsByTagName("title")[0].childNodes[0].nodeValue).replace(/@content/g, oCurrentPost.getElementsByTagName("content")[0].childNodes[0].nodeValue));
+    }
+    $("#tabs-1 .accordion *").removeAttr('style');
 }
 
 function checkScroll() {
     //play when video is visible
 
-    if (!isCareersPage()) {
+    if(!isCareersPage()) {
         return;
     }
     var videoID = "video-player";
@@ -102,7 +152,7 @@ function checkScroll() {
 
 var player;
 function onYouTubeIframeAPIReady() {
-    if (!isCareersPage())
+    if(!isCareersPage())
         return;
     player = new YT.Player('video-player', {
         events: {
@@ -123,7 +173,7 @@ function onPlayerReady(event) {
 
 
 function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.PLAYING) {
+    if(event.data == YT.PlayerState.PLAYING) {
         //console.log("event played");
     } else {
         //console.log("event paused");
