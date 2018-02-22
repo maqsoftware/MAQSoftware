@@ -74,7 +74,6 @@ function loadRedmondCareers(sNewsData) {
             oNewsData.getElementsByTagName('entry');
        }
         renderRedmondTitle(oNewsData.getElementsByTagName('entry'));
-       
 
     } catch (exception) {
         oRedmondJobPostSection.html(sNoJobMessage).removeClass("Loading").removeClass("LoadingHeight");
