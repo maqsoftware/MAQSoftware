@@ -1,4 +1,4 @@
-﻿@import url("./plugin/flexslider.css");
+@import url("./plugin/flexslider.css");
 @import url("./plugin/owl.carousel.css");
 @import url("./plugin/mediaelementplayer.css");
 @import url("./plugin/colorbox.css");
@@ -111,6 +111,9 @@ a {
         -moz-transition: all 0.25s ease 0s;
         -webkit-transition: all 0.25s ease 0s;
         -o-transition: all 0.25s ease 0s;
+    }
+    a.silent:hover{
+        color: Black !important;
     }
 
 .video {
@@ -281,6 +284,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+    
     font-size: 43px;
     letter-spacing: 2px;
     line-height: 40px;
@@ -289,7 +293,9 @@ h1 {
     h1.h1, h2.h2 {
         letter-spacing: 4px;
     }
-
+h1, h2{
+    font-family: 'Arial', sans-serif;
+}
 @media (max-width: 767px) {
     h1.h1, h2.h2 {
         letter-spacing: 0px;
@@ -781,6 +787,19 @@ form label.error {
     padding-bottom: 15px;
 }
 
+.ptb-25 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.pt-25 {
+    padding-top: 25px;
+}
+
+.pb-25 {
+    padding-bottom: 25px;
+}
+
 .ptb-60 {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -1034,6 +1053,30 @@ form label.error {
     margin-bottom: 25px;
 }
 
+.mtb-40 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+.mtb-50 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.mt-50 {
+    margin-top: 40px;
+}
+
+.mb-50 {
+    margin-bottom: 40px;
+}
 
 .mtb-80 {
     margin-top: 80px;
@@ -1047,6 +1090,21 @@ form label.error {
 .mb-80 {
     margin-bottom: 80px;
 }
+
+
+.mtb-90 {
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+.mt-90 {
+    margin-top: 90px;
+}
+
+.mb-90 {
+    margin-bottom: 90px;
+}
+
 
 .mtb-60 {
     margin-top: 60px;
@@ -1466,7 +1524,7 @@ form label.error {
     .header .logo a {
         margin-top: 13px;
         margin-bottom: 16px;
-        width: 96px;
+        width: 135px;
         transition: all 0.3s ease 0s;
         -o-transition: all 0.3s ease 0s;
         -moz-transition: all 0.3s ease 0s;
@@ -1500,7 +1558,7 @@ form label.error {
             width: 100%;
             position: absolute;
             top: 0;
-            left: 0;
+            left: -15px;
             transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
             -o-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
             -moz-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
@@ -2200,7 +2258,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 
 .inner-intro {
     position: relative;
-    padding: 200px 0;
+    padding-top: 64px;
 }
 
     .inner-intro h1 {
@@ -2744,7 +2802,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
     .client-logo img {
         height: auto;
         max-height: 100%;
-        width: auto;
+        width: auto !important;
         /*margin-right: 15px;
         margin-left: 15px;*/
     }
@@ -3025,7 +3083,8 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 
 .inner-intro {
     background-color: #f7f7f7;
-    height: 530px;
+    height: 45vh;
+    min-height: 250px;
     display: block;
     position: relative;
 }
@@ -3041,8 +3100,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
     }
 
         .inner-intro .container .title {
-            padding-bottom: 65px;
-            padding-top: 65px;
+            
             display: table-cell;
             vertical-align: middle;
             text-align: center;
@@ -3553,7 +3611,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
     }
 
     .fullwidth-slider .item {
-        height: 325px !important;
+        height: 425px !important;
     }
 
     .fullwidth-slider .owl-buttons, .fullwidth-slider .owl-nav {
@@ -3571,14 +3629,14 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 @media (max-width: 320px) {
 
     .fullwidth-slider .item {
-        height: 275px !important;
+        height: 425px !important;
     }
 }
 
 @media (orientation:landscape) and (max-width: 515px) {
 
     .fullwidth-slider .item {
-        height: 186px !important;
+        height: 335px !important;
     }
 
     .owl-buttons, .owl-nav {
@@ -3588,7 +3646,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 
 @media (orientation:landscape) and (max-width: 480px) {
     .fullwidth-slider .item {
-        height: 186px !important;
+        height: 335px !important;
     }
 }
 /* ----------------------------------------------------------------------*/
@@ -4217,6 +4275,7 @@ ul.project-detail-block, .project-detail-block ul {
         display: -webkit-flex;
         height: 100%;
         width: 100%;
+        
     }
 
         .shop-item .item-mask .item-mask-detail .item-mask-detail-ele {
@@ -4228,6 +4287,13 @@ ul.project-detail-block, .project-detail-block ul {
     display: block;
     position: relative;
     overflow: hidden;
+    /*border: 1px solid grey;*/
+}
+.item-img img{
+    max-height:40vw;
+    max-width:40vw;
+    margin-right:auto;
+    margin-left:auto
 }
 
 .shop-item-info {
@@ -4360,9 +4426,14 @@ ul.project-detail-block, .project-detail-block ul {
 }
 
     .fullwidth-slider .item {
-        height: 650px;
+        height: 55vh;
+        min-height:200px;
         position: relative;
         width: 100%;
+    }
+    .fullwidth-slider.expertise .item  {
+        height: 38vh;
+        min-height:375px;
     }
 
 
@@ -4523,14 +4594,15 @@ ul.project-detail-block, .project-detail-block ul {
         -o-transform: scale(1.5);
     }
 
-    .owl-carousel.white .owl-controls .owl-page span, .owl-carousel .owl-dots .owl-dot span {
+    .owl-carousel.white .owl-controls .owl-page span, .owl-carousel.white .owl-dots .owl-dot span {
         background: none repeat scroll 0 0 #fff;
     }
 
-    .owl-carousel.white .owl-controls .owl-page.active span, .owl-carousel .owl-dots .owl-dot.active span {
+    .owl-carousel.white .owl-controls .owl-page.active span, .owl-carousel.white .owl-dots .owl-dot.active span {
         background: rgba(0, 0, 0, 0);
         border: 2px solid #fff;
     }
+
 
 /*.nf-carousel-theme {
 }*/
@@ -5000,13 +5072,24 @@ ul.project-detail-block, .project-detail-block ul {
 
 /*Recognition Controls*/
 .RecognitionImage img {
-    max-width: 250px;
-    max-height: 140px;
+    max-width: 210px;
+    max-height: 120px;
+    margin: 0 auto;
+    vertical-align: middle;
 }
 
 .RecognitionImage {
     padding-bottom: 15px;
+    
+    white-space: nowrap;
 }
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+
 
 /*.RecognitionContent {
 }*/
@@ -5500,8 +5583,53 @@ ul.nav-tabs {
 .item-mask>.item-caption{
     padding-top:20%;
 }
+.owl-dots {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    bottom: 15px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+}
+.firstItem{
+    
+}
+.item1-carousel .item{
+    margin-right: 20px;
+}
+.item1-carousel .owl-dots{
+    bottom:0px;
+}
+.owl-height{
+    height:auto !important;
+}
+.owl-stage{
+    min-width:3000px !important;
+}
+.CircleBullets{
+    list-style-type: disc;
+    padding-left: 35px;
+    color:black;
+    margin:0px;
+    font-size: 14px;
+}
 .demo{
     height:100vh !important;
     padding:0px !important;
     padding-top:64px !important;
+}
+.ultrabold{
+    color:black !important; 
+    font-weight: 900; 
+    line-height:35px;
+}
+#client-logos .owl-next{
+    display:none !important;
+}
+#client-logos .owl-prev{
+    display:none !important;
+}
+.twitter-timeline{
+    height:100px !important;
 }
