@@ -1,107 +1,58 @@
-﻿var oIndiaJobPostSection,
-    oRedmondJobPostSection,
+﻿var oJobPostSection,
     oNewsData = null,
 sTemplate = '<div class="accordion-section"><h6 class="accordion-title">@title</h6><div class="accordion-content">@content</div></div>'
     , sNoJobMessage = '<p class="DataSubContent Color595959">No job openings available at this location.<br />Please come back and check again soon.</p>'
     , sJobServiceIssue = '<p class="DataSubContent Color595959">Issue in connecting to job-post service.<br />Try loading the section again.</p>';
 
 function careersConstructor() {
-    oIndiaJobPostSection = $("#tabs-2 .accordion");
-    oRedmondJobPostSection = $("#tabs-1 .accordion");
-
-    var IndiafeedUrl = "https://www.blogger.com/feeds/2523158019509365490/posts/default/-/Openings - India";
-    var RedmondfeedUrl = "https://www.blogger.com/feeds/2523158019509365490/posts/default/-/Openings - Redmond";
+    oJobPostSection = $("#tabs-2 .accordion");
+    var feedUrl = "https://www.blogger.com/feeds/2523158019509365490/posts/default/-/Openings - India";
     $.ajax({
-        url: IndiafeedUrl,
+        url: feedUrl,
         type: 'GET',
         dataType: "jsonp",
         success: function (msg) {
             if (msg) {
                 loadIndiaCareers(msg);
             } else {
-                oIndiaJobPostSection.html(sNoJobMessage).removeClass("Loading").removeClass("LoadingHeight");
+                oJobPostSection.html(sNoJobMessage).removeClass("Loading").removeClass("LoadingHeight");
             }
         },
         error: function () {
-            oIndiaJobPostSection.html(sJobServiceIssue).removeClass("Loading").removeClass("LoadingHeight");
+            oJobPostSection.html(sJobServiceIssue).removeClass("Loading").removeClass("LoadingHeight");
         }
     });
-    $.ajax({
-        url: RedmondfeedUrl,
-        type: 'GET',
-        dataType: "jsonp",
-        success: function (msg) {
-            if (msg) {
-                loadRedmondCareers(msg);
-            } else {
-                oRedmondJobPostSection.html(sNoJobMessage).removeClass("Loading").removeClass("LoadingHeight");
-            }
-        },
-        error: function () {
-            oRedmondJobPostSection.html(sJobServiceIssue).removeClass("Loading").removeClass("LoadingHeight");
-        }
-    });
-
+    
 }
 
 function loadIndiaCareers(sNewsData) {
-    var parser;
+    var oTempData = [], parser;
     try {
         parser = new DOMParser();
         oNewsData = parser.parseFromString(sNewsData, "text/xml");
 
         if (oNewsData.getElementsByTagName('feed') && !oNewsData.getElementsByTagName('entry').length) {
-            oNewsData.getElementsByTagName('entry');
+            oTempData[0] = oNewsData.getElementsByTagName('entry');
+            //oNewsData.feed.entry = oTempData;
         }
-        renderIndiaTitle(oNewsData.getElementsByTagName('entry'));
+        renderTitle(oNewsData.getElementsByTagName('entry'));
 
     } catch (exception) {
-        oIndiaJobPostSection.html(sNoJobMessage).removeClass("Loading").removeClass("LoadingHeight");
+        oJobPostSection.html(sNoJobMessage).removeClass("Loading").removeClass("LoadingHeight");
     }
     // unbind already binded click event
     $('.accordion .accordion-section .accordion-title').unbind('click');
-
+    
     accordion();
 }
-
-function loadRedmondCareers(sNewsData) {
-    var parser;
-    try {
-        parser = new DOMParser();
-        oNewsData = parser.parseFromString(sNewsData, "text/xml");
-
-        if (oNewsData.getElementsByTagName('feed') && !oNewsData.getElementsByTagName('entry').length) {
-            oNewsData.getElementsByTagName('entry');
-        }
-        renderRedmondTitle(oNewsData.getElementsByTagName('entry'));
-
-    } catch (exception) {
-        oRedmondJobPostSection.html(sNoJobMessage).removeClass("Loading").removeClass("LoadingHeight");
-    }
-    // unbind already binded click event
-    $('.accordion .accordion-section .accordion-title').unbind('click');
-
-    accordion();
-}
-
-function renderIndiaTitle(oData) {
+function renderTitle(oData) {
     var oCurrentPost;
-    oIndiaJobPostSection.html("").removeClass("Loading").removeClass("LoadingHeight");
+    oJobPostSection.html("").removeClass("Loading").removeClass("LoadingHeight");
     for (iIterator = 0; iIterator < oData.length; iIterator++) {
         oCurrentPost = oData.item(iIterator);
-        oIndiaJobPostSection.append(sTemplate.replace(/@title/g, oCurrentPost.getElementsByTagName("title")[0].childNodes[0].nodeValue).replace(/@content/g, oCurrentPost.getElementsByTagName("content")[0].childNodes[0].nodeValue));
+        oJobPostSection.append(sTemplate.replace(/@title/g, oCurrentPost.getElementsByTagName("title")[0].childNodes[0].nodeValue).replace(/@content/g, oCurrentPost.getElementsByTagName("content")[0].childNodes[0].nodeValue));
     }
     $("#tabs-2 .accordion *").removeAttr('style');
-}
-
-function renderRedmondTitle(oData) {
-    var oCurrentPost;
-    oRedmondJobPostSection.html("").removeClass("Loading").removeClass("LoadingHeight");
-    for (iIterator = 0; iIterator < oData.length; iIterator++) {
-        oCurrentPost = oData.item(iIterator);
-        oRedmondJobPostSection.append(sTemplate.replace(/@title/g, oCurrentPost.getElementsByTagName("title")[0].childNodes[0].nodeValue).replace(/@content/g, oCurrentPost.getElementsByTagName("content")[0].childNodes[0].nodeValue));
-    }
-    $("#tabs-1 .accordion *").removeAttr('style');
 }
 
 function checkScroll() {
