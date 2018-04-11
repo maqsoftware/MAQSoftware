@@ -2753,7 +2753,6 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 
 .Pricing-box .pricing-features {
     font-size: 13px;
-    text-transform: uppercase;
 }
 
     .Pricing-box .pricing-features ul {
@@ -3472,6 +3471,8 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 .spacing-grid {
     padding-top: 25px;
     padding-bottom: 25px;
+    padding-left:10px;
+    padding-right:10px;
 }
 
 .nf-col-1 .nf-item, .nf-col-1 .grid-sizer {
@@ -5632,4 +5633,11 @@ ul.nav-tabs {
 }
 .twitter-timeline{
     height:100px !important;
+}
+.compactBullets{
+    margin-top:5px;
+    margin-bottom:10px
+}
+.compacth5{
+    margin-bottom:5px;
 }
