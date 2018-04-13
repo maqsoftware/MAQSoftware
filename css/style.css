@@ -4090,7 +4090,15 @@ ul.project-detail-block, .project-detail-block ul {
     }
 
     .blog-post .post-header h2 {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+    }
+
+    .blog-post .social-media-share {
+        margin-bottom: 10px;
+    }
+
+    .blog-post .social-media-share .share-button, .social-media-share .twitter-share-button {
+        margin-right: 5px;
     }
 
     .blog-post .post-entry {

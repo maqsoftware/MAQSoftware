@@ -58,13 +58,14 @@ function renderNewsMain() {
             }
 
             var title = entry1.getElementsByTagName('title')[0].childNodes[0].nodeValue;
-
+            var sRawTitle = title;
             for (iCount = 0; iCount < iTotal; iCount++) {
                 title = title.replace(oItalicBookName[iCount], "<i class = 'SemiBold'>" + oItalicBookName[iCount] + "</i>");
             }
 
             $("#newstitle" + iNumber).html(title);
             $("#newsimg" + iNumber).attr('src', src);
+            $(".newslink" + iNumber).attr('href', "/news?article=" + sRawTitle);
         }
     }
     //$('.subData *').removeAttr('style');

@@ -267,8 +267,12 @@ function sliderAll() {
         pagination: true,  // Show pagination buttons
         navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
         navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        autoPlay: true,
-        autoplay: true,
+        //autoPlay: 8000,
+        //autoplay: 8000,
+        autoplayHoverPause: true,
+        // When using owlCarousel 2.0, we have to use below cinfig for auto play
+        autoplay:true,
+        autoplayTimeout:6000,
         autoplaySpeed: 800,
         navSpeed: 800,
         paginationSpeed: 800,
