@@ -21,7 +21,9 @@ var oNewsPager = {
                     //    '<span onClick=facebookShare("http://stravisocapture.000webhostapp.com/fbtest.html","thisismycustomtitle","thisiscustomdescription","https://vijayagowrisankar.files.wordpress.com/2017/12/23.png?w=611")>Share on Facebook</span>' +
 
                     //'</div>' +
-                '</div><div class="post-media"><img alt="News" title="@tooltip" src="@newsimagesrc"></div><div class="post-entry">@content</div></div>',
+                '</div>',
+    templatePostMedia: '<div class="post-media"><img alt="News" title="@tooltip" src="@newsimagesrc"></div>',
+    templatePostContent: '<div class="post-entry">@content</div></div>',
     pageIndex: 0,
     pagesize: 6
 }, id, highlightid, sClickedHighlightTitle, iClickedHighlightID, sArticle,
@@ -128,15 +130,18 @@ function renderNews() {
                 var bloggerContent = document.getElementById("bloggerContent");
                 var imgs = bloggerContent.getElementsByTagName('img');
                 var img, src = "";
-
+                var myTemplate = oNewsPager.template;
                 if (typeof imgs !== "undefined" && imgs.length > 0) {
                     img = imgs[0];
                     src = img.src;
                     img.parentNode.removeChild(img);
+                    myTemplate = myTemplate + oNewsPager.templatePostMedia;
                 }
+                myTemplate = myTemplate + oNewsPager.templatePostContent;
+
                 sContent = $("#bloggerContent").html();
 
-                var sContent = oNewsPager.template.replace("@title", sTitle)
+                var sContent = myTemplate.replace("@title", sTitle)
                                     .replace("@date", oDate)
                                     .replace("@content", sContent)
                                     .replace("@newsimagesrc", src)
