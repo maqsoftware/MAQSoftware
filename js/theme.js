@@ -270,6 +270,7 @@ function sliderAll() {
         autoPlay: true,
         autoplay: true,
         autoplaySpeed: 800,
+        autoplayTimeout: 6000,
         navSpeed: 800,
         paginationSpeed: 800,
         slideSpeed: 800,
