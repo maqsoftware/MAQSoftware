@@ -31,7 +31,8 @@ $(document).ready(function () {
     scroll();
     pluginElement();
     sliderHero();
-    sliderAll();
+    debugger;
+    //sliderAll();
     containerGridMasonry();
     scrollCallbackEle();
     shortcodeElements();
@@ -61,7 +62,8 @@ function loadPlugins() {
     scroll();
     pluginElement();
     sliderHero();
-    sliderAll();
+    debugger;
+    //sliderAll();
     containerGridMasonry();
     scrollCallbackEle();
     shortcodeElements();
@@ -249,33 +251,46 @@ function fullScreenSlider() {
 
 };
 
+
 // ---------------------------------------------------------------------------------------------------------------------------->
 // SLIDER FUNCTIONS   ||-----------
 // ---------------------------------------------------------------------------------------------------------------------------->
 
-function sliderAll() {
 
-    // fullwidth Slider
+$.getJSON("Configuration/HomeSlider.json", function (data) {
+    sliderAll(data);
+});
+
+
+function sliderAll(oSliderConfig) {
+
+    //full-width slider
     $('.fullwidth-slider').owlCarousel({
-        items: 1,
-        singleItem: true,
-        autoHeight: true,
-        nav: true,
-        loop: true,
-        rewind: true,
-        navigation: true,  // Show next and prev buttons
-        pagination: true,  // Show pagination buttons
-        navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        autoPlay: true,
-        autoplay: true,
-        autoplaySpeed: 800,
-        autoplayTimeout: 6000,
-        autoplayHoverPause: true,
-        navSpeed: 800,
-        paginationSpeed: 800,
-        slideSpeed: 800,
-        dots: true
+        items: (oSliderConfig.items !== typeof undefined ? oSliderConfig.items : 1),
+        singleItem: (oSliderConfig.singleItem !== typeof undefined ? oSliderConfig.singleItem : true),
+        autoHeight: (oSliderConfig.autoHeight !== typeof undefined ? oSliderConfig.autoHeight : true),
+        nav: (oSliderConfig.nav !== typeof undefined ? oSliderConfig.nav : true),
+        loop: (oSliderConfig.loop !== typeof undefined ? oSliderConfig.loop : true),
+        rewind: (oSliderConfig.rewind !== typeof undefined ? oSliderConfig.rewind : true),
+        navigation: (oSliderConfig.navigation !== typeof undefined ? oSliderConfig.navigation : true),
+        pagination: (oSliderConfig.pagination !== typeof undefined ? oSliderConfig.pagination : true),
+        navigationText: (oSliderConfig.navigationText !== typeof undefined ? oSliderConfig.navigationText : [
+          "<i class='fa fa-angle-left'></i>",
+          "<i class='fa fa-angle-right'></i>"
+        ]),
+        navText: (oSliderConfig.navText !== typeof undefined ? oSliderConfig.navText : [
+          "<i class='fa fa-angle-left'></i>",
+          "<i class='fa fa-angle-right'></i>"
+        ]),
+
+        autoplay: (oSliderConfig.autoplay !== typeof undefined ? oSliderConfig.autoplay : true),
+        autoplaySpeed: (oSliderConfig.autoplaySpeed !== typeof undefined ? oSliderConfig.autoplaySpeed : 800),
+        autoplayTimeout: (oSliderConfig.autoplayTimeout !== typeof undefined ? oSliderConfig.autoplayTimeout : 6000),
+        autoplayHoverPause: (oSliderConfig.autoplayHoverPause !== typeof undefined ? oSliderConfig.autoplayHoverPause : true),
+        navSpeed: (oSliderConfig.navSpeed !== typeof undefined ? oSliderConfig.navSpeed : 800),
+        paginationSpeed: (oSliderConfig.paginationSpeed !== typeof undefined ? oSliderConfig.paginationSpeed : 800),
+        slideSpeed: (oSliderConfig.slideSpeed !== typeof undefined ? oSliderConfig.slideSpeed : 800),
+        dots: (oSliderConfig.dots !== typeof undefined ? oSliderConfig.dots : true)
     });
 
     // Image Slider
@@ -324,7 +339,7 @@ function sliderAll() {
         autoplay: 2500,
         slideSpeed: 800,
         navSpeed: 800,
-        autoplaySpeed: 800,
+        autoplaySpeed: (oSliderConfig.autoplaySpeed !== typeof undefined?oSliderConfig.autoplaySpeed:800),
         navSpeed: 800,
         paginationSpeed: 800,
         slideSpeed: 800,
