@@ -183,7 +183,7 @@ function loadNewsGrid() {
                 iTop = $("#LoadPageNews").children('div').eq(id - 1).offset().top - $("#highlights").offset().top - 65 - 34; // 34 for date of news
                 $(sScrollElement).animate({ scrollTop: iTop }, 500);
             }
-            initHighlightCarousal();
+            NewsSliderConfig()
         },
         complete: function () {
             oNewsContainer.removeClass(sLoadingClass);
@@ -191,13 +191,20 @@ function loadNewsGrid() {
     });
 }
 
-function initHighlightCarousal() {
+function NewsSliderConfig() {
+    $.getJSON("/Configurations/NewsSlider.json", function (data) {
+        initHighlightCarousal(data);
+    })
+};
+
+function initHighlightCarousal(nSliderConfig) {
     $('.item4-carousel').owlCarousel({
         autoPlay: 2500,
         autoplay: 2500,
         slideSpeed: 800,
         slidespeed: 800,
         autoplaySpeed: 800,
+        autoplayHoverPause: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : true),
         navSpeed: 800,
         paginationSpeed: 800,
         stopOnHover: true,
