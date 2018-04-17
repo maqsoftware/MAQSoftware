@@ -260,6 +260,14 @@ function SliderConfig() {
     })
 };
 
+function PowerBIsliderConfig() {
+    $.getJSON("/Configurations/PowerBIslider.json", function (data) {
+        sliderAll(data);
+    })
+};
+
+
+
 
 function sliderAll(oSliderConfig) {
     //full-width slider
@@ -469,6 +477,7 @@ function sliderAll(oSliderConfig) {
         slideSpeed: 800,
         slidespeed: 800,
         autoplaySpeed: 800,
+        autoplayHoverPause:(oSliderConfig.autoplayHoverPause !== typeof undefined ? oSliderConfig.autoplayHoverPause : true),
         navSpeed: 800,
         paginationSpeed: 800,
         stopOnHover: true,
@@ -515,7 +524,7 @@ function sliderAll(oSliderConfig) {
         itemsMobile: [480, 1],
         pagination: true,  // show pagination buttons
         navigation: true,  // Show next and prev buttons
-        navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
+        navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
     });
 
     // Item-1 Carousel
@@ -528,7 +537,7 @@ function sliderAll(oSliderConfig) {
         pagination: true,  // Show pagination buttons
         navigation: true,  // Show next and prev buttons
         navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        responsive: true
+        responsive: true,
     });
 
 };
