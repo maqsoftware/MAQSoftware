@@ -263,8 +263,10 @@ function SliderConfig() {
 
 function sliderAll(oSliderConfig) {
     //full-width slider
-    $('.fullwidth-slider').owlCarousel({
-            items:(oSliderConfig.items !== typeof undefined ? oSliderConfig.items : 1),
+    if (typeof oSliderConfig !== 'null' || typeof oSliderConfig !== 'undefined' || typeof oSliderConfig !== "" || typeof oSliderConfig !== 'false')
+    {
+        $('.fullwidth-slider').owlCarousel({
+            items: (oSliderConfig.items !== typeof undefined ? oSliderConfig.items : 1),
             singleItem: (oSliderConfig.singleItem !== typeof undefined ? oSliderConfig.singleItem : true),
             autoHeight: (oSliderConfig.autoHeight !== typeof undefined ? oSliderConfig.autoHeight : true),
             nav: (oSliderConfig.nav !== typeof undefined ? oSliderConfig.nav : true),
@@ -290,6 +292,11 @@ function sliderAll(oSliderConfig) {
             slideSpeed: (oSliderConfig.slideSpeed !== typeof undefined ? oSliderConfig.slideSpeed : 800),
             dots: (oSliderConfig.dots !== typeof undefined ? oSliderConfig.dots : true)
         });
+    }
+    else
+    {
+        console.log('%c Home Slider not recognized', "background: blue; color: black; padding-left:10px;");
+    }
     // Image Slider
     $('.image-slider').owlCarousel({
         navigation: true,  // Show next and prev buttons
