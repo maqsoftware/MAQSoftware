@@ -472,14 +472,13 @@ function sliderAll(oSliderConfig) {
     });
 
     $('.power-bi-carousel').owlCarousel({
-        autoPlay: 2500,
-        autoplay: 2500,
-        slideSpeed: 800,
-        slidespeed: 800,
-        autoplaySpeed: 800,
+        autoPlay:(oSliderConfig.autoplay!== typeof undefined ? oSliderConfig.autoplay:2500),
+        autoplay:(oSliderConfig.autoplay!== typeof undefined ? oSliderConfig.autoplay:2500),
+        slideSpeed: (oSliderConfig.slideSpeed !== typeof undefined ? oSliderConfig.slideSpeed : 2500),
+        autoplaySpeed: (oSliderConfig.autoplaySpeed !== typeof undefined ? oSliderConfig.autoplaySpeed : 2500),
         autoplayHoverPause:(oSliderConfig.autoplayHoverPause !== typeof undefined ? oSliderConfig.autoplayHoverPause : true),
-        navSpeed: 800,
-        paginationSpeed: 800,
+        navSpeed: (oSliderConfig.navSpeed !== typeof undefined ? oSliderConfig.navSpeed : 2500),
+        paginationSpeed: (oSliderConfig.paginationSpeed !== typeof undefined ? oSliderConfig.paginationSpeed : 2500),
         stopOnHover: true,
         items: 4,
         rewind: true,
