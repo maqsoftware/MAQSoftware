@@ -1,3 +1,8 @@
 ﻿{
-  "autoplayHoverPause": true
+  "autoPlay":2500,
+  "autoplayHoverPause": true,
+  "slideSpeed": 800,
+  "autoplaySpeed": 800,
+  "navSpeed": 800,
+  "paginationSpeed": 800,
 }
