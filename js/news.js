@@ -198,45 +198,51 @@ function NewsSliderConfig() {
 };
 
 function initHighlightCarousal(nSliderConfig) {
-    $('.item4-carousel').owlCarousel({
-        autoPlay: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 2500),
-        autoplay: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 2500),
-        slideSpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
-        slidespeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
-        autoplaySpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
-        autoplayHoverPause:(nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : true),
-        navSpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
-        paginationSpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
-        items: 4,
-        rewind: true,
-        loop: true,
-        itemsDesktop: [1170, 3],
-        itemsDesktopSmall: [1024, 2],
-        itemsTabletSmall: [768, 1],
-        itemsMobile: [480, 1],
-        pagination: false,  // Hide pagination buttons
-        navigation: true,  // Show next and prev buttons
-        nav: true,  // Show next and prev buttons
-        navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        dots: false
-        ,responsive: {
-            0: {
-                items: 1
+    if (typeof nSliderConfig !== 'null' || typeof nSliderConfig !== 'undefined' || typeof nSliderConfig !== "" || typeof nSliderConfig !== 'false') {
+        $('.item4-carousel').owlCarousel({
+            autoPlay: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 2500),
+            autoplay: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 2500),
+            slideSpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
+            slidespeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
+            autoplaySpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
+            autoplayHoverPause: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : true),
+            navSpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
+            paginationSpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
+            items: 4,
+            rewind: true,
+            loop: true,
+            itemsDesktop: [1170, 3],
+            itemsDesktopSmall: [1024, 2],
+            itemsTabletSmall: [768, 1],
+            itemsMobile: [480, 1],
+            pagination: false,  // Hide pagination buttons
+            navigation: true,  // Show next and prev buttons
+            nav: true,  // Show next and prev buttons
+            navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+            dots: false
+            , responsive: {
+                0: {
+                    items: 1
+                }
+                ,
+                570: {
+                    items: 2
+                }
+                ,
+                855: {
+                    items: 3
+                }
+                , 1140: {
+                    items: 4
+                }
             }
-            ,
-            570: {
-                items: 2
-            }
-            ,
-            855: {
-                items: 3
-            }
-            , 1140: {
-                items: 4
-            }
-        }
-    });
+        });
+    }
+    else
+    {
+        console.log('%c Home Slider not recognized', "background: blue; color: black; padding-left:10px;");
+    }
 }
 
 function newsConstructor() {

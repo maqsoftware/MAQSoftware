@@ -470,47 +470,48 @@ function sliderAll(oSliderConfig) {
         navigation: true,  // Show next and prev buttons
         navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
     });
-
-    $('.power-bi-carousel').owlCarousel({
-        autoPlay:(oSliderConfig.autoplay!== typeof undefined ? oSliderConfig.autoplay:2500),
-        autoplay:(oSliderConfig.autoplay!== typeof undefined ? oSliderConfig.autoplay:2500),
-        slideSpeed: (oSliderConfig.slideSpeed !== typeof undefined ? oSliderConfig.slideSpeed : 2500),
-        autoplaySpeed: (oSliderConfig.autoplaySpeed !== typeof undefined ? oSliderConfig.autoplaySpeed : 2500),
-        autoplayHoverPause:(oSliderConfig.autoplayHoverPause !== typeof undefined ? oSliderConfig.autoplayHoverPause : true),
-        navSpeed: (oSliderConfig.navSpeed !== typeof undefined ? oSliderConfig.navSpeed : 2500),
-        paginationSpeed: (oSliderConfig.paginationSpeed !== typeof undefined ? oSliderConfig.paginationSpeed : 2500),
-        stopOnHover: true,
-        items: 4,
-        rewind: true,
-        loop: true,
-        itemsDesktop: [1170, 3],
-        itemsDesktopSmall: [1024, 2],
-        itemsTabletSmall: [768, 1],
-        itemsMobile: [480, 1],
-        pagination: false,  // Hide pagination buttons
-        navigation: true,  // Show next and prev buttons
-        nav: true,  // Show next and prev buttons
-        navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        dots: false,
-        responsive: {
-            0: {
-                items: 1
+    if (typeof oSliderConfig !== 'null' || typeof oSliderConfig !== 'undefined' || typeof oSliderConfig !== "" || typeof oSliderConfig !== 'false') {
+        $('.power-bi-carousel').owlCarousel({
+            autoPlay: (oSliderConfig.autoplay !== typeof undefined ? oSliderConfig.autoplay : 2500),
+            autoplay: (oSliderConfig.autoplay !== typeof undefined ? oSliderConfig.autoplay : 2500),
+            slideSpeed: (oSliderConfig.slideSpeed !== typeof undefined ? oSliderConfig.slideSpeed : 2500),
+            autoplaySpeed: (oSliderConfig.autoplaySpeed !== typeof undefined ? oSliderConfig.autoplaySpeed : 2500),
+            autoplayHoverPause: (oSliderConfig.autoplayHoverPause !== typeof undefined ? oSliderConfig.autoplayHoverPause : true),
+            navSpeed: (oSliderConfig.navSpeed !== typeof undefined ? oSliderConfig.navSpeed : 2500),
+            paginationSpeed: (oSliderConfig.paginationSpeed !== typeof undefined ? oSliderConfig.paginationSpeed : 2500),
+            stopOnHover: true,
+            items: 4,
+            rewind: true,
+            loop: true,
+            itemsDesktop: [1170, 3],
+            itemsDesktopSmall: [1024, 2],
+            itemsTabletSmall: [768, 1],
+            itemsMobile: [480, 1],
+            pagination: false,  // Hide pagination buttons
+            navigation: true,  // Show next and prev buttons
+            nav: true,  // Show next and prev buttons
+            navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                }
+                ,
+                786: {
+                    items: 2
+                }
+                ,
+                1042: {
+                    items: 3
+                }
+                ,
+                1200: {
+                    items: 4
+                }
             }
-            ,
-            786: {
-                items: 2
-            }
-            ,
-            1042: {
-                items: 3
-            }
-            ,
-            1200: {
-                items: 4
-            }
-        }
-    });
+        });
+    }
 
     // Item-3 Carousel
     $('.item3-carousel').owlCarousel({
