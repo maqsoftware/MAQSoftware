@@ -198,7 +198,7 @@ function NewsSliderConfig() {
 };
 
 function initHighlightCarousal(nSliderConfig) {
-    if (typeof nSliderConfig !== 'null' || typeof nSliderConfig !== 'undefined' || typeof nSliderConfig !== "" || typeof nSliderConfig !== 'false') {
+    if (typeof nSliderConfig !== 'undefined' && nSliderConfig !== 'null' && nSliderConfig !== "" && nSliderConfig !== 'false') {
         $('.item4-carousel').owlCarousel({
             autoPlay: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 2500),
             autoplay: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 2500),
@@ -238,10 +238,6 @@ function initHighlightCarousal(nSliderConfig) {
                 }
             }
         });
-    }
-    else
-    {
-        console.log('%c Home Slider not recognized', "background: blue; color: black; padding-left:10px;");
     }
 }
 

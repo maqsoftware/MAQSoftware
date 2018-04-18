@@ -271,7 +271,7 @@ function PowerBIsliderConfig() {
 
 function sliderAll(oSliderConfig) {
     //full-width slider
-    if (typeof oSliderConfig !== 'null' || typeof oSliderConfig !== 'undefined' || typeof oSliderConfig !== "" || typeof oSliderConfig !== 'false')
+    if (typeof oSliderConfig !== 'undefined' && oSliderConfig !== 'null' && oSliderConfig !== "" && oSliderConfig !== 'false')
     {
         $('.fullwidth-slider').owlCarousel({
             items: (oSliderConfig.items !== typeof undefined ? oSliderConfig.items : 1),
@@ -301,10 +301,6 @@ function sliderAll(oSliderConfig) {
             dots: (oSliderConfig.dots !== typeof undefined ? oSliderConfig.dots : true)
         });
     }
-    else
-    {
-        console.log('%c Home Slider not recognized', "background: blue; color: black; padding-left:10px;");
-    }
     // Image Slider
     $('.image-slider').owlCarousel({
         navigation: true,  // Show next and prev buttons
@@ -327,7 +323,7 @@ function sliderAll(oSliderConfig) {
         slideSpeed: 350,
         pagination: true,  // Show pagination buttons
         navigation: false,  // Hide next and prev buttons
-        navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+        navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
         //  responsive: true
     });
 
@@ -470,7 +466,7 @@ function sliderAll(oSliderConfig) {
         navigation: true,  // Show next and prev buttons
         navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
     });
-    if (typeof oSliderConfig !== 'null' || typeof oSliderConfig !== 'undefined' || typeof oSliderConfig !== "" || typeof oSliderConfig !== 'false') {
+    if (typeof oSliderConfig !== 'undefined' && oSliderConfig !== 'null' && oSliderConfig !== "" && oSliderConfig !== 'false') {
         $('.power-bi-carousel').owlCarousel({
             autoPlay: (oSliderConfig.autoplay !== typeof undefined ? oSliderConfig.autoplay : 2500),
             autoplay: (oSliderConfig.autoplay !== typeof undefined ? oSliderConfig.autoplay : 2500),
@@ -524,7 +520,7 @@ function sliderAll(oSliderConfig) {
         itemsMobile: [480, 1],
         pagination: true,  // show pagination buttons
         navigation: true,  // Show next and prev buttons
-        navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+        navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
     });
 
     // Item-1 Carousel
@@ -537,7 +533,7 @@ function sliderAll(oSliderConfig) {
         pagination: true,  // Show pagination buttons
         navigation: true,  // Show next and prev buttons
         navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        responsive: true,
+        responsive: true
     });
 
 };
