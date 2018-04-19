@@ -200,10 +200,8 @@ function NewsSliderConfig() {
 function initHighlightCarousal(nSliderConfig) {
     if (typeof nSliderConfig !== 'undefined' && nSliderConfig !== 'null' && nSliderConfig !== "" && nSliderConfig !== 'false') {
         $('.item4-carousel').owlCarousel({
-            autoPlay: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 2500),
             autoplay: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 2500),
             slideSpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
-            slidespeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
             autoplaySpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
             autoplayHoverPause: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : true),
             navSpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
