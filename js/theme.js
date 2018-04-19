@@ -343,14 +343,11 @@ function sliderAll(oSliderConfig) {
 
     // Client Carousel
     $('.client-carousel').owlCarousel({
-        autoPlay: 2500,
         autoplay: 2500,
         slideSpeed: 800,
-        navSpeed: 800,
         autoplaySpeed:800,
         navSpeed: 800,
         paginationSpeed: 800,
-        slideSpeed: 800,
         stopOnHover: true,
         items: 1,
         loop: true,
@@ -392,13 +389,11 @@ function sliderAll(oSliderConfig) {
 
     // Client Carousel
     $('.ai-carousel').owlCarousel({
-        autoPlay: 2500,
         autoplay: 2500,
         autoplaySpeed: 800,
         navSpeed: 800,
         paginationSpeed: 800,
         slideSpeed: 800,
-        navSpeed: 800,
         stopOnHover: true,
         items: 5,
         loop: true,
@@ -468,7 +463,6 @@ function sliderAll(oSliderConfig) {
     });
     if (typeof oSliderConfig !== 'undefined' && oSliderConfig !== 'null' && oSliderConfig !== "" && oSliderConfig !== 'false') {
         $('.power-bi-carousel').owlCarousel({
-            autoPlay: (oSliderConfig.autoplay !== typeof undefined ? oSliderConfig.autoplay : 2500),
             autoplay: (oSliderConfig.autoplay !== typeof undefined ? oSliderConfig.autoplay : 2500),
             slideSpeed: (oSliderConfig.slideSpeed !== typeof undefined ? oSliderConfig.slideSpeed : 2500),
             autoplaySpeed: (oSliderConfig.autoplaySpeed !== typeof undefined ? oSliderConfig.autoplaySpeed : 2500),
