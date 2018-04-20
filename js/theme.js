@@ -273,34 +273,45 @@ function sliderAll(oSliderConfig) {
     //full-width slider
     if (typeof oSliderConfig !== 'undefined' && oSliderConfig !== 'null' && oSliderConfig !== "" && oSliderConfig !== 'false')
     {
-        $('.fullwidth-slider').owlCarousel({
-            items: (oSliderConfig.items !== typeof undefined ? oSliderConfig.items : 1),
-            singleItem: (oSliderConfig.singleItem !== typeof undefined ? oSliderConfig.singleItem : true),
-            autoHeight: (oSliderConfig.autoHeight !== typeof undefined ? oSliderConfig.autoHeight : true),
-            nav: (oSliderConfig.nav !== typeof undefined ? oSliderConfig.nav : true),
-            loop: (oSliderConfig.loop !== typeof undefined ? oSliderConfig.loop : true),
-            rewind: (oSliderConfig.rewind !== typeof undefined ? oSliderConfig.rewind : true),
-            navigation: (oSliderConfig.navigation !== typeof undefined ? oSliderConfig.navigation : true),
-            pagination: (oSliderConfig.pagination !== typeof undefined ? oSliderConfig.pagination : true),
-            navigationText: (oSliderConfig.navigationText !== typeof undefined ? oSliderConfig.navigationText : [
-              "<i class='fa fa-angle-left'></i>",
-              "<i class='fa fa-angle-right'></i>"
-            ]),
-            navText: (oSliderConfig.navText !== typeof undefined ? oSliderConfig.navText : [
-              "<i class='fa fa-angle-left'></i>",
-              "<i class='fa fa-angle-right'></i>"
-            ]),
+        //var item_count = parseInt($(this).find('.fullwidth-slider').length);
+        //onInitialize: function (event) {
+        //    if (item_count <= 1) {
+        //        this.loop.settings = false;
+        //        this.nav.settings = false;
+        //        this.dots.settings = false;
+        //    }
+        //    else {
+                $('.fullwidth-slider').owlCarousel({
+                    items: (oSliderConfig.items !== typeof undefined ? oSliderConfig.items : 1),
+                    singleItem: (oSliderConfig.singleItem !== typeof undefined ? oSliderConfig.singleItem : true),
+                    autoHeight: (oSliderConfig.autoHeight !== typeof undefined ? oSliderConfig.autoHeight : true),
+                    nav: (oSliderConfig.nav !== typeof undefined ? oSliderConfig.nav : true),
+                    loop: (oSliderConfig.loop !== typeof undefined ? oSliderConfig.loop : true),
+                    rewind: (oSliderConfig.rewind !== typeof undefined ? oSliderConfig.rewind : true),
+                    navigation: (oSliderConfig.navigation !== typeof undefined ? oSliderConfig.navigation : true),
+                    pagination: (oSliderConfig.pagination !== typeof undefined ? oSliderConfig.pagination : true),
+                    navigationText: (oSliderConfig.navigationText !== typeof undefined ? oSliderConfig.navigationText : [
+                      "<i class='fa fa-angle-left'></i>",
+                      "<i class='fa fa-angle-right'></i>"
+                    ]),
+                    navText: (oSliderConfig.navText !== typeof undefined ? oSliderConfig.navText : [
+                      "<i class='fa fa-angle-left'></i>",
+                      "<i class='fa fa-angle-right'></i>"
+                    ]),
 
-            autoplay: (oSliderConfig.autoplay !== typeof undefined ? oSliderConfig.autoplay : true),
-            autoplaySpeed: (oSliderConfig.autoplaySpeed !== typeof undefined ? oSliderConfig.autoplaySpeed : 800),
-            autoplayTimeout: (oSliderConfig.autoplayTimeout !== typeof undefined ? oSliderConfig.autoplayTimeout : 6000),
-            autoplayHoverPause: (oSliderConfig.autoplayHoverPause !== typeof undefined ? oSliderConfig.autoplayHoverPause : true),
-            navSpeed: (oSliderConfig.navSpeed !== typeof undefined ? oSliderConfig.navSpeed : 800),
-            paginationSpeed: (oSliderConfig.paginationSpeed !== typeof undefined ? oSliderConfig.paginationSpeed : 800),
-            slideSpeed: (oSliderConfig.slideSpeed !== typeof undefined ? oSliderConfig.slideSpeed : 800),
-            dots: (oSliderConfig.dots !== typeof undefined ? oSliderConfig.dots : true)
-        });
-    }
+                    autoplay: (oSliderConfig.autoplay !== typeof undefined ? oSliderConfig.autoplay : true),
+                    autoplaySpeed: (oSliderConfig.autoplaySpeed !== typeof undefined ? oSliderConfig.autoplaySpeed : 800),
+                    autoplayTimeout: (oSliderConfig.autoplayTimeout !== typeof undefined ? oSliderConfig.autoplayTimeout : 6000),
+                    autoplayHoverPause: (oSliderConfig.autoplayHoverPause !== typeof undefined ? oSliderConfig.autoplayHoverPause : true),
+                    navSpeed: (oSliderConfig.navSpeed !== typeof undefined ? oSliderConfig.navSpeed : 800),
+                    paginationSpeed: (oSliderConfig.paginationSpeed !== typeof undefined ? oSliderConfig.paginationSpeed : 800),
+                    slideSpeed: (oSliderConfig.slideSpeed !== typeof undefined ? oSliderConfig.slideSpeed : 800),
+                    dots: (oSliderConfig.dots !== typeof undefined ? oSliderConfig.dots : true)
+                });
+            }
+        
+    
+
     // Image Slider
     $('.image-slider').owlCarousel({
         navigation: true,  // Show next and prev buttons
