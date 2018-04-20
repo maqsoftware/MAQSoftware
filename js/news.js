@@ -183,7 +183,7 @@ function loadNewsGrid() {
                 iTop = $("#LoadPageNews").children('div').eq(id - 1).offset().top - $("#highlights").offset().top - 65 - 34; // 34 for date of news
                 $(sScrollElement).animate({ scrollTop: iTop }, 500);
             }
-            initHighlightCarousal();
+            NewsSliderConfig()
         },
         complete: function () {
             oNewsContainer.removeClass(sLoadingClass);
@@ -191,46 +191,52 @@ function loadNewsGrid() {
     });
 }
 
-function initHighlightCarousal() {
-    $('.item4-carousel').owlCarousel({
-        autoPlay: 2500,
-        autoplay: 2500,
-        slideSpeed: 800,
-        slidespeed: 800,
-        autoplaySpeed: 800,
-        navSpeed: 800,
-        paginationSpeed: 800,
-        stopOnHover: true,
-        items: 4,
-        rewind: true,
-        loop: true,
-        itemsDesktop: [1170, 3],
-        itemsDesktopSmall: [1024, 2],
-        itemsTabletSmall: [768, 1],
-        itemsMobile: [480, 1],
-        pagination: false,  // Hide pagination buttons
-        navigation: true,  // Show next and prev buttons
-        nav: true,  // Show next and prev buttons
-        navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        dots: false
-        ,responsive: {
-            0: {
-                items: 1
+function NewsSliderConfig() {
+    $.getJSON("/Configurations/NewsSlider.json", function (data) {
+        initHighlightCarousal(data);
+    })
+};
+
+function initHighlightCarousal(nSliderConfig) {
+    if (typeof nSliderConfig !== 'undefined' && nSliderConfig !== 'null' && nSliderConfig !== "" && nSliderConfig !== 'false') {
+        $('.item4-carousel').owlCarousel({
+            autoplay: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 2500),
+            slideSpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
+            autoplaySpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
+            autoplayHoverPause: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : true),
+            navSpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
+            paginationSpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
+            items: 4,
+            rewind: true,
+            loop: true,
+            itemsDesktop: [1170, 3],
+            itemsDesktopSmall: [1024, 2],
+            itemsTabletSmall: [768, 1],
+            itemsMobile: [480, 1],
+            pagination: false,  // Hide pagination buttons
+            navigation: true,  // Show next and prev buttons
+            nav: true,  // Show next and prev buttons
+            navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+            dots: false
+            , responsive: {
+                0: {
+                    items: 1
+                }
+                ,
+                570: {
+                    items: 2
+                }
+                ,
+                855: {
+                    items: 3
+                }
+                , 1140: {
+                    items: 4
+                }
             }
-            ,
-            570: {
-                items: 2
-            }
-            ,
-            855: {
-                items: 3
-            }
-            , 1140: {
-                items: 4
-            }
-        }
-    });
+        });
+    }
 }
 
 function newsConstructor() {
