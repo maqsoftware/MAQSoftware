@@ -45,10 +45,10 @@ $(document).ready(function () {
     })
     wow.init();
     $("#modelChart .product_view").on('shown.bs.modal', function (event) {
-        $(".power-bi-carousel").trigger('stop.owl.autoplay');
+        $("#power-bi-carousel").trigger('stop.owl.autoplay');
     });
     $("#modelChart .product_view").on('hidden.bs.modal', function (event) {
-        $(".power-bi-carousel").trigger('play.owl.autoplay');
+        $("#power-bi-carousel").trigger('play.owl.autoplay');
     });
 
 });
