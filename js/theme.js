@@ -305,7 +305,7 @@ function sliderAll(oSliderConfig) {
                       "<i class='fa fa-angle-right'></i>"
                     ]),
 
-                    autoplay: (oSliderConfig.autoplay !== typeof undefined ? oSliderConfig.autoplay : true),
+                    autoplay: ($('.fullwidth-slider .owl-item').not('.cloned').length < 2) ? false :(oSliderConfig.autoplay !== typeof undefined ? oSliderConfig.autoplay : true),
                     autoplaySpeed: (oSliderConfig.autoplaySpeed !== typeof undefined ? oSliderConfig.autoplaySpeed : 800),
                     autoplayTimeout: (oSliderConfig.autoplayTimeout !== typeof undefined ? oSliderConfig.autoplayTimeout : 6000),
                     autoplayHoverPause: (oSliderConfig.autoplayHoverPause !== typeof undefined ? oSliderConfig.autoplayHoverPause : true),
@@ -315,9 +315,7 @@ function sliderAll(oSliderConfig) {
                     dots: (oSliderConfig.dots !== typeof undefined ? oSliderConfig.dots : true)
                 });
             }
-        
-    
-
+  
     // Image Slider
     $('.image-slider').owlCarousel({
         navigation: true,  // Show next and prev buttons
@@ -546,6 +544,8 @@ function sliderAll(oSliderConfig) {
         navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
         responsive: true
     });
+
+    
 
 };
 
