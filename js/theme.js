@@ -44,10 +44,10 @@ $(document).ready(function () {
         live: true
     })
     wow.init();
-    $(".product_view").on('shown.bs.modal', function (event) {
+    $("#modelChart .product_view").on('shown.bs.modal', function (event) {
         $(".power-bi-carousel").trigger('stop.owl.autoplay');
     });
-    $(".product_view").on('hidden.bs.modal', function (event) {
+    $("#modelChart .product_view").on('hidden.bs.modal', function (event) {
         $(".power-bi-carousel").trigger('play.owl.autoplay');
     });
 
