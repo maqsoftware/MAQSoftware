@@ -315,20 +315,6 @@ function sliderAll(oSliderConfig) {
                     dots: (oSliderConfig.dots !== typeof undefined ? oSliderConfig.dots : true)
                 });
             }
-        
-    // Stop Autoplay if only 1 Slide
-    //var slideLength = $('.fullwidth-slider .owl-item').not('.cloned').length;
-    //if (2 > slideLength) {
-    //    $('.fullwidth-slider').owlCarousel({
-    //        loop: false,
-    //        autoplay: false 
-    //    });
-    //}
-    //else {
-    //    $('.fullwidth-slider').owlCarousel({
-    //        loop: true
-    //    });
-    //}
   
     // Image Slider
     $('.image-slider').owlCarousel({
