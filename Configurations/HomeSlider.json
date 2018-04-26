@@ -1,0 +1,28 @@
+﻿
+  {
+    "items": 1,
+    "singleItem": true,
+    "autoHeight": true,
+    "nav": true,
+    "loop": true,
+    "rewind": true,
+    "navigation": true,
+    "pagination": true,
+    "navigationText": [
+      "<i class='fa fa-angle-left'></i>",
+      "<i class='fa fa-angle-right'></i>"
+    ],
+    "navText": [
+      "<i class='fa fa-angle-left'></i>",
+      "<i class='fa fa-angle-right'></i>"
+    ],
+   
+    "autoplay": true,
+    "autoplaySpeed": 800,
+    "autoplayTimeout": 6000,
+    "autoplayHoverPause": true,
+    "navSpeed": 800,
+    "paginationSpeed": 800,
+    "slideSpeed": 800,
+    "dots": true
+  }
