@@ -1040,6 +1040,18 @@ form label.error {
 .mr-13 {
     margin-right: 13px !important;
 }
+.mtb-15 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
 .mtb-25 {
     margin-top: 25px;
     margin-bottom: 25px;
