@@ -5636,8 +5636,9 @@ ul.nav-tabs {
 }
 .compactBullets{
     margin-top:5px;
-    margin-bottom:10px
+    margin-bottom:15px;
+    font-size: 14px;
 }
-.compacth5{
-    margin-bottom:5px;
+.compacth4{
+    margin-bottom:0px;
 }
