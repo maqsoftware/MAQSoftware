@@ -5557,7 +5557,7 @@ ul.nav-tabs {
 .fb-share-button { 
     vertical-align: bottom !important; 
     margin-bottom:2px;
-    display: inline
+    display: inline-block;
 }
 .linkedin-share-button[style] {
     vertical-align: bottom !important; 
