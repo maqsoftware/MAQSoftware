@@ -305,7 +305,7 @@ function sliderAll(oSliderConfig) {
                       "<i class='fa fa-angle-right'></i>"
                     ]),
 
-                    autoplay: ($('.fullwidth-slider .owl-item').not('.cloned').length < 2) ? false :(oSliderConfig.autoplay !== typeof undefined ? oSliderConfig.autoplay : true),
+                    autoplay: ($('.fullwidth-slider .bg-img').not('.cloned').length < 2) ? false :(oSliderConfig.autoplay !== typeof undefined ? oSliderConfig.autoplay : true),
                     autoplaySpeed: (oSliderConfig.autoplaySpeed !== typeof undefined ? oSliderConfig.autoplaySpeed : 800),
                     autoplayTimeout: (oSliderConfig.autoplayTimeout !== typeof undefined ? oSliderConfig.autoplayTimeout : 6000),
                     autoplayHoverPause: (oSliderConfig.autoplayHoverPause !== typeof undefined ? oSliderConfig.autoplayHoverPause : true),
