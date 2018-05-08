@@ -4105,6 +4105,10 @@ ul.project-detail-block, .project-detail-block ul {
         margin-bottom: 30px;
     }
 
+    #LoadPageNews .post-header a > h2:hover {
+        color: #bb141a;
+    }
+
     .blog-post .post-entry {
         margin-bottom: 30px;
     }
