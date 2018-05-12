@@ -48,13 +48,6 @@ $(document).ready(function () {
         live: true
     })
     wow.init();
-    //$(document).on('shown.bs.modal', '#modelChart .product_view', function () {
-    //    $("#power-bi-carousel").trigger('stop.owl.autoplay');
-    //});
-    //$(document).on('hidden.bs.modal', '#modelChart .product_view', function () {
-    //    $("#power-bi-carousel").trigger('play.owl.autoplay');
-    //});
-
 });
 
 function loadPlugins() {
