@@ -1,4 +1,8 @@
-var pageSection;
+var pageSection,
+visualTemplate = '<div class="item"> <div class="nf-col-padding"> <div class="item-box"> <div class="shop-item"> <div class="item-img"> <img alt="@name" src="@img"/> </div><div class="item-mask"> <div class="item-mask-detail"> <div class="item-caption text-center" style="color:white;"> <div> @description </div><a data-toggle="modal" data-target="#model@id" class="btn btn-line-xs btn-white-line"> <i class="fa"></i>Learn More </a> </div></div></div></div><div class="shop-item-info"> <a href="@url" target="_blank"> <h6 class="shop-item-name">@name</h6> </a> </div></div></div></div>',
+modalTemplate = '<div class="modal fade product_view" id="model@id"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-header"> <h3 class="modal-title pull-left">@title</h3> <a href="#" data-dismiss="modal" class="class pull-right"> <span class="glyphicon glyphicon-remove"></span> </a> </div><div class="modal-body"> <div class="row"> <div class="col-md-6 product_img"> <img alt="@name" title="@name" src="@img" class="img-responsive"> </div><div class="col-md-6 product_content"> @content<p> For any feature requests or questions about this visual, please send an e-mail to our team at <a href="mailto:Support@MAQSoftware.com">Support@MAQSoftware.com</a>. </p><a href="@url" target="_blank" class="btn btn-md btn-black-line ">See in AppSource</a> </div></div></div></div></div></div>',
+viewAllVisualTemplate = '<div class="nf-item @category spacing"> <div class="item-box"> <img alt="@name" src="@img" class="item-container"> <div class="item-mask"> <div class="item-caption text-center" style="color:white;"> <div>@description</div><a data-toggle="modal" data-target="#model@id" class="btn btn-line-xs btn-white-line"><i class="fa"></i>Learn More</a> </div></div></div><h6 class="text-center pt-15"><a href="@url" target="_blank">@name</a></h6> </div>';
+
 Date.prototype.format = function () {
     "use strict";
     var arrMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -44,13 +48,6 @@ $(document).ready(function () {
         live: true
     })
     wow.init();
-    $("#modelChart .product_view").on('shown.bs.modal', function (event) {
-        $("#power-bi-carousel").trigger('stop.owl.autoplay');
-    });
-    $("#modelChart .product_view").on('hidden.bs.modal', function (event) {
-        $("#power-bi-carousel").trigger('play.owl.autoplay');
-    });
-
 });
 
 function loadPlugins() {
@@ -67,6 +64,9 @@ function loadPlugins() {
     scroll();
     pluginElement();
     sliderHero();
+    if (!($(".power-bi-carousel").length)) {
+        PowerBIVisualsConfig();
+    }
     SliderConfig();
     containerGridMasonry();
     scrollCallbackEle();
@@ -272,13 +272,61 @@ function PowerBIsliderConfig() {
     })
 };
 
+function PowerBIVisualsConfig() {
+    $.getJSON("/PowerBI visuals/Visuals.json", function (data) {
+        RenderPowerBIVisuals(data);
+    })
+};
 
+function RenderPowerBIVisuals(oVisualConfig) {
+    var totalVisuals = oVisualConfig.length,
+    visualContainer = $("#power-bi-carousel"),
+    modalContainer = $("#modelChart"),
+    viewAllContainer = $("#viewAllVisuals"),
+    visualSliderHtml = '<div class="owl-carousel power-bi-carousel nf-carousel-theme o-flow-hidden" id="PowerBISliderVisual"></div>',
+    visualContentHtml = "",
+    modalContentHtml = "",
+    viewAllContentHtml = "";
+    visualContainer.append(visualSliderHtml);
+    var visualContentContainer = $("#PowerBISliderVisual");
+    $.each(oVisualConfig, function (index, item) {
 
+        $.each(Object.keys(this), function (visualIndex, visualItem) {
+
+            visualContentHtml += visualTemplate.replace(/@name/g, oVisualConfig[index][this].name)
+                .replace(/@img/g, oVisualConfig[index][this].img)
+                .replace(/@description/g, oVisualConfig[index][this].description)
+                .replace(/@id/g, oVisualConfig[index][this].id)
+                .replace(/@url/g, oVisualConfig[index][this].url);
+            modalContentHtml += modalTemplate.replace(/@name/g, oVisualConfig[index][this].name)
+                .replace(/@img/g, oVisualConfig[index][this].img)
+                .replace(/@title/g, oVisualConfig[index][this].title)
+                .replace(/@id/g, oVisualConfig[index][this].id)
+                .replace(/@url/g, oVisualConfig[index][this].url)
+                .replace(/@content/g, oVisualConfig[index][this].content);
+            viewAllContentHtml += viewAllVisualTemplate.replace(/@name/g, oVisualConfig[index][this].name)
+                .replace(/@img/g, oVisualConfig[index][this].img)
+                .replace(/@id/g, oVisualConfig[index][this].id)
+                .replace(/@url/g, oVisualConfig[index][this].url)
+                .replace(/@category/g, oVisualConfig[index][this].category)
+                .replace(/@description/g, oVisualConfig[index][this].description);
+        })
+    });
+    visualContentContainer.append(visualContentHtml);
+    modalContainer.append(modalContentHtml);
+    viewAllContainer.append(viewAllContentHtml);
+    $(document).on('shown.bs.modal', '#modelChart .product_view', function () {
+        $("#PowerBISliderVisual").trigger('stop.owl.autoplay');
+    });
+    $(document).on('hidden.bs.modal', '#modelChart .product_view', function () {
+        $("#PowerBISliderVisual").trigger('play.owl.autoplay');
+    });
+}
 
 function sliderAll(oSliderConfig) {
+
     //full-width slider
-    if (typeof oSliderConfig !== 'undefined' && oSliderConfig !== 'null' && oSliderConfig !== "" && oSliderConfig !== 'false')
-    {
+    if (typeof oSliderConfig !== 'undefined' && oSliderConfig !== 'null' && oSliderConfig !== "" && oSliderConfig !== 'false') {
         //var item_count = parseInt($(this).find('.fullwidth-slider').length);
         //onInitialize: function (event) {
         //    if (item_count <= 1) {
@@ -287,35 +335,35 @@ function sliderAll(oSliderConfig) {
         //        this.dots.settings = false;
         //    }
         //    else {
-                $('.fullwidth-slider').owlCarousel({
-                    items: (oSliderConfig.items !== typeof undefined ? oSliderConfig.items : 1),
-                    singleItem: (oSliderConfig.singleItem !== typeof undefined ? oSliderConfig.singleItem : true),
-                    autoHeight: (oSliderConfig.autoHeight !== typeof undefined ? oSliderConfig.autoHeight : true),
-                    nav: (oSliderConfig.nav !== typeof undefined ? oSliderConfig.nav : true),
-                    loop: (oSliderConfig.loop !== typeof undefined ? oSliderConfig.loop : true),
-                    rewind: (oSliderConfig.rewind !== typeof undefined ? oSliderConfig.rewind : true),
-                    navigation: (oSliderConfig.navigation !== typeof undefined ? oSliderConfig.navigation : true),
-                    pagination: (oSliderConfig.pagination !== typeof undefined ? oSliderConfig.pagination : true),
-                    navigationText: (oSliderConfig.navigationText !== typeof undefined ? oSliderConfig.navigationText : [
-                      "<i class='fa fa-angle-left'></i>",
-                      "<i class='fa fa-angle-right'></i>"
-                    ]),
-                    navText: (oSliderConfig.navText !== typeof undefined ? oSliderConfig.navText : [
-                      "<i class='fa fa-angle-left'></i>",
-                      "<i class='fa fa-angle-right'></i>"
-                    ]),
+        $('.fullwidth-slider').owlCarousel({
+            items: (oSliderConfig.items !== typeof undefined ? oSliderConfig.items : 1),
+            singleItem: (oSliderConfig.singleItem !== typeof undefined ? oSliderConfig.singleItem : true),
+            autoHeight: (oSliderConfig.autoHeight !== typeof undefined ? oSliderConfig.autoHeight : true),
+            nav: (oSliderConfig.nav !== typeof undefined ? oSliderConfig.nav : true),
+            loop: (oSliderConfig.loop !== typeof undefined ? oSliderConfig.loop : true),
+            rewind: (oSliderConfig.rewind !== typeof undefined ? oSliderConfig.rewind : true),
+            navigation: (oSliderConfig.navigation !== typeof undefined ? oSliderConfig.navigation : true),
+            pagination: (oSliderConfig.pagination !== typeof undefined ? oSliderConfig.pagination : true),
+            navigationText: (oSliderConfig.navigationText !== typeof undefined ? oSliderConfig.navigationText : [
+              "<i class='fa fa-angle-left'></i>",
+              "<i class='fa fa-angle-right'></i>"
+            ]),
+            navText: (oSliderConfig.navText !== typeof undefined ? oSliderConfig.navText : [
+              "<i class='fa fa-angle-left'></i>",
+              "<i class='fa fa-angle-right'></i>"
+            ]),
 
-                    autoplay: ($('.fullwidth-slider .bg-img').not('.cloned').length < 2) ? false :(oSliderConfig.autoplay !== typeof undefined ? oSliderConfig.autoplay : true),
-                    autoplaySpeed: (oSliderConfig.autoplaySpeed !== typeof undefined ? oSliderConfig.autoplaySpeed : 800),
-                    autoplayTimeout: (oSliderConfig.autoplayTimeout !== typeof undefined ? oSliderConfig.autoplayTimeout : 6000),
-                    autoplayHoverPause: (oSliderConfig.autoplayHoverPause !== typeof undefined ? oSliderConfig.autoplayHoverPause : true),
-                    navSpeed: (oSliderConfig.navSpeed !== typeof undefined ? oSliderConfig.navSpeed : 800),
-                    paginationSpeed: (oSliderConfig.paginationSpeed !== typeof undefined ? oSliderConfig.paginationSpeed : 800),
-                    slideSpeed: (oSliderConfig.slideSpeed !== typeof undefined ? oSliderConfig.slideSpeed : 800),
-                    dots: (oSliderConfig.dots !== typeof undefined ? oSliderConfig.dots : true)
-                });
-            }
-  
+            autoplay: ($('.fullwidth-slider .bg-img').not('.cloned').length < 2) ? false : (oSliderConfig.autoplay !== typeof undefined ? oSliderConfig.autoplay : true),
+            autoplaySpeed: (oSliderConfig.autoplaySpeed !== typeof undefined ? oSliderConfig.autoplaySpeed : 800),
+            autoplayTimeout: (oSliderConfig.autoplayTimeout !== typeof undefined ? oSliderConfig.autoplayTimeout : 6000),
+            autoplayHoverPause: (oSliderConfig.autoplayHoverPause !== typeof undefined ? oSliderConfig.autoplayHoverPause : true),
+            navSpeed: (oSliderConfig.navSpeed !== typeof undefined ? oSliderConfig.navSpeed : 800),
+            paginationSpeed: (oSliderConfig.paginationSpeed !== typeof undefined ? oSliderConfig.paginationSpeed : 800),
+            slideSpeed: (oSliderConfig.slideSpeed !== typeof undefined ? oSliderConfig.slideSpeed : 800),
+            dots: (oSliderConfig.dots !== typeof undefined ? oSliderConfig.dots : true)
+        });
+    }
+
     // Image Slider
     $('.image-slider').owlCarousel({
         navigation: true,  // Show next and prev buttons
@@ -360,7 +408,7 @@ function sliderAll(oSliderConfig) {
     $('.client-carousel').owlCarousel({
         autoplay: 2500,
         slideSpeed: 800,
-        autoplaySpeed:800,
+        autoplaySpeed: 800,
         navSpeed: 800,
         paginationSpeed: 800,
         stopOnHover: true,
@@ -476,46 +524,50 @@ function sliderAll(oSliderConfig) {
         navigation: true,  // Show next and prev buttons
         navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
     });
+
     if (typeof oSliderConfig !== 'undefined' && oSliderConfig !== 'null' && oSliderConfig !== "" && oSliderConfig !== 'false') {
-        $('.power-bi-carousel').owlCarousel({
-            autoplay: (oSliderConfig.autoplay !== typeof undefined ? oSliderConfig.autoplay : 2500),
-            slideSpeed: (oSliderConfig.slideSpeed !== typeof undefined ? oSliderConfig.slideSpeed : 2500),
-            autoplaySpeed: (oSliderConfig.autoplaySpeed !== typeof undefined ? oSliderConfig.autoplaySpeed : 2500),
-            autoplayHoverPause: (oSliderConfig.autoplayHoverPause !== typeof undefined ? oSliderConfig.autoplayHoverPause : true),
-            navSpeed: (oSliderConfig.navSpeed !== typeof undefined ? oSliderConfig.navSpeed : 2500),
-            paginationSpeed: (oSliderConfig.paginationSpeed !== typeof undefined ? oSliderConfig.paginationSpeed : 2500),
-            stopOnHover: true,
-            items: 4,
-            rewind: true,
-            loop: true,
-            itemsDesktop: [1170, 3],
-            itemsDesktopSmall: [1024, 2],
-            itemsTabletSmall: [768, 1],
-            itemsMobile: [480, 1],
-            pagination: false,  // Hide pagination buttons
-            navigation: true,  // Show next and prev buttons
-            nav: true,  // Show next and prev buttons
-            navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-            dots: false,
-            responsive: {
-                0: {
-                    items: 1
+        if (($(".power-bi-carousel").length)) {
+            $('.power-bi-carousel').owlCarousel({
+                autoplay: (oSliderConfig.autoplay !== typeof undefined ? oSliderConfig.autoplay : 2500),
+                slideSpeed: (oSliderConfig.slideSpeed !== typeof undefined ? oSliderConfig.slideSpeed : 2500),
+                autoplaySpeed: (oSliderConfig.autoplaySpeed !== typeof undefined ? oSliderConfig.autoplaySpeed : 2500),
+                autoplayHoverPause: (oSliderConfig.autoplayHoverPause !== typeof undefined ? oSliderConfig.autoplayHoverPause : true),
+                navSpeed: (oSliderConfig.navSpeed !== typeof undefined ? oSliderConfig.navSpeed : 2500),
+                paginationSpeed: (oSliderConfig.paginationSpeed !== typeof undefined ? oSliderConfig.paginationSpeed : 2500),
+                stopOnHover: true,
+                items: 4,
+                rewind: true,
+                loop: true,
+                itemsDesktop: [1170, 3],
+                itemsDesktopSmall: [1024, 2],
+                itemsTabletSmall: [768, 1],
+                itemsMobile: [480, 1],
+                pagination: false,  // Hide pagination buttons
+                navigation: true,  // Show next and prev buttons
+                nav: true,  // Show next and prev buttons
+                navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+                navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    }
+                    ,
+                    786: {
+                        items: 2
+                    }
+                    ,
+                    1042: {
+                        items: 3
+                    }
+                    ,
+                    1200: {
+                        items: 4
+                    }
                 }
-                ,
-                786: {
-                    items: 2
-                }
-                ,
-                1042: {
-                    items: 3
-                }
-                ,
-                1200: {
-                    items: 4
-                }
-            }
-        });
+            });
+        }
+
     }
 
     // Item-3 Carousel
@@ -545,7 +597,7 @@ function sliderAll(oSliderConfig) {
         responsive: true
     });
 
-    
+
 
 };
 
@@ -599,13 +651,13 @@ function sliderHero() {
 
     }
 
-    $(window).height(function() {
+    $(window).height(function () {
         heroResize();
         function heroResize() {
             var windowHeight = $(window).innerHeight();
             $('.slider-hero, .full-screen-intro').css('height', windowHeight);
         };
-        $(window).resize(function() {
+        $(window).resize(function () {
             heroResize();
         });
     });
@@ -669,7 +721,7 @@ function containerGridMasonry() {
 
     // ISOTOPE MASONRY ELEMENT  ||--------------
     var $container = $('.container-masonry');
-    $container.imagesLoaded(function() {
+    $container.imagesLoaded(function () {
         $container.isotope({
             itemSelector: '.nf-item',
             layoutMode: 'masonry',
@@ -688,7 +740,7 @@ function containerGridMasonry() {
 
     // ISOTOPE GRID ELEMENT  ||--------------
     var $container2 = $('.container-grid');
-    $container2.imagesLoaded(function() {
+    $container2.imagesLoaded(function () {
         $container2.isotope({
             itemSelector: '.nf-item',
             layoutMode: 'fitRows'
@@ -702,7 +754,7 @@ function containerGridMasonry() {
     });
 
     // change active class on categories
-    $('.categories-filter').each(function(i, buttonGroup) {
+    $('.categories-filter').each(function (i, buttonGroup) {
         var $buttonGroup = $(buttonGroup);
         $buttonGroup.on('click', '.categories', function () {
             $buttonGroup.find('.active').removeClass('active');
@@ -715,9 +767,9 @@ function containerGridMasonry() {
     // Masonry Element
     var container = $('.masonry');
     container.masonry({
-            // columnWidth: 0,
-                itemSelector: '.nf-item'
-            });
+        // columnWidth: 0,
+        itemSelector: '.nf-item'
+    });
 
 };
 
@@ -756,9 +808,9 @@ function scrollCallbackEle() {
 
 // Parallax Function element
 function initParallax() {
-    $('.parallax').each(function() {
+    $('.parallax').each(function () {
         var $el = $(this);
-        $(window).scroll(function() {
+        $(window).scroll(function () {
             parallax($el);
         });
         parallax($el);
@@ -769,7 +821,7 @@ function parallax($el) {
     var diff_s = $(window).scrollTop();
     var parallax_height = $('.parallax').height();
     var yPos_p = (diff_s * 0.5);
-    var yPos_m = - (diff_s * 0.5);
+    var yPos_m = -(diff_s * 0.5);
     var diff_h = diff_s / parallax_height;
 
     if ($('.parallax').hasClass('parallax-section1')) {
@@ -789,7 +841,7 @@ function parallax($el) {
         $el.css("background-position", 'left' + " " + yPos_p + "px");
     }
     if ($('.parallax').hasClass('parallax-background2')) {
-        $el.css("background-position", 'left' + " " + - yPos_p + "px");
+        $el.css("background-position", 'left' + " " + -yPos_p + "px");
 
     }
 };
@@ -818,7 +870,7 @@ function initStellar() {
 
 function numberWithCommas(x) {
     var parts = x.toString().split(".");
-    parts[0]= parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return parts.join(".");
 }
 
@@ -836,7 +888,7 @@ function shortcodeElements() {
 
     });
     $('.search-overlay-menu, .search-overlay-menu .search-overlay-close').on('click keyup', function (eventSearch) {
-        if(eventSearch.target == this || eventSearch.target.className == 'search-overlay-close' || eventSearch.keyCode == 27) {
+        if (eventSearch.target == this || eventSearch.target.className == 'search-overlay-close' || eventSearch.keyCode == 27) {
             $(this).removeClass('open');
         }
     });
@@ -864,7 +916,7 @@ function shortcodeElements() {
     // Skills Progressbar Elements
     skillsProgressBar();
     function skillsProgressBar() {
-        $('.skillbar').each(function() {
+        $('.skillbar').each(function () {
             $(this).find('.skillbar-bar').animate({
                 width: $(this).attr('data-percent')
             }, 2000);
@@ -877,7 +929,7 @@ function shortcodeElements() {
 
 //Counter
 function startCounter() {
-    $('.counter').each(function() {
+    $('.counter').each(function () {
         var $this = $(this),
             countTo = $this.attr('data-count');
         $({ countNum: $this.text() }).animate({
@@ -901,7 +953,7 @@ function startCounter() {
 // Accordion Function Elements
 accordion();
 function accordion() {
-    $('.accordion-title').click(function(e) {
+    $('.accordion-title').click(function (e) {
 
         $(this).next().slideToggle('easeOut');
         $(this).toggleClass('active');
@@ -919,12 +971,12 @@ function accordion() {
 function jqueryUi() {
 
     // Tab Function
-    $(function() {
+    $(function () {
         $(".tabs").tabs();
     });
 
     // Price Filter Slider
-    $(function() {
+    $(function () {
         $("#range-slider").slider({
             range: true,
             min: 0,
