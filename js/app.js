@@ -86,7 +86,6 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
         loadPlugins();
         loadNewsMainPage();
         setSliderNavigationButton();
-        updateTitle();
     });
     $scope.$on('$routeChangeSuccess', function () {
         console.log('Route Change: ' + $location.url());
@@ -101,7 +100,6 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         setTabNavLinkBehavior();
-        updateTitle("expertise");
     });
     $scope.$on('$routeChangeSuccess', function () {
         console.log('Route Change: ' + $location.url());
@@ -123,7 +121,6 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
 }]).controller('ArtificialIntelligenceController', ["$scope", "$location", "$window", function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
-        updateTitle("expertise");
     });
     $scope.$on('$routeChangeSuccess', function () {
         console.log('Route Change: ' + $location.url());
@@ -138,7 +135,6 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         setTabNavLinkBehavior();
-        updateTitle("expertise");
     });
     $scope.$on('$routeChangeSuccess', function () {
         console.log('Route Change: ' + $location.url());
@@ -153,7 +149,6 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         setTabNavLinkBehavior();
-        updateTitle("expertise");
     });
     $scope.$on('$routeChangeSuccess', function () {
         console.log('Route Change: ' + $location.url());
@@ -168,7 +163,6 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         setTabNavLinkBehavior();
-        updateTitle("expertise");
     });
     $scope.$on('$routeChangeSuccess', function () {
         console.log('Route Change: ' + $location.url());
@@ -183,7 +177,6 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         setTabNavLinkBehavior();
-        updateTitle("expertise");
     });
     $scope.$on('$routeChangeSuccess', function () {
         console.log('Route Change: ' + $location.url());
@@ -198,7 +191,6 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         loadNewsMainPage();
-        updateTitle("engagement");
     });
     $scope.$on('$routeChangeSuccess', function () {
         console.log('Route Change: ' + $location.url());
@@ -213,7 +205,6 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         loadNewsMainPage();
-        updateTitle("engagement");
     });
     $scope.$on('$routeChangeSuccess', function () {
         console.log('Route Change: ' + $location.url());
@@ -228,7 +219,6 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         newsConstructor();
-        updateTitle("news");
     });
     $scope.$on('$routeChangeSuccess', function () {
         console.log('Route Change: ' + $location.url());
@@ -246,7 +236,6 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
         onYouTubeIframeAPIReady();
         // call Career Constructor
         careersConstructor();
-        updateTitle("careers");
         //var tag = document.createElement('script');
         //tag.src = "https://www.youtube.com/iframe_api";
         //var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -270,7 +259,6 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         contactConstructor();
-        updateTitle("contact");
     });
     $scope.$on('$routeChangeSuccess', function () {
         // load script dynamically using any method
@@ -288,7 +276,6 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
 }]).controller('PowerBISupportController', ["$scope", "$location", "$window", function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
-        updateTitle();
         redirectPowerBI();
     });
     $scope.$on('$routeChangeSuccess', function () {
@@ -303,7 +290,6 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
 }]).controller('PrivacyStatementController', ["$scope", "$location", "$window", function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
-        updateTitle("privacystatement");
     });
     $scope.$on('$routeChangeSuccess', function () {
         console.log('Route Change: ' + $location.url());
