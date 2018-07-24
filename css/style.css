@@ -79,7 +79,7 @@ body {
     font-weight: 400;
     letter-spacing: 1px;
 }
-.defauiltBody {
+.defaultBody {
     line-height: 24px;
     color: black;
     font-size: 13px;
@@ -339,7 +339,7 @@ h4{
         letter-spacing: 4px;
     }
 
-.listHeader{
+.h4header{
     font-size: 17px;
     letter-spacing: 2px;
     line-height: 28px;
