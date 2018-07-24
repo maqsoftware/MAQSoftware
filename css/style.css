@@ -321,7 +321,7 @@ h3 {
         font-weight: 600;
     }
 
-h4 {
+h4,li.h4 {
     font-size: 17px;
     letter-spacing: 2px;
     line-height: 28px;
@@ -330,6 +330,7 @@ h4 {
     h4.h4 {
         letter-spacing: 4px;
     }
+    
 
 h5 {
     font-size: 15px;
