@@ -192,90 +192,90 @@
                         
                         <ol class="  pb-10">
                             <li class="listHeader"> Limit the number of visuals in dashboards and reports
-                                <ul>
+                                <ul class="defaultBody">
                                     <li>According to <a href="https://docs.microsoft.com/en-us/power-bi/power-bi-reports-performance">Microsoft Power BI Performance Best Practices</a>, placing many visuals in a single report slows report performance.</li>
                                     <li>Limit widget visuals to no more than eight per report page and grids to no more than one per page. Limit pages to no more than 30 points (cards = 1, gauges = 2, charts = 3, maps = 3, grids = 5).</li>
                                     <li>Limit tiles to no more than 10 per dashboard. </li>
                                 </ul>
                             </li>
                             <li class="listHeader"> To improve Power BI report performance, remove unnecessary interactions between visuals 
-                                <ul>
+                                <ul class="defaultBody">
                                     <li>By default, all visuals on a report page can interact with one another. For optimal performance, interactivity should be controlled and modified. </li>
                                     <li>Disabling unwanted interactivity reduces the number of queries fired at the backend and improves report performance. </li>
                                 </ul>
                             </li>
                             <li class="listHeader"> Enable <a href="https://docs.microsoft.com/en-us/sql/relational-databases/security/row-level-security?view=sql-server-2017">Row-Level Security (RLS)</a> where applicable 
-                                <ul>
+                                <ul class="defaultBody">
                                     <li>Row Level Security restricts user access to certain rows in a database depending on the characteristics (role) of the user executing a query. With RLS, Power BI only imports data the user is authorized to view.</li>
                                     <li>Combining Power BI roles with roles in the backend can result in substantial performance gains.</li>
                                     <li>Test all roles before rolling out to production.</li>
                                 </ul>
                             </li>
                             <li class="listHeader"> Use Microsoft AppSource <a href="https://docs.microsoft.com/en-us/power-bi/power-bi-custom-visuals-certified">certified custom visuals</a> where applicable 
-                                <ul>
+                                <ul class="defaultBody">
                                     <li>Power BI certified visuals are AppSource visuals that have passed rigorous quality testing. Microsoft verifies that certified custom visuals have robust and well-performing code. </li>
                                     <li>Certified custom visuals are the only custom visuals that can be viewed in <a href="https://docs.microsoft.com/en-us/power-bi/service-publish-to-powerpoint">Export to PowerPoint and email subscriptions.</a> </li>
                                     
                                 </ul>
                             </li>
                             <li class="listHeader"> If you observe poor performance in Power BI, do not use hierarchical filters 
-                                <ul>
+                                <ul class="defaultBody">
                                     <li>If you observe high page load times when using hierarchical filters, remove the hierarchical filters and instead use multiple filters for the hierarchy. </li>
                                     
                                 </ul>
                             </li>
                             <li class="listHeader"> Provide data categorization for Power BI reports (HBI, MBI, LBI) 
-                                <ul>
+                                <ul class="defaultBody">
                                     <li>High Business Impact (HBI) data requires users to get a policy exception to share the data externally. Low Business Impact (LBI) and Medium Business Impact (MBI) data do not require special exceptions. </li>
                                     <li>By using Power BI data classification, you raise user awareness about the security level that should be used and how reports should be shared inside and outside the organization. </li>
                                     
                                 </ul>
                             </li>
-                            <li  class="h4"> <Use the <a href="https://docs.microsoft.com/en-us/power-bi/service-gateway-onprem"> On-premises data gateway instead of Personal Gateway</a> 
-                                <ul>
+                            <li class="listHeader"> <Use the <a href="https://docs.microsoft.com/en-us/power-bi/service-gateway-onprem"> On-premises data gateway instead of Personal Gateway</a> 
+                                <ul class="defaultBody">
                                     <li>Personal Gateway takes data and imports it into Power BI. </li>
                                     <li>Enterprise Gateway imports nothing, which is more efficient when working with large databases.  </li>
                                     
                                 </ul>
                             </li>
                             <li class="listHeader"> Use different Power BI gateways for “<a href="https://docs.microsoft.com/en-us/power-bi/desktop-use-directquery">Direct Query</a>” and “<a href="https://docs.microsoft.com/en-us/power-bi/refresh-scheduled-refresh">Scheduled Refresh</a>” 
-                                <ul>
+                                <ul class="defaultBody">
                                     <li>If the same gateway is used for Scheduled Data Refresh and Live Connection, Live Connection performance will slow down when Scheduled Data Refresh is active. Avoid this issue by creating separate gateways for Live Connection and Scheduled Refresh. </li>
                                     
                                 </ul>
                             </li>
                             <li class="listHeader"> Test each custom visual on a report for performance to ensure fast report load time; use an alternative visual if the chosen visual performs poorly 
-                                <ul>
+                                <ul class="defaultBody">
                                     <li>Custom visuals that are not certified are generally not thoroughly tested by the Power BI team. They might perform poorly when handling large datasets or complex aggregations. If a custom visual performs poorly, consider changing it to different visual. </li>
                                     
                                 </ul>
                             </li>
                             <li class="listHeader"> Limit complicated measures and aggregations in data models
-                                <ul>
+                                <ul class="defaultBody">
                                     <li>Push calculated columns and measures to the source where possible. The closer they are to the source, the higher the likelihood of improved performance. </li>
                                     <li>Create calculated measures instead of calculated columns. </li>
                                     <li>Use star schema for designing data models. </li>
                                 </ul>
                             </li>
                             <li class="listHeader"> Use slicers sparingly
-                                <ul>
+                                <ul class="defaultBody">
                                     <li>Slicers are a great way of allowing users to navigate data, but they come at a performance cost. Each slicer generates two queries: one to get the data, and another to fetch selection details.  </li>
                                     <li>Creating too many slicers impacts performance negatively. </li>
                                 </ul>
                             </li>
                             <li class="listHeader"> Ensure that the Power BI report and the data source are in the same region 
-                                <ul>
+                                <ul class="defaultBody">
                                     <li>With the tenant and data source in the same region, network latency is reduced. This results in faster data transfer and faster query execution. </li>
                                 </ul>
                             </li>
                             <li class="listHeader">Import only necessary fields and tables instead of entire datasets
-                                <ul>
+                                <ul class="defaultBody">
                                     <li>Keep the model as narrow and lean as possible.</li>
                                     <li>Power BI works on columnar indexes; longer and leaner tables are preferred. </li>
                                 </ul>
                             </li>
                             <li class="listHeader"> Ensure the cache update frequency aligns with the data source refresh frequency 
-                                <ul>
+                                <ul class="defaultBody">
                                     <li>Report cache refresh should be set to intervals similar to the data source refresh frequency. </li>
                                     <li>By default, the Power BI cache frequency is set to one hour. If, for example, your dataset refreshes only once per day, you should update the cache frequency accordingly. </li>
                                 </ul>
