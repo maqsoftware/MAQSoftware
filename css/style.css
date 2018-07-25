@@ -5681,6 +5681,6 @@ li.h4header {
 .h4header >a {
     text-decoration:underline;
 } 
-.defaultBody >a {
+.defaultBody >li>a {
     text-decoration:underline;
 } 
