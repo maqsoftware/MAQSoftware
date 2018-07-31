@@ -773,11 +773,9 @@ function containerGridMasonry() {
     $(".blogcategories").on('click', function () {
         $('.blogcategories-filter').each(function (i, buttonGroup) {
             var $buttonGroup = $(buttonGroup);
-            $buttonGroup.on('click', '.blogcategories', function () {
-                $buttonGroup.find('.active').css('background-color', '#ffffff').css('color', '#323232').removeClass('active');
-                $(this).addClass('active');
-                $(this).css('background-color', '#323232');
-                $(this).css('color', '#ffffff');
+            $buttonGroup.on('click', '.blogcategories', function () {               
+                $buttonGroup.find('.active').removeClass('active tagSelected');
+                $(this).addClass('active tagSelected');        
 
             });
 
