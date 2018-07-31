@@ -3678,6 +3678,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 
 .sidebar-widget {
     margin-bottom: 50px;
+    
 }
 
     .sidebar-widget h4 {
@@ -3764,7 +3765,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
         }
 
             .widget-tag li a:hover {
-                background: #323232;
+                background: #323232 !important;
                 color: #fff !important;
             }
 
@@ -5688,3 +5689,16 @@ li.h4header {
 
     text-decoration:underline;
 }
+
+.blog-post .post-header h5
+{
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: 23px;
+    font-weight: 600;
+    height: 115px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
