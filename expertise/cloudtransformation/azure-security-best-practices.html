@@ -218,11 +218,14 @@
                             <li class="h4header"> Use <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal">Service Principal</a> wherever possible 
                                 <p class=defaultBody>Service Principals are Azure Active Directory application resources used to perform unattended resource and service-level operations. Use Service Principals for code that needs to access or modify Azure resources. This approach is preferable to running the app under user credentials because you can assign permissions to the app identity that are different from user permissions. Typically, these permissions are restricted to exactly what the app needs to do. </p>
                             </li>
-                            <li class="h4header"> Turn off Azure services and servers when not in use to: 
+                            <li class="h4header"> Turn off Azure services and servers when not in use and remove inactive resources to: 
                                 <ul class="defaultBody">
                                     <li>Reduce the surface area of security threats, especially when resources are not in use. </li>
                                     <li>Reduce the cost of Azure services. There is no need to pay when you are not using a resource. We recommend a strategy of dynamically provisioning a resource as and when it is required. </li>
                                 </ul>
+                            </li>
+                            <li class="h4header">Implement an IP whitelisting approach as applicable
+                                <p class=defaultBody>IP Restrictions allow you to define a list of IP addresses that can access your app. The ‘allow’ list can include individual IP addresses or a range of IP addresses defined by a subnet mask. This is extremely helpful in scenarios where there are a limited number of app users (e.g. internal app, or your next great version). An IP whitelist prevents unwanted or unauthorized machines from accessing the app.</p>
                             </li>
                             <li class="h4header"> Use the <a href="https://azure.microsoft.com/en-us/services/key-vault/">Azure Key Vault</a>
                                 <p class=defaultBody>Azure Key Vault helps safeguard cryptographic keys and secrets used by cloud applications and services. You can control applications to never have direct access to keys. Developers manage keys used for Dev/Test and can seamlessly migrate keys managed by security operations to production. </p>
@@ -232,6 +235,9 @@
                             </li>
                             <li class="h4header"> Use <a href="https://azure.microsoft.com/en-us/services/active-directory/">Azure Active Directory</a> (AAD) to manage identity and access to cloud applications 
                                 <p class=defaultBody>AAD is Microsoft’s multi-tenant cloud-based directory and identity management service. AAD helps secure and simplify user access to cloud applications with single sign-on. It also protects sensitive data and applications with Azure Multi-Factor Authentication, an additional level of authentication, and machine learning-based reports that identify inconsistent access patterns. </p>
+                            </li>
+                            <li class="h4header"> Add a second layer of security by enabling <a href="https://docs.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks">Azure Multi-factor Authentication</a> (MFA) 
+                                <p class=defaultBody>Azure MFA is a method for verifying user identities via phone call, text message, or mobile app notification, supplementing username and password authentication. Because Azure MFA requires access to a user’s phone, access to the user’s data and applications is protected even if the user’s password is compromised. Organizations that do not add this extra layer of identity protection are more susceptible to credential theft attack, which may lead to data compromise.</p>
                             </li>
                             
 
