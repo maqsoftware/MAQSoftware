@@ -764,23 +764,33 @@ function containerGridMasonry() {
 
     });
 
-    //bind blog filter on click
-    $('.blogcategories-filter').on('click', '.blogcategories', function () {
-        var filterValue = $(this).attr('data-filter');
-        $container2.isotope({ filter: filterValue });
-    });
+    
+    function filterOnTag(buttonGroup,blogcategory) {
+        buttonGroup.find('.active').removeClass('active tagSelected');
+        blogcategory.addClass('active tagSelected');
+        var filterValue = blogcategory.attr('data-filter');
+        $('.container-grid').isotope({ filter: filterValue });
+    }
 
     $(".blogcategories").on('click', function () {
-        $('.blogcategories-filter').each(function (i, buttonGroup) {
-            var $buttonGroup = $(buttonGroup);
-            $buttonGroup.on('click', '.blogcategories', function () {               
-                $buttonGroup.find('.active').removeClass('active tagSelected');
-                $(this).addClass('active tagSelected');        
+      
+            var $buttonGroup = $('.blogcategories-filter');
+              
+                var lengthOfActive = $buttonGroup.find('.active');
+                if (lengthOfActive.length > 0){
+                    if ($buttonGroup.find('.active').data('filter') == $(this).attr('data-filter')) {
+                        $buttonGroup.find('.active').removeClass('active tagSelected');
+                        $('.container-grid').isotope({ filter: '*' });
+                    }
+                    else {
+                       filterOnTag($buttonGroup, $(this));
+                    }
 
+                }
+                else {
+                    filterOnTag($buttonGroup, $(this));
+                }
             });
-
-        });
-    });
 
     // Masonry Element
     var container = $('.masonry');
