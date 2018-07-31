@@ -759,10 +759,28 @@ function containerGridMasonry() {
         $buttonGroup.on('click', '.categories', function () {
             $buttonGroup.find('.active').removeClass('active');
             $(this).addClass('active');
+
         });
 
     });
 
+    //bind blog filter on click
+    $('.blogcategories-filter').on('click', '.blogcategories', function () {
+        var filterValue = $(this).attr('data-filter');
+        $container2.isotope({ filter: filterValue });
+    });
+
+    $(".blogcategories").on('click', function () {
+        $('.blogcategories-filter').each(function (i, buttonGroup) {
+            var $buttonGroup = $(buttonGroup);
+            $buttonGroup.on('click', '.blogcategories', function () {               
+                $buttonGroup.find('.active').removeClass('active tagSelected');
+                $(this).addClass('active tagSelected');        
+
+            });
+
+        });
+    });
 
     // Masonry Element
     var container = $('.masonry');
