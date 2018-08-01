@@ -765,13 +765,14 @@ function containerGridMasonry() {
     });
 
     
-    function filterOnTag(buttonGroup,blogcategory) {
+    function filterOnTag(buttonGroup, blogcategory) {
         buttonGroup.find('.active').removeClass('active tagSelected');
-        blogcategory.addClass('active tagSelected');
+        buttonGroup.find("[data-filter=" + '"' + blogcategory.attr('data-filter') + '"' + "]").addClass('active tagSelected');
+        //blogcategory.addClass('active tagSelected');
         var filterValue = blogcategory.attr('data-filter');
         $('.container-grid').isotope({ filter: filterValue });
+        //$('.container-grid').isotope({ filter:['.data','.powerbi'] });
     }
-
     $(".blogcategories").on('click', function () {
       
             var $buttonGroup = $('.blogcategories-filter');
