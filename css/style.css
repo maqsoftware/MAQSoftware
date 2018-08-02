@@ -5733,3 +5733,11 @@ li.h4header {
     background-color: #323232;
     color: #fff;
 }
+
+.case-study-post-tag .blogcategories{
+    color: #323232;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-right:10px;
+    font-weight:600;
+}

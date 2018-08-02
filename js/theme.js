@@ -48,7 +48,27 @@ $(document).ready(function () {
         live: true
     })
     wow.init();
+
 });
+
+function readQueryParams() {
+    var params = (new URL(document.location)).searchParams;
+    var tag = unescape(params.get("tag"));
+    /*
+    document.title = newsTitle;
+    document.getElementsByTagName("META")["og:title"].content = newsTitle;
+    document.getElementsByTagName("META")["og:description"].content = newsTitle;
+    */
+    if (typeof tag !== 'undefined' && tag !== 'null' && tag !== "" && tag !== 'false') {
+        $('.blogcategories-filter').find("[data-filter='." + tag + "']").click();
+    }
+    else {
+        $('.blogcategories-filter').find("[data-filter='*']").click();
+        //window.location.href="/case-studies.html";
+    }
+}
+
+window.onload = readQueryParams;
 
 function loadPlugins() {
     pageSection = $('.slide-bg-image, .bg-image');
@@ -764,7 +784,7 @@ function containerGridMasonry() {
 
     });
 
-    
+
     function filterOnTag(buttonGroup, blogcategory) {
         buttonGroup.find('.active').removeClass('active tagSelected');
         buttonGroup.find("[data-filter=" + '"' + blogcategory.attr('data-filter') + '"' + "]").addClass('active tagSelected');
@@ -773,25 +793,27 @@ function containerGridMasonry() {
         $('.container-grid').isotope({ filter: filterValue });
         //$('.container-grid').isotope({ filter:['.data','.powerbi'] });
     }
-    $(".blogcategories").on('click', function () {
-      
-            var $buttonGroup = $('.blogcategories-filter');
-              
-                var lengthOfActive = $buttonGroup.find('.active');
-                if (lengthOfActive.length > 0){
-                    if ($buttonGroup.find('.active').data('filter') == $(this).attr('data-filter')) {
-                        $buttonGroup.find('.active').removeClass('active tagSelected');
-                        $('.container-grid').isotope({ filter: '*' });
-                    }
-                    else {
-                       filterOnTag($buttonGroup, $(this));
-                    }
 
-                }
-                else {
-                    filterOnTag($buttonGroup, $(this));
-                }
-            });
+    $(".blogcategories").on('click', function () {
+
+        var $buttonGroup = $('.blogcategories-filter');
+
+        var lengthOfActive = $buttonGroup.find('.active');
+        if (lengthOfActive.length > 0) {
+            if ($buttonGroup.find('.active').data('filter') == $(this).attr('data-filter')) {
+                $buttonGroup.find('.active').removeClass('active tagSelected');
+                $('.container-grid').isotope({ filter: '*' });
+            }
+            else {
+                filterOnTag($buttonGroup, $(this));
+            }
+
+        }
+        else {
+            filterOnTag($buttonGroup, $(this));
+            //filterOnTag($buttonGroup, $('.blogcategories').data('filter') == $(this).attr('data-filter'));
+        }
+    });
 
     // Masonry Element
     var container = $('.masonry');
