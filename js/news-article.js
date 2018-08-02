@@ -21,6 +21,7 @@ sLoadingClass = "Loading",
                     , "What I Did Not Learn at IIT - Transitioning from Campus to Workplace"
     ], iCount, iTotal = oItalicBookName.length, iTotalHighlight = 6, oNewsHighlightTitle = [iTotalHighlight], oHighlightNewsID = [iTotalHighlight];
 var newsTitle;
+
 function readQueryParams() {
     var params = (new URL(document.location)).searchParams;
     newsTitle = unescape(params.get("title"));

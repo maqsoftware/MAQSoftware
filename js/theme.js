@@ -48,7 +48,21 @@ $(document).ready(function () {
         live: true
     })
     wow.init();
+
 });
+
+function readQueryParams() {
+    var params = (new URL(document.location)).searchParams;
+    var tag = unescape(params.get("tag"));
+    if (typeof tag !== 'undefined' && tag !== 'null' && tag !== "" && tag !== 'false') {
+        $('.blogcategories-filter').find("[data-filter='." + tag + "']").click();
+    }
+    else {
+        $('.blogcategories-filter').find("[data-filter='*']").click();
+    }
+}
+
+window.onload = readQueryParams;
 
 function loadPlugins() {
     pageSection = $('.slide-bg-image, .bg-image');
@@ -764,33 +778,33 @@ function containerGridMasonry() {
 
     });
 
-    
-    function filterOnTag(buttonGroup,blogcategory) {
+
+    function filterOnTag(buttonGroup, blogcategory) {
         buttonGroup.find('.active').removeClass('active tagSelected');
-        blogcategory.addClass('active tagSelected');
+        buttonGroup.find("[data-filter=" + '"' + blogcategory.attr('data-filter') + '"' + "]").addClass('active tagSelected');
         var filterValue = blogcategory.attr('data-filter');
         $('.container-grid').isotope({ filter: filterValue });
     }
 
     $(".blogcategories").on('click', function () {
-      
-            var $buttonGroup = $('.blogcategories-filter');
-              
-                var lengthOfActive = $buttonGroup.find('.active');
-                if (lengthOfActive.length > 0){
-                    if ($buttonGroup.find('.active').data('filter') == $(this).attr('data-filter')) {
-                        $buttonGroup.find('.active').removeClass('active tagSelected');
-                        $('.container-grid').isotope({ filter: '*' });
-                    }
-                    else {
-                       filterOnTag($buttonGroup, $(this));
-                    }
 
-                }
-                else {
-                    filterOnTag($buttonGroup, $(this));
-                }
-            });
+        var $buttonGroup = $('.blogcategories-filter');
+
+        var lengthOfActive = $buttonGroup.find('.active');
+        if (lengthOfActive.length > 0) {
+            if ($buttonGroup.find('.active').data('filter') == $(this).attr('data-filter')) {
+                $buttonGroup.find('.active').removeClass('active tagSelected');
+                $('.container-grid').isotope({ filter: '*' });
+            }
+            else {
+                filterOnTag($buttonGroup, $(this));
+            }
+
+        }
+        else {
+            filterOnTag($buttonGroup, $(this));
+        }
+    });
 
     // Masonry Element
     var container = $('.masonry');
