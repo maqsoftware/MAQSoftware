@@ -25,7 +25,6 @@ var newsTitle;
 function readQueryParams() {
     var params = (new URL(document.location)).searchParams;
     newsTitle = unescape(params.get("title"));
-    //document.title = newsTitle;
     if (typeof newsTitle !== 'undefined' && newsTitle !== 'null' && newsTitle !== "" && newsTitle !== 'false') {
         loadNewsGrid();
     }
@@ -134,9 +133,3 @@ function renderNews() {
 
     }
 }
-
-/*
-function chagngeTitle() {
-    document.title = newsTitle;
-}
-*/
