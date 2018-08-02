@@ -54,17 +54,11 @@ $(document).ready(function () {
 function readQueryParams() {
     var params = (new URL(document.location)).searchParams;
     var tag = unescape(params.get("tag"));
-    /*
-    document.title = newsTitle;
-    document.getElementsByTagName("META")["og:title"].content = newsTitle;
-    document.getElementsByTagName("META")["og:description"].content = newsTitle;
-    */
     if (typeof tag !== 'undefined' && tag !== 'null' && tag !== "" && tag !== 'false') {
         $('.blogcategories-filter').find("[data-filter='." + tag + "']").click();
     }
     else {
         $('.blogcategories-filter').find("[data-filter='*']").click();
-        //window.location.href="/case-studies.html";
     }
 }
 
@@ -788,10 +782,8 @@ function containerGridMasonry() {
     function filterOnTag(buttonGroup, blogcategory) {
         buttonGroup.find('.active').removeClass('active tagSelected');
         buttonGroup.find("[data-filter=" + '"' + blogcategory.attr('data-filter') + '"' + "]").addClass('active tagSelected');
-        //blogcategory.addClass('active tagSelected');
         var filterValue = blogcategory.attr('data-filter');
         $('.container-grid').isotope({ filter: filterValue });
-        //$('.container-grid').isotope({ filter:['.data','.powerbi'] });
     }
 
     $(".blogcategories").on('click', function () {
@@ -811,7 +803,6 @@ function containerGridMasonry() {
         }
         else {
             filterOnTag($buttonGroup, $(this));
-            //filterOnTag($buttonGroup, $('.blogcategories').data('filter') == $(this).attr('data-filter'));
         }
     });
 
