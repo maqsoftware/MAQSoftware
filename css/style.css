@@ -5739,5 +5739,10 @@ li.h4header {
     text-transform: uppercase;
     font-size: 13px;
     margin-right:10px;
+    margin-bottom:10px;
     font-weight:600;
+}
+
+.case-study-post-tag {
+    padding-bottom:15px;
 }
