@@ -31,7 +31,7 @@
     <link rel="icon" type="image/png" href="/img/favicon.ico">
     <link rel="apple-touch-icon" href="/img/favicon.ico">
     <!-- CSS -->
-    <link href="/css/style.css?v=20180803" rel="stylesheet" type="text/css" />
+    <link href="/css/style.css?v=20170831" rel="stylesheet" type="text/css" />
     <link href="/css/bootstrap.min.css?v=20170822" rel="stylesheet" type="text/css" />
     <link href="/css/font-awesome.css?v=20170822" rel="stylesheet" type="text/css" />
     <link href="/css/ionicons.css?v=20170822" rel="stylesheet" type="text/css" />
@@ -52,31 +52,20 @@
         })();
     </script>-->
     <!-- /Github Pages hack. -->
-
-    <script>
-      window.fbAsyncInit = function() {
-	    FB.init({
-	        appId: '966242223397117',
-	      autoLogAppEvents : true,
-	      xfbml            : true,
-	      version          : 'v2.10'
-	    });
-	    FB.AppEvents.logPageView();
-      };
-
-      (function(d, s, id){
-	     var js, fjs = d.getElementsByTagName(s)[0];
-	     if (d.getElementById(id)) {return;}
-	     js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-	     fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-    </script>
-
 </head>
 
 <body>
-   
+    <!--Facebook Java SDK-->
+    <div id="fb-root"></div>
+    <script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.0';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    
     <!-- Preloader -->
     <section id="preloader">
         <div class="loader" id="loader">
@@ -286,13 +275,13 @@
     <script src="/js/plugin/mediaelement-and-player.min.js?v=20170822"></script>
     <script src="/js/plugin/sidebar-menu.js?v=20170822" type="text/javascript"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="/js/theme.js?v=20180803" type="text/javascript"></script>
+    <script src="/js/theme.js?v=20180421.2" type="text/javascript"></script>
     <script src="/js/navigation.js?v=20170822" type="text/javascript"></script>
     <script src="/js/contact.js?v=20170828.2" type="text/javascript"></script>
     <script src="/js/common.js?v=20170828.1" type="text/javascript"></script>
     <script src="/js/home.js?v=20170830" type="text/javascript"></script>
     <script src="/js/news.js?v=20170823.3" type="text/javascript"></script>
-    <script src="/js/news-article.js?v=20180803" type="text/javascript"></script>
+    <script src="/js/news-article.js?v=20180508.1" type="text/javascript"></script>
     <!--<script src="/js/app.js?v=20170828.3" type="text/javascript"></script>-->
     <script src="/js/careers.js?v=20170822"></script>
 
