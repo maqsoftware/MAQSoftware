@@ -2,7 +2,8 @@
 "use strict";
 var oNewsArticlePager = {
     template: '<div> <div class="post-meta"><span>@date</span></div><div class="post-header" id="post-share"></div><div class="post-media"><img alt="News" title="@tooltip" src="@newsimagesrc"></div><div class="post-entry">@content</div></div>',
-    socialMediatemplate: "<h2>@title</h2> <div class='social-media-share'><div class='fb-share-button' onclick='sharefacebook()'><svg viewBox='0 0 12 10' preserveAspectRatio='xMidYMid meet'><path class='svg-icon-path' d='M9.1,0.1V2H8C7.6,2,7.3,2.1,7.1,2.3C7,2.4,6.9,2.7,6.9,3v1.4H9L8.8,6.5H6.9V12H4.7V6.5H2.9V4.4h1.8V2.8 c0-0.9,0.3-1.6,0.7-2.1C6,0.2,6.6,0,7.5,0C8.2,0,8.7,0,9.1,0.1z'></path></svg><span>Share</span></div><a href='https://twitter.com/share?ref_src=twsrc%5etfw' data-via='maqsoftware' data-url='@twitternewslink' class='twitter-share-button share-button' data-text='@linktitle' data-show-count='true'></a> <script async src='https://platform.twitter.com/widgets.js' charset='utf-8'></script><span class='linkedin-share-button share-button'><script src='//platform.linkedin.com/in.js' type='text/javascript'> lang: en_us</script><script type='in/share' data-counter='right'></script></span> <a href='http://www.linkedin.com/sharearticle?mini=true&summary=@lnsummary&url=@lnurl&submitted-image-url=@newsimagesrc&image-url=https://maqsoftware.com/img/Banners/news.jpg&image=https://maqsoftware.com/img/Banners/news.jpg?w=611&title=@lntitle&source=@lnsource' rel='nofollow'></a></div>",
+    //socialMediatemplate: "<h2>@title</h2> <div class='social-media-share'><div class='fb-share-button' onclick='sharefacebook()'><svg viewBox='0 0 12 10' preserveAspectRatio='xMidYMid meet'><path class='svg-icon-path' d='M9.1,0.1V2H8C7.6,2,7.3,2.1,7.1,2.3C7,2.4,6.9,2.7,6.9,3v1.4H9L8.8,6.5H6.9V12H4.7V6.5H2.9V4.4h1.8V2.8 c0-0.9,0.3-1.6,0.7-2.1C6,0.2,6.6,0,7.5,0C8.2,0,8.7,0,9.1,0.1z'></path></svg><span>Share</span></div><a href='https://twitter.com/share?ref_src=twsrc%5etfw' data-via='maqsoftware' data-url='@twitternewslink' class='twitter-share-button share-button' data-text='@linktitle' data-show-count='true'></a> <script async src='https://platform.twitter.com/widgets.js' charset='utf-8'></script><span class='linkedin-share-button share-button'><script src='//platform.linkedin.com/in.js' type='text/javascript'> lang: en_us</script><script type='in/share' data-counter='right'></script></span> <a href='http://www.linkedin.com/sharearticle?mini=true&summary=@lnsummary&url=@lnurl&submitted-image-url=@newsimagesrc&image-url=https://maqsoftware.com/img/Banners/news.jpg&image=https://maqsoftware.com/img/Banners/news.jpg?w=611&title=@lntitle&source=@lnsource' rel='nofollow'></a></div>",
+    socialMediatemplate: "<h2>@title</h2> <div class='social-media-share'><div class='fb-share-button share-button' data-href='@newslink' data-layout='button_count' data-size='small' data-mobile-iframe='true'><a class='fb-xfbml-parse-ignore' target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=@fbunewslink&amp;src=sdkpreparse'> <span class='fb-share-button share-button'> Share </span> </a></div> <a href='https://twitter.com/share?ref_src=twsrc%5etfw' data-via='maqsoftware' data-url='@twitternewslink' class='twitter-share-button share-button' data-text='@linktitle' data-show-count='true'></a> <script async src='https://platform.twitter.com/widgets.js' charset='utf-8'></script><span class='linkedin-share-button share-button'><script src='//platform.linkedin.com/in.js' type='text/javascript'> lang: en_us</script><script type='in/share' data-counter='right'></script></span> <a href='http://www.linkedin.com/sharearticle?mini=true&summary=@lnsummary&url=@lnurl&submitted-image-url=@newsimagesrc&image-url=https://maqsoftware.com/img/Banners/news.jpg&image=https://maqsoftware.com/img/Banners/news.jpg?w=611&title=@lntitle&source=@lnsource' rel='nofollow'></a></div>",
     pageIndex: 0,
     pagesize: 6
 }, id, highlightid, sClickedHighlightTitle, iClickedHighlightID,
@@ -135,26 +136,26 @@ function renderNews() {
     }
 }
 
-function sharefacebook() {
-    shareOverrideOGMeta(newsTitle, newsImageSource);
-};
-function shareOverrideOGMeta(overrideTitle, overrideImage) {
-    var params = (new URL(document.location)).searchParams;
-    var newsTitleEnc = encodeURI(params.get("title"));
-    FB.ui({
-        method: 'share',
-        href: "https://maqsoftware.com",
-        redirect_uri: "https://maqsoftware.com/news-article" + "?title=" + newsTitleEnc,
-        action_type: 'og.shares',
-        action_properties: JSON.stringify({
-            object: {
-                'og:url': "https://maqsoftware.com/news-article" + "?title=" + newsTitleEnc,
-                'og:title': overrideTitle,
-                'og:image': overrideImage
-            }
-        })
-    },
-	function (response) {
-	    // Action after response
-	});
-}
+//function sharefacebook() {
+//    shareOverrideOGMeta(newsTitle, newsImageSource);
+//};
+//function shareOverrideOGMeta(overrideTitle, overrideImage) {
+//    var params = (new URL(document.location)).searchParams;
+//    var newsTitleEnc = encodeURI(params.get("title"));
+//    FB.ui({
+//        method: 'share',
+//        href: "https://maqsoftware.com",
+//        redirect_uri: "https://maqsoftware.com/news-article" + "?title=" + newsTitleEnc,
+//        action_type: 'og.shares',
+//        action_properties: JSON.stringify({
+//            object: {
+//                'og:url': "https://maqsoftware.com/news-article" + "?title=" + newsTitleEnc,
+//                'og:title': overrideTitle,
+//                'og:image': overrideImage
+//            }
+//        })
+//    },
+//	function (response) {
+//	    // Action after response
+//	});
+//}
