@@ -52,8 +52,15 @@ $(document).ready(function () {
 });
 
 function readQueryParams() {
-    var params = (new URL(document.location)).searchParams;
-    var tag = unescape(params.get("tag"));
+    var tag;
+    if (/MSIE|Trident/.test(navigator.userAgent)) {
+        tag = location.search.split('tag=')[1];
+    }
+    else
+    {
+        var params = (new URL(document.location)).searchParams;
+        tag = unescape(params.get("tag"));
+    }
     if (typeof tag !== 'undefined' && tag !== 'null' && tag !== "" && tag !== 'false') {
         $('.blogcategories-filter').find("[data-filter='." + tag + "']").click();
     }
