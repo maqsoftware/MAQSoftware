@@ -5744,7 +5744,7 @@ li.h4header {
 
 
 .social-media-share .fb-share-button {
-    margin: 0px 4px 2px 0px;
+    margin: 0 4px 2px 0;
     height: 20px;
     font-family: Helvetica;
     -moz-osx-font-smoothing: grayscale;
@@ -5752,7 +5752,6 @@ li.h4header {
     background: #3b5998;
     border-radius: 3px;
     font-weight: 600;
-    /*padding: 2px 6px;*/
     display: inline-block;
     position: static;
 }
