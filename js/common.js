@@ -97,3 +97,30 @@ function getFirstNWordsWithEllipses(data, n) {
     }
     return result;
 }
+
+
+
+
+
+
+$(function () {
+    if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+        cloneNavDropDowns();
+    }
+});
+
+/**
+* Fix for IE/Edge list-item=none render bug on list items hidden when page is initially loaded.
+*/
+
+function cloneNavDropDowns () {
+    var menu_clone;
+    var parent;
+    var hidden_lists = $('.sub-dropdown.dropdown');
+    hidden_lists.each(function(){
+        parent = $(this).parent();
+        menu_clone = $(this).clone();
+        $(this).remove();
+        menu_clone.appendTo(parent);
+    });
+}

@@ -5742,6 +5742,38 @@ li.h4header {
     margin-bottom:10px;
 }
 
-.case-study-post-tag {
-    padding-bottom:15px;
+
+.social-media-share .fb-share-button {
+    margin: 0 4px 2px 0;
+    height: 20px;
+    font-family: Helvetica;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    background: #3b5998;
+    border-radius: 3px;
+    font-weight: 600;
+    display: inline-block;
+    position: static;
+}
+
+.social-media-share .fb-share-button:hover {
+    cursor: pointer;
+    background: #213A6F;
+}
+
+.social-media-share .fb-share-button svg {
+    width: 18px;
+    fill: white;
+    vertical-align: top;
+    padding-top:3px;
+    border-radius: 2px;
+}
+
+.social-media-share .fb-share-button span {
+    padding-right:4px;
+    vertical-align: top ;
+    height: 18px ;
+    line-height: 20px ;
+    color: white;
+    font-size: 11px;   
 }
