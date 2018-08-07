@@ -145,8 +145,14 @@ function sharefacebook() {
     shareOverrideOGMeta(newsTitle, newsImageSource);
 };
 function shareOverrideOGMeta(overrideTitle, overrideImage) {
-    var params = (new URL(document.location)).searchParams;
-    var newsTitleEnc = encodeURI(params.get("title"));
+    var newsTitleEnc;
+    if (/MSIE|Trident/.test(navigator.userAgent)) {
+        newsTitleEnc = encodeURI(location.search.split('title=')[1]);
+    }
+    else {
+        var params = (new URL(document.location)).searchParams;
+        newsTitleEnc = encodeURI(params.get("title"));
+    }
     FB.ui({
         method: 'share',
         href: "https://maqsoftware.com",
