@@ -5781,3 +5781,7 @@ li.h4header {
 .blog-post .post-header .interactiveItem{
     height: 45px;
 }
+
+.blog-post .interactive-image {
+     box-shadow: 2px 2px 2px #d3d3d3, -1px -1px 1px #d3d3d3;
+}
