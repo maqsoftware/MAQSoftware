@@ -6,7 +6,7 @@
 			"description": "Display a metric against a target value or capacity with this intuitive 3D cylinder.",
 			"url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380874?tab=Overview",
 			"img": "../img/PowerBI/Cylindrical_Gauge.png",
-			"gif": "../img/PowerBI/Cylindrical_Gauge.gif",
+			"gif": "../img/PowerBI/Cylindrical_Gauge_GIF.gif",
 			"content": "<p>Cylindrical Gauge by MAQ  Software allows users to compare actual values against a target capacity. Each gauge in this visual represents a single metric.</p><p>Cylindrical Gauge by MAQ  Software is useful for evaluating inventory, average customer satisfaction scores, fuel, or other repository levels.</p><p>Key Features:</p><ul><li>Define the minimum and maximum values of tick marks.</li><li>Customize the fill and border color of the cylinder.</li><li>Navigate the visual with a vertical scrollbar when height restrictions limit visibility.</li><li>List the value of the fill line below the cylinder for added clarity.</li></ul>",
 			"category": "comparison single"
 		}
