@@ -320,7 +320,7 @@ function RenderPowerBIVisuals(oVisualConfig) {
                 .replace(/@id/g, oVisualConfig[index][this].id)
                 .replace(/@url/g, oVisualConfig[index][this].url);
             modalContentHtml += modalTemplate.replace(/@name/g, oVisualConfig[index][this].name)
-                .replace(/@img/g, oVisualConfig[index][this].img)
+                .replace(/@img/g, oVisualConfig[index][this].gif)
                 .replace(/@title/g, oVisualConfig[index][this].title)
                 .replace(/@id/g, oVisualConfig[index][this].id)
                 .replace(/@url/g, oVisualConfig[index][this].url)
