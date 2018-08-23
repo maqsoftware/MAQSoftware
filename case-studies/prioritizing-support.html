@@ -204,7 +204,7 @@
                                 Support tickets were resolved sequentially, based on the order received. 
                                 When all requests are “urgent,” there is no easy way to prioritize support. 
                                 Response times varied depending on the complexity of the request. 
-                                With sequential processing, time-consuming, non-urgent support tickets significantly delayed responses to other, higher-priority tickets. 
+                                With sequential processing, time-consuming, nonurgent support tickets significantly delayed responses to high-priority tickets. 
                                 Adding to the problem, tickets were assigned randomly to available engineers without considering the expertise of the engineer responding to the ticket. 
                         </p>
                         <p class="pt-10">
@@ -231,8 +231,8 @@
                         <h5>Key Highlights:</h5>
                         <ul class="  pb-10">
                             <li>Created a utility to extract email from e-mail server and transfer email contents into the database.</li>
-                            <li>Used Python libraries to pre-process and cleanse data.</li>
-                            <li>Determined the feature set for the model using Feature Hashing algorithm.</li>
+                            <li>Used Python libraries to preprocess and cleanse data.</li>
+                            <li>Determined the feature set for the model using a Feature Hashing algorithm.</li>
                             <li>Integrated machine learning (ML) model output with Power BI reports.</li>
                         </ul>
                         
@@ -250,13 +250,13 @@
                         
                         <p class="pt-10">
                                 We began by extracting email content from the Exchange server and transferring it to the database. 
-                                We pre-processed the extracted data to remove redundant and stop words. 
+                                We preprocessed the extracted data to remove redundant and stop words. 
                                 Next, we applied feature hashing techniques to generate a feature list from the cleansed data. 
                                 We then trained the ML model using a Multi-Class Decision algorithm to sort the user requests into ticket categories. 
                         </p>
                         <p class="pt-10">
-                                Next, we trained the ML model to predict the steps required to resolve the support request based on past support requests, using the Decision Forest Regression algorithm. 
-                                Then, to determine the priority of support request, we extracted the sentiment, user hierarchy, conversation count, and request age of the ticket. 
+                                Next, we trained the ML model to predict the steps required to resolve the support request based on past support requests by using the Decision Forest Regression algorithm. 
+                                Then, to determine the priority of support request, we extracted the sentiment, user hierarchy, conversation count, and requests age of the ticket. 
                                 We used these parameters as inputs for the Clustering algorithm to derive the appropriate priority. 
                                 Finally, we deployed the ML model as a web service for use in Power BI reports.
                         </p>
@@ -275,8 +275,8 @@
                         <h5>Outcome Highlights:</h5>
                         <ul class="  pb-10">
                             <li>Critical support needs are addressed immediately.</li>
-                            <li>Prioritized higher seniority customers, addressing the most critical needs first. </li>
-                            <li>Support tickets are now assigned based on engineer’s expertise. </li>
+                            <li>Prioritized higher seniority customers by addressing the most critical needs first. </li>
+                            <li>Support tickets are now assigned based on engineer expertise. </li>
                         </ul>
 
                     </div>

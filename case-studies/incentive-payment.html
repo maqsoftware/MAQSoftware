@@ -201,7 +201,7 @@
                         </p>
                         <p class="pt-10">
                             To receive incentives, SIs must deliver valid proof of engagement (POE) documents (email, Word, or PDFs). 
-                            Currently, verifying POE documents is a manual, time-consuming process. 
+                            Currently, verifying POE documents is a time-consuming manual process. 
                             Approval varies depending on who reads the documents. In some cases, reviewer bias leads to incorrect incentive payments.
                         </p>
                         <p class="pt-10">
@@ -247,12 +247,12 @@
                         
                         <p class="pt-10">
                             We started by parsing POE documents into a standard consumable format. 
-                            We then pre-processed the parsed data to remove redundant and stop words. 
+                            We then preprocessed the parsed data to remove redundant and stop words. 
                             Next, we applied feature extraction techniques (N-grams TF and Unigrams TF-IDF) to convert variable length text into equal length feature vectors. 
                             The vectors represent keywords and their frequency in the text.
                         </p>
                         <p class="pt-10">
-                            We trained the output from the two extraction techniques using Two-Class Logistic regression model. 
+                            We trained the output from the two extraction techniques using a Two-Class Logistic regression model. 
                             We then finalized the best model, based on the optimum KPI values, and deployed it as a web service that is used by the POE application.
                         </p>
                     </div>
