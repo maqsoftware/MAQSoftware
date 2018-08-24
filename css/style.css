@@ -5785,3 +5785,34 @@ li.h4header {
 .blog-post .interactive-image {
      box-shadow: 2px 2px 2px #d3d3d3, -1px -1px 1px #d3d3d3;
 }
+#power-bi-export-buttons{
+    display: inline-block;
+    width: fit-content;
+    font-family: "Raleway",sans-serif;
+    background-color: transparent;
+    border: 2px solid #000;
+    color: #000!important;
+    fill: #000;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 6px 20px 7px;
+    text-transform: uppercase;
+}
+#power-bi-export-buttons:hover {
+    background-color: #000;
+    color: #fff!important;
+    fill: #fff;
+    text-decoration: none;
+}
+#power-bi-export-buttons .ion-social-youtube{
+    color: #000;
+}
+#power-bi-export-buttons:hover .ion-social-youtube{
+    color: #fff!important;
+}
+.figureTitle.power-bi-export{
+    padding-bottom:10px;
+}
+.__cf_email__{
+    font-weight: 600;
+}
