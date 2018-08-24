@@ -5788,7 +5788,7 @@ li.h4header {
 #power-bi-export-buttons{
     display: inline-block;
     width: fit-content;
-    font-family: 'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif;
+    font-family: "Raleway",sans-serif;
     background-color: transparent;
     border: 2px solid #000;
     color: #000!important;
