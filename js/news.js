@@ -81,7 +81,6 @@ function renderNews() {
                 oNewsContainer.append(oNewsPager.template.replace(/@title/g, sRawTitle).replace("@href", slink).replace("@date", oDate).replace("@content", sContent).replace("@newsimagesrc", src).replace("@tooltip", getFirstNWordsWithEllipses(sTitle, 4)));
             }
         }
-        oNewsContainer.find("a").attr("target", "_blank");
         oNewsContainer.find("img").addClass("post - media");
 
         $('#LoadPageNews *').removeAttr('style');
