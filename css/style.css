@@ -4122,7 +4122,7 @@ ul.project-detail-block, .project-detail-block ul {
         margin-bottom: 30px;
     }
 
-#LoadPageNews .post-header a > h2:hover {
+#LoadPageNews .post-header a > h2:hover,#LoadPageBlogs .post-header a > h2:hover {
     color: #bb141a;
 }
 
@@ -5170,7 +5170,7 @@ ul.project-detail-block, .project-detail-block ul {
     display: none;
 }
 
-.news-image {
+.news-image,.blogs-image {
     max-height: 197px;
     max-width: 350px;
     object-fit: cover;
@@ -5180,7 +5180,7 @@ ul.project-detail-block, .project-detail-block ul {
     -webkit-transform: scale(0.5, 0.5);*/
 }
 
-#LoadPageNews .separator {
+#LoadPageNews .separator,#LoadPageBlogs .separator {
     height: auto;
     width: auto;
     background: none;
@@ -5191,7 +5191,7 @@ ul.project-detail-block, .project-detail-block ul {
     cursor: default !important;
 }
 
-#LoadPageNews img {
+#LoadPageNews img,#LoadPageBlogs img {
     margin: auto;
 }
 
@@ -5199,7 +5199,7 @@ ul.project-detail-block, .project-detail-block ul {
     background: url(/img/loading.GIF) no-repeat center center;
 }
 
-#LoadPageNews {
+#LoadPageNews,#LoadPageBlogs {
     min-height: 500px;
     height: auto !important;
     height: 500px;
@@ -5213,7 +5213,7 @@ ul.project-detail-block, .project-detail-block ul {
     padding-top: 5px;
 }
 
-#LoadPageNews .post-header h1, #LoadPageNews .post-header h2, #LoadPageNews .post-header h3, #LoadPageNews .post-header h4, #LoadPageNews .post-header h5, #LoadPageNews .post-header h6 {
+#LoadPageNews .post-header h1, #LoadPageNews .post-header h2, #LoadPageNews .post-header h3, #LoadPageNews .post-header h4, #LoadPageNews .post-header h5, #LoadPageNews .post-header h6,#LoadPageBlogs .post-header h1, #LoadPageBlogs .post-header h2, #LoadPageBlogs .post-header h3, #LoadPageBlogs .post-header h4, #LoadPageBlogs .post-header h5, #LoadPageBlogs .post-header h6 {
     text-transform: none;
 }
 
@@ -5422,19 +5422,19 @@ ul.nav-tabs {
         float: left;
     }
 
-.newsItem {
+.newsItem,.blogsItem {
     text-transform: none !important;
 }
 
-    .newsItem:hover {
+    .newsItem:hover,.blogsItem:hover {
         color: #bb141a;
     }
 
-.newsPic {
+.newsPic,.blogsPic {
     margin-bottom: 5px;
 }
 
-.news-highlight {
+.news-highlight,.blogs-highlight {
     cursor: pointer;
 }
 
