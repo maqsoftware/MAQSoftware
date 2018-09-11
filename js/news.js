@@ -113,14 +113,7 @@ function loadNews(sNewsData) {
 }
 
 function loadNewsHighlightSection() {
-    $.ajax({
-        url: 'https://www.blogger.com/feeds/2523158019509365490/posts/default/-/Highlight',
-        type: 'GET',
-        dataType: 'jsonp',
-        success: function (sResponse) {
-            loadNewsHighlight(sResponse);
-        }
-    });
+    getBlogData('https://www.blogger.com/feeds/2523158019509365490/posts/default/-/Highlight', loadNewsHighlight);
 }
 function loadNewsHighlight(sNewsData) {
     try {
@@ -168,31 +161,26 @@ function renderNewsHighlight() {
 function loadNewsGrid() {
     var iTop;
     oNewsContainer.html("").addClass(sLoadingClass);
-    $.ajax({
-        url: 'https://www.blogger.com/feeds/2523158019509365490/posts/default/-/News',
-        type: 'GET',
-        dataType: 'jsonp',
-        success: function (sResponse) {
-            loadNews(sResponse);
-            if (typeof highlightid !== "undefined" && highlightid !== "") {
-                //debugger;
-                highlightid = parseInt(iClickedHighlightID % oNewsPager.pagesize);
-                iTop = $("#LoadPageNews").children('div').eq(highlightid).offset().top - 65;
-                $(sScrollElement).animate({ scrollTop: iTop }, 500);
-            } else if (typeof id !== "undefined" && id !== "") {
-                //debugger;
-                id = id > oNewsPager.pagesize ? id - oNewsPager.pagesize : id;
-                iTop = $("#LoadPageNews").children('div').eq(id - 1).offset().top - $("#highlights").offset().top - 65 - 34; // 34 for date of news
-                $(sScrollElement).animate({ scrollTop: iTop }, 500);
-            }
-            NewsSliderConfig()
-        },
-        complete: function () {
-            oNewsContainer.removeClass(sLoadingClass);
-        }
-    });
+    getBlogData2('https://www.blogger.com/feeds/2523158019509365490/posts/default/-/News', getNewsSuccess, getNewsOnComplete);
 }
-
+function getNewsSuccess(sResponse) {
+    loadNews(sResponse);
+    if (typeof highlightid !== "undefined" && highlightid !== "") {
+        //debugger;
+        highlightid = parseInt(iClickedHighlightID % oNewsPager.pagesize);
+        iTop = $("#LoadPageNews").children('div').eq(highlightid).offset().top - 65;
+        $(sScrollElement).animate({ scrollTop: iTop }, 500);
+    } else if (typeof id !== "undefined" && id !== "") {
+        //debugger;
+        id = id > oNewsPager.pagesize ? id - oNewsPager.pagesize : id;
+        iTop = $("#LoadPageNews").children('div').eq(id - 1).offset().top - $("#highlights").offset().top - 65 - 34; // 34 for date of news
+        $(sScrollElement).animate({ scrollTop: iTop }, 500);
+    }
+    NewsSliderConfig();
+}
+function getNewsOnComplete() {
+    oNewsContainer.removeClass(sLoadingClass);
+}
 function NewsSliderConfig() {
     $.getJSON("/Configurations/NewsSlider.json", function (data) {
         initHighlightCarousal(data);

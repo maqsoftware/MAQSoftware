@@ -13,14 +13,10 @@ oBlogsData = null,
 oBlogsContainer,
 sScrollElement = "body,html",
 sLoadingClass = "Loading",
-    oItalicBookName = [
-                    "What I Did Not Learn in B-School: Insights for New Managers"
-                    , "What I Did Not Learn at IIT: Transition from Campus to Workplace"
-                    , "What I Did Not Learn at IIT - Transitioning from Campus to Workplace"
-    ], iCount, iTotal = oItalicBookName.length, iTotalHighlight = 6, oBlogsHighlightTitle = [iTotalHighlight], oHighlightBlogsID = [iTotalHighlight];
+     iCount, iTotalHighlight = 6, oBlogsHighlightTitle = [iTotalHighlight], oHighlightBlogsID = [iTotalHighlight];
 
 function renderBlogs() {
-    var iStart, iEnd, entry1, sDate, oDatePart, oDate, sTitle, sContent, sRawTitle,slink;
+    var iStart, iEnd, entry1, sDate, oDatePart, oDate, sTitle, sContent, sRawTitle, slink;
     oBlogsContainer.removeClass(sLoadingClass);
     if (iTotalBlogs) {
         iStart = oBlogsPager.pageIndex * oBlogsPager.pagesize;
@@ -65,11 +61,8 @@ function renderBlogs() {
                 sTitle = entry1.getElementsByTagName('title')[0].childNodes[0].nodeValue;
                 sRawTitle = sTitle;
                 slink = entry1.getElementsByTagName('link')[4].getAttribute('href');
-                
+
                 sContent = entry1.getElementsByTagName('content')[0].childNodes[0].nodeValue;
-                for (iCount = 0; iCount < iTotal; iCount++) {
-                    sTitle = sTitle.replace(oItalicBookName[iCount], "<i class='SemiBold'>" + oItalicBookName[iCount] + "</i>");
-                }
 
                 $("#bloggerContent").html(sContent);
                 var bloggerContent = document.getElementById("bloggerContent");
@@ -85,7 +78,7 @@ function renderBlogs() {
                 oBlogsContainer.append(oBlogsPager.template.replace(/@title/g, sRawTitle).replace("@href", slink).replace("@date", oDate).replace("@content", sContent).replace("@href1", slink).replace("@Blogsimagesrc", src).replace("@tooltip", getFirstNWordsWithEllipses(sTitle, 4)));
             }
         }
-       oBlogsContainer.find("img").addClass("post - media");
+        oBlogsContainer.find("img").addClass("post - media");
 
         $('#LoadPageBlogs *').removeAttr('style');
         for (var iCount = 0; iCount < iTotalHighlight; iCount++) {
@@ -117,14 +110,7 @@ function loadBlogs(sBlogsData) {
 }
 
 function loadBlogsHighlightSection() {
-    $.ajax({
-        url: 'https://www.blogger.com/feeds/3262801613185975083/posts/default/-/Highlight',
-        type: 'GET',
-        dataType: 'jsonp',
-        success: function (sResponse) {
-            loadBlogsHighlight(sResponse);
-        }
-    });
+    getBlogData('https://www.blogger.com/feeds/3262801613185975083/posts/default/-/Highlight', loadBlogsHighlight);
 }
 function loadBlogsHighlight(sBlogsData) {
     try {
@@ -158,13 +144,9 @@ function renderBlogsHighlight() {
 
             var title = entry1.getElementsByTagName('title')[0].childNodes[0].nodeValue;
             oBlogsHighlightTitle[iStart] = title;
-            for (iCount = 0; iCount < iTotal; iCount++) {
-                title = title.replace(oItalicBookName[iCount], "<i class = 'SemiBold'>" + oItalicBookName[iCount] + "</i>");
-            }
-
             $("#blogshighlighttitle" + iNumber).html(title);
             $("#blogshighlightimg" + iNumber).attr('src', src);
-            $("#blogshighlightimg" + iNumber).attr('title',getFirstNWordsWithEllipses(title,4));
+            $("#blogshighlightimg" + iNumber).attr('title', getFirstNWordsWithEllipses(title, 4));
         }
     }
 }
@@ -172,31 +154,26 @@ function renderBlogsHighlight() {
 function loadBlogsGrid() {
     var iTop;
     oBlogsContainer.html("").addClass(sLoadingClass);
-    $.ajax({
-        url: 'https://www.blogger.com/feeds/3262801613185975083/posts/default/-/Blogs',
-        type: 'GET',
-        dataType: 'jsonp',
-        success: function (sResponse) {
-            loadBlogs(sResponse);
-            if (typeof highlightid !== "undefined" && highlightid !== "") {
-                //debugger;
-                highlightid = parseInt(iClickedHighlightID % oBlogsPager.pagesize);
-                iTop = $("#LoadPageBlogs").children('div').eq(highlightid).offset().top - 65;
-                $(sScrollElement).animate({ scrollTop: iTop }, 500);
-            } else if (typeof id !== "undefined" && id !== "") {
-                //debugger;
-                id = id > oBlogsPager.pagesize ? id - oBlogsPager.pagesize : id;
-                iTop = $("#LoadPageBlogs").children('div').eq(id - 1).offset().top - $("#highlights").offset().top - 65 - 34; // 34 for date of blog
-                $(sScrollElement).animate({ scrollTop: iTop }, 500);
-            }
-            BlogsSliderConfig()
-        },
-        complete: function () {
-            oBlogsContainer.removeClass(sLoadingClass);
-        }
-    });
+    getBlogData2('https://www.blogger.com/feeds/3262801613185975083/posts/default/-/Blogs', getBlogsSuccess, getBlogsOnComplete);
 }
-
+function getBlogsSuccess(sResponse) {
+    loadBlogs(sResponse);
+    if (typeof highlightid !== "undefined" && highlightid !== "") {
+        //debugger;
+        highlightid = parseInt(iClickedHighlightID % oBlogsPager.pagesize);
+        iTop = $("#LoadPageBlogs").children('div').eq(highlightid).offset().top - 65;
+        $(sScrollElement).animate({ scrollTop: iTop }, 500);
+    } else if (typeof id !== "undefined" && id !== "") {
+        //debugger;
+        id = id > oBlogsPager.pagesize ? id - oBlogsPager.pagesize : id;
+        iTop = $("#LoadPageBlogs").children('div').eq(id - 1).offset().top - $("#highlights").offset().top - 65 - 34; // 34 for date of blog
+        $(sScrollElement).animate({ scrollTop: iTop }, 500);
+    }
+    BlogsSliderConfig();
+}
+function getBlogsOnComplete() {
+    oBlogsContainer.removeClass(sLoadingClass);
+}
 function BlogsSliderConfig() {
     $.getJSON("/Configurations/NewsSlider.json", function (data) {
         initHighlightCarousal(data);
@@ -216,7 +193,7 @@ function initHighlightCarousal(nSliderConfig) {
             singleItem: true,
             rewind: true,
             //loop: true, //use this when more than 4 higlights are present
-            loop:false,
+            loop: false,
             itemsDesktop: [1170, 3],
             itemsDesktopSmall: [1024, 2],
             itemsTabletSmall: [768, 1],
