@@ -113,7 +113,7 @@ function loadNews(sNewsData) {
 }
 
 function loadNewsHighlightSection() {
-    getBlogData('https://www.blogger.com/feeds/2523158019509365490/posts/default/-/Highlight', loadNewsHighlight, function () { });
+    getBloggerData('https://www.blogger.com/feeds/2523158019509365490/posts/default/-/Highlight', loadNewsHighlight, function () { });
 }
 function loadNewsHighlight(sNewsData) {
     try {
@@ -161,7 +161,7 @@ function renderNewsHighlight() {
 function loadNewsGrid() {
     var iTop;
     oNewsContainer.html("").addClass(sLoadingClass);
-    getBlogData('https://www.blogger.com/feeds/2523158019509365490/posts/default/-/News', getNewsSuccess, getNewsOnComplete);
+    getBloggerData('https://www.blogger.com/feeds/2523158019509365490/posts/default/-/News', getNewsSuccess, getNewsOnComplete);
 }
 function getNewsSuccess(sResponse) {
     loadNews(sResponse);
