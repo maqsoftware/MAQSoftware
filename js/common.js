@@ -125,7 +125,7 @@ function cloneNavDropDowns () {
     });
 }
 
-function getBlogData(blogUrl, successCallBack, completeCallBack) {
+function getBloggerData(blogUrl, successCallBack, completeCallBack) {
     $.ajax({
         url: blogUrl,
         type: 'GET',
