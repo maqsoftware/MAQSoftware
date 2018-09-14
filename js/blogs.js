@@ -2,7 +2,7 @@
 
 "use strict";
 var oBlogsPager = {
-    template: '<div><div class="post-meta"><span>@date</span></div><div class="post-header"><a href="@href"><h2>@title</h2></a></div><div class="post-media"><img alt="Blogs" title="@tooltip" src="@Blogsimagesrc"></div><div class="blogpost-entry">@content</div><p class="blog-ellipsis"></p><a href="@href1" class="readmoreblog">Read more</a></div>',
+    template: '<div><div class="post-meta"><span>@date</span></div><div class="post-header"><a href="@href"><h2>@title</h2></a></div></div><div class="blogpost-entry">@content</div><p class="blog-ellipsis"></p><a href="@href1" class="readmoreblog">Read more</a></div><div class="spacer-90"></div>',
     pageIndex: 0,
     pagesize: 6
 }, id, highlightid, sClickedHighlightTitle, iClickedHighlightID,
@@ -75,7 +75,7 @@ function renderBlogs() {
                     img.parentNode.removeChild(img);
                 }
                 sContent = $("#bloggerContent").html();
-                oBlogsContainer.append(oBlogsPager.template.replace(/@title/g, sRawTitle).replace("@href", slink).replace("@date", oDate).replace("@content", sContent).replace("@href1", slink).replace("@Blogsimagesrc", src).replace("@tooltip", getFirstNWordsWithEllipses(sTitle, 4)));
+                oBlogsContainer.append(oBlogsPager.template.replace(/@title/g, sRawTitle).replace("@href", slink).replace("@date", oDate).replace("@content", sContent).replace("@href1", slink).replace("@tooltip", getFirstNWordsWithEllipses(sTitle, 4)));
             }
         }
         oBlogsContainer.find("img").addClass("post - media");
@@ -152,22 +152,22 @@ function renderBlogsHighlight() {
 }
 
 function loadBlogsGrid() {
-    var iTop;
     oBlogsContainer.html("").addClass(sLoadingClass);
     getBloggerData('https://www.blogger.com/feeds/3262801613185975083/posts/default/-/Blogs', getBlogsSuccess, getBlogsOnComplete);
 }
 function getBlogsSuccess(sResponse) {
+    var iTop;
     loadBlogs(sResponse);
     if (typeof highlightid !== "undefined" && highlightid !== "") {
         //debugger;
         highlightid = parseInt(iClickedHighlightID % oBlogsPager.pagesize);
-        iTop = $("#LoadPageBlogs").children('div').eq(highlightid).offset().top - 65;
-        $(sScrollElement).animate({ scrollTop: iTop }, 500);
+        iTop = $("#LoadPageBlogs").children('div').eq(Number(highlightid) * 3).offset().top - 65;
+        $(sScrollElement).animate({ scrollTop: iTop }, 300);
     } else if (typeof id !== "undefined" && id !== "") {
         //debugger;
         id = id > oBlogsPager.pagesize ? id - oBlogsPager.pagesize : id;
         iTop = $("#LoadPageBlogs").children('div').eq(id - 1).offset().top - $("#highlights").offset().top - 65 - 34; // 34 for date of blog
-        $(sScrollElement).animate({ scrollTop: iTop }, 500);
+        $(sScrollElement).animate({ scrollTop: iTop }, 300);
     }
     BlogsSliderConfig();
 }
@@ -183,14 +183,17 @@ function BlogsSliderConfig() {
 function initHighlightCarousal(nSliderConfig) {
     if (typeof nSliderConfig !== 'undefined' && nSliderConfig !== 'null' && nSliderConfig !== "" && nSliderConfig !== 'false') {
         $('.item4-carousel').owlCarousel({
-            autoplay: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 2500),
+            //autoplay: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 2500),
+            autoplay: false,
             slideSpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
             autoplaySpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
             autoplayHoverPause: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : true),
             navSpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
             paginationSpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
-            items: 4,
-            singleItem: true,
+            //items: 4,
+            items: 2,
+            //center: true,
+            //singleItem: true,
             rewind: true,
             //loop: true, //use this when more than 4 higlights are present
             loop: false,
