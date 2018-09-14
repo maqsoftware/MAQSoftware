@@ -60,7 +60,7 @@ function renderBlogs() {
                 oDate = oDate.format();
                 sTitle = entry1.getElementsByTagName('title')[0].childNodes[0].nodeValue;
                 sRawTitle = sTitle;
-                slink = entry1.getElementsByTagName('link')[4].getAttribute('href');
+                slink = entry1.getElementsByTagName('link')[2].getAttribute('href');
 
                 sContent = entry1.getElementsByTagName('content')[0].childNodes[0].nodeValue;
 
