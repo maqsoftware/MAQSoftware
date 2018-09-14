@@ -159,11 +159,11 @@ function renderNewsHighlight() {
 }
 
 function loadNewsGrid() {
-    var iTop;
     oNewsContainer.html("").addClass(sLoadingClass);
     getBloggerData('https://www.blogger.com/feeds/2523158019509365490/posts/default/-/News', getNewsSuccess, getNewsOnComplete);
 }
 function getNewsSuccess(sResponse) {
+    var iTop;
     loadNews(sResponse);
     if (typeof highlightid !== "undefined" && highlightid !== "") {
         //debugger;
