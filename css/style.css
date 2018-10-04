@@ -4125,9 +4125,9 @@ ul.project-detail-block, .project-detail-block ul {
         font-family: Segoe UI,SegoeUI,Segoe WP,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
         font-weight: 600;
         margin-top: -3px;
-        padding-top: 0px;
-        letter-spacing: 0px;
-        margin-bottom: 0px;
+        padding-top: 0;
+        letter-spacing: 0;
+        margin-bottom: 0;
 
     }
     .blog-post h3{
@@ -4137,7 +4137,7 @@ ul.project-detail-block, .project-detail-block ul {
         margin-bottom: 12px;
         margin-top: 32px;
         font-family: Segoe UI,SegoeUI,Segoe WP,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
-        letter-spacing: 0px;
+        letter-spacing: 0;
     }
 
     
@@ -5848,7 +5848,7 @@ li.h4header {
     font-size: 16px
     text-size-adjust: 100%;
     line-height: 160%;
-    letter-spacing 0px;
+    letter-spacing 0;
 }
 
 .readmoreblog {
