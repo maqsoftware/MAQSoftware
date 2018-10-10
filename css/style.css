@@ -5866,37 +5866,37 @@ li.h4header {
 }
 @media (max-width:2000px) {
     .blogs-carousel .owl-stage{
-        padding-left:15vw;
+        padding-left:8vw;
     }
 }
 @media (max-width:1680px) {
     .blogs-carousel .owl-stage{
-        padding-left:16vw;
+        padding-left:9vw;
     }
 }
 @media (max-width:1600px) {
     .blogs-carousel .owl-stage{
-        padding-left:17vw;
+        padding-left:10vw;
     }
 }
 @media (max-width:1550px) {
     .blogs-carousel .owl-stage{
-        padding-left:18vw;
+        padding-left:10vw;
     }
 }
 @media (max-width:1450px) {
     .blogs-carousel .owl-stage{
-        padding-left:19vw;
+        padding-left:11vw;
     }
 }
 @media (max-width:1370px) {
     .blogs-carousel .owl-stage{
-        padding-left:20vw;
+        padding-left:12vw;
     }
 }
 @media (max-width:1280px) {
     .blogs-carousel .owl-stage{
-        padding-left:22vw;
+        padding-left:13vw;
     }
 }
 
