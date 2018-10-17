@@ -5905,3 +5905,54 @@ li.h4header {
         padding-left:0;
     }
 }
+
+/* 
+    Contact US page changes
+
+*/
+
+/*For IPad */
+@media (min-width:767px) {
+    
+    
+    #Addresses > .row:first-child > div:first-child{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
+
+
+@media (max-width:767px) {
+
+    #Addresses > .row:first-child > div{
+        width: unset !important;
+    }
+
+    #Addresses > .row:first-child > div:first-child{
+        margin-left: 8% !important;
+    }
+}
+
+
+@media (max-width:454px) {
+    #Addresses > .row:first-child {
+        font-size: 9px !important;
+    }
+}
+
+
+/*For IPhone 5/SE */
+@media (max-width:353px) {
+    #Addresses > .row:first-child {
+        font-size: 9px !important;
+    }
+
+    #Addresses > .row:first-child > div{
+        width: unset !important;
+    }
+
+    #Addresses > .row:first-child > div:first-child{
+        margin-left: 0% !important;
+        padding-right: 0px;
+    }
+}
