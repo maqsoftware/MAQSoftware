@@ -22,12 +22,6 @@
   <loc>https://maqsoftware.com/expertise/collaborationcontent</loc>
 </url>
 <url>
-  <loc>https://maqsoftware.com/engagement/about</loc>
-</url>
-<url>
-  <loc>https://maqsoftware.com/engagement/recognitions</loc>
-</url>
-<url>
   <loc>https://maqsoftware.com/news</loc>
 </url>
 <url>
@@ -35,9 +29,6 @@
 </url>
 <url>
   <loc>https://maqsoftware.com/contact</loc>
-</url>
-<url>
-  <loc>https://maqsoftware.com/engagement</loc>
 </url>
 <url>
   <loc>https://maqsoftware.com/expertise</loc>
@@ -91,7 +82,7 @@
   <loc>https://maqsoftware.com/expertise/powerbi/power-bi-best-practices</loc>
 </url>
 <url>
-  <loc>https://maqsoftware.com/expertise/cloudtransformation/azure-acrchitecture-best-practices</loc>
+  <loc>https://maqsoftware.com/expertise/cloudtransformation/azure-architecture-best-practices</loc>
 </url>
 <url>
   <loc>https://maqsoftware.com/expertise/cloudtransformation/azure-security-best-practices</loc>
