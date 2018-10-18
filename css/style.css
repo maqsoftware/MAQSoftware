@@ -5912,22 +5912,18 @@ li.h4header {
 */
 
 /*For IPad */
-@media (min-width:767px) {
-    
-    
+@media (min-width:767px) {   
     #Addresses > .row:first-child > div:first-child{
         padding-right: 0px;
-        padding-left: 0px;
+        padding-left: 0px;  
     }
 }
 
 
 @media (max-width:767px) {
-
     #Addresses > .row:first-child > div{
         width: unset !important;
     }
-
     #Addresses > .row:first-child > div:first-child{
         margin-left: 8% !important;
     }
@@ -5946,13 +5942,35 @@ li.h4header {
     #Addresses > .row:first-child {
         font-size: 9px !important;
     }
-
     #Addresses > .row:first-child > div{
         width: unset !important;
     }
-
     #Addresses > .row:first-child > div:first-child{
         margin-left: 0% !important;
         padding-right: 0px;
+    }
+}
+
+
+/* 
+    Counter Changes 
+*/
+@media (max-width:1200px)
+{
+    #counter >.container > .row  > div >h1:first-child{
+        font-size:46px !important;
+    }
+    #counter >.container > .row  > div >h1:nth-child(2){
+        font-size:41px !important;
+    }
+}
+
+@media (max-width:992px)
+{
+    #counter >.container > .row  > div >h1:first-child{
+        font-size:31px !important;
+    }
+    #counter >.container > .row  > div >h1:nth-child(2){
+        font-size:30px !important;
     }
 }
