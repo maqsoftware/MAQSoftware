@@ -376,17 +376,82 @@
 			"category": "change distribution"
 		}
 	},
-	{
-		"Venn Diagram": {
-			"name": "Venn Diagram",
-			"title": "Venn Diagram",
-			"id": "VennDiagram",
-			"description": " Display logical relationships between multiple datasets, each represented as a circle.",
-			"url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381231?tab=Overview",
-			"img": "../img/PowerBI/Venn_Diagram.png",
-			"gif": "../img/PowerBI/Venn_Diagram_GIF.gif",
-			"content": "<p>Venn Diagram by MAQ Software displays logical relationships between a collection of datasets, each represented as a circle. The intersection of the circles illustrates the qualities that are shared by the overlapping datasets.</p><p>One use for Venn Diagram by MAQ Software is showing employee involvement in various products or services. Users can quickly display which employees are involved with which products, and where overlaps between teams occur.</p><p>Key features:</p><ul><li>Customizable names and colors for each circle or dataset.</li><li>Labels let users easily distinguish between individual values and intersected region values.</li><li>Users can hover their mouse over different regions, showing individual and intersected values.</li></ul>",
-			"category": "correlation"
+  {
+    "Venn Diagram": {
+      "name": "Venn Diagram",
+      "title": "Venn Diagram",
+      "id": "VennDiagram",
+      "description": " Display logical relationships between multiple datasets, each represented as a circle.",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381231?tab=Overview",
+      "img": "../img/PowerBI/Venn_Diagram.png",
+      "gif": "../img/PowerBI/Venn_Diagram_GIF.gif",
+      "content": "<p>Venn Diagram by MAQ Software displays logical relationships between a collection of datasets, each represented as a circle. The intersection of the circles illustrates the qualities that are shared by the overlapping datasets.</p><p>One use for Venn Diagram by MAQ Software is showing employee involvement in various products or services. Users can quickly display which employees are involved with which products, and where overlaps between teams occur.</p><p>Key features:</p><ul><li>Customizable names and colors for each circle or dataset.</li><li>Labels let users easily distinguish between individual values and intersected region values.</li><li>Users can hover their mouse over different regions, showing individual and intersected values.</li></ul>",
+      "category": "correlation"
+    }
+  },
+  {
+		"Hourglass Chart": {
+			"name": "Hourglass Chart",
+			"title": "Hourglass Chart",
+			"id": "HourglassChart",
+			"description": "Compare category values between two scenarios.",
+			"url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381843?tab=Overview",
+			"img": "../img/PowerBI/hourglass-icon.png",
+			"gif": "../img/PowerBI/hourglass-visual.gif",
+			"content": "<p>Hourglass by MAQ Software lets users compare category values between two scenarios. For example, users can compare category values before and after an event or values at a source versus at a destination. This visual can also display conversion rates or changes in values.</p><p>Hourglass by MAQ Software is useful for any scenario where users must compare data before and after an event takes place, such as when comparing the number of scheduled flights versus the number of delayed flights between multiple airports.</p><p>Key features:</p><ul><li>Highlight individual categories on click.</li><li>Rotate the visual horizontally or vertically.</li><li>Animate individual categories on hover.</li><li>Add or remove the conversion box. </li></ul><p>For any feature requests or questions about this visual, please send an email to our team at support@maqsoftware.com.</p>",
+			"category": "comparison"
+		}
+	},
+  {
+		"Forecast using Multiple Models": {
+			"name": "Forecast using Multiple Models",
+			"title": "Forecast using Multiple Models",
+			"id": "ForecastUsingMultipleModels",
+			"description": "Implement four different forecasting models to learn from historical data and predict future values.",
+			"url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381845?tab=Overview",
+			"img": "../img/PowerBI/forecast-icon.png",
+			"gif": "../img/PowerBI/forecast-multiple-models.gif",
+			"content": "<p>Forecast Using Multiple Models by MAQ Software lets you implement four different forecasting models to learn from historical data and predict future values. The forecasting models include linear regression, ARIMA, exponential smoothing, and neural network.</p><p>This visual is excellent for forecasting budgets, sales, demand, or inventory.</p><p>R package dependencies (auto-installed): forecast, plotly, zoo, lubridate.</p><p>Key features:</p><ul><li>Four different forecasting methods/models.</li><li>Ability to adjust the parameters of the learning model.</li><li>Wide range of date and time formats. </li><li>Ability to choose algorithm, show or hide confidence intervals, decide on the split point, and apply data transformation.</li></ul><p>For any feature requests or questions about this visual, please send an email to our team at support@maqsoftware.com.</p>",
+			"category": "forecast"
+		}
+	},
+  {
+		"Text Enhancer": {
+			"name": "Text Enhancer",
+			"title": "Text Enhancer",
+			"id": "TextEnhancer",
+			"description": "Unlocks new text styling options in Power BI, enabling users to create more visually engaging reports.",
+			"url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381762?tab=Overview",
+			"img": "../img/PowerBI/text-enhancer-icon.png",
+			"gif": "../img/PowerBI/TextEnhancer2.gif",
+			"content": "<p>Text Enhancer by MAQ Software unlocks new text styling options in Power BI, enabling users to create more visually engaging reports. Out of the box, Power BI has minimal text editing options. Text Enhancer adds customization options including adjustments for text shadow, rotation, angle, skewness, alignment, and more. It also includes text wrapping capability.</p><p>Text Enhancer by MAQ Software makes reports stand out in any business application.</p><p>Key features:</p><ul><li>Static and dynamic text.</li><li>Text wrapping capability.</li><li>Text styles including bold, italic, underline, overline, and strike-through.</li><li>Configure shadow, shadow blur, shadow color, text alignment, text skew, and text perspective.</li></ul><p>For any feature requests or questions about this visual, please send an email to our team at support@maqsoftware.com.</p>",
+			"category": "utility"
+		}
+	},
+  {
+		"Ratings": {
+			"name": "Ratings",
+			"title": "Ratings",
+			"id": "Ratings",
+			"description": "Add ratings or scores to reports.",
+			"url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381838?tab=Overview",
+			"img": "../img/PowerBI/ratings-icon.png",
+			"gif": "../img/PowerBI/RatingsByMAQSoftware.gif",
+			"content": "<p>Ratings by MAQ Software allows users to add ratings or scores to reports. Users can choose to show average ratings or ratings by specific groups such as individual departments.</p><p>Ratings by MAQ Software is useful for showing movie, product, or hotel ratings. This visual can also act as a business performance indicator.</p><p>Key features:</p><ul><li>Choose from four different indicator shapes.</li><li>Choose between a solid fill color or a gradient fill.</li><li>Display average ratings or ratings by groups.</li></ul><p>For any feature requests or questions about this visual, please send an email to our team at support@maqsoftware.com.</p>",
+			"category": "ranking"
+		}
+	},
+  {
+		"Calendar": {
+			"name": "Calendar",
+			"title": "Calendar",
+			"id": "Calendar",
+			"description": "Render events on specific days, which can be used as a reference during your report review.",
+			"url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381844?tab=Overview",
+			"img": "../img/PowerBI/calendar-icon.png",
+			"gif": "../img/PowerBI/CalendarByMAQSoftware.gif",
+			"content": "<p>Calendar by MAQ Software is the most effective way to track events. This visual allows users to render events on specific days, which can be used as a reference during your report review.</p><p>This visual is excellent for year-end reviews or simply examining next week’s schedule.</p><p>Key features:</p><ul><li>Ability to group events based on category.</li><li>Multiple views available—Month, Week, Day, List.</li><li>Ability to navigate to event details with a click.</li><li>Ability to set workdays and hours.</li></ul><p>For any feature requests or questions about this visual, please send an email to our team at support@maqsoftware.com.</p>",
+			"category": "utility"
 		}
 	}
 ]
