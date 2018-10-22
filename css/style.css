@@ -5990,7 +5990,7 @@ li.h4header {
 
 @media (max-width:1200px)
 {
-    #counter >.container > .row  > div >h1:first-child{
+    #counter >.container > .row  > div >h1.counter{
         font-size:46px !important;
     }
     #counter >.container > .row  > div >h1:nth-child(2){
@@ -6000,7 +6000,7 @@ li.h4header {
 
 @media (max-width:992px)
 {
-    #counter >.container > .row  > div >h1:first-child{
+    #counter >.container > .row  > div >h1.counter{
         font-size:31px !important;
     }
     #counter >.container > .row  > div >h1:nth-child(2){
