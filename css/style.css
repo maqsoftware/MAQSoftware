@@ -5264,6 +5264,15 @@ ul.project-detail-block, .project-detail-block ul {
         border-radius: 0;
         border-bottom: 1px solid white !important;
     }
+
+    /* Contact US page changes*/
+
+    #Addresses > .row:first-child > div{
+        width: unset !important;
+    }
+    #Addresses > .row:first-child > div:first-child{
+        margin-left: 8% !important;
+    }
 }
 
 #map {
@@ -5903,5 +5912,98 @@ li.h4header {
 @media (max-width:1000px) {
     .blogs-carousel .owl-stage{
         padding-left:0;
+    }
+}
+
+
+/*      Contact US page changes     */
+
+/*For IPad */
+@media (min-width:767px) {   
+    #Addresses > .row:first-child > div:first-child{
+        padding-right: 0;
+        padding-left: 0;  
+    }
+}
+
+@media (max-width:454px) {
+    #Addresses > .row:first-child {
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width:430px) {
+   #Addresses > .row:first-child > div:nth-child(2)
+     {
+         padding-left: 15px !important;
+     }
+    #Addresses > .row:first-child > div:first-child{
+        margin-left: 4% !important;
+    }
+
+    }
+
+@media (max-width:401px) {
+    #Addresses > .row:first-child > div:first-child{
+        margin-left: 1% !important;
+    }
+      #Addresses > .row:first-child > div:nth-child(2)
+     {
+         padding-left: 10px !important;
+     }
+}
+
+@media (max-width:384px) {
+    #Addresses > .row:first-child > div:first-child{
+        padding-left:15px;
+    }
+    #Addresses > .row:first-child > div:nth-child(2)
+     {
+         padding-left: 0 !important;
+         padding-right: 0 !important;
+     }
+}
+
+/*For IPhone 5/SE */
+@media (max-width:358px) {
+    #Addresses > .row:first-child {
+        font-size: 11px !important;
+    }
+    #Addresses > .row:first-child > div{
+        width: unset !important;
+    }
+    #Addresses > .row:first-child > div:first-child{
+        margin-left: 0 !important;
+        padding-right: 0;
+        padding-left: 7px !important;
+    }
+     #Addresses > .row:first-child > div:nth-child(2)
+     {
+         padding-left: 7px !important;
+         padding-right:0 !important;
+     }
+
+}
+
+
+/*      Counter Changes     */
+
+@media (max-width:1200px)
+{
+    #counter >.container > .row  > div >h1.counter{
+        font-size:46px !important;
+    }
+    #counter >.container > .row  > div >h1:nth-child(2){
+        font-size:41px !important;
+    }
+}
+
+@media (max-width:992px)
+{
+    #counter >.container > .row  > div >h1.counter{
+        font-size:31px !important;
+    }
+    #counter >.container > .row  > div >h1:nth-child(2){
+        font-size:30px !important;
     }
 }
