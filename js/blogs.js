@@ -109,47 +109,7 @@ function loadBlogs(sBlogsData) {
     }
 }
 
-function loadBlogsHighlightSection() {
-    getBloggerData('https://www.blogger.com/feeds/3262801613185975083/posts/default/-/Highlight', loadBlogsHighlight, function () { });
-}
-function loadBlogsHighlight(sBlogsData) {
-    try {
-        var parser = new DOMParser();
-        oBlogsData = parser.parseFromString(sBlogsData, "text/xml");
-        iTotalBlogs = oBlogsData.getElementsByTagName('entry').length;
-        renderBlogsHighlight();
-    } catch (ignore) {
-    }
-}
-function renderBlogsHighlight() {
 
-    var iStart, iEnd, entry1//, sDate
-        , oDatePart, oDate, iTotalBlogs = 0, iNumber;
-    //debugger;
-    if (typeof oBlogsData !== "undefined") {
-        iEnd = oBlogsData.getElementsByTagName('entry').length;
-        for (iStart = 0; iStart < iTotalHighlight && iStart < iEnd; iStart++) {
-            iNumber = iStart + 1;
-            entry1 = oBlogsData.getElementsByTagName('entry').item(iStart);
-            var content = entry1.getElementsByTagName('content')[0].childNodes[0].nodeValue;
-            $("#bloggerContent").html(content);
-            var bloggerContent = document.getElementById("bloggerContent");
-            var imgs = bloggerContent.getElementsByTagName('img');
-            var img, src = "";
-
-            if (typeof imgs !== "undefined" && imgs.length > 0) {
-                img = imgs[0];
-                src = img.src;
-            }
-
-            var title = entry1.getElementsByTagName('title')[0].childNodes[0].nodeValue;
-            oBlogsHighlightTitle[iStart] = title;
-            $("#blogshighlighttitle" + iNumber).html(title);
-            $("#blogshighlightimg" + iNumber).attr('src', src);
-            $("#blogshighlightimg" + iNumber).attr('title', getFirstNWordsWithEllipses(title, 4));
-        }
-    }
-}
 
 function loadBlogsGrid() {
     oBlogsContainer.html("").addClass(sLoadingClass);
@@ -169,71 +129,17 @@ function getBlogsSuccess(sResponse) {
         iTop = $("#LoadPageBlogs").children('div').eq(id - 1).offset().top - $("#highlights").offset().top - 65 - 34; // 34 for date of blog
         $(sScrollElement).animate({ scrollTop: iTop }, 300);
     }
-    BlogsSliderConfig();
+    
 }
 function getBlogsOnComplete() {
     oBlogsContainer.removeClass(sLoadingClass);
 }
-function BlogsSliderConfig() {
-    $.getJSON("/Configurations/NewsSlider.json", function (data) {
-        initHighlightCarousal(data);
-    })
-};
 
-function initHighlightCarousal(nSliderConfig) {
-    if (typeof nSliderConfig !== 'undefined' && nSliderConfig !== 'null' && nSliderConfig !== "" && nSliderConfig !== 'false') {
-        $('.item4-carousel').owlCarousel({
-            //autoplay: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 2500),
-            autoplay: false,
-            slideSpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
-            autoplaySpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
-            autoplayHoverPause: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : true),
-            navSpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
-            paginationSpeed: (nSliderConfig.autoplayHoverPause !== typeof undefined ? nSliderConfig.autoplayHoverPause : 800),
-            //items: 4,
-            items: 2,
-            //center: true,
-            //singleItem: true,
-            rewind: true,
-            //loop: true, //use this when more than 4 higlights are present
-            loop: false,
-            itemsDesktop: [1170, 3],
-            itemsDesktopSmall: [1024, 2],
-            itemsTabletSmall: [768, 1],
-            itemsMobile: [480, 1],
-            pagination: false,  // Hide pagination buttons
-            navigation: true,  // Show next and prev buttons
-            nav: true,  // Show next and prev buttons
-            navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-            dots: false
-            , responsive: {
-                0: {
-                    items: 1
-                }
-                ,
-                570: {
-                    items: 2
-                }
-                ,
-                855: {
-                    items: 3
-                }
-                , 1140: {
-                    items: 4
-                }
-            }
-        });
-    }
-}
+
 
 function blogsConstructor() {
     //debugger;
-    try {
-        loadBlogsHighlightSection();
-    } catch (ex) {
-        // ignore
-    }
+    
 
     oBlogsPager.pageIndex = 0;
     highlightid = "";
@@ -276,25 +182,5 @@ function blogsConstructor() {
         }
     });
 
-    $(".blogs-highlight").unbind("click");
-    $(".blogs-highlight").click(function () {
-        highlightid = $(this).attr("data-clicked");
-        if (typeof highlightid !== "undefined" && highlightid !== "") {
-            //$(sScrollElement).animate({ scrollTop: iTop }, 500);
-            sClickedHighlightTitle = oBlogsHighlightTitle[highlightid - 1];
-            iClickedHighlightID = oHighlightBlogsID[highlightid - 1];
-            oBlogsPager.pageIndex = parseInt((iClickedHighlightID + 1) / oBlogsPager.pagesize);
-            loadBlogsGrid();
-            if (oBlogsPager.pageIndex <= 0) {
-                oBlogsPager.pageIndex = 0;
-                $("#Previous").addClass("hidden");
-            }
-            if (oBlogsPager.pageIndex >= iMaxPageIndex) {
-                oBlogsPager.pageIndex = iMaxPageIndex;
-                $("#Next").addClass("hidden");
-            } else {
-                $("#Previous").removeClass("hidden");
-            }
-        }
-    });
+  
 };
