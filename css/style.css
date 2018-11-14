@@ -4109,6 +4109,7 @@ ul.project-detail-block, .project-detail-block ul {
         overflow: hidden;
         margin-bottom: 25px;
         margin-bottom: 0;
+        margin-top: 10px;
     }
 
         .blog-post .post-media iframe {
