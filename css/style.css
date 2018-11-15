@@ -671,6 +671,10 @@ form label.error {
     height: 15px;
 }
 
+.spacer-20 {
+    width: 100%;
+    height: 20px;
+}
 .spacer-25 {
     width: 100%;
     height: 25px;
@@ -4109,6 +4113,7 @@ ul.project-detail-block, .project-detail-block ul {
         overflow: hidden;
         margin-bottom: 25px;
         margin-bottom: 0;
+        margin-top: 10px;
     }
 
         .blog-post .post-media iframe {
