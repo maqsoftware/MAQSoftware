@@ -2,9 +2,9 @@
 
 "use strict";
 var oBlogsPager = {
-    template: '<div><div class="post-meta"><span>@date</span></div><div class="post-header"><a href="@href"><h2>@title</h2></a></div></div><div class="blogpost-entry">@content</div><p class="blog-ellipsis"></p><a href="@href1" class="readmoreblog">Read more</a></div><div class="spacer-90"></div>',
+    template: '<div><div class="post-meta"><span>@date</span></div><div class="post-header"><a href="@href"><h2>@title</h2></a></div></div><a href="@href1" class=" btn btn-md btn btn-md btn-black" style="color:white; margin-top:20px">Read more </a></div><div class="spacer-20"></div><div><hr style="color:#f1f1f1;background-color:#f1f1f1;border:0;width:100%;height:1px; margin-bottom:70px;" /></div>',
     pageIndex: 0,
-    pagesize: 6
+    pagesize: 15
 }, id, highlightid, sClickedHighlightTitle, iClickedHighlightID,
 iTotalBlogs = 0,
 iIterator = 0,
