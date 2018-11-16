@@ -6031,3 +6031,11 @@ li.h4header {
         font-size:30px !important;
     }
 }
+
+.blog-font 
+{
+    font-size: 13px;
+    font-family: "Raleway",sans-serif;
+    color: black;
+    text-transform: capitalize;
+}
