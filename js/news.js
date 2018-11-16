@@ -2,7 +2,7 @@
 
 "use strict";
 var oNewsPager = {
-    template: '<div><div class="post-meta"><span>@date</span></div><div class="post-header"><a href="@href"><h2>@title</h2></a></div><div class="post-media"><img alt="News" title="@tooltip" src="@newsimagesrc"></div><div class="post-entry">@content</div></div>',
+    template: '<div><div class="post-meta"><span class="blog-font">@sTag | </span><span>@date</span></div><div class="post-header"><a href="@href"><h2>@title</h2></a></div><div class="post-media"><img alt="News" title="@tooltip" src="@newsimagesrc"></div><div class="post-entry">@content</div></div>',
     pageIndex: 0,
     pagesize: 6
 }, id, highlightid, sClickedHighlightTitle, iClickedHighlightID,
@@ -20,7 +20,7 @@ sLoadingClass = "Loading",
     ], iCount, iTotal = oItalicBookName.length, iTotalHighlight = 6, oNewsHighlightTitle = [iTotalHighlight], oHighlightNewsID = [iTotalHighlight];
 
 function renderNews() {
-    var iStart, iEnd, entry1, sDate, oDatePart, oDate, sTitle, sContent, sRawTitle, slink;
+    var iStart, iEnd, entry1, sTag, sDate, oDatePart, oDate, sTitle, sContent, sRawTitle, slink;
     oNewsContainer.removeClass(sLoadingClass);
     if (iTotalNews) {
         iStart = oNewsPager.pageIndex * oNewsPager.pagesize;
@@ -46,6 +46,7 @@ function renderNews() {
         for (iIterator = iStart; iIterator < iEnd; iIterator++) {
             entry1 = oNewsData.getElementsByTagName('entry').item(iIterator);
             if (entry1) {
+                sTag = entry1.getElementsByTagName('category')[0].attributes["term"].nodeValue.toUpperCase();
                 sDate = entry1.getElementsByTagName('published')[0].childNodes[0].nodeValue.toLowerCase().split("t");
                 oDatePart = [];
                 if (sDate[0]) {
@@ -78,7 +79,7 @@ function renderNews() {
                     img.parentNode.removeChild(img);
                 }
                 sContent = $("#bloggerContent").html();
-                oNewsContainer.append(oNewsPager.template.replace(/@title/g, sRawTitle).replace("@href", slink).replace("@date", oDate).replace("@content", sContent).replace("@newsimagesrc", src).replace("@tooltip", getFirstNWordsWithEllipses(sTitle, 4)));
+                oNewsContainer.append(oNewsPager.template.replace("@sTag", sTag).replace(/@title/g, sRawTitle).replace("@href", slink).replace("@date", oDate).replace("@content", sContent).replace("@newsimagesrc", src).replace("@tooltip", getFirstNWordsWithEllipses(sTitle, 4)));
             }
         }
         oNewsContainer.find("img").addClass("post - media");

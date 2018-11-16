@@ -2,7 +2,7 @@
 
 "use strict";
 var oBlogsPager = {
-    template: '<div><div class="post-meta"><span>@date</span></div><div class="post-header"><a href="@href"><h2>@title</h2></a></div></div><a href="@href1" class=" btn btn-md btn btn-md btn-black" style="color:white; margin-top:20px">Read more </a></div><div class="spacer-20"></div><div><hr style="color:#f1f1f1;background-color:#f1f1f1;border:0;width:100%;height:1px; margin-bottom:70px;" /></div>',
+    template: '<div><div class="post-meta"><span class="blog-font">@sTag | </span><span>@date</span></div><div class="post-header"><a href="@href"><h2>@title</h2></a></div></div><a href="@href1" class=" btn btn-md btn btn-md btn-black" style="color:white; margin-top:20px">Read more </a></div><div class="spacer-20"></div><div><hr style="color:#f1f1f1;background-color:#f1f1f1;border:0;width:100%;height:1px; margin-bottom:70px;" /></div>',
     pageIndex: 0,
     pagesize: 15
 }, id, highlightid, sClickedHighlightTitle, iClickedHighlightID,
@@ -16,7 +16,7 @@ sLoadingClass = "Loading",
      iCount, iTotalHighlight = 6, oBlogsHighlightTitle = [iTotalHighlight], oHighlightBlogsID = [iTotalHighlight];
 
 function renderBlogs() {
-    var iStart, iEnd, entry1, sDate, oDatePart, oDate, sTitle, sContent, sRawTitle, slink;
+    var iStart, iEnd, entry1, sTag, sDate, oDatePart, oDate, sTitle, sContent, sRawTitle, slink;
     oBlogsContainer.removeClass(sLoadingClass);
     if (iTotalBlogs) {
         iStart = oBlogsPager.pageIndex * oBlogsPager.pagesize;
@@ -46,6 +46,7 @@ function renderBlogs() {
         for (iIterator = iStart; iIterator < iEnd; iIterator++) {
             entry1 = oBlogsData.getElementsByTagName('entry').item(iIterator);
             if (entry1) {
+                sTag = entry1.getElementsByTagName('category')[0].attributes["term"].nodeValue.slice(0,-1).toUpperCase();
                 sDate = entry1.getElementsByTagName('published')[0].childNodes[0].nodeValue.toLowerCase().split("t");
                 oDatePart = [];
                 if (sDate[0]) {
@@ -75,7 +76,7 @@ function renderBlogs() {
                     img.parentNode.removeChild(img);
                 }
                 sContent = $("#bloggerContent").html();
-                oBlogsContainer.append(oBlogsPager.template.replace(/@title/g, sRawTitle).replace("@href", slink).replace("@date", oDate).replace("@content", sContent).replace("@href1", slink).replace("@tooltip", getFirstNWordsWithEllipses(sTitle, 4)));
+                oBlogsContainer.append(oBlogsPager.template.replace("@sTag", sTag).replace(/@title/g, sRawTitle).replace("@href", slink).replace("@date", oDate).replace("@content", sContent).replace("@href1", slink).replace("@tooltip", getFirstNWordsWithEllipses(sTitle, 4)));
             }
         }
         oBlogsContainer.find("img").addClass("post - media");
