@@ -456,18 +456,6 @@
       "content": "<p>Slope Chart by MAQ Software allows users to analyze trends in data at a glance.This visual is useful for comparing interactions between two data points based on time or other user-chosen parameters.R package dependencies (auto-installed): plotly and ggplot2.</p><p>Key features:</p><ul><li>Quick comparison of indicator growth or loss across categories.</li><li>Easy interaction with many data points using zoom functionality.</li><li>Quickly download an image of the chart with the capture image widget.</li></ul>",
       "category": "comparison change"
     }
-  },
-  {
-    "Modern Marketing": {
-      "name": "Modern Marketing",
-      "title": "Modern Marketing",
-      "id": "martech",
-      "description": "",
-      "url": "",
-      "img": "../img/PowerBI/Slope_Chart.png",
-      "gif": "../img/PowerBI/Slope_Chart.png",
-      "content": "",
-      "category": ""
-    }
   }
+  
 ]

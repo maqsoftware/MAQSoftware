@@ -1,7 +1,6 @@
 var pageSection,
 visualTemplate = '<div class="item"> <div class="nf-col-padding"> <div class="item-box"> <div class="shop-item"> <div class="item-img"> <img alt="@name" src="@img"/> </div><div class="item-mask"> <div class="item-mask-detail"> <div class="item-caption text-center" style="color:white;"> <div> @description </div><a data-toggle="modal" data-target="#model@id" class="btn btn-line-xs btn-white-line"> <i class="fa"></i>Learn More </a> </div></div></div></div><div class="shop-item-info"> <a href="@url" target="_blank"> <h6 class="shop-item-name">@name</h6> </a> </div></div></div></div>',
 modalTemplate = '<div class="modal fade product_view" id="model@id"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-header"> <h3 class="modal-title pull-left">@title</h3> <a href="#" data-dismiss="modal" class="class pull-right"> <span class="glyphicon glyphicon-remove"></span> </a> </div><div class="modal-body"> <div class="row"> <div class="col-md-6 product_img"> <img alt="@name" title="@name" src="@img" class="img-responsive"> </div><div class="col-md-6 product_content"> @content<p> For any feature requests or questions about this visual, please send an e-mail to our team at <a href="mailto:Support@MAQSoftware.com">Support@MAQSoftware.com</a>. </p><a href="@url" target="_blank" class="btn btn-md btn-black-line ">See in AppSource</a> </div></div></div></div></div></div>',
-modalTemplate_martech = '<div class="modal fade product_view" id="@id"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h3 class="modal-title pull-left">@title</h3><a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span> </a></div><div class="modal-body"><div class="col-md-12 product_img"> <img alt="@name" title="@name" src="@img" class="img-responsive"> </div></div></div></div></div>',
 viewAllVisualTemplate = '<div class="nf-item @category spacing"> <div class="item-box"> <img alt="@name" src="@img" class="item-container"> <div class="item-mask"> <div class="item-caption text-center" style="color:white;"> <div>@description</div><a data-toggle="modal" data-target="#model@id" class="btn btn-line-xs btn-white-line"><i class="fa"></i>Learn More</a> </div></div></div><h6 class="text-center pt-15"><a href="@url" target="_blank">@name</a></h6> </div>'; 
 
 Date.prototype.format = function () {
@@ -300,10 +299,8 @@ function PowerBIVisualsConfig() {
     })
 };
 
-    function MartechConfig() {
-        $.getJSON("/Configurations/Martech.json", function (data) {
-            RenderMartech(data);
-        })
+function RenderMartech() {
+        $("#modelmartech").modal();
     };
 
     function RenderPowerBIVisuals(oVisualConfig) {
@@ -351,48 +348,7 @@ function PowerBIVisualsConfig() {
         });
     }
 
-        function RenderMartech(oVisualConfig) {
-            var totalVisuals = oVisualConfig.length,
-            visualContainer = $("#power-bi-carousel"),
-            modalContainer = $("#modelChart"),
-            viewAllContainer = $("#viewAllVisuals"),
-            visualSliderHtml = '<div class="owl-carousel power-bi-carousel nf-carousel-theme o-flow-hidden" id="PowerBISliderVisual"></div>',
-            visualContentHtml = "",
-            modalContentHtml = "",
-            viewAllContentHtml = "";
-            visualContainer.append(visualSliderHtml);
-            var visualContentContainer = $("#PowerBISliderVisual");
-            $.each(oVisualConfig, function (index, item) {
-    
-                $.each(Object.keys(this), function (visualIndex, visualItem) {
-    
-                    visualContentHtml += visualTemplate.replace(/@name/g, oVisualConfig[index][this].name)
-                        .replace(/@img/g, oVisualConfig[index][this].img)
-                        .replace(/@description/g, oVisualConfig[index][this].description)
-                        .replace(/@id/g, oVisualConfig[index][this].id)
-                        .replace(/@url/g, oVisualConfig[index][this].url);
-                    modalContentHtml += modalTemplate_martech.replace(/@name/g, oVisualConfig[index][this].name)
-                        .replace(/@img/g, oVisualConfig[index][this].img)
-                        .replace(/@title/g, oVisualConfig[index][this].title)
-                        .replace(/@id/g, oVisualConfig[index][this].id);
-                    viewAllContentHtml += viewAllVisualTemplate.replace(/@name/g, oVisualConfig[index][this].name)
-                        .replace(/@img/g, oVisualConfig[index][this].img)
-                        .replace(/@id/g, oVisualConfig[index][this].id)
-                        .replace(/@url/g, oVisualConfig[index][this].url)
-                        .replace(/@category/g, oVisualConfig[index][this].category)
-                        .replace(/@description/g, oVisualConfig[index][this].description);
-                })
-            });
-            visualContentContainer.append(visualContentHtml);
-            modalContainer.append(modalContentHtml);
-            viewAllContainer.append(viewAllContentHtml);
-            $(document).on('shown.bs.modal', '#modelChart .product_view', function () {
-                $("#PowerBISliderVisual").trigger('stop.owl.autoplay');
-            });
-            $(document).on('hidden.bs.modal', '#modelChart .product_view', function () {
-                $("#PowerBISliderVisual").trigger('play.owl.autoplay');
-            });
-        }
+        
     
     function sliderAll(oSliderConfig) {
 
