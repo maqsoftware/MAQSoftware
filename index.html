@@ -162,6 +162,26 @@
                     <!-- End Content -->
                 </div>             
 
+                <div class="item bg-img parallax parallax-background1" style="background-image: url('/img/Banners/martech-banner.png');">
+                    <!-- Content -->
+                    <div class="full-cap-wraper  dark-color ">
+                        <div class="content-caption dark-color">
+                            <div class="container">
+                                <div class="row text-left">
+                                    <div class="col-md-6">
+                                        <h2 class="h2">Modern Marketing Breathes New Life into Time-Honored Business Ideas</h2>
+                                        <h3 class="h4">
+                                            Learn how we connect marketing technology (MarTech) to business leadership needs.
+                                        </h3>
+                                        <a class="btn btn-md btn-black " data-toggle="modal" data-target="#modelmartech" onclick="RenderMartech()">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Content -->
+                </div>
+
                 <div class="item bg-img parallax parallax-background1 dark-bg" style="background-image: url('/img/Banners/powerbi-best-practices-banner.jpg')">
                     <!-- Content -->
                     <div class="full-cap-wraper  overlay-dark  light-color ">
@@ -192,26 +212,6 @@
                                                 Calendar by MAQ Software is the most effective way to track events in Power BI.
                                         </h3>
                                         <a href="#pbi" data-toggle="modal" data-target="#modelCalendar" class="btn btn-md btn-black ">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Content -->
-                </div>
-
-                <div class="item bg-img parallax parallax-background1" style="background-image: url('/img/Banners/martech-banner.png');">
-                    <!-- Content -->
-                    <div class="full-cap-wraper  dark-color ">
-                        <div class="content-caption dark-color">
-                            <div class="container">
-                                <div class="row text-left">
-                                    <div class="col-md-6">
-                                        <h2 class="h2">Modern Marketing Breathes New Life into Time-Honored Business Ideas</h2>
-                                        <h3 class="h4">
-                                            Learn how we connect marketing technology (MarTech) to business leadership needs.
-                                        </h3>
-                                        <a href="https://blog.maqsoftware.com/2018/11/modern-marketing-breathes-new-life-into.html" target="_self" class="btn btn-md btn-black ">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -255,7 +255,7 @@
                         <h3 class="">Our Services</h3>
                         <div class="spacer-15"></div>
                         <p class="lead">Since our inception, we have specialized in marketing technology 
-                            <a style="text-decoration:underline;" href="https://blog.maqsoftware.com/2018/11/modern-marketing-breathes-new-life-into.html" target="_self">(MarTech)</a>
+                            <a style="text-decoration:underline;" data-toggle="modal" data-target="#modelmartech" onclick="RenderMartech()">(MarTech)</a>
                          solutions for Fortune 500 companies. Using the latest agile engineering techniques in a focused and disciplined manner, we accelerate software initiatives that enable our customers to transform their businesses. We serve customers in industries including technology, retail, energy, and healthcare.</p>
                     </div>
                 </div>
@@ -493,6 +493,24 @@
         <section id="modelChart">
             <!-- Modal -->
         </section>
+
+        <div class="modal fade product_view show" id="modelmartech">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title pull-left">Model Marketing</h3>
+                        <a href="#" data-dismiss="modal" class="class pull-right">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </a>
+                    </div>
+                    <div class="modal-body">
+                        <img src="../img/maq-software-martech.png" />
+                        <a href="https://blog.maqsoftware.com/2018/11/modern-marketing-breathes-new-life-into.html" target="_self" class="btn btn-md btn-black-line pull-right">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- FOOTER -->
         <footer class="footer   pt-60">
                 <div class="container">
@@ -590,7 +608,7 @@
 <script src="/js/plugin/mediaelement-and-player.min.js?v=20170822"></script>
 <script src="/js/plugin/sidebar-menu.js?v=20170822" type="text/javascript"></script>
 <script src="https://www.youtube.com/iframe_api"></script>
-<script src="/js/theme.js?v=20180808" type="text/javascript"></script>
+<script src="/js/theme.js?v=20181119" type="text/javascript"></script>
 <script src="/js/navigation.js?v=20170822" type="text/javascript"></script>
 <script src="/js/contact.js?v=20170828.2" type="text/javascript"></script>
 <script src="/js/common.js?v=20180807.1" type="text/javascript"></script>
