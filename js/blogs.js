@@ -46,7 +46,7 @@ function renderBlogs() {
         for (iIterator = iStart; iIterator < iEnd; iIterator++) {
             entry1 = oBlogsData.getElementsByTagName('entry').item(iIterator);
             if (entry1) {
-                sTag = entry1.getElementsByTagName('category')[0].attributes["term"].nodeValue.slice(0,-1).toUpperCase();
+                sTag = entry1.getElementsByTagName('category')[0].attributes["term"].nodeValue.toUpperCase();
                 sDate = entry1.getElementsByTagName('published')[0].childNodes[0].nodeValue.toLowerCase().split("t");
                 oDatePart = [];
                 if (sDate[0]) {
@@ -114,7 +114,7 @@ function loadBlogs(sBlogsData) {
 
 function loadBlogsGrid() {
     oBlogsContainer.html("").addClass(sLoadingClass);
-    getBloggerData('https://www.blogger.com/feeds/3262801613185975083/posts/default/-/Blogs', getBlogsSuccess, getBlogsOnComplete);
+    getBloggerData('https://www.blogger.com/feeds/3262801613185975083/posts/default/', getBlogsSuccess, getBlogsOnComplete);
 }
 function getBlogsSuccess(sResponse) {
     var iTop;
