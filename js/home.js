@@ -76,7 +76,7 @@ function renderNewsMain() {
                     b++;
                 }
             }
-            else if (entry1_news == null) {
+            else if (entry1_news == null && entry1_blog != null) {
                 sDate_blog = entry1_blog.getElementsByTagName('published')[0].childNodes[0].nodeValue.toLowerCase().split("t");
                 oDate_blog = format_date(sDate_blog);
                 entry1 = entry1_blog;
@@ -84,7 +84,7 @@ function renderNewsMain() {
                 href = href_blog
                 b++;
             }
-            else if (entry1_blog == null) {
+            else if (entry1_blog == null && entry1_news!= null) {
                 sDate_news = entry1_news.getElementsByTagName('published')[0].childNodes[0].nodeValue.toLowerCase().split("t");
                 oDate_news = format_date(sDate_news);
                 entry1 = entry1_news;
