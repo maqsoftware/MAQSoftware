@@ -2,7 +2,7 @@
 
 "use strict";
 var oBlogsPager = {
-    template: '<div><div class="post-meta"><span class="blog-font">@sTag | </span><span>@date</span></div><div class="post-header"><a href="@href"><h2>@title</h2></a></div></div><a href="@href1" class=" btn btn-md btn btn-md btn-black" style="color:white; margin-top:20px">Read more </a></div><div class="spacer-20"></div><div><hr style="color:#f1f1f1;background-color:#f1f1f1;border:0;width:100%;height:1px; margin-bottom:70px;" /></div>',
+    template: '<div><div class="post-meta"><span class="blog-font">@sTag | </span><span>@date</span></div><div class="post-header"><a href="@href"><h2>@title</h2></a></div><div class="post-media"><img alt="Blog" src="@newsimagesrc"></div></div><a href="@href1" class=" btn btn-md btn btn-md btn-black" style="color:white; margin-top:20px">Read more </a></div><div class="spacer-20"></div><div><hr style="color:#f1f1f1;background-color:#f1f1f1;border:0;width:100%;height:1px; margin-bottom:70px;" /></div>',
     pageIndex: 0,
     pagesize: 15
 }, id, highlightid, sClickedHighlightTitle, iClickedHighlightID,
@@ -76,7 +76,7 @@ function renderBlogs() {
                     img.parentNode.removeChild(img);
                 }
                 sContent = $("#bloggerContent").html();
-                oBlogsContainer.append(oBlogsPager.template.replace("@sTag", sTag).replace(/@title/g, sRawTitle).replace("@href", slink).replace("@date", oDate).replace("@content", sContent).replace("@href1", slink).replace("@tooltip", getFirstNWordsWithEllipses(sTitle, 4)));
+                oBlogsContainer.append(oBlogsPager.template.replace("@sTag", sTag).replace(/@title/g, sRawTitle).replace("@href", slink).replace("@date", oDate).replace("@newsimagesrc", src).replace("@content", sContent).replace("@href1", slink));
             }
         }
         oBlogsContainer.find("img").addClass("post - media");
@@ -109,8 +109,6 @@ function loadBlogs(sBlogsData) {
     } catch (ignore) {
     }
 }
-
-
 
 function loadBlogsGrid() {
     oBlogsContainer.html("").addClass(sLoadingClass);
