@@ -695,6 +695,11 @@ form label.error {
     height: 45px;
 }
 
+.spacer-50 {
+    width: 100%;
+    height: 50px;
+}
+
 .spacer-55 {
     width: 100%;
     height: 55px;

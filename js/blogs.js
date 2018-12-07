@@ -2,7 +2,7 @@
 
 "use strict";
 var oBlogsPager = {
-    template: '<div><div class="post-meta"><span class="blog-font">@sTag | </span><span>@date</span></div><div class="post-header"><a href="@href"><h2>@title</h2></a></div><div class="post-media"><img alt="Blog" src="@newsimagesrc"></div></div><a href="@href1" class=" btn btn-md btn btn-md btn-black" style="color:white; margin-top:20px">Read more </a></div><div class="spacer-20"></div><div><hr style="color:#f1f1f1;background-color:#f1f1f1;border:0;width:100%;height:1px; margin-bottom:70px;" /></div>',
+    template: '<div><div class="post-meta"><span class="blog-font">@sTag | </span><span>@date</span></div><div class="post-header"><a href="@href"><h2>@title</h2></a></div><div class="post-media"><img alt="Blog" src="@newsimagesrc"></div></div><a href="@href1" class=" btn btn-md btn btn-md btn-black" style="color:white; margin-top:20px">Read more </a></div><div class="spacer-50"></div><div><hr style="color:#f1f1f1;background-color:#f1f1f1;border:0;width:100%;height:1px; margin-bottom:70px;" /></div>',
     pageIndex: 0,
     pagesize: 15
 }, id, highlightid, sClickedHighlightTitle, iClickedHighlightID,
