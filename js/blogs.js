@@ -4,7 +4,7 @@
 var oBlogsPager = {
     template: '<div><div class="post-meta"><span class="blog-font">@sTag | </span><span>@date</span></div><div class="post-header"><a href="@href"><h2>@title</h2></a></div><div class="post-media"><a href="@href1"><img alt="Blog" src="@newsimagesrc"></a></div></div></div><div class="spacer-50"></div><div><hr style="color:#f1f1f1;background-color:#f1f1f1;border:0;width:100%;height:1px; margin-bottom:70px;" /></div>',
     pageIndex: 0,
-    pagesize: 15
+    pagesize: 6
 }, id, highlightid, sClickedHighlightTitle, iClickedHighlightID,
 iTotalBlogs = 0,
 iIterator = 0,
@@ -103,7 +103,7 @@ function loadBlogs(sBlogsData) {
         iTotalBlogs = oBlogsData.getElementsByTagName('entry').length;
         if (iTotalBlogs || oBlogsData.getElementsByTagName('content')) {
             iMaxPageIndex = Math.round(iTotalBlogs / oBlogsPager.pagesize);
-            //$("#Pagination").show();
+            $("#Pagination").show();
             renderBlogs();
         }
     } catch (ignore) {
