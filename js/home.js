@@ -144,3 +144,7 @@ function format_date(sDate_news)
     //oDate = oDate.format();
     return oDate
 }
+
+$( document ).ready(function () {
+    $("#copyright_year").html(new Date().getFullYear() + " ");
+});
