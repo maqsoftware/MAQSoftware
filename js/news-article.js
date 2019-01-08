@@ -38,9 +38,7 @@ function readQueryParams() {
         window.location.href = "/news.html";
     }
 }
-
 window.onload = readQueryParams;
-
 function loadNewsGrid() {
     var iTop;
     oNewsContainer.html("").addClass(sLoadingClass);
@@ -125,22 +123,15 @@ function renderNews() {
                                 .replace("@lnsummary", sRawTitle.substr(0, 256))
                                 .replace("@lntitle", sRawTitle)
                                 .replace("@lnsource", "MAQ Software"));
-
                 FB.XFBML.parse();
             }, 1000);
            
         }
-
         oNewsContainer.find("a").attr("target", "_blank");
         oNewsContainer.find("img").addClass("post - media");
-
-
         $('#LoadPageNewsArticle *').removeAttr('style');
-
-
     }
 }
-
 function sharefacebook() {
     shareOverrideOGMeta(newsTitle, newsImageSource);
 };
@@ -170,4 +161,3 @@ function shareOverrideOGMeta(overrideTitle, overrideImage) {
 	    // Action after response
 	});
 }
-

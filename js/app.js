@@ -109,14 +109,6 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
                 console.log('GA hitCallback sent!');
             }
         });
-        //$window.ga('send', {
-        //    'hitType': 'screenview',
-        //    'appName': 'MAQ Software',
-        //    'screenName': $location.url(),
-        //    'hitCallback': function () {
-        //        console.log('GA hitCallback sent!');
-        //    }
-        //});
     });
 }]).controller('ArtificialIntelligenceController', ["$scope", "$location", "$window", function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {

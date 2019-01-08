@@ -4,7 +4,6 @@
         sValue = arrMonths[this.getMonth()] + ' ' + this.getDate() + ', ' + this.getFullYear();
     return sValue;
 };
-
 function getParameterByName(name) {
     "use strict";
     name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -12,17 +11,14 @@ function getParameterByName(name) {
         results = regex.exec(decodeURIComponent(location.href));
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
-
 function redirectPowerBI() {
     window.location.href = "/expertise/powerbi"; // Redirecting to Power BI Expertise
 }
-
 function setTabNavLinkBehavior() {
     $("#tabs .nav-link").click(function () {
         $("#tabs .nav-link").removeClass('active');
     });
 }
-
 function closeMenuIfOpen() {
     $("a, a *, #body, #body *").click(function () {
         if ($(this).hasClass("menu-has-sub") || $(this).hasClass("fa-angle-down") || $(this).hasClass("fa-angle-up")) {
@@ -59,7 +55,6 @@ function isCareersPage() {
 }
 // Close menu if open
 closeMenuIfOpen();
-
 function updateTitle(viewName) {
     var sTitle = "MAQ Software | Data Management, Power BI, Artificial Intelligence";
     if (typeof viewName !== "undefined") {
@@ -86,7 +81,6 @@ function updateTitle(viewName) {
     }
     $("title").text(sTitle);
 }
-
 function getFirstNWordsWithEllipses(data, n) {
     var result = data.split(' ').slice(0, n).join(' ');
     if (data.length > result.length) {
@@ -97,22 +91,14 @@ function getFirstNWordsWithEllipses(data, n) {
     }
     return result;
 }
-
-
-
-
-
-
 $(function () {
     if (document.documentMode || /Edge/.test(navigator.userAgent)) {
         cloneNavDropDowns();
     }
 });
-
 /**
 * Fix for IE/Edge list-item=none render bug on list items hidden when page is initially loaded.
 */
-
 function cloneNavDropDowns () {
     var menu_clone;
     var parent;
@@ -124,7 +110,6 @@ function cloneNavDropDowns () {
         menu_clone.appendTo(parent);
     });
 }
-
 function getBloggerData(blogUrl, successCallBack, completeCallBack) {
     $.ajax({
         url: blogUrl,

@@ -1,11 +1,6 @@
 $(function () {
     "use strict";
-
-
-
-
     $(document).ready(function () {
-
         // Slider Video
         $('.intro-Rev_Video').revolution({
             sliderType: "hero",
@@ -17,7 +12,6 @@ $(function () {
             minFullScreenHeight: "320",
             touchenabled: "off",
         });
-
         // Slider Dark Light
         var revslider_two = $('.intro-RevSlider');
         revslider_two.revolution({
@@ -32,12 +26,9 @@ $(function () {
             navigationStyle: "preview4",
             navigationType: "none",
         });
-
-        // Header color "dark" "light  |-------------------------------------------------------"
+        // Header color "dark" "light 
         revslider_two.bind("revolution.slide.onchange", function (e, data) {
-
             var color = $(this).find('li').eq(data.slideIndex - 1).data('slide');
-
             if (color == 'dark-slide') {
                 $('#header').addClass('header').removeClass('header-light');
                 $('#header').removeClass('header-default');
@@ -51,14 +42,6 @@ $(function () {
                 $('#header').removeClass('header-light');
                 $('#header').addClass('header');
             }
-            // console.log("rev slide color: " + color);
-
         });
-
-
     });
-
-
-
-
 });
