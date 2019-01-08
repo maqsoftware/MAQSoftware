@@ -1,5 +1,4 @@
 /*jslint plusplus: true */
-
 "use strict";
 var oNewsPager = {
     template: '<div><div class="post-meta"><span class="blog-font">@sTag | </span><span>@date</span></div><div class="post-header"><a href="@href"><h2>@title</h2></a></div><div class="post-media"><img alt="News" title="@tooltip" src="@newsimagesrc"></div><div class="post-entry">@content</div></div>',
@@ -18,7 +17,6 @@ sLoadingClass = "Loading",
                     , "What I Did Not Learn at IIT: Transition from Campus to Workplace"
                     , "What I Did Not Learn at IIT - Transitioning from Campus to Workplace"
     ], iCount, iTotal = oItalicBookName.length, iTotalHighlight = 6, oNewsHighlightTitle = [iTotalHighlight], oHighlightNewsID = [iTotalHighlight];
-
 function renderNews() {
     var iStart, iEnd, entry1, sTag, sDate, oDatePart, oDate, sTitle, sContent, sRawTitle, slink;
     oNewsContainer.removeClass(sLoadingClass);
@@ -112,9 +110,6 @@ function loadNews(sNewsData) {
     } catch (ignore) {
     }
 }
-
-
-
 function loadNewsGrid() {
     oNewsContainer.html("").addClass(sLoadingClass);
     getBloggerData('https://www.blogger.com/feeds/2523158019509365490/posts/default/-/News', getNewsSuccess, getNewsOnComplete);
@@ -137,23 +132,17 @@ function getNewsSuccess(sResponse) {
 function getNewsOnComplete() {
     oNewsContainer.removeClass(sLoadingClass);
 }
-
-
 function newsConstructor() {
     oNewsPager.pageIndex = 0;
     highlightid = "";
     oNewsContainer = $("#LoadPageNews");
     var iTop = 0;
     id = getParameterByName("id");
-
     if (typeof id !== "undefined" && id !== "") {
         $(sScrollElement).animate({ scrollTop: iTop }, 500);
         oNewsPager.pageIndex = id > oNewsPager.pagesize ? 1 : 0;
-
     }
-
     loadNewsGrid();
-
     $("#Pagination p").click(function () {
         var oCurrentElement = $(this),
             iClicked = oCurrentElement.attr("data-clicked");
@@ -180,7 +169,6 @@ function newsConstructor() {
             renderNews();
         }
     });
-
     $(".news-highlight").unbind("click");
     $(".news-highlight").click(function () {
         highlightid = $(this).attr("data-clicked");
