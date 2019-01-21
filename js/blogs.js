@@ -1,5 +1,4 @@
 /*jslint plusplus: true */
-
 "use strict";
 var oBlogsPager = {
     template: '<div><div class="post-meta"><span class="blog-font">@sTag | </span><span>@date</span></div><div class="post-header"><a href="@href"><h2>@title</h2></a></div><div class="post-media"><a href="@href1"><img alt="Blog" src="@newsimagesrc"></a></div></div></div><div class="spacer-50"></div><div><hr style="color:#f1f1f1;background-color:#f1f1f1;border:0;width:100%;height:1px; margin-bottom:70px;" /></div>',
@@ -14,7 +13,6 @@ oBlogsContainer,
 sScrollElement = "body,html",
 sLoadingClass = "Loading",
      iCount, iTotalHighlight = 6, oBlogsHighlightTitle = [iTotalHighlight], oHighlightBlogsID = [iTotalHighlight];
-
 function renderBlogs() {
     var iStart, iEnd, entry1, sTag, sDate, oDatePart, oDate, sTitle, sContent, sRawTitle, slink;
     oBlogsContainer.removeClass(sLoadingClass);
@@ -80,7 +78,6 @@ function renderBlogs() {
             }
         }
         oBlogsContainer.find("img").addClass("post - media");
-
         $('#LoadPageBlogs *').removeAttr('style');
         for (var iCount = 0; iCount < iTotalHighlight; iCount++) {
             for (iIterator = 0; iIterator < iTotalBlogs; iIterator++) {
@@ -109,7 +106,6 @@ function loadBlogs(sBlogsData) {
     } catch (ignore) {
     }
 }
-
 function loadBlogsGrid() {
     oBlogsContainer.html("").addClass(sLoadingClass);
     getBloggerData('https://www.blogger.com/feeds/3262801613185975083/posts/default/', getBlogsSuccess, getBlogsOnComplete);
@@ -128,18 +124,11 @@ function getBlogsSuccess(sResponse) {
         iTop = $("#LoadPageBlogs").children('div').eq(id - 1).offset().top - $("#highlights").offset().top - 65 - 34; // 34 for date of blog
         $(sScrollElement).animate({ scrollTop: iTop }, 300);
     }
-    
 }
 function getBlogsOnComplete() {
     oBlogsContainer.removeClass(sLoadingClass);
 }
-
-
-
 function blogsConstructor() {
-    //debugger;
-    
-
     oBlogsPager.pageIndex = 0;
     highlightid = "";
     oBlogsContainer = $("#LoadPageBlogs");
@@ -149,11 +138,8 @@ function blogsConstructor() {
     if (typeof id !== "undefined" && id !== "") {
         $(sScrollElement).animate({ scrollTop: iTop }, 500);
         oBlogsPager.pageIndex = id > oBlogsPager.pagesize ? 1 : 0;
-
     }
-
     loadBlogsGrid();
-
     $("#Pagination p").click(function () {
         var oCurrentElement = $(this),
             iClicked = oCurrentElement.attr("data-clicked");
@@ -180,6 +166,4 @@ function blogsConstructor() {
             renderBlogs();
         }
     });
-
-  
 };
