@@ -19,7 +19,6 @@ oMapData = [
                 long: 78.368914
             }
 ];
-
 function contactConstructor() {
     $(".VwMap").click(function () {
         sCurrentCity = $(this).attr("data-name");
@@ -38,26 +37,19 @@ function contactConstructor() {
                 iIndex = 0;
                 break;
         }
-
         if (iIndex > -1) {            
             showMap(oMapData[iIndex].lat, oMapData[iIndex].long, oMapData[iIndex].address);
         }
-
-        //sLocation = sGoogleMapScript + "&q=" + oMapAddress[iIndex];
-        //$('#map').attr('src', sLocation);
         var iAddressSectionTopPosition, sScrollElement = "body,html";
         iAddressSectionTopPosition = $("#map").offset().top;
         iAddressSectionTopPosition -= 65; // -65px for header/padding
         $(sScrollElement).animate({ scrollTop: iAddressSectionTopPosition }, 500);
     });
 }
-
 function initMap() {
     showMap(oMapData[0].lat, oMapData[0].long, oMapData[0].address);
 }
-
 function showMap(Latitude, Longitude, address) {
-
     // Create a new StyledMapType object, passing it an array of styles,
     // and the name to be displayed on the map type control.
     var oLatLng = { lat: Latitude, lng: Longitude };
@@ -223,7 +215,6 @@ function showMap(Latitude, Longitude, address) {
   }
         ],
         { name: 'Styled Map' });
-
     // Create a map object, and include the MapTypeId to add
     // to the map type control.
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -235,11 +226,9 @@ function showMap(Latitude, Longitude, address) {
                     'styled_map']
         }
     });
-
     //Associate the styled map with the MapTypeId and set it to display.
     map.mapTypes.set('styled_map', styledMapType);
     map.setMapTypeId('styled_map');
-    
     oMarker = new google.maps.Marker({
         position: oLatLng,
         map: map,
@@ -247,12 +236,4 @@ function showMap(Latitude, Longitude, address) {
         animation: google.maps.Animation.DROP,
         icon: "/img/map-marker.png"        
     });    
-    //var infowindow = new google.maps.InfoWindow({
-    //    content: '<h5 Style="text-transform: none;">MAQ Software</h5>' + address
-    //});
-    //google.maps.event.addListener(oMarker, 'click', function () {
-    //    infowindow.open(map, oMarker);
-    //});
-    //infowindow.open(map, oMarker);
-    
 }
