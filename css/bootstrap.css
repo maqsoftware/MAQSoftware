@@ -2855,7 +2855,7 @@ tbody.collapse.show {
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 0.25rem;
+    border-radius: 0px;
 }
 
 .dropdown-divider {
