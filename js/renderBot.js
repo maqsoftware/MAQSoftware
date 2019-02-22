@@ -11,7 +11,7 @@ function renderBot(directLineKey, botSecret) {
     //Create object of Bot Connection
     botConnection = new BotChat.DirectLine(
         {
-            token: 'SFk22dhgRb0.cwA.yxU.2_rl9MP2nw6gVKIU7FCdK89kHN4ZAAv4NTK5eezKKoM',
+            token: directLineKey,
             webSocket: false
         });
 
@@ -19,7 +19,7 @@ function renderBot(directLineKey, botSecret) {
         {
             botConnection: botConnection,
             user: { id: "User" },
-            bot: { id: 'mrvkVFBJ681#ekoNME02%=^' },
+            bot: { id: botSecret },
             resize: 'detect'
         },
         document.getElementById("botContainer"));
@@ -459,6 +459,6 @@ function limitTextSpan() {
 }
 $(document).ready(
     function () {
-        renderBot('SFk22dhgRb0.cwA.yxU.2_rl9MP2nw6gVKIU7FCdK89kHN4ZAAv4NTK5eezKKoM', 'mrvkVFBJ681#ekoNME02%=^');
+        renderBot('I6ldON-4Twk.cwA.z0k.W49-jZyvzMcK_ArFX490lPBBRBiFB6vX1WN2JZKDxqo', 'jbBMQG640:fyndaUVO92}!*');
     }
     );
