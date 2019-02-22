@@ -1009,7 +1009,7 @@ html {
 	float: left;
 	margin-left: -42px;
 }
-
+/*
 .modal-body {
 	text-align: center;
 }
@@ -1028,7 +1028,7 @@ html {
 	width: 30%;
 	height: 70%;
 	min-height: 200px
-}
+}*/
 
 .ExportToMailBtnStyle {
 	border: 12px;
@@ -1038,7 +1038,7 @@ html {
 	background-image: linear-gradient(to right, #0281AF, #395A98);
 }
 
-.modal-intro {
+/*.modal-intro {
 	font-family: Segoe UI, Semilight;
 	font-size: 22px;
 	color: #676767;
@@ -1046,7 +1046,7 @@ html {
 
 .modal-backdrop {
 	background-color: transparent;
-}
+}*/
 
 #maximizeWindow {
 	margin-right: 16px;
@@ -1060,7 +1060,7 @@ html {
     transform: rotate(180deg);
 }
 
-.modal-content {
+/*.modal-content {
 	border-radius: 0px;
 	border: none;
 	box-shadow: none;
@@ -1072,7 +1072,7 @@ html {
 
 .modal-body {
 	margin-top: 50px;
-}
+}*/
 
 .maxDiv, .clearDiv, .emailDiv {
 	height: 56px;
