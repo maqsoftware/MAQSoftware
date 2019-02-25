@@ -1,7 +1,7 @@
 ﻿/* reset */
 body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
 	font-family: "Segoe UI", sans-serif;
-	font-size: 15px;
+	font-size: 13px;
 }
 
 .wc-app button {
@@ -297,12 +297,14 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
 	}
 
 	.wc-card button {
-		background-color: transparent;
-		color: #2667A0;
-		min-height: 32px;
-		width: 100%;
-		padding: 0 16px;
-		text-align: left;
+        background-color: transparent;
+        color: #000000;
+        min-height: 32px;
+        width: 100%;
+        padding: 0 16px;
+        text-align: left;
+        font-weight: inherit;
+        font-size: 13px;
 	}
 
 		.wc-card button:hover {
@@ -977,16 +979,16 @@ html {
 
 	.bottext span {
 		width: 159px;
-		height: 27px;
-		margin-left: -8px;
+        height: 27px;
+        margin-left: 5px;
 	}
 
 .botimg {
 	vertical-align: middle;
-	margin-top: -31px;
-	margin-left: -6px;
-	height: 87px;
-	width: 80px;
+    margin-top: -31px;
+    margin-left: 5px;
+    height: 87px;
+    width: 70px;
 }
 
 
@@ -1101,19 +1103,23 @@ html {
 	}
 
 		#chatBotTray table tr:hover {
-			background-color: #04DAA9;
-			color: #fff;
+			background-color: #F0F0F0;
+            color: #000;
 		}
 
 		#chatBotTray table td p {
 			color: #747474;
-			font-size: 9px;
-			margin-left: 25px;
+            font-size: 9px;
+            margin-left: 24px;
+            letter-spacing: 1.01px;
+            margin-right: 24px;
 		}
 
 		#chatBotTray table img {
 			position: relative;
 			left: 12px;
+            width: 12px;
+            height: 11.86px;
 		}
 
 	#chatBotTray table {
