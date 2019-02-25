@@ -128,6 +128,7 @@ function renderBot(directLineKey, botSecret) {
 
     //collapse bot initially
     chatBoxFlag = 1;
+   
 
     sendList = document.getElementsByClassName("wc-send")[0];
     sendList.removeChild(sendList.childNodes[0]);
@@ -175,6 +176,21 @@ function renderBot(directLineKey, botSecret) {
     $('#sendMsg').on('click', function () {
         document.getElementsByClassName("limitText")[0].textContent = (100) + "/" + 100;
     });
+
+
+    //collapse initially
+    hideBot();
+	    window.onclick = function (event) {
+        var chatBotTrayHandle = document.getElementById("chatBotTrayHandle");
+        if (chatBotTrayHandle.getAttribute("aria-expanded") == "true") {
+            chatBotTrayHandle.setAttribute("aria-expanded", "false");
+            var chatBotTray = document.getElementById("chatBotTray");
+            chatBotTray.classList.remove("open");
+        }
+
+
+    }
+   
 }
 
 function openInNewTab(url) {
@@ -460,5 +476,8 @@ function limitTextSpan() {
 $(document).ready(
     function () {
         renderBot('I6ldON-4Twk.cwA.z0k.W49-jZyvzMcK_ArFX490lPBBRBiFB6vX1WN2JZKDxqo', 'jbBMQG640:fyndaUVO92}!*');
+        $(window).scroll(function () {
+            $(".scroll-top").remove();
+        });
     }
     );
