@@ -39,10 +39,10 @@ UnansweredQuestStrConst = {
 };
 
 BotPageStrConst = {
-    mobiHelpMessage: "Ask MOBI for Help",
+    mobiHelpMessage: "Ask Amy in HR",
     placeHolder: "placeholder",
     askQuesMessage: "Ask a Question...",
-    openChatText: "Open to ask MOBI questions",
+    openChatText: "Open to ask Amy questions",
     closeChat: "Minimize"
 
 };

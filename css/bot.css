@@ -741,7 +741,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
 .fullScreen, .minScreen {
 	height: 16px;
 	width: 15px;
-	margin-top: 17px;
+	margin-top: 21px;
 	float: right !important;
 	cursor: pointer;
 }
@@ -771,7 +771,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
 
 #closeChat {
 	margin-right: 10px;
-	margin-top: 19.5px;
+	margin-top: 21px;
 }
 
 .wc-animate-scroll-rapid {
@@ -973,6 +973,7 @@ html {
 .bottext {
 	display: inline-block;
 	line-height: normal;
+	margin-top: 14px;
 }
 
 
@@ -985,7 +986,7 @@ html {
 
 .botimg {
 	vertical-align: middle;
-    margin-top: -31px;
+    margin-top: -35px;
     margin-left: 5px;
     height: 87px;
     width: 70px;
