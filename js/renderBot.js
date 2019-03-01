@@ -120,7 +120,7 @@ function renderBot(directLineKey, botSecret) {
     header.appendChild(maxDiv);
     //header.appendChild(emailDiv);
     //header.appendChild(trayDiv);
-    header.innerHTML += trayDiv;
+    //header.innerHTML += trayDiv;
 
 
     span = document.createElement('div');
@@ -192,6 +192,8 @@ function renderBot(directLineKey, botSecret) {
     }
    
 }
+
+
 
 function openInNewTab(url) {
     var win = window.open(url, '_blank');
@@ -292,7 +294,7 @@ function hideBot() {
         document.getElementsByClassName('wc-console')[0].classList.remove('hideElement');
         document.getElementsByClassName('wc-message-pane')[0].classList.add('showElement');
         document.getElementsByClassName('wc-console')[0].classList.add('showElement');
-       // document.getElementById('maximizeWindow').classList.remove('rotateimg180');
+        document.getElementById('closeChat').classList.remove('rotateimg180');
         document.getElementById('closeChat').setAttribute('title', BotPageStrConst.closeChat);
 
         if ($(".fullScreen").length > 0) {
@@ -325,7 +327,7 @@ function hideBot() {
 
         document.getElementsByClassName('wc-chatview-panel')[0].classList.remove('maxScrnDimension');
         document.getElementsByClassName('wc-chatview-panel')[0].classList.add('wc-chatview-panel-closed');
-        //document.getElementById('maximizeWindow').classList.add('rotateimg180');
+        document.getElementById('closeChat').classList.add('rotateimg180');
 
 
         document.getElementById('closeChat').setAttribute('title', BotPageStrConst.openChatText);
