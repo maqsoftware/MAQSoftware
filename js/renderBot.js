@@ -307,7 +307,6 @@ function hideBot() {
             chatWindowElement[0].classList.add('maxScrnDimension');
         }
         document.getElementsByClassName('wc-chatview-panel')[0].classList.add('wc-chatview-panel-open');
-        document.getElementById('maximizeWindow').setAttribute('title', 'Full Screen');
 
         var iIterator = 0;
         for (; iIterator < elementlistlength; iIterator++) {
@@ -323,12 +322,10 @@ function hideBot() {
 
         document.getElementsByClassName('wc-message-pane')[0].classList.add('hideElement');
         document.getElementsByClassName('wc-console')[0].classList.add('hideElement');
-        document.getElementById('maximizeWindow').setAttribute('title', 'Full Screen');
 
         document.getElementsByClassName('wc-chatview-panel')[0].classList.remove('maxScrnDimension');
         document.getElementsByClassName('wc-chatview-panel')[0].classList.add('wc-chatview-panel-closed');
         document.getElementById('closeChat').classList.add('rotateimg180');
-
 
         document.getElementById('closeChat').setAttribute('title', BotPageStrConst.openChatText);
 
@@ -483,3 +480,9 @@ $(document).ready(
         });
     }
     );
+
+
+
+
+
+
