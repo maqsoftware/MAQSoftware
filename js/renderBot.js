@@ -480,9 +480,7 @@ $(document).ready(
         });
     }
     );
-
-
-
-
-
-
+$(document).on('DOMNodeInserted', function () {
+    $("a[href^='mailto:']").removeAttr('target');
+}
+);
