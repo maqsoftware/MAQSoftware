@@ -15,6 +15,19 @@ function renderBot(directLineKey, botSecret) {
             webSocket: false
         });
 
+    botConnection
+            .postActivity(
+                {
+                    from: user,
+                    name: 'SendWelcomeMessage',
+                    // provide event name and check for that event in bot
+                    type: 'event',
+                    value: ''
+                })
+            .subscribe(function (id) {
+                console.log("event sent");
+            });
+
     BotChat.App(
         {
             botConnection: botConnection,
@@ -97,17 +110,6 @@ function renderBot(directLineKey, botSecret) {
     clearDiv.setAttribute('onclick', 'clearChat(event)');
     clearDiv.appendChild(ClearImg);
 
-
-    //emailChat = document.createElement('img');
-    //emailChat.setAttribute('src', '../../img/MOBI-Icons/export.png');
-    //emailChat.setAttribute('title', 'Export Conversation');
-    //emailChat.setAttribute('id', 'emailChat');
-    //emailChat.setAttribute('class', 'fullScreen chatWindowIconGroup');
-
-    //emailDiv = document.createElement('div');
-    //emailDiv.setAttribute('class', 'emailDiv chatWindowIconGroup');
-    //emailDiv.setAttribute('onclick', 'SendByMail(event)');
-    //emailDiv.appendChild(emailChat);
 
     trayDiv = '<div class="btn-group dropup fullScreen chatWindowIconGroup trayDiv" onclick="openTray()" id="chatBotTray" onclick="openTray()">\
                     <img src="../../img/MOBI-Icons/tray.png"  id="chatBotTrayHandle" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />\
@@ -217,52 +219,6 @@ function openTray() {
     }
     event.stopPropagation();
 }
-
-/// <summary>
-/// this function is called when new case button is clicked
-/// </summary>
-//function newCase() {
-//    showModal();
-//    event.stopPropagation();
-//}
-
-
-/// <summary>
-/// show modal for new case functionality
-/// </summary>
-//function showModal() {
-//    $("#myModal").modal();
-
-//}
-
-///// <summary>
-///// Send by mail for new case functionality
-///// </summary>
-//function SendByMailNewCase(event) {
-//    SendByMail(event);
-//    createNewCase(event);
-//}
-
-/// <summary>
-/// createNewCase functionality
-/// </summary>
-//function createNewCase(event) {
-//    $('#myModal').modal('hide');
-//    clearChat(event);
-//    botConnection
-//        .postActivity(
-//            {
-//                from: user,
-//                name: 'setNewCase',
-//                // provide event name and check for that event in bot
-//                type: 'event',
-//                value: ''
-//            })
-//        .subscribe(function (id) {
-//            console.log("event sent");
-//        });
-//    event.stopPropagation();
-//}
 
 /// displays the feedback suggested action
 function showfeedback() {
