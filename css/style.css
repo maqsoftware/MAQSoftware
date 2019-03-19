@@ -5283,6 +5283,10 @@ ul.project-detail-block, .project-detail-block ul {
     margin-bottom: 10px;
 }
 
+#viewAllVisuals{
+    height:auto;
+}
+
 @media(max-width:767px) {
     #tabs .nav-tabs {
         border-bottom: 1px solid #f1f1f1 !important;
