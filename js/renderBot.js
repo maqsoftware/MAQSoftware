@@ -68,6 +68,7 @@ function renderBot(directLineKey, botSecret) {
     botimg = document.createElement('img');
     botimg.setAttribute('src', '../../img/MOBI-Icons/botImage.png');
     botimg.setAttribute('class', 'botimg');
+    botimg.setAttribute('alt', 'Amy');
 
     bottext.appendChild(botinnertext);
 
