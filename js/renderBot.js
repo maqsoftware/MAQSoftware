@@ -172,7 +172,6 @@ function renderBot(directLineKey, botSecret) {
             $(".wc-typing").parent().css("background-color", "transparent");
             $(".wc-typing").parent().css("border-radius", "1px");
             $(".wc-typing").parent().css("box-shadow", "none");
-            debugger
             //$(".wc-typing").parent().css("background-color", "#E6E7ED");
             //$(".wc-typing").parent().css("width", "auto");
             //$(".wc-typing").parent().css("border-radius", "10px");
