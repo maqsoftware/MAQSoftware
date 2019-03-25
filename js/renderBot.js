@@ -12,7 +12,8 @@ function renderBot(directLineKey, botSecret) {
     botConnection = new BotChat.DirectLine(
         {
             token: directLineKey,
-            webSocket: false
+            webSocket: true,
+            sendTyping: true
         });
 
     botConnection
@@ -68,6 +69,7 @@ function renderBot(directLineKey, botSecret) {
     botimg = document.createElement('img');
     botimg.setAttribute('src', '../../img/MOBI-Icons/botImage.png');
     botimg.setAttribute('class', 'botimg');
+    botimg.setAttribute('alt', 'Amy');
 
     bottext.appendChild(botinnertext);
 
@@ -163,6 +165,44 @@ function renderBot(directLineKey, botSecret) {
             }
         }
     });
+
+    typingActions = document.getElementsByClassName("wc-message-groups")[0];
+    typingActions.addEventListener('DOMNodeInserted', function () {
+        if (typingActions.getElementsByClassName("wc-typing")[0] !== undefined) {
+            $(".wc-typing").parent().css("background-color", "transparent");
+            $(".wc-typing").parent().css("border-radius", "1px");
+            $(".wc-typing").parent().css("box-shadow", "none");
+            //$(".wc-typing").parent().css("background-color", "#E6E7ED");
+            //$(".wc-typing").parent().css("width", "auto");
+            //$(".wc-typing").parent().css("border-radius", "10px");
+            //$(".wc-typing").parent().css("padding", "20px");
+            //$(".wc-typing").parent().css("display", "table");
+            //$(".wc-typing").parent().css("margin", "0 auto");
+            //$(".wc-typing").parent().css("position", "relative");
+
+
+
+
+            //var positive = suggestedActions.getElementsByClassName("wc-hscroll")[0].getElementsByTagName("button");
+            //if (positive !== undefined) {
+            //    positive[0].setAttribute("title", "Like");
+            //    positive[1].setAttribute("title", "Dislike");
+            //}
+        }
+        else
+            
+        {
+            $(".wc-message-from-bot .wc-message-content").css("border-radius", "10px");
+            $(".wc-message-from-bot .wc-message-content").css("border-bottom-left-radius", "0px");
+            $(".wc-message-from-bot .wc-message-content").css("margin-left", "8px");
+            $(".wc-message-from-bot .wc-message-content").css("background-color", "#E5E5E5");
+            $(".wc-message-from-bot .wc-message-content").css("color", "#5B5B5B");
+       
+        }
+    });
+
+
+
 
     document.getElementsByClassName('wc-chatview-panel')[0].classList.add('wc-chatview-panel-open');
     document.getElementsByClassName('wc-chatview-panel')[0].setAttribute('style' , "transition: all 1s ease 0s");
