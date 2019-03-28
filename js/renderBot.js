@@ -165,13 +165,15 @@ function renderBot(directLineKey, botSecret) {
             }
         }
     });
-
     typingActions = document.getElementsByClassName("wc-message-groups")[0];
     typingActions.addEventListener('DOMNodeInserted', function () {
         if (typingActions.getElementsByClassName("wc-typing")[0] !== undefined) {
             $(".wc-typing").parent().css("background-color", "transparent");
             $(".wc-typing").parent().css("border-radius", "1px");
             $(".wc-typing").parent().css("box-shadow", "none");
+
+
+
             //$(".wc-typing").parent().css("background-color", "#E6E7ED");
             //$(".wc-typing").parent().css("width", "auto");
             //$(".wc-typing").parent().css("border-radius", "10px");
@@ -282,9 +284,19 @@ function hideBot() {
         }
     }
 
-
+    
     //bot gets open when set to 0
     if (chatBoxFlag === 0) {
+        var urlCurrent = window.location.href;
+        var UrlSplitted = urlCurrent.split('/');
+        var currentPage = UrlSplitted[UrlSplitted.length - 1];
+        console.log(currentPage);
+        ga('send', {
+            hitType: 'click',
+            eventCategory: 'bot-' + currentPage,
+            eventAction: 'open',
+            eventLabel: 'maqbot'
+        });
         document.getElementsByClassName('wc-chatview-panel')[0].classList.remove('wc-chatview-panel-closed');
         document.getElementsByClassName('wc-message-pane')[0].classList.remove('hideElement');
         document.getElementsByClassName('wc-console')[0].classList.remove('hideElement');
