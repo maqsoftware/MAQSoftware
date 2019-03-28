@@ -168,12 +168,12 @@ function renderBot(directLineKey, botSecret) {
     });
 
     // calling session storage data to other pages on Bot 
-    //$(function storeddata() {
-    //    if (sessionStorage["myKey"] != null) {
-    //        var contentsOfOldDiv = JSON.parse(sessionStorage["myKey"]);
-    //        $(".wc-message-group-content").html(contentsOfOldDiv);
-    //    }
-    //});
+    $(function storeddata() {
+        if (sessionStorage["myKey"] != null) {
+            var contentsOfOldDiv = JSON.parse(sessionStorage["myKey"]);
+            $(".wc-message-group-content").html(contentsOfOldDiv);
+        }
+    });
 
     typingActions = document.getElementsByClassName("wc-message-groups")[0];
     typingActions.addEventListener('DOMNodeInserted', function () {
@@ -508,17 +508,33 @@ $(document).on('DOMNodeInserted', function () {
 
 
 //window.setTimeout('storedata()', 1 * 60 * 1000);
-//window.onbeforeunload = function storedata() {
-//    sessionStorage["myKey"] = JSON.stringify($(".wc-message-group-content").html());
-//}
+window.onbeforeunload = function storedata() {
+    sessionStorage["myKey"] = JSON.stringify($(".wc-message-group-content").html());
+}
+
+
 
 //window.onload = function msg() {
+//    var a;
 //    newMessages = document.getElementsByClassName("wc-message-groups")[0];
 //    newMessages.addEventListener('DOMNodeInserted', function (evt) {
 //        if (newMessages.getElementsByClassName("wc-message-group-content") !== undefined) {
-//            $(evt.target).appendTo(newMessages.getElementsByClassName("wc-message-group-content")[0]);
+//            a = evt;
+//            console.log(a.target.className);
+//            if (a.target.toString().includes('HTMLDivElement')) {
+//                if (a.target.className === "format-markdown") {
+//                    newMessages.getElementsByClassName("wc-message-content")[0].appendChild(a.target);
+//                }
+//                else {
+//                    newMessages.getElementsByClassName("wc-message-group-content")[0].appendChild(a.target);
+//                }
+
+//            }
+            
 //        }
+        
 //    });
+    
 //}
 
 //window.onload = function msg() {
