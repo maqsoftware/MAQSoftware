@@ -515,28 +515,28 @@ window.onbeforeunload = function storedata() {
 
 
 
-window.onload = function msg() {
-    var a;
-    newMessages = document.getElementsByClassName("wc-message-groups")[0];
-    newMessages.addEventListener('DOMNodeInserted', function (evt) {
-        if (newMessages.getElementsByClassName("wc-message-group-content") !== undefined) {
-            a = evt;
-            console.log(a.target.className);
-            if (a.target.toString().includes('HTMLDivElement')) {
-                if (a.target.className === "format-markdown") {
-                    newMessages.getElementsByClassName("wc-message-content")[0].appendChild(a.target);
-                }
-                else {
-                    newMessages.getElementsByClassName("wc-message-group-content")[0].appendChild(a.target);
-                }
+//window.onload = function msg() {
+//    var a;
+//    newMessages = document.getElementsByClassName("wc-message-groups")[0];
+//    newMessages.addEventListener('DOMNodeInserted', function (evt) {
+//        if (newMessages.getElementsByClassName("wc-message-group-content") !== undefined) {
+//            a = evt;
+//            console.log(a.target.className);
+//            if (a.target.toString().includes('HTMLDivElement')) {
+//                if (a.target.className === "format-markdown") {
+//                    newMessages.getElementsByClassName("wc-message-content")[0].appendChild(a.target);
+//                }
+//                else {
+//                    newMessages.getElementsByClassName("wc-message-group-content")[0].appendChild(a.target);
+//                }
 
-            }
+//            }
             
-        }
+//        }
         
-    });
+//    });
     
-}
+//}
 
 //window.onload = function msg() {
 //    $(document).bind('DOMNodeInserted', function (e) {
