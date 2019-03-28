@@ -1,6 +1,6 @@
 ﻿var parent, span, spanimg, header, limitCount, sendList, sendButton,
     eElement, headerDiv, bottext, botinnertext, botimg, crossimg, limitP, limitText, feedback,
-    maxImg, ClearImg, exportDiv, emailChat, chatBoxFlag, CaseImg, botConnection, user, feedbackButtons, crossDiv, caseDiv, clearDiv, emailDiv, maxDiv, suggestedActions;
+    maxImg, ClearImg, exportDiv, emailChat, chatBoxFlag, CaseImg, botConnection, user, feedbackButtons, crossDiv, caseDiv, clearDiv, emailDiv, maxDiv, suggestedActions, IsHeaderClicked;
 
 
 
@@ -132,7 +132,8 @@ function renderBot(directLineKey, botSecret) {
 
     //collapse bot initially
     chatBoxFlag = 1;
-   
+    IsHeaderClicked = 0;
+
 
     sendList = document.getElementsByClassName("wc-send")[0];
     sendList.removeChild(sendList.childNodes[0]);
@@ -165,6 +166,15 @@ function renderBot(directLineKey, botSecret) {
             }
         }
     });
+
+    // calling session storage data to other pages on Bot 
+    //$(function storeddata() {
+    //    if (sessionStorage["myKey"] != null) {
+    //        var contentsOfOldDiv = JSON.parse(sessionStorage["myKey"]);
+    //        $(".wc-message-group-content").html(contentsOfOldDiv);
+    //    }
+    //});
+
     typingActions = document.getElementsByClassName("wc-message-groups")[0];
     typingActions.addEventListener('DOMNodeInserted', function () {
         if (typingActions.getElementsByClassName("wc-typing")[0] !== undefined) {
@@ -191,15 +201,13 @@ function renderBot(directLineKey, botSecret) {
             //    positive[1].setAttribute("title", "Dislike");
             //}
         }
-        else
-            
-        {
+        else {
             $(".wc-message-from-bot .wc-message-content").css("border-radius", "10px");
             $(".wc-message-from-bot .wc-message-content").css("border-bottom-left-radius", "0px");
             $(".wc-message-from-bot .wc-message-content").css("margin-left", "8px");
             $(".wc-message-from-bot .wc-message-content").css("background-color", "#E5E5E5");
             $(".wc-message-from-bot .wc-message-content").css("color", "#5B5B5B");
-       
+
         }
     });
 
@@ -207,7 +215,7 @@ function renderBot(directLineKey, botSecret) {
 
 
     document.getElementsByClassName('wc-chatview-panel')[0].classList.add('wc-chatview-panel-open');
-    document.getElementsByClassName('wc-chatview-panel')[0].setAttribute('style' , "transition: all 1s ease 0s");
+    document.getElementsByClassName('wc-chatview-panel')[0].setAttribute('style', "transition: all 1s ease 0s");
 
     document.getElementsByClassName("wc-send")[0].title = BotConstants.sendMessageTitle;
     $(document).on('mouseenter', '.ac-pushButton', function () {
@@ -224,7 +232,7 @@ function renderBot(directLineKey, botSecret) {
 
     //collapse initially
     hideBot();
-	    window.onclick = function (event) {
+    window.onclick = function (event) {
         var chatBotTrayHandle = document.getElementById("chatBotTrayHandle");
         if (chatBotTrayHandle.getAttribute("aria-expanded") == "true") {
             chatBotTrayHandle.setAttribute("aria-expanded", "false");
@@ -234,7 +242,7 @@ function renderBot(directLineKey, botSecret) {
 
 
     }
-   
+
 }
 
 
@@ -284,19 +292,23 @@ function hideBot() {
         }
     }
 
-    
+
     //bot gets open when set to 0
     if (chatBoxFlag === 0) {
-        var urlCurrent = window.location.href;
-        var UrlSplitted = urlCurrent.split('/');
-        var currentPage = UrlSplitted[UrlSplitted.length - 1];
-        console.log(currentPage);
-        ga('send', {
-            hitType: 'click',
-            eventCategory: 'bot-' + currentPage,
-            eventAction: 'open',
-            eventLabel: 'maqbot'
-        });
+        if (IsHeaderClicked === 0)
+        {
+            var urlCurrent = window.location.href;
+            var UrlSplitted = urlCurrent.split('/');
+            var currentPage = UrlSplitted[UrlSplitted.length - 1];
+            ga('send', {
+                hitType: 'click',
+                eventCategory: 'bot-' + currentPage,
+                eventAction: 'open',
+                eventLabel: 'maqbot'
+            });
+            IsHeaderClicked = 1;
+        }
+       
         document.getElementsByClassName('wc-chatview-panel')[0].classList.remove('wc-chatview-panel-closed');
         document.getElementsByClassName('wc-message-pane')[0].classList.remove('hideElement');
         document.getElementsByClassName('wc-console')[0].classList.remove('hideElement');
@@ -480,6 +492,7 @@ function limitTextSpan() {
 
     }
 }
+
 $(document).ready(
     function () {
         renderBot('I6ldON-4Twk.cwA.z0k.W49-jZyvzMcK_ArFX490lPBBRBiFB6vX1WN2JZKDxqo', 'jbBMQG640:fyndaUVO92}!*');
@@ -492,3 +505,35 @@ $(document).on('DOMNodeInserted', function () {
     $("a[href^='mailto:']").removeAttr('target');
 }
 );
+
+
+//window.setTimeout('storedata()', 1 * 60 * 1000);
+//window.onbeforeunload = function storedata() {
+//    sessionStorage["myKey"] = JSON.stringify($(".wc-message-group-content").html());
+//}
+
+//window.onload = function msg() {
+//    newMessages = document.getElementsByClassName("wc-message-groups")[0];
+//    newMessages.addEventListener('DOMNodeInserted', function (evt) {
+//        if (newMessages.getElementsByClassName("wc-message-group-content") !== undefined) {
+//            $(evt.target).appendTo(newMessages.getElementsByClassName("wc-message-group-content")[0]);
+//        }
+//    });
+//}
+
+//window.onload = function msg() {
+//    $(document).bind('DOMNodeInserted', function (e) {
+//        var element = document.getElementsByClassName("wc-message-group-content")[0];
+//        if (element.getElementsByClassName("wc-message-group-content") !== undefined) {
+//            $(e.target).appendTo(element.getElementsByClassName("wc-message-group-content")[0]);
+//        }
+
+//    });
+//}
+
+//function CheckSession() {
+//    var session = '<%=Session["username"] != null%>';
+//    if (session == false) {
+//        localStorage.clear();
+//    }
+//}
