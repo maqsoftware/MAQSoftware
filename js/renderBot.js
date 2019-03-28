@@ -175,6 +175,7 @@ function renderBot(directLineKey, botSecret) {
         }
     });
 
+
     typingActions = document.getElementsByClassName("wc-message-groups")[0];
     typingActions.addEventListener('DOMNodeInserted', function () {
         if (typingActions.getElementsByClassName("wc-typing")[0] !== undefined) {
