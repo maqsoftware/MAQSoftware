@@ -175,15 +175,15 @@ function renderBot(directLineKey, botSecret) {
     });
 
     $(function appendmessage() {
-        var a,msgList,targetNode,a;
+        var msgList,targetNode;
         newMessages = document.getElementsByClassName("wc-message-groups")[0];
         if (null !== document.getElementsByClassName("wc-message-groups") && undefined !== document.getElementsByClassName("wc-message-groups")) {
             newMessages.addEventListener('DOMNodeInserted', function (evt) {
                 if (undefined !== newMessages.getElementsByClassName("wc-message-group-content")) {
-                    var msgList = document.getElementsByClassName('wc-message-wrapper list').length;
+                    msgList = document.getElementsByClassName('wc-message-wrapper list').length;
                     if (isFirstMessage === 0 && evt.target.getAttribute('class') === 'wc-message-wrapper list') {
                         isFirstMessage = 1;
-                        var targetNode = document.getElementsByClassName('wc-message-wrapper list')[0];
+                        targetNode = document.getElementsByClassName('wc-message-wrapper list')[0];
                         var grpContent = newMessages.getElementsByClassName("wc-message-group-content")[0];
                         grpContent.removeChild(targetNode);
                         grpContent.appendChild(targetNode);
