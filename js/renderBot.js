@@ -1,7 +1,6 @@
 ﻿var parent, span, spanimg, header, limitCount, sendList, sendButton,
     eElement, headerDiv, bottext, botinnertext, botimg, crossimg, limitP, limitText, feedback,
-    maxImg, ClearImg, exportDiv, emailChat, chatBoxFlag, CaseImg, botConnection, user, feedbackButtons, crossDiv, caseDiv, clearDiv, emailDiv, maxDiv, suggestedActions, IsHeaderClicked;
-
+    maxImg, ClearImg, exportDiv, emailChat, chatBoxFlag, CaseImg, botConnection, user, feedbackButtons, crossDiv, caseDiv, clearDiv, emailDiv, maxDiv, suggestedActions, IsHeaderClicked, isFirstMessage;
 
 
 /// <summary>
@@ -133,7 +132,7 @@ function renderBot(directLineKey, botSecret) {
     //collapse bot initially
     chatBoxFlag = 1;
     IsHeaderClicked = 0;
-
+    isFirstMessage = 0;
 
     sendList = document.getElementsByClassName("wc-send")[0];
     sendList.removeChild(sendList.childNodes[0]);
@@ -175,6 +174,25 @@ function renderBot(directLineKey, botSecret) {
         }
     });
 
+    $(function appendmessage() {
+        var a;
+        newMessages = document.getElementsByClassName("wc-message-groups")[0];
+        newMessages.addEventListener('DOMNodeInserted', function (evt) {
+            if (newMessages.getElementsByClassName("wc-message-group-content") !== undefined) {
+                var msgList = document.getElementsByClassName('wc-message-wrapper list').length;
+                if (isFirstMessage === 0 && $(evt.target).attr('class') === 'wc-message-wrapper list') {
+                    isFirstMessage = 1;
+                    var targetNode = document.getElementsByClassName('wc-message-wrapper list')[0];
+                    newMessages.getElementsByClassName("wc-message-group-content")[0].removeChild(targetNode);
+                    newMessages.getElementsByClassName("wc-message-group-content")[0].appendChild(targetNode);
+                    newMessages.scrollBottom = newMessages.scrollHeight;
+
+                }
+
+            }
+        });
+    });
+
 
     typingActions = document.getElementsByClassName("wc-message-groups")[0];
     typingActions.addEventListener('DOMNodeInserted', function () {
@@ -209,7 +227,7 @@ function renderBot(directLineKey, botSecret) {
             $(".wc-message-from-bot .wc-message-content").css("background-color", "#E5E5E5");
             $(".wc-message-from-bot .wc-message-content").css("color", "#5B5B5B");
 
-        }
+    }
     });
 
 
@@ -231,7 +249,7 @@ function renderBot(directLineKey, botSecret) {
     });
 
 
-    //collapse initially
+        //collapse initially
     hideBot();
     window.onclick = function (event) {
         var chatBotTrayHandle = document.getElementById("chatBotTrayHandle");
@@ -239,7 +257,7 @@ function renderBot(directLineKey, botSecret) {
             chatBotTrayHandle.setAttribute("aria-expanded", "false");
             var chatBotTray = document.getElementById("chatBotTray");
             chatBotTray.classList.remove("open");
-        }
+    }
 
 
     }
@@ -280,7 +298,6 @@ function showfeedback() {
 /// Hide bot
 /// </summary>
 function hideBot() {
-
     var chatWindowElement = document.getElementsByClassName("wc-chatview-panel");
     var iconList = document.getElementsByClassName('chatWindowIconGroup');
     var elementlistlength = iconList.length;
@@ -507,50 +524,6 @@ $(document).on('DOMNodeInserted', function () {
 }
 );
 
-
-//window.setTimeout('storedata()', 1 * 60 * 1000);
 window.onbeforeunload = function storedata() {
     sessionStorage["myKey"] = JSON.stringify($(".wc-message-group-content").html());
 }
-
-
-
-//window.onload = function msg() {
-//    var a;
-//    newMessages = document.getElementsByClassName("wc-message-groups")[0];
-//    newMessages.addEventListener('DOMNodeInserted', function (evt) {
-//        if (newMessages.getElementsByClassName("wc-message-group-content") !== undefined) {
-//            a = evt;
-//            console.log(a.target.className);
-//            if (a.target.toString().includes('HTMLDivElement')) {
-//                if (a.target.className === "format-markdown") {
-//                    newMessages.getElementsByClassName("wc-message-content")[0].appendChild(a.target);
-//                }
-//                else {
-//                    newMessages.getElementsByClassName("wc-message-group-content")[0].appendChild(a.target);
-//                }
-
-//            }
-            
-//        }
-        
-//    });
-    
-//}
-
-//window.onload = function msg() {
-//    $(document).bind('DOMNodeInserted', function (e) {
-//        var element = document.getElementsByClassName("wc-message-group-content")[0];
-//        if (element.getElementsByClassName("wc-message-group-content") !== undefined) {
-//            $(e.target).appendTo(element.getElementsByClassName("wc-message-group-content")[0]);
-//        }
-
-//    });
-//}
-
-//function CheckSession() {
-//    var session = '<%=Session["username"] != null%>';
-//    if (session == false) {
-//        localStorage.clear();
-//    }
-//}
