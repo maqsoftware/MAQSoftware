@@ -638,7 +638,6 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
 		border: none;
 		height: 74%;
 		outline: none;
-		padding: 0;
 		resize: none;
 		width: 100%;
 	}
@@ -688,7 +687,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
 	}
 
 		.wc-console .wc-textbox input {
-			padding: 0px;
+			
 			background-color: #ffffff;
 		}
 
@@ -771,7 +770,6 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea {
 }
 
 .wc-shellinput {
-	padding: 5px;
 	margin-left: 2px;
 }
 
