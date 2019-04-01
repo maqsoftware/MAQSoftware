@@ -168,64 +168,41 @@ function renderBot(directLineKey, botSecret) {
 
     // calling session storage data to other pages on Bot 
     $(function storeddata() {
-        if (sessionStorage["myKey"] != null) {
+        if (null != sessionStorage["myKey"]) {
             var contentsOfOldDiv = JSON.parse(sessionStorage["myKey"]);
             $(".wc-message-group-content").html(contentsOfOldDiv);
         }
     });
 
     $(function appendmessage() {
-        var a;
+        var a,msgList,targetNode,a;
         newMessages = document.getElementsByClassName("wc-message-groups")[0];
-        newMessages.addEventListener('DOMNodeInserted', function (evt) {
-            if (newMessages.getElementsByClassName("wc-message-group-content") !== undefined) {
-                var msgList = document.getElementsByClassName('wc-message-wrapper list').length;
-                if (isFirstMessage === 0 && $(evt.target).attr('class') === 'wc-message-wrapper list') {
-                    isFirstMessage = 1;
-                    var targetNode = document.getElementsByClassName('wc-message-wrapper list')[0];
-                    newMessages.getElementsByClassName("wc-message-group-content")[0].removeChild(targetNode);
-                    newMessages.getElementsByClassName("wc-message-group-content")[0].appendChild(targetNode);
-                    newMessages.scrollBottom = newMessages.scrollHeight;
+        if (null !== document.getElementsByClassName("wc-message-groups") && undefined !== document.getElementsByClassName("wc-message-groups")) {
+            newMessages.addEventListener('DOMNodeInserted', function (evt) {
+                if (undefined !== newMessages.getElementsByClassName("wc-message-group-content")) {
+                    var msgList = document.getElementsByClassName('wc-message-wrapper list').length;
+                    if (isFirstMessage === 0 && evt.target.getAttribute('class') === 'wc-message-wrapper list') {
+                        isFirstMessage = 1;
+                        var targetNode = document.getElementsByClassName('wc-message-wrapper list')[0];
+                        var grpContent = newMessages.getElementsByClassName("wc-message-group-content")[0];
+                        grpContent.removeChild(targetNode);
+                        grpContent.appendChild(targetNode);
+
+                    }
 
                 }
-
-            }
-        });
+            });
+        }
     });
-
 
     typingActions = document.getElementsByClassName("wc-message-groups")[0];
     typingActions.addEventListener('DOMNodeInserted', function () {
-        if (typingActions.getElementsByClassName("wc-typing")[0] !== undefined) {
-            $(".wc-typing").parent().css("background-color", "transparent");
-            $(".wc-typing").parent().css("border-radius", "1px");
-            $(".wc-typing").parent().css("box-shadow", "none");
+        if (undefined !== typingActions.getElementsByClassName("wc-typing")[0]) {
+            var a = $(".wc-typing").parent().css("background-color", "transparent").css("border-radius", "1px").css("box-shadow", "none");
 
-
-
-            //$(".wc-typing").parent().css("background-color", "#E6E7ED");
-            //$(".wc-typing").parent().css("width", "auto");
-            //$(".wc-typing").parent().css("border-radius", "10px");
-            //$(".wc-typing").parent().css("padding", "20px");
-            //$(".wc-typing").parent().css("display", "table");
-            //$(".wc-typing").parent().css("margin", "0 auto");
-            //$(".wc-typing").parent().css("position", "relative");
-
-
-
-
-            //var positive = suggestedActions.getElementsByClassName("wc-hscroll")[0].getElementsByTagName("button");
-            //if (positive !== undefined) {
-            //    positive[0].setAttribute("title", "Like");
-            //    positive[1].setAttribute("title", "Dislike");
-            //}
         }
         else {
-            $(".wc-message-from-bot .wc-message-content").css("border-radius", "10px");
-            $(".wc-message-from-bot .wc-message-content").css("border-bottom-left-radius", "0px");
-            $(".wc-message-from-bot .wc-message-content").css("margin-left", "8px");
-            $(".wc-message-from-bot .wc-message-content").css("background-color", "#E5E5E5");
-            $(".wc-message-from-bot .wc-message-content").css("color", "#5B5B5B");
+            $(".wc-message-from-bot .wc-message-content").css("border-radius", "10px").css("border-bottom-left-radius", "0px").css("margin-left", "8px").css("background-color", "#E5E5E5").css("color", "#5B5B5B");
 
     }
     });
