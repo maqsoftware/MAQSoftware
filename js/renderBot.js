@@ -157,9 +157,9 @@ function renderBot(directLineKey, botSecret) {
 
     suggestedActions = document.getElementsByClassName("wc-suggested-actions")[0];
     suggestedActions.addEventListener('DOMNodeInserted', function () {
-        if (suggestedActions.getElementsByClassName("wc-hscroll")[0] !== undefined) {
+        if (undefined !== suggestedActions.getElementsByClassName("wc-hscroll")[0]) {
             var positive = suggestedActions.getElementsByClassName("wc-hscroll")[0].getElementsByTagName("button");
-            if (positive !== undefined) {
+            if (undefined !== positive) {
                 positive[0].setAttribute("title", "Like");
                 positive[1].setAttribute("title", "Dislike");
             }
@@ -181,9 +181,9 @@ function renderBot(directLineKey, botSecret) {
             newMessages.addEventListener('DOMNodeInserted', function (evt) {
                 if (undefined !== newMessages.getElementsByClassName("wc-message-group-content")) {
                     msgList = document.getElementsByClassName('wc-message-wrapper list').length;
-                    if (isFirstMessage === 0 && evt.target.getAttribute('class') === 'wc-message-wrapper list') {
+                    if (0 === isFirstMessage && evt.target.getAttribute('class') === 'wc-message-wrapper list') {
                         isFirstMessage = 1;
-                        targetNode = document.getElementsByClassName('wc-message-wrapper list')[0];
+                        targetNode = document.getElementsByClassName("wc-message-wrapper list")[0];
                         var grpContent = newMessages.getElementsByClassName("wc-message-group-content")[0];
                         grpContent.removeChild(targetNode);
                         grpContent.appendChild(targetNode);
@@ -198,12 +198,10 @@ function renderBot(directLineKey, botSecret) {
     typingActions = document.getElementsByClassName("wc-message-groups")[0];
     typingActions.addEventListener('DOMNodeInserted', function () {
         if (undefined !== typingActions.getElementsByClassName("wc-typing")[0]) {
-            var a = $(".wc-typing").parent().css("background-color", "transparent").css("border-radius", "1px").css("box-shadow", "none");
-
-        }
+            var typingIndicator = $(".wc-typing").parent().addClass("wc-typingmsg");
+       }
         else {
-            $(".wc-message-from-bot .wc-message-content").css("border-radius", "10px").css("border-bottom-left-radius", "0px").css("margin-left", "8px").css("background-color", "#E5E5E5").css("color", "#5B5B5B");
-
+            $(".wc-message-from-bot .wc-message-content").removeClass("wc-typingmsg").addClass("wc-message-contentnew");
     }
     });
 
@@ -230,7 +228,7 @@ function renderBot(directLineKey, botSecret) {
     hideBot();
     window.onclick = function (event) {
         var chatBotTrayHandle = document.getElementById("chatBotTrayHandle");
-        if (chatBotTrayHandle.getAttribute("aria-expanded") == "true") {
+        if ("true" == chatBotTrayHandle.getAttribute("aria-expanded") ) {
             chatBotTrayHandle.setAttribute("aria-expanded", "false");
             var chatBotTray = document.getElementById("chatBotTray");
             chatBotTray.classList.remove("open");
@@ -253,7 +251,7 @@ function openInNewTab(url) {
 /// </summary>
 function openTray() {
     var chatBotTrayHandle = document.getElementById("chatBotTrayHandle");
-    if (chatBotTrayHandle.getAttribute("aria-expanded") == "true") {
+    if ("true" == chatBotTrayHandle.getAttribute("aria-expanded")) {
         chatBotTrayHandle.setAttribute("aria-expanded", "false");
         var chatBotTray = document.getElementById("chatBotTray");
         chatBotTray.classList.remove("open");
@@ -289,8 +287,8 @@ function hideBot() {
 
 
     //bot gets open when set to 0
-    if (chatBoxFlag === 0) {
-        if (IsHeaderClicked === 0)
+    if (0 === chatBoxFlag) {
+        if (0 === IsHeaderClicked)
         {
             var urlCurrent = window.location.href;
             var UrlSplitted = urlCurrent.split('/');
@@ -413,7 +411,7 @@ function SendByMail(event) {
     // get list of chat messages
     var messageList = document.getElementsByClassName("wc-message-wrapper");
 
-    if (messageList !== null) {
+    if (null!== messageList) {
         var messageListLength = messageList.length;
     }
 
@@ -461,7 +459,7 @@ function limitTextSpan() {
         limitField.value = limitField.value.substring(0, BotConstants.countOfLimit);
     }
     else {
-        if (limitField.value === '') {
+        if ('' === limitField.value) {
             limitCount = BotConstants.countOfLimit;
         }
         else {
@@ -469,7 +467,7 @@ function limitTextSpan() {
             document.getElementById('sendMsg').style.color = "#BA141A";
         }
     }
-    if (limitCount === 0) {
+    if (0 === limitCount) {
         document.getElementsByClassName("limitText")[0].textContent = (BotConstants.countOfLimit - textString.length) + "/" + BotConstants.countOfLimit;
     }
     else {
