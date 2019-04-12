@@ -1,7 +1,6 @@
 ﻿var parent, span, spanimg, header, limitCount, sendList, sendButton,
     eElement, headerDiv, bottext, botinnertext, botimg, crossimg, limitP, limitText, feedback,
-    maxImg, ClearImg, exportDiv, emailChat, chatBoxFlag, CaseImg, botConnection, user, feedbackButtons, crossDiv, caseDiv, clearDiv, emailDiv, maxDiv, suggestedActions;
-
+    maxImg, ClearImg, exportDiv, emailChat, chatBoxFlag, CaseImg, botConnection, user, feedbackButtons, crossDiv, caseDiv, clearDiv, emailDiv, maxDiv, suggestedActions, IsHeaderClicked, isFirstMessage;
 
 
 /// <summary>
@@ -14,7 +13,6 @@ function renderBot(directLineKey, botSecret) {
             token: directLineKey,
             webSocket: true,
             sendTyping: true
-
         });
 
     botConnection
@@ -70,6 +68,7 @@ function renderBot(directLineKey, botSecret) {
     botimg = document.createElement('img');
     botimg.setAttribute('src', '../../img/MOBI-Icons/botImage.png');
     botimg.setAttribute('class', 'botimg');
+    botimg.setAttribute('alt', 'Amy');
 
     bottext.appendChild(botinnertext);
 
@@ -132,7 +131,8 @@ function renderBot(directLineKey, botSecret) {
 
     //collapse bot initially
     chatBoxFlag = 1;
-   
+    IsHeaderClicked = 0;
+    isFirstMessage = 0;
 
     sendList = document.getElementsByClassName("wc-send")[0];
     sendList.removeChild(sendList.childNodes[0]);
@@ -157,17 +157,59 @@ function renderBot(directLineKey, botSecret) {
 
     suggestedActions = document.getElementsByClassName("wc-suggested-actions")[0];
     suggestedActions.addEventListener('DOMNodeInserted', function () {
-        if (suggestedActions.getElementsByClassName("wc-hscroll")[0] !== undefined) {
+        if (undefined !== suggestedActions.getElementsByClassName("wc-hscroll")[0]) {
             var positive = suggestedActions.getElementsByClassName("wc-hscroll")[0].getElementsByTagName("button");
-            if (positive !== undefined) {
+            if (undefined !== positive) {
                 positive[0].setAttribute("title", "Like");
                 positive[1].setAttribute("title", "Dislike");
             }
         }
     });
 
+    // calling session storage data to other pages on Bot 
+    $(function storeddata() {
+        if (null != sessionStorage["myKey"]) {
+            var contentsOfOldDiv = JSON.parse(sessionStorage["myKey"]);
+            $(".wc-message-group-content").html(contentsOfOldDiv);
+        }
+    });
+
+    $(function appendmessage() {
+        var msgList,targetNode;
+        newMessages = document.getElementsByClassName("wc-message-groups")[0];
+        if (null !== document.getElementsByClassName("wc-message-groups") && undefined !== document.getElementsByClassName("wc-message-groups")) {
+            newMessages.addEventListener('DOMNodeInserted', function (evt) {
+                if (undefined !== newMessages.getElementsByClassName("wc-message-group-content")) {
+                    msgList = document.getElementsByClassName('wc-message-wrapper list').length;
+                    if (0 === isFirstMessage && evt.target.getAttribute('class') === 'wc-message-wrapper list') {
+                        isFirstMessage = 1;
+                        targetNode = document.getElementsByClassName("wc-message-wrapper list")[0];
+                        var grpContent = newMessages.getElementsByClassName("wc-message-group-content")[0];
+                        grpContent.removeChild(targetNode);
+                        grpContent.appendChild(targetNode);
+
+                    }
+
+                }
+            });
+        }
+    });
+
+    typingActions = document.getElementsByClassName("wc-message-groups")[0];
+    typingActions.addEventListener('DOMNodeInserted', function () {
+        if (undefined !== typingActions.getElementsByClassName("wc-typing")[0]) {
+            var typingIndicator = $(".wc-typing").parent().addClass("wc-typingmsg");
+       }
+        else {
+            $(".wc-message-from-bot .wc-message-content").removeClass("wc-typingmsg").addClass("wc-message-contentnew");
+    }
+    });
+
+
+
+
     document.getElementsByClassName('wc-chatview-panel')[0].classList.add('wc-chatview-panel-open');
-    document.getElementsByClassName('wc-chatview-panel')[0].setAttribute('style' , "transition: all 1s ease 0s");
+    document.getElementsByClassName('wc-chatview-panel')[0].setAttribute('style', "transition: all 1s ease 0s");
 
     document.getElementsByClassName("wc-send")[0].title = BotConstants.sendMessageTitle;
     $(document).on('mouseenter', '.ac-pushButton', function () {
@@ -182,19 +224,19 @@ function renderBot(directLineKey, botSecret) {
     });
 
 
-    //collapse initially
+        //collapse initially
     hideBot();
-	    window.onclick = function (event) {
+    window.onclick = function (event) {
         var chatBotTrayHandle = document.getElementById("chatBotTrayHandle");
-        if (chatBotTrayHandle.getAttribute("aria-expanded") == "true") {
+        if ("true" == chatBotTrayHandle.getAttribute("aria-expanded") ) {
             chatBotTrayHandle.setAttribute("aria-expanded", "false");
             var chatBotTray = document.getElementById("chatBotTray");
             chatBotTray.classList.remove("open");
-        }
+    }
 
 
     }
-   
+
 }
 
 
@@ -209,7 +251,7 @@ function openInNewTab(url) {
 /// </summary>
 function openTray() {
     var chatBotTrayHandle = document.getElementById("chatBotTrayHandle");
-    if (chatBotTrayHandle.getAttribute("aria-expanded") == "true") {
+    if ("true" == chatBotTrayHandle.getAttribute("aria-expanded")) {
         chatBotTrayHandle.setAttribute("aria-expanded", "false");
         var chatBotTray = document.getElementById("chatBotTray");
         chatBotTray.classList.remove("open");
@@ -231,7 +273,6 @@ function showfeedback() {
 /// Hide bot
 /// </summary>
 function hideBot() {
-
     var chatWindowElement = document.getElementsByClassName("wc-chatview-panel");
     var iconList = document.getElementsByClassName('chatWindowIconGroup');
     var elementlistlength = iconList.length;
@@ -246,7 +287,21 @@ function hideBot() {
 
 
     //bot gets open when set to 0
-    if (chatBoxFlag === 0) {
+    if (0 === chatBoxFlag) {
+        if (0 === IsHeaderClicked)
+        {
+            var urlCurrent = window.location.href;
+            var UrlSplitted = urlCurrent.split('/');
+            var currentPage = UrlSplitted[UrlSplitted.length - 1];
+            ga('send', {
+                hitType: 'click',
+                eventCategory: 'bot-' + currentPage,
+                eventAction: 'open',
+                eventLabel: 'maqbot'
+            });
+            IsHeaderClicked = 1;
+        }
+       
         document.getElementsByClassName('wc-chatview-panel')[0].classList.remove('wc-chatview-panel-closed');
         document.getElementsByClassName('wc-message-pane')[0].classList.remove('hideElement');
         document.getElementsByClassName('wc-console')[0].classList.remove('hideElement');
@@ -356,7 +411,7 @@ function SendByMail(event) {
     // get list of chat messages
     var messageList = document.getElementsByClassName("wc-message-wrapper");
 
-    if (messageList !== null) {
+    if (null!== messageList) {
         var messageListLength = messageList.length;
     }
 
@@ -404,7 +459,7 @@ function limitTextSpan() {
         limitField.value = limitField.value.substring(0, BotConstants.countOfLimit);
     }
     else {
-        if (limitField.value === '') {
+        if ('' === limitField.value) {
             limitCount = BotConstants.countOfLimit;
         }
         else {
@@ -412,7 +467,7 @@ function limitTextSpan() {
             document.getElementById('sendMsg').style.color = "#BA141A";
         }
     }
-    if (limitCount === 0) {
+    if (0 === limitCount) {
         document.getElementsByClassName("limitText")[0].textContent = (BotConstants.countOfLimit - textString.length) + "/" + BotConstants.countOfLimit;
     }
     else {
@@ -430,6 +485,7 @@ function limitTextSpan() {
 
     }
 }
+
 $(document).ready(
     function () {
         renderBot('I6ldON-4Twk.cwA.z0k.W49-jZyvzMcK_ArFX490lPBBRBiFB6vX1WN2JZKDxqo', 'jbBMQG640:fyndaUVO92}!*');
@@ -442,3 +498,7 @@ $(document).on('DOMNodeInserted', function () {
     $("a[href^='mailto:']").removeAttr('target');
 }
 );
+
+window.onbeforeunload = function storedata() {
+    sessionStorage["myKey"] = JSON.stringify($(".wc-message-group-content").html());
+}
