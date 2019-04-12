@@ -7,7 +7,7 @@
       "description": "Render events on specific days, which can be used as a reference during your report review.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381844?tab=Overview",
       "img": "../img/PowerBI/calendar-icon.png",
-      "gif": "../img/PowerBI/CalendarByMAQSoftware.gif",
+      "gif": "../img/PowerBI/CalendarByMAQSoftware.mp4",
       "content": "<p>Calendar by MAQ Software is the most effective way to track events. This visual allows users to render events on specific days, which can be used as a reference during your report review.</p><p>This visual is excellent for year-end reviews or simply examining next week’s schedule.</p><p>Key features:</p><ul><li>Ability to group events based on category.</li><li>Multiple views available—Month, Week, Day, List.</li><li>Ability to navigate to event details with a click.</li><li>Ability to set workdays and hours.</li></ul>",
       "category": "utility"
     }
@@ -20,7 +20,7 @@
       "description": "Implement four different forecasting models to learn from historical data and predict future values.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381845?tab=Overview",
       "img": "../img/PowerBI/forecast-icon.png",
-      "gif": "../img/PowerBI/forecast-multiple-models.gif",
+      "gif": "../img/PowerBI/forecast-multiple-models.mp4",
       "content": "<p>Forecast Using Multiple Models by MAQ Software lets you implement four different forecasting models to learn from historical data and predict future values. The forecasting models include linear regression, ARIMA, exponential smoothing, and neural network.</p><p>This visual is excellent for forecasting budgets, sales, demand, or inventory.</p><p>R package dependencies (auto-installed): forecast, plotly, zoo, lubridate.</p><p>Key features:</p><ul><li>Four different forecasting methods/models.</li><li>Ability to adjust the parameters of the learning model.</li><li>Wide range of date and time formats. </li><li>Ability to choose algorithm, show or hide confidence intervals, decide on the split point, and apply data transformation.</li></ul>",
       "category": "forecast"
     }
@@ -33,7 +33,7 @@
       "description": "Gantt chart with a grid that shows task details and key performance indicators.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381364?tab=Overview",
       "img": "../img/PowerBI/Gantt_Chart.png",
-      "gif": "../img/PowerBI/Gantt_Chart_GIF.gif",
+      "gif": "../img/PowerBI/Gantt_Chart.mp4",
       "content": "<p>Gantt charts are used for scheduling and task management. Ordinary Gantt charts only display basic details such task IDs, names, and schedules. Gantt Chart by MAQ Software includes a grid that allows users to view data related to the task and the hierarchy of data categories. Users can sort the data based on any data point contained in the task.</p><p>With Gantt Chart by MAQ  Software, project managers can monitor project IDs, start times, end times, current status, project duration, project owners, and task priorities, as well as many other KPIs. Users can also view individual tasks and their progress.</p><p>Key features:</p><ul><li>Hierarchical view with expand / collapse option for parent levels.</li><li>Color bars based on category.</li><li>Task details on grid with hierarchy.</li><li>Showcase the task status as of the current date.</li><li>Sort data based on any parameter of grid.</li><li>Display tooltips for column headers, category labels, KPI indicators, data labels, and bars.</li></ul>",
       "category": "change"
     }
@@ -46,7 +46,7 @@
       "description": "Display data in hierarchical order with options to separate categories and illustrate trends.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380947?tab=Overview",
       "img": "../img/PowerBI/KPI_Grid.png",
-      "gif": "../img/PowerBI/KPI_Grid_GIF.gif",
+      "gif": "../img/PowerBI/KPI_Grid.mp4",
       "content": "<p>KPI Grid by MAQ Software allows users to track productivity and performance data by displaying key data in hierarchical order.Users can specify the time periods shown, making gauging performance according to internal deadlines and benchmarks easy.</p><p>KPI Grid by MAQ Software is useful for adding visual interest to reports, such as yearly sales data.In addition to displaying the data, users can add images to emphasize trends.</p><p>Key features:</p><ul><li>Include custom images such as rising or falling arrows.</li><li>Include separators between columns, highlighting certain categories for quick comparison.</li><li>Change row background colors, text size, and text color.</li></ul>",
       "category": "ranking kpi"
     }
@@ -59,7 +59,7 @@
       "description": "Create straightforward graphs that show networks of categories and relationships.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380989?tab=Overview",
       "img": "../img/PowerBI/Journey_Chart.png",
-      "gif": "../img/PowerBI/Journey_Chart_GIF.gif",
+      "gif": "../img/PowerBI/Journey_Chart.mp4",
       "content": "<p>Journey Chart by MAQ Software lets users display complex, multi-stage lead paths in a clean, uncluttered visual. In this visual, nodes represent categories and vertices represent relationships between categories. The bigger the node or vertex, the larger the value. Customizable node colors make distinguishing between categories easy.</p><p>Journey Chart by MAQ Software is useful for explaining process flow, uncovering underlying patterns, highlighting subcategories stemming from a single source, and showing connections between categories.</p><p>Key features:</p><ul><li>Text labels and tooltips for each node provide information such as title or value.</li><li>Customize colors and sizes for text labels.</li><li>Option to add a legend to clarify complex graphs.</li></ul>",
       "category": "correlation flow"
     }
@@ -72,7 +72,7 @@
       "description": "Use the Neural Network algorithm to forecast future values based on historical data.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381428?tab=Overview",
       "img": "../img/PowerBI/Forecast_Using_Neural_Network.png",
-      "gif": "../img/PowerBI/Forecast_Using_Neural_Network_GIF.gif",
+      "gif": "../img/PowerBI/Forecast_Using_Neural_Network.mp4",
       "content": "<p>Forecasting using Neural Network by MAQ Software implements an “Artificial Neural Network” to learn from historical data and predict future values. This visual uses a single layer feed forward network with lagged inputs to process time series values. R package dependencies (auto-installed): forecast, plotly, zoo, xts.</p><p>Forecasting using Neural Network by MAQ Software is useful for forecasting budgets, sales, demand, or inventory.</p><p>Key features:</p><ul><li>Ability to use years or distinct numerical values in place of date and time field. (The visual will work for both numerical series, i.e. years or numbers, and proper date and time values).</li><li>Hover tooltips and highlighting of specific portions of the plot.</li><li>Capability to manually adjust the parameters of the learning model.</li></ul>",
       "category": "change flow forecast"
     }
@@ -85,7 +85,7 @@
       "description": "Show relationships between values and display a dynamic key performance indicator.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380824?tab=Overview",
       "img": "../img/PowerBI/Ring_Chart.png",
-      "gif": "../img/PowerBI/Ring_Chart_GIF.gif",
+      "gif": "../img/PowerBI/Ring_Chart.mp4",
       "content": "<p> Ring Chart by MAQ Software breaks large sums into smaller data slices. The size of each slice is relative to the data itself. The center of the ring displays a dynamic KPI and summary. Threshold values define the color and direction of the indicator.</p><p>For example, to display the contribution of various channels to the total sales, data for channels such as e-mail, store, and online can be represented as slices of the ring. In this scenario, the entire ring represents total sales.</p><p>Key features:</p><ul><li>3D visual feedback when highlighting specific slices.</li><li>Display raw data in legend, along with toggleable KPI indicators.</li><li>Showcase multiple data fields in tooltips.</li></ul>",
       "category": "part"
     }
@@ -98,7 +98,7 @@
       "description": "Show data in quadrants, illustrating distribution and items that share common traits.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381011?tab=Overview",
       "img": "../img/PowerBI/Quadrant_Chart.png",
-      "gif": "../img/PowerBI/Quadrant_Chart_GIF.gif",
+      "gif": "../img/PowerBI/Quadrant_Chart.mp4",
       "content": "<p>Quadrant Chart by MAQ Software is a bubble chart with a background divided into four equal sections.This visual is useful for plotting data that contains three measures using an X-axis, a Y-axis, and varying bubble sizes that represent the value of the third measure.</p><p>Quadrant Chart by MAQ Software is useful for showing relationships, such as the relationship between production cost and gross profit. Users can place cost values on the X-axis and profit on the Y-axis. The four sections rate the performance (cost vs. profit) as bad, good, better, or best.Bubbles in each quadrant represent the health of each respective quadrant. The size of the bubble represents the number of units sold. Quadrant Chart by MAQ Software is compact, yet shows a great deal of information.</p><p>Key features:</p><ul><li>Customizable bubble colors.</li><li>Formatting options for quadrants and quadrant lines including naming for each quadrant, X-axis division line, Y-axis division line, and a choice of dotted or solid lines.</li><li>Custom title, title text, labels, display units, and decimal points for each axis.</li><li>Support for Power BI bookmarks.</li></ul>",
       "category": "correlation"
     }
@@ -111,7 +111,7 @@
       "description": "Showcase data in a grid format with features such as pagination and sorting.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380825?tab=Overview",
       "img": "../img/PowerBI/Grid.png",
-      "gif": "../img/PowerBI/Grid_GIF.gif",
+      "gif": "../img/PowerBI/Grid.mp4",
       "content": "<p>Grid by MAQ Software allows users to present specific data from a complex dataset. This visual enables users to navigate large datasets and focus on the most important items. Pagination facilitates easy navigation. Users can also sort data based on any column.</p><p>Key features:</p><ul><li>Users can add an image to the grid using a URL.</li><li>Support for multiple data formats including CSV.</li><li>Support for special characters.</li></ul>",
       "category": "ranking"
     }
@@ -124,7 +124,7 @@
       "description": "Compare category values between two scenarios.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381843?tab=Overview",
       "img": "../img/PowerBI/hourglass-icon.png",
-      "gif": "../img/PowerBI/hourglass-visual.gif",
+      "gif": "../img/PowerBI/hourglass-visual.mp4",
       "content": "<p>Hourglass by MAQ Software lets users compare category values between two scenarios. For example, users can compare category values before and after an event or values at a source versus at a destination. This visual can also display conversion rates or changes in values.</p><p>Hourglass by MAQ Software is useful for any scenario where users must compare data before and after an event takes place, such as when comparing the number of scheduled flights versus the number of delayed flights between multiple airports.</p><p>Key features:</p><ul><li>Highlight individual categories on click.</li><li>Rotate the visual horizontally or vertically.</li><li>Animate individual categories on hover.</li><li>Add or remove the conversion box. </li></ul>",
       "category": "comparison"
     }
@@ -137,7 +137,7 @@
       "description": "Unlocks new text styling options in Power BI, enabling users to create more visually engaging reports.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381762?tab=Overview",
       "img": "../img/PowerBI/text-enhancer-icon.png",
-      "gif": "../img/PowerBI/TextEnhancer2.gif",
+      "gif": "../img/PowerBI/TextEnhancer2.mp4",
       "content": "<p>Text Enhancer by MAQ Software unlocks new text styling options in Power BI, enabling users to create more visually engaging reports. Out of the box, Power BI has minimal text editing options. Text Enhancer adds customization options including adjustments for text shadow, rotation, angle, skewness, alignment, and more. It also includes text wrapping capability.</p><p>Text Enhancer by MAQ Software makes reports stand out in any business application.</p><p>Key features:</p><ul><li>Static and dynamic text.</li><li>Text wrapping capability.</li><li>Text styles including bold, italic, underline, overline, and strike-through.</li><li>Configure shadow, shadow blur, shadow color, text alignment, text skew, and text perspective.</li></ul>",
       "category": "utility"
     }
@@ -150,7 +150,7 @@
       "description": "Add ratings or scores to reports.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381838?tab=Overview",
       "img": "../img/PowerBI/ratings-icon.png",
-      "gif": "../img/PowerBI/RatingsByMAQSoftware.gif",
+      "gif": "../img/PowerBI/RatingsByMAQSoftware.mp4",
       "content": "<p>Ratings by MAQ Software allows users to add ratings or scores to reports. Users can choose to show average ratings or ratings by specific groups such as individual departments.</p><p>Ratings by MAQ Software is useful for showing movie, product, or hotel ratings. This visual can also act as a business performance indicator.</p><p>Key features:</p><ul><li>Choose from four different indicator shapes.</li><li>Choose between a solid fill color or a gradient fill.</li><li>Display average ratings or ratings by groups.</li></ul>",
       "category": "ranking"
     }
@@ -163,7 +163,7 @@
       "description": " Display logical relationships between multiple datasets, each represented as a circle.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381231?tab=Overview",
       "img": "../img/PowerBI/Venn_Diagram.png",
-      "gif": "../img/PowerBI/Venn_Diagram_GIF.gif",
+      "gif": "../img/PowerBI/Venn_Diagram.mp4",
       "content": "<p>Venn Diagram by MAQ Software displays logical relationships between a collection of datasets, each represented as a circle. The intersection of the circles illustrates the qualities that are shared by the overlapping datasets.</p><p>One use for Venn Diagram by MAQ Software is showing employee involvement in various products or services. Users can quickly display which employees are involved with which products, and where overlaps between teams occur.</p><p>Key features:</p><ul><li>Customizable names and colors for each circle or dataset.</li><li>Labels let users easily distinguish between individual values and intersected region values.</li><li>Users can hover their mouse over different regions, showing individual and intersected values.</li></ul>",
       "category": "correlation"
     }
@@ -176,7 +176,7 @@
       "description": "Show progress towards a target goal, such as achieved sales against a target value.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380821?tab=Overview",
       "img": "../img/PowerBI/Linear_Gauge.png",
-      "gif": "../img/PowerBI/Linear_Gauge_GIF.gif",
+      "gif": "../img/PowerBI/Linear_Gauge.mp4",
       "content": "<p>Linear Gauge by MAQ Software shows progress toward a target value, such as achieved sales versus targeted monthly sales. This visual allows users to include multiple data points, which is useful for illustrating trends such as monthly or year-to-date (YTD) completion rates. Information displayed includes the present value, percentage toward completion, and two optional trend values.</p><p>Key features:</p><ul><li>Set the minimum and maximum value of the metric.</li><li>Customize the color of the gauge and data labels.</li><li>Choose from six unit options for the metric.</li></ul>",
       "category": "comparison"
     }
@@ -189,7 +189,7 @@
       "description": "Display various stages of a process and related metrics in a horizontally oriented funnel.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380846?tab=Overview",
       "img": "../img/PowerBI/Horizontal_Funnel.png",
-      "gif": "../img/PowerBI/Horizontal_Funnel_GIF.gif",
+      "gif": "../img/PowerBI/Horizontal_Funnel.mp4",
       "content": "<p>While other Power BI funnels are limited to displaying one key metric for each funnel stage, Horizontal Funnel by MAQ Software allows users to display a second, customizable metric beneath the primary measure. The secondary measure defines the size of the colored funnel segments. For example, users can call out the dropout value or percentage next to the primary measure.</p><p>Horizontal Funnel by MAQ Software is useful in many applications, including sales pipeline analysis (allowing users to view both the sales process and conversion rates at each stage), website traffic analysis, order fulfillment, or any business process analysis that involves multiple stages.</p><p>Key features:</p><ul><li>Display a secondary measure below the colored bars.</li><li>Tooltip to display a brief explanation of the data.</li><li>Change the color configuration of the funnel stage and change the color, font size, display units, and decimal places of the labels.</li></ul>",
       "category": "flow"
     }
@@ -202,7 +202,7 @@
       "description": "Display multiple key performance indicators in an automatically rotating visual.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380946?tab=Overview",
       "img": "../img/PowerBI/KPI_Ticker.png",
-      "gif": "../img/PowerBI/KPI_Ticker_GIF.gif",
+      "gif": "../img/PowerBI/KPI_Ticker.mp4",
       "content": "<p>KPI Ticker by MAQ Software saves space on your reports by displaying multiple KPIs in a series of rotating tiles. Show the percentage increase or decrease of each value and quickly alert viewers of positive, negative, and neutral changes with an optional color-coded trend indicator.</p><p>KPI Ticker by MAQ Software works great in applications with frequently changing metrics such as values for multiple stocks or flight delay information for multiple carriers.</p><p>Key features:</p><ul><li>Adjust the number of tiles in each row and their background color.</li><li>Change the font size and color.</li><li>Customize the colors of positive, negative, and neutral trend indicators.</li></ul>",
       "category": "change single kpi"
     }
@@ -215,7 +215,7 @@
       "description": "Box chart with shaded bricks that show the percentage breakdown of a dataset.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380836?tab=Overview",
       "img": "../img/PowerBI/Brick_Chart.png",
-      "gif": "../img/PowerBI/Brick_Chart_GIF.gif",
+      "gif": "../img/PowerBI/Brick_Chart.mp4",
       "content": "<p>Brick Chart by MAQ Software allows users to display a percentage breakdown of a category in an alternative format to a donut or pie chart. This visual is useful for showing percentages or positions occupied, such as seats in a legislature. It is also useful for comparing each portion of a category to the whole.</p><p>Key features:</p><ul><li>Tooltip to indicate the category each color represents and its corresponding percentage.</li><li>Option to include a legend with a customizable title, size, and color.</li><li>Customizable chart width and height.</li></ul>",
       "category": "part"
     }
@@ -229,7 +229,7 @@
       "description": "Line and column chart that measures progress toward key performance indicators.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380996?tab=Overview",
       "img": "../img/PowerBI/KPI_Column.png",
-      "gif": "../img/PowerBI/KPI_Column_GIF.gif",
+      "gif": "../img/PowerBI/KPI_Column.mp4",
       "content": "<p>KPI Column by MAQ Software is a combination of a line and column chart where each column value changes color depending on its relation to a target line value. Columns represent performance and lines represent KPI targets.</p><p>KPI Column by MAQ Software has many business applications including measuring sales, revenue, or profit data against target values.</p><p>Key features:</p><ul><li>Include an optional target value that's common for all columns.</li><li>Represent forecasted data in columns, using the same target line.</li><li>Display forecasted columns in a translucent color to differentiate from actual values.</li></ul>",
       "category": "comparison change kpi"
     }
@@ -242,7 +242,7 @@
       "description": "Display quartiles and compare distributions between several sets of data.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381351?tab=Overview",
       "img": "../img/PowerBI/Box_and_Whisker.png",
-      "gif": "../img/PowerBI/Box_and_Whisker_GIF.gif",
+      "gif": "../img/PowerBI/Box_and_Whisker.mp4",
       "content": "<p>Box and Whisker Chart by MAQ Software is useful for quickly comparing distributions between several sets of data. In addition to showing the median, first and third quartiles, and the maximum and minimum values, Box and Whisker Chart by MAQ Software displays the mean, standard deviation, and quartile deviation.</p><p>This visual is useful for any application that requires comparing large datasets in a compact space.</p><p>Key features:</p><ul><li>Display parent and child data segments.</li><li>Flip or swap axis data points based on reporting requirements.</li><li>Choose different shapes (circle, square, rectangle) for mean and data points.</li></ul>",
       "category": "distribution"
     }
@@ -255,7 +255,7 @@
       "description": "Displays density of distribution using bars along with actual values represented by points.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381032?tab=Overview",
       "img": "../img/PowerBI/Histogram.png",
-      "gif": "../img/PowerBI/Histogram_With_Points_GIF.gif",
+      "gif": "../img/PowerBI/Histogram_With_Points.mp4",
       "content": "<p>While histogram charts are good at illustrating the density of distributed data, they normally do not show specific values. Histogram with Points by MAQ Software addresses this issue by combining a histogram chart with points that show the actual data for each range.</p><p>Histogram with Points by MAQ Software is useful in many business applications, such as displaying employee salary distribution as well as salary variation for individual employees in specific salary ranges.</p><p>Key features:</p><ul><li>Show or hide points and histogram bars.</li><li>Show or hide the X-axis, Y-axis-right, or Y-axis-left.</li><li>Show or hide gridlines.</li></ul>",
       "category": "distribution"
     }
@@ -268,7 +268,7 @@
       "description": "Use the density-based clustering algorithm OPTICS to analyze groups within a dataset.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381463?tab=Overview",
       "img": "../img/PowerBI/Clustering_Using_OPTICS.png",
-      "gif": "../img/PowerBI/Clustering_Using_OPTICS_GIF.gif",
+      "gif": "../img/PowerBI/Clustering_Using_OPTICS.mp4",
       "content": "<p>Clustering using OPTICS by MAQ Software analyzes and identifies data clusters. The algorithm relies on density-based clustering, allowing users to identify outlier points and closely-knit groups within larger groups. This visual includes adjustable clustering parameters to control hierarchy depth and cluster sizes. R package dependencies (auto-installed): Dbscan, plotly, ggplot2.</p><p>Key Features:</p><ul><li>Data is scaled and pre-processed automatically, eliminating the need to do so externally.</li><li>Hover tooltips and zoom effects.</li><li>Capability to manually adjust the parameters of the clustering model.</li></ul>",
       "category": "cluster"
     }
@@ -281,7 +281,7 @@
       "description": "Represent progress toward goals with a highly customizable thermometer graphic.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380847?tab=Overview",
       "img": "../img/PowerBI/Thermometer.png",
-      "gif": "../img/PowerBI/Thermometer_GIF.gif",
+      "gif": "../img/PowerBI/Thermometer.mp4",
       "content": "<p>Whether measuring event registrations, sales data, or online conversions, Thermometer by MAQ Software is the perfect tool for visualizing progress toward a target goal.</p><p>Key features:</p><ul><li>Set the fill and border color of the thermometer.</li><li>Adjust the minimum and maximum value of the scale.</li><li>Turn off the tick bar for a minimalist look.</li></ul>",
       "category": "single"
     }
@@ -294,7 +294,7 @@
       "description": "Enhance readability of reporting charts by providing additional data points as tooltips.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380983?tab=Overview",
       "img": "../img/PowerBI/Dynamic_Tooltip.png",
-      "gif": "../img/PowerBI/Dynamic_Tooltip_GIF.gif",
+      "gif": "../img/PowerBI/Dynamic_Tooltip.mp4",
       "content": "<p>While most available tooltips only display static information, Dynamic Tooltip by MAQ Software displays both static text and dynamic data fetched from a data source. If the data from the data source changes, the tooltip will update automatically. Dynamic Tooltip by MAQ Software is also useful for adding visual aids and indication images, such as a glowing bulb icon in the corner of a chart that suggests to the audience that clicking the icon will yield “tips.”</p><p>Key features:</p><ul><li>Enables static and dynamic tooltips for report charts.</li><li>Customized icon image configuration.</li><li>Formatting options for decimals and display unit data.</li></ul>",
       "category": "utility"
     }
@@ -307,7 +307,7 @@
       "description": "Display a metric against a target value or capacity with this intuitive 3D cylinder.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380874?tab=Overview",
       "img": "../img/PowerBI/Cylindrical_Gauge.png",
-      "gif": "../img/PowerBI/Cylindrical_Gauge_GIF.gif",
+      "gif": "../img/PowerBI/Cylindrical_Gauge.mp4",
       "content": "<p>Cylindrical Gauge by MAQ  Software allows users to compare actual values against a target capacity. Each gauge in this visual represents a single metric.</p><p>Cylindrical Gauge by MAQ  Software is useful for evaluating inventory, average customer satisfaction scores, fuel, or other repository levels.</p><p>Key Features:</p><ul><li>Define the minimum and maximum values of tick marks.</li><li>Customize the fill and border color of the cylinder.</li><li>Navigate the visual with a vertical scrollbar when height restrictions limit visibility.</li><li>List the value of the fill line below the cylinder for added clarity.</li></ul>",
       "category": "comparison single"
     }
@@ -320,7 +320,7 @@
       "description": "Illustrate progress toward goals in either a pie or donut chart format.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380836?tab=Overview",
       "img": "../img/PowerBI/Circular_Gauge.png",
-      "gif": "../img/PowerBI/Circular_Gauge_GIF.gif",
+      "gif": "../img/PowerBI/Circular_Gauge.mp4",
       "content": "<p>Circular Gauge by MAQ Software shows the progress of a task in a circular chart. Progress is shown either as the actual value or as a percentage of the target value. Users can display the visual in either a pie or a donut chart format. Users can also set a threshold value for the chart.</p><p>Circular Gauge by MAQ Software is useful for displaying key performance indicators (KPIs), such as sales achieved against a set target.</p><p>Key features:</p><ul><li>One color illustrates actual progress and the other displays the target.</li><li>The percentage displayed on the report tracks progress against the target.</li><li>Text size and ring size are customizable.</li></ul>",
       "category": "comparison"
     }
@@ -333,7 +333,7 @@
       "description": "Automatically flipping chart that displays different key performance indicators.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381007?tab=Overview",
       "img": "../img/PowerBI/Rotating_Chart.png",
-      "gif": "../img/PowerBI/Rotating_Chart_GIF.gif",
+      "gif": "../img/PowerBI/Rotating_Chart.mp4",
       "content": "<p>Rotating Chart by MAQ Software is a horizontal bar chart that rotates on the horizontal axis to showcase multiple KPIs. Each flip can have a new value based on the number of KPIs that need to be displayed. For better visibility, users can set a timer for the rotation delay.</p><p>Business reports often require many KPIs in a single report, especially when showcasing historical data. Rotating Chart by MAQ Software lets users display multiple KPIs or metrics in a small viewing area, saving space on lengthy reports.</p><p>Key features:</p><ul><li>The tile can be rotated on the horizontal or the vertical axis.</li><li>Flip delay time can be specified, ensuring that all data shown in the tile is readable.</li><li>Includes a 3D effect option, emphasizing when different data is displayed.</li><li>Includes basic formatting options such as font type, size, and color for the label and title, background, and tile borders.</li></ul>",
       "category": "single"
     }
@@ -346,7 +346,7 @@
       "description": "Retrieve text from any data source and enable text wrapping within a target field.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380826?tab=Overview",
       "img": "../img/PowerBI/Text_Wrapper.png",
-      "gif": "../img/PowerBI/Text_Wrapper_GIF.gif",
+      "gif": "../img/PowerBI/Text_Wrapper.mp4",
       "content": "<p>Text Wrapper by MAQ Software retrieves text from any data source and wraps it within the target field, presenting the text in a readable format.This visual also wraps static text strings (statements) with dynamic text field values.</p><p>Key Features:</p><ul><li>The dynamic text field value updates according to the selected filter or slicer, keeping the static text intact.</li></ul>",
       "category": "utility"
     }
@@ -359,7 +359,7 @@
       "description": "Gantt chart with a grid that shows task details and key performance indicators.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381454?tab=Overview",
       "img": "../img/PowerBI/Data_Insights.png",
-      "gif": "../img/PowerBI/Data_Insights_GIF.gif",
+      "gif": "../img/PowerBI/Data_Insights.mp4",
       "content": "<p>Data Insights by MAQ Software allows users to view data in multiple formats and quickly narrow data results. Users can switch between horizontal bar, vertical bar, brick, or tabular formats. With Data Insights by MAQ Software, users can easily explore data, select specific data, and view selected data in the format that best fits individual business needs.</p><p>Key features:</p><ul><li>Display data in bar, brick, and tabular formats.</li><li>Custom text and background colors.</li><li>Tooltips with additional insights.</li></ul><p>Business Applications:</p><ul><li>Display multiple sales KPIs simultaneously.</li><li>Shift between multiple KPIs or reporting periods by changing the axis base.</li></ul>",
       "category": "comparison part change"
     }
@@ -374,7 +374,7 @@
       "description": "Display distributions among categories to highlight gaps, clusters, and outliers.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381101?tab=Overview",
       "img": "../img/PowerBI/Dot_Plot.png",
-      "gif": "../img/PowerBI/Dot_Plot_GIF.gif",
+      "gif": "../img/PowerBI/Dot_Plot.mp4",
       "content": "<p>Dot Plot by MAQ Software displays data points (bubbles), plotted on an X/Y axis, and distributed over a desired set of values. The size of the bubble represents the magnitude, and the color represents the category.Users can view data through multiple parent and child sub-categories, a significant improvement over other dot plot diagrams.</p><p>Dot Plot by MAQ Software is useful for displaying multi-dimensional sales data in one visual, such as sales quantity per year over various regions.</p><p>Key features:</p><ul><li>Support for selection and multi-selection with partial highlighting.</li><li>Display distinct bubble color for different categories.</li><li>Modify bubble size and bubble animation on click.</li></ul>",
       "category": "comparison distribution"
     }
@@ -387,7 +387,7 @@
       "description": "Displays stage-wise metrics and the source (entry point) of any data point.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380983?tab=Overview",
       "img": "../img/PowerBI/Funnel_with_source.png",
-      "gif": "../img/PowerBI/Funnel_with_source_GIF.gif",
+      "gif": "../img/PowerBI/Funnel_with_source.mp4",
       "content": "<p>Funnel with Source by MAQ Software shows a funnel journey for any metric or data point. This visual allows users to follow the path of a metric over various stages, as well as track the entry channel through which the metric reached the funnel.</p><p>Funnel with Source by MAQ Software is excellent for visualizing sales paths. It showcases the channel through which a lead enters the funnel and the lead's corresponding journey through the various stages of the sales cycle.</p><p>Key features:</p><ul><li>Filter data based on the channel selected and on the selection of any stage of the sales journey.</li><li>Support for cross-visual filtering.</li></ul>",
       "category": "flow"
     }
@@ -400,7 +400,7 @@
       "description": "Enter historical trading records and display significant price points as colored vertical bars.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380826?tab=Overview",
       "img": "../img/PowerBI/Stock_Chart.png",
-      "gif": "../img/PowerBI/Stock_Chart_GIF.gif",
+      "gif": "../img/PowerBI/Stock_Chart.mp4",
       "content": "<p>Trading Chart by MAQ Software lets users enter historical trading records and translates them into a simple chart. Gray bars signify low and high price values. Red or green bars superimposed over the low and high values show which direction the stock moved.</p><p>Key features:</p><ul><li>A red bar indicates a stock’s price has dropped; a green bar indicates the price rose.</li><li>Customizable price ranges and time increments.</li></ul>",
       "category": "change distribution"
     }
@@ -413,7 +413,7 @@
       "description": "Automatically flipping tile that displays different key performance indicators.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380877?tab=Overview",
       "img": "../img/PowerBI/Rotating_Tile.png",
-      "gif": "../img/PowerBI/Rotating_Tile_GIF.gif",
+      "gif": "../img/PowerBI/Rotating_Tile.mp4",
       "content": "<p>Rotating Tile by MAQ Software is a tile that displays one KPI value at a time before flipping to the next value. This visual is useful for showcasing multiple KPIs or metrics on a single report.</p><p>One use for Rotating Tile by MAQ Software is showing many KPIs in a limited space on a year-end financial report.</p><p>Key features:</p><ul><li>Tile can be rotated on the horizontal or the vertical axis.</li><li>The flip delay time can be specified, ensuring that all data shown in the tile is readable.</li><li>Includes a 3D effect option, making noticing data changes easier for viewers.</li><li>Includes basic formatting options for the label and title, background, and tile borders, including font type, size, and color.</li></ul>",
       "category": "flow"
     }
@@ -426,7 +426,7 @@
       "description": "Display business metrics and show changes over time or across various categories.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381460?tab=Overview",
       "img": "../img/PowerBI/Dumbbell_Chart.png",
-      "gif": "../img/PowerBI/Dumbbell_Chart_GIF.gif",
+      "gif": "../img/PowerBI/Dumbbell_Chart.mp4",
       "content": "<p> Dumbbell Chart by MAQ Software helps users analyze changes in critical data. This visual consists of a dual-axis combination chart: one axis of is marked by a circle, the other is marked by a line that spans data points provided by the user. Dumbbell Chart by MAQ Software is ideal for illustrating change and comparing the distance between data points. R package dependencies (auto-installed): plotly and ggplot2.</p><p>Key features:</p><ul><li>Display the performance of multiple indicators.</li><li>Compare the growth or loss of indicators across various categories.</li><li>Quickly download an image of the chart with the capture image widget.</li></ul>",
       "category": "comparison change"
     }
@@ -439,7 +439,7 @@
       "description": "Show a flow of data and quickly compare values in one or more categories.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380838?tab=Overview",
       "img": "../img/PowerBI/Bowtie_Chart.png",
-      "gif": "../img/PowerBI/Bowtie_Chart_GIF.gif",
+      "gif": "../img/PowerBI/Bowtie_Chart.mp4",
       "content": "<p>Use Bowtie Chart by MAQ Software to quickly compare values in one or more categories. The thickness of the bowtie's branches indicates the relative weight of each category. Users can create a half bowtie, showcasing the distribution of data within a source. Or, by entering values in the source, destination, and value fields, users can create a full bowtie, showcasing how an aggregate value splits into two distinct sub-categories.</p>Bowtie Chart by MAQ Software is ideal for displaying sales metrics, such as the flow of channel category sales into subcategory sales.<p></p><p>Key features:</p><ul><li>Interactivity with other visuals</li><li>Configurable branch color.</li><li>Configurable font-size, color, and decimal precision for data labels and summary labels.</li><li>Optional use in either half bowtie or full bowtie format.</li></ul>",
       "category": "flow"
     }
@@ -452,7 +452,7 @@
       "description": "Show upward or downward trends between two data points.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381393?tab=Overview",
       "img": "../img/PowerBI/Slope_Chart.png",
-      "gif": "../img/PowerBI/Slope_Chart_GIF.gif",
+      "gif": "../img/PowerBI/Slope_Chart.mp4",
       "content": "<p>Slope Chart by MAQ Software allows users to analyze trends in data at a glance.This visual is useful for comparing interactions between two data points based on time or other user-chosen parameters.R package dependencies (auto-installed): plotly and ggplot2.</p><p>Key features:</p><ul><li>Quick comparison of indicator growth or loss across categories.</li><li>Easy interaction with many data points using zoom functionality.</li><li>Quickly download an image of the chart with the capture image widget.</li></ul>",
       "category": "comparison change"
     }
