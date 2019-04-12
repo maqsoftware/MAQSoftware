@@ -12,7 +12,9 @@ function renderBot(directLineKey, botSecret) {
     botConnection = new BotChat.DirectLine(
         {
             token: directLineKey,
-            webSocket: false
+            webSocket: true,
+            sendTyping: true
+
         });
 
     botConnection
