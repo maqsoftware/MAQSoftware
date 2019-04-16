@@ -6048,3 +6048,10 @@ li.h4header {
     color: black;
     text-transform: capitalize;
 }
+
+.modal_videos
+{
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    object-position: top;
+}
