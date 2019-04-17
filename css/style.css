@@ -4135,6 +4135,10 @@ ul.project-detail-block, .project-detail-block ul {
             margin-right: 3px;
         }
 
+        .blog-post .post-meta > span {
+            color: #767676
+        }
+
     .blog-post .post-header h5, .blog-post .post-header h4, .blog-post .post-header h3 {
         margin-top: 5px;
         margin-bottom: 20px;
@@ -6047,6 +6051,11 @@ li.h4header {
     font-family: "Raleway",sans-serif;
     color: black;
     text-transform: capitalize;
+}
+
+.blog-date
+{
+    color: #767676
 }
 
 .modal_videos
