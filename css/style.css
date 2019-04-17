@@ -6049,6 +6049,11 @@ li.h4header {
     text-transform: capitalize;
 }
 
+.blog-date
+{
+    color: #767676
+}
+
 .modal_videos
 {
     padding-left: 0.7em;
