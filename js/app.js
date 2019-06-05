@@ -47,7 +47,7 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
     })
     .when('/engagement/recognitions', {
         templateUrl: '/views/recognitions.html',
-        controller: "RecognitionsController"
+        controller: "recognitionsController"
     })
     .when('/news', {
         templateUrl: '/views/news.html',
@@ -193,7 +193,7 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
             }
         });
     });
-}]).controller('RecognitionsController', ["$scope", "$location", "$window", function ($scope, $location, $window) {
+}]).controller('recognitionsController', ["$scope", "$location", "$window", function ($scope, $location, $window) {
     $scope.$on('$viewContentLoaded', function () {
         loadPlugins();
         loadNewsMainPage();
