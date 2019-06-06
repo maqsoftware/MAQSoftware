@@ -5665,6 +5665,7 @@ ul.nav-tabs {
 
 .linkedin-share-button > span, .linkedin-share-button > span > span {
     vertical-align: bottom !important;
+    margin-bottom: 0.15em !important;
 }
 
 .caseImage {
