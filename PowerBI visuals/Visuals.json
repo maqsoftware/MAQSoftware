@@ -1,15 +1,28 @@
 [
    {
-     "Treemap Bar Chart": {
+     "Sunburst": {
+      "name": "Sunburst",
+      "title": "Sunburst ",
+      "id": "sunburst",      
+      "description": "Break down hierarchical data using color coded concentric rings",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA200000097?tab=Overview",
+      "img": "../img/PowerBI/Sunburst.png",
+      "gif": "../img/PowerBI/SunburstMP4.mp4",
+      "content": "<p>Sunburst by MAQ Software allows users to display hierarchical data as a set of nested rings.Customizable colors make it easy to distinguish between categories. The chart is displayed as a radial treemap or multilevel pie chart. </p><p>Sunburst by MAQ Software is useful for analyzing sales distributions, exports, and more. This visual is useful for identifying patterns in data that might otherwise go unnoticed.  </p><p>Key features:</p><ul><li>Customizable arcs</li><li>Customizable detail labels</li><li>Zoom-in animation</li><li>Customizable data colors</li><li>Cross-filtering support for legend values and circles</li><li>Bookmark support</li><li>Custom report tooltips support</li></ul>",
+      "category": "comparison part change"      
+    }
+  },
+  {
+    "Treemap Bar Chart": {
       "name": "Treemap Bar Chart",
       "title": "Treemap Bar Chart ",
-      "id": "TreemapBarChart",      
+      "id": "TreemapBarChart",
       "description": "Display the breakdown of hierarchical data using color coded proportionate rectangles.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA200000043?tab=Overview",
       "img": "../img/PowerBI/Treemap.png",
       "gif": "../img/PowerBI/TreemapBarChart.mp4",
       "content": "<p>Treemap Bar Chart by MAQ Software allows users to categorize hierarchical data in sets of colored rectangles of proportionate sizes. Customizable colors make it easy to distinguish between categories.</p><p>Use this visual for all your profit breakdown needs. We used this visual to easily visualize profit performance across countries, regions, and cities. The gradient effect and size of bricks act as a performance indicator while making efficient use of space to show the distribution of values across categories.</p><p>Key features:</p><ul><li>Select orientation between bar chart and column chart.</li><li>Total values and data labels for all categories.</li><li>Custom text and background colors.</li><li>Tooltips with additional insights.</li><li>Data by color as per legends.</li><li>Animation to examine the visual at the granular level.</li><li>Cross-filtering support for legend values, axis values, and the bricks.</li><li>Supports Bookmark.</li><li>Supports report tooltips configuration.</li><li>Allows Drillthrough.</li></ul>",
-      "category": "comparison part change"      
+      "category": "comparison part change"
     }
   },
   {
