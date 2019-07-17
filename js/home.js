@@ -6,7 +6,7 @@ var sLoadingClass = "Loading",
             ], iCount, iTotal = oItalicBookName.length, iCounterFlag = 0; // a is flag variable for counter animation on home page
 function loadNewsMainPage() {
     $.ajax({
-        url: 'https://www.blogger.com/feeds/2523158019509365490/posts/default/-/News',
+        url: 'https://www.blogger.com/feeds/2523158019509365490/posts/default/-/News?max-results=999',
         type: 'GET',
         dataType: 'jsonp',
         success: function (sResponse_news) {
@@ -16,7 +16,7 @@ function loadNewsMainPage() {
 }
 function loadBlogMainPage(sResponse_news) {
     $.ajax({
-        url: 'https://www.blogger.com/feeds/3262801613185975083/posts/default/',
+        url: 'https://www.blogger.com/feeds/3262801613185975083/posts/default?max-results=999',
         type: 'GET',
         dataType: 'jsonp',
         success: function (sResponse_blog) {
