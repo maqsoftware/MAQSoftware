@@ -112,7 +112,7 @@ function loadNews(sNewsData) {
 }
 function loadNewsGrid() {
     oNewsContainer.html("").addClass(sLoadingClass);
-    getBloggerData('https://www.blogger.com/feeds/2523158019509365490/posts/default/-/News', getNewsSuccess, getNewsOnComplete);
+    getBloggerData('https://www.blogger.com/feeds/2523158019509365490/posts/default/-/News?max-results=999', getNewsSuccess, getNewsOnComplete);
 }
 function getNewsSuccess(sResponse) {
     var iTop;

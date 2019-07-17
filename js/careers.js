@@ -9,8 +9,8 @@ function careersConstructor() {
     oIndiaJobPostSection = $("#tabs-2 .accordion");
     oRedmondJobPostSection = $("#tabs-1 .accordion");
 
-    var IndiafeedUrl = "https://www.blogger.com/feeds/4733689656779828601/posts/default/-/Openings - India";
-    var RedmondfeedUrl = "https://www.blogger.com/feeds/4733689656779828601/posts/default/-/Openings - Redmond";
+    var IndiafeedUrl = "https://www.blogger.com/feeds/4733689656779828601/posts/default/-/Openings - India?max-results=999";
+    var RedmondfeedUrl = "https://www.blogger.com/feeds/4733689656779828601/posts/default/-/Openings - Redmond?max-results=999";
     $.ajax({
         url: IndiafeedUrl,
         type: 'GET',

@@ -43,7 +43,7 @@ function loadNewsGrid() {
     var iTop;
     oNewsContainer.html("").addClass(sLoadingClass);
     $.ajax({
-        url: 'https://www.blogger.com/feeds/2523158019509365490/posts/default/-/News',
+        url: 'https://www.blogger.com/feeds/2523158019509365490/posts/default/-/News?max-results=999',
         type: 'GET',
         dataType: 'jsonp',
         success: function (sResponse) {
