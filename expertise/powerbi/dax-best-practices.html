@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+<!-- Microdata markup added by Google Structured Data Markup Helper. -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8" />
+    <title>DAX Best Practices | MAQ Software</title>
+    <meta name="title" content="DAX Best Practices | MAQ Software" />
+    <meta name="theme-color" content="#c00000">
+    <meta name="description" content=" To improve the performance of DAX queries and the subsequent Power BI reports, we have compiled a best practice list our architects and developers use when designing enterprise-grade implementations"
+    />
+    <meta name="keywords" content="maq software, innovative software, data management, DAX, Power BI, Sharepoint, cloud, artificial intelligence"
+    />
+    <meta name="ROBOTS" content="FOLLOW,INDEX" />
+    <!-- Open Graph data -->
+    <meta name="og:title" property="og:title" content="DAX Practices | MAQ Software"
+    />
+    <meta name="og:description" property="og:description" content="To improve the performance of DAX queries and the subsequent Power BI reports, we have compiled a best practice list our architects and developers use when designing enterprise-grade implementations"
+    />
+    <meta property="og:image" name="og:image" content="/img/Banners/dax-best-practices-banner.jpg" 
+    />
+    <meta property="og:image:width" content="450"/>
+    <meta property="og:image:height" content="298"/>
+    <!-- End Open Graph data -->
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@maqsoftware" />
+    <meta name="twitter:title" content="DAX Practices | MAQ Software" 
+    />
+    <meta name="twitter:description" content="To improve the performance of DAX queries and the subsequent Power BI reports, we have compiled a best practice list our architects and developers use when designing enterprise-grade implementations"
+    />
+    <meta name="twitter:image" content="/img/Banners/dax-best-practices-banner.jpg"
+    />
+    <!-- End Twitter Card data -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="fragment" content="!">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <!-- Favicone Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="icon" type="image/png" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+    <!-- CSS -->
+    <link href="/css/style.css?v=20170831" rel="stylesheet" type="text/css" />
+    <link href="/css/bootstrap.min.css?v=20170822" rel="stylesheet" type="text/css" />
+    <link href="/css/font-awesome.css?v=20170822" rel="stylesheet" type="text/css" />
+    <link href="/css/ionicons.css?v=20170822" rel="stylesheet" type="text/css" />
+    <link href="/css/plugin/sidebar-menu.css?v=20170822" rel="stylesheet" type="text/css" />
+    <link href="/css/plugin/animate.css?v=20170822" rel="stylesheet" type="text/css" />
+    <link href="/css/jquery-ui.css?v=20170822" rel="stylesheet" type="text/css" />
+    <link href="/css/plugin/owl.carousel.2.0.0-beta.3.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--Facebook Java SDK-->
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- Preloader -->
+    <section id="preloader">
+        <div class="loader" id="loader">
+            <div class="loader-img"></div>
+        </div>
+    </section>
+    <!-- End Preloader -->
+    <!-- Site Wraper -->
+    <div class="wrapper">
+        <!-- Header -->
+        <header id="header" class="header">
+            <div class="container header-inner">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="/">
+                        <img class="logo-dark" src="/img/MAQSoftware.png" alt="MAQ Software" />
+                    </a>
+                </div>
+                <!-- End Logo -->
+                <!-- Mobile Navbar Icon -->
+                <div class="nav-mobile nav-bar-icon">
+                    <span></span>
+                </div>
+                <!-- End Mobile Navbar Icon -->
+                <!-- Navbar Navigation -->
+                <div class="nav-menu" id="nav-menu">
+                        <ul class="nav-menu-inner">
+                            <!-- Expertise -->
+                            <li>
+                                <a class="menu-has-sub">Expertise
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="sub-dropdown dropdown">
+                                    <li><a href="/expertise/powerbi">Power BI</a></li>
+                                    <li><a href="/expertise/artificialintelligence">Artificial Intelligence</a></li>
+                                    <li><a href="/expertise/datamanagement">Data Management</a></li>
+                                    <li><a href="/expertise/cloudtransformation">Cloud Transformation</a></li>
+                                    <li><a href="/expertise/appdevelopment">App Development</a></li>
+                                    <li><a href="/expertise/collaborationcontent">Collaboration &amp; Content</a></li>
+                                </ul>
+                            </li>
+                            <!-- Resources -->
+                            <li>
+                                
+                                <a class="menu-has-sub">Resources <i class="fa fa-angle-down"></i></a>
+                                <ul class="sub-dropdown dropdown">
+                                    <li><a href="/best-practices">Best Practice Guides</a></li>
+                                    <li><a href="/case-studies">Case Studies</a></li>
+                                    <li><a href="/resources/interactive-reports">Interactive Reports</a></li>
+                                </ul>
+                            </li>
+                            <!-- About -->
+                            <li>
+                                <a class="menu-has-sub">About <i class="fa fa-angle-down"></i></a>
+                                <ul class="sub-dropdown dropdown">
+                                    <li><a href="/about/whoweare">Who We Are</a></li>
+                                    <li><a href="/about/distinctions">distinctions</a></li>
+                                    <li><a href="/about/community">Community</a></li>
+                                    <li><a href="/news">News</a></li>
+                                    <li><a href="/blog">Blog</a></li>
+                                    <li><a href="/about/CSRReport" target="_blank">CSR Report</a></li>
+                                </ul>
+                            </li>
+                            <!-- Careers -->
+                            <li><a href="/careers">Careers</a></li>
+                            <!-- Contact -->
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- End Navbar Navigation -->
+            </div>
+        </header>
+        <!-- End Header -->
+        <!-- Intro Section -->
+        <section class="inner-intro dark-bg bg-image overlay-dark parallax parallax-background1 aboutposter" data-background-img="/img/Banners/dax-best-practices-banner.jpg" >
+            <div class="container">
+                <div class="row title">
+                    <h2 class="h2">Best Practices Guide </h2>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Intro Section -->
+        <!-- Content Section -->
+        <section id="about" class="wow fadeIn pt-90 pb-25">
+            <div class="container">
+                <div class="row text-left">
+                    <div class="col-md-10 offset-md-1">
+                        <h3 class="h4">DAX Best Practices  </h3>
+                        <p><span><i class="ion ion-calendar"></i> July 17, 2019 </span><span><i class="ion ion-clock"></i> 6 Minutes to Read</span><p>
+                        <p class="lead">We design and implement hundreds of enterprise-grade Power BI installations every year. The Power BI reports that we manage serve tens of thousands of users daily. We use Data Analysis Expressions (DAX) to build powerful expressions and formulas in our Power BI reports.</p>
+
+                        <!-- Social Media -->
+                        <!-- Facebook Share -->
+                        <div class="fb-share-button" data-href="https://maqsoftware.com//expertise/powerbi/dax-best-practices" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmaqsoftware.com%2Fexpertise%2Fpowerbi%2Fdax-best-practices&amp;src=sdkpreparse">Share</a></div>
+                        <!-- End Facebook Share -->
+
+                        <!-- Twitter Share -->
+                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="DAX Best Practices | MAQ Software" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <!-- End Twitter Share -->
+                        <!-- LinkedIn Share -->
+                        <span class="linkedin-share-button">
+                            <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                            <script type="IN/Share" data-counter="right"></script>
+                        </span>
+                        <!-- End LinkedIn Share -->
+                        <!-- End Social Media -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pb-40">
+            <div class="container">
+                <div class="row ptb-15">
+                    
+                    <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
+                        <p class="pt-5px">
+                            DAX is a collection of functions, operators, and constants that you can use in a formula, or expression, to calculate and return one or more values. Stated more simply, DAX helps you create new information from data already in your model.
+                        </p>
+                        <p class="pt-5px">
+                            The following 15 DAX best practices ensure that our dashboard users get the most out of their data. For more Power BI tips, check out our <a href="https://medium.com/maqsoftware/power-bi-best-practices-9a12e1cbce08">Power BI best practice guide</a>.
+                        </p>
+                        
+                        <ol class="pb-10">
+                            <li class="h4header"> Use variables instead of repeating measures inside the IF branch
+                                <ul class="defaultBody">
+                                    <li>Incorrect DAX: <br><code>Ratio = IF([Total Rows] > 10, SUM(Revenue) /[Total Rows], 0)</code></li>
+                                    <li>Correct DAX:<br><code>VAR totalRows = [Total Rows]; <br>Ratio = IF(totalRows > 10, SUM(Revenue) / totalRows,0)</code></li>
+                                    <li>Explanation:
+                                    <ol>
+                                        <li>In the first expression, because measures are calculated on the fly, the [Total Rows] expression is calculated twice. [Total Rows] is first calculated for the condition check and then for the true condition expression.</li>
+                                        <li>Instead of calculating the same expression multiple times, you can store the resulting measure value in a variable. You can use a variable reference wherever required.</li>
+                                        <li>The same variable process applies to all instances where you call the same measure at multiple locations.</li>
+                                    </ol>
+                                    </li>
+                                    <li>Reference: <a href="https://www.sqlbi.com/articles/optimizing-if-conditions-using-variables/">https://www.sqlbi.com/articles/optimizing-if-conditions-using-variables/</a></li>
+                                </ul>
+                            </li>
+                            <li class="h4header"> Use DIVIDE() instead of / 
+                                <ul class="defaultBody">
+                                    <li>The DIVIDE() function has a third (extra) parameter that is returned if the denominator is zero. </li>
+                                    <li>The DIVIDE() function internally performs a check to validate whether the denominator is zero. </li>
+                                    <li>You do not need to use the IF condition with the “/” operator to check for an invalid denominator. </li>
+                                    <li>Note: If you are certain the denominator value is not zero, it is better to use the “/” operator without an IF check. The DIVIDE() function will always perform an IF check internally. </li>                                    
+                                </ul>
+                            </li>
+                            <li class="h4header"> Do not change BLANK values to zeros or other strings
+                                <ul class="defaultBody">
+                                    <li>It is a common practice to replace blanks with zeros or other strings.</li>
+                                    <li>Power BI automatically filters all rows with blank values.</li>
+                                    <li>When viewing results from tables with large amounts of data, Power BI filters the blank value rows, limiting the result set and preventing poor performance.</li>
+                                    <li>If the blanks are replaced, Power BI does not filter the unwanted rows, affecting performance negatively.</li>
+                                </ul>
+                            </li>
+                            <li class="h4header">  Use (a-b)/b along with variables instead of a/b — 1 or a/b*100–100
+                                <ul class="defaultBody">
+                                    <li>Using a/b — 1 is the preferred approach to calculate a ratio and avoid duplicate measure calculations. </li>
+                                    <li>You can achieve the same performance by using variables and using (a-b)/b to calculate the ratio. </li>
+                                    <li>You should use (a-b)/b for the following reason: <br><code>If both a and b are blank values, then (a-b)/b returns a blank value and Power BI will filter the values out. a/b — 1 would return -1 as the result because both a and b are integers.</code></li>
+                                </ul>
+                            </li>
+                            <li class="h4header"> Use SELECTEDVALUE() instead of HASONEVALUE()
+                                <ul class="defaultBody">
+                                    <li>Currently, we use the HASONEVALUE() function to check if there is only one value present for a column after applying slicers and filters. We then use the VALUES(ColumnName) DAX function to retrieve the single value. </li>
+                                    <li>The SELECTEDVALUE() function performs the above steps internally and retrieves the value if there is only one distinct value present for the column. The SELECTEDVALUE() function returns a blank if there are multiple values available. </li>
+                                    
+                                </ul>
+                            </li>
+                            <li class="h4header"> Stop using IFERROR() and ISERROR()
+                                <ul class="defaultBody">
+                                    <li>The IFERROR() and ISERROR() functions were widely used in Excel when applying the FIND() and SEARCH() functions. The IFERROR() and ISERROR() functions were necessary because FIND() and SEARCH() returned errors if the query did not obtain the required result. </li>
+                                    <li>The IFERROR() and ISERROR() functions force the Power BI engine to perform a step-by-step execution of each row to check for errors. There is currently no method to directly state which row returned the error. </li>
+                                    <li>The FIND() and SEARCH() DAX functions provide an extra parameter that the query can pass. The parameter is returned if the search string is not present. </li>
+                                    <li>The FIND() and SEARCH() DAX functions are also used to ensure nothing is divided by zero. Additionally, the FIND() and SEARCH() functions check if more than one value is returned. You can avoid using the FIND() and SEARCH() DAX functions by using the correct DAX functions such as DIVIDE() and SELECTEDVALUE(). The DIVIDE() and SELECTEDVALUE() functions perform the error check internally and return the expected results. </li>
+                                    <li>You can always return DAX expressions in such a way that they never return an error. </li>
+                                </ul>
+                            </li>
+                            <li class="h4header"> Do not use scalar variables in SUMMARIZE()
+                                <ul class="defaultBody">
+                                    <li>The SUMMARIZE() function is traditionally used to group columns and return the resulting aggregations. </li>
+                                    <li>Instead of using the SUMMARIZE() function in this manner, you should use the SUMMARIZECOLUMNS() DAX function. The SUMMARIZECOLUMNS() function is newer and better optimized. </li>
+                                    <li>You should only use the SUMMARIZE() function to summarize the grouped elements of a table without any associated measures or aggregations. For example: <br><code>SUMMARIZE(Table, Column1, Column2)</code> </li>                                                                  
+                                    
+                                </ul> 
+                            </li>
+                            <li class="h4header">  Use = 0 instead of check for ISBLANK() || = 0
+                                <ul class="defaultBody">
+                                    <li>The BLANK value in Power BI is associated with the base value of the data type of a column. </li>
+                                    <li>The BLANK value corresponds to zero for integers, “(empty string)” for string columns, and “1–1–1900” for date fields. </li>
+                                    <li>Instead of having two checks (ISBLANK() and comparing with zero), you can directly use = 0, which internally performs both checks. </li>
+                                    <li>To perform only the check for zero, you can use the IN operator. </li>
+                                    
+                                </ul>
+                            </li>
+                            <li class="h4header"> Use FILTER(all(ColumnName)) instead of FILTER(values()) or FILTER(T)
+                                <ul class="defaultBody">
+                                    <li>To calculate measures ignoring all the filters applied to a column, use the All(ColumnName) function along with the FILTER function instead of Table or VALUE(). For example:<br /> <code>CALCULATE([Total Sales], FILTER(ALL(Products[Color]), Color = ‘Red’))</code></li>
+                                    <li>Directly applying filters using expressions and not using the FILTER function behaves in the same way as mentioned above. This method internally translates using the ALL function in the filter. For example: <br /> <code>CALCULATE([Total Sales], Products[Color]= ‘Red’)) -> CALCULATE([Total Sales], FILTER(ALL(Products[Color]), Products[Color]= ‘Red’))</code></li>
+                                    <li>It is always better to apply filters to the desired column than to the whole table.</li>
+                                    <li>Always use ALL along with the FILTER function if there is no need to keep the current context.</li>
+                                    <li>References: <ol>
+                                        <li><a href="https://pbidax.wordpress.com/2016/05/22/simple-filter-in-dax-measures/"> https://pbidax.wordpress.com/2016/05/22/simple-filter-in-dax-measures/</a></li>
+                                        <li><a href="https://www.sqlbi.com/articles/filter-arguments-in-calculate/">https://www.sqlbi.com/articles/filter-arguments-in-calculate/</a></li>
+                                        </ol></li>
+                                    <li></li>
+                                    
+                                </ul>
+                            </li>
+                            <li class="h4header"> Use KEEPFILTERS() instead of FILTER(T)
+                                <ul class="defaultBody">
+                                    <li>The normal FILTER function overrides any existing set of filters present for a column applied via slicers with those mentioned in the FILTER parameter. </li>
+                                    <li>The KEEPFILTER function does not override the current set of filters. Instead, it uses the intersection of the values present in both, thus maintaining the current context. </li>
+                                    <li>Whenever you need to maintain the set of filters applied using slicers or report-level filters while performing any calculations, we recommend you use the KEEPFILTERS() function. </li>
+                                </ul>
+                            </li>
+                            <li class="h4header"> Use ISBLANK() instead of =Blank() check
+                                <ul class="defaultBody">
+                                    <li>Use the built-in function ISBLANK() to check for any blank values instead of using the comparison operator= Blank(). </li>
+                                    
+                                </ul>
+                            </li>
+                            <li class="h4header"> Use SEARCH() with the last parameter 
+                                <ul class="defaultBody">
+                                    <li>The SEARCH() DAX function accepts the last parameter as the value that the query must return if the search string is not found. </li>
+                                    <li>You should always use the SEARCH() function instead of using Error functions along with SEARCH(). </li>
+                                </ul>
+                            </li>
+                            <li class="h4header"> Use SELECTEDVALUE() instead of VALUES()
+                                <ul class="defaultBody">
+                                    <li>The VALUES() function returns an error if it encounters multiple values. Normally, users address the error using Error functions, which affect performance negatively. </li>
+                                    <li>Instead of using the VALUES() function, use the SELECTEDVALUE() function. The SELECTEDVALUE() function is safer and returns a blank if it encounters multiple values. </li>
+                                </ul>
+                            </li>
+                            <li class="h4header"> Use the DISTINCT() and VALUES() functions consistently
+                                <ul class="defaultBody">
+                                    <li>Power BI adds a blank value to a column if it finds a referential integrity violation. </li>
+                                    <li>For a direct query, Power BI adds a blank value to the columns because it cannot check for violations. </li>
+                                    <li>The DISTINCT() and VALUES() functions differ as follows: <ol>
+                                        <li>DISTINCT(): Does not return a blank that is added due to an integrity violation. The DISTINCT() function includes the blank only if it is part of the original data. </li>
+                                        <li>VALUES(): Includes any blank which Power BI adds due to referential integrity violations. </li>
+                                        </ol></li>
+                                    <li>Maintain consistent usage of the DISTINCT() and VALUES() functions throughout the entire report. </li>
+                                    <li>Power BI recommends using the VALUES() function throughout the report if blank values are not an issue. </li>                                   
+                                    
+                                </ul>
+                            </li>
+                            <li class="h4header"> Avoid using the AddColumns() function inside measure expressions                                
+                                <ul class="defaultBody">
+                                    <li>Measures are calculated iteratively by default. </li>
+                                    <li>If measure definitions use iterative functions such as AddColumns(), Power BI creates nested iterations, which affect report performance negatively. </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row ptb-15">
+                    <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
+                        <h3> References</h3>
+                        <p>Microsoft offers additional documents that provide a high-level framework for best practices. We strongly encourage you to review the following documents: </p>
+                        <ul class="defaultBody">
+                            <li><a href="https://docs.microsoft.com/en-us/dax/data-analysis-expressions-dax-reference">Data Analysis Expressions (DAX) Reference</a> – Microsoft Corporation</li>
+                            <li><a href="https://docs.microsoft.com/en-us/dax/dax-function-reference">DAX function reference</a> – Microsoft Corporation, published April 19, 2019 </li>
+                            <li><a href="https://docs.microsoft.com/en-us/power-bi/power-bi-reports-performance">DAX basics in Power BI Desktop</a> – Microsoft Corporation, published May 7, 2019 </li>
+                        </ul>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END CONTENT ---------------------------------------------------------------------------->
+        <!-- FOOTER -->
+        <footer class="footer   pt-60">
+                <div class="container">
+                    <div class="row mb-30">
+                        <div class="col-md-5  col-sm-12 mb-30">
+                            <h6 class="">Follow Us On</h6>
+                            <ul class="social">
+                                <li><a target="_blank" href="https://www.facebook.com/maqsoftware"><i class="fa fa-facebook"></i></a></li>
+                                <li><a target="_blank" href="https://www.linkedin.com/company/maq-software"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a target="_blank" href="https://youtube.com/maqsoftware"><i class="ion ion-social-youtube"></i></a></li>
+                                <li><a target="_blank" href="https://twitter.com/MAQSoftware"><i class="fa fa-twitter"></i></a></li>                                
+                                <li><a target="_blank" href="https://github.com/maqsoftware"><i class="ion ion-social-github"></i></a></li>
+                                <li><a target="_blank" href="https://instagram.com/maqsoftware"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+    
+                        </div>
+    
+                        <div class="col-md-5 offset-md-2 col-sm-12">
+    
+                            <ul class="link-small">
+                                <li>
+                                    <a class="font-weight-normal" target="_blank" href="https://www.google.com/maps/search/?api=1&query=MAQ Software Redmond WA">
+                                        15446 Bel-Red Road, Second Floor,<br />
+                                        Redmond, WA 98052
+                                    </a>
+                                </li>
+                                <li>
+                                    <span>Email: </span>
+                                    <a href="mailto:Sales@MAQSoftware.com">
+                                        <span class="__cf_email__" data-cfemail="Sales@MAQSoftware.com">Sales@MAQSoftware.com</span>
+                                    </a>
+                                    
+                                </li>
+                                <li>
+                                    <span>Redmond Jobs: </span>
+                                    <a href="mailto:RedmondJobs@MAQSoftware.com">
+                                        <span class="__cf_email__" data-cfemail="RedmondJobs@MAQSoftware.com ">RedmondJobs@MAQSoftware.com </span>
+                                    </a>
+                                    
+                                </li>
+                                <li>
+                                    <span>India Jobs: </span>
+                                    <a href="mailto:IndiaJobs@MAQSoftware.com">
+                                        <span class="__cf_email__" data-cfemail="IndiaJobs@MAQSoftware.com">IndiaJobs@MAQSoftware.com</span>
+                                    </a>
+                                    
+                                </li>
+                                <li>Phone: <a href="tel:+1 425 526 5399">+1 425 526 5399</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <section class="copyright ptb-15">
+                    <div class="container">
+                        <p>
+                            &copy; <span id="copyright_year"></span> <a href="/"><b>MAQ Software</b></a>. All Rights Reserved. <span class="link privacy"><a href="/privacystatement">Privacy Statement</a></span>  <span class="link privacy"><a href="/termsofservice">Terms of Service</a></span>
+                        </p>
+                    </div>
+                </section>
+            </footer>
+            <!-- END FOOTER -->
+        <!-- Scroll Top -->
+        <a class="scroll-top">
+            <i class="fa fa-angle-double-up"></i>
+        </a>
+        <!-- End Scroll Top -->
+    </div>
+    <!-- Site Wraper End -->
+    <!-- JS -->
+    <!-- Load app main script -->
+    <script src="/js/plugin/tether.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/jquery-1.11.2.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/jquery.easing.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/jquery-ui.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/jquery.flexslider.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/jquery.fitvids.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/jquery.viewportchecker.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/jquery.stellar.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/wow.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/jquery.colorbox-min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/owl.carousel.2.0.0-beta.3.min.js"></script>
+    <script src="/js/plugin/isotope.pkgd.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/masonry.pkgd.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/imagesloaded.pkgd.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/jquery.fs.tipper.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/mediaelement-and-player.min.js?v=20170822"></script>
+    <script src="/js/plugin/sidebar-menu.js?v=20170822" type="text/javascript"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="/js/theme.js?v=20170828.6" type="text/javascript"></script>
+    <script src="/js/navigation.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/contact.js?v=20170828.2" type="text/javascript"></script>
+    <script src="/js/common.js?v=20170828.1" type="text/javascript"></script>
+    <script src="/js/home.js?v=20190717" type="text/javascript"></script>
+    <script src="/js/news.js?v=20190717" type="text/javascript"></script>
+    <script src="/js/careers.js?v=20190717"></script>
+    <script type="application/ld+json">
+    { "@context" : "http://schema.org",
+    "@type" : "Organization",
+    "name" : "MAQ Software",
+    "image" : "https://maqsoftware.com/img/MAQSoftware.png",
+    "address" : {
+    "@type": "PostalAddress",
+    "addressLocality": "Redmond",
+    "addressRegion": "WA ",
+    "postalCode": "98052",
+    "streetAddress": "15446 Bel-Red Road, Second Floor" },
+    "url" : "https://maqsoftware.com/",
+    "logo" : "https://maqsoftware.com/img/MAQSoftware.png",
+    "email":"sales@MAQSoftware.com",
+    "telephone":"+1-425-526-5399",
+    "sameAs" : [
+    "https://www.linkedin.com/company/maq-software",
+    "https://twitter.com/MAQSoftware",
+    "https://youtube.com/maqsoftware",
+    "https://www.facebook.com/maqsoftware",
+    "https://www.instagram.com/maqsoftware",
+    "https://plus.google.com/104615735701576694043"]
+    }
+</script>
+    <!-- Google Analytics -->
+    <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-7928102-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- End Google Analytics -->
+</body>
+
+</html>
+
+<script>
+    loadPlugins();
+</script>
