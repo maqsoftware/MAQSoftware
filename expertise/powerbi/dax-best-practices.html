@@ -3,20 +3,24 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
 <head>
     <meta charset="utf-8" />
-    <title>DAX Best Practices | MAQ Software</title>
-    <meta name="title" content="DAX Best Practices | MAQ Software" />
+    <title>Improve Power BI Performance by Optimizing DAX | MAQ Software</title>
+    <meta name="title" content="Improve Power BI Performance by Optimizing DAX | MAQ Software" />
     <meta name="theme-color" content="#c00000">
-    <meta name="description" content=" To improve the performance of DAX queries and the subsequent Power BI reports, we have compiled a best practice list our architects and developers use when designing enterprise-grade implementations"
+    <meta name="description" content="Improve speed and functionality in Power BI with 15 DAX best practices."
     />
     <meta name="keywords" content="maq software, innovative software, data management, DAX, Power BI, Sharepoint, cloud, artificial intelligence"
     />
     <meta name="ROBOTS" content="FOLLOW,INDEX" />
     <!-- Open Graph data -->
-    <meta name="og:title" property="og:title" content="DAX Practices | MAQ Software"
+    <meta property="og:type" content="article"
     />
-    <meta name="og:description" property="og:description" content="To improve the performance of DAX queries and the subsequent Power BI reports, we have compiled a best practice list our architects and developers use when designing enterprise-grade implementations"
+    <meta property="og:title" content="Improve Power BI Performance by Optimizing DAX | MAQ Software"
     />
-    <meta property="og:image" name="og:image" content="/img/Banners/dax-best-practices-banner.jpg" 
+    <meta property="og:description" content="Improve speed and functionality in Power BI with 15 DAX best practices."
+    />
+    <meta property="og:url" content="https://maqsoftware.com/expertise/powerbi/dax-best-practices" 
+    />
+    <meta property="og:image" content="https://maqsoftware.com/img/Banners/dax-best-practices-banner.jpg" 
     />
     <meta property="og:image:width" content="450"/>
     <meta property="og:image:height" content="298"/>
@@ -24,11 +28,11 @@
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@maqsoftware" />
-    <meta name="twitter:title" content="DAX Practices | MAQ Software" 
+    <meta name="twitter:title" content="Improve Power BI Performance by Optimizing DAX | MAQ Software" 
     />
-    <meta name="twitter:description" content="To improve the performance of DAX queries and the subsequent Power BI reports, we have compiled a best practice list our architects and developers use when designing enterprise-grade implementations"
+    <meta name="twitter:description" content="Improve speed and functionality in Power BI with 15 DAX best practices."
     />
-    <meta name="twitter:image" content="/img/Banners/dax-best-practices-banner.jpg"
+    <meta name="twitter:url" content="https://maqsoftware.com/expertise/powerbi/dax-best-practices"
     />
     <!-- End Twitter Card data -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -147,9 +151,9 @@
             <div class="container">
                 <div class="row text-left">
                     <div class="col-md-10 offset-md-1">
-                        <h3 class="h4">DAX Best Practices  </h3>
+                        <h3 class="h4">Improve Power BI Performance by Optimizing DAX</h3>
                         <p><span><i class="ion ion-calendar"></i> July 17, 2019 </span><span><i class="ion ion-clock"></i> 6 Minutes to Read</span><p>
-                        <p class="lead">We design and implement hundreds of enterprise-grade <a href="https://powerbi.microsoft.com/en-us/">Power BI</a> installations every year. The Power BI reports that we manage serve tens of thousands of users daily. We use <a href="https://docs.microsoft.com/en-us/power-bi/desktop-quickstart-learn-dax-basics">Data Analysis Expressions (DAX)</a> to build powerful expressions and formulas in our Power BI reports.</p>
+                        <p class="lead"><a href="https://powerbi.microsoft.com/en-us/">Power BI</a> performance issues are often a result of sub-optimal <a href="https://docs.microsoft.com/en-us/power-bi/desktop-quickstart-learn-dax-basics">Data Analysis Expressions (DAX)</a> language. DAX is a collection of functions, operators, and constants that you can use in a formula, or expression, to calculate and return one or more values. Stated more simply, DAX helps you create new information from data already in your model.</p>
 
                         <!-- Social Media -->
                         <!-- Facebook Share -->
@@ -177,10 +181,10 @@
                     
                     <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
                         <p class="pt-5px">
-                            DAX is a collection of functions, operators, and constants that you can use in a formula, or expression, to calculate and return one or more values. Stated more simply, DAX helps you create new information from data already in your model.
+                            Optimized DAX provides deep insights, shedding new light on complex data. Inefficient DAX slows processing time, clogs premium capacity, increases wait time, and hinders refreshes and report load time.
                         </p>
                         <p class="pt-5px">
-                            The following 15 DAX best practices ensure that our dashboard users get the most out of their data.
+                            We deliver rich insights with DAX in hundreds of enterprise-grade Power BI implementations. The following 15 DAX best practices ensure that our dashboard users get the most out of their data.
                         </p>
                         
                         <ol class="pb-10">
@@ -200,9 +204,9 @@
                             </li>
                             <li class="h4header"> Use DIVIDE() instead of / 
                                 <ul class="defaultBody">
-                                    <li>The DIVIDE() function has a third (extra) parameter that is returned if the denominator is zero. </li>
-                                    <li>The DIVIDE() function internally performs a check to validate whether the denominator is zero. </li>
-                                    <li>You do not need to use the IF condition with the “/” operator to check for an invalid denominator. </li>
+                                    <li>The DIVIDE() function has a third (extra) parameter that is returned if the denominator is zero.</li>
+                                    <li>The DIVIDE() function internally performs a check to validate whether the denominator is zero.</li>
+                                    <li>For invalid denominator cases, use the IF condition while using the “/” operator.</li>
                                     <li>Note: If you are certain the denominator value is not zero, it is better to use the “/” operator without an IF check. The DIVIDE() function will always perform an IF check internally. </li>                                    
                                 </ul>
                             </li>
@@ -317,20 +321,18 @@
                 <div class="row ptb-15">
                     <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
                         
-                        <h3>Power BI best practices:</h3>
+                        <h3>Power BI Performance Guide</h3>
                        
-                            <p>For more Power BI tips, check out our <a href="/expertise/powerbi/power-bi-best-practices"><u>BI best practice guide</u>.</a></p> <br />
-
-                     </div>
-                    <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
+                            <p>To further improve Power BI performance, check out our <a href="/expertise/powerbi/power-bi-best-practices">Power BI best practice guide</a>.</p>
+                        
                         <h3> References</h3>
                         <p>Microsoft offers additional documents that provide a high-level framework for best practices. We strongly encourage you to review the following documents: </p>
                         <ul class="defaultBody">
                             <li><a href="https://docs.microsoft.com/en-us/dax/data-analysis-expressions-dax-reference">Data Analysis Expressions (DAX) Reference</a> – Microsoft Corporation</li>
                             <li><a href="https://docs.microsoft.com/en-us/dax/dax-function-reference">DAX function reference</a> – Microsoft Corporation, published April 19, 2019 </li>
                             <li><a href="https://docs.microsoft.com/en-us/power-bi/power-bi-reports-performance">DAX basics in Power BI Desktop</a> – Microsoft Corporation, published May 7, 2019 </li>
-                        </ul>
-                     </div>
+                        </ul>                        
+
                     </div>
                 </div>
             </div>
