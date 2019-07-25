@@ -100,6 +100,7 @@ function renderNewsMain() {
             $("#newsimg" + iNumber).attr('src', src);
             $("#img_href" + iNumber).attr('href', href);
             $("#newstitle" + iNumber).attr('href', href);
+            $(".blog-post").removeClass("NewsLoading");
         }
     }
 }
