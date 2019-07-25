@@ -5251,6 +5251,16 @@ ul.project-detail-block, .project-detail-block ul {
     background: url(/img/loading.GIF) no-repeat center center;
 }
 
+.NewsLoading {
+    content: url(/img/loading.GIF); 
+    height: 60%;
+    width: 30%;
+}
+
+#LoadPageCaseStudy {
+    height:auto !important;
+}
+
 #LoadPageNews,#LoadPageBlogs {
     min-height: 500px;
     height: auto !important;
