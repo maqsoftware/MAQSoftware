@@ -18,8 +18,7 @@ function renderCaseStudy() {
             entry1 = oCaseStudyData.getElementsByTagName('entry').item(iIterator);
             sAnchorCaseStudy = entry1.getElementsByTagName('link')[2].getAttribute('href');
             imgSource = $('<div/>').html(entry1.getElementsByTagName('content')[0].innerHTML).text()
-            imgSource = parser.parseFromString(imgSource, "text/html");
-            //aCategoryHTML = entry1.getElementsByTagName('category')[0].getAttribute('term');
+            imgSource = parser.parseFromString(imgSource, "text/html");            
             aCategoryHTML = $.map(entry1.getElementsByTagName('category'), function (el) {
                 var sTerm = el.getAttribute("term");
                 if (sTerm === "Case Study") {
@@ -29,9 +28,8 @@ function renderCaseStudy() {
             });
             sImageLink = imgSource.getElementsByTagName('img')[0].getAttribute('src');
             sCaseStudyTitle = entry1.getElementsByTagName('title')[0].childNodes[0].nodeValue;
-            if (entry1) {
-                sCaseStudyTitle = entry1.getElementsByTagName('title')[0].childNodes[0].nodeValue;
-                if (sCaseStudyTitle.includes("Case Study")) {
+            if (entry1) {                
+                if (entry1.innerHTML.includes("term=\"Case Study\"")) {
                     var oCaseStudyEntry = "<div class='col-md-6 col-sm-6 nf-item spacing-grid powerbi'>"
                        + "<div class='blog-post'>"
                           + "<div class='post-media'>"
