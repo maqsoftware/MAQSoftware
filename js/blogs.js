@@ -43,7 +43,8 @@ function renderBlogs() {
         }
         for (iIterator = iStart; iIterator < iEnd; iIterator++) {
             entry1 = oBlogsData.getElementsByTagName('entry').item(iIterator);
-            if (entry1) {
+            var sBlogTag = entry1.innerHTML;
+            if (entry1 && sBlogTag.includes("term=\"Blog\"")) {
                 sTag = entry1.getElementsByTagName('category')[0].attributes["term"].nodeValue.toUpperCase();
                 sDate = entry1.getElementsByTagName('published')[0].childNodes[0].nodeValue.toLowerCase().split("t");
                 oDatePart = [];
@@ -97,7 +98,16 @@ function loadBlogs(sBlogsData) {
     try {
         var parser = new DOMParser();
         oBlogsData = parser.parseFromString(sBlogsData, "text/xml");
+        var entry1, count = 0;
         iTotalBlogs = oBlogsData.getElementsByTagName('entry').length;
+        for (var iIterator = 0; iIterator < iTotalBlogs ; iIterator++) {
+            entry1 = oBlogsData.getElementsByTagName('entry').item(iIterator);
+            var sBlogTag = entry1.innerHTML;
+            if (sBlogTag.includes("term=\"Blog\"")){
+                count++;
+            }
+        }
+        iTotalBlogs = count;
         if (iTotalBlogs || oBlogsData.getElementsByTagName('content')) {
             iMaxPageIndex = Math.round(iTotalBlogs / oBlogsPager.pagesize);
             $("#Pagination").show();
