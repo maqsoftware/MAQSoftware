@@ -43,8 +43,7 @@ function renderBlogs() {
         }
         for (iIterator = iStart; iIterator < iEnd; iIterator++) {
             entry1 = oBlogsData.getElementsByTagName('entry').item(iIterator);
-            var sBlogTag = entry1.innerHTML;
-            if (entry1 && sBlogTag.includes("term=\"Blog\"")) {
+            if (entry1) {
                 sTag = entry1.getElementsByTagName('category')[0].attributes["term"].nodeValue.toUpperCase();
                 sDate = entry1.getElementsByTagName('published')[0].childNodes[0].nodeValue.toLowerCase().split("t");
                 oDatePart = [];
@@ -98,16 +97,7 @@ function loadBlogs(sBlogsData) {
     try {
         var parser = new DOMParser();
         oBlogsData = parser.parseFromString(sBlogsData, "text/xml");
-        var entry1, count = 0;
         iTotalBlogs = oBlogsData.getElementsByTagName('entry').length;
-        for (var iIterator = 0; iIterator < iTotalBlogs ; iIterator++) {
-            entry1 = oBlogsData.getElementsByTagName('entry').item(iIterator);
-            var sBlogTag = entry1.innerHTML;
-            if (sBlogTag.includes("term=\"Blog\"")){
-                count++;
-            }
-        }
-        iTotalBlogs = count;
         if (iTotalBlogs || oBlogsData.getElementsByTagName('content')) {
             iMaxPageIndex = Math.round(iTotalBlogs / oBlogsPager.pagesize);
             $("#Pagination").show();
@@ -118,7 +108,7 @@ function loadBlogs(sBlogsData) {
 }
 function loadBlogsGrid() {
     oBlogsContainer.html("").addClass(sLoadingClass);
-    getBloggerData('https://www.blogger.com/feeds/3262801613185975083/posts/default?max-results=999', getBlogsSuccess, getBlogsOnComplete);
+    getBloggerData('https://www.blogger.com/feeds/3262801613185975083/posts/default/-/Blog?max-results=999', getBlogsSuccess, getBlogsOnComplete);
 }
 function getBlogsSuccess(sResponse) {
     var iTop;
