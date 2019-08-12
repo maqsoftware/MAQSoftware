@@ -5257,6 +5257,12 @@ ul.project-detail-block, .project-detail-block ul {
     width: 30%;
 }
 
+.CaseStudyLoading{
+    content: url(/img/loading.GIF); 
+    height: 70%;
+    width: 15%;
+}
+
 #LoadPageCaseStudy {
     height:auto !important;
 }

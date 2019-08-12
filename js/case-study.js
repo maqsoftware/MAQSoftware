@@ -63,7 +63,8 @@ function loadCaseStudy(sCaseStudyData) {
 }
 
 function loadBloggerGrid() {
-    oCaseStudyContainer.html("").addClass(sLoadingClass);
+    oCaseStudyContainer.html("").addClass(sLoadingClass);    
+    $("#loadingicon").html("").addClass("CaseStudyLoading");
     getBloggerData('https://www.blogger.com/feeds/3262801613185975083/posts/default?max-results=999', getBlogSuccess, getBlogOnComplete);
 }
 
@@ -73,5 +74,6 @@ function getBlogSuccess(sResponse) {
 }
 
 function getBlogOnComplete() {
-    oCaseStudyContainer.removeClass(sLoadingClass);
+    oCaseStudyContainer.removeClass(sLoadingClass);    
+    $("#loadingicon").hide();   
 }
