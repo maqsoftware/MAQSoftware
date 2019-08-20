@@ -31,7 +31,7 @@
     <link rel="icon" type="image/png" href="/img/favicon.ico">
     <link rel="apple-touch-icon" href="/img/favicon.ico">
     <!-- CSS -->
-    <link href="/css/style.css?v=20190812" rel="stylesheet" type="text/css" />
+    <link href="/css/style.css?v=20190820" rel="stylesheet" type="text/css" />
     <link href="/css/bootstrap.min.css?v=20170822" rel="stylesheet" type="text/css" />
     <link href="/css/font-awesome.css?v=20170822" rel="stylesheet" type="text/css" />
     <link href="/css/ionicons.css?v=20170822" rel="stylesheet" type="text/css" />
@@ -48,7 +48,7 @@
     <!--Facebook Java SDK-->
     <div id="fb-root"></div>
     <script>
-(function (d, s, id) {
+        (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
@@ -141,18 +141,15 @@
         </section>
         <!-- End Intro Section -->
         <!-- CONTENT --------------------------------------------------------------------------------->
-        <!-- Blog Post Section -->
-        <section class="ptb ptb-sm-80">
-            <div class="container">                
+        <!-- Case Studies Section -->
+        <section id="case-studies" class="ptb ptb-sm-80">
+            <div class="container">
                 <div class="row" id="CaseStudyParentdiv">
-                   
+
                     <!-- Post Item -->
                     <div class="col-lg-9 col-md-9">
-                        <div class="col-lg-3 col-md-3 mt-25 mt-sm-30" id="loadingicon"></div>   
-                        <div class="row container-grid Loading" id="LoadPageCaseStudy">
-                           
-                        </div>
-
+                        <div class="col-lg-3 col-md-3 mt-25 mt-sm-30" id="loadingicon"></div>
+                        <div class="row container-grid Loading" id="LoadPageCaseStudy"></div>
                     </div>
                     <!-- End Post Item -->
                     <!-- Sidebar -->
@@ -174,19 +171,19 @@
                 </div>
             </div>
         </section>
-        <!-- End Blog Post Section -->
+        <!-- End Case Studies Section -->
         <!-- End CONTENT ------------------------------------------------------------------------------>
         <!-- FOOTER -->
-        <footer class="footer   pt-60">
+        <footer class="footer pt-60">
             <div class="container">
                 <div class="row mb-30">
-                    <div class="col-md-5  col-sm-12 mb-30">
+                    <div class="col-md-5 col-sm-12 mb-30">
                         <h6 class="">Follow Us On</h6>
                         <ul class="social">
                             <li><a target="_blank" href="https://www.facebook.com/maqsoftware" tabindex="-1" aria-hidden="true"><i class="fa fa-facebook"></i></a></li>
                             <li><a target="_blank" href="https://www.linkedin.com/company/maq-software" tabindex="-1" aria-hidden="true"><i class="fa fa-linkedin"></i></a></li>
                             <li><a target="_blank" href="https://youtube.com/maqsoftware" tabindex="-1" aria-hidden="true"><i class="ion ion-social-youtube"></i></a></li>
-                            <li><a target="_blank" href="https://twitter.com/MAQSoftware" tabindex="-1" aria-hidden="true"><i class="fa fa-twitter"></i></a></li>                            
+                            <li><a target="_blank" href="https://twitter.com/MAQSoftware" tabindex="-1" aria-hidden="true"><i class="fa fa-twitter"></i></a></li>
                             <li><a target="_blank" href="https://github.com/maqsoftware" tabindex="-1" aria-hidden="true"><i class="ion ion-social-github"></i></a></li>
                             <li><a target="_blank" href="https://instagram.com/maqsoftware" tabindex="-1" aria-hidden="true"><i class="fa fa-instagram"></i></a></li>
                         </ul>
@@ -260,7 +257,7 @@
     <script src="/js/plugin/mediaelement-and-player.min.js?v=20170822"></script>
     <script src="/js/plugin/sidebar-menu.js?v=20170822" type="text/javascript"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="/js/theme.js?v=20180807" type="text/javascript"></script>
+    <script src="/js/theme.js?v=20190820" type="text/javascript"></script>
     <script src="/js/navigation.js?v=20170822" type="text/javascript"></script>
     <script src="/js/contact.js?v=20170828.2" type="text/javascript"></script>
     <script src="/js/common.js?v=20180807" type="text/javascript"></script>
@@ -272,8 +269,8 @@
     <script src="https://cdn.botframework.com/botframework-webchat/0.14.1/botchat-es5.js"></script>
     <script src="/js/FileSaver.js?v=20170822" type="text/javascript"> </script>
     <script src="/js/html-docx.js?v=20170822" type="text/javascript"> </script>
-    <script src="js/case-study.js?v=20190812" type="text/javascript"></script>
-    <script type= "text/javascript">
+    <script src="js/case-study.js?v=20190820" type="text/javascript"></script>
+    <script type="text/javascript">
         loadBloggerGrid();
     </script>
     <script type="application/ld+json">
@@ -302,12 +299,12 @@
     </script>
     <!-- Google Analytics -->
     <script>
-            (function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-7928102-1', 'auto');
         ga('send', 'pageview');
