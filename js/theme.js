@@ -625,7 +625,7 @@ function RenderMartech() {
         });
 
         // bind filter button click
-        $('.container-filter').on('click', '.categories', function () {
+        $('.container-filter').off('click', '.categories').on('click', '.categories', function () {
             var filterValue = $(this).attr('data-filter');
             $container.isotope({ filter: filterValue });
         });
@@ -640,7 +640,7 @@ function RenderMartech() {
         });
 
         // bind filter categories click
-        $('.container-filter').on('click', '.categories', function () {
+        $('.container-filter').off('click', '.categories').on('click', '.categories', function () {
             var filterValue = $(this).attr('data-filter');
             $container2.isotope({ filter: filterValue });
         });
@@ -660,7 +660,7 @@ function RenderMartech() {
             var filterValue = blogcategory.attr('data-filter');
             $('.container-grid').isotope({ filter: filterValue });
         }
-        $(".blogcategories").on('click', function () {
+        $(".blogcategories").off('click').on('click', function () {
             var $buttonGroup = $('.blogcategories-filter');
             var lengthOfActive = $buttonGroup.find('.active');
             if (lengthOfActive.length > 0) {
