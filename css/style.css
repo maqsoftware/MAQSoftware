@@ -5257,11 +5257,13 @@ ul.project-detail-block, .project-detail-block ul {
     width: 30%;
 }
 
-#LoadPageCaseStudy {
-    height:auto !important;
+.CaseStudyLoading{
+    content: url(/img/loading.GIF); 
+    height: 70%;
+    width: 15%;
 }
 
-#LoadPageNews,#LoadPageBlogs {
+#LoadPageNews, #LoadPageBlogs {
     min-height: 500px;
     height: auto !important;
     height: 500px;
