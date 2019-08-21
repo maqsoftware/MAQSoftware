@@ -5259,8 +5259,9 @@ ul.project-detail-block, .project-detail-block ul {
 
 .CaseStudyLoading{
     content: url(/img/loading.GIF); 
-    height: 70%;
-    width: 15%;
+    width: auto !important;
+    margin-left: auto;
+    margin-right: auto
 }
 
 #LoadPageNews, #LoadPageBlogs {
