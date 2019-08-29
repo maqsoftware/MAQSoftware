@@ -402,6 +402,19 @@ button {
     vertical-align: top;
 }
 
+.Container-button{
+    display:inline;
+    float:right;
+}
+
+.try_pbi{
+    /*float:left;*/
+}
+
+.readmore_pbi{
+    /*float:right;*/
+}
+
 .btn-full {
     width: 100% !important;
     display: inline-block;
@@ -3429,7 +3442,6 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 #map {
     height: 100%;
 }
-
 
 @media (max-width: 767px) {
     .inner-intro .container {
