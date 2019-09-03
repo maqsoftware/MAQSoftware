@@ -462,6 +462,17 @@ button {
         background: rgba(50,50,50,0.85);
     }
 
+.btn-black_try {
+    color: #fff;
+    background: #323232;
+    border: none;
+}
+
+    .btn-black_try:hover {
+        color: #fff;
+        /*background: #323232;*/
+        background: #D3D3D3;
+    }
 .btn-color-a, .btn-color-b {
     color: #fff;
     background: #bb141a;
