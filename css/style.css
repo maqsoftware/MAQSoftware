@@ -251,27 +251,6 @@ p.color, .color, a.color, h1.color, h2.color, h3.color, h4.color, h5.color, h6.c
     color: #323232;
 }
 
-.inline-dispay{
-    display:inline;
-}
-
-.inline-dispay-block{
-    display:inline-block;
-}
-
-.try_export_container{
-    width: -webkit-fill-available;
-}
-
-.btn_try_export{
-    margin: auto !important;
-    float: right;
-}
-
-.try_export{
-    float: left;
-}
-
     .gray-bg h1, .gray-bg h2, .gray-bg h3, .gray-bg h4, .gray-bg h5, .gray-bg h6, .gray-bg .container-icon {
         color: #323232;
     }
@@ -494,6 +473,21 @@ button {
         /*background: #323232;*/
         background: #D3D3D3;
     }
+
+.try_export_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.btn_try_export {
+    margin: 0;
+}
+
+.try_export {
+    margin-right: 10px;
+}
+
 .btn-color-a, .btn-color-b {
     color: #fff;
     background: #bb141a;
