@@ -153,11 +153,10 @@ function blogsConstructor() {
                 }
             } else {
                 oBlogsPager.pageIndex++;
+                $("#Previous").removeClass("hidden");
                 if (oBlogsPager.pageIndex >= iMaxPageIndex) {
                     oBlogsPager.pageIndex = iMaxPageIndex;
                     $("#Next").addClass("hidden");
-                } else {
-                    $("#Previous").removeClass("hidden");
                 }
             }
             oBlogsContainer.html("").addClass(sLoadingClass);
