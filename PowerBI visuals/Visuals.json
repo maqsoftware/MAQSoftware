@@ -1,15 +1,28 @@
 [
-   {
-     "Sunburst": {
+  {
+    "Organization Chart": {
+      "name": "Organization Chart",
+      "title": "Organization Chart ",
+      "id": "OrganizationChart",
+      "description": "Use this chart to demonstrate hierarchy within an organization, or any function area",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA200001120",
+      "img": "../img/PowerBI/Organizationchart.png",
+      "gif": "../img/PowerBI/Organizationchart.mp4",
+      "content": "<p>Organization chart displays relationship between different entities. Users can visually display hierarchical information in a top-down structured tree format along with images.</p><p> Business Use Cases:</p><ul><li>Sales: Display sales structure along with territory responsibilities and actual sales. Group field can be used to visually indicate if a salesperson is below, on, or ahead of the target.</li><li>Marketing: Display various marketing campaigns at highest level. Various tactics and activities, displaying information such as cost, and other marketing KPIs measuring the impact of the campaigns, tactics, and activities at the next level.</li><li>Organization: Structure human resources according to respective departments and hierarchy.</li><li>IT: Display organizational IT assets, showing various asset categories, their availability volumes, broken down to specific assets.</li><li>Operations: Display a manufacturing process, with a breakdown of the components or ingredients to produce the product, along with their respective quantities in a hierarchical format.</li><li>Finance: Display budget allocation by divisions or projects, breaking them down into subdivisions or sub projects, color coding the components based on Group field to distinguish among those which are on budget, over budget, or within budget.</li></ul><p>Key features:</p><ul><li>Includes an optional image column to show images</li><li>Modify the look of the connector links</li><li>Color the cards based on a Legend column</li><li>Ability to customize the card dimension, border and corner radius</li><li>Interactivity with the cards to expand/collapse levels and cross-filter other visuals</li><li>Font formatting for labels and sublabels</li><li>Ability to zoom and drag the position of the visual</li><li>Configurable legend position and formatting</li><li>Support for context menu</li></ul>",
+      "category": "flow"
+    }
+  },
+  {
+    "Sunburst": {
       "name": "Sunburst",
       "title": "Sunburst ",
-      "id": "sunburst",      
+      "id": "sunburst",
       "description": "Break down hierarchical data using color coded concentric rings",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA200000097?tab=Overview",
       "img": "../img/PowerBI/Sunburst.png",
       "gif": "../img/PowerBI/SunburstMP4.mp4",
       "content": "<p>Sunburst by MAQ Software allows users to display hierarchical data as a set of nested rings.Customizable colors make it easy to distinguish between categories. The chart is displayed as a radial treemap or multilevel pie chart. </p><p>Sunburst by MAQ Software is useful for analyzing sales distributions, exports, and more. This visual is useful for identifying patterns in data that might otherwise go unnoticed.  </p><p>Key features:</p><ul><li>Customizable arcs</li><li>Customizable detail labels</li><li>Zoom-in animation</li><li>Customizable data colors</li><li>Cross-filtering support for legend values and circles</li><li>Bookmark support</li><li>Custom report tooltips support</li></ul>",
-      "category": "comparison part change"      
+      "category": "comparison part change"
     }
   },
   {
