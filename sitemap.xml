@@ -117,10 +117,13 @@
 <url>
   <loc>https://maqsoftware.com/about/CSRReport.html</loc>
 </url>
-  <url>
-    <loc>https://maqsoftware.com/about/termsofservice.html</loc>
-  </url>
- <url>
-    <loc>https://maqsoftware.com/expertise/powerbi/dax-best-practices.html</loc>
-  </url>
+<url>
+  <loc>https://maqsoftware.com/about/termsofservice.html</loc>
+</url>
+<url>
+  <loc>https://maqsoftware.com/expertise/powerbi/dax-best-practices.html</loc>
+</url>
+<url>
+  <loc>https://maqsoftware.com/pbivisualseula.html</loc>
+</url>
 </urlset>
