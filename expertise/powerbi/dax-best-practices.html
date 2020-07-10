@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <title>Improve Power BI Performance by Optimizing DAX | MAQ Software</title>
-    <meta name="title" content="Improve Power BI Performance by Optimizing DAX | MAQ Software" />
+    <meta name="title" content="20 DAX Best Practices To Improve Your Power BI | MAQ Software" />
     <meta name="theme-color" content="#c00000">
-    <meta name="description" content="Improve speed and functionality in Power BI with 15 DAX best practices."
+    <meta name="description" content="Improve the speed and performance of Power BI reports with our DAX best practice guidelines. Find out how to get the most out of your data."
     />
     <meta name="keywords" content="maq software, innovative software, data management, DAX, Power BI, Sharepoint, cloud, artificial intelligence"
     />
@@ -14,9 +14,9 @@
     <!-- Open Graph data -->
     <meta property="og:type" content="article"
     />
-    <meta property="og:title" content="Improve Power BI Performance by Optimizing DAX | MAQ Software"
+    <meta property="og:title" content="20 DAX Best Practices To Improve Your Power BI | MAQ Software"
     />
-    <meta property="og:description" content="Improve speed and functionality in Power BI with 15 DAX best practices."
+    <meta property="og:description" content="Improve the speed and performance of Power BI reports with our DAX best practice guidelines. Find out how to get the most out of your data."
     />
     <meta property="og:url" content="https://maqsoftware.com/expertise/powerbi/dax-best-practices" 
     />
@@ -28,9 +28,9 @@
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@maqsoftware" />
-    <meta name="twitter:title" content="Improve Power BI Performance by Optimizing DAX | MAQ Software" 
+    <meta name="twitter:title" content="20 DAX Best Practices To Improve Your Power BI | MAQ Software" 
     />
-    <meta name="twitter:description" content="Improve speed and functionality in Power BI with 15 DAX best practices."
+    <meta name="twitter:description" content="Improve the speed and performance of Power BI reports with our DAX best practice guidelines. Find out how to get the most out of your data."
     />
     <meta name="twitter:url" content="https://maqsoftware.com/expertise/powerbi/dax-best-practices"
     />
@@ -140,7 +140,7 @@
         <section class="inner-intro dark-bg bg-image overlay-dark parallax parallax-background1 aboutposter" data-background-img="/img/Banners/dax-best-practices-banner.jpg" >
             <div class="container">
                 <div class="row title">
-                    <h2 class="h2">Best Practices Guide </h2>
+                    <h2 class="h2">DAX Best Practices Guide </h2>
 
                 </div>
             </div>
@@ -152,7 +152,7 @@
                 <div class="row text-left">
                     <div class="col-md-10 offset-md-1">
                         <h3 class="h4">Improve Power BI Performance by Optimizing DAX</h3>
-                        <p><span><i class="ion ion-calendar"></i> July 17, 2019 </span><span><i class="ion ion-clock"></i> 6 Minutes to Read</span><p>
+                        <p><span><i class="ion ion-calendar"></i> July 10, 2020 </span><span><i class="ion ion-clock"></i> 6 Minutes to Read</span><p>
                         <p class="lead"><a href="https://powerbi.microsoft.com/en-us/">Power BI</a> performance issues are often a result of sub-optimal <a href="https://docs.microsoft.com/en-us/power-bi/desktop-quickstart-learn-dax-basics">Data Analysis Expressions (DAX)</a> language. DAX is a collection of functions, operators, and constants that you can use in a formula, or expression, to calculate and return one or more values. Stated more simply, DAX helps you create new information from data already in your model.</p>
 
                         <!-- Social Media -->
@@ -181,138 +181,207 @@
                     
                     <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
                         <p class="pt-5px">
-                            Optimized DAX provides deep insights, shedding new light on complex data. Inefficient DAX slows processing time, clogs premium capacity, increases wait time, and hinders refreshes and report load time.
+                            Optimized DAX provides deep insights, shedding new light on complex data. Inefficient DAX slows processing, clogs premium capacity, increases wait time, and hinders refreshes and report load time.
                         </p>
                         <p class="pt-5px">
-                            We deliver rich insights with DAX in hundreds of enterprise-grade Power BI implementations. The following 15 DAX best practices ensure that our dashboard users get the most out of their data.
+                            We have experience delivering rich insights with DAX in hundreds of enterprise-grade Power BI implementations. Use these 20 DAX best practices to ensure your dashboard users get the most out of their data.
                         </p>
                         
                         <ol class="pb-10">
-                            <li class="h4header"> Use variables instead of repeating measures inside the IF branch
+                            <li class="h4header"> Clear the DAX cache before optimizing DAX
                                 <ul class="defaultBody">
-                                    <li>Incorrect DAX: <br><code>Ratio = IF([Total Rows] > 10, SUM(Revenue) /[Total Rows], 0)</code></li>
-                                    <li>Correct DAX:<br><code>VAR totalRows = [Total Rows]; <br>Ratio = IF(totalRows > 10, SUM(Revenue) / totalRows,0)</code></li>
-                                    <li>Explanation:
-                                    <ol>
-                                        <li>In the first expression, because measures are calculated on the fly, the [Total Rows] expression is calculated twice. [Total Rows] is first calculated for the condition check and then for the true condition expression.</li>
-                                        <li>Instead of calculating the same expression multiple times, you can store the resulting measure value in a variable. You can use a variable reference wherever required.</li>
-                                        <li>The same variable process applies to all instances where you call the same measure at multiple locations.</li>
-                                    </ol>
-                                    </li>
-                                    <li>Reference: <a href="https://www.sqlbi.com/articles/optimizing-if-conditions-using-variables/">https://www.sqlbi.com/articles/optimizing-if-conditions-using-variables/</a></li>
+                                    <li>Caches result from internal VertiPaq queries.</li>
+                                    <li>Clear your cache from within DAX Studio.</li>
+                                    <li>Resetting the cache lets you measure effective performance gain.</li>
                                 </ul>
                             </li>
-                            <li class="h4header"> Use DIVIDE() instead of / 
+                            <li class="h4header"> Format your code 
                                 <ul class="defaultBody">
-                                    <li>The DIVIDE() function has a third (extra) parameter that is returned if the denominator is zero.</li>
-                                    <li>The DIVIDE() function internally performs a check to validate whether the denominator is zero.</li>
-                                    <li>For invalid denominator cases, use the IF condition while using the “/” operator.</li>
-                                    <li>Note: If you are certain the denominator value is not zero, it is better to use the “/” operator without an IF check. The DIVIDE() function will always perform an IF check internally. </li>                                    
-                                </ul>
+                                    <li>Use the <a href="http://www.daxformatter.com/">DAX Formatter.</a></li>
+                                    <li>Formatted code is easier to read and maintain.</li></ul>
                             </li>
                             <li class="h4header"> Do not change BLANK values to zeros or other strings
                                 <ul class="defaultBody">
-                                    <li>It is a common practice to replace blanks with zeros or other strings.</li>
-                                    <li>Power BI automatically filters all rows with blank values.</li>
-                                    <li>When viewing results from tables with large amounts of data, Power BI filters the blank value rows, limiting the result set and preventing poor performance.</li>
-                                    <li>If the blanks are replaced, Power BI does not filter the unwanted rows, affecting performance negatively.</li>
+                                    <li>It is common practice to replace blanks with zeros or other strings.</li>
+                                    <li>However, Power BI <i>automatically</i> filters all rows with blank values. When viewing results from tables with large amounts of data, this limits the result set and prevents poor performance.</li>
+                                    <li>If the blanks are replaced, Power BI does not filter the unwanted rows, negatively affecting performance.</li>
                                 </ul>
                             </li>
-                            <li class="h4header">  Use (a-b)/b along with variables instead of a/b — 1 or a/b*100–100
+                            <li class="h4header">Use the DISTINCT() and VALUES() functions consistently
                                 <ul class="defaultBody">
-                                    <li>Using a/b — 1 is the preferred approach to calculate a ratio and avoid duplicate measure calculations. </li>
-                                    <li>You can achieve the same performance by using variables and using (a-b)/b to calculate the ratio. </li>
-                                    <li>You should use (a-b)/b for the following reason: <br><code>If both a and b are blank values, then (a-b)/b returns a blank value and Power BI will filter the values out. a/b — 1 would return -1 as the result because both a and b are integers.</code></li>
-                                </ul>
-                            </li>
-                            <li class="h4header"> Use SELECTEDVALUE() instead of HASONEVALUE()
-                                <ul class="defaultBody">
-                                    <li>Currently, we use the HASONEVALUE() function to check if there is only one value present for a column after applying slicers and filters. We then use the VALUES(ColumnName) DAX function to retrieve the single value. </li>
-                                    <li>The SELECTEDVALUE() function performs the above steps internally and retrieves the value if there is only one distinct value present for the column. The SELECTEDVALUE() function returns a blank if there are multiple values available. </li>
-                                    
-                                </ul>
-                            </li>
-                            <li class="h4header"> Stop using IFERROR() and ISERROR()
-                                <ul class="defaultBody">
-                                    <li>The IFERROR() and ISERROR() functions were widely used in Excel when applying the FIND() and SEARCH() functions. The IFERROR() and ISERROR() functions were necessary because FIND() and SEARCH() returned errors if the query did not obtain the required result. </li>
-                                    <li>The IFERROR() and ISERROR() functions force the Power BI engine to perform a step-by-step execution of each row to check for errors. There is currently no method to directly state which row returned the error. </li>
-                                    <li>The FIND() and SEARCH() DAX functions provide an extra parameter that the query can pass. The parameter is returned if the search string is not present. </li>
-                                    <li>The FIND() and SEARCH() DAX functions are also used to ensure nothing is divided by zero. Additionally, the FIND() and SEARCH() functions check if more than one value is returned. You can avoid using the FIND() and SEARCH() DAX functions by using the correct DAX functions such as DIVIDE() and SELECTEDVALUE(). The DIVIDE() and SELECTEDVALUE() functions perform the error check internally and return the expected results. </li>
-                                    <li>You can always return DAX expressions in such a way that they never return an error. </li>
-                                </ul>
-                            </li>
-                            <li class="h4header"> Do not use scalar variables in SUMMARIZE()
-                                <ul class="defaultBody">
-                                    <li>The SUMMARIZE() function is traditionally used to group columns and return the resulting aggregations. </li>
-                                    <li>Instead of using the SUMMARIZE() function in this manner, you should use the SUMMARIZECOLUMNS() DAX function. The SUMMARIZECOLUMNS() function is newer and better optimized. </li>
-                                    <li>You should only use the SUMMARIZE() function to summarize the grouped elements of a table without any associated measures or aggregations. For example: <br><code>SUMMARIZE(Table, Column1, Column2)</code> </li>                                                                  
-                                    
-                                </ul> 
-                            </li>
-                            <li class="h4header">  Use = 0 instead of check for ISBLANK() || = 0
-                                <ul class="defaultBody">
-                                    <li>The BLANK value in Power BI is associated with the base value of the data type of a column. </li>
-                                    <li>The BLANK value corresponds to zero for integers, “(empty string)” for string columns, and “1–1–1900” for date fields. </li>
-                                    <li>Instead of having two checks (ISBLANK() and comparing with zero), you can directly use = 0, which internally performs both checks. </li>
-                                    <li>To perform only the check for zero, you can use the IN operator. </li>
-                                    
-                                </ul>
-                            </li>
-                            <li class="h4header"> Use FILTER(all(ColumnName)) instead of FILTER(values()) or FILTER(T)
-                                <ul class="defaultBody">
-                                    <li>To calculate measures ignoring all the filters applied to a column, use the All(ColumnName) function along with the FILTER function instead of Table or VALUE(). For example:<br /> <code>CALCULATE([Total Sales], FILTER(ALL(Products[Color]), Color = ‘Red’))</code></li>
-                                    <li>Directly applying filters using expressions and not using the FILTER function behaves in the same way as mentioned above. This method internally translates using the ALL function in the filter. For example: <br /> <code>CALCULATE([Total Sales], Products[Color]= ‘Red’)) -> CALCULATE([Total Sales], FILTER(ALL(Products[Color]), Products[Color]= ‘Red’))</code></li>
-                                    <li>It is always better to apply filters to the desired column than to the whole table.</li>
-                                    <li>Always use ALL along with the FILTER function if there is no need to keep the current context.</li>
-                                    <li>References: <ol>
-                                        <li><a href="https://pbidax.wordpress.com/2016/05/22/simple-filter-in-dax-measures/"> https://pbidax.wordpress.com/2016/05/22/simple-filter-in-dax-measures/</a></li>
-                                        <li><a href="https://www.sqlbi.com/articles/filter-arguments-in-calculate/">https://www.sqlbi.com/articles/filter-arguments-in-calculate/</a></li>
-                                        </ol></li>                                    
-                                    
-                                </ul>
-                            </li>
-                            <li class="h4header"> Use KEEPFILTERS() instead of FILTER(T)
-                                <ul class="defaultBody">
-                                    <li>The normal FILTER function overrides any existing set of filters present for a column applied via slicers with those mentioned in the FILTER parameter. </li>
-                                    <li>The KEEPFILTER function does not override the current set of filters. Instead, it uses the intersection of the values present in both, thus maintaining the current context. </li>
-                                    <li>Whenever you need to maintain the set of filters applied using slicers or report-level filters while performing any calculations, we recommend you use the KEEPFILTERS() function. </li>
+                                    <li>Power BI adds a blank value to a column if it finds a referential integrity violation.</li>
+                                    <li>For a direct query, Power BI adds a blank value to the columns because it cannot check for violations.</li>
+                                    <li>The DISTINCT() and VALUES() functions differ:
+                                        <ul>
+                                            <li>DISTINCT(): Does not return a blank that is added due to an integrity violation. The DISTINCT() function includes a blank only if it is part of the original data.</li>
+                                            <li>VALUES(): Includes any blank that Power BI adds due to referential integrity violations.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Maintain consistent usage of the DISTINCT() and VALUES() functions throughout the entire report.</li>
+                                    <li>Power BI recommends using the VALUES() function if blank values are not an issue.</li>
                                 </ul>
                             </li>
                             <li class="h4header"> Use ISBLANK() instead of =Blank() check
                                 <ul class="defaultBody">
-                                    <li>Use the built-in function ISBLANK() to check for any blank values instead of using the comparison operator = Blank(). </li>
+                                    <li>Use the built-in function ISBLANK() to check for any blank values instead of using the comparison operator = Blank().</li>
                                     
                                 </ul>
                             </li>
-                            <li class="h4header"> Use SEARCH() with the last parameter 
+                            <li class="h4header"> Use = 0 instead of checking for ISBLANK() || = 0
+                                <ul class="defaultBody">
+                                    <li>The BLANK value in Power BI is associated with the base value of a column’s data type</li>
+                                    <li>The BLANK value corresponds to zero for integers, “(empty string)” for string columns, and “1–1–1900” for date fields.</li>
+                                    <li>ISBLANK() || = 0 enacts two checks: ISBLANK() and comparing with zero.</li>
+                                    <li>Use = 0, which internally performs both checks.</li>
+                                    <li>To perform only the check for zero, use the IN operator.</li>
+                                </ul>
+                            </li>
+                            <li class="h4header"> Use SELECTEDVALUE() instead of HASONEVALUE()
+                                <ul class="defaultBody">
+                                    <li>It is common practice to use HASONEVALUE() to check if there is only one value present in a column after applying slicers and filters. You also have to use the VALUES(ColumnName) DAX function to retrieve that single value.</li>
+                                    <li>SELECTEDVALUE() performs the above steps internally. It automatically retrieves the single value if there is one and returns a blank if there are multiple values available.</li>                                                                  
+                                    
+                                </ul> 
+                            </li>
+                            <li class="h4header">  Use SELECTEDVALUE() instead of VALUES()
+                                <ul class="defaultBody">
+                                    <li>The VALUES() function returns an error if it encounters multiple values. Normally, users address the error using Error functions, which negatively affects performance. </li>
+                                    <li>Instead of using VALUES(), use SELECTEDVALUE(). The SELECTEDVALUE() function is safer and returns a blank if it encounters multiple values.</li>
+                                    
+                                </ul>
+                            </li>
+                            <li class="h4header"> Use variables instead of repeating measures inside the IF branch
+                                <ul class="defaultBody">
+                                    <li>Incorrect DAX:<br />
+                                        <code>Ratio = IF([Total Rows] > 10, SUM(Revenue) /[Total Rows], 0)</code>
+                                        <ul><li>Because measures are calculated continuously, the [Total Rows] expression is calculated twice: first for the condition check, then for the true condition expression.</li></ul>
+                                    </li>
+                                    <li>Incorrect DAX:<br />
+                                        <code>VAR totalRows = [Total Rows];
+                                        Ratio = IF(totalRows > 10, SUM(Revenue) / totalRows,0)
+                                        </code>
+                                        
+                                    </li>
+                                    <li>Instead of calculating the same expression multiple times, you can store the resulting measure value in a variable. </li>
+                                    <li>You can use a variable reference wherever required. The same variable process applies to all instances where you call the same measure.</li>
+                                    <li>Variables can help you avoid repetitive functions. </li>
+                                    <li>Note: Be aware that variables are actually constants.</li>                                    
+                                    
+                                </ul>
+                            </li>
+                            <li class="h4header"> Use (a-b)/b along with variables instead of a/b — 1 or a/b*100–100
+                                <ul class="defaultBody">
+                                    <li>It is common practice to use a/b — 1 to calculate a ratio and avoid duplicate measure calculations. </li>
+                                    <li>However, you can achieve the same performance by using variables and using (a-b)/b to calculate the ratio.</li>
+                                    <li>Here’s why you should use (a-b)/b:
+                                        <code>If both a and b are blank values, then (a-b)/b returns a blank value and Power BI will filter the values out. a/b — 1 would return -1 as the result because both a and b are integers.</code>
+                                    </li>
+                                    <li>Reference: sqlbi</li>
+                                </ul>
+                            </li>
+                            <li class="h4header"> Stop using IFERROR() and ISERROR()
+                                <ul class="defaultBody">
+                                    <li>The IFERROR() and ISERROR() functions were widely used in Excel when applying the FIND() and SEARCH() functions. They were necessary because FIND() and SEARCH() returned errors if the query did not obtain the required result.</li>
+                                    <li>The IFERROR() and ISERROR() functions force the Power BI engine to perform a step-by-step execution of each row to check for errors. There is currently no method to directly state which row returned the error.</li>
+                                    <li>The FIND() and SEARCH() DAX functions provide an extra parameter that the query can pass. The parameter is returned if the search string is not present.</li>
+                                    <li>The FIND() and SEARCH() DAX functions check if more than one value is returned. They also ensure nothing is divided by zero. You can avoid using the FIND() and SEARCH() DAX functions by using the correct DAX functions such as DIVIDE() and SELECTEDVALUE(). The DIVIDE() and SELECTEDVALUE() functions perform the error check internally and return the expected results.</li>
+                                    <li>You can always use DAX expressions in such a way that they never return an error.</li>
+                                </ul>
+                            </li>
+                            <li class="h4header"> Use DIVIDE() instead of /
+                                <ul class="defaultBody">
+                                    <li>/ raises an exception if the denominator is zero. </li>
+                                    <li>The DIVIDE() function internally performs a check to validate whether the denominator is zero. If it is, it returns the value specified in a third (extra) parameter.</li>
+                                    <li>For “invalid denominator” cases, use the IF condition while using the “/” operator.</li>
+                                    <li>Note: If you are certain the denominator value is not zero, it is better to use the “/” operator without an IF check. The DIVIDE() function will always perform an IF check internally.</li>
+                                </ul>
+                            </li>
+                            <li class="h4header"> Do not use scalar variables in SUMMARIZE()
+                                <ul class="defaultBody">
+                                    <li>The SUMMARIZE() function is traditionally used to group columns and return resulting aggregations.</li>
+                                    <li>However, the SUMMARIZECOLUMNS() function is newer and more optimized. Use it instead. </li>
+                                    <li>Only use SUMMARIZE() for grouped elements of a table without any associated measures or aggregations. For example:
+                                        <code>SUMMARIZE(Table, Column1, Column2)</code>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="h4header"> Use KEEPFILTERS() instead of FILTER(T)
+                                <ul class="defaultBody">
+                                    <li>The FILTER function overrides any existing set of filters on a column applied via slicers. </li>
+                                    <li>The KEEPFILTER function does not override the existing set of filters. Instead, it uses the intersection of values present in both, thus maintaining the current context. Use it when you want to maintain any filters applied by slicers or at a report level while performing calculations.</li>
+                                                                      
+                                    
+                                </ul>
+                            </li>
+                            <li class="h4header"> Use FILTER(all(ColumnName)) instead of FILTER(values()) or FILTER(T)                                
+                                <ul class="defaultBody">
+                                    <li>To calculate measures independent of any filters applied to a column, combine the All(ColumnName) function with the FILTER function instead of using Table or VALUE(). For example:
+                                        <code>CALCULATE([Total Sales], FILTER(ALL(Products[Color]), Color = ‘Red’))</code>
+                                    </li>
+                                    <li>Use ALL along with the FILTER function if there is no need to keep the current context.</li>
+                                    <li>Directly applying filters using expressions instead of the FILTER function behaves in the same way as mentioned above. This method internally translates using the ALL function in the filter. For example:
+                                        <code>CALCULATE([Total Sales], FILTER(ALL(Products[Color]), Color = ‘Red’))</code>
+                                    </li>
+                                    <li>It is always better to apply filters to the desired column than to the whole table for the sake of scalability.</li>
+                                    <li>References:
+                                        <ul>
+                                            <li>pbidax</li>
+                                            <li>sqlbi</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="h4header"> Avoid using the AddColumns() function inside measure expressions
+                                <ul class="defaultBody">
+                                    <li>Measures are calculated iteratively by default.</li>
+                                    <li>If measure definitions use iterative functions such as AddColumns(), Power BI creates nested iterations, which negatively affects report performance.</li>
+                                                                      
+                                    
+                                </ul>
+                            </li>
+                            <li class="h4header"> Use the correct data types based on column values
+                                <ul class="defaultBody">
+                                    <li>If there are only two distinct values in a column, check if it can be converted to a Boolean data type (true/false).</li>
+                                    <li>This speeds up processing when you have large number of rows.</li>
+                                                                      
+                                    
+                                </ul>
+                            </li>
+                            <li class="h4header"> Use COUNTROWS instead of COUNT: 
+                                <ul class="defaultBody">
+                                    <li>Use the COUNT function to count column values, or we can use the COUNTROWS function to count table rows. Both functions will achieve the same result, providing that the counted column contains no BLANKs.
+                                        <code>
+                                            Sales Orders = COUNT(Sales [OrderDate])
+                                            Sales Orders = COUNTROWS(Sales)
+                                        </code>
+                                    </li>
+                                    <li>There are three reasons why the second measure definition is better: 
+                                        <ol>
+                                            <li>It's more efficient, and will perform better.</li>
+                                            <li>It doesn't consider BLANKs contained in any column of the table.</li>
+                                            <li>The formula intention is clearer and self-describing.</li>
+                                        </ol>
+                                    </li>
+                                    <li>Reference: <a href ="https://docs.microsoft.com/en-us/power-bi/guidance/dax-countrows">DAX-CountRows</a>  </li>
+                                                                      
+                                    
+                                </ul>
+                            </li>
+                            <li class="h4header"> Use SEARCH() with the last parameter
                                 <ul class="defaultBody">
                                     <li>The SEARCH() DAX function accepts the last parameter as the value that the query must return if the search string is not found. </li>
-                                    <li>You should always use the SEARCH() function instead of using Error functions along with SEARCH(). </li>
-                                </ul>
-                            </li>
-                            <li class="h4header"> Use SELECTEDVALUE() instead of VALUES()
-                                <ul class="defaultBody">
-                                    <li>The VALUES() function returns an error if it encounters multiple values. Normally, users address the error using Error functions, which affect performance negatively. </li>
-                                    <li>Instead of using the VALUES() function, use the SELECTEDVALUE() function. The SELECTEDVALUE() function is safer and returns a blank if it encounters multiple values. </li>
-                                </ul>
-                            </li>
-                            <li class="h4header"> Use the DISTINCT() and VALUES() functions consistently
-                                <ul class="defaultBody">
-                                    <li>Power BI adds a blank value to a column if it finds a referential integrity violation. </li>
-                                    <li>For a direct query, Power BI adds a blank value to the columns because it cannot check for violations. </li>
-                                    <li>The DISTINCT() and VALUES() functions differ as follows: <ol>
-                                        <li>DISTINCT(): Does not return a blank that is added due to an integrity violation. The DISTINCT() function includes the blank only if it is part of the original data. </li>
-                                        <li>VALUES(): Includes any blank which Power BI adds due to referential integrity violations. </li>
-                                        </ol></li>
-                                    <li>Maintain consistent usage of the DISTINCT() and VALUES() functions throughout the entire report. </li>
-                                    <li>Power BI recommends using the VALUES() function throughout the report if blank values are not an issue. </li>                                   
+                                    <li>You should always use the SEARCH() function instead of using Error functions along with SEARCH().</li>
+                                                                      
                                     
                                 </ul>
                             </li>
-                            <li class="h4header"> Avoid using the AddColumns() function inside measure expressions                                
+                            <li class="h4header"> ALL vs. ALLExcept
                                 <ul class="defaultBody">
-                                    <li>Measures are calculated iteratively by default. </li>
-                                    <li>If measure definitions use iterative functions such as AddColumns(), Power BI creates nested iterations, which affect report performance negatively. </li>
+                                    <li>ALLEXCEPT() behaves exactly like ALL(), VALUES() as long as the “exempted” columns are columns on the pivot. </li>
+                                    <li>ALLEXCEPT() does NOT preserve pivot context on columns that are not on the pivot.</li>
+                                    <li>Use ALL() instead of ALLEXCEPT() when using VALUES()</li>
+                                                                      
+                                    
                                 </ul>
                             </li>
                         </ol>
