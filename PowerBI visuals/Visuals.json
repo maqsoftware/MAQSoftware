@@ -62,7 +62,7 @@
   {
     "Calendar": {
       "name": "Calendar",
-      "title": "Calendar",
+      "title": "Calendar ",
       "id": "Calendar",
       "description": "Render events on specific days, which can be used as a reference during your report review.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381844?tab=Overview",
@@ -77,7 +77,7 @@
   {
     "Forecast using Multiple Models": {
       "name": "Forecast using Multiple Models",
-      "title": "Forecast using Multiple Models",
+      "title": "Forecast using Multiple Models ",
       "id": "ForecastUsingMultipleModels",
       "description": "Implement four different forecasting models to learn from historical data and predict future values.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381845?tab=Overview",
@@ -92,7 +92,7 @@
   {
     "Gantt Chart": {
       "name": "Gantt Chart",
-      "title": "Gantt Chart",
+      "title": "Gantt Chart ",
       "id": "GanttChart",
       "description": "Gantt chart with a grid that shows task details and key performance indicators.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381364?tab=Overview",
@@ -107,7 +107,7 @@
   {
     "KPI Grid": {
       "name": "KPI Grid",
-      "title": "KPI Grid",
+      "title": "KPI Grid ",
       "id": "KPIGridChart",
       "description": "Display data in hierarchical order with options to separate categories and illustrate trends.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380947?tab=Overview",
@@ -122,7 +122,7 @@
   {
     "Journey Chart": {
       "name": "Journey Chart",
-      "title": "Journey Chart",
+      "title": "Journey Chart ",
       "id": "JourneyChart",
       "description": "Create straightforward graphs that show networks of categories and relationships.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380989?tab=Overview",
@@ -137,7 +137,7 @@
   {
     "Forecast using Neural Network": {
       "name": "Forecast using Neural Network",
-      "title": "Forecast using Neural Network",
+      "title": "Forecast using Neural Network ",
       "id": "ForecastUsingNeuralNetwork",
       "description": "Use the Neural Network algorithm to forecast future values based on historical data.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381428?tab=Overview",
@@ -152,7 +152,7 @@
   {
     "Ring Chart": {
       "name": "Ring Chart",
-      "title": "Ring Chart",
+      "title": "Ring Chart ",
       "id": "RingChart",
       "description": "Show relationships between values and display a dynamic key performance indicator.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380824?tab=Overview",
@@ -167,7 +167,7 @@
   {
     "Quadrant Chart": {
       "name": "Quadrant Chart",
-      "title": "Quadrant Chart",
+      "title": "Quadrant Chart ",
       "id": "QuadrantChart",
       "description": "Show data in quadrants, illustrating distribution and items that share common traits.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381011?tab=Overview",
@@ -182,7 +182,7 @@
   {
     "Grid": {
       "name": "Grid",
-      "title": "Grid",
+      "title": "Grid ",
       "id": "GridChart",
       "description": "Showcase data in a grid format with features such as pagination and sorting.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380825?tab=Overview",
@@ -197,7 +197,7 @@
   {
     "Hourglass Chart": {
       "name": "Hourglass Chart",
-      "title": "Hourglass Chart",
+      "title": "Hourglass Chart ",
       "id": "HourglassChart",
       "description": "Compare category values between two scenarios.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381843?tab=Overview",
@@ -212,7 +212,7 @@
   {
     "Text Enhancer": {
       "name": "Text Enhancer",
-      "title": "Text Enhancer",
+      "title": "Text Enhancer ",
       "id": "TextEnhancer",
       "description": "Unlocks new text styling options in Power BI, enabling users to create more visually engaging reports.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381762?tab=Overview",
@@ -227,7 +227,7 @@
   {
     "Ratings": {
       "name": "Ratings",
-      "title": "Ratings",
+      "title": "Ratings ",
       "id": "Ratings",
       "description": "Add ratings or scores to reports.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381838?tab=Overview",
@@ -242,7 +242,7 @@
   {
     "Venn Diagram": {
       "name": "Venn Diagram",
-      "title": "Venn Diagram",
+      "title": "Venn Diagram ",
       "id": "VennDiagram",
       "description": " Display logical relationships between multiple datasets, each represented as a circle.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381231?tab=Overview",
@@ -257,7 +257,7 @@
   {
     "Linear Gauge": {
       "name": "Linear Gauge",
-      "title": "Linear Gauge",
+      "title": "Linear Gauge ",
       "id": "LinearGaugeChart",
       "description": "Show progress towards a target goal, such as achieved sales against a target value.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380821?tab=Overview",
@@ -272,7 +272,7 @@
   {
     "Horizontal Funnel": {
       "name": "Horizontal Funnel",
-      "title": "Horizontal Funnel",
+      "title": "Horizontal Funnel ",
       "id": "HorizontalFunnelChart",
       "description": "Display various stages of a process and related metrics in a horizontally oriented funnel.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380846?tab=Overview",
@@ -287,7 +287,7 @@
   {
     "KPI Ticker": {
       "name": "KPI Ticker",
-      "title": "KPI Ticker",
+      "title": "KPI Ticker ",
       "id": "KPITickerChart",
       "description": "Display multiple key performance indicators in an automatically rotating visual.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380946?tab=Overview",
@@ -302,7 +302,7 @@
   {
     "Brick Chart": {
       "name": "Brick Chart",
-      "title": "Brick Chart",
+      "title": "Brick Chart ",
       "id": "BrickChart",
       "description": "Box chart with shaded bricks that show the percentage breakdown of a dataset.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380836?tab=Overview",
@@ -318,7 +318,7 @@
   {
     "KPI Column": {
       "name": "KPI Column",
-      "title": "KPI Column",
+      "title": "KPI Column ",
       "id": "KPIColumnChart",
       "description": "Line and column chart that measures progress toward key performance indicators.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380996?tab=Overview",
@@ -333,7 +333,7 @@
   {
     "Box and Whisker Chart": {
       "name": "Box and Whisker Chart",
-      "title": "Box and Whisker Chart",
+      "title": "Box and Whisker Chart ",
       "id": "BoxAndWhiskers",
       "description": "Display quartiles and compare distributions between several sets of data.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381351?tab=Overview",
@@ -348,7 +348,7 @@
   {
     "Histogram With Points": {
       "name": "Histogram With Points",
-      "title": "Histogram With Points",
+      "title": "Histogram With Points ",
       "id": "HistogramChart",
       "description": "Displays density of distribution using bars along with actual values represented by points.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381032?tab=Overview",
@@ -363,7 +363,7 @@
   {
     "Clustering using OPTICS": {
       "name": "Clustering using OPTICS",
-      "title": "Clustering using OPTICS",
+      "title": "Clustering using OPTICS ",
       "id": "ClusteringUsingOPTICS",
       "description": "Use the density-based clustering algorithm OPTICS to analyze groups within a dataset.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381463?tab=Overview",
@@ -378,7 +378,7 @@
   {
     "Thermometer": {
       "name": "Thermometer",
-      "title": "Thermometer",
+      "title": "Thermometer ",
       "id": "ThermometerChart",
       "description": "Represent progress toward goals with a highly customizable thermometer graphic.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380847?tab=Overview",
@@ -393,7 +393,7 @@
   {
     "Dynamic Tooltip": {
       "name": "Dynamic Tooltip",
-      "title": "Dynamic Tooltip",
+      "title": "Dynamic Tooltip ",
       "id": "DynamicTooltipChart",
       "description": "Enhance readability of reporting charts by providing additional data points as tooltips.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380983?tab=Overview",
@@ -408,7 +408,7 @@
   {
     "Cylindrical Gauge": {
       "name": "Cylindrical Gauge",
-      "title": "Cylindrical Gauge",
+      "title": "Cylindrical Gauge ",
       "id": "CylindricalGaugeChart",
       "description": "Display a metric against a target value or capacity with this intuitive 3D cylinder.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380874?tab=Overview",
@@ -423,7 +423,7 @@
   {
     "Circular Gauge": {
       "name": "Circular Gauge",
-      "title": "Circular Gauge",
+      "title": "Circular Gauge ",
       "id": "CircularGaugeChart",
       "description": "Illustrate progress toward goals in either a pie or donut chart format.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380836?tab=Overview",
@@ -438,7 +438,7 @@
   {
     "Rotating Chart": {
       "name": "Rotating Chart",
-      "title": "Rotating Chart",
+      "title": "Rotating Chart ",
       "id": "RotatingChart",
       "description": "Automatically flipping chart that displays different key performance indicators.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381007?tab=Overview",
@@ -453,7 +453,7 @@
   {
     "Text Wrapper": {
       "name": "Text Wrapper",
-      "title": "Text Wrapper",
+      "title": "Text Wrapper ",
       "id": "TextWrapperChart",
       "description": "Retrieve text from any data source and enable text wrapping within a target field.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380826?tab=Overview",
@@ -468,7 +468,7 @@
   {
     "Data Insights": {
       "name": "Data Insights",
-      "title": "Data Insights",
+      "title": "Data Insights ",
       "id": "DataInsights",
       "description": "Gantt chart with a grid that shows task details and key performance indicators.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381454?tab=Overview",
@@ -480,12 +480,10 @@
       "pbicertifiedimage": ""
     }
   },
-
-
   {
     "Dot Plot": {
       "name": "Dot Plot",
-      "title": "Dot Plot",
+      "title": "Dot Plot ",
       "id": "DotPlotChart",
       "description": "Display distributions among categories to highlight gaps, clusters, and outliers.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381101?tab=Overview",
@@ -500,7 +498,7 @@
   {
     "Funnel with Source": {
       "name": "Funnel with Source",
-      "title": "Funnel with Source",
+      "title": "Funnel with Source ",
       "id": "FunnelWithSourceChart",
       "description": "Displays stage-wise metrics and the source (entry point) of any data point.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381334?tab=Overview",
@@ -515,7 +513,7 @@
   {
     "Trading Chart": {
       "name": "Trading Chart",
-      "title": "Trading Chart",
+      "title": "Trading Chart ",
       "id": "TradingChart",
       "description": "Enter historical trading records and display significant price points as colored vertical bars.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380823?tab=Overview",
@@ -530,7 +528,7 @@
   {
     "Rotating Tile": {
       "name": "Rotating Tile",
-      "title": "Rotating Tile",
+      "title": "Rotating Tile ",
       "id": "RotatingTileChart",
       "description": "Automatically flipping tile that displays different key performance indicators.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380877?tab=Overview",
@@ -545,7 +543,7 @@
   {
     "Dumbbell Chart": {
       "name": "Dumbbell Chart",
-      "title": "Dumbbell Chart",
+      "title": "Dumbbell Chart ",
       "id": "DumbbellChart",
       "description": "Display business metrics and show changes over time or across various categories.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381460?tab=Overview",
@@ -560,7 +558,7 @@
   {
     "Bowtie Chart": {
       "name": "Bowtie Chart",
-      "title": "Bowtie Chart",
+      "title": "Bowtie Chart ",
       "id": "BowtieChart",
       "description": "Show a flow of data and quickly compare values in one or more categories.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380838?tab=Overview",
@@ -575,7 +573,7 @@
   {
     "Slope Chart": {
       "name": "Slope Chart",
-      "title": "Slope Chart",
+      "title": "Slope Chart ",
       "id": "SlopeChart",
       "description": "Show upward or downward trends between two data points.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381393?tab=Overview",
