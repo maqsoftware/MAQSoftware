@@ -85,8 +85,8 @@
       "gif": "../img/PowerBI/forecast-multiple-models.mp4",
       "content": "<p>Forecast Using Multiple Models by MAQ Software lets you implement four different forecasting models to learn from historical data and predict future values. The forecasting models include linear regression, ARIMA, exponential smoothing, and neural network.</p><p>This visual is excellent for forecasting budgets, sales, demand, or inventory.</p><p>R package dependencies (auto-installed): forecast, plotly, zoo, lubridate.</p><p>Key features:</p><ul><li>Four different forecasting methods/models.</li><li>Ability to adjust the parameters of the learning model.</li><li>Wide range of date and time formats. </li><li>Ability to choose algorithm, show or hide confidence intervals, decide on the split point, and apply data transformation.</li></ul>",
       "category": "forecast",
-      "certifiedstarimage": "../img/PowerBI/certifiedstarimage.png",
-      "pbicertifiedimage": "../img/PowerBI/pbicertifiedimage.png"
+      "certifiedstarimage": "",
+      "pbicertifiedimage": ""
     }
   },
   {
