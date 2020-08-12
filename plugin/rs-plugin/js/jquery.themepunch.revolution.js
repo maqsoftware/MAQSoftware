@@ -3685,7 +3685,7 @@
 									}
 
 				///////////////////////////////////////////////////
-				// ANALYSE AND READ OUT DATAS FROM HTML CAPTIONS //
+				// analyze AND READ OUT DATAS FROM HTML CAPTIONS //
 				///////////////////////////////////////////////////
 				var getAnimDatas = function(frm,data) {
 
@@ -3715,7 +3715,7 @@
 									return frm;
 								}
 				///////////////////////////////////////////////////////////////////
-				// ANALYSE AND READ OUT DATAS FROM HTML CAPTIONS ANIMATION STEPS //
+				// analyze AND READ OUT DATAS FROM HTML CAPTIONS ANIMATION STEPS //
 				///////////////////////////////////////////////////////////////////
 				var getAnimSteps = function(data) {
 
