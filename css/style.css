@@ -4151,12 +4151,26 @@ ul.project-detail-block, .project-detail-block ul {
     width: 100%;
 }
 
+events-post{
+    display: inline-block;
+    width: 100%;    
+}
+
     .blog-post .post-media {
         position: relative;
         overflow: hidden;
         margin-bottom: 25px;
         margin-bottom: 0;
         margin-top: 10px;
+    }
+
+    .events-post .events {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 25px;
+        margin-bottom: 0;
+        margin-top: 10px;
+        padding: 10px;
     }
 
         .blog-post .post-media iframe {
@@ -5265,6 +5279,16 @@ ul.project-detail-block, .project-detail-block ul {
     max-width: 350px;
     object-fit: cover;
     background-color: gainsboro;
+    /*transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    -webkit-transform: scale(0.5, 0.5);*/
+}
+
+.events-image{
+    max-height: 230px;
+    max-width: 350px;
+    object-fit: cover;
+    background-color: #f1f1f1;
     /*transform: scale(0.5, 0.5);
     -ms-transform: scale(0.5, 0.5);
     -webkit-transform: scale(0.5, 0.5);*/
