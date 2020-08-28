@@ -70,9 +70,9 @@ function loadPlugins() {
     scroll();
     pluginElement();
     sliderHero();
-    //if (!($(".power-bi-carousel").length)) {
+    if (!($(".power-bi-carousel").length)) {
     PowerBIVisualsConfig();
-    //}
+    }
     SliderConfig();
     containerGridMasonry();
     scrollCallbackEle();
@@ -236,14 +236,14 @@ function RenderMartech() {
 };
     function RenderPowerBIVisuals(oVisualConfig) {
         var totalVisuals = oVisualConfig.length,
-        //visualContainer = $("#power-bi-carousel"),
+        visualContainer = $("#power-bi-carousel"),
         modalContainer = $("#modelChart"),
         viewAllContainer = $("#viewAllVisuals"),
-        //visualSliderHtml = '<div class="owl-carousel power-bi-carousel nf-carousel-theme o-flow-hidden" id="PowerBISliderVisual"></div>',
+        visualSliderHtml = '<div class="owl-carousel power-bi-carousel nf-carousel-theme o-flow-hidden" id="PowerBISliderVisual"></div>',
         visualContentHtml = "",
         modalContentHtml = "",
         viewAllContentHtml = "";
-        //visualContainer.append(visualSliderHtml);
+        visualContainer.append(visualSliderHtml);
         var visualContentContainer = $("#PowerBISliderVisual");
         $.each(oVisualConfig, function (index, item) {
             $.each(Object.keys(this), function (visualIndex, visualItem) {
