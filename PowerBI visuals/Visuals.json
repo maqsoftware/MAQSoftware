@@ -482,7 +482,7 @@
       "title": "Circular Gauge ",
       "id": "CircularGaugeChart",
       "description": "Illustrate progress toward goals in either a pie or donut chart format.",
-      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380836?tab=Overview",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380837?tab=Overview",
       "img": "../img/PowerBI/CircularGauge.jpg",
       "gif": "../img/PowerBI/Circular_Gauge.mp4",
       "content": "<p>Circular Gauge by MAQ Software shows the progress of a task in a circular chart. Progress is shown either as the actual value or as a percentage of the target value. Users can display the visual in either a pie or a donut chart format. Users can also set a threshold value for the chart.</p><p>Circular Gauge by MAQ Software is useful for displaying key performance indicators (KPIs), such as sales achieved against a set target.</p><p>Key features:</p><ul><li>One color illustrates actual progress and the other displays the target.</li><li>The percentage displayed on the report tracks progress against the target.</li><li>Text size and ring size are customizable.</li></ul>",
