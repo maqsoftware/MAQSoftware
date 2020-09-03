@@ -71,7 +71,7 @@ function loadPlugins() {
     pluginElement();
     sliderHero();
     if (!($(".power-bi-carousel").length)) {
-        PowerBIVisualsConfig();
+    PowerBIVisualsConfig();
     }
     SliderConfig();
     containerGridMasonry();
