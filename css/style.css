@@ -2397,6 +2397,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
     .RecognitionImage {
         text-align: center !important;
     }
+
 }
 
 /*------------------------------------------------------------------*/
@@ -5206,6 +5207,11 @@ events-post{
     .scroll-top {
         opacity: 0;
         visibility: hidden;
+    }
+
+   .event-container {
+        margin-left: 5px !important; 
+        margin-right: 5px !important;         
     }
 }
 
