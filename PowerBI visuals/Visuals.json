@@ -247,11 +247,11 @@
       "img": "../img/PowerBI/TextEnhancer.jpg",
       "gif": "../img/PowerBI/TextEnhancer2.mp4",
       "content": "<p>Text Enhancer by MAQ Software unlocks new text styling options in Power BI, enabling users to create more visually engaging reports. Out of the box, Power BI has minimal text editing options. Text Enhancer adds customization options including adjustments for text shadow, rotation, angle, skewness, alignment, and more. It also includes text wrapping capability.</p><p>Text Enhancer by MAQ Software makes reports stand out in any business application.</p><p>Key features:</p><ul><li>Static and dynamic text.</li><li>Text wrapping capability.</li><li>Text styles including bold, italic, underline, overline, and strike-through.</li><li>Configure shadow, shadow blur, shadow color, text alignment, text skew, and text perspective.</li></ul>",
-      "category": "utility",
-      "certifiedstarimage": "",
-      "pbicertifiedimage": "",
-      "starimagetitle": "",
-      "pbicertifiedurl": ""
+      "category": "utility certified",
+      "certifiedstarimage": "../img/PowerBI/certifiedstarimage.png",
+      "pbicertifiedimage": "../img/PowerBI/pbicertifiedimage.png",
+      "starimagetitle": "Power BI Certified",
+      "pbicertifiedurl": "https://aka.ms/pbicertified"
     }
   },
   {
