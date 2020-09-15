@@ -26,7 +26,7 @@ function renderCaseStudy() {
                     return "";
                 }
 
-                sCategoryFilter = sTerm.replace(/\s+/, "").toLowerCase();
+                sCategoryFilter = sTerm.replace(/&/,"").replace(/\s+/, "").toLowerCase();
                 aCategoryFilters.push(sCategoryFilter);
                 return "<span><a class='blogcategories' data-filter='." + sCategoryFilter + "'>" + sTerm + "</a></span>";
             });
