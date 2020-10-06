@@ -33,7 +33,7 @@ function renderCaseStudy() {
             sImageLink = imgSource.getElementsByTagName('img')[0].getAttribute('src');
             sCaseStudyTitle = entry1.getElementsByTagName('title')[0].childNodes[0].nodeValue;
             if (entry1) {
-                if (entry1.innerHTML.includes("term=\"Case Study\"")) {
+                //if (entry1.innerHTML.includes("term=\"Case Study\"")) {
                     var oCaseStudyEntry = "<div class='col-md-6 col-sm-6 nf-item spacing-grid " + aCategoryFilters.join(" ") + "'>"
                        + "<div class='blog-post'>"
                           + "<div class='post-media'>"
@@ -48,7 +48,7 @@ function renderCaseStudy() {
                        + "</div>"
                        + "</div>"
                     oCaseStudyContainer.append(oCaseStudyEntry);
-                }
+                //}
             }
         }
     }
