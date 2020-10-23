@@ -145,7 +145,7 @@
                     <div class="col-md-10 offset-md-1">
                         <h3 class="h4">Dynamics 365 Deployment Best Practices Guide</h3>
                         <p><span><i class="ion ion-calendar"></i> September 14, 2020 </span><span><i class="ion ion-clock"></i> 5 Minutes to Read</span><p>
-                        <p class="lead">Dynamics 365-based transactional systems are used across the globe. As such, it is critical to ensure these systems are highly available and follow best practices. Our experience launching 100+ Dynamics 365 deployments has given us insight into some tips and tricks that help reduce downtime. Here are our seven best practices for deploying solutions in Dynamics 365-based systems.</p>
+                        <p class="lead">Microsoft Dynamics 365 is a leading line of enterprise resource planning (ERP) and customer relationship management (CRM) applications. With the platform’s high business impact, it is critical for enterprise leaders to follow best practices. In the past five years we have deployed Dynamics 365 over 100 times for our Fortune 500 customers. Here are the eight best practices we use to optimize every deployment</p>
 
                         <!-- Social Media -->
                         <!-- Facebook Share -->
@@ -178,55 +178,62 @@
                                 Avoid broken references after deployment
                                 <ul class="defaultBody">
                                     <li>Maintain the same GUIDs across environments for records referenced in workflows/views.</li>
-                                    <li>Use custom actions to parametrize the referenced records. Instead of directly referencing a record in the workflow, invoke a custom action that outputs the reference of record.</li>
+                                    <li>Use custom actions to parameterize the referenced records instead of directly referencing a record in the workflow.</li>
                                     <img src="/img/PowerBI/d365/figure1.png" style="border:ridge" />
                                     <b>
-                                        <h6 class="figureTitle">Figure 1: Referencing record directly in workflow step.</h6>
+                                        <h6 class="figureTitle">Figure 1: Referencing records directly in the workflow</h6>
                                     </b>
                                     <img src="/img/PowerBI/d365/figure2.png" style="border:ridge" />
                                     <b>
-                                        <h6 class="figureTitle">Figure 2: Referencing record retrieved dynamically by custom action in workflow step.</h6>
+                                        <h6 class="figureTitle">Figure 2: Referencing records retrieved dynamically with custom actions in the workflow</h6>
                                     </b>
                                 </ul>
                             </li>
                             <li class="h4header">
-                                Submit multiple files for import at once with the .zip import method
+                                Import multiple files at once with .zip
                                 <ul class="defaultBody">
-                                    <li>If you have multiple data import files, importing them individually will be time-consuming. You’ll also have to ensure that the files are imported in the correct order to resolve inter-file column references </li>
-                                    <li>When you zip multiple files together for import, you save time and don’t have to worry about import order; Dynamics 365 takes care of it for you</li>
+                                    <li>Individually importing multiple data files is time-consuming and requires the files to be imported in the correct order to resolve inter-file column references.</li>
+                                    <li>When you zip multiple files together for import, you save time and don’t have to worry about import order; Dynamics 365 takes care of it for you.</li>
                                 </ul>
                             </li>
                             <li class="h4header">
-                                Include only required fields in data import files to avoid unintentional plugin/workflow triggers
+                                Include only required fields in data import files to avoid plugin/work
                                 <ul class="defaultBody">
-                                    <li>If you include unnecessary fields in the data import file, it’ll increase import time and might trigger workflows/plugins registered on those fields. For example, if you only want to update the address of your contacts, don’t include unnecessary fields like first name and last name in the import file.</li>                                    
+                                    <li>Including unnecessary fields in the data import file increases import time and may trigger workflows/plugins registered on those fields</li>
+                                    <li>For example, to update a contact address, don’t include unnecessary fields like first and last name in the import file.</li>                                    
                                 </ul>
                             </li>
                             <li class="h4header">
-                                Deactivate relevant plugins/workflows before bulk updating records to avoid unintentional triggers and reduce import time
+                                Deactivate relevant plugins/workflows before bulk updating records to avoid triggers and reduce import time
                                 <ul class="defaultBody">
-                                    <li>When you just want to update data as part of data migration activities without triggering business logic, deactivate plugins/workflows registered on the entities present in import file. This will ensure that plugins/workflows are not triggered unintentionally while the data is updated.</li>
+                                    <li>To update data as part of data migration activities without triggering business logic, deactivate plugins/workflows registered on the entities present in import file.</li>
                                 </ul>
                             </li>
                             <li class="h4header">
-                                Enable admin mode on your target environment before starting deployment
+                                Enable admin mode on your target environment during deployment
                                 <ul class="defaultBody">
-                                    <li>Admin mode locks the environment for all the users, meaning only system administrators have access during that time.</li>
-                                    <li>Enabling admin mode before deployment ensures that data is in a consistent state before and after deployment. This is useful in case you need to restore the data to its prior state.</li>
-                                    <li>During deployment, the system might be unresponsive and slow. This is why we recommended locking the system for end user.</li>
-                                    <li>While enabling admin mode, it’s highly recommended to add a user-friendly message for end users. This lets end users know that the environment is down due to planned activities, and the duration (downtime window) it will be down for. By doing this, you will avoid a flood of support tickets by confused end users.</li>
+                                    <li>Admin mode locks the environment for all users, meaning only system administrators can access the environment</li>
+                                    <li>Enabling admin mode during deployment ensures that data is not compromised by unplanned changes. If an error occurs, data can be restored to previous versions.</li>
                                 </ul><br />
-                                <p>Note: Admin mode cannot be enabled on the production environment. In case you don’t have the appropriate permissions to convert the environment to a sandbox, use the global notification method instead to add a form notification for all users.</p>
+                                <p>Note: Admin mode cannot be enabled in the production environment. If you are not permitted to convert the environment to a sandbox, use the global notification method to add a form</p>
+                                
+                            </li>
+                            <li class="h4header">
+                                Include a user-friendly message while in admin-mode to prevent confusion
+                                <ul class="defaultBody">
+                                    <li>During deployment, the system may be slow. This is why we recommended locking the system for end users.</li>
+                                    <li>Messages inform end users that the environment is down due to planned activities and will return after the indicated duration. Clear messages avoid support tickets from confused end users.</li>
+                                </ul>
                                 <img src="/img/PowerBI/d365/figure3.png" style="border:ridge" />
                                 <b>
-                                    <h6 class="figureTitle">Figure 3: Enabling Admin mode from Power Platform admin center.</h6>
+                                    <h6 class="figureTitle">Figure 3: Enabling Admin mode from Power Platform admin center</h6>
                                 </b>
                             </li>
                             <li class="h4header">
-                                Make a backup of the environment before starting deployment
+                                Back up the environment before deployment
                                 <ul class="defaultBody">
-                                    <li>Making a backup ensures that, in case of deployment failures, the system can be restored to its pre-deployment state.</li>
-                                    <li>Making a backup is faster than creating a copy of the environment.</li>                                                                        
+                                    <li>Backups ensure that the system can be restored to its pre-deployment state in case a deployment failure occurs.</li>
+                                    <li>Backups are faster than creating a copy of the environment</li>                                                                        
                                 </ul><br />
                                 <p>Note: When an environment is restored to an earlier state, the Data Export Service profile needs to be re-established to synchronize the Dynamics 365 data to Azure SQL.</p>
                                 <img src="/img/PowerBI/d365/figure4.png" style="border:ridge" />
@@ -235,10 +242,9 @@
                                 </b>
                             </li>
                             <li class="h4header">
-                                Perform a dry run in a cloned production environment prior to production deployment to identify solution compatibility issues
+                                Run a test in a cloned production environment prior to production deployment to identify compatibility issue
                                 <ul class="defaultBody">
-                                    <li>Proactively identify solution compatibility issues by performing a dry run. That way, you can prepare a mitigation plan.</li>
-                                    <li>Dry runs ensure that any issues are flagged and resolved beforehand, mitigating end user impact.</li>
+                                    <li>Tests enable team members to prepare a mitigation plan. Issues can be proactively flagged and resolved, mitigating end-user impact.</li>
                                 </ul>
                             </li>
                         </ol>
@@ -248,7 +254,7 @@
                     <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
 
                         <h3>References</h3>
-                        <p>We compiled our best practices from a mix of experience and research. For a detailed look at some of the points we mention above, we encourage you to go through the following documents:</p>
+                        <p>We compiled our best practices from a mix of experience and research. For a detailed look at some of the points we mention above, we encourage you to review the following documents:</p>
                         <ul class="defaultBody">
                             <li><a href="http://crmkrm.blogspot.com/2019/01/copying-records-with-guid-in-microsoft.html">Copying records with GUID</a></li>
                             <li><a href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/invoke-custom-actions-workflow-dialog">Invoke custom actions from a workflow</a></li>                            
