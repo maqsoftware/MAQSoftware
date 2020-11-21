@@ -100,6 +100,8 @@ function loadBlogs(sBlogsData) {
         iTotalBlogs = oBlogsData.getElementsByTagName('entry').length;
         if (iTotalBlogs || oBlogsData.getElementsByTagName('content')) {
             iMaxPageIndex = Math.round(iTotalBlogs / oBlogsPager.pagesize);
+            if (iTotalBlogs % oBlogsPager.pagesize == 0)
+                iMaxPageIndex = iMaxPageIndex - 1;
             $("#Pagination").show();
             renderBlogs();
         }
