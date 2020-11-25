@@ -46,7 +46,7 @@
 
 
 </head>
-<body>    
+<body>
     <!-- Preloader -->
     <section id="preloader">
         <div class="loader" id="loader">
@@ -122,7 +122,7 @@
         </header>
         <!-- End Header -->
         <!-- CONTENT --------------------------------------------------------------------------------->
-        <section id="body" class=" ">
+        <section id="body" class="">
             <!-- Intro Section -->
             <section class="inner-intro dark-bg bg-image overlay-dark parallax parallax-background1 newsposter" data-background-img="/img/Banners/blog-banner.jpg">
                 <div class="container">
@@ -131,12 +131,26 @@
                     </div>
                 </div>
             </section>
+            <section class="ptb ptb-sm-40" style="padding-bottom:0px !important">
+                <div class="container">
+                    <div class="sidebar-widget" style="margin-bottom:0px !important">
+                        <h5>Popular Tags</h5>
+                        <hr>
+                        <ul class="widget-tag blogcategories-filter ">
+                            <li><a class="blogcategories" data-filter=".howto">How To</a></li>
+                            <li><a class="blogcategories" data-filter=".infographic">Infographic</a></li>
+                            <li><a class="blogcategories" data-filter=".updates">Updates</a></li>
+                            <li><a class="blogcategories" data-filter=".migrationstrategy">Migration Strategy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
             <!-- End Intro Section -->
             <!-- Blog Post Section -->
-            <section class="pt-60 ptb-sm-80" style="padding-bottom:77px; border-top: #f1f1f1 solid 1px;">
+            <!--<section class="pt-60 ptb-sm-80" style="padding-bottom:77px; border-top: #f1f1f1 solid 1px;">
                 <div class="container">
                     <div class="row">
-                        <!-- Post Bar -->
+
                         <div class="col-lg-11 col-md-11 blog-post-hr">
                             <div class="blog-post mb-30 Loading" id="LoadPageBlogs">
                             </div>
@@ -145,12 +159,40 @@
                                 <p id="Next" data-clicked="1" class="btn-link-a pull-right"><a>NEXT<i class="ion ion-arrow-right-b"></i></a></p>
                             </div>
                         </div>
-                        <!-- End Post Bar -->
+
+                    </div>
+                </div>
+            </section>-->
+            <section id="case-studies" class="ptb ptb-sm-80">
+                <div class="container">
+                    <div class="row" id="CaseStudyParentdiv">
+
+                        <!-- Post Item -->
+                        <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-3 col-md-3 mt-25 mt-sm-30" id="loadingicon"></div>
+                            <div class="row container-grid Loading" id="LoadPageCaseStudy"></div>
+                        </div>
+                        <!-- End Post Item -->
+                        <!-- Sidebar -->
+                        <!--<div class="col-lg-3 col-md-3 mt-25 mt-sm-30">
+                            <div class="sidebar-widget">
+                                <h5>Popular Tags</h5>
+                                <hr>
+                                <ul class="widget-tag blogcategories-filter ">
+                                    <li><a class="blogcategories" data-filter=".howto">How To</a></li>
+                                    <li><a class="blogcategories" data-filter=".infographic">Infographic</a></li>
+                                    <li><a class="blogcategories" data-filter=".updates">Updates</a></li>
+                                    <li><a class="blogcategories" data-filter=".migrationstrategy">Migration Strategy</a></li>
+                                </ul>
+                            </div>
+                        </div>-->
+                        <!-- End Sidebar -->
                     </div>
                 </div>
             </section>
             <!-- End Blog Post Section -->
             <section id="bloggerContent" class="hidden"></section>
+
         </section>
         <!-- END CONTENT ---------------------------------------------------------------------------->
         <!-- FOOTER -->
@@ -163,7 +205,7 @@
                             <li><a target="_blank" href="https://www.facebook.com/maqsoftware" tabindex="-1" aria-hidden="true"><i class="fa fa-facebook"></i></a></li>
                             <li><a target="_blank" href="https://www.linkedin.com/company/maq-software" tabindex="-1" aria-hidden="true"><i class="fa fa-linkedin"></i></a></li>
                             <li><a target="_blank" href="https://youtube.com/maqsoftware" tabindex="-1" aria-hidden="true"><i class="ion ion-social-youtube"></i></a></li>
-                            <li><a target="_blank" href="https://twitter.com/MAQSoftware" tabindex="-1" aria-hidden="true"><i class="fa fa-twitter"></i></a></li>                            
+                            <li><a target="_blank" href="https://twitter.com/MAQSoftware" tabindex="-1" aria-hidden="true"><i class="fa fa-twitter"></i></a></li>
                             <li><a target="_blank" href="https://github.com/maqsoftware" tabindex="-1" aria-hidden="true"><i class="ion ion-social-github"></i></a></li>
                             <li><a target="_blank" href="https://instagram.com/maqsoftware" tabindex="-1" aria-hidden="true"><i class="fa fa-instagram"></i></a></li>
                         </ul>
@@ -241,7 +283,10 @@
     <script src="/js/contact.js?v=20170828.2" type="text/javascript"></script>
     <script src="/js/common.js?v=20170828.1" type="text/javascript"></script>
     <script src="/js/home.js?v=20190717" type="text/javascript"></script>
-    <script src="/js/blogs.js?v=20190918" type="text/javascript"></script>
+    <script src="/js/blogs.js?v=20201124" type="text/javascript"></script>
+    <script type="text/javascript">
+        loadBlogGrid();
+    </script>
     <script src="/js/careers.js?v=20190717"></script>
     <script type="text/javascript" src="/js/resource.js?v=20190304"></script>
     <script src="/js/renderBot.js?v=20190401" type="text/javascript"> </script>
@@ -266,12 +311,12 @@
         "email":"sales@MAQSoftware.com",
         "telephone":"+1-425-526-5399",
         "sameAs" : [
-         "https://www.linkedin.com/company/maq-software",
-         "https://twitter.com/MAQSoftware",
-         "https://youtube.com/maqsoftware",
-         "https://www.facebook.com/maqsoftware",
-         "https://www.instagram.com/maqsoftware",
-         "https://plus.google.com/104615735701576694043"]
+        "https://www.linkedin.com/company/maq-software",
+        "https://twitter.com/MAQSoftware",
+        "https://youtube.com/maqsoftware",
+        "https://www.facebook.com/maqsoftware",
+        "https://www.instagram.com/maqsoftware",
+        "https://plus.google.com/104615735701576694043"]
         }
     </script>
     <!-- Google Analytics -->
