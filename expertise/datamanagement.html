@@ -443,60 +443,57 @@
             </section>
             <!-- Case Study Section -->
             <hr />
-            <section id="blog" class="wow fadeIn pt-45 pb-45 pt-sm-80">
+            <section id="blog" class="wow fadeIn pt-45 pb-45 ptb-sm-80">
                 <div class="container">
-                    <div class="row text-center">
-                        <div class="col-md-6 offset-md-3">
-                            <h3 class=""><a href="../case-studies">Case Studies</a></h3>
-                        </div>
-                    </div>
-                    <div class="spacer-15"></div>
+                    <div class="text-center"><h3 class="">Case Studies</h3></div>
                     <div class="clearfix"></div>
+                    <div class="spacer-60"></div>
                     <div class="row">
-                        <div class="col-md-4 col-sm-6 mb-sm-30 pb-15">
-                            <div class="blog-post">
-                                <div class="post-media news-image" >
-                                    <a href="https://blog.maqsoftware.com/2020/10/inventory-management-excel-plug-in.html"><img id="newsimg1" class="item-container news-image" src="/img/case-study/timelab-pro-CfKV0CecnU8-unsplash.jpg" alt="Case Study" style="height: 197px"/></a>
-                                </div>
-                                <div class="post-header">
-                                    <h5 class="newsItem"><a href="https://blog.maqsoftware.com/2020/10/inventory-management-excel-plug-in.html" id="newstitle1">Accurately Forecast Inventory Needs Using a Custom Plug-in</a> </h5>
-                                </div>
-                                <p>
-                                    Custom Excel plug-in enables planners to effectively meet customer demand and avoid stockouts.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 mb-sm-30 pb-15 ">
-                            <div class="blog-post">
+                        <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-30 pb-15">
+                            <div class="blog-post NewsLoading">
                                 <div class="post-media news-image">
-                                    <a href="https://blog.maqsoftware.com/2020/10/power-automate-reduce-data-latency.html"><img id="newsimg2" class="item-container news-image" src="/img/case-study/william-iven-jrh5lAq-mIs-unsplash.jpg" alt="Case Study" /></a>
+                                    <a id="img_href1" href=""><img id="newsimg1" class="item-container news-image" src="" alt="news" /></a>
                                 </div>
+                                <div class="post-meta"><span class="blog-font" id="stag1"></span><span id="newsdate1"></span></div>
                                 <div class="post-header">
-                                    <h5 class="newsItem"><a href="https://blog.maqsoftware.com/2020/10/power-automate-reduce-data-latency.html" id="newstitle2">Reduce Data Latency in Power BI with Power Automate</a> </h5>
+                                    <h5 class="newsItem"><a href="" id="newstitle1"></a> </h5>
                                 </div>
-                                <p>
-                                    Track Power BI data set refreshes across multiple reports in a workspace.
-                                </p>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6 mb-sm-30 pb-15 ">
-                            <div class="blog-post">
+                        <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-30 pb-15">
+                            <div class="blog-post NewsLoading">
                                 <div class="post-media news-image">
-                                    <a href="https://blog.maqsoftware.com/2019/06/case-study-custom-dataops-tools-improve.html"><img id="newsimg3" class="item-container news-image" src="/img/case-study/amy-hirschi-JaoVGh5aJ3E-unsplash.jpg" alt="Case Study" /></a>
+                                    <a id="img_href2" href="">
+                                        <img id="newsimg2" class="item-container news-image" src="" alt="news" />
+                                    </a>
                                 </div>
+                                <div class="post-meta"><span class="blog-font" id="stag2"></span><span id="newsdate2"></span></div>
                                 <div class="post-header">
-                                    <h5 class="newsItem"><a href="https://blog.maqsoftware.com/2019/06/case-study-custom-dataops-tools-improve.html" id="newstitle3">Improve Data Delivery Using Custom DataOps Monitoring Framework</a> </h5>
+                                    <h5 class="newsItem"><a href="" id="newstitle2"></a> </h5>
                                 </div>
-                                <p>
-                                    Our DataOps monitoring framework reduced costs and increased reliability.
-                                </p>
                             </div>
                         </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-30 pb-15">
+                            <div class="blog-post NewsLoading">
+                                <div class="post-media news-image">
+                                    <a id="img_href3" href="">
+                                        <img id="newsimg3" class="item-container news-image" src="" alt="news" />
+                                    </a>
+                                </div>
+                                <div class="post-meta"><span class="blog-font" id="stag3"></span><span id="newsdate3"></span></div>
+                                <div class="post-header">
+                                    <h5 class="newsItem"><a href="" id="newstitle3"></a> </h5>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
-                    <h6><a href="../case-studies" class="float-right float-none-xs">View All Case Studies</a></h6>
+                    <h6 class="pt-20"><a href="/case-studies" class="float-right float-none-xs">View All</a></h6>
                 </div>
             </section>
-            <!-- End Case Study Section -->
+            <!-- End Blog Section -->
+            <section id="bloggerContent" class="hidden"></section>
             <section id="client-logos" class="wow fadeIn pb-90 ptb-sm-80">
                 <div class="container">
                     <div class="owl-carousel ai-carousel nf-carousel-theme ">
@@ -676,4 +673,5 @@
 <script>
     loadPlugins();
     setTabNavLinkBehavior();
+    loadBlogsLatest3('Data Management');
 </script>

@@ -129,3 +129,44 @@ function format_date(sDate_news)
 $( document ).ready(function () {
     $("#copyright_year").html(new Date().getFullYear() + " ");
 });
+
+function loadBlogsLatest3(tag) {
+    $.ajax({
+        url: 'https://www.blogger.com/feeds/3262801613185975083/posts/default/-/' + tag + '?max-results=3',
+        type: 'GET',
+        dataType: 'jsonp',
+        success: function (sResponse) {
+            var parser = new DOMParser();
+            oBlogData = parser.parseFromString(sResponse, "text/xml");
+            var oDate, iTotalNews = 0, iNumber;
+            if (typeof oNewsData !== "undefined")
+            {
+                for (n = 0; n < 3; n++) {
+                    var iNumber = n + 1;
+                    entry = oBlogData.getElementsByTagName('entry').item(n);
+                    var content = entry.getElementsByTagName('content')[0].childNodes[0].nodeValue;
+                    $("#bloggerContent").html(content);
+                    var bloggerContent = document.getElementById("bloggerContent");
+                    var imgs = bloggerContent.getElementsByTagName('img');
+                    var img, src = "";
+                    if (typeof imgs !== "undefined" && imgs.length > 0) {
+                        img = imgs[0];
+                        src = img.src;
+                    }
+                    var title = entry.getElementsByTagName('title')[0].childNodes[0].nodeValue;
+                    var STag = entry.getElementsByTagName('category')[0].attributes["term"].nodeValue.toUpperCase() + " | ";
+                    var href = entry.getElementsByTagName('link')[2].attributes["href"].nodeValue;
+                    oDate = format_date(entry.getElementsByTagName('published')[0].childNodes[0].nodeValue.toLowerCase().split("t"));
+
+                    $("#newsdate" + iNumber).html(oDate.format());
+                    $("#stag" + iNumber).html(STag);
+                    $("#newstitle" + iNumber).html(title);
+                    $("#newsimg" + iNumber).attr('src', src);
+                    $("#img_href" + iNumber).attr('href', href);
+                    $("#newstitle" + iNumber).attr('href', href);
+                    $(".blog-post").removeClass("NewsLoading");
+                }
+            }
+        }
+    });
+}
