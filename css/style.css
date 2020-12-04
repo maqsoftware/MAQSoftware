@@ -5213,7 +5213,14 @@ events-post{
         margin-left: 5px !important; 
         margin-right: 5px !important;         
     }
+
+   .event-container-parent {
+       margin-left: 10px !important;
+       margin-right: 10px !important;
+   }
 }
+
+
 
 /*Recognition Controls*/
 .RecognitionImage img {
