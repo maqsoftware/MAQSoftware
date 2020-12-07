@@ -131,8 +131,12 @@ $( document ).ready(function () {
 });
 
 function loadBlogsLatest3(tag) {
+    if (tag != undefined)
+        tag = '/-/' + tag;
+    else
+        tag = '';
     $.ajax({
-        url: 'https://www.blogger.com/feeds/3262801613185975083/posts/default/-/' + tag + '?max-results=3',
+        url: 'https://www.blogger.com/feeds/3262801613185975083/posts/default' + tag + '?max-results=3',
         type: 'GET',
         dataType: 'jsonp',
         success: function (sResponse) {
