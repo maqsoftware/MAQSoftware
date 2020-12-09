@@ -148,11 +148,15 @@
                 <div class="row text-left">
                     <div class="col-md-10 offset-md-1">
                         <h3 class="h4">Azure Security Best Practices  </h3>
-                        <p><span><i class="ion ion-calendar"></i> August 2nd, 2018 </span><span><i class="ion ion-clock"></i> 3 Minutes to Read</span><p>
-                        <p class="lead">Every day, we hear about security breaches across industries. Each new breach makes senior managers anxious about their enterprise data, motivating them to seek assurance about the state of their cloud security. Over the last decade, the industry has improved tools and operating practices to secure hardware and software environments. </p>
-                        <p class="lead">Eight years ago during the Azure public preview, we assured our customers and management that our cloud implementations were secure. Traditionally, for large corporations, databases and applications were placed behind a secure firewall. Securing internal networks from external threats was generally well understood and had been mastered over the previous decade. With public clouds, however, there are new concerns about security and public exposure to data and applications. </p>
-                        <p class="lead">To secure our cloud environment, we continually implement the latest security tools and techniques. Every time we adopt a new technique or tool, our developers and operations teams resist the change. DevOps teams are reluctant to change because they do not want to break something that was working earlier. Regardless of pushback, maintaining the latest cloud security practices is essential in any modern enterprise environment. </p>
-                        <p class="lead">With a systematic approach, securing your cloud environment does not have to be difficult. The following techniques help simplify the process. </p>
+                        <p><span><i class="ion ion-calendar"></i> December 9th, 2020 </span><span><i class="ion ion-clock"></i> 3 Minutes to Read</span><p>
+                        <p class="lead">As cloud technology evolves, so does its security requirements. With a decade of experience in Azure, we have developed the best practices to respond to the main security challenges faced by Azure administrators and product managers:</p>
+                        
+                        <ol>
+                            <li><p class="lead">Evolving workloads: With more users empowered to create services, software, and applications on Azure, ensuring that all solutions follow security protocol and best practices can be challenging </p></li>
+                            <li><p class="lead">Highly sophisticated and improved attacks: Internet-based workloads are vulnerable to new and sophisticated malware</p></li>
+                            <li><p class="lead">Shortage of skilled security administrators: The industry currently faces an acute shortage of administrators with the relevant background, experience, and skillset to implement the latest cloud security technologies </p></li>
+                        </ol>
+                            <p class="lead">With a systematic approach, securing your cloud environment does not have to be difficult. The following techniques help simplify the process. </p>
 
                         <!-- Social Media -->
                         <!-- Facebook Share -->
@@ -184,79 +188,147 @@
                         </p>
                         
                         <ol class="  pb-10">
-                            <li class="h4header"> Review the Azure <a href="https://azure.microsoft.com/en-us/services/security-center/">Security Center</a>
-                                <p class=defaultBody>Azure Security Center portal provides a single place to check the security state of cloud resources. Security Center uses machine learning and advanced analytics to detect threats and suggest steps to prevent them. As of July 2018, Security Center costs <a class="underlined" href="https://azure.microsoft.com/en-us/pricing/details/security-center/">$15 per node per month</a>. A node is any Azure resource (VM, SQL Database server, and Azure Cloud Services) that is monitored by the service. Enabling Azure Security Center is one of the simplest and best investments for security.</p>
-                                <p class=defaultBody>To review the status of your security using Azure Security Center, select <b>Security Center – Overview</b> on the <b>Azure menu</b>. You will see: </p>
+                            <li class="h4header"> Use the Azure <a href="https://azure.microsoft.com/en-us/services/security-center/">Security Center</a>
+                                <p class=defaultBody>Azure Security Center is a worthwhile investment to secure your cloud assets, offering a centralized view of your security status.</p>
+                                <p class=defaultBody>The portal uses machine learning and advanced analytics to detect existing and potential threats, and suggest preventative actions. End users can instantly implement Azure-native security solutions and can:</p>
                                 <ul class="defaultBody">
-                                    <li>Recommendations to improve the security of Azure subscriptions. </li>
-                                    <li>An inventory of Compute & Apps, Networking, Data Security, and Identity & Access Resources. </li>
+                                    <li>Manage security policy and compliance </li>
+                                    <li>Continuously assess security status with real-time monitoring</li>
+                                    <li>Access a network map</li>
+                                    <li>Improve security by following suggested recommended controls for each Azure service</li>
+                                    <li>Protect against threats on both infrastructure as a service (IaaS) and platform as a service (PaaS) environments</li>
                                 </ul>
-                                <p class=defaultBody>Once you have reviewed the state of your security, you can fix the issues with each resource to secure your cloud environment. </p>
-                            </li>
-
-                            <li class="h4header"> Enable <a href="https://docs.microsoft.com/en-us/azure-advanced-threat-protection/what-is-atp">Advanced Threat Protection</a> (ATP)
-                                <p class=defaultBody>Azure ATP protects enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats. Azure ATP provides detection for the various phases of an advanced attack including reconnaissance, credential compromise, lateral movement, privilege escalation, domain dominance, and others. These detections identify advanced attacks before they impact your business. </p>
-                                
-                                
-                            </li>
-
-                            <li class="h4header"> Execute & monitor <a href="https://github.com/azsk/DevOpsKit">AzSK</a> results
-                                <p class=defaultBody>The Secure DevOps Kit for Azure is a collection of PowerShell based scripts, tools, extensions, and automation that caters to the end to end Azure subscription and resource security needs of DevOps teams. AzSK uses extensive automation and smoothly integrates security into native DevOps workflows. </p>
-                                
-                            </li>
-
-                            <li class="h4header"> Follow the principle of "Least Privilege"
-                                <p class=defaultBody>Instead of giving full access on all Azure resources to every user, provide access to resources on a need basis. The larger the number of access points, the bigger the area of the threat surface. When providing access to a user, provide the "Least Privilege" possible. </p>
-                            </li>
-
-                            <li class="h4header"> Use <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal">Service Principal</a> wherever possible 
-                                <p class=defaultBody>Service Principals are Azure Active Directory application resources used to perform unattended resource and service-level operations. Use Service Principals for code that needs to access or modify Azure resources. The Service Principals approach is preferable to running the app under user credentials because you can assign permissions to the app identity that are different from user permissions. Typically, these permissions are restricted to exactly what the app needs to do. </p>
-                            </li>
-                            <li class="h4header"> Turn off Azure services and servers when not in use and remove inactive resources to:  
+                                <p class=defaultBody>OAs of November 2020, Azure Security Center costs between $2 to $15 per node per month based on service. A node is any Azure resource (VM, SQL Database server, storage, Kubernetes, key vault, app service, container images) monitored by the service. </p>
+                                <p class=defaultBody><strong>How to use Azure Security Center:</strong></p>
+                                <p class=defaultBody>Define your security admins. This role handles alerts, Azure Defender, security policy, and the auto provisioning of log analytics and extensions (as a rule of thumb, developers should be classified as security admins). </p>
+                                <p class=defaultBody>To review your security status using Azure Security Center, go to the Azure menu and select Security Center –> Overview. You will see:</p>
                                 <ul class="defaultBody">
-                                    <li>Reduce the surface area of security threats, especially when resources are not in use. </li>
-                                    <li>Reduce the cost of Azure services. There is no need to pay when you are not using a resource. We recommend a strategy of dynamically provisioning a resource only when it is required. </li>
+                                    <li>Azure Secure Score, which measures the security status of your subscriptions (a higher score means lower risk level)</li>
+                                    <li>Azure Defender Status for any resource type it is enabled on</li>
+                                    <li>Inventory of resource health state </li>
+                                    <li>Regulatory compliance such as SOC TSP, ISO 27001, PCO DSS 3.2.1 (you can enable the platform’s out-of-the-box compliance controls or input custom controls)</li>
+                                    <li>High-impact security recommendations and the potential percentage increase in Azure Secure Score if implemented</li>
                                 </ul>
                             </li>
-                            <li class="h4header">Implement an IP whitelisting approach as applicable
-                                <p class=defaultBody>IP Restrictions allow you to define a list of IP addresses that can access your app. The ‘allow’ list can include individual IP addresses or a range of IP addresses defined by a subnet mask. Whitelisting is extremely helpful in scenarios where there are a limited number of app users (e.g., internal app, or your next great version). Whitelists prevent unwanted or unauthorized machines from accessing the app. </p>
+
+                            <li class="h4header"> Enable <a href="https://docs.microsoft.com/en-us/defender-for-identity/what-is">Azure Defender</a>
+                                <p class=defaultBody>Formerly known as Azure Advanced Threat Protection (ATP), Azure Defender protects enterprise environments from targeted cyber-attacks and insider threats. Part of Azure Security Center, Azure Defender detects throughout the various phases of an advanced attack including reconnaissance, credential compromise, lateral movement, privilege escalation, and domain dominance. These detections identify advanced attacks before they impact your business. </p>
+                                
+                                
                             </li>
-                            <li class="h4header"> Use the <a href="https://azure.microsoft.com/en-us/services/key-vault/">Azure Key Vault</a>
-                                <p class=defaultBody>Azure Key Vault safeguards cryptographic keys and secrets used by cloud applications and services. You can control applications to never have direct access to keys. Developers manage keys used for Dev/Test and can seamlessly migrate keys managed by security operations to production. </p>
+
+                            <li class="h4header"> Follow the "Least Privilege" principle via role-based access control
+                                <p class=defaultBody>Instead of providing every user with full access to Azure resources, limit access based on need. The fewer access points to your data, the smaller the area of the threat attack surface. </p>
+                                
                             </li>
-                            <li class="h4header"> Use <a href="https://docs.microsoft.com/en-us/azure/security/azure-security-disk-encryption">Azure Disk Encryption</a> to encrypt Azure VMs 
-                                <p class=defaultBody>By default, hard disks in Azure VMs are not encrypted. Use Azure Disk Encryption to ensure that all data in OS disks and data disks on Azure VMs is encrypted at rest using industry-standard encryption. Azure Disk Encryption uses Azure Key Vault to control and manage encryption keys and secrets in the key vault subscription. </p>
+
+                            <li class="h4header"> Use <a href="https://azure.microsoft.com/en-us/services/active-directory/">Azure Active Directory</a> to manage identity and access to cloud applications
+                                <p class=defaultBody>Azure Active Directory (AAD) is a multi-tenant cloud directory and identity management service. AAD secures and simplifies user access to cloud applications with single sign-on. AAD also protects sensitive data and applications with Azure Multi-factor Authentication, an additional level of authentication, and machine learning-based reports, which identify inconsistent access patterns.</p>
                             </li>
-                            <li class="h4header"> Use <a href="https://azure.microsoft.com/en-us/services/active-directory/">Azure Active Directory</a> (AAD) to manage identity and access to cloud applications 
-                                <p class=defaultBody>AAD is Microsoft’s multi-tenant cloud directory and identity management service. AAD secures and simplifies user access to cloud applications with single sign-on. AAD also protects sensitive data and applications with Azure Multi-Factor Authentication, an additional level of authentication, and machine learning-based reports that identify inconsistent access patterns. </p>
-                            </li>
+                        
                             <li class="h4header"> Add a second layer of security by enabling <a href="https://docs.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks">Azure Multi-factor Authentication</a> (MFA) 
-                                <p class=defaultBody>Azure MFA is a method for verifying user identities via phone call, text message, or mobile app notification, supplementing username and password authentication. Because Azure MFA requires access to a user’s phone, access to the user’s data and applications is protected even if the user’s password is compromised. Organizations that do not add this extra layer of identity protection are more susceptible to credential theft attack, which may lead to data compromise. </p>
+                                <p class=defaultBody>Azure MFA verifies user identities via phone call, text message, or mobile app notification, replacing outdated username and password authentication. Because Azure MFA requires access to a user’s phone, the user’s data and applications are protected even if the user’s password is compromised. Organizations that do not add this extra layer of identity protection are more susceptible to credential theft attack, which may compromise data.</p>
                             </li>
-                            <li class="h4header">Assign access to Azure resources to Active Directory groups, not individuals.  
-                                <p class=defaultBody>Instead of giving Azure resource access to individual developers, we follow a practice to only assign access to a security group. This practice simplifies access management and ensures that developers only have access to resources for their projects. </p>
-                                <p class=defaultBody>Many organizations give individual developers access to resources such as Azure VMs or SQL Servers when they start work on a project. But when a developer moves to a different project, it becomes difficult for organizations to keep track of access privileges that are no longer required. Individual permissions often remain even when the individual is no longer assigned to the project. By assigning access to an Active Directory group, the owner of the group can ensure that only those who are currently assigned to the project have access.   </p>
+                            <li class="h4header">Assign resource access to Active Directory groups, not individuals 
+                                <p class=defaultBody>Assign Azure resource access to a security group instead of individuals. By enabling group access, you simplify management and ensure that developers only have access to resources for their projects.</p>
+                                <p class=defaultBody>Many organizations give individual developers access to resources such as Azure VMs or SQL Servers when they begin work on a project. When those developers move to a different project, it becomes difficult to keep track of access privileges that are no longer required. Individual permissions often remain active even when the individual is no longer assigned to the project. By assigning access to an Active Directory group, the owner of the group can ensure that only those who are currently assigned to the project have access to its data.</p>
+                                <p class=defaultBody>Periodically review your Azure Active Directory groups. Assign roles based on minimum privilege policies, with subscription always restricted to a reader role.</p>
                             </li>
-                            <li class="h4header">Remove In-Development Copies of Databases 
-                                <p class=defaultBody>During the software development process, programmers create copies of existing databases to test their code. Additional backups are created during system software upgrades when new versions of applications are installed or, sometimes, just in case. Over time, developers move on to new projects. Often, after moving to a new project, developers do not take the time to remove unused copies and files from previous systems. The clutter on the server and file store is analogous to a factory where tools, oil, and unfinished parts are lying on the floor. Someone is sure to trip and get hurt.   </p>
+                            <li class="h4header">Use managed identity wherever possible
+                                <p class=defaultBody>A managed identity in Azure Active Directory (AAD) enables applications to easily access other AAD-protected resources such as Azure Key Vault. The Azure platform manages identities, eliminating the need to provision or rotate secrets.</p>
+                                <p class=defaultBody>Managed identity also automatically renews service principals, which should always be enabled. Server Managed identity also automatically renews service principals, which should always be enabled. Server principals are AAD application resources that perform unattended resource and service-level operations.</p>
+                                <table>
+                                    <tr>
+                                      <td rowspan="8">If you want to build an application using…</th>
+                                      <th>Source</th>
+                                      <td rowspan="8">…that can access</th>
+                                      <th>Target</th>
+                                      <td rowspan="8">…without needing to manage credentials, then use managed identity</th>
+                                    </tr>
+                                    <tr>
+                                      <td>Azure VMs </td>
+                                      <td>Azure Services that support AAD authentication </td>
+                                    </tr>
+                                    <tr>
+                                        <td>App services</td>
+                                        <td>Azure Key Vault </td>
+                                      </tr>
+                                      <tr>
+                                        <td>Functions </td>
+                                        <td>Azure storage </td>
+                                      </tr>
+                                      <tr>
+                                        <td>Container instances</td>
+                                        <td>Azure SQL </td>
+                                      </tr>
+                                      <tr>
+                                        <td>Kubernetes services  </td>
+                                        <td>Azure Cosmos DB </td>
+                                      </tr>
+                                      <tr>
+                                        <td>Logic apps  </td>
+                                        <td>Azure machine learning service </td>
+                                      </tr>
+                                      <tr>
+                                        <td>Other Azure sources  </td>
+                                        <td>Other Azure resources </td>
+                                      </tr>
+                                  </table>
                             </li>
-                            
+                            <li class="h4header">Implement an IP whitelisting approach (as applicable) 
+                                <p class=defaultBody>Whitelisting IP addresses prevents unwanted or unauthorized machines from accessing the app. IP restrictions enable you to define which IP addresses can access your app. The “allow” list can include individual IP addresses or a range of IP addresses defined by a subnet mask. Whitelisting is extremely helpful in scenarios where there are a limited number of app users (e.g. an internal app). </p>
+                                <p class=defaultBody>Always protect your Virtual network using Azure Firewall. Along with IP range, access should be restricted to limited ports. </p>
+                    
+                            </li>
+                            <li class="h4header">Use <a href="https://azure.microsoft.com/en-us/services/key-vault/">Azure Key Vault</a>
+                                <p class=defaultBody>Azure Key Vault safeguards cryptographic keys and secrets used by cloud applications and services. You can control applications to never have direct access to keys. Developers manage keys used for Dev/Test and can seamlessly migrate keys managed by security operations to production. </p>
+                                <p class=defaultBody>When using Azure keys, make sure you: </p>
+                                <ul class="defaultBody">
+                                    <li>Only provision access to certificates, secrets, and keys to limited users and identities  </li>
+                                    <li>Enable soft delete to retrieve objects that have been accidentally deleted from the key vault</li>
+                                </ul>
+                            </li>
+                            <li class="h4header">Use <a href="https://docs.microsoft.com/en-us/azure/security/azure-security-disk-encryption">Azure Disk Encryption</a> to encrypt Azure VMs
+                                <p class=defaultBody>By default, all managed disks in Azure VMs are encrypted via SSE with PMK, which is a server-side encryption with a platform managed key. For OS and data disks, enable Azure Disk Encryption (ADE). ADE uses Azure Key Vault to control and manage encryption keys and secrets in the key vault subscription.</p>
+                                <p class=defaultBody>Similarly, always enable Transparent Data Encryption (TDE) on SQL databases to secure data at rest.</p>
+                    
+                            </li>
+                            <li class="h4header">Maintain platform hygiene
+                                <p class=defaultBody>Clean up your Azure subscription by removing deprecated identities, users, and resources. Periodically review access for existing users in your subscription.</p>
+                                <p class=defaultBody>Follow Azure Security Center guidelines by ensuring no more than three individuals are identified as subscription owners. </p>
+                    
+                            </li>
+                            <li class="h4header">Turn off Azure services and servers when not in use and remove inactive resources 
+                                <p class=defaultBody>Only turning on the services you are actively using enables you to reduce the surface area of security threats and reduce the cost of Azure services. There is no need to pay when you are not using a resource. We recommend you create runbooks to automatically turn resources on/off at scheduled times. </p>
+                    
+                            </li>
+                            <li class="h4header">Remove in-development copies of databases
+                                <p class=defaultBody>During the software development process, programmers create copies of existing databases to test their code. Additional backups are created during system software upgrades when installing new versions of applications. Over time, developers move on to new projects. Often, after moving to a new project, developers do not take the time to remove unused copies and files from previous systems. Leaving clutter on the server and file store is like leaving tools, oil, and unfinished parts are lying on the floor of a factory. Someone is bound to trip and get hurt.</p>
+                                <p class=defaultBody>Security starts and ends with discipline. To keep track of your resources, create an automated runbook that informs admins of historical databases. Remove any you aren’t using to ensure your workspace is clean and organized.  </p>
+
+                            </li>
+                            <li class="h4header">Set up locks on your resource groups
+                                <p class=defaultBody>Locks safeguard the development teams from accidentally deleting resources. </p>
+
+                            </li>
+                            <li class="h4header">Update your system as often as possible
+                                <p class=defaultBody>In response to the evolving security threats of today’s internet landscape, Microsoft continually updates to its products and services. Update your resources with the latest patches to ensure your security system is up to date and secure.</p>
+
+                            </li>
 
                         </ol>
-                        <p class="pt-5px">
-                                In the end, security starts and ends with discipline. We need a disciplined team that thinks in a disciplined way and acts with discipline.  
-                        </p>
+                        
                     </div>
                 </div>
                 <div class="row ptb-15">
                     <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
                         <h3> References</h3>
-                        <p>Microsoft offers additional documents that provide a high-level framework for best practices. We strongly encourage you to review the following documents: </p>
+                        <p>Microsoft offers additional documents that provide a high-level framework for best practices. We strongly encourage you to review the following documents:</p>
                         <ul class="defaultBody">
                             <li><a href="https://maqsoftware.com/expertise/cloudtransformation/azure-architecture-best-practices">Azure Architecture Best Practices</a> – MAQ Software, published July 26, 2018 </li>
-                            <li><a href="https://docs.microsoft.com/en-us/azure/security/azure-security-identity-management-best-practices">Azure Identity Management and access control security best practices</a> – Microsoft Corporation, published April 26, 2018 </li>
-                            <li><a href="https://docs.microsoft.com/en-us/azure/security/security-best-practices-and-patterns">Azure security best practices and patterns</a>– Microsoft Corporation, published February 16, 2018 </li>
-                            <li><a href="https://docs.microsoft.com/en-us/azure/security/azure-security-network-security-best-practices">Azure Network Security Best Practices</a>– Microsoft Corporation, published November 21, 2017  </li>
+                            <li><a href="https://docs.microsoft.com/en-us/azure/security/azure-security-identity-management-best-practices">Azure Identity Management and access control security best practices</a> – Microsoft Corporation, published April 28, 2019 </li>
+                            <li><a href="https://docs.microsoft.com/en-us/azure/security/security-best-practices-and-patterns">Azure security best practices and patterns</a>– Microsoft Corporation, published May 03, 2019 </li>
+                            <li><a href="https://docs.microsoft.com/en-us/azure/security/azure-security-network-security-best-practices">Azure Network Security Best Practices</a>– Microsoft Corporation, published October 02, 2019  </li>
                         </ul>
 
                     </div>
