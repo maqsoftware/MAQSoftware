@@ -236,7 +236,7 @@
                             </li>
                             <li class="h4header">Use managed identity wherever possible
                                 <p class=defaultBody>A managed identity in Azure Active Directory (AAD) enables applications to easily access other AAD-protected resources such as Azure Key Vault. The Azure platform manages identities, eliminating the need to provision or rotate secrets.</p>
-                                <p class=defaultBody>Managed identity also automatically renews service principals, which should always be enabled. Server Managed identity also automatically renews service principals, which should always be enabled. Server principals are AAD application resources that perform unattended resource and service-level operations.</p>
+                                <p class=defaultBody>Managed identity also automatically renews service principals, which should always be enabled. Server Managed identity also automatically renews service principals, which should always be enabled. Service principals are AAD application resources that perform unattended resource and service-level operations.</p>
                                 <table style="border: 1px solid black; border-collapse: collapse;">
                                     <tr>
                                       <td style="border: 1px solid black; border-collapse: collapse; padding:10px" rowspan="8">If you want to build an application using…</th>
@@ -303,8 +303,8 @@
                     
                             </li>
                             <li class="h4header">Remove in-development copies of databases
-                                <p class=defaultBody>During the software development process, programmers create copies of existing databases to test their code. Additional backups are created during system software upgrades when installing new versions of applications. Over time, developers move on to new projects. Often, after moving to a new project, developers do not take the time to remove unused copies and files from previous systems. Leaving clutter on the server and file store is like leaving tools, oil, and unfinished parts are lying on the floor of a factory. Someone is bound to trip and get hurt.</p>
-                                <p class=defaultBody>Security starts and ends with discipline. To keep track of your resources, create an automated runbook that informs admins of historical databases. Remove any you aren’t using to ensure your workspace is clean and organized.  </p>
+                                <p class=defaultBody>During the software development process, programmers create copies of existing databases to test their code. Additional backups are created during system software upgrades when installing new versions of applications. Over time, developers move on to new projects. Often, after moving to a new project, developers do not take the time to remove unused copies and files from previous systems. Leaving clutter on the server and file store is like leaving tools, oil, and unfinished parts lying on the floor of a factory. Someone is bound to trip and get hurt.</p>
+                                <p class=defaultBody>Security starts and ends with discipline. To keep track of your resources, create an automated runbook that informs admins of historical databases. Remove any resource you aren’t using to ensure your workspace is clean and organized.  </p>
 
                             </li>
                             <li class="h4header">Set up locks on your resource groups
@@ -312,7 +312,7 @@
 
                             </li>
                             <li class="h4header">Update your system as often as possible
-                                <p class=defaultBody>In response to the evolving security threats of today’s internet landscape, Microsoft continually updates to its products and services. Update your resources with the latest patches to ensure your security system is up to date and secure.</p>
+                                <p class=defaultBody>In response to the evolving security threats of today’s internet landscape, Microsoft continually updates its products and services. Update your resources with the latest patches to ensure your security system is up to date and secure.</p>
 
                             </li>
 
