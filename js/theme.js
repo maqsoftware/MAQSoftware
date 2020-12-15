@@ -664,8 +664,21 @@ function RenderMartech() {
 
         function filterOnTag(buttonGroup, blogcategory) {
             buttonGroup.find('.active').removeClass('active tagSelected');
-            buttonGroup.find("[data-filter=" + '"' + blogcategory.attr('data-filter') + '"' + "]").addClass('active tagSelected');
-            var filterValue = blogcategory.attr('data-filter');
+            var filterValue;
+            try{
+                buttonGroup.find("[data-filter=" + '"' + blogcategory.attr('data-filter') + '"' + "]").addClass('active tagSelected');
+                filterValue = blogcategory.attr('data-filter');
+            }
+            catch(err)
+            {
+                try{
+                    buttonGroup.find("[data-filter=" + '"' + blogcategory.getAttribute('data-filter') + '"' + "]").addClass('active tagSelected');
+                    filterValue = blogcategory.getAttribute('data-filter');
+                }
+                catch(error){
+                    console.log("showing all");
+                }
+            }
             $('.container-grid').isotope({ filter: filterValue });
         }
         $(".blogcategories").off('click').on('click', function () {
@@ -684,6 +697,23 @@ function RenderMartech() {
                 filterOnTag($buttonGroup, $(this));
             }
         });
+
+        function defaultCategory()
+        {
+            var $buttonGroup = $('.blogcategories-filter');
+            var PrevPage = sessionStorage.getItem('PrevPage');
+            var $blogcategory = document.getElementsByClassName('blogcategories')[0].getElementsByClassName('blogcategories');
+            for (var i = 0; i < $blogcategory.length; i++)
+            {
+                if ($blogcategory[i].text = PrevPage) {
+                    $blogcategory = $blogcategory[i];
+                    break;
+                }
+            }
+            filterOnTag($buttonGroup, $blogcategory);
+        }
+
+        defaultCategory();
         // Masonry Element
         var container = $('.masonry');
         container.masonry({
