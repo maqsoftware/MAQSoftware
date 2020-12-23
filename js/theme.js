@@ -698,22 +698,6 @@ function RenderMartech() {
             }
         });
 
-        function defaultCategory()
-        {
-            var $buttonGroup = $('.blogcategories-filter');
-            var PrevPage = sessionStorage.getItem('PrevPage');
-            var $blogcategory = document.getElementsByClassName('blogcategories')[0].getElementsByClassName('blogcategories');
-            for (var i = 0; i < $blogcategory.length; i++)
-            {
-                if ($blogcategory[i].text = PrevPage) {
-                    $blogcategory = $blogcategory[i];
-                    break;
-                }
-            }
-            filterOnTag($buttonGroup, $blogcategory);
-        }
-
-        defaultCategory();
         // Masonry Element
         var container = $('.masonry');
         container.masonry({
@@ -721,6 +705,21 @@ function RenderMartech() {
             itemSelector: '.nf-item'
         });
     };
+
+    function defaultCategory() {
+        var $buttonGroup = $('.blogcategories-filter');
+        var PrevPage = sessionStorage.getItem('PrevPage');
+        var $blogcategory = document.getElementsByClassName('blogcategories-filter')[0].getElementsByClassName('blogcategories');
+        for (var i = 0; i < $blogcategory.length; i++) {
+            if ($blogcategory[i].text == PrevPage) {
+                $blogcategory = $blogcategory[i];
+                break;
+            }
+        }
+        $buttonGroup.find("[data-filter=" + '"' + $blogcategory.getAttribute('data-filter') + '"' + "]").addClass('active tagSelected');
+        filterValue = $blogcategory.getAttribute('data-filter');
+        $('.container-grid').isotope({ filter: filterValue });
+    }
     
     // SCROLL CALLBACK FUNCTION  ||-----------
     function scrollCallbackEle() {
