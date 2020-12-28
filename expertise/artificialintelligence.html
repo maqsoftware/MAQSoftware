@@ -431,7 +431,7 @@
 
 
                     </div>
-                    <h6 class="pt-20"><a href="/case-studies" class="float-right float-none-xs">View All</a></h6>
+                    <h6 class="pt-20"><a href="/case-studies" onclick="setPrevPage()" class="float-right float-none-xs">View All</a></h6>
                 </div>
             </section>
             <!-- End Blog Section -->
@@ -656,4 +656,7 @@
 <script>
     loadPlugins();
     loadBlogsLatest3('Artificial Intelligence');
+    function setPrevPage() {
+        sessionStorage.setItem('PrevPage', 'Artificial Intelligence');
+    }
 </script>
