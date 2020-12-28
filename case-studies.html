@@ -271,6 +271,8 @@
     <script src="js/case-study.js?v=20201006" type="text/javascript"></script>
     <script type="text/javascript">
         loadBloggerGrid();
+        //defaultCategory();
+        
     </script>
     <script type="application/ld+json">
         { "@context" : "http://schema.org",
@@ -316,4 +318,13 @@
 
 <script>
     loadPlugins();
+    //document.addEventListener('DOMContentLoaded', function () {
+    //    defaultCategory();
+    //}, false);
+    document.addEventListener('readystatechange', event => {
+        // When window loaded ( external resources are loaded too- `css`,`src`, etc...) 
+        if (event.target.readyState === "complete") {
+            defaultCategory();
+        }
+    });
 </script>
