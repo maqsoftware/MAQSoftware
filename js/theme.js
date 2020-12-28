@@ -709,16 +709,18 @@ function RenderMartech() {
     function defaultCategory() {
         var $buttonGroup = $('.blogcategories-filter');
         var PrevPage = sessionStorage.getItem('PrevPage');
-        var $blogcategory = document.getElementsByClassName('blogcategories-filter')[0].getElementsByClassName('blogcategories');
-        for (var i = 0; i < $blogcategory.length; i++) {
-            if ($blogcategory[i].text == PrevPage) {
-                $blogcategory = $blogcategory[i];
-                break;
+        if (PrevPage != null && PrevPage != undefined) {
+            var $blogcategory = document.getElementsByClassName('blogcategories-filter')[0].getElementsByClassName('blogcategories');
+            for (var i = 0; i < $blogcategory.length; i++) {
+                if ($blogcategory[i].text == PrevPage) {
+                    $blogcategory = $blogcategory[i];
+                    break;
+                }
             }
+            $buttonGroup.find("[data-filter=" + '"' + $blogcategory.getAttribute('data-filter') + '"' + "]").addClass('active tagSelected');
+            filterValue = $blogcategory.getAttribute('data-filter');
+            $('.container-grid').isotope({ filter: filterValue });
         }
-        $buttonGroup.find("[data-filter=" + '"' + $blogcategory.getAttribute('data-filter') + '"' + "]").addClass('active tagSelected');
-        filterValue = $blogcategory.getAttribute('data-filter');
-        $('.container-grid').isotope({ filter: filterValue });
     }
     
     // SCROLL CALLBACK FUNCTION  ||-----------

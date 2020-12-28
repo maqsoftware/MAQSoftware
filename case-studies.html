@@ -318,7 +318,13 @@
 
 <script>
     loadPlugins();
-    document.addEventListener('DOMContentLoaded', function () {
-        defaultCategory();
-    }, false);
+    //document.addEventListener('DOMContentLoaded', function () {
+    //    defaultCategory();
+    //}, false);
+    document.addEventListener('readystatechange', event => {
+        // When window loaded ( external resources are loaded too- `css`,`src`, etc...) 
+        if (event.target.readyState === "complete") {
+            defaultCategory();
+        }
+    });
 </script>
