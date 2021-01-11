@@ -5426,6 +5426,14 @@ events-post{
     padding: 10px 0;
 }
 
+.biconsulting-tag {
+    float:right;
+    background-color: rgb(192,0,0);
+    padding: 0em 2.0em;
+    color:white;
+    font-weight: bold;
+}
+
 .modal {
     text-align: center;
     padding: 0 !important;
