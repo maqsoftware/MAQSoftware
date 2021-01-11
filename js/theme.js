@@ -664,8 +664,21 @@ function RenderMartech() {
 
         function filterOnTag(buttonGroup, blogcategory) {
             buttonGroup.find('.active').removeClass('active tagSelected');
-            buttonGroup.find("[data-filter=" + '"' + blogcategory.attr('data-filter') + '"' + "]").addClass('active tagSelected');
-            var filterValue = blogcategory.attr('data-filter');
+            var filterValue;
+            try{
+                buttonGroup.find("[data-filter=" + '"' + blogcategory.attr('data-filter') + '"' + "]").addClass('active tagSelected');
+                filterValue = blogcategory.attr('data-filter');
+            }
+            catch(err)
+            {
+                try{
+                    buttonGroup.find("[data-filter=" + '"' + blogcategory.getAttribute('data-filter') + '"' + "]").addClass('active tagSelected');
+                    filterValue = blogcategory.getAttribute('data-filter');
+                }
+                catch(error){
+                    console.log("showing all");
+                }
+            }
             $('.container-grid').isotope({ filter: filterValue });
         }
         $(".blogcategories").off('click').on('click', function () {
@@ -684,6 +697,7 @@ function RenderMartech() {
                 filterOnTag($buttonGroup, $(this));
             }
         });
+
         // Masonry Element
         var container = $('.masonry');
         container.masonry({
@@ -691,6 +705,23 @@ function RenderMartech() {
             itemSelector: '.nf-item'
         });
     };
+
+    function defaultCategory() {
+        var $buttonGroup = $('.blogcategories-filter');
+        var PrevPage = sessionStorage.getItem('PrevPage');
+        if (PrevPage != null && PrevPage != undefined) {
+            var $blogcategory = document.getElementsByClassName('blogcategories-filter')[0].getElementsByClassName('blogcategories');
+            for (var i = 0; i < $blogcategory.length; i++) {
+                if ($blogcategory[i].text == PrevPage) {
+                    $blogcategory = $blogcategory[i];
+                    break;
+                }
+            }
+            $buttonGroup.find("[data-filter=" + '"' + $blogcategory.getAttribute('data-filter') + '"' + "]").addClass('active tagSelected');
+            filterValue = $blogcategory.getAttribute('data-filter');
+            $('.container-grid').isotope({ filter: filterValue });
+        }
+    }
     
     // SCROLL CALLBACK FUNCTION  ||-----------
     function scrollCallbackEle() {
