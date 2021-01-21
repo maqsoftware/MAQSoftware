@@ -1694,10 +1694,9 @@ form label.error {
 .nav-menu ul.nav-menu-inner li a {
     font-family: inherit;
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1;
     font-weight: 600;
-    text-transform: uppercase;
     outline: none;
     letter-spacing: 1px;
     transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
