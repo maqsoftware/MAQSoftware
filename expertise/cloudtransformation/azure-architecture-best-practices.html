@@ -3,18 +3,18 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
 <head>
     <meta charset="utf-8" />
-    <title>Azure Architecture Best Practices | MAQ Software</title>
+    <title>Azure Optimization Best Practices | MAQ Software</title>
     <meta name="title" content="Azure Architecture Best Practices | MAQ Software" />
     <meta name="theme-color" content="#c00000">
-    <meta name="description" content=" The following is a list of best practices we use to review and optimize Azure applications."
+    <meta name="description" content=" Optimize your Azure architecture for high performance at a low cost with our 5 best practices."
     />
     <meta name="keywords" content="maq software, innovative software, data management, Power BI, Sharepoint, cloud, artificial intelligence"
     />
     <meta name="ROBOTS" content="FOLLOW,INDEX" />
     <!-- Open Graph data -->
-    <meta name="og:title" property="og:title" content="Azure Architecture Best Practices | MAQ Software"
+    <meta name="og:title" property="og:title" content="Azure Optimization Best Practices | MAQ Software"
     />
-    <meta name="og:description" property="og:description" content="The following is a list of best practices we use to review and optimize Azure applications."
+    <meta name="og:description" property="og:description" content="Optimize your Azure architecture for high performance at a low cost with our 5 best practices."
     />
     <meta property="og:image" name="og:image" content="/img/Banners/azure-architecture-best-practices-banner.jpg" 
     />
@@ -24,9 +24,9 @@
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@maqsoftware" />
-    <meta name="twitter:title" content="Azure Architecture Best Practices | MAQ Software" 
+    <meta name="twitter:title" content="Azure Optimization Best Practices | MAQ Software" 
     />
-    <meta name="twitter:description" content="The following is a list of best practices we use to review and optimize Azure applications."
+    <meta name="twitter:description" content="Optimize your Azure architecture for high performance at a low cost with our 5 best practices."
     />
     <meta name="twitter:image" content="/img/Banners/azure-architecture-best-practices-banner.jpg" 
     />
@@ -87,9 +87,11 @@
             <div class="container">
                 <div class="row text-left">
                     <div class="col-md-10 offset-md-1">
-                        <h3 class="h4">Azure Architecture Best Practices  </h3>
+                        <h3 class="h4">Azure Optimization Best Practices  </h3>
                         <p><span><i class="ion ion-calendar"></i> July 26, 2018 </span><span><i class="ion ion-clock"></i> 3 Minutes to Read</span><p>
-                        <p class="lead">To optimize Azure performance and costs, we have compiled a list of best practices for Azure architecture. We based the list on our experience transitioning hundreds of on-premise applications to Azure and building dozens of new Azure applications. The applications required a variety of assets such as databases, data warehouses, websites, data streaming services, and machine learning models. Depending on functionality, scalability, and security needs, we relied on Azure Virtual Machines (VMs) or on serverless Azure services architecture. We look forward to sharing this guide and improving it based on feedback from fellow Azure architects.</p>
+                        <p class="lead">Microsoft Azure is a powerful cloud platform that enables users to store and quickly process terabytes of data. To keep costs down while managing and securing an Azure-based platform, you need an optimized architecture.</p><br/>
+                        <p class="lead">Building an optimized Azure architecture requires numerous assets including databases, data warehouses, machine learning models, and data streaming services. With so many elements, it can be difficult to keep your costs low while operating at peak performance. </p><br/>
+                        <p class="lead">At MAQ Software, we’ve <a href="https://blog.maqsoftware.com/2019/08/delivering-data-faster-five-phases-of.html" target="_blank">migrated hundreds of applications to Azure</a>. Based on our experience, we have compiled five best practices to optimize your Azure platform for high performance and cost. </p>
 
                         <!-- Social Media -->
                         <!-- Facebook Share -->
@@ -119,51 +121,38 @@
                         <p class="pt-5px">
                               
                         </p>
-                        
+                        <h3> For General Use</h3>
                         <ol class="  pb-10">
-                            <li class="h4header"> To reduce Azure costs, turn off VMs at set times
-                                <p class=defaultBody>Switching off resources during non-usage periods reduces overall subscription costs. There are several ways to schedule auto-shutdowns for Azure VMs. When provisioning a new VM, Azure includes settings for scheduled shutdown time according to time zone. </p>
+                            <li class="h4header"> To reduce Azure costs, turn off or scale down virtual machines (VMs) at set times
+                                <p class=defaultBody>Switch off resources during non-usage periods or scale down VMs during off-peak hours to reduce overall subscription costs. There are several ways to schedule auto-shutdowns for Azure VMs. When provisioning a new VM, Azure offers settings for scheduled shutdown time according to time zone.</p>
                                 <p class=defaultBody>When administering multiple VMs, runbooks are ideal for scheduling automatic shutdown. Runbooks in Service Management Automation and Microsoft Azure Automation are <a class="underlined" href="https://docs.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell?view=powershell-6">Windows PowerShell</a> workflows or PowerShell scripts. </p>
-                                <p class=defaultBody>In DevOps mode, our developers typically maintain four parallel environments: Development, Testing, UAT, and Production. We use ARO Toolbox and runbooks to automatically shut down all non-production environments at the end of business hours. The environments automatically start again before business hours resume. When a VM is shut down, Azure does not charge compute or network fees for the stopped VM. Azure does charge a small fee for storage. Depending on usage patterns, Azure subscription costs can be reduced by 20% to 30% by turning VMs off outside of business hours. </p>
-                                <p class=defaultBody>AWS Instance Scheduler offers a similar service and claims to reduce costs by up to 70% versus full-time operation.</p>
+                                <p class=defaultBody>In DevOps mode, we maintain four parallel environments: Development, Testing, UAT, and Production. We use ARO Toolbox and runbooks to automatically shut down all non-production environments at the end of business hours. The environments automatically start again before business hours resume. When a VM is shut down, Azure does not charge compute or network fees for the stopped VM. Azure does charge a small fee for storage. Depending on usage patterns, you can reduce your Azure subscription costs by 20% to 30% by turning VMs off outside of business hours. </p>
+                                <p class=defaultBody>This best practice also applies to any Azure resource used for compute, including Azure Databricks, Azure Synapse, Azure Data Warehouse, Azure SQL database, Azure App Service, and Azure Cloud Service. </p>
                             </li>
 
-                            <li class="h4header"> To efficiently resolve failure scenarios, implement checkpoints in the Azure Data Factory (ADF) v2 pipeline
-                                <p class=defaultBody>Handling failure scenarios in multiple pipelines can be challenging in ADF. Because of the number of pipelines, identifying the precise failure point is difficult. When you cannot determine the failure point, all pipelines must be retriggered. </p>
-                                <p class=defaultBody>Control the flow of execution of multiple pipelines through a Master Pipeline and log tables. This triggers the Master Pipeline from the stage where it failed rather than triggering all child pipelines from the start.</p>
+                            <li class="h4header"> Use automated tools to monitor network resource configurations and changes
+                                <p class=defaultBody>Use <a href="https://docs.microsoft.com/en-us/azure/azure-monitor/platform/activity-log#:~:text=The%20Activity%20log%20is%20a,entries%20with%20PowerShell%20and%20CLI." target="_blank">Azure Activity Log</a> to monitor network resource configurations. You can also use Azure Activity Log to detect changes to network settings and resources related to Azure Functions deployments.</p>
+                                <p class=defaultBody>Create alerts in Azure Monitor that highlight changes to critical network settings or resources. With alerts, you can maintain a 360 degree view of all your resources and identify easy optimization opportunities. </p>
                                 
                             </li>
-
-                            <li class="h4header"> Use <a href="https://azure.microsoft.com/en-us/blog/introducing-query-replica-scale-out-for-azure-analysis-services/">Query Replicas</a> for Azure Analysis Services (AAS) synchronization
-                                <p class=defaultBody>To get a load balanced experience for AAS, use query replicas and synchronization for the AAS Model between the processing node and read-only query replicas. This helps parallelly serve multiple concurrent connections, improving the responsiveness of the models significantly. This also allows for high availability, even when a model is being processed.</p>
-                                <p class=defaultBody>Because creating a query replica adds cost equivalent to an AAS node, a cost-benefit analysis should be performed before implementing this practice.</p>
-                            </li>
-
-                            <li class="h4header"> To optimize query execution time in Azure SQL Data Warehouse (ADW), use appropriate resource classes
-                                <p class=defaultBody>Resource classes help manage workloads by setting limits on the number of queries that run concurrently and the compute-resources assigned to each query. Smaller resource classes reduce the maximum memory per query but increase concurrency. Larger resource classes increase the maximum memory per query but reduce concurrency.</p>
+                            <h3>When using Azure SQL Data Warehouse (ADW)</h3>
+                            <li class="h4header"> To optimize query execution time in Azure SQL Data Warehouse, use resource classes
+                                <p class=defaultBody>Resource classes limit the number of queries that run at the same time (concurrency), and the compute resources assigned to each query (memory). Select the resource class that best suits your needs. Smaller resource classes reduce the maximum memory per query but increase concurrency. Larger resource classes increase the maximum memory per query but reduce concurrency.</p>
                                 <p class=defaultBody>There are two types of resource classes:</p>
                                 <ul class=defaultBody>
-                                    <li>Static resource classes, which are well suited for increased concurrency on fixed data sets. Choose a static resource class when resource expectations vary throughout the day. For example, a static resource class works well when the data warehouse is queried by many people. When scaling the data warehouse, the amount of memory allocated to the user does not change. Consequently, more queries can be executed in parallel on the system.</li>
-                                    <li>Dynamic resource classes, which are well suited for data sets that are growing in size and improving performance as the service level is scaled up. Choose a dynamic resource class when queries are complex but do not need high concurrency. For example, generating daily or weekly reports is an occasional need for resources. If the reports are processing large amounts of data, scaling the data warehouse provides more memory to the user's existing resource class.</li>
+                                    <li><b>Static resource classes:</b> Choose a static resource class when your resource expectations vary throughout the day. For example, a static resource class works well when your data warehouse contains straightforward data that is queried by many people. With this resource class, scaling the data warehouse does not change the amount of memory allocated to the user. As a result, the system can execute more queries at the same time.</li>
+                                    <li><b>Dynamic resource classes:</b> Choose a dynamic resource class when queries are complex but do not need high concurrency. For example, generating daily or weekly reports viewed by leadership. If the reports process large amounts of data, scaling the data warehouse provides more memory to the user's existing resource class. Please note that large dynamic resource classes use many slots, reducing the resources available for additional queries. </li>
                                 </ul>
-                                <p class=defaultBody>In sum, use static resource classes for fixed datasets and use dynamic resource classes for growing datasets. Be aware, however, that large dynamic resource classes use many slots, reducing the resources available for additional queries.</p>
+                                <p class=defaultBody>To summarize: use static resource classes for fixed data sets and use dynamic resource classes for growing data sets. </p>
                             </li>
-                            <li class="h4header"> To process large volumes of data, dynamically scale Azure Analysis Services (AAS)
-                                <p class=defaultBody>To improve processing performance, schedule automatic scale-up of AAS through a runbook immediately before processing large volumes of data. To optimize costs, schedule scale-down after processing. </p>
+                            <h3>When using Azure Analysis Services (AAS)</h3>
+                            <li class="h4header"> To process large volumes of data, dynamically scale Azure Analysis Services 
+                                <p class=defaultBody>To improve processing performance, schedule an automatic scale-up of AAS through a runbook immediately before processing large volumes of data. To optimize costs, schedule a scale-down immediately after processing. </p>
                             </li>
-                            <li class="h4header"> To check available and expected roles in AAS, use Azure App functions
-                                <p class=defaultBody>To secure data in AAS, we create roles. Often, however, roles are deleted or missing in subsequent deployments. Use Azure App functions to periodically check the available and expected roles in the model, and send administrative alerts if discrepancies are identified.</p>
+                            <li class="h4header"> When processing large amounts of data with Azure Analysis Services, use partitioning
+                                <p class=defaultBody>Use <a href="https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview?tabs=csharp" target="_blank">Azure Durable Functions</a> to process partitions in AAS. Partitioning reduces your data latency and processing time. By dividing your large tables into small, logical partition blocks, you enable the system to process partitions independently. For example, partition large enterprise data such as global support and sales information.</p>
                             </li>
-                            <li class="h4header"> To reduce latency, use partition-specific processing for AAS
-                                <p class=defaultBody>Use Azure App functions to process specific partitions in the AAS model, thereby reducing the processing time and latency when showing the latest data.</p>
-                            </li>
-                            <li class="h4header"> To increase security, use <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal">Service Principal Identity</a> and Azure Key Vault
-                                <p class=defaultBody>Store credentials for data stores and computes in an Azure Key Vault. Azure Data Factory retrieves the credentials when executing an activity that uses the data store/compute.</p>
-                            </li>
-                            <li class="h4header"> To avoid performance issues, restrict activities in single Azure Data Factory (ADF) pipelines
-                                <p class=defaultBody>Limit single ADF pipelines to 40 activities or less to avoid performance issues and resource contention.</p>
-                            </li>
-                            
+                 
 
                         </ol>
                     </div>
@@ -173,8 +162,9 @@
                         <h3> References</h3>
                         <p>Microsoft offers additional documents that provide a high-level framework for best practices. We strongly encourage you to review the following documents: </p>
                         <ul class="defaultBody">
-                            <li><a href="https://maqsoftware.com/expertise/cloudtransformation/azure-security-best-practices">Azure Security Best Practices</a> – MAQ Software, published August 2nd, 2018 </li>
-                            <li><a href="https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/">Azure Reference Architectures</a> – Microsoft Corporation</li>
+                            <li><a href="https://maqsoftware.com/expertise/cloudtransformation/azure-security-best-practices">Azure Security Best Practices</a> – MAQ Software, updated December 10, 2020 </li>
+                            <li><a href="https://blog.maqsoftware.com/2020/12/azure-services-product-comparison.html">How to Use Azure Services: Product Comparison</a> – MAQ Software, published December 21, 2021</li>
+                            <li><a href="https://docs.microsoft.com/en-us/azure/architecture/browse/">Azure Reference Architectures</a> – Microsoft Corporation, updated regularly</li>
                             <li><a href="https://docs.microsoft.com/en-us/azure/sql-data-warehouse/resource-classes-for-workload-management">Workload management with resource classes in Azure SQL Data Warehouse</a> Microsoft Corporation, published April 26, 2018 </li>
                         </ul>
 
