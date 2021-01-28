@@ -61,10 +61,10 @@
       "gif": "../img/PowerBI/TreemapBarChart.mp4",
       "content": "<p>Treemap Bar Chart by MAQ Software allows users to categorize hierarchical data in sets of colored rectangles of proportionate sizes. Customizable colors make it easy to distinguish between categories.</p><p>Use this visual for all your profit breakdown needs. We used this visual to easily visualize profit performance across countries, regions, and cities. The gradient effect and size of bricks act as a performance indicator while making efficient use of space to show the distribution of values across categories.</p><p>Key features:</p><ul><li>Select orientation between bar chart and column chart.</li><li>Total values and data labels for all categories.</li><li>Custom text and background colors.</li><li>Tooltips with additional insights.</li><li>Data by color as per legends.</li><li>Animation to examine the visual at the granular level.</li><li>Cross-filtering support for legend values, axis values, and the bricks.</li><li>Supports Bookmark.</li><li>Supports report tooltips configuration.</li><li>Allows Drillthrough.</li></ul>",
       "category": "comparison part change",
-      "certifiedstarimage": "",
-      "pbicertifiedimage": "",
-      "starimagetitle": "",
-      "pbicertifiedurl": ""
+      "certifiedstarimage": "../img/PowerBI/certifiedstarimage.png",
+      "pbicertifiedimage": "../img/PowerBI/pbicertifiedimage.png",
+      "starimagetitle": "Power BI Certified",
+      "pbicertifiedurl": "https://aka.ms/pbicertified"
     }
   },
   {
@@ -231,10 +231,10 @@
       "gif": "../img/PowerBI/hourglass-visual.mp4",
       "content": "<p>Hourglass by MAQ Software lets users compare category values between two scenarios. For example, users can compare category values before and after an event or values at a source versus at a destination. This visual can also display conversion rates or changes in values.</p><p>Hourglass by MAQ Software is useful for any scenario where users must compare data before and after an event takes place, such as when comparing the number of scheduled flights versus the number of delayed flights between multiple airports.</p><p>Key features:</p><ul><li>Highlight individual categories on click.</li><li>Rotate the visual horizontally or vertically.</li><li>Animate individual categories on hover.</li><li>Add or remove the conversion box. </li></ul>",
       "category": "comparison",
-      "certifiedstarimage": "",
-      "pbicertifiedimage": "",
-      "starimagetitle": "",
-      "pbicertifiedurl": ""
+      "certifiedstarimage": "../img/PowerBI/certifiedstarimage.png",
+      "pbicertifiedimage": "../img/PowerBI/pbicertifiedimage.png",
+      "starimagetitle": "Power BI Certified",
+      "pbicertifiedurl": "https://aka.ms/pbicertified"
     }
   },
   {
@@ -538,10 +538,10 @@
       "gif": "../img/PowerBI/Data_Insights.mp4",
       "content": "<p>Data Insights by MAQ Software allows users to view data in multiple formats and quickly narrow data results. Users can switch between horizontal bar, vertical bar, brick, or tabular formats. With Data Insights by MAQ Software, users can easily explore data, select specific data, and view selected data in the format that best fits individual business needs.</p><p>Key features:</p><ul><li>Display data in bar, brick, and tabular formats.</li><li>Custom text and background colors.</li><li>Tooltips with additional insights.</li></ul><p>Business Applications:</p><ul><li>Display multiple sales KPIs simultaneously.</li><li>Shift between multiple KPIs or reporting periods by changing the axis base.</li></ul>",
       "category": "comparison part change",
-      "certifiedstarimage": "",
-      "pbicertifiedimage": "",
-      "starimagetitle": "",
-      "pbicertifiedurl": ""
+      "certifiedstarimage": "../img/PowerBI/certifiedstarimage.png",
+      "pbicertifiedimage": "../img/PowerBI/pbicertifiedimage.png",
+      "starimagetitle": "Power BI Certified",
+      "pbicertifiedurl": "https://aka.ms/pbicertified"
     }
   },
   {
