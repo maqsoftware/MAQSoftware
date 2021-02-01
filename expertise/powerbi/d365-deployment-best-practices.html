@@ -84,7 +84,7 @@
                     <div class="col-md-10 offset-md-1">
                         <h3 class="h4">Dynamics 365 Deployment Best Practices Guide</h3>
                         <p><span><i class="ion ion-calendar"></i> September 14, 2020 </span><span><i class="ion ion-clock"></i> 5 Minutes to Read</span><p>
-                        <p class="lead">Microsoft Dynamics 365 is a leading line of enterprise resource planning (ERP) and customer relationship management (CRM) applications. With the platform’s high business impact, it is critical for enterprise leaders to follow best practices. In the past five years we have deployed Dynamics 365 over 100 times for our Fortune 500 customers. Here are the eight best practices we use to optimize every deployment</p>
+                        <p class="lead">Microsoft Dynamics 365 is a leading line of enterprise resource planning (ERP) and customer relationship management (CRM) applications. With the platform’s high business impact, it is critical for enterprise leaders to follow best practices. In the past five years, we have deployed Dynamics 365 over 100 times for our Fortune 500 customers. Here are the eight best practices we use to optimize every deployment.</p>
 
                         <!-- Social Media -->
                         <!-- Facebook Share -->
@@ -138,7 +138,7 @@
                             <li class="h4header">
                                 Include only required fields in data import files to avoid plugin/work
                                 <ul class="defaultBody">
-                                    <li>Including unnecessary fields in the data import file increases import time and may trigger workflows/plugins registered on those fields</li>
+                                    <li>Including unnecessary fields in the data import file increases import time and may trigger workflows/plugins registered on those fields.</li>
                                     <li>For example, to update a contact address, don’t include unnecessary fields like first and last name in the import file.</li>                                    
                                 </ul>
                             </li>
@@ -151,10 +151,10 @@
                             <li class="h4header">
                                 Enable admin mode on your target environment during deployment
                                 <ul class="defaultBody">
-                                    <li>Admin mode locks the environment for all users, meaning only system administrators can access the environment</li>
+                                    <li>Admin mode locks the environment for all users, meaning only system administrators can access the environment.</li>
                                     <li>Enabling admin mode during deployment ensures that data is not compromised by unplanned changes. If an error occurs, data can be restored to previous versions.</li>
                                 </ul><br />
-                                <p>Note: Admin mode cannot be enabled in the production environment. If you are not permitted to convert the environment to a sandbox, use the global notification method to add a form</p>
+                                <p>Note: Admin mode cannot be enabled in the production environment. If you are not permitted to convert the environment to a sandbox, use the global notification method to add a form.</p>
                                 
                             </li>
                             <li class="h4header">
@@ -172,16 +172,16 @@
                                 Back up the environment before deployment
                                 <ul class="defaultBody">
                                     <li>Backups ensure that the system can be restored to its pre-deployment state in case a deployment failure occurs.</li>
-                                    <li>Backups are faster than creating a copy of the environment</li>                                                                        
+                                    <li>Backups are faster than creating a copy of the environment.</li>                                                                        
                                 </ul><br />
                                 <p>Note: When an environment is restored to an earlier state, the Data Export Service profile needs to be re-established to synchronize the Dynamics 365 data to Azure SQL.</p>
                                 <img src="/img/PowerBI/d365/figure4.png" style="border:ridge" />
                                 <b>
-                                    <h6 class="figureTitle">Figure 4: Creating a backup from Power Platform admin center.</h6>
+                                    <h6 class="figureTitle">Figure 4: Creating a backup from Power Platform admin center</h6>
                                 </b>
                             </li>
                             <li class="h4header">
-                                Run a test in a cloned production environment prior to production deployment to identify compatibility issue
+                                Run a test in a cloned production environment prior to production deployment to identify compatibility issues
                                 <ul class="defaultBody">
                                     <li>Tests enable team members to prepare a mitigation plan. Issues can be proactively flagged and resolved, mitigating end-user impact.</li>
                                 </ul>
@@ -195,8 +195,8 @@
                         <h3>References</h3>
                         <p>We compiled our best practices from a mix of experience and research. For a detailed look at some of the points we mention above, we encourage you to review the following documents:</p>
                         <ul class="defaultBody">
-                            <li><a href="http://crmkrm.blogspot.com/2019/01/copying-records-with-guid-in-microsoft.html">Copying records with GUID</a></li>
-                            <li><a href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/invoke-custom-actions-workflow-dialog">Invoke custom actions from a workflow</a></li>                            
+                            <li><a href="http://crmkrm.blogspot.com/2019/01/copying-records-with-guid-in-microsoft.html">Copying records with GUID</a> – Kylie Kiser, published January 3, 2019</li>
+                            <li><a href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/invoke-custom-actions-workflow-dialog">Invoke custom actions from a workflow</a> – Microsoft, December 4, 2018</li>                            
                         </ul>
                     </div>
                 </div>
