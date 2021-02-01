@@ -5879,6 +5879,15 @@ li.h4header {
     text-decoration: underline;
 }
 
+.underlined-red {
+    text-decoration: underline;
+    text-decoration-color: #BE1D23;
+}
+
+a.underlined-red:hover {
+    color: #721115 !important;
+}
+
 .blog-post .post-header h5 {
     font-size: 15px;
     letter-spacing: 2px;

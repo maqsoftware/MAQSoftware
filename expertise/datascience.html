@@ -40,7 +40,9 @@
     <link href="/css/jquery-ui.css?v=20170822" rel="stylesheet" type="text/css" />
     <link href="/css/plugin/owl.carousel.2.0.0-beta.3.min.css" rel="stylesheet" />
     <link href="/css/bot.css?v=20190412" rel="stylesheet" />
-
+    <!--<style>
+    a.underlined-red:hover {color: yellow !important;}
+    </style>-->
 
 </head>
 <body>    
@@ -123,7 +125,7 @@
                                     <div class="col-md-10">
                                         <h5>Forecast annual revenue</h5>
                                         <p>Our forecast model analyzes the impact of global sales deals on annual revenue</p>
-                                        <a class="underlined" href="https://blog.maqsoftware.com/2020/01/we-built-supervised-machine-learning.html"><span style="color:#BE1D23">Learn more about our forecast model</span></a>
+                                        <a class="underlined-red" style="color:#BE1D23" href="https://blog.maqsoftware.com/2020/01/we-built-supervised-machine-learning.html">Learn more about our forecast model</a>
                                     </div>
                                 </div>
                             </div>
@@ -135,7 +137,7 @@
                                     <div class="col-md-10">
                                         <h5>Eliminate support ticket backlog</h5>
                                         <p>Our prioritization model enables our client to respond to 15 million support tickets a month</p>
-                                        <a class="underlined" href="artificialintelligence/susan">Learn more about our prioritization model</a>
+                                        <a class="underlined-red" style="color:#BE1D23" href="artificialintelligence/susan">Learn more about our prioritization model</a>
                                     </div>
                                 </div>
                             </div>
@@ -147,7 +149,7 @@
                                     <div class="col-md-10">
                                         <h5>Analyze event feedback</h5>
                                         <p>Our sentiment analysis reduces the time organizers spend evaluating event feedback from hours to seconds</p>
-                                        <a class="underlined" href="https://blog.maqsoftware.com/2018/08/case-study-sentiment-analysis-helps.html">Learn more about our sentiment analysis tool</a>
+                                        <a class="underlined-red" style="color:#BE1D23" href="https://blog.maqsoftware.com/2018/08/case-study-sentiment-analysis-helps.html">Learn more about our sentiment analysis tool</a>
                                     </div>
                                 </div>
                             </div>
@@ -159,7 +161,7 @@
                                     <div class="col-md-10">
                                         <h5>Engage your audience</h5>
                                         <p>Our emotion analyzer uses video to evaluate real-time audience sentiment from facial expressions</p>
-                                        <a class="underlined" href="https://blog.maqsoftware.com/2018/07/case-study-ai-video-analysis-evaluates.html">Learn more about our emotion analyzer</a>
+                                        <a class="underlined-red" style="color:#BE1D23" href="https://blog.maqsoftware.com/2018/07/case-study-ai-video-analysis-evaluates.html">Learn more about our emotion analyzer</a>
                                     </div>
                                 </div>
                             </div>
@@ -173,7 +175,7 @@
                                     <div class="col-md-10">
                                         <h5>Boost sales by targeting high-impact customers</h5>
                                         <p>Our recommendation model identifies prospective customers with the highest sales potential</p>
-                                        <a class="underlined" href="https://blog.maqsoftware.com/2018/08/case-study-using-ai-to-identify.html">Learn more about our recommendation model</a>
+                                        <a class="underlined-red" style="color:#BE1D23" href="https://blog.maqsoftware.com/2018/08/case-study-using-ai-to-identify.html">Learn more about our recommendation model</a>
                                     </div>
                                 </div>
                             </div>
@@ -185,7 +187,7 @@
                                     <div class="col-md-10">
                                         <h5>Respond quickly to customers</h5>
                                         <p>We created a chatbot that can answer over 5,000 question types with 90% accuracy</p>
-                                        <a class="underlined" href="https://blog.maqsoftware.com/2019/04/millions-of-arizona-citizens-receive.html">Learn more about our chatbot</a>
+                                        <a class="underlined-red" style="color:#BE1D23" href="https://blog.maqsoftware.com/2019/04/millions-of-arizona-citizens-receive.html">Learn more about our chatbot</a>
                                     </div>
                                 </div>
                             </div>
@@ -197,7 +199,7 @@
                                     <div class="col-md-10">
                                         <h5>Resolve support tickets faster</h5>
                                         <p>Our anomaly detection model effectively anticipates support and staffing needs</p>
-                                        <a class="underlined" href="https://blog.maqsoftware.com/2020/10/support-ticket-volume-detection.html">Learn more about our anomaly detection model</a>
+                                        <a class="underlined-red" style="color:#BE1D23" href="https://blog.maqsoftware.com/2020/10/support-ticket-volume-detection.html">Learn more about our anomaly detection model</a>
                                     </div>
                                 </div>
                             </div>
@@ -209,14 +211,14 @@
                                     <div class="col-md-10">
                                         <h5>Find trends in customer reviews</h5>
                                         <p>Our text analytics engine converts unstructured text into meaningful insights</p>
-                                        <a class="underlined" href="artificialintelligence/textanalyticstool">Try out our Text Analytics Engine</a>
+                                        <a class="underlined-red" style="color:#BE1D23" href="artificialintelligence/textanalyticstool">Try out our Text Analytics Engine</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <h6 class="text-center ptb-40 ptb-sm-40">
-                        <!--<a class="underlined">--><span style="color:#BE1D23">Ask us about our AI/ML capabilities <i class="fa fa-long-arrow-right"></i></span><!--</a>-->
+                        <a class="underlined-red" href="mailto:sales@MAQSoftware.com?Subject=Data Science Inquiry – MAQ Software​&body=Hello,%0D%0DI’m interested in learning more about your AI capabilities.%0D%0DName:%0DCompany:%0DContact:%0D" style="color:#BE1D23">Ask us about our AI/ML capabilities <i class="fa fa-long-arrow-right"></i></a>
                     </h6>
                 </div>
             </section>
@@ -593,6 +595,6 @@
     loadPlugins();
     loadBlogsLatest3('Artificial Intelligence');
     function setPrevPage() {
-        sessionStorage.setItem('PrevPage', 'Artificial Intelligence');
+        sessionStorage.setItem('PrevPage', 'Data Science');
     }
 </script>
