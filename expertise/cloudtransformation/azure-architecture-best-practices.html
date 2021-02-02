@@ -122,21 +122,26 @@
                               
                         </p>
                         <h3> For General Use</h3>
-                        <ol class="  pb-10">
-                            <li class="h4header"> To reduce Azure costs, turn off or scale down virtual machines (VMs) at set times
+                        <ol class="pb-10">
+                            <li class="h4header">
+                                To reduce Azure costs, turn off or scale down virtual machines (VMs) at set times
                                 <p class=defaultBody>Switch off resources during non-usage periods or scale down VMs during off-peak hours to reduce overall subscription costs. There are several ways to schedule auto-shutdowns for Azure VMs. When provisioning a new VM, Azure offers settings for scheduled shutdown time according to time zone.</p>
                                 <p class=defaultBody>When administering multiple VMs, runbooks are ideal for scheduling automatic shutdown. Runbooks in Service Management Automation and Microsoft Azure Automation are <a class="underlined" href="https://docs.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell?view=powershell-6">Windows PowerShell</a> workflows or PowerShell scripts. </p>
                                 <p class=defaultBody>In DevOps mode, we maintain four parallel environments: Development, Testing, UAT, and Production. We use ARO Toolbox and runbooks to automatically shut down all non-production environments at the end of business hours. The environments automatically start again before business hours resume. When a VM is shut down, Azure does not charge compute or network fees for the stopped VM. Azure does charge a small fee for storage. Depending on usage patterns, you can reduce your Azure subscription costs by 20% to 30% by turning VMs off outside of business hours. </p>
                                 <p class=defaultBody>This best practice also applies to any Azure resource used for compute, including Azure Databricks, Azure Synapse, Azure Data Warehouse, Azure SQL database, Azure App Service, and Azure Cloud Service. </p>
                             </li>
 
-                            <li class="h4header"> Use automated tools to monitor network resource configurations and changes
+                            <li class="h4header">
+                                Use automated tools to monitor network resource configurations and changes
                                 <p class=defaultBody>Use <a href="https://docs.microsoft.com/en-us/azure/azure-monitor/platform/activity-log#:~:text=The%20Activity%20log%20is%20a,entries%20with%20PowerShell%20and%20CLI." target="_blank">Azure Activity Log</a> to monitor network resource configurations. You can also use Azure Activity Log to detect changes to network settings and resources related to Azure Functions deployments.</p>
                                 <p class=defaultBody>Create alerts in Azure Monitor that highlight changes to critical network settings or resources. With alerts, you can maintain a 360 degree view of all your resources and identify easy optimization opportunities. </p>
-                                
+
                             </li>
-                            <h3>When using Azure SQL Data Warehouse (ADW)</h3>
-                            <li class="h4header"> To optimize query execution time in Azure SQL Data Warehouse, use resource classes
+                        </ol>
+                        <h3>When using Azure SQL Data Warehouse (ADW)</h3>
+                        <ol class="pb-10">
+                            <li class="h4header">
+                                To optimize query execution time in Azure SQL Data Warehouse, use resource classes
                                 <p class=defaultBody>Resource classes limit the number of queries that run at the same time (concurrency), and the compute resources assigned to each query (memory). Select the resource class that best suits your needs. Smaller resource classes reduce the maximum memory per query but increase concurrency. Larger resource classes increase the maximum memory per query but reduce concurrency.</p>
                                 <p class=defaultBody>There are two types of resource classes:</p>
                                 <ul class=defaultBody>
@@ -145,15 +150,17 @@
                                 </ul>
                                 <p class=defaultBody>To summarize: use static resource classes for fixed data sets and use dynamic resource classes for growing data sets. </p>
                             </li>
-                            <h3>When using Azure Analysis Services (AAS)</h3>
-                            <li class="h4header"> To process large volumes of data, dynamically scale Azure Analysis Services 
+                        </ol>
+                        <h3>When using Azure Analysis Services (AAS)</h3>
+                        <ol class="pb-10">
+                            <li class="h4header">
+                                To process large volumes of data, dynamically scale Azure Analysis Services
                                 <p class=defaultBody>To improve processing performance, schedule an automatic scale-up of AAS through a runbook immediately before processing large volumes of data. To optimize costs, schedule a scale-down immediately after processing. </p>
                             </li>
-                            <li class="h4header"> When processing large amounts of data with Azure Analysis Services, use partitioning
+                            <li class="h4header">
+                                When processing large amounts of data with Azure Analysis Services, use partitioning
                                 <p class=defaultBody>Use <a href="https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview?tabs=csharp" target="_blank">Azure Durable Functions</a> to process partitions in AAS. Partitioning reduces your data latency and processing time. By dividing your large tables into small, logical partition blocks, you enable the system to process partitions independently. For example, partition large enterprise data such as global support and sales information.</p>
                             </li>
-                 
-
                         </ol>
                     </div>
                 </div>
