@@ -5879,13 +5879,9 @@ li.h4header {
     text-decoration: underline;
 }
 
-.underlined-red {
+a.underlined-red:hover {
     text-decoration: underline;
     text-decoration-color: #BE1D23;
-}
-
-a.underlined-red:hover {
-    color: #721115 !important;
 }
 
 .blog-post .post-header h5 {
