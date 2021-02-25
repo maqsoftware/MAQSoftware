@@ -139,19 +139,19 @@
                         </div>
                         <p class="pt-5px">Want to get started? Use the following guide to gain quick insights into your data.</p>
                         <ol class="pb-10">
+                            <li>Open the Text Analytics Engine by clicking <a href="https://textanalytics.maqsoftware.com/#/"><u>HERE</u></a></li>                            
+                            <li>Sign yourself into the portal by providing the necessary consent and clicking “I Agree”</li>
                             <content>
                                 <div class="item-box caseImage">
-                                    <a class="cbox-gallary1" href="/img/Graphics/Text Analytics Engine - Welcome Page.PNG" title="Figure 1: Get Started Page">
+                                    <a class="cbox-gallary1" href="/img/Graphics/Text Analytics Engine - Welcome Page.PNG" title="Figure 1: Login page">
                                         <img alt="Chart" src="/img/Graphics/Text Analytics Engine - Welcome Page.PNG" class="item-container ">
                                     </a>
                                 </div>
                                 <b>
-                                    <h6 class="figureTitle">Figure 1: Get Started Page</h6>
+                                    <h6 class="figureTitle">Figure 1: Login Page</h6>
                                 </b>
                             </content>
-                            <li>Open the Text Analytics Engine by clicking <a href="https://textanalytics.maqsoftware.com/#/"><u>here</u></a></li>
-                            <li>Sign yourself into the portal by providing the necessary consent and clicking “I Agree”</li>
-                            <li>Click “Get Started” – you will be directed to the Data Connect page</li>
+                            <li>Once consent is provided, you will be redirected to the application’s Data Connect page </li>                            
                             <content>
                                 <div class="item-box caseImage ">
                                     <a class="cbox-gallary1" href="/img/Graphics/Text Analytics Engine - Data Entry Page.PNG" title="Figure 2: Data Connect page">
@@ -162,82 +162,78 @@
                                     <h6 class="figureTitle">Figure 2: Data Connect page</h6>
                                 </b>
                             </content>
-                            <li>
-                                On the Data Connect page, choose any of the following text input options:
-                                <ul>
-                                    <li>Upload Your Data: upload and analyze your own text (the engine supports xlsx and csv)</li>
-                                    <li>Use Sample Data: for a quick look at how the tool works, use one of our sample datasets</li>
-                                    <li>Enter Your Text: type or copy your text directly into the text box (use the “Enter” key as a delimiter)</li>
-                                </ul>
-                            </li>
+                            <li>On Data Connect, you can provide text input using any of the following options: 
+                            <ul>
+                                <li>Click “Use Sample Dataset” (in-built)</li>
+                                <li>Upload a file (the engine supports xlsx and csv)</li>
+                                <li>Type the comments directly into the text box (use the Enter key as a delimiter)</li>
+                            </ul>
+                            </li>           
                             <content>
+                                <p><br />Note: The Dataset Category dropdown (bottom-left, below the textbox) determines the visualizations shown in topic modeling. If the dataset comes from any event related data, the visualizations will be different from a dataset that falls under “Other Data”. Select the option most relevant to your data.</p>
+                            </content>                
+                            <li>Once you finish providing all the necessary information, you can generate insights by clicking “Generate Insights”. You will be taken to the Insights page </li>                            
+                              <content>
                                 <div class="item-box caseImage ">
-                                    <a class="cbox-gallary1" href="/img/Graphics/Text Analytics Engine - Data Selection.png" title="Figure 3: Data Selection page">
-                                        <img alt="Chart" src="/img/Graphics/Text Analytics Engine - Data Selection.PNG" class="item-container ">
-                                    </a>
-                                </div>
-                                <b>
-                                    <h6 class="figureTitle">Figure 3: Data Selection page</h6>
-                                </b>
-                            </content>
-                            <li>
-                                Once you have chosen your text input, you will be directed to the Data Selection page.
-                                <ul>
-                                    <li>If you input your own data, select the data category from the dropdown. If your data is event-related, the visualizations will be different than the visualizations for “Other Data”. Select the option most relevant to your data.</li>
-                                    <li>Next, select the column you want to analyze (if using a spreadsheet with multiple columns) and enter your desired number of topics in the left-hand dropdown.</li>
-                                    <li>If you chose a sample dataset, the left-hand dropdowns are pre-selected.</li>
-                                    <li>When you’re ready, click “Generate Insights” – you will then be directed to the Data Overview page. Depending on how large your dataset is, this may take a few minutes.</li>
-                                </ul>
-                            </li>
-                            <content>
-                                <div class="item-box caseImage ">
-                                    <a class="cbox-gallary1" href="/img/Graphics/Text Analytics Engine - Sample Data.PNG" title="Figure 4: Data Overview Page">
+                                    <a class="cbox-gallary1" href="/img/Graphics/Text Analytics Engine - Sample Data.PNG" title="Figure 3: Data Overview page">
                                         <img alt="Chart" src="/img/Graphics/Text Analytics Engine - Sample Data.PNG" class="item-container ">
                                     </a>
                                 </div>
                                 <b>
-                                    <h6 class="figureTitle">Figure 4: Data Overview Page</h6>
+                                    <h6 class="figureTitle">Figure 3: Data Overview page</h6>
                                 </b>
                             </content>
-                            <li>Once your data has loaded, you can explore key insights on the Data Overview page. From there, you can drill down into the Topic Modeling, Sentiment Analysis, and Developer Zone tabs for more specific data breakdowns. For more information on key points and visualizations, click the information icon in the top right-hand corner of each visualization.</li>
+                            <li>On the Insights page, you will have access to the following visualizations: 
+                            <ul>
+                                <li>Number of Responses: the number of line items provided in the file or entered as text </li>
+                                <li>Number of Topics: the number of topics associated with the data or the number of topics selected by the user </li>
+                                <li>Average Contribution Score: the average of all the contribution scores of the topics </li>
+                                <li>Topic Strength: the percentage importance of the topic in the data </li>
+                                <li>Topics: all the topics involved</li>
+                                <li>Common Categories: the number of comments tagged per topic </li>
+                                <li>Bigram-Trigram Topics under Categories: the different two or three-word topics, along with the probability score of their being used</li>
+                                <li>Word Cloud: the most used words associated with the topic(s) </li>
+                                <li>Strongest Topics: based on the average contribution score of the topic</li>
+                                <li>Word Count and Importance of Topic Keywords: includes keyword weightage</li>
+                                <li>Topic Distribution over Response: topic distribution over the uploaded text data </li>
+                                <li>Feedback Comments: the most prominent topic per comment along with its probability score</li>
+                                <li>All Keywords under Category: all the keywords under the selected topics</li>
+                                <content>If you chose the “Other Data” option, you will be provided with additional visualizations:</content>
+                                <li>Topic Keyword Distribution Chart: the keyword distribution (this lets you analyze them in order to interpret the topics)</li>
+                                <li>Best Response to Describe Topic: the text that has the highest correlation with the selected topic</li>
+                            </ul>
+                            </li>
+                            <li>The tool also gives you the option to modify topics. Go to the “Looking For Something Else” section. There are two ways to create a new topic:
+                            <ol>
+                                <li>Create Topic: <content><br />You can add topics of your choice by providing the keywords and the topic associated</content></li>
+                                <content>
+                                    <div class="item-box caseImage ">
+                                        <a class="cbox-gallary1" href="/img/Graphics/Text Analytics Engine - Create Topic.PNG" title="Figure 4: Create Topic allows you to create custom topic-keyword mapping">
+                                            <img alt="Chart" src="/img/Graphics/Text Analytics Engine - Create Topic.PNG" class="item-container ">
+                                        </a>
+                                    </div>
+                                    <b>
+                                        <h6 class="figureTitle">Figure 4: Create Topic allows you to create custom topic-keyword mapping</h6>
+                                    </b>
+                                </content>
+
+                                <li>Filter Topic: <content><br />You can choose or eliminate the topics shown to suit your requirements</content></li>
+                                <content>
+                                    <div class="item-box caseImage ">
+                                        <a class="cbox-gallary1" href="/img/Graphics/Text Analytics Engine - Filter Topic.PNG" title="Figure 5: Filter Topic provides you the topic filtering capability ">
+                                            <img alt="Chart" src="/img/Graphics/Text Analytics Engine - Filter Topic.PNG" class="item-container ">
+                                        </a>
+                                    </div>
+                                    <b>
+                                        <h6 class="figureTitle">Figure 5: Filter Topic provides you the topic filtering capability </h6>
+                                    </b>
+                                </content>
+                            </ol>
+                            </li>
+                            <li>Once you finish, re-run the model. You will be able to see the changes in the visualizations</li>
+                            <li>To download the insights generated into a shareable PDF, click the Download button</li>
                         </ol>
-                        <h3>How to Modify Topics</h3>
-                        <p>
-                            A topic is the subject of text content. For example, the following comments would all fall under the topic “customer service”:
-                        </p>
-                        <ul>
-                            <li>“MAQ Software customer service is fantastic!”</li>
-                            <li>“An MAQ Software support rep reached out right away.”</li>
-                            <li>“I am very happy with the quality of customer service.”</li>
-                        </ul>
-                        <ol>
-                            <content>
-                                <div class="item-box caseImage ">
-                                    <a class="cbox-gallary1" href="/img/Graphics/Text Analytics Engine - Rename Topics.PNG" title="Figure 5: Rename Topics">
-                                        <img alt="Chart" src="/img/Graphics/Text Analytics Engine - Rename Topics.PNG" class="item-container ">
-                                    </a>
-                                </div>
-                                <b>
-                                    <h6 class="figureTitle">Figure 5: Rename Topics</h6>
-                                </b>
-                            </content>
-                            <li>If using “Other Data”, you can rename topics by navigating to the Topic Modeling page. Scroll to the bottom of the page and click “Rename Topic”. Note: If you rename topics and re-run the model, you will no longer be able to rename topics. Instead, you can create a new topic using the same steps. If using “Event Data”, you will only be able to create topics.</li>
-                            <content>
-                                <div class="item-box caseImage ">
-                                    <a class="cbox-gallary1" href="/img/Graphics/Text Analytics Engine - Filter Topic.PNG" title="Figure 6: Topic Modeling Page - Filter Topic">
-                                        <img alt="Chart" src="/img/Graphics/Text Analytics Engine - Filter Topic.PNG" class="item-container ">
-                                    </a>
-                                </div>
-                                <b>
-                                    <h6 class="figureTitle">Figure 6: Topic Modeling Page - Filter Topic</h6>
-                                </b>
-                            </content>
-                            <li>To filter topics, click “Filter Topic” and remove the undesired topics.</li>
-                            <li>When you’re happy with your topic modifications, re-run the model for updated insights.</li>
-                        </ol>
-                        <p>
-                            To share your insights, click “Download Insights” in the top right-hand corner of the dashboard for a PDF report of the page.
-                        </p>
+                            
                         <div class="spacer-15"></div> 
                         <div class="row pb-30">
                             <div class="col-md-12 text-center">
@@ -245,15 +241,15 @@
                             </div>
                         </div>
 
-                        <h3>Customization & Pricing</h3>
+                        <h3>Tool Customization & Pricing</h3>
                         <p>
-                            A free version of Text Analytics Engine is available <a href ="https://textanalytics.maqsoftware.com/#/">here</a>. To discuss customization and prices, please contact our sales team at<a href="mailto:Sales@MAQSoftware.com">
+                            A free version of the tool is available <a href ="https://textanalytics.maqsoftware.com/#/">here</a>. To discuss customization and prices, please contact our sales team at<a href="mailto:Sales@MAQSoftware.com">
                                 <span class="__cf_email__" data-cfemail="Sales@MAQSoftware.com">Sales@MAQSoftware.com</span></a>
                         </p>
                         <div class="spacer-15"></div> 
                         <h3>Feedback</h3>
                         <p>
-                            We value your input. If you have questions or would like to provide feedback on your experience with Text Analytics Engine, please contact us at<a href="mailto:Support@MAQSoftware.com">
+                            To get help on a specific question or problem please contact us at<a href="mailto:Support@MAQSoftware.com">
                                 <span class="__cf_email__" data-cfemail="Support@MAQSoftware.com">Support@MAQSoftware.com</span></a>
                         </p>
                     </div>
