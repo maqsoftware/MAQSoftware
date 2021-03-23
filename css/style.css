@@ -2697,7 +2697,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 /*-------------------------------------------------------------------------------------------*/
 .features-box-left, .features-box-right {
     position: relative;
-    display: inline-block;
+    /*display: inline-block;*/
     margin-bottom: 20px;
     margin-top: 5px;
 }
