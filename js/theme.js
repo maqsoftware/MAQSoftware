@@ -720,6 +720,7 @@ function RenderMartech() {
             $buttonGroup.find("[data-filter=" + '"' + $blogcategory.getAttribute('data-filter') + '"' + "]").addClass('active tagSelected');
             filterValue = $blogcategory.getAttribute('data-filter');
             $('.container-grid').isotope({ filter: filterValue });
+            sessionStorage.removeItem('PrevPage')
         }
     }
     
