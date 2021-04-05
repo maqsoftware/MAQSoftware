@@ -80,6 +80,7 @@
                             <li><a class="blogcategories" data-filter=".infographic">Infographic</a></li>
                             <li><a class="blogcategories" data-filter=".updates">Updates</a></li>
                             <li><a class="blogcategories" data-filter=".migrationstrategy">Migration Strategy</a></li>
+                            <li><a class="blogcategories" data-filter=".productguides">Product Guides</a></li>
                         </ul>
                     </div>
                 </div>
@@ -112,20 +113,6 @@
                             <div class="row container-grid Loading" id="LoadPageCaseStudy"></div>
                         </div>
                         <!-- End Post Item -->
-                        <!-- Sidebar -->
-                        <!--<div class="col-lg-3 col-md-3 mt-25 mt-sm-30">
-                            <div class="sidebar-widget">
-                                <h5>Popular Tags</h5>
-                                <hr>
-                                <ul class="widget-tag blogcategories-filter ">
-                                    <li><a class="blogcategories" data-filter=".howto">How To</a></li>
-                                    <li><a class="blogcategories" data-filter=".infographic">Infographic</a></li>
-                                    <li><a class="blogcategories" data-filter=".updates">Updates</a></li>
-                                    <li><a class="blogcategories" data-filter=".migrationstrategy">Migration Strategy</a></li>
-                                </ul>
-                            </div>
-                        </div>-->
-                        <!-- End Sidebar -->
                     </div>
                 </div>
             </section>
@@ -227,5 +214,11 @@
 
 <script>
     loadPlugins();
-    blogsConstructor();
+    //blogsConstructor();
+    document.addEventListener('readystatechange', event => {
+        // When window loaded ( external resources are loaded too- `css`,`src`, etc...) 
+        if (event.target.readyState === "complete") {
+            defaultCategory();
+        }
+    });
 </script>
