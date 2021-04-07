@@ -1604,7 +1604,7 @@ form label.error {
         width: 100%;
     }
 
-    .header .logo a {
+    .header .logo .logo2 a {
         margin-top: 13px;
         margin-bottom: 16px;
         width: 135px;
@@ -1625,7 +1625,13 @@ form label.error {
     display: inline-block;
 }
 
-    .logo a {
+.logo2 {
+    float: left;
+    text-align: left;
+    display: block;
+}
+
+    .logo .logo2 a {
         width: 145px;
         display: block;
         margin-top: 9px;
@@ -1637,7 +1643,7 @@ form label.error {
         position: relative;
     }
 
-        .logo a img {
+        .logo .logo2 a img {
             width: 100%;
             position: absolute;
             top: 0;
