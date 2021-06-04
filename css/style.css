@@ -1589,6 +1589,25 @@ form label.error {
         .header.header-dark.header-prepare .nav-menu ul.nav-menu-inner > li > a:hover {
             color: #bb141a;
         }
+
+        .case-study-tag-header{
+        float:left; 
+        background-color:#3F6986;
+        color: white;
+        padding-top:7px;
+        padding-bottom:7px;
+        padding-left:12px;
+        padding-right:12px;
+        margin-top:4%;
+    }
+    .case-study-heading{
+        float:left;
+        clear:left; 
+        padding: 5%;
+    }
+    .case-study-header-image{
+        padding: 0px !important;
+    }
 }
 
 @media all and (max-width: 1024px) {
@@ -5689,6 +5708,16 @@ ul.nav-tabs {
 }
 
 @media (max-width: 545px) {
+    .case-study-get-in-touch{
+        text-align: -webkit-center;
+    }
+    .case-study-kpi1 {
+        float: left;
+        margin-right: 50px;
+    }
+    #blog{
+        padding-bottom: 0px !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -5697,6 +5726,11 @@ ul.nav-tabs {
 @media (max-width: 388px) {
 }
 
+@media (max-width: 768px){
+.case-study-header-image{
+        display:none;
+    }
+}
 
 .fa-facebook {
     color: #3b5998;
@@ -5914,6 +5948,28 @@ a.underlined-red:hover {
     margin-bottom:10px;
 }
 
+.case-study-tag-header{
+    float:left; 
+    background-color:#3F6986;
+    color: white;
+    padding-top:7px;
+    padding-bottom:7px;
+    padding-left:12px;
+    padding-right:12px;
+    margin-top:4%;
+}
+
+.case-study-heading{
+    float:left;
+    clear:left; 
+    padding: 5%;
+}
+
+.case-study-header-image{
+    padding: 0px !important;
+
+}
+
 
 .social-media-share .fb-share-button {
     margin: 0 4px 2px 0;
@@ -6067,6 +6123,21 @@ a.underlined-red:hover {
     #Addresses > .row:first-child > div:first-child{
         padding-right: 0;
         padding-left: 0;  
+    }
+    .case-study-tag-header{
+        float:left; 
+        background-color:#3F6986;
+        color: white;
+        padding-top:7px;
+        padding-bottom:7px;
+        padding-left:12px;
+        padding-right:12px;
+        margin-top:4%;
+    }
+    .case-study-heading{
+        float:left;
+        clear:left; 
+        padding: 5%;
     }
 }
 
