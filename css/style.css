@@ -1597,8 +1597,7 @@ form label.error {
         padding-top:7px;
         padding-bottom:7px;
         padding-left:12px;
-        padding-right:12px;
-        margin-top:4%;
+        padding-right:12px;        
     }
     .case-study-heading{
         float:left;
@@ -3186,6 +3185,15 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 .wrapper {
     position: relative;
     width: 100%;
+}
+
+.inner-intro-case-study {
+    padding-top: 64px;
+    background-color: #f7f7f7;
+    height: 60vh;
+    min-height: 250px;
+    display: block;
+    position: relative;
 }
 
 .inner-intro {
@@ -5715,6 +5723,14 @@ ul.nav-tabs {
         float: left;
         margin-right: 50px;
     }
+    .inner-intro-case-study {
+    padding-top: 64px;
+    background-color: #f7f7f7;
+    height: 60vh;
+    min-height: 250px;
+    display: block;
+    position: relative;
+    }
     #blog{
         padding-bottom: 0px !important;
     }
@@ -5730,6 +5746,14 @@ ul.nav-tabs {
 .case-study-header-image{
         display:none;
     }
+.inner-intro-case-study {
+    padding-top: 64px;
+    background-color: #f7f7f7;
+    height: 45vh;
+    min-height: 250px;
+    display: block;
+    position: relative;
+}
 }
 
 .fa-facebook {
@@ -5956,7 +5980,7 @@ a.underlined-red:hover {
     padding-bottom:7px;
     padding-left:12px;
     padding-right:12px;
-    margin-top:4%;
+    
 }
 
 .case-study-heading{
@@ -6132,7 +6156,6 @@ a.underlined-red:hover {
         padding-bottom:7px;
         padding-left:12px;
         padding-right:12px;
-        margin-top:4%;
     }
     .case-study-heading{
         float:left;
