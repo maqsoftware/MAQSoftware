@@ -3187,6 +3187,11 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
     width: 100%;
 }
 
+.case-study-summary{
+   /* font-size: 27pt;
+    font-weight: bold;*/
+}
+
 .inner-intro-case-study {
     padding-top: 64px;
     background-color: #f7f7f7;
@@ -3195,6 +3200,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
     display: block;
     position: relative;
 }
+
 
 .inner-intro {
     background-color: #f7f7f7;
@@ -3745,6 +3751,10 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 
     .fullwidth-slider .item {
         height: 425px !important;
+    }
+
+    .inner-intro-case-study{
+        height: 60vh;
     }
 }
 
@@ -5673,10 +5683,28 @@ ul.nav-tabs {
 
 @media (max-width:1024px) {
 
+   .inner-intro-case-study {
+        padding-top: 64px;
+        background-color: #f7f7f7;
+        height: 30vh;
+        min-height: 250px;
+        display: block;
+        position: relative;
+}
 
     .RecognitionImage img {
         width: auto;
     }
+
+    
+.footer {
+    overflow-wrap: break-word;
+    /*background-color: #f7f7f7;
+    color: Black;
+    position: relative;
+    width: 100%;
+    display: block;*/
+}
 }
 
 @media (max-width: 991px) {
