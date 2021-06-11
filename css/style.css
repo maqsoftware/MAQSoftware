@@ -474,6 +474,20 @@ button {
         background: #D3D3D3;
     }
 
+.btn-black-try-case-study {
+    color: #fff;
+    background: #323232;
+    border: none;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.btn-black-try-case-study:hover {
+        color: #fff;
+        /*background: #323232;*/
+        background: #D3D3D3;
+    }
+
 .try_export_container {
     display: flex;
     justify-content: flex-start;
@@ -3740,13 +3754,6 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
     }
 }
 
-/*@media (max-width: 360px) {
-
-    .fullwidth-slider .item {
-        height: 265px !important;
-    }
-}*/
-
 @media (max-width: 320px) {
 
     .fullwidth-slider .item {
@@ -3755,6 +3762,16 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 
     .inner-intro-case-study{
         height: 60vh;
+    }
+    
+    .case-study-tag-header{
+        display: none;
+    }
+
+    .case-study-heading {
+        float: left;
+        clear: left;
+        padding: 1% !important;
     }
 }
 
@@ -5683,14 +5700,14 @@ ul.nav-tabs {
 
 @media (max-width:1024px) {
 
-   .inner-intro-case-study {
+    .inner-intro-case-study {
         padding-top: 64px;
         background-color: #f7f7f7;
-        height: 30vh;
+        height: 26vh;
         min-height: 250px;
         display: block;
         position: relative;
-}
+    }
 
     .RecognitionImage img {
         width: auto;
@@ -5743,6 +5760,23 @@ ul.nav-tabs {
     }
 }
 
+@media (max-width: 480px) {
+}
+
+@media (max-width: 388px) {
+}
+
+@media (max-width: 768px){
+.inner-intro-case-study {
+    padding-top: 64px;
+    background-color: #f7f7f7;
+    height: 28vh;
+    min-height: 250px;
+    display: block;
+    position: relative;
+}
+}
+
 @media (max-width: 545px) {
     .case-study-get-in-touch{
         text-align: -webkit-center;
@@ -5754,7 +5788,7 @@ ul.nav-tabs {
     .inner-intro-case-study {
     padding-top: 64px;
     background-color: #f7f7f7;
-    height: 60vh;
+    height: 40vh;
     min-height: 250px;
     display: block;
     position: relative;
@@ -5762,26 +5796,33 @@ ul.nav-tabs {
     #blog{
         padding-bottom: 0px !important;
     }
-}
-
-@media (max-width: 480px) {
-}
-
-@media (max-width: 388px) {
-}
-
-@media (max-width: 768px){
-.case-study-header-image{
+    .case-study-header-image{
         display:none;
     }
-.inner-intro-case-study {
+}
+
+@media (min-width: 360px) and (max-width: 400px) {
+
+    .inner-intro-case-study {
     padding-top: 64px;
     background-color: #f7f7f7;
     height: 45vh;
     min-height: 250px;
     display: block;
     position: relative;
+    }
 }
+
+@media (width: 375px) and (min-height: 800px) {
+
+    .inner-intro-case-study {
+    padding-top: 64px;
+    background-color: #f7f7f7;
+    height: 40vh;
+    min-height: 250px;
+    display: block;
+    position: relative;
+    }
 }
 
 .fa-facebook {
