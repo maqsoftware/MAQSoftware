@@ -6063,6 +6063,12 @@ a.underlined-red:hover {
 
 }
 
+.case-study-summary-ruler{
+    background-color:#3F6986;
+    height:5pt;
+    width:70%;
+    margin-left: 0px;
+}
 
 .social-media-share .fb-share-button {
     margin: 0 4px 2px 0;
