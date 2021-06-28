@@ -563,7 +563,7 @@
       "name": "Data Insights",
       "title": "Data Insights ",
       "id": "DataInsights",
-      "description": "Gantt chart with a grid that shows task details and key performance indicators.",
+      "description": "View data in multiple formats to quickly access insights.",
       "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381454?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081271-Data-Insights",
       "img": "../img/PowerBI/DataInsights.jpg",
