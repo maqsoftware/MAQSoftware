@@ -588,10 +588,10 @@
       "gif": "../img/PowerBI/Dot_Plot.mp4",
       "content": "<p>Dot Plot by MAQ Software displays data points (bubbles), plotted on an X/Y axis, and distributed over a desired set of values. The size of the bubble represents the magnitude, and the color represents the category.Users can view data through multiple parent and child sub-categories, a significant improvement over other dot plot diagrams.</p><p>Dot Plot by MAQ Software is useful for displaying multi-dimensional sales data in one visual, such as sales quantity per year over various regions.</p><p>Key features:</p><ul><li>Support for selection and multi-selection with partial highlighting.</li><li>Display distinct bubble color for different categories.</li><li>Modify bubble size and bubble animation on click.</li></ul>",
       "category": "comparison distribution",
-      "certifiedstarimage": "",
-      "pbicertifiedimage": "",
-      "starimagetitle": "",
-      "pbicertifiedurl": ""
+      "certifiedstarimage": "../img/PowerBI/certifiedstarimage.png",
+      "pbicertifiedimage": "../img/PowerBI/pbicertifiedimage.png",
+      "starimagetitle": "Power BI Certified",
+      "pbicertifiedurl": "https://aka.ms/pbicertified"
     }
   },
   {
