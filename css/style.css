@@ -407,6 +407,11 @@ button {
     float:right;
 }
 
+.Container-button-powerbi{
+    display:inline;
+    float:left;
+}
+
 .try_pbi{
     /*float:left;*/
 }
