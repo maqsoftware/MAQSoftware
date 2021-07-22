@@ -3943,6 +3943,10 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
             font-family: 'Roboto', sans-serif;
         }
 
+li a.active pbi-vall-container-filter-selected {
+    color: #BE1D23 !important;
+}
+
             .container-filter li a.active {
                 color: #323232;
             }
