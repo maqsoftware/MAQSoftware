@@ -5916,6 +5916,18 @@ ul.nav-tabs {
     }
 }
 
+@media (width: 375px) {
+
+    .inner-intro-case-study {
+    padding-top: 64px;
+    background-color: #f7f7f7;
+    height: 40vh;
+    min-height: 250px;
+    display: block;
+    position: relative;
+    }
+}
+
 .fa-facebook {
     color: #3b5998;
 }
