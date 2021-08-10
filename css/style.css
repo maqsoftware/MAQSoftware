@@ -1640,6 +1640,11 @@ form label.error {
     flex: 0 1 auto;
 }
 
+.sustainability-spacer {
+    width: 100%;
+    height: 90px;
+}
+
 .st0 {
     fill: #FFFFFF;
 }
@@ -1665,6 +1670,82 @@ form label.error {
     z-index: 1;
     margin: 0;
     padding: 0;
+}
+
+@media (max-width: 540px) {
+    .sustainability-container {
+        border-bottom: none;
+        border-left: 4px dotted #629677;
+        margin: 50px auto auto 40px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sustainability-spacer {
+        width: 100%;
+        height: 40px;
+    }
+
+    .content {
+        border-left: none;
+        max-width: 75%;
+    }
+
+    .sustainability-connecter {
+        height: 30px;
+        width: 50px;
+        border-top: 1px solid #AFB0B7;
+        position: relative;
+        left: -65px;
+        top: 57px;
+    }
+
+    .greenHex {
+        position: relative;
+        left: -30.5px;
+        top: 74px;
+        z-index: 1;
+    }
+
+    .whiteHex {
+        position: relative;
+        left: -80px;
+        bottom: 0px;
+        z-index: 1;
+        margin: 0;
+        padding: 0;
+        top: -142px;
+    }
+
+    .whiteHex2 {
+        position: relative;
+        left: -80px;
+        bottom: 0px;
+        z-index: 1;
+        margin: 0;
+        padding: 0;
+        top: -122px;
+    }
+
+    .whiteHex3 {
+        position: relative;
+        left: -80px;
+        bottom: 0px;
+        z-index: 1;
+        margin: 0;
+        padding: 0;
+        top: -172px;
+    }
+
+    .whiteHex5 {
+        position: relative;
+        left: -80px;
+        bottom: 0px;
+        z-index: 1;
+        margin: 0;
+        padding: 0;
+        top: -152px;
+    }
 }
 
 @media all and (min-width: 1025px) {
@@ -5905,18 +5986,6 @@ ul.nav-tabs {
 }
 
 @media (width: 375px) and (min-height: 800px) {
-
-    .inner-intro-case-study {
-    padding-top: 64px;
-    background-color: #f7f7f7;
-    height: 40vh;
-    min-height: 250px;
-    display: block;
-    position: relative;
-    }
-}
-
-@media (width: 375px) {
 
     .inner-intro-case-study {
     padding-top: 64px;
