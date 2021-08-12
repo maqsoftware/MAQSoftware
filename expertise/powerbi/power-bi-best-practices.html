@@ -120,19 +120,11 @@
                             <li class="h4header">Remove unnecessary interactions between visuals 
                                     <p>By default, all visuals on a report page can interact with one another. For optimal report performance, interactivity should be minimized. Reduce the number of queries fired at the back end and improve report performance by disabling unnecessary interactivity. </p>
                             </li>
-                            <li class="h4header"> Enable <a href="https://docs.microsoft.com/en-us/sql/relational-databases/security/row-level-security?view=sql-server-2017">Row-Level Security</a> (RLS) 
-                                <ul class="defaultBody">
-                                    <li>Row Level Security restricts user access to certain rows in a database depending on the characteristics (role) of the user executing a query. With RLS, Power BI only imports data the user is authorized to view.</li>
-                                    <li>Combining Power BI roles with roles in the back end can result in substantial performance gains.</li>
-                                    <li>Test all roles before rolling out to production.</li>
-                                </ul>
+                            <li class="h4header"> Enable <a href="https://docs.microsoft.com/en-us/sql/relational-databases/security/row-level-security?view=sql-server-2017" target="blank">Row-Level Security</a> (RLS) 
+                                    <p>Row-Level Security restricts user access to certain rows in a database depending on the characteristics (role) of the user executing a query. With RLS, Power BI only imports data the user is authorized to view. Combining Power BI roles with roles in the back end can result in substantial performance gains. Test all roles before rolling out to production.</p>
                             </li>
-                            <li class="h4header"> Use Microsoft AppSource <a href="https://docs.microsoft.com/en-us/power-bi/power-bi-custom-visuals-certified">certified custom visuals</a>
-                                <ul class="defaultBody">
-                                    <li>Power BI certified visuals are AppSource visuals that have passed rigorous quality testing. Microsoft verifies that certified custom visuals have robust, high-performance code. </li>
-                                    <li>Certified custom visuals are the only custom visuals that can be viewed in <a href="https://docs.microsoft.com/en-us/power-bi/service-publish-to-powerpoint">Export to PowerPoint</a> mode and email subscriptions. </li>
-                                    
-                                </ul>
+                            <li class="h4header"> Use <a href="https://docs.microsoft.com/en-us/power-bi/power-bi-custom-visuals-certified" target="blank">certified custom visuals</a>
+                                    <p>Power BI certified visuals are Microsoft AppSource visuals that have passed rigorous quality testing. Microsoft verifies that certified custom visuals have robust, high-performance code. Certified custom visuals are the only custom visuals that can be viewed in <a href="https://docs.microsoft.com/en-us/power-bi/service-publish-to-powerpoint" target="blank">Export to PowerPoint</a> mode and email subscriptions. </p>
                             </li>
                             <li class="h4header"> Use preview feature of hierarchy slicers instead of custom visual
                                 <ul class="defaultBody">
