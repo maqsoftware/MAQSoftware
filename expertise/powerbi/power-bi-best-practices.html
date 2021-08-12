@@ -135,29 +135,17 @@
                             <li class="h4header"> Test custom visual performance
                                     <p>Uncertified custom visuals are generally not tested by the Power BI team. Custom visuals can perform poorly when handling large datasets or complex aggregations. If a custom visual performs poorly, consider replacing it with a different visual. </p>
                             </li>
-                            <li class="h4header"> Limit complicated complex measures and aggregations in data models
-                                <ul class="defaultBody">
-                                    <li>Push calculated columns and measures to the source where possible. The closer they are to the source, the higher the likelihood of improved performance.</li>
-                                    <li>Create calculated measures instead of calculated columns. </li>
-                                    <li>Use star schema to design data models. </li>
-                                </ul>
+                            <li class="h4header"> Limit complex measures and aggregations in data models
+                                    <p>Push calculated columns and measures to the source where possible. The closer they are to the source, the higher the likelihood of improved performance. Create calculated measures instead of calculated columns. Use star schema to design data models. </p>
                             </li>
-                            <li class="h4header"> Use slicers sparingly
-                                <ul class="defaultBody">
-                                    <li>Slicers are a great way of allowing users to navigate data, but they come at a performance cost. Each slicer generates two queries: one gets the data, and the other fetches selection details.</li>
-                                    <li>Creating too many slicers negatively impacts performance. To evaluate which slicers are infrequently used, use the Filter pane and remove unnecessary slicers. </li>
-                                </ul>
+                            <li class="h4header"> Limit slicers
+                                    <p>Slicers are a great way of allowing users to navigate data, but they come at a performance cost. Each slicer generates two queries: one gets the data, and the other fetches selection details. Creating too many slicers negatively impacts performance. To evaluate which slicers are infrequently used, use the Filter pane and remove unnecessary slicers. </p>
                             </li>
-                            <li class="h4header"> Ensure the Power BI report and data source are in the same region 
-                                <ul class="defaultBody">
-                                    <li>With the tenant and data source in the same region, you can reduce network latency. The results are faster data transfer and faster query execution.</li>
-                                </ul>
+                            <li class="h4header"> Ensure reports and data sources are in the same region 
+                                    <p>With the tenant and data source in the same region, you can reduce network latency. The results are faster data transfer and faster query execution.</p>
                             </li>
-                            <li class="h4header">Import only necessary fields and tables instead of entire datasets
-                                <ul class="defaultBody">
-                                    <li>Ensure the model is as narrow and lean as possible.</li>
-                                    <li>Power BI works on columnar indexes; longer and leaner tables are preferred. </li>
-                                </ul>
+                            <li class="h4header">Import only necessary fields and tables instead of entire data sets
+                                    <p>Ensure the model is as narrow and lean as possible. Power BI works on columnar indexes; longer and leaner tables are preferred. </p>
                             </li>
                             <li class="h4header"> Ensure the cache update frequency aligns with the data source refresh frequency 
                                 <ul class="defaultBody">
