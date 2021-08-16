@@ -136,6 +136,69 @@
                 <div class="row ptb-15">
                     <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
                     <h2><div id="speed">How to Make Power BI Faster</div></h2>
+                        <ol class="  pb-10">
+                            <li class="h4header"> Limit the number of visuals in dashboards and reports 
+                                    <p>Using too many visuals on a single report slows report performance. Limit widget visuals to eight per report page and grids to one per page. Limit tiles to 10 per dashboard. In general, limit pages 30 points, assuming each type of visual is worth a different number of points:</p>
+                                    <ul>Cards: 1</ul>
+                                    <ul>Gauges: 2</ul>
+                                    <ul>Charts: 3</ul>
+                                    <ul>Maps: 3</ul>
+                                    <ul>Grids: 5</ul>                                    
+                            </li>
+                            <li class="h4header"> Remove unnecessary interactions between visuals 
+                                    <p>By default, all visuals on a report page can interact with one another. By disabling unnecessary interactions, you reduce the number of queries fired at the back end, which improves report performance.</p>                                 
+                            </li>
+                            <li class="h4header"> Use <a href="https://docs.microsoft.com/en-us/power-bi/service-gateway-onprem" target="_blank"on-premises data gateway</a> instead of Personal Gateway 
+                                    <p>Personal Gateway imports data into Power BI. On-premises data gateway (also known as Enterprise Gateway) imports nothing, which is more efficient when working with large databases.</p>                                 
+                            </li>
+                            <li class="h4header"> Use separate gateways for <a href="https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-report-lifecycle-datasets" target="_blank">Power BI service live connection</a> and <a href="https://docs.microsoft.com/en-us/power-bi/refresh-scheduled-refresh" target="_blank">scheduled data refresh</a>
+                                    <p>If you use the same gateway for a scheduled refresh and a live connection, live connection performance will slow down during the scheduled refresh.</p>                                 
+                            </li>
+                            <li class="h4header"> Test custom visual performance before use 
+                                    <p>Custom visuals can perform poorly when handling large datasets or complex aggregations. Uncertified custom visuals are generally not tested by the Power BI team. If a custom visual performs poorly, consider replacing it with a different visual.</p>                                 
+                            </li>
+                            <li class="h4header"> Limit complex measures and aggregations in data models 
+                                    <p>Create calculated measures instead of calculated columns. Where possible, push calculated columns and measures to the source. The closer they are to the source, the faster they are likely to perform.</p>                                 
+                            </li>
+                            <li class="h4header"> Use Star schema instead of Snowflake schema when possible 
+                                    <p>Snowflake schema has a complex query structure, making it difficult to implement changes. Star schema is easy to read, uses fewer joins, and tends to reduce data redundancy.</p>                                 
+                            </li>
+                            <li class="h4header"> Use slicers sparingly 
+                                    <p>Slicers are a great way of allowing users to navigate data, but they come at a performance cost. Each slicer generates two queries: one fetches the data, the other fetches selection details. Adding too many slicers drastically slows performance. To remove unnecessary slicers, use the Filter pane to evaluate which slicers are used the least.</p>                                 
+                            </li>
+                            <li class="h4header"> Ensure reports and data sources are in the same region 
+                                    <p>With the tenant and data source in the same region, you can limit the effects of network latency. Sharing a region ensures faster data transfer and faster query execution.</p>                                 
+                            </li>
+                            <li class="h4header"> Import only necessary fields and tables instead of entire data sets 
+                                    <p>Ensure the model is as narrow and lean as possible. Power BI works on columnar indexes, meaning longer and leaner tables perform better. When you need to import a large table, partition it and process multiple partitions in parallel.</p>                                 
+                            </li>
+                            <li class="h4header"> Use templates (.PBIT files) to speed up and standardize report development instead of starting with an empty .PBIX file 
+                                    <p>Templates enable you to develop branded reports faster. With templates, you can save custom color palettes and themes, ensuring corporate branding is pre-applied to all pages. Templates also automatically connect to commonly used data sources and offer commonly used DAX measures.</p>                                 
+                            </li>
+                            <li class="h4header"> Reduce queries 
+                                    <p> Reduce the number of queries sent by Power BI using the Query reduction settings. For slicers, select the “Add an Apply button to each slicer to apply changes when you’re ready” option. For filters, select “Add a single Apply button to the filter pane to apply changes at once (preview).”</p>                                 
+                            </li>
+                            <li class="h4header"> Avoid bi-directional and many-to-many relationships against high cardinality columns 
+                                    <p>Many-to-many and bi-directional relationships navigate more pathways and check more data points. As a result, bi-directional relationships against high-cardinality columns negatively impact report performance.</p>                                 
+                            </li>
+                            <li class="h4header"> Avoid using floating point data types 
+                                    <p> Floating point data types can result in unpredictable round-off errors and can decrease the performance of reports.</p>                                 
+                            </li>
+                            <li class="h4header"> Replace the auto-generated date table with a custom date table in your model 
+                                    <p> Using a date table enables you to leverage the time-series function in Power BI. However, the auto-generated date table creates a date table for each date column, drastically increasing the model size.</p>                                 
+                                    <p> You can use a single date table to reduce model size, placing any required relationships in fact tables. When building your date table, split the date and time to improve data compression. Find out how to turn off the auto-generated date table <u><a href="https://www.youtube.com/watch?v=xu3uDEHtCrg" target="_blank">here</a></u> and how to set and use custom date tables <u><a href="https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-date-tables" target="_blank">here</a></u>.</p>                                                             
+                            </li>
+                            <li class="h4header"> Set IsAvailableinMdx to false on non-attribute columns 
+                                    <p> Disable attribute hierarchy for measure columns and for any columns you don’t want end users to use. This reduces data size and load time. </p>                                 
+                                    <p> Source: <u><a href="https://blog.crossjoin.co.uk/2018/07/02/isavailableinmdx-ssas-tabular/" target="_blank">Chris Webb's BI Blog</u></a></p>                                 
+                            </li>
+                            <li class="h4header"> Reduce the amount of data loaded on page load
+                                    <p> Use bookmarks, drill-through pages, and tooltips to reduce the amount of data loaded on page load. This improves page load time for landing pages.</p>                                 
+                            </li>
+                            <li class="h4header"> Use report backgrounds for static images  
+                                    <p> For static images, use report backgrounds rather than multiple visuals. This conveys the same information to the end user at a fraction of the performance cost.</p>                                 
+                            </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                        </ol>                   
                     </div>
                 </div>
             </div>
