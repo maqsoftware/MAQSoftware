@@ -107,7 +107,6 @@
                         <div class="lead" style="margin-left: 35pt; mso-add-space: auto; mso-list: l5 level2 lfo4; text-indent: -13pt;">
                         <a href="#UI-UX">3. How To Improve the User Experience (UX) of Reports and Dashboards</a></div>
                         <div class="lead" style="margin-left: 35pt; mso-add-space: auto; mso-list: l5 level2 lfo4; text-indent: -13pt;">
-                        <a href="#analyzer">4. And Finally, Using the Best Practices Analyzer to review your code</a></div>
         </section>
         <section class="pb-40">
             <div class="container">
@@ -243,31 +242,15 @@
             <div class="container">
                 <div class="row ptb-15">
                     <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
-                    <h2><div id="analyzer">And Finally, Using the Best Practices Analyzer to review your code</div></h2>
-                        <p>The Best Practices Analyzer automatically reviews your code for errors and potential optimizations. Use Tabular Editor to run the Best Practices Analyzer on your Power BI reports. Run the following code in the Advanced Scripting window:</p>
-                        <code>System.Net.WebClient w = new System.Net.WebClient();<br> 
-                              string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData);<br>
-                              string url = "https://raw.githubusercontent.com/microsoft/Analysis-Services/master/BestPracticeRules/BPARules.json";<br>
-                              string downloadLoc = path+@"\TabularEditor\BPARules.json";<br>
-                              w.DownloadFile(url, downloadLoc);
-                        </code>
-                    </div>
-                </div>
-            </div>
-                    </section> 
-        <section class="pb-40">
-            <div class="container">
-                <div class="row ptb-15">
-                    <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
                         <h3>Improving Power BI Performance by Optimizing DAX</h3>
                         <p>For more tips on improving your Power BI performance, check out our <a href="/expertise/powerbi/dax-best-practices" class="underlined">DAX Best Practice Guide</a>.</p>
                         <p>To quickly assess opportunities in your reports and dashboards, check out our free <a href="https://maqdrpowerbi.azurewebsites.net/" class="underlined">Dr. Power BI tool</a>. Dr. Power BI assesses your Power BI reports to identify quick solutions for common problems.</p>
                         <br>
                         <h3>References</h3>
                         <ul class="defaultBody">
+                         <li><a href="https://docs.microsoft.com/en-us/power-bi/guidance/power-bi-optimization">Optimization guide for Power BI</a> – Microsoft Corporation, published April 2, 2021 </li>                            
                             <li><a href="https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-report-visualizations">Visualizations in Power BI reports</a> – Microsoft Corporation, published May 5, 2020</li>
                             <li><a href="https://docs.microsoft.com/en-us/power-bi/create-reports/service-dashboards-design-tips">Tips for designing a great Power BI dashboard</a> – Microsoft Corporation, published August 14, 2019 </li>
-                            <li><a href="https://docs.microsoft.com/en-us/power-bi/guidance/power-bi-optimization">Optimization guide for Power BI</a> – Microsoft Corporation, published April 2, 2021 </li>                            
                         </ul>
                         <br>
                     </div>
