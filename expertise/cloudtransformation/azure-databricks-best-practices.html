@@ -118,12 +118,15 @@
                             </li>
                             <li class="h4header">
                                 Use <i>Lower()</i> or <i>Upper()</i> when comparing strings to avoid losing data
-                                    <p>ADB can't compare strings with different casing. To avoid losing data, use case conversion statements <i>Lower()</i> or <i>Upper()</i>. Example:</p>
-                                    <br /> <code>
+                                    <p>ADB can't compare strings with different casing. To avoid losing data, use case conversion statements <i>Lower()</i> or <i>Upper()</i>. Example:</p>    
+                                <br /> 
+                                <li>
+                                        <code>
                                             SELECT 'MAQSoftware' = 'maqsoftware' AS WithOutLowerOrUpper<br />
                                             ,LOWER('MAQSoftware') = 'maqsoftware' AS WithLower<br />
                                             ,UPPER('MAQSoftware') = 'MAQSOFTWARE' AS WithUpper
                                         </code>
+                                </li>
                             </li>
                             <li class="h4header">
                                 Use Scala to improve data processing performance
