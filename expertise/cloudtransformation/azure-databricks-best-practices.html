@@ -146,11 +146,8 @@
                                     <p>AQE improves large query performance. By default, AQE is disabled in ADB. To enable it, use: <code>set spark.sql.adaptive.enabled = true;</code></p>
                             </li>
                             <li class="h4header">
-                                Partition by columns to enhance performance
-                                <ul class="defaultBody">
-                                    <li>Delta tables in ADB support partitioning, which enhances performance. You can partition by a column if you expect data in that partition to be at least 1 GB. If column cardinality is high, do not use that column for partitioning. For example, if you partition by user ID and there are 1M distinct user IDs, partitioning would increase table load time.</li>
-                                    <li>
-                                        Syntax  Example:<br />
+                                Partition by columns
+                                    <p>Delta tables in ADB support partitioning, which enhances performance. You can partition by a column if you expect data in that partition to be at least 1 GB. If column cardinality is high, do not use that column for partitioning. For example, if you partition by user ID and there are 1M distinct user IDs, partitioning would increase table load time. Syntax example:</p>
                                         <code>CREATE TABLE events (<br />
                                             DATE DATE<br />
                                             ,eventId STRING<br />
@@ -158,21 +155,15 @@
                                             ,data STRING<br />
                                             ) USING delta PARTITIONED BY (DATE)
                                         </code>
-                                    </li>
-                                </ul>
                             </li>
                             <li class="h4header">
                                 Use key vault credentials when creating mount points
-                                <ul class="defaultBody">
-                                    <li>When creating mount points to Azure Data Lake Storage (ADLS), use a key vault client ID and client secret to enhance security.</li>
-                                </ul>
+                                    <p>When creating mount points to Azure Data Lake Storage (ADLS), use a key vault client ID and client secret to enhance security.</p>
                             </li>
                             <li class="h4header">
                                 Query directly on parquet files from ADLS
-                                <ul class="defaultBody">
-                                    <li>If you need to use the data from parquet files, do not extract into ADB in intermediate table format. Instead, directly query on the parquet file to save time and storage.</li>
-                                    <li>Example:<br /><code>SELECT ColumnName FROM parquet.`Location of the file`</code></li>
-                                </ul>
+                                    <p>If you need to use the data from parquet files, do not extract into ADB in intermediate table format. Instead, directly query on the parquet file to save time and storage. Example:</p>
+                                    <code>SELECT ColumnName FROM parquet.`Location of the file`</code>
                             </li>
                             <li class="h4header">
                                 Specify distribution when publishing data to Azure Data Warehouse (ADW)
