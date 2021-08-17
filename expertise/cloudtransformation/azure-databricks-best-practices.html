@@ -167,10 +167,7 @@
                             </li>
                             <li class="h4header">
                                 Specify distribution when publishing data to Azure Data Warehouse (ADW)
-                                <ul class="defaultBody">
-                                    <li>Use hash distribution for fact tables or large tables, round robin for dimensional tables, replicated for small dimensional tables. For more information, check out: <a href="https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute">Distributed tables design guidance - Azure Synapse Analytics</a></li>
-                                    <li>
-                                        Example:<br />
+                                    <p>Use hash distribution for fact tables or large tables, round robin for dimensional tables, replicated for small dimensional tables. Example: </p>
                                         <code>df.write \<br />
                                             .format("com.databricks.spark.sqldw") \<br />
                                             .option("url", "jdbc:sqlserver://&lt;the-rest-of-the-connection-string&gt;<br />
@@ -180,44 +177,31 @@
                                                 .option("tableOptions", "table_options") \<br />
                                                 .save()<br />
                                         </code>
-                                    </li>
-                                </ul>
+                                    <p>For more information, check out: <a href="https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute">Distributed tables design guidance - Azure Synapse Analytics</a></p>
                             </li>
                             <li class="h4header">
                                 Customize cluster termination time
-                                <ul class="defaultBody">
-                                    <li>Terminating inactive clusters saves costs. ADB automatically terminates clusters based on a default down time. As different projects have different needs, it’s important to customize the down time to avoid premature or delayed termination. For example: set a longer down time for development environments, as work is continuous.</li>
-                                </ul>
+                                    <p>Terminating inactive clusters saves costs. ADB automatically terminates clusters based on a default down time. As different projects have different needs, it’s important to customize the down time to avoid premature or delayed termination. For example: set a longer down time for development environments, as work is continuous.</p>
                             </li>
                             <li class="h4header">
                                 Enable cluster autoscaling
-                                <ul class="defaultBody">
-                                    <li>ADB offers cluster autoscaling, which is disabled by default. Enable this feature to enhance job performance. Instead of providing a fixed number of worker nodes during cluster creation, you should provide a minimum and maximum. ADB then automatically reallocates the worker nodes based on job characteristics.</li>
-                                </ul>
+                                    <p>ADB offers cluster autoscaling, which is disabled by default. Enable this feature to enhance job performance. Instead of providing a fixed number of worker nodes during cluster creation, you should provide a minimum and maximum. ADB then automatically reallocates the worker nodes based on job characteristics.</p>
                             </li>
                             <li class="h4header">
                                 Use Azure Data Factory (ADF) to run ADB notebook jobs
-                                <ul class="defaultBody">
-                                    <li>If you run numerous notebooks daily, the ADB job scheduler will not be efficient. The ADB job scheduler cannot set notebook dependency, so you would have to store all notebooks in one master, which is difficult to debug. Instead, schedule jobs through Azure Data Factory, which enables you to set dependency and easily debug if anything fails.</li>
-                                </ul>
+                                    <p>If you run numerous notebooks daily, the ADB job scheduler will not be efficient. The ADB job scheduler cannot set notebook dependency, so you would have to store all notebooks in one master, which is difficult to debug. Instead, schedule jobs through Azure Data Factory, which enables you to set dependency and easily debug if anything fails.</p>
                             </li>
                             <li class="h4header">
                                 Use the retry feature in ADF when scheduling jobs
-                                <ul class="defaultBody">
-                                    <li>Processing notebooks in ADB through ADF can overload the cluster, causing notebooks to fail. If failure occurs, the entire job should not stop. To continue work from the point of failure, set ADF to retry two to three times with five-minute intervals. As a result, the processing should continue from the set time, saving you time and effort.</li>
-                                </ul>
+                                    <p>Processing notebooks in ADB through ADF can overload the cluster, causing notebooks to fail. If failure occurs, the entire job should not stop. To continue work from the point of failure, set ADF to retry two to three times with five-minute intervals. As a result, the processing should continue from the set time, saving you time and effort.</p>
                             </li>
                             <li class="h4header">
                                 Implement failure checkpoints while publishing data
-                                <ul class="defaultBody">
-                                    <li>With ADB, you can dump data into multiple resources like ADW or ADLS. Publishing numerous tables to another resource takes time. If publishing fails, do not restart the entire process. Implement checkpoints, so that you can restart from the point of failure.</li>
-                                </ul>
+                                    <p>With ADB, you can dump data into multiple resources like ADW or ADLS. Publishing numerous tables to another resource takes time. If publishing fails, do not restart the entire process. Implement checkpoints, so that you can restart from the point of failure.</p>
                             </li>
                             <li class="h4header">
-                                Consider using ADB Premium for increased security and privacy compliance
-                                <ul class="defaultBody">
-                                    <li>Your business’s data has never been more valuable. Additional security is a worthwhile investment. ADB Premium includes 5-level access control. For more features, check out: <a href="https://www.linkedin.com/pulse/azure-databricks-standard-vs-premium-ashish-kumar">Premium vs Standard</a>.</li>
-                                </ul>
+                                Consider upgrading to ADB Premium
+                                    <p>Your business’s data has never been more valuable. Additional security is a worthwhile investment. ADB Premium includes 5-level access control. For more features, check out: <a href="https://www.linkedin.com/pulse/azure-databricks-standard-vs-premium-ashish-kumar">Premium vs Standard</a>.</p>
                             </li>
                         </ol>
                     </div>
@@ -225,7 +209,6 @@
                 <div class="row ptb-15">
                     <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
                         <h3>References</h3>
-                        <p>Microsoft offers additional documents that provide a high-level framework for best practices. We encourage you to review the following: </p>
                         <ul class="defaultBody">
                             <li><a href="https://docs.microsoft.com/en-us/azure/databricks/delta/">Delta tables</a> – Microsoft Corporation, last updated June 11, 2021</li>
                             <li><a href="https://docs.microsoft.com/en-us/azure/databricks/spark/latest/spark-sql/language-manual/sql-ref-datatypes#sql">Datatypes in ADB</a> – Microsoft Corporation, last updated June 29, 2021</li>
