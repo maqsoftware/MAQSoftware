@@ -119,45 +119,31 @@
                             <li class="h4header">
                                 Use <i>Lower()</i> or <i>Upper()</i> when comparing strings to avoid losing data
                                     <p>ADB can't compare strings with different casing. To avoid losing data, use case conversion statements <i>Lower()</i> or <i>Upper()</i>. Example:</p>    
-                                <br /> 
-                                <li>
                                         <code>
                                             SELECT 'MAQSoftware' = 'maqsoftware' AS WithOutLowerOrUpper<br />
                                             ,LOWER('MAQSoftware') = 'maqsoftware' AS WithLower<br />
                                             ,UPPER('MAQSoftware') = 'MAQSOFTWARE' AS WithUpper
                                         </code>
-                                </li>
                             </li>
                             <li class="h4header">
-                                Use Scala to improve data processing performance
-                                <ul class="defaultBody">
-                                    <li>ADB’s data processing is based on Apache Spark, which is written in Scala. As a result, Scala performs better than SQL in ADB. Note: Python should still be used for machine learning functions in ADB.</li>
-                                </ul>
+                                Use Scala for data processing
+                                    <p>ADB’s data processing is based on Apache Spark, which is written in Scala. As a result, Scala performs better than SQL in ADB. Note: Python should still be used for machine learning functions in ADB.</p>
                             </li>
                             <li class="h4header">
                                 Use custom functions to simplify complex calculations
-                                <ul class="defaultBody">
-                                    <li>If your calculation requires multiple steps, you can save time and by creating a one-step custom function. ADB offers a variety of built in SQL functions, however to create custom functions, known as user-defined functions (UDF), use Scala. Once you have a custom function, you can call it every time you need to perform that specific calculation.</li>
-                                </ul>
+                                    <p>If your calculation requires multiple steps, you can save time and by creating a one-step custom function. ADB offers a variety of built in SQL functions, however to create custom functions, known as user-defined functions (UDF), use Scala. Once you have a custom function, you can call it every time you need to perform that specific calculation.</p>
                             </li>
                             <li class="h4header">
-                                Use Delta tables to enhance DML command performance
-                                <ul class="defaultBody">
-                                    <li>	In ADB, Hive tables do not support UPDATE and MERGE statements or NOT NULL and CHECK constraints. Delta tables do support these commands, however running large amounts of data on Delta tables decreases query performance. So not to decrease performance, store table versions. </li>
-                                </ul>
+                                Use Delta tables for DML commands
+                                    <p>In ADB, Hive tables do not support UPDATE and MERGE statements or NOT NULL and CHECK constraints. Delta tables do support these commands, however running large amounts of data on Delta tables decreases query performance. So not to decrease performance, store table versions. </p>
                             </li>
                             <li class="h4header">
-                                Use views to minimize storage usage and save costs
-                                <ul class="defaultBody">
-                                    <li>If you need to create intermediate tables, use views to minimize storage usage and save costs. Views are session-oriented and will automatically remove tables from storage after query execution. For optimal query performance, do not use joins or subqueries in views.</li>
-                                </ul>
+                                Use views when creating intermediate tables
+                                    <p>If you need to create intermediate tables, use views to minimize storage usage and save costs. Views are session-oriented and will automatically remove tables from storage after query execution. For optimal query performance, do not use joins or subqueries in views.</p>
                             </li>
                             <li class="h4header">
                                 Enable adaptive query execution (AQE)
-                                <ul class="defaultBody">
-                                    <li>AQE improves large query performance. By default, AQE is disabled in ADB. To enable it, see below.</li>
-                                    <li>Example:<br /><code>set spark.sql.adaptive.enabled = true;</code></li>
-                                </ul>
+                                    <p>AQE improves large query performance. By default, AQE is disabled in ADB. To enable it, use: <code>set spark.sql.adaptive.enabled = true;</code></p>
                             </li>
                             <li class="h4header">
                                 Partition by columns to enhance performance
