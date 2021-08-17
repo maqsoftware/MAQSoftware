@@ -110,28 +110,20 @@
                         <ol class="pb-10">
                             <li class="h4header">
                                 Delete temporary tables after notebook execution
-                                <ul class="defaultBody">
-                                    <li>Delete any temporary tables that were created as intermediate tables during notebook execution. Deleting tables saves storage, especially if the notebook is scheduled daily.</li>
-                                </ul>
+                                    <p>Delete temporary tables that were created as intermediate tables during notebook execution. Deleting tables saves storage, especially if the notebook is scheduled daily.</p>
                             </li>
                             <li class="h4header">
                                 Use <code>dbutils.fs.rm()</code> to permanently delete temporary table metadata 
-                                <ul class="defaultBody">
-                                    <li>ADB clusters store table metadata, even if you use drop statements to delete. Before creating temporary tables, use <code>dbutils.fs.rm()</code> to permanently delete metadata. If you don’t use this statement, an error message will appear stating that the table already exists. To avoid this error in daily refreshes, you must use <code>dbutils.fs.rm()</code>.</li>
-                                </ul>
+                                    <p>ADB clusters store table metadata, even if you use drop statements to delete. Before creating temporary tables, use <code>dbutils.fs.rm()</code> to permanently delete metadata. If you don’t use this statement, an error message will appear stating that the table already exists. To avoid this error in daily refreshes, you must use <code>dbutils.fs.rm()</code>.</p>
                             </li>
                             <li class="h4header">
                                 Use <i>Lower()</i> or <i>Upper()</i> when comparing strings to avoid losing data
-                                <ul class="defaultBody">
-                                    <li>ADB can't compare strings with different casing. To avoid losing data, use case conversion statements <i>Lower()</i> or <i>Upper()</i>.</li>
-                                    <li>
-                                        Example:<br /> <code>
+                                    <p>ADB can't compare strings with different casing. To avoid losing data, use case conversion statements <i>Lower()</i> or <i>Upper()</i>. Example:</p>
+                                    <br /> <code>
                                             SELECT 'MAQSoftware' = 'maqsoftware' AS WithOutLowerOrUpper<br />
                                             ,LOWER('MAQSoftware') = 'maqsoftware' AS WithLower<br />
                                             ,UPPER('MAQSoftware') = 'MAQSOFTWARE' AS WithUpper
                                         </code>
-                                    </li>
-                                </ul>
                             </li>
                             <li class="h4header">
                                 Use Scala to improve data processing performance
