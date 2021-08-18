@@ -109,9 +109,7 @@
                         <ol class="pb-10">
                             <li class="h4header">
                                 Avoid broken references after deployment
-                                <ul class="defaultBody">
-                                    <li>Maintain the same GUIDs across environments for records referenced in workflows/views.</li>
-                                    <li>Use custom actions to parameterize the referenced records instead of directly referencing a record in the workflow.</li>
+                                    <p>Maintain the same GUIDs across environments for records referenced in workflows/views. Use custom actions to parameterize the referenced records instead of directly referencing a record in the workflow.</p>
                                     <img src="/img/PowerBI/d365/figure1.png" style="border:ridge" />
                                     <b>
                                         <h6 class="figureTitle">Figure 1: Referencing records directly in the workflow</h6>
@@ -120,43 +118,26 @@
                                     <b>
                                         <h6 class="figureTitle">Figure 2: Referencing records retrieved dynamically with custom actions in the workflow</h6>
                                     </b>
-                                </ul>
                             </li>
                             <li class="h4header">
                                 Import multiple files at once with .zip
-                                <ul class="defaultBody">
-                                    <li>Individually importing multiple data files is time-consuming and requires the files to be imported in the correct order to resolve inter-file column references.</li>
-                                    <li>When you zip multiple files together for import, you save time and don’t have to worry about import order; Dynamics 365 takes care of it for you.</li>
-                                </ul>
+                                    <p>Individually importing multiple data files is time-consuming and requires the files to be imported in the correct order to resolve inter-file column references. When you zip multiple files together for import, you save time and don’t have to worry about import order; Dynamics 365 takes care of it for you.</p>
                             </li>
                             <li class="h4header">
-                                Include only required fields in data import files to avoid plugin/work
-                                <ul class="defaultBody">
-                                    <li>Including unnecessary fields in the data import file increases import time and may trigger workflows/plugins registered on those fields.</li>
-                                    <li>For example, to update a contact address, don’t include unnecessary fields like first and last name in the import file.</li>                                    
-                                </ul>
+                                Include only required fields in data import files
+                                    <p>Including unnecessary fields in the data import file increases import time and may trigger workflows/plugins registered on those fields. For example, to update a contact address, don’t include unnecessary fields like first and last name in the import file.</p>                                    
                             </li>
                             <li class="h4header">
-                                Deactivate relevant plugins/workflows before bulk updating records to avoid triggers and reduce import time
-                                <ul class="defaultBody">
-                                    <li>To update data as part of data migration activities without triggering business logic, deactivate plugins/workflows registered on the entities present in import file.</li>
-                                </ul>
+                                Deactivate relevant plugins/workflows before bulk updating records
+                                    <p>To update data as part of data migration activities without triggering business logic, deactivate plugins/workflows registered on the entities present in import file. This reduces import time.</p>
                             </li>
                             <li class="h4header">
                                 Enable admin mode on your target environment during deployment
-                                <ul class="defaultBody">
-                                    <li>Admin mode locks the environment for all users, meaning only system administrators can access the environment.</li>
-                                    <li>Enabling admin mode during deployment ensures that data is not compromised by unplanned changes. If an error occurs, data can be restored to previous versions.</li>
-                                </ul>
-                                <p>Note: Admin mode cannot be enabled in the production environment. If you are not permitted to convert the environment to a sandbox, use the global notification method to add a form.</p>
-                                
+                                    <p>Admin mode locks the environment for all users, meaning only system administrators can access the environment. Enabling admin mode during deployment ensures that data is not compromised by unplanned changes. If an error occurs, data can be restored to previous versions. Note: Admin mode cannot be enabled in the production environment. If you are not permitted to convert the environment to a sandbox, use the global notification method to add a form.</p>
                             </li>
                             <li class="h4header">
-                                Include a user-friendly message while in admin-mode to prevent confusion
-                                <ul class="defaultBody">
-                                    <li>During deployment, the system may be slow. This is why we recommended locking the system for end users.</li>
-                                    <li>Messages inform end users that the environment is down due to planned activities and will return after the indicated duration. Clear messages avoid support tickets from confused end users.</li>
-                                </ul>
+                                Include a user-friendly message while in admin-mode
+                                    <p>During deployment, the system may be slow. This is why we recommended locking the system for end users. Messages inform end users that the environment is down due to planned activities and will return after the indicated duration. Clear messages avoid support tickets from confused end users.</p>
                                 <img src="/img/PowerBI/d365/figure3.png" style="border:ridge" />
                                 <b>
                                     <h6 class="figureTitle">Figure 3: Enabling Admin mode from Power Platform admin center</h6>
@@ -164,21 +145,15 @@
                             </li>
                             <li class="h4header">
                                 Back up the environment before deployment
-                                <ul class="defaultBody">
-                                    <li>Backups ensure that the system can be restored to its pre-deployment state in case a deployment failure occurs.</li>
-                                    <li>Backups are faster than creating a copy of the environment.</li>                                                                        
-                                </ul>
-                                <p>Note: When an environment is restored to an earlier state, the Data Export Service profile needs to be re-established to synchronize the Dynamics 365 data to Azure SQL.</p>
+                                    <p>Backups ensure that the system can be restored to its pre-deployment state in case a deployment failure occurs. Backups are faster than creating a copy of the environment. Note: When an environment is restored to an earlier state, the Data Export Service profile needs to be re-established to synchronize the Dynamics 365 data to Azure SQL.</p>
                                 <img src="/img/PowerBI/d365/figure4.png" style="border:ridge" />
                                 <b>
                                     <h6 class="figureTitle">Figure 4: Creating a backup from Power Platform admin center</h6>
                                 </b>
                             </li>
                             <li class="h4header">
-                                Run a test in a cloned production environment prior to production deployment to identify compatibility issues
-                                <ul class="defaultBody">
-                                    <li>Tests enable team members to prepare a mitigation plan. Issues can be proactively flagged and resolved, mitigating end-user impact.</li>
-                                </ul>
+                                Run a test in a cloned production environment prior to production deployment
+                                    <p>Tests enable team members to prepare a mitigation plan. Issues can be proactively flagged and resolved, mitigating end-user impact.</p>
                             </li>
                         </ol>
                     </div>
