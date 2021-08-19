@@ -136,6 +136,7 @@
                                             <li>DISTINCT(): Does not return a blank that is added due to an integrity violation. The DISTINCT() function includes a blank only if it is part of the original data.</li>
                                             <li>VALUES(): Includes any blank that Power BI adds due to referential integrity violations.</li>
                                         </ul>
+                                <br>
                                     <p>Power BI recommends using the VALUES() function if blank values are not an issue.</p>
                             </li>
                             <li class="h4header"> Use ISBLANK() instead of =Blank() check
@@ -167,8 +168,7 @@
                                     <p>/ raises an exception if the denominator is zero. The DIVIDE() function internally performs a check to validate whether the denominator is zero. If it is, it returns the value specified in a third (extra) parameter. For “invalid denominator” cases, use the IF condition while using the “/” operator. Note: If you are certain the denominator value is not zero, it is better to use the “/” operator without an IF check. The DIVIDE() function will always perform an IF check internally.</p>
                             </li>
                             <li class="h4header"> Do not use scalar variables in SUMMARIZE()
-                                    <p>The SUMMARIZE() function is traditionally used to group columns and return resulting aggregations. However, the SUMMARIZECOLUMNS() function is newer and more optimized. Use it instead. Only use SUMMARIZE() for grouped elements of a table without any associated measures or aggregations. For example:</p>
-                                        <code>SUMMARIZE(Table, Column1, Column2)</code>
+                                    <p>The SUMMARIZE() function is traditionally used to group columns and return resulting aggregations. However, the SUMMARIZECOLUMNS() function is newer and more optimized. Use it instead. Only use SUMMARIZE() for grouped elements of a table without any associated measures or aggregations. For example: <code>SUMMARIZE(Table, Column1, Column2)</code></p>
                             </li>
                             <li class="h4header"> Use KEEPFILTERS() instead of FILTER(T)
                                     <p>The FILTER function overrides any existing set of filters on a column applied via slicers. The KEEPFILTER function does not override the existing set of filters. Instead, it uses the intersection of values present in both, thus maintaining the current context. Use it when you want to maintain any filters applied by slicers or at a report level while performing calculations.</p>
@@ -187,18 +187,19 @@
                                     <p>Use the COUNT function to count column values, or we can use the COUNTROWS function to count table rows. Both functions will achieve the same result, providing that the counted column contains no BLANKs.
                                         <code>Sales Orders = COUNT(Sales [OrderDate]) Sales Orders = COUNTROWS(Sales)</code>
                                     <p>There are three reasons why the second measure definition is better:</p> 
-                                        <ol class="defaultBody">
+                                        <ul class="defaultBody">
                                             <li>It's more efficient, and will perform better.</li>
                                             <li>It doesn't consider BLANKs contained in any column of the table.</li>
                                             <li>The formula intention is clearer and self-describing.</li>
-                                        </ol>
+                                        </ul>
+                                        <br>
                                     <p>Reference: <a href ="https://docs.microsoft.com/en-us/power-bi/guidance/dax-countrows" target="blank" class="underlined">DAX-CountRows</a></p>
                             </li>
                             <li class="h4header"> Use SEARCH() with the last parameter
                                     <p>The SEARCH() DAX function accepts the last parameter as the value that the query must return if the search string is not found. You should always use the SEARCH() function instead of using Error functions along with SEARCH().</p>
                             </li>
                             <li class="h4header"> ALL vs. ALLExcept
-                                    <p>ALLEXCEPT() behaves exactly like ALL(), VALUES() as long as the “exempted” columns are columns on the pivot. ALLEXCEPT() does NOT preserve pivot context on columns that are not on the pivot. Use ALL() instead of ALLEXCEPT() when using VALUES()</p>
+                                    <p>ALLEXCEPT() behaves exactly like ALL(), VALUES() as long as the “exempted” columns are columns on the pivot. ALLEXCEPT() does NOT preserve pivot context on columns that are not on the pivot. Use ALL() instead of ALLEXCEPT() when using VALUES().</p>
                             </li>
                         </ol>
                     </div>
@@ -207,7 +208,7 @@
                     <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
                         <h3>References</h3>
                         <ul class="defaultBody">
-                            <li><a href="https://docs.microsoft.com/en-us/dax/data-analysis-expressions-dax-reference">Data Analysis Expressions (DAX) Reference</a> – Microsoft Corporation</li>
+                            <li><a href="https://docs.microsoft.com/en-us/dax/data-analysis-expressions-dax-reference">Data Analysis Expressions (DAX) Reference</a> – Microsoft Corporation, updated regularly</li>
                             <li><a href="https://docs.microsoft.com/en-us/dax/dax-function-reference">DAX function reference</a> – Microsoft Corporation, published July 28, 2021 </li>
                             <li><a href="https://docs.microsoft.com/en-us/power-bi/power-bi-reports-performance">Optimization guide for Power BI</a> – Microsoft Corporation, published April 2, 2021 </li>
                         </ul>  
