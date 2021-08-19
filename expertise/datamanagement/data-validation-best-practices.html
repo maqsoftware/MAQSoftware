@@ -108,7 +108,7 @@
                         <!-- End LinkedIn Share -->
                         <!-- End Social Media -->
                         <br><br>
-                        <p class="lead">Data is the backbone of modern business intelligence (BI). Quality data is critical for identifying performance gaps, key industry trends, and revenue opportunities. As businesses become increasingly dependent on data-driven insights, data completeness and accuracy are at the core of success. Since the data wave, businesses have shifted toward unstructured and semi-structured data, increasing the need for BI processing and validation. Validating your data provides the following benefits:</p>
+                        <p class="lead">Quality data is critical for identifying performance gaps, key industry trends, and revenue opportunities. Since the data wave, businesses have shifted toward unstructured and semi-structured data, increasing the need for BI processing and validation. Validating your data provides the following benefits:</p>
                         <ul class="defaultBody">
                             <li>Access to reliable data on-demand</li>
                             <li>Minimized effort, cost, and errors</li>   
@@ -126,54 +126,25 @@
                     <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
                         <img src="/img/case-study/CS035-body.png" style="border:ridge" />
                         <ol class="pb-10">
-                            <li class="h4header"> Inventory Upstream Data Sources
-                                <ul class="defaultBody">
-                                    <li>Ensure upstream data is accessible.  </li>
-                                    <li>Record the number of data records to identify if data is lost or duplicated during the next steps.</li>
-                                </ul>
+                            <li class="h4header"> Inventory upstream data sources
+                                    <p>Ensure upstream data is accessible. Record the number of data records to identify if data is lost or duplicated during the next steps.</p>
                             </li>
-                            <li class="h4header"> Perform Data Staging  
-                                <ul class="defaultBody">
-                                    <li>Identify data with a unique combination of attributes.</li>
-                                    <li>Perform a trend analysis of key attributes. Examples: the rate of attribute changes or the rate of data changes period over period.  </li></ul>
+                            <li class="h4header"> Perform data staging  
+                                    <p>Identify data with a unique combination of attributes. Perform a trend analysis of key attributes. Examples: the rate of attribute changes or the rate of data changes period over period.</p>
+                            <li class="h4header"> Push to data mart 
+                                    <p>If using Azure Databricks (ADB), process notebooks in parallel (versus sequentially) to reduce refresh time. Identify platform run failures. If using tabular models, cross-check the data consistency between data mart and tabular models. For non-cloud environment where SSIS or other ETL tools might be used, implement similar checks for staging against data mart publish. Example: data profiling in SSIS.</p>
                             </li>
-                            <li class="h4header"> Push to Data Mart 
-                                <ul class="defaultBody">
-                                    <li>If using Azure Databricks (ADB), process notebooks in parallel (versus sequentially) to reduce refresh time.</li>
-                                    <li>Identify platform run failures.</li>
-                                    <li>If using tabular models, cross-check the data consistency between data mart and tabular models.</li>
-                                    <li>For non-cloud environment where SSIS or other ETL tools might be used, implement similar checks for staging against data mart publish. Example: data profiling in SSIS.</li>
-                                </ul>
+                            <li class="h4header">Validate data staging and mart
+                                    <p>Perform build verification testing (BVT), table-level BVT, and BVT for multiple sources.
                             </li>
-                            <li class="h4header">Validate Data Staging and Mart
-                                <ul class="defaultBody">
-                                    <li>Perform build verification testing (BVT). </li>
-                                    <li>Perform table-level BVT. </li>
-                                    <li>Perform BVT for multiple sources.
-                                </ul>
+                            <li class="h4header"> Publish data for end users
+                                    <p>Validate the data to ensure data was not lost or duplicated while being pulled from databases. Example: Azure Data Warehouse (ADW) dump failure tracking. Check for data loss when changing the schema from temporary format to end user agreed schema format. Track downstream user data usage and remove unused tables/views to improve report performance.</p>
                             </li>
-                            <li class="h4header"> Publish Data for End Users
-                                <ul class="defaultBody">
-                                    <li>Validate the data to ensure data was not lost or duplicated while being pulled from databases. Example: Azure Data Warehouse (ADW) dump failure tracking.</li>
-                                    <li>Check for data loss when changing the schema from temporary format to end user agreed schema format.</li>
-                                    <li>Track downstream user data usage and remove unused tables/views to improve report performance.</li>
-                                </ul>
+                            <li class="h4header"> Track tabular or multidimensional model performance
+                                    <p>Track measure execution time to detect time lags. Remove unused reporting measures. Check all tabular/multidimensional columns to prevent failure while processing data. Compare previous tabular/multidimensional refreshes with the current refresh for sudden drop/increase in the number of records processed beyond a predefined threshold limit. </p>
                             </li>
-                            <li class="h4header"> Track Tabular or Multidimensional Model Performance
-                                <ul class="defaultBody">
-                                    <li>Track measure execution time to detect time lags. </li>
-                                    <li>Remove unused reporting measures.</li>
-                                    <li>Check all tabular/multidimensional columns to prevent failure while processing data.</li>
-                                    <li>Compare previous tabular/multidimensional refreshes with the current refresh for sudden drop/increase in the number of records processed beyond a predefined threshold limit. </li>
-                                    
-                                </ul>
-                            </li>
-                            <li class="h4header"> Verify BI Reporting
-                                <ul class="defaultBody">
-                                    <li>Import vs. tabular model validator: compare consistency of datapoints rendered in BI report through import model and tabular.</li>
-                                    <li>Track BI report usage to understand the number of visitors across pages, active users, and historical data about report usage patterns.</li>                                                                  
-                                    
-                                </ul> 
+                            <li class="h4header"> Verify BI reporting
+                                    <p>Import vs. tabular model validator: compare consistency of datapoints rendered in BI report through import model and tabular. Track BI report usage to understand the number of visitors across pages, active users, and historical data about report usage patterns.</p>                                                                  
                             </li>
                             
                         </ol>
