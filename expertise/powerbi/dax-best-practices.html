@@ -132,7 +132,7 @@
                             </li>
                             <li class="h4header">Use the DISTINCT() and VALUES() functions consistently
                                     <p>Power BI adds a blank value to a column if it finds a referential integrity violation. For a direct query, Power BI adds a blank value to the columns because it cannot check for violations. The DISTINCT() and VALUES() functions differ:</p>
-                                        <ul>
+                                        <ul class="defaultBody">
                                             <li>DISTINCT(): Does not return a blank that is added due to an integrity violation. The DISTINCT() function includes a blank only if it is part of the original data.</li>
                                             <li>VALUES(): Includes any blank that Power BI adds due to referential integrity violations.</li>
                                         </ul>
@@ -151,16 +151,14 @@
                                     <p>The VALUES() function returns an error if it encounters multiple values. Normally, users address the error using Error functions, which negatively affects performance. Instead of using VALUES(), use SELECTEDVALUE(). The SELECTEDVALUE() function is safer and returns a blank if it encounters multiple values.</p>
                             </li>
                             <li class="h4header"> Use variables instead of repeating measures inside the IF branch
-                                    <p>Incorrect DAX:</p><br />
-                                        <code>Ratio = IF([Total Rows] > 10, SUM(Revenue) /[Total Rows], 0)</code>
+                                    <p>Incorrect DAX: <code>Ratio = IF([Total Rows] > 10, SUM(Revenue) /[Total Rows], 0)</code> </p>
                                     <p>Because measures are calculated continuously, the [Total Rows] expression is calculated twice: first for the condition check, then for the true condition expression.</p>
-                                    <p>Correct DAX:</p><br />
-                                        <code>VAR totalRows = [Total Rows]; Ratio = IF(totalRows > 10, SUM(Revenue) / totalRows,0)</code>
+                                    <p>Correct DAX: <code>VAR totalRows = [Total Rows]; Ratio = IF(totalRows > 10, SUM(Revenue) / totalRows,0)</code> </p>
                                     <p>Instead of calculating the same expression multiple times, you can store the resulting measure value in a variable. You can use a variable reference wherever required. The same variable process applies to all instances where you call the same measure. Variables can help you avoid repetitive functions. Note: Be aware that variables are actually constants.</p>                                    
                             </li>
                             <li class="h4header"> Use (a-b)/b along with variables instead of a/b — 1 or a/b*100–100
                                     <p>It is common practice to use a/b — 1 to calculate a ratio and avoid duplicate measure calculations. However, you can achieve the same performance by using variables and using (a-b)/b to calculate the ratio. Here’s why you should use (a-b)/b: If both a and b are blank values, then (a-b)/b returns a blank value and Power BI will filter the values out. a/b — 1 would return -1 as the result because both a and b are integers.</p>
-                                    <p>Reference: <a href="https://www.sqlbi.com/articles/optimizing-if-conditions-using-variables/" target="blank">sqlbi</a></p>
+                                    <p>Reference: <a href="https://www.sqlbi.com/articles/optimizing-if-conditions-using-variables/" target="blank" class="underlined">sqlbi</a></p>
                             </li>
                             <li class="h4header"> Stop using IFERROR() and ISERROR()
                                     <p>The IFERROR() and ISERROR() functions were widely used in Excel when applying the FIND() and SEARCH() functions. They were necessary because FIND() and SEARCH() returned errors if the query did not obtain the required result. The IFERROR() and ISERROR() functions force the Power BI engine to perform a step-by-step execution of each row to check for errors. There is currently no method to directly state which row returned the error. The FIND() and SEARCH() DAX functions provide an extra parameter that the query can pass. The parameter is returned if the search string is not present. The FIND() and SEARCH() DAX functions check if more than one value is returned. They also ensure nothing is divided by zero. You can avoid using the FIND() and SEARCH() DAX functions by using the correct DAX functions such as DIVIDE() and SELECTEDVALUE(). The DIVIDE() and SELECTEDVALUE() functions perform the error check internally and return the expected results. You can always use DAX expressions in such a way that they never return an error.</p>
@@ -177,7 +175,7 @@
                             </li>
                             <li class="h4header"> Use FILTER(all(ColumnName)) instead of FILTER(values()) or FILTER(T)                                
                                     <p>To calculate measures independent of any filters applied to a column, combine the All(ColumnName) function with the FILTER function instead of using Table or VALUE(). For example: <code>CALCULATE([Total Sales], FILTER(ALL(Products[Color]), Color = ‘Red’))</code> Use ALL along with the FILTER function if there is no need to keep the current context. Directly applying filters using expressions instead of the FILTER function behaves in the same way as mentioned above. This method internally translates using the ALL function in the filter. For example: <code>CALCULATE([Total Sales], FILTER(ALL(Products[Color]), Color = ‘Red’))</code> It is always better to apply filters to the desired column than to the whole table for the sake of scalability.</p>
-                                    <p>References: <a href ="https://pbidax.wordpress.com/2016/05/22/simple-filter-in-dax-measures/" target="blank">pbidax</a> and <a href ="https://www.sqlbi.com/articles/filter-arguments-in-calculate/" target="blank">sqlbi</a></p>
+                                    <p>References: <a href ="https://pbidax.wordpress.com/2016/05/22/simple-filter-in-dax-measures/" target="blank" class="underlined">pbidax</a> and <a href ="https://www.sqlbi.com/articles/filter-arguments-in-calculate/" target="blank" class="underlined">sqlbi</a></p>
                             </li>
                             <li class="h4header"> Avoid using the AddColumns() function inside measure expressions
                                     <p>Measures are calculated iteratively by default. If measure definitions use iterative functions such as AddColumns(), Power BI creates nested iterations, which negatively affects report performance.</p>
@@ -189,12 +187,12 @@
                                     <p>Use the COUNT function to count column values, or we can use the COUNTROWS function to count table rows. Both functions will achieve the same result, providing that the counted column contains no BLANKs.
                                         <code>Sales Orders = COUNT(Sales [OrderDate]) Sales Orders = COUNTROWS(Sales)</code>
                                     <p>There are three reasons why the second measure definition is better:</p> 
-                                        <ol>
+                                        <ol class="defaultBody">
                                             <li>It's more efficient, and will perform better.</li>
                                             <li>It doesn't consider BLANKs contained in any column of the table.</li>
                                             <li>The formula intention is clearer and self-describing.</li>
                                         </ol>
-                                    <p>Reference: <a href ="https://docs.microsoft.com/en-us/power-bi/guidance/dax-countrows" target="blank">DAX-CountRows</a></p>
+                                    <p>Reference: <a href ="https://docs.microsoft.com/en-us/power-bi/guidance/dax-countrows" target="blank" class="underlined">DAX-CountRows</a></p>
                             </li>
                             <li class="h4header"> Use SEARCH() with the last parameter
                                     <p>The SEARCH() DAX function accepts the last parameter as the value that the query must return if the search string is not found. You should always use the SEARCH() function instead of using Error functions along with SEARCH().</p>
