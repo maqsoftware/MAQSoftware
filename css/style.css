@@ -2721,6 +2721,13 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 
 }
 
+.paragraph{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    /*margin-top: 0px;
+    margin-bottom:0;*/
+}
+
 /*------------------------------------------------------------------*/
 /* Slider */
 /*------------------------------------------------------------------*/
@@ -6278,7 +6285,7 @@ ul.nav-tabs {
 }
 
 li.h4header {
-    font-size: 17px;
+    font-size: 20px;
     letter-spacing: 2px;
     line-height: 28px;
     color: #323232;
