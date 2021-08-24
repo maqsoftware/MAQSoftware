@@ -110,66 +110,44 @@
                         <ol class="pb-10">
                             <li class="h4header">
                                 Delete temporary tables after notebook execution
-                                <ul class="defaultBody">
-                                    <li>Delete any temporary tables that were created as intermediate tables during notebook execution. Deleting tables saves storage, especially if the notebook is scheduled daily.</li>
-                                </ul>
+                                    <p>Delete temporary tables that were created as intermediate tables during notebook execution. Deleting tables saves storage, especially if the notebook is scheduled daily.</p>
                             </li>
                             <li class="h4header">
                                 Use <code>dbutils.fs.rm()</code> to permanently delete temporary table metadata 
-                                <ul class="defaultBody">
-                                    <li>ADB clusters store table metadata, even if you use drop statements to delete. Before creating temporary tables, use <code>dbutils.fs.rm()</code> to permanently delete metadata. If you don’t use this statement, an error message will appear stating that the table already exists. To avoid this error in daily refreshes, you must use <code>dbutils.fs.rm()</code>.</li>
-                                </ul>
+                                    <p>ADB clusters store table metadata, even if you use drop statements to delete. Before creating temporary tables, use <code>dbutils.fs.rm()</code> to permanently delete metadata. If you don’t use this statement, an error message will appear stating that the table already exists. To avoid this error in daily refreshes, you must use <code>dbutils.fs.rm()</code>.</p>
                             </li>
                             <li class="h4header">
                                 Use <i>Lower()</i> or <i>Upper()</i> when comparing strings to avoid losing data
-                                <ul class="defaultBody">
-                                    <li>ADB can't compare strings with different casing. To avoid losing data, use case conversion statements <i>Lower()</i> or <i>Upper()</i>.</li>
-                                    <li>
-                                        Example:<br /> <code>
+                                    <p>ADB can't compare strings with different casing. To avoid losing data, use case conversion statements <i>Lower()</i> or <i>Upper()</i>. Example:</p>    
+                                        <code>
                                             SELECT 'MAQSoftware' = 'maqsoftware' AS WithOutLowerOrUpper<br />
                                             ,LOWER('MAQSoftware') = 'maqsoftware' AS WithLower<br />
                                             ,UPPER('MAQSoftware') = 'MAQSOFTWARE' AS WithUpper
                                         </code>
-                                    </li>
-                                </ul>
                             </li>
                             <li class="h4header">
-                                Use Scala to improve data processing performance
-                                <ul class="defaultBody">
-                                    <li>ADB’s data processing is based on Apache Spark, which is written in Scala. As a result, Scala performs better than SQL in ADB. Note: Python should still be used for machine learning functions in ADB.</li>
-                                </ul>
+                                Use Scala for data processing
+                                    <p>ADB’s data processing is based on Apache Spark, which is written in Scala. As a result, Scala performs better than SQL in ADB. Note: Python should still be used for machine learning functions in ADB.</p>
                             </li>
                             <li class="h4header">
                                 Use custom functions to simplify complex calculations
-                                <ul class="defaultBody">
-                                    <li>If your calculation requires multiple steps, you can save time and by creating a one-step custom function. ADB offers a variety of built in SQL functions, however to create custom functions, known as user-defined functions (UDF), use Scala. Once you have a custom function, you can call it every time you need to perform that specific calculation.</li>
-                                </ul>
+                                    <p>If your calculation requires multiple steps, you can save time and by creating a one-step custom function. ADB offers a variety of built in SQL functions, however to create custom functions, known as user-defined functions (UDF), use Scala. Once you have a custom function, you can call it every time you need to perform that specific calculation.</p>
                             </li>
                             <li class="h4header">
-                                Use Delta tables to enhance DML command performance
-                                <ul class="defaultBody">
-                                    <li>	In ADB, Hive tables do not support UPDATE and MERGE statements or NOT NULL and CHECK constraints. Delta tables do support these commands, however running large amounts of data on Delta tables decreases query performance. So not to decrease performance, store table versions. </li>
-                                </ul>
+                                Use Delta tables for DML commands
+                                    <p>In ADB, Hive tables do not support UPDATE and MERGE statements or NOT NULL and CHECK constraints. Delta tables do support these commands, however running large amounts of data on Delta tables decreases query performance. So not to decrease performance, store table versions. </p>
                             </li>
                             <li class="h4header">
-                                Use views to minimize storage usage and save costs
-                                <ul class="defaultBody">
-                                    <li>If you need to create intermediate tables, use views to minimize storage usage and save costs. Views are session-oriented and will automatically remove tables from storage after query execution. For optimal query performance, do not use joins or subqueries in views.</li>
-                                </ul>
+                                Use views when creating intermediate tables
+                                    <p>If you need to create intermediate tables, use views to minimize storage usage and save costs. Views are session-oriented and will automatically remove tables from storage after query execution. For optimal query performance, do not use joins or subqueries in views.</p>
                             </li>
                             <li class="h4header">
                                 Enable adaptive query execution (AQE)
-                                <ul class="defaultBody">
-                                    <li>AQE improves large query performance. By default, AQE is disabled in ADB. To enable it, see below.</li>
-                                    <li>Example:<br /><code>set spark.sql.adaptive.enabled = true;</code></li>
-                                </ul>
+                                    <p>AQE improves large query performance. By default, AQE is disabled in ADB. To enable it, use: <code>set spark.sql.adaptive.enabled = true;</code></p>
                             </li>
                             <li class="h4header">
-                                Partition by columns to enhance performance
-                                <ul class="defaultBody">
-                                    <li>Delta tables in ADB support partitioning, which enhances performance. You can partition by a column if you expect data in that partition to be at least 1 GB. If column cardinality is high, do not use that column for partitioning. For example, if you partition by user ID and there are 1M distinct user IDs, partitioning would increase table load time.</li>
-                                    <li>
-                                        Syntax  Example:<br />
+                                Partition by columns
+                                    <p>Delta tables in ADB support partitioning, which enhances performance. You can partition by a column if you expect data in that partition to be at least 1 GB. If column cardinality is high, do not use that column for partitioning. For example, if you partition by user ID and there are 1M distinct user IDs, partitioning would increase table load time. Syntax example:</p>
                                         <code>CREATE TABLE events (<br />
                                             DATE DATE<br />
                                             ,eventId STRING<br />
@@ -177,28 +155,19 @@
                                             ,data STRING<br />
                                             ) USING delta PARTITIONED BY (DATE)
                                         </code>
-                                    </li>
-                                </ul>
                             </li>
                             <li class="h4header">
                                 Use key vault credentials when creating mount points
-                                <ul class="defaultBody">
-                                    <li>When creating mount points to Azure Data Lake Storage (ADLS), use a key vault client ID and client secret to enhance security.</li>
-                                </ul>
+                                    <p>When creating mount points to Azure Data Lake Storage (ADLS), use a key vault client ID and client secret to enhance security.</p>
                             </li>
                             <li class="h4header">
                                 Query directly on parquet files from ADLS
-                                <ul class="defaultBody">
-                                    <li>If you need to use the data from parquet files, do not extract into ADB in intermediate table format. Instead, directly query on the parquet file to save time and storage.</li>
-                                    <li>Example:<br /><code>SELECT ColumnName FROM parquet.`Location of the file`</code></li>
-                                </ul>
+                                    <p>If you need to use the data from parquet files, do not extract into ADB in intermediate table format. Instead, directly query on the parquet file to save time and storage. Example:</p>
+                                    <code>SELECT ColumnName FROM parquet.`Location of the file`</code>
                             </li>
                             <li class="h4header">
                                 Specify distribution when publishing data to Azure Data Warehouse (ADW)
-                                <ul class="defaultBody">
-                                    <li>Use hash distribution for fact tables or large tables, round robin for dimensional tables, replicated for small dimensional tables. For more information, check out: <a href="https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute">Distributed tables design guidance - Azure Synapse Analytics</a></li>
-                                    <li>
-                                        Example:<br />
+                                    <p>Use hash distribution for fact tables or large tables, round robin for dimensional tables, replicated for small dimensional tables. Example: </p>
                                         <code>df.write \<br />
                                             .format("com.databricks.spark.sqldw") \<br />
                                             .option("url", "jdbc:sqlserver://&lt;the-rest-of-the-connection-string&gt;<br />
@@ -208,44 +177,32 @@
                                                 .option("tableOptions", "table_options") \<br />
                                                 .save()<br />
                                         </code>
-                                    </li>
-                                </ul>
+                                    <br>
+                                    <p>For more information, check out: <a href="https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute" target="blank" class="underlined">Distributed tables design guidance - Azure Synapse Analytics</a></p>
                             </li>
                             <li class="h4header">
                                 Customize cluster termination time
-                                <ul class="defaultBody">
-                                    <li>Terminating inactive clusters saves costs. ADB automatically terminates clusters based on a default down time. As different projects have different needs, it’s important to customize the down time to avoid premature or delayed termination. For example: set a longer down time for development environments, as work is continuous.</li>
-                                </ul>
+                                    <p>Terminating inactive clusters saves costs. ADB automatically terminates clusters based on a default down time. As different projects have different needs, it’s important to customize the down time to avoid premature or delayed termination. For example: set a longer down time for development environments, as work is continuous.</p>
                             </li>
                             <li class="h4header">
                                 Enable cluster autoscaling
-                                <ul class="defaultBody">
-                                    <li>ADB offers cluster autoscaling, which is disabled by default. Enable this feature to enhance job performance. Instead of providing a fixed number of worker nodes during cluster creation, you should provide a minimum and maximum. ADB then automatically reallocates the worker nodes based on job characteristics.</li>
-                                </ul>
+                                    <p>ADB offers cluster autoscaling, which is disabled by default. Enable this feature to enhance job performance. Instead of providing a fixed number of worker nodes during cluster creation, you should provide a minimum and maximum. ADB then automatically reallocates the worker nodes based on job characteristics.</p>
                             </li>
                             <li class="h4header">
                                 Use Azure Data Factory (ADF) to run ADB notebook jobs
-                                <ul class="defaultBody">
-                                    <li>If you run numerous notebooks daily, the ADB job scheduler will not be efficient. The ADB job scheduler cannot set notebook dependency, so you would have to store all notebooks in one master, which is difficult to debug. Instead, schedule jobs through Azure Data Factory, which enables you to set dependency and easily debug if anything fails.</li>
-                                </ul>
+                                    <p>If you run numerous notebooks daily, the ADB job scheduler will not be efficient. The ADB job scheduler cannot set notebook dependency, so you would have to store all notebooks in one master, which is difficult to debug. Instead, schedule jobs through Azure Data Factory, which enables you to set dependency and easily debug if anything fails.</p>
                             </li>
                             <li class="h4header">
                                 Use the retry feature in ADF when scheduling jobs
-                                <ul class="defaultBody">
-                                    <li>Processing notebooks in ADB through ADF can overload the cluster, causing notebooks to fail. If failure occurs, the entire job should not stop. To continue work from the point of failure, set ADF to retry two to three times with five-minute intervals. As a result, the processing should continue from the set time, saving you time and effort.</li>
-                                </ul>
+                                    <p>Processing notebooks in ADB through ADF can overload the cluster, causing notebooks to fail. If failure occurs, the entire job should not stop. To continue work from the point of failure, set ADF to retry two to three times with five-minute intervals. As a result, the processing should continue from the set time, saving you time and effort.</p>
                             </li>
                             <li class="h4header">
                                 Implement failure checkpoints while publishing data
-                                <ul class="defaultBody">
-                                    <li>With ADB, you can dump data into multiple resources like ADW or ADLS. Publishing numerous tables to another resource takes time. If publishing fails, do not restart the entire process. Implement checkpoints, so that you can restart from the point of failure.</li>
-                                </ul>
+                                    <p>With ADB, you can dump data into multiple resources like ADW or ADLS. Publishing numerous tables to another resource takes time. If publishing fails, do not restart the entire process. Implement checkpoints, so that you can restart from the point of failure.</p>
                             </li>
                             <li class="h4header">
-                                Consider using ADB Premium for increased security and privacy compliance
-                                <ul class="defaultBody">
-                                    <li>Your business’s data has never been more valuable. Additional security is a worthwhile investment. ADB Premium includes 5-level access control. For more features, check out: <a href="https://www.linkedin.com/pulse/azure-databricks-standard-vs-premium-ashish-kumar">Premium vs Standard</a>.</li>
-                                </ul>
+                                Consider upgrading to ADB Premium
+                                    <p>Your business’s data has never been more valuable. Additional security is a worthwhile investment. ADB Premium includes 5-level access control. For more features, check out: <a href="https://azure.microsoft.com/en-us/pricing/details/databricks/" target="blank" class="underlined">Premium vs. Standard</a>.</p>
                             </li>
                         </ol>
                     </div>
@@ -253,7 +210,6 @@
                 <div class="row ptb-15">
                     <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
                         <h3>References</h3>
-                        <p>Microsoft offers additional documents that provide a high-level framework for best practices. We encourage you to review the following: </p>
                         <ul class="defaultBody">
                             <li><a href="https://docs.microsoft.com/en-us/azure/databricks/delta/">Delta tables</a> – Microsoft Corporation, last updated June 11, 2021</li>
                             <li><a href="https://docs.microsoft.com/en-us/azure/databricks/spark/latest/spark-sql/language-manual/sql-ref-datatypes#sql">Datatypes in ADB</a> – Microsoft Corporation, last updated June 29, 2021</li>
