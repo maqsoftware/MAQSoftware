@@ -124,8 +124,8 @@
             <div class="container">
                 <div class="row ptb-15">
                     <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
-                        <p class="paragraph">Before you start:</p>
-                        <p class="h4header">Tip #1: Always clear your DAX cache before optimizing DAX</p>
+                        <h2>Before you start:</h2>
+                        <p class="paragraph">Tip #1: Always clear your DAX cache before optimizing DAX</p>
                         <p class="paragraph">Your DAX cache builds up from internal VertiPaq queries. You can clear your cache from within DAX Studio. Resetting your cache enables you to effectively measure performance gains.</p>
                         <div id="syntax"></div>
                     <h2>Improving Your DAX Syntax</h2>
@@ -140,7 +140,6 @@
                                     <li>DISTINCT(): Does <i>not</i> return any blanks added due to an integrity violation. The DISTINCT() function includes a blank only if it is part of the original data.</li>
                                     <li>VALUES(): Returns both blanks from the original data and blanks that Power BI added due to referential integrity violations.</li>
                                 </ul>
-                                <br>
                                     <p class="paragraph">Be consistent in your use of the DISTINCT() and VALUES() functions throughout the entire report. Otherwise, you’ll have inconsistent values for blank columns. We recommend using the VALUES() function if blank values are not an issue.</p>
                             </li>
                             <li class="h4header">Add column and measure references in your DAX expressions
@@ -160,6 +159,7 @@
                     <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
                          <div id="functions"></div>
                     <h2>Optimizing Your DAX Functions</h2>
+                            <ol class="pb-10">
                                 <li class="h4header"> Use ISBLANK() instead of =Blank() check
                                     <p class="paragraph">Use the built-in function ISBLANK() to check for any blank values instead of using the comparison operator = Blank(). While = Blank() returns ‘True’ value for either blank values or empty strings, IsBlank exclusively checks for blanks.</p>
                             </li>
@@ -174,7 +174,7 @@
                             </li>
                             <li class="h4header">  Use SELECTEDVALUE() instead of VALUES()
                                     <p class="paragraph">The VALUES() function returns an error if it encounters multiple values. Often, users address the error using Error functions, which negatively affects performance.</p>
-                                    <p class-"paragraph">Instead of using VALUES(), use SELECTEDVALUE(). The SELECTEDVALUE() function returns a blank if it encounters multiple values (instead of an error).</p>
+                                    <p class="paragraph">Instead of using VALUES(), use SELECTEDVALUE(). The SELECTEDVALUE() function returns a blank if it encounters multiple values (instead of an error).</p>
                             </li>
                             <li class="h4header"> Use variables instead of repeating measures inside the IF branch
                                     <p class="paragraph">Incorrect DAX: <code>Ratio = IF([Total Rows] > 10, SUM(Revenue) /[Total Rows], 0)</code> </p>
@@ -200,11 +200,11 @@
                             <li class="h4header"> Use COUNTROWS instead of COUNT
                                     <p class="paragraph">In Power BI, you can either use the COUNT function to count column values, or the COUNTROWS function to count table rows. Both functions achieve the same result if the counted column contains no BLANKs.</p> 
                                     <p class="paragraph">COUNTROWS is usually the better option for three reasons:</p> 
-                                        <ul class="defaultBody">
+                                        <ol class="defaultBody">
                                             <li>It's more efficient, and will perform better</li>
                                             <li>It doesn't consider BLANKs</li>
                                             <li>The formula intention is clearer and self-descriptive</li>
-                                        </ul>
+                                        </ol>
                                 <p class="paragraph">For example:<br>
                                 <code>Sales Orders = COUNT(Sales [OrderDate])</code><br>
                                 versus<br>
@@ -215,7 +215,7 @@
                                     <p class="paragraph">The SEARCH() DAX function accepts the last parameter as the value that the query must return if the search string is not found. You should always use the SEARCH() function instead of using Error functions along with SEARCH().</p>
                             </li>
                             <li class="h4header"> ALL vs. ALLExcept
-                                    <p>ALLEXCEPT() behaves exactly like ALL(), VALUES() as long as the “exempted” columns are columns on the pivot. ALLEXCEPT() does NOT preserve pivot context on columns that are not on the pivot. Use ALL() instead of ALLEXCEPT() when using VALUES()</p>
+                                    <p class="paragraph">ALLEXCEPT() behaves exactly like ALL(), VALUES() as long as the “exempted” columns are columns on the pivot. ALLEXCEPT() does NOT preserve pivot context on columns that are not on the pivot. Use ALL() instead of ALLEXCEPT() when using VALUES()</p>
                             </li>
                         </ol>  
                     </div>
@@ -228,6 +228,7 @@
                     <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
                          <div id="mistakes"></div>
                     <h2>Common Mistakes to Avoid</h2>                       
+                            <ol class="pb-10">
                              <li class="h4header">Do not change BLANK values to zeros or other strings
                                     <p class="paragraph">It is common practice to replace blanks with zeros or other strings. However, Power BI automatically filters all rows with blank values. When viewing results from tables with large amounts of data, this limits the result set and improves performance.</p>
                                     <p class="paragraph">If you replace blanks, Power BI does not filter the unwanted rows, negatively affecting performance.</p>
@@ -235,7 +236,7 @@
                             <li class="h4header"> Use (a-b)/b along with variables instead of a/b — 1 or a/b*100–100
                                     <p class="paragraph">It is common practice to use a/b — 1 to calculate a ratio and avoid duplicate measure calculations. However, you can achieve the same performance by using variables and using (a-b)/b to calculate the ratio.</p>
                                     <p class="paragraph">If both a and b are blank values, then (a-b)/b returns a blank value and Power BI will filter the values out. a/b — 1 would return -1 as the result because both a and b are integers.</p>
-                                    <p>Reference: <a href="https://www.sqlbi.com/articles/optimizing-if-conditions-using-variables/" target="blank" class="underlined">sqlbi</a></p>
+                                    <p class="paragraph">Reference: <a href="https://www.sqlbi.com/articles/optimizing-if-conditions-using-variables/" target="blank" class="underlined">sqlbi</a></p>
                             </li>
                             <li class="h4header"> Stop using IFERROR() and ISERROR()
                                     <p class="paragraph">The IFERROR() and ISERROR() functions were widely used in Excel when applying the FIND() and SEARCH() functions. They were necessary because FIND() and SEARCH() returned errors if the query did not obtain the required result.</p>
@@ -273,6 +274,10 @@
                             <li><a href="https://docs.microsoft.com/en-us/power-bi/power-bi-reports-performance">Optimization guide for Power BI</a> – Microsoft Corporation, published April 2, 2021 </li>
                         </ul>  
                         <br>
+                    </div>
+                </div>
+            </div>
+        </section>
                 <!-- Up Next ---------------------------------------------------------------------------->
                 <div class = "row"> 
                     <div class="offset-md-1 col-lg-4 col-md-4 col-sm-6 mb-sm-30">
@@ -301,10 +306,6 @@
                     <!-- End Text Section -->
                 </div> 
                 <!-- End Up Next ---------------------------------------------------------------------------->
-                    </div>
-                </div>
-            </div>
-        </section>
         <!-- END CONTENT ---------------------------------------------------------------------------->
         <!-- FOOTER -->
         <footer class="footer pt-60" id="footer">
