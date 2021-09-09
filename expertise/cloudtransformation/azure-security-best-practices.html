@@ -119,6 +119,7 @@
                 <div class="row ptb-15">
                     <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
                 <h2><div id="sensitive">Limiting Access to Sensitive Data</div></h2>
+                        <ol class="pb-10" stype="font-family: "Roboto">                        
                         <li class="h4header">Implement a <a href="https://www.microsoft.com/en-us/security/business/zero-trust" target="_blank">Zero Trust</a> security model
                                 <p class=defaultBody>The Zero Trust model is a security model that constantly checks whether users within the system should have access to certain files and systems. With hybrid work on the rise, <a href="https://www.wsj.com/articles/why-the-hybrid-workplace-is-a-cybersecurity-nightmare-11623164400" target="_blank">cyberattacks jumped 238%</a>. From a security standpoint, it’s more important now than ever to plan for the worst-case scenario. The Zero Trust model operates on the principle of “never trust, always verify.” It assumes the corporate firewall has already been breached and verifies each request that comes through as if it was coming from an uncontrolled network. </p>
                                  <p class=defaultBody>The Zero Trust model’s guiding principles are:                         
@@ -179,7 +180,6 @@
                                         <li>Improve security by following recommended controls for each Azure service</li>
                                         <li>Protect against threats on both infrastructure as a service (IaaS) and platform as a service (PaaS) environments</li>
                                         </ul>
-                                <br>
                                 <p class=defaultBody><strong>How to use Azure Security Center:</strong></p>
                                 <p class=defaultBody>Define your security admins. The security admin role handles alerts, Azure Defender, security policy, and the auto provisioning of log analytics and extensions. As a rule of thumb, developers should be classified using the Security Reader role.</p>
                                 <p class=defaultBody>To review your security status using Azure Security Center, go to the Azure menu and select Security Center>Overview. You will see:</p>
@@ -214,6 +214,7 @@
                                 <p class=defaultBody>A managed identity in Azure Active Directory (AAD) enables applications to easily access other AAD-protected resources such as Azure Key Vault. The Azure platform manages identities, eliminating the need to provision or rotate secrets.</p>
                                 <p class=defaultBody>Managed identity also automatically renews service principals, which should always be enabled. Service principals are AAD application resources that perform unattended resource and service-level operations.</p>
                                 <img src="/img/blog/BPG003-1.jpg" style="border:ridge">
+                                <br>
                         </li>
                         <li class="h4header">Remove in-development copies of databases
                                 <p class=defaultBody>During the software development process, programmers create copies of existing databases to test their code. Additional backups are created during system software upgrades when installing new versions of applications. Over time, developers move on to new projects. Often, after moving to a new project, developers do not remove unused copies and files from previous systems. Leaving clutter on the server and file store is like leaving tools on the floor of a factory. Someone is bound to trip and get hurt.</p>
