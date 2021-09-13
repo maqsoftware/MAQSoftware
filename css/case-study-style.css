@@ -1,1 +1,69 @@
 
+p {
+    color: #323232;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 40px;
+    margin: 0 0 20px;
+}
+
+ul {
+    color: #323232;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 32px;
+}
+
+.case-study-quick-fact-group {
+    margin-bottom: 24px;
+}
+
+h1.case-study-heading-text {
+    font-family: raleway, sans-serif;
+    font-size: 27px;
+    letter-spacing: 0px;
+    line-height: 37px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+p.case-study-summary {
+    color: #323232;
+    font-family: roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+p.fact {
+    color: #323232;
+    font-family: raleway, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    line-height: 30px;
+    margin-top: 0px;
+    margin-bottom: 16px;
+}
+
+p.fact-label {
+    color: #323232;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 24px;
+    margin-top: 0px;
+    margin-bottom: 16px;
+}
+
+span.case-study-tag-header {
+    color: #ffffff;
+    font-family: roboto, sans-serif;
+    font-weight: 700;
+    margin-top: 0;   
+}
