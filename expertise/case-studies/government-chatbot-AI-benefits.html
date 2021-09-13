@@ -88,12 +88,12 @@
             <!-- End Intro Section -->
             <!-- CONTENT --------------------------------------------------------------------------------->
             <!-- Case Studies Section -->
-            <section id="case-studies" class="ptb-40">
+            <section id="case-studies" class="ptb-60">
                 <div class="container">
                     <div class="row" id="CaseStudyParentdiv">
 
                         <!-- Sidebar -->
-                        <div class="col-lg-4 col-md-4">
+                        <div class="col-lg-4 col-md-4 case-study-sidebar">
                             <div>
                                 <img src="/img/case-study/CS-36-logo.png" />
                             </div>
@@ -150,52 +150,54 @@
                                 <p>
                                         While PSEs could manually search the policy manual using keywords, their search terms may not match the specific language of the manual. To find the missing information, PSEs relied on experienced coworkers. Because PSEs needed help so often, senior members of the DES policy team realized they could save time by providing responses to common questions. The policy team asked us to propose an automated or AI-driven solution that would save time for their senior staff members. After a detailed analysis, we concluded that what the DES needed was a chatbot.         
                                 </p>    
-                        </div>
-                            <div>
-                                <h2>Key Challenges</h2>
-                                <p>
-                                    <ul>
-                                        <li>Develop a chatbot that responds to policy questions using conversational language</li>
-                                        <li>Improve Program Service Evaluator training</li>
-                                        <li>Enable Program Service Evaluators to easily access policy information without searching through the entire policy manual</li>
-                                        <li>Reduce the time Program Service Evaluators spend searching for answers</li>
-                                    </ul>
-                                </p>
-                            </div>
-                            <div>
-                                <h2>Our Solution</h2>
-                                <h3>SEAN: Why Use a Chat Bot?</h3>
-                                <p>A chatbot offered several advantages over the PSEs’ previous methods of gathering information, including:</p>
-                                <ul>
-                                        <li>Responding to common questions </li>
-                                        <li>Reducing the time commitments of senior employees </li>
-                                        <li>Enabling PSEs to obtain information from the DES policy manual without using the manual's search function  </li>
-                                </ul>
-                                <p>With a chatbot, PSEs can ask their questions using everyday language, and receive an accurate response instantly. We built the chatbot using Azure Cognitive Services in four development stages: Preview, MVP, MVP+, and Pilot. </p>
-                                <div>
-                                    <img src="/img/case-study/Arizona Chatbot case-study-body-1.png" />
-                                </div>
-                                <p> We released the first preview build of the chatbot within three weeks of starting the project. This iteration responded to PSE questions with a knowledge base of stored questions and responses. The initial build allowed us to get early feedback and identify key challenges we still needed to address. </p>
-                                <p> The first challenge was that the build didn’t adequately address the size and details of the policy manual. The build’s knowledge base covered 500 of the most common PSE questions and responses, which wasn’t enough to address the intricacies of the manual. During the Preview stage, PSEs frequently asked common questions the chatbot was unable to answer. The chatbot also returned answers unrelated to the PSEs’ queries. </p>
-                                <p> A second challenge was that the initial build's search function did not meet client requirements. The old policy manual search engine prioritized the frequency of typed keywords. Our chatbot's search function prioritized question stems. The result: experienced PSEs did not find our search function intuitive. To improve the chatbot's search function, the chatbot needed to return a range of results when asked a single keyword. A specific result needed to appear when multiple keywords were used. </p>
-                                <p> The challenges we encountered in the preview stage defined the MVP build. Our chatbot needed to mimic the behavior of modern search engines. Our chatbot also needed to provide conversational responses to questions phrased in natural language. Finally, our chatbot's knowledge base needed to grow a lot. Ultimately, we expanded the chatbot's knowledge base from 500 question-and-response pairs to 5,000. </p>
-                                <h3>Using AI to Deliver Accurate Answers, Fast</h3>
-                                <p>We named our chatbot SEAN, which stands for Service Evaluation Answers Now. One of the most critical features of SEAN was its ability to deliver the right answers quickly. During the MVP phase, we automated the generation of questions and responses when the chatbot crawled policy content. Whenever content was added, revised, or deleted from the manual, the chatbot automatically crawled the manual's pages and updated the knowledge base. The new build even allowed users to narrow the search categories to further refine results.</p>
-                                <p>We further refined results through continuous user feedback. If users struggled to find the information they needed, a question-and-response pair was automatically generated with help from the policy team. Providing a structured approach for question-and-response pairs significantly improved the speed at which the bot learned.</p>
-                                <p>As we moved through development stages, we conducted weekly review meetings and progressively increased the audience size. In review meetings, we acknowledged specific chatbot queries and identified mismatched keywords. Because we addressed concerns raised by PSEs, they felt responsible for the outcome. PSEs and supervisors then became champions for the chatbot. Through our extensive training, the chatbot learned quickly. Eventually, the chatbot returned results with over 90% accuracy.</p>
-                                <p>See SEAN in action here: <a href="https://des.az.gov/services/basic-needs/food-assistance/information-des-partners/cash-and-nutrition-assistance-policy" target="_blank">Policy Manuals for Nutrition, Cash, and Medical Assistance | Arizona Department of Economic Security</a></p>
-                                <div>
-                                    <img src="/img/case-study/CS-36-body.png" />
-                                </div>
-                                <h3>A Chatbot for Everyone: The Importance of User Friendliness in AI</h3>
-                                <p>The chatbot is currently used by over 1,700 PSEs with varying degrees of expertise. We also created an easy-to-use admin portal. The admin portal allows users to customize chatbot responses, manually trigger policy database crawls, track case numbers, and view response metrics.</p>
-                                <p>The web interface features Sean, a welcoming, friendly avatar. Through the web interface, PSEs can track case numbers, resize the bot, and export conversations. When users type an ambiguous question, the chatbot offers multiple possible responses (with references).</p>
-                                <p>PSEs can also use our chatbot via Skype for Business. Skype interactivity posed significant challenges, as the interface had to be entirely text-based. We created intuitive menu options that users selected via number input. Ultimately, the completed Skype interface offered the same functionalities as the web interface.</p>
-                                <p>User friendliness was a top priority for both the SEAN interface and the admin portal. PSEs that were new with the chatbot can interact with it, understand it, and use it proficiently within minutes. In our hand-off, the DES project director observed that the chatbot integrates seamlessly into the PSEs’ workflow.</p>
                             </div>
                         </div>
                     </div>
                     <div class="pt-40">
+                        <h2>Key Challenges</h2>
+                        <p>
+                            <ul>
+                                <li>Develop a chatbot that responds to policy questions using conversational language</li>
+                                <li>Improve Program Service Evaluator training</li>
+                                <li>Enable Program Service Evaluators to easily access policy information without searching through the entire policy manual</li>
+                                <li>Reduce the time Program Service Evaluators spend searching for answers</li>
+                            </ul>
+                        </p>
+                        <h2>Our Solution</h2>
+                        <h3>SEAN: Why Use a Chat Bot?</h3>
+                        <p>A chatbot offered several advantages over the PSEs’ previous methods of gathering information, including:</p>
+                        <ul>
+                                <li>Responding to common questions </li>
+                                <li>Reducing the time commitments of senior employees </li>
+                                <li>Enabling PSEs to obtain information from the DES policy manual without using the manual's search function  </li>
+                        </ul>
+                        <p>With a chatbot, PSEs can ask their questions using everyday language, and receive an accurate response instantly. We built the chatbot using Azure Cognitive Services in four development stages: Preview, MVP, MVP+, and Pilot. </p>
+                        <figure class="case-study-graphic">
+                            <img src="/img/case-study/Arizona Chatbot case-study-body-1.png" />
+                            <figcaption class="graphic-caption">
+                                You many use this space for a small caption.
+                            </figcaption>
+                        </figure>
+                        <p> We released the first preview build of the chatbot within three weeks of starting the project. This iteration responded to PSE questions with a knowledge base of stored questions and responses. The initial build allowed us to get early feedback and identify key challenges we still needed to address. </p>
+                        <p> The first challenge was that the build didn’t adequately address the size and details of the policy manual. The build’s knowledge base covered 500 of the most common PSE questions and responses, which wasn’t enough to address the intricacies of the manual. During the Preview stage, PSEs frequently asked common questions the chatbot was unable to answer. The chatbot also returned answers unrelated to the PSEs’ queries. </p>
+                        <p> A second challenge was that the initial build's search function did not meet client requirements. The old policy manual search engine prioritized the frequency of typed keywords. Our chatbot's search function prioritized question stems. The result: experienced PSEs did not find our search function intuitive. To improve the chatbot's search function, the chatbot needed to return a range of results when asked a single keyword. A specific result needed to appear when multiple keywords were used. </p>
+                        <p> The challenges we encountered in the preview stage defined the MVP build. Our chatbot needed to mimic the behavior of modern search engines. Our chatbot also needed to provide conversational responses to questions phrased in natural language. Finally, our chatbot's knowledge base needed to grow a lot. Ultimately, we expanded the chatbot's knowledge base from 500 question-and-response pairs to 5,000. </p>
+                        <h3>Using AI to Deliver Accurate Answers, Fast</h3>
+                        <p>We named our chatbot SEAN, which stands for Service Evaluation Answers Now. One of the most critical features of SEAN was its ability to deliver the right answers quickly. During the MVP phase, we automated the generation of questions and responses when the chatbot crawled policy content. Whenever content was added, revised, or deleted from the manual, the chatbot automatically crawled the manual's pages and updated the knowledge base. The new build even allowed users to narrow the search categories to further refine results.</p>
+                        <p>We further refined results through continuous user feedback. If users struggled to find the information they needed, a question-and-response pair was automatically generated with help from the policy team. Providing a structured approach for question-and-response pairs significantly improved the speed at which the bot learned.</p>
+                        <p>As we moved through development stages, we conducted weekly review meetings and progressively increased the audience size. In review meetings, we acknowledged specific chatbot queries and identified mismatched keywords. Because we addressed concerns raised by PSEs, they felt responsible for the outcome. PSEs and supervisors then became champions for the chatbot. Through our extensive training, the chatbot learned quickly. Eventually, the chatbot returned results with over 90% accuracy.</p>
+                        <p>See SEAN in action here: <a href="https://des.az.gov/services/basic-needs/food-assistance/information-des-partners/cash-and-nutrition-assistance-policy" target="_blank">Policy Manuals for Nutrition, Cash, and Medical Assistance | Arizona Department of Economic Security</a></p>
+                        <figure class="case-study-graphic">
+                            <img src="/img/case-study/CS-36-body.png" />
+                            <figcaption class="graphic-caption">
+                                You many use this space for a small caption.
+                            </figcaption>
+                        </figure>
+                        <h3>A Chatbot for Everyone: The Importance of User Friendliness in AI</h3>
+                        <p>The chatbot is currently used by over 1,700 PSEs with varying degrees of expertise. We also created an easy-to-use admin portal. The admin portal allows users to customize chatbot responses, manually trigger policy database crawls, track case numbers, and view response metrics.</p>
+                        <p>The web interface features Sean, a welcoming, friendly avatar. Through the web interface, PSEs can track case numbers, resize the bot, and export conversations. When users type an ambiguous question, the chatbot offers multiple possible responses (with references).</p>
+                        <p>PSEs can also use our chatbot via Skype for Business. Skype interactivity posed significant challenges, as the interface had to be entirely text-based. We created intuitive menu options that users selected via number input. Ultimately, the completed Skype interface offered the same functionalities as the web interface.</p>
+                        <p>User friendliness was a top priority for both the SEAN interface and the admin portal. PSEs that were new with the chatbot can interact with it, understand it, and use it proficiently within minutes. In our hand-off, the DES project director observed that the chatbot integrates seamlessly into the PSEs’ workflow.</p>
                         <h2>Business Outcomes</h2>
                         <p>SEAN has increased evaluation efficiency for over 1,700 PSEs across 160 DES offices, drastically reducing processing time for 1.2 million Arizona benefits recipients. The chatbot provides PSEs with speedy responses, answering hundreds of questions each day. Most importantly, SEAN reduces wait time for applicants without having to increase DES staff. </p>
                         <p>With SEAN, PSEs can access FAQs or the exact part of the manual they need within seconds. As a result, SEAN reduces the amount of time citizens spend in DES offices, and the number of frustrated citizens coming to the office in the first place. Now, citizens understand their eligibility for programs immediately. The chatbot proved to be such a successful internal tool that the DES chose to make SEAN publicly available. Today, any citizen needing to access the policy manuals for Nutrition, Cash, and Medical Assistance can do so on the <a href="https://des.az.gov/services/basic-needs/food-assistance/information-des-partners/cash-and-nutrition-assistance-policy" target="_blank">DES website</a> with SEAN’s help.</p>
