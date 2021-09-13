@@ -1,11 +1,30 @@
 
+h2 {
+    letter-spacing: 0px;
+    margin-top: 20px;
+}
+
+h3 {
+    letter-spacing: 0px;
+    margin-top: 20px;
+}
+
 p {
     color: #323232;
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 0px;
     line-height: 40px;
-    margin: 0 0 20px;
+    margin: 0 0 32px;
+}
+
+figure.case-study-graphic {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+li {
+    margin-bottom: 8px;
 }
 
 ul {
@@ -14,17 +33,40 @@ ul {
     font-weight: 400;
     letter-spacing: 0px;
     line-height: 32px;
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 .case-study-quick-fact-group {
     margin-bottom: 24px;
 }
 
+.case-study-sidebar {
+    padding-right: 32px;
+}
+
+.case-study-tag-header {
+    color: #ffffff;
+    font-family: roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 0;   
+}
+
+figcaption.graphic-caption {
+    color: #323232;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    line-height: 24px;
+    margin-top: 16px;
+}
+
 h1.case-study-heading-text {
     font-family: raleway, sans-serif;
-    font-size: 27px;
+    font-size: 40px;
     letter-spacing: 0px;
-    line-height: 37px;
+    line-height: 48px;
     margin-bottom: 20px;
     padding-top: 10px;
 }
@@ -58,12 +100,7 @@ p.fact-label {
     letter-spacing: 0px;
     line-height: 24px;
     margin-top: 0px;
-    margin-bottom: 16px;
+    margin-bottom: 0px;
 }
 
-span.case-study-tag-header {
-    color: #ffffff;
-    font-family: roboto, sans-serif;
-    font-weight: 700;
-    margin-top: 0;   
-}
+
