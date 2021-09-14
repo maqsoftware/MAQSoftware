@@ -53,17 +53,6 @@ ul {
     padding-right: 32px;
 }
 
-figcaption.graphic-caption {
-    color: #323232;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 0px;
-    line-height: 24px;
-    margin-top: 16px;
-    text-align: center;
-}
-
-
 h1.case-study-heading-text {
     font-family: raleway, sans-serif;
     font-size: 40px;
@@ -105,4 +94,14 @@ p.fact-label {
     margin-top: 0px;
     margin-bottom: 8px;
     padding: 0;
+}
+
+span.graphic-caption {
+    color: #323232;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    line-height: 24px;
+    margin-top: 16px;
+    text-align: center;
 }
