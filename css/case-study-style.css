@@ -62,6 +62,10 @@ h1.case-study-heading-text {
     padding-top: 10px;
 }
 
+img.figure-image {
+    margin-bottom: 24px;
+}
+
 p.case-study-summary {
     color: #323232;
     font-family: roboto, sans-serif;
