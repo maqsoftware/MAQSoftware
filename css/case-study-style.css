@@ -1,0 +1,111 @@
+
+h2 {
+    letter-spacing: 0px;
+    margin-top: 20px;
+}
+
+h3 {
+    letter-spacing: 0px;
+    margin-top: 20px;
+}
+
+p {
+    color: #323232;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 40px;
+    margin: 0 0 32px;
+}
+
+figure.case-study-graphic {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+ul {
+    color: #323232;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 32px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.case-study-quick-fact-group {
+    margin-bottom: 24px;
+}
+
+.case-study-tag-header-text {
+    color: #ffffff;
+    font-family: roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 0;   
+}
+
+.case-study-sidebar {
+    padding-right: 32px;
+}
+
+h1.case-study-heading-text {
+    font-family: raleway, sans-serif;
+    font-size: 40px;
+    letter-spacing: 0px;
+    line-height: 48px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+img.figure-image {
+    margin-bottom: 24px;
+}
+
+p.case-study-summary {
+    color: #323232;
+    font-family: roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+p.fact {
+    color: #323232;
+    font-family: raleway, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    line-height: 20px;
+    margin-top: 0px;
+    margin-bottom: 32px;
+    padding: 0;
+}
+
+p.fact-label {
+    color: #323232;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 16px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+span.graphic-caption {
+    color: #323232;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    line-height: 24px;
+    margin-top: 16px;
+    text-align: center;
+}
