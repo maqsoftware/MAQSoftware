@@ -1,7 +1,7 @@
 var pageSection,
-visualTemplate = '<div class="item"> <div class="nf-col-padding"> <div class="item-box"> <div class="shop-item"> <div class="item-img"> <img alt="@name" src="@img"/> </div><div class="item-mask"> <div class="item-mask-detail"> <div class="item-caption text-center" style="color:white;"> <div> @description </div><a href="https://maqsoftware.com/expertise/powerbi/custom-visuals/@visualpageurl" class="btn btn-line-xs btn-white-line"> <i class="fa"></i>Learn More </a> </div></div></div></div><div class="shop-item-info" style=" display: flex;justify-content: center;align-items: center;"> <h6 class="shop-item-name"><a href="@url" target="_blank"> @name </a></h6> <span> <a target="_blank" href="@pbicertifiedurl"><img class="certified" title ="@starimagetitle" src="@certifiedstarimage"></img></a></span></div></div></div></div>',
+visualTemplate = '<div class="item"> <div class="nf-col-padding"> <div class="item-box"> <div class="shop-item"> <div class="item-img"> <img alt="@name" src="@img"/> </div><div class="item-mask"> <div class="item-mask-detail"> <div class="item-caption text-center" style="color:white;"> <div> @description </div><a href="../expertise/powerbi/custom-visuals/@visualpageurl" class="btn btn-line-xs btn-white-line"> <i class="fa"></i>Learn More </a> </div></div></div></div><div class="shop-item-info" style=" display: flex;justify-content: center;align-items: center;"> <h6 class="shop-item-name"><a href="@url" target="_blank"> @name </a></h6> <span> <a target="_blank" href="@pbicertifiedurl"><img class="certified" title ="@starimagetitle" src="@certifiedstarimage"></img></a></span></div></div></div></div>',
 modalTemplate = '<div class="modal fade product_view" id="model@id"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-header"> <h3 class="modal-title pull-left">@title</t><a target="_blank" href="@pbicertifiedurl"><img style="margin-bottom: 0.1em;" src="@pbicertifiedimage"></img></a></h3> <a href="#" data-dismiss="modal" class="class pull-right"> <span class="glyphicon glyphicon-remove"></span> </a> </div><div class="modal-body"> <div class="row"> <div class="col-md-6 embed-responsive embed-responsive-16by9"> <video id = "video@id" class="embed-responsive-item modal_videos" alt="@name" title="@name" loop controls muted style="height:auto !important"> <source src="@img" type = "video/mp4"></video> </div><div class="col-md-6 product_content"> @content<p> Do you have questions about this visual? Check out our <a style="text-decoration:underline" href="@contacturl">Power BI community forum</a>. </p><a href="@url" target="_blank" class="btn btn-md btn-black-line ">See in AppSource</a> </div></div></div></div></div></div>',
-viewAllVisualTemplate = '<div class="nf-item @category spacing"> <div class="item-box"> <img alt="@name" src="@img" class="item-container"> <div class="item-mask"> <div class="item-caption text-center" style="color:white;"> <div>@description</div><a data-toggle="modal" data-target="#model@id" class="btn btn-line-xs btn-white-line"><i class="fa"></i>Learn More</a> </div></div></div><h6 class="text-center pt-15"><a href="@url" target="_blank">@name</a><a target="_blank" href="@pbicertifiedurl"><img style="margin-bottom: 0.18em" class="certified" title ="@starimagetitle" src="@certifiedstarimage"></img></a></h6></div>';
+viewAllVisualTemplate = '<div class="nf-item @category spacing"> <div class="item-box"> <img alt="@name" src="@img" class="item-container"> <div class="item-mask"> <div class="item-caption text-center" style="color:white;"> <div>@description</div><a href="../expertise/powerbi/custom-visuals/@visualpageurl" class="btn btn-line-xs btn-white-line"><i class="fa"></i>Learn More</a> </div></div></div><h6 class="text-center pt-15"><a href="@url" target="_blank">@name</a><a target="_blank" href="@pbicertifiedurl"><img style="margin-bottom: 0.18em" class="certified" title ="@starimagetitle" src="@certifiedstarimage"></img></a></h6></div>';
 Date.prototype.format = function () {
     "use strict";
     var arrMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -273,20 +273,21 @@ function RenderMartech() {
                     .replace(/@description/g, oVisualConfig[index][this].description)
                     .replace(/@certifiedstarimage/g, oVisualConfig[index][this].certifiedstarimage)
                     .replace(/@starimagetitle/g, oVisualConfig[index][this].starimagetitle)
-                    .replace(/@pbicertifiedurl/g, oVisualConfig[index][this].pbicertifiedurl);
+                    .replace(/@pbicertifiedurl/g, oVisualConfig[index][this].pbicertifiedurl)
+                    .replace(/@visualpageurl/g, (oVisualConfig[index][this].name).replaceAll(" ", "-"));
             })
         });
         visualContentContainer.append(visualContentHtml);
-        modalContainer.append(modalContentHtml);
+        //modalContainer.append(modalContentHtml);
         viewAllContainer.append(viewAllContentHtml);
-        $(document).on('shown.bs.modal', '#modelChart .product_view', function () {
+      /*  $(document).on('shown.bs.modal', '#modelChart .product_view', function () {
             $("#PowerBISliderVisual").trigger('stop.owl.autoplay');
             $(this).find(".modal_videos")[0].play();
         });
         $(document).on('hidden.bs.modal', '#modelChart .product_view', function () {
             $("#PowerBISliderVisual").trigger('play.owl.autoplay');
             $(this).find(".modal_videos")[0].pause();
-        });
+        });*/
     }
     function sliderAll(oSliderConfig) {
         //full-width slider
