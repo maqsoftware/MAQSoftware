@@ -1,0 +1,412 @@
+﻿<!DOCTYPE html>
+<!-- Microdata markup added by Google Structured Data Markup Helper. -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8" />
+    <title>Dynamics 365 Development Best Practices Guide</title>
+    <meta name="title" content="What are the best practices forDynamics 365 Development?" />
+    <meta name="theme-color" content="#c00000">
+    <meta name="description" content="Best practices for Dynamics 365 Development. We have compiled a best practice list our developers use"/>
+    <meta name="keywords" content="MAQ Software, Dynamics 365, Dynamics 365 Customer Engagement, Microsoft Dynamics 365, Dynamics CRM tips, Dynamics best practices, Dynamics deployment best practices, Dynamics 365 best practices, solution, release management, best practices, deployment, blog, implementation, CRM, developers, architects, technical consultant, functional consultant" />
+    <meta name="ROBOTS" content="FOLLOW,INDEX" />
+    <!-- Open Graph data -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Dynamics 365 Development Best Practices Guide" />
+    <meta property="og:description" content="Best practices for Dynamics 365 Development. We have compiled a best practice list our developers use." />
+    <meta property="og:url" content="https://maqsoftware.com/expertise/powerbi/d365-deployment-best-practices" />
+    <meta property="og:image" content="/img/Banners/BPG001-main.jpg" />
+    <meta property="og:image:width" content="450" />
+    <meta property="og:image:height" content="298" />
+    <!-- End Open Graph data -->
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@maqsoftware" />
+    <meta name="twitter:title" content="Dynamics 365 Development Best Practices Guide" />
+    <meta name="twitter:description" content="Best practices for Dynamics 365 Development. We have compiled a best practice list our developers use" />
+    <meta name="twitter:image" content="/img/Banners/BPG001-main.jpg" 
+    <meta name="twitter:url" content="https://maqsoftware.com/expertise/powerbi/d365-development-best-practices" />
+    <!-- End Twitter Card data -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="fragment" content="!">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <!-- Favicone Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="icon" type="image/png" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+    <!-- CSS -->
+    <link href="/css/style.css?v=20210603" rel="stylesheet" type="text/css" />
+    <link href="/css/bootstrap.min.css?v=20170822" rel="stylesheet" type="text/css" />
+    <link href="/css/font-awesome.css?v=20170822" rel="stylesheet" type="text/css" />
+    <link href="/css/ionicons.css?v=20170822" rel="stylesheet" type="text/css" />
+    <link href="/css/plugin/sidebar-menu.css?v=20170822" rel="stylesheet" type="text/css" />
+    <link href="/css/plugin/animate.css?v=20170822" rel="stylesheet" type="text/css" />
+    <link href="/css/jquery-ui.css?v=20170822" rel="stylesheet" type="text/css" />
+    <link href="/css/plugin/owl.carousel.2.0.0-beta.3.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--Facebook Java SDK-->
+    <div id="fb-root"></div>
+    <script>
+(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <!-- Preloader -->
+    <section id="preloader">
+        <div class="loader" id="loader">
+            <div class="loader-img"></div>
+        </div>
+    </section>
+    <!-- End Preloader -->
+    <!-- Site Wraper -->
+    <div class="wrapper">
+        <!-- Header -->
+        <header id="header" class="header">
+        </header>
+        <!-- End Header -->
+        <!-- Intro Section -->
+        <section class="inner-intro dark-bg bg-image parallax parallax-background1 aboutposter" data-background-img="/img/Banners/General_Website_Banner_THIN.png">
+        </section>
+        <!-- End Intro Section -->
+        <!-- Content Section -->
+        <section id="about" class="wow fadeIn pt-90 pb-25">
+            <div class="container">
+                <div class="row text-left">
+                    <div class="col-md-10 offset-md-1">
+                        <h1>Dynamics 365 Development Best Practices Guide</h1>
+                        <p><span><i class="ion ion-calendar"></i> Last Updated: October 21, 2021 </span><span><i class="ion ion-clock"></i> 5 Minutes to Read</span><p>
+                        <!-- Social Media -->
+                        <!-- Facebook Share -->
+                        <div class="fb-share-button" data-href="https://maqsoftware.com//expertise/powerbi/d365-development-best-practices" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmaqsoftware.com%2Fexpertise%2Fpowerbi%2Fd365-development-best-practices&amp;src=sdkpreparse">Share</a></div>
+                        <!-- End Facebook Share -->
+                        <!-- Twitter Share -->
+                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="What are the best practices for Dynamics 365 development?" data-show-count="false">Tweet</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <!-- End Twitter Share -->
+                        <!-- LinkedIn Share -->
+                        <span class="linkedin-share-button">
+                            <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                            <script type="IN/Share" data-counter="right">
+                            </script>
+                        </span>
+                        <!-- End LinkedIn Share -->
+                        <!-- End Social Media -->
+                        <br><br>
+                        <p class="lead">This guide provides the best practices you need to optimize the following Dynamics 365 (D365) functions:</p>
+                        <div>
+                            <ul>
+                                <li><a href="#Solutions">Solutions</a></li>
+                                <li><a href="#Fields">Fields</a></li>
+                                <li><a href="#Relationships">Relationships</a></li>
+                                <li><a href="#Forms">Forms</a></li>
+                                <li><a href="#Views">Views</a></li>
+                                <li><a href="#ModeldrivenApps">Model-driven Apps</a></li>
+                                <li><a href="#Processes">Processes</a></li>
+                                <li><a href="#WebResources">Web Resources</a></li>
+                                <li><a href="#Plug-ins">Plug-ins</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pb-40">
+            <div class="container">
+                <div class="row ptb-15">
+
+                    <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1" id="Solutions">
+                        <h3>Solutions</h3>
+                        <ol class="pb-10">
+                            <li class="h4header">
+                                Add a publisher prefix
+                                <p>Adding a prefix to solution components that’s relative to you or your organization enables users to quickly identify who created or customized each component.</p>
+                            </li>
+                            <li class="h4header">
+                                Manage customizations in custom solutions (not default solutions)
+                                <p>Customizations created within default solutions cannot be exported or distributed to other environments. In addition, the default solutions use their default publisher, which results in an unspecified/uncontrolled publisher being assigned to components. To avoid these issues, create custom components (e.g., entities, web resources, modern apps, processes, security roles) within custom solutions. If you want to customize out-of-the-box (OOB) components, add them to the custom solution before customization.</p>
+                            </li>
+                            <li class="h4header">
+                                Add detailed component descriptions
+                                <p>Adding detailed descriptions to entities, forms, views, fields, and processes prevents confusion and enables fellow developers to easily identify what the component is for.</p>
+                            </li>
+                            <li class="h4header">
+                                Export unmanaged and managed solutions for every release
+                                <p>Unmanaged solutions can be used to reconfigure the system or set up a new instance if the development environment fails. Managed solutions must be used to deploy customizations in higher environments (QA, pre-production, and production).</p>
+                            </li>
+                            <li class="h4header">
+                                Create separate, unmanaged solutions for ribbon customizations
+                                <p>Ribbon workbench imports entire solutions, recreates each entity ribbon, and then publishes them. Fewer entities reduce ribbon update time.</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1" id="Fields">
+                        <h3>Fields</h3>
+                        <ol class="pb-10">
+                            <li class="h4header">
+                                Use unique field names
+                                <p>Duplicate field names may cause an error while importing data, or confuse users creating personal views, Power Automate flows, and more.</p>
+                            </li>
+                            <li class="h4header">
+                                Choose the correct field data type
+                                <p>Choose a data type that accurately reflects the data you want to store. If your data contains null values, ensure the data type you select supports null values.</p>
+                                <p><b>For example:</b> If time is not required for a date, then choose the “Date Only” field data type. Or, if a field allows only two values without any default value, then choose the “Option Set” data type.</p>
+                            </li>
+                            <li class="h4header">
+                                Create alternate keys for fields or group of fields
+                                <p>This prevents the user from creating records with duplicate field values or combination of field values.</p>
+                                <p><b>Warning:</b> Once the key is deployed to the managed environment, it cannot be deleted.</p>
+                            </li>
+                            <li class="h4header">
+                                Check ‘Disable most recently used items for this field’ setting for filtered lookup fields
+                                <p>This prevents users from selecting unrelated options from recent searches.</p>
+                                <p><b>For example:</b> If the lookup fields are ‘State’ and ‘City’, disable most recently used items for ‘City’. If not disabled, users may be able to select a city from recent searches irrelevant to the selected state.</p>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1" id="Relationships">
+                        <h3>Relationships</h3>
+                        <ol class="pb-10">
+                            <li class="h4header">
+                                Enable field mapping
+                                <p>Enable field mapping to auto-populate field data from a parent record when a child record is created (common for sub-grids).</p>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1" id="Forms">
+                        <h3>Forms</h3>
+                        <ol class="pb-10">
+                            <li class="h4header">
+                                Remove asynchronous function calls when saving quick create forms
+                                <p>On quick create forms, the <b>Save & Close</b> button does not wait for asynchronous function calls to complete (e.g. retrieve record WebAPI). If possible, remove asynchronous calls when saving quick create forms and instead execute the calls upon form load, or upon change of field values.</p>
+                            </li>
+                            <li class="h4header">
+                                Register Event Handlers for field events programmatically
+                                <p>Use JavaScript method <b>addOnChange</b> to bind field <b>onChange</b> events instead of binding it from form properties. This helps you programmatically gain control over field events.</p>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1" id="Views">
+                        <h3>Views</h3>
+                        <ol class="pb-10">
+                            <li class="h4header">
+                                Use only alphanumeric characters for view names
+                                <p>Using special characters for view names may cause issues when importing from Excel.</p>
+                            </li>
+                            <li class="h4header">
+                                Limit view columns to show only required fields
+                                <p>Optional fields may not have data and may increase the size of the grid to accommodate empty cells.</p>
+                            </li>
+                            <li class="h4header">
+                                For sub-grid views, which show related records, don't add a parent column to view
+                                <p>If you add a parent column to sub-grid views, the same value will be shown for all related records.</p>
+                                <p><b>For example:</b> If a state entity is added as a sub-grid in a country entity, don't add a country column in sub-grid view of state, as it will be the same for every country record.</p>
+                            </li>
+                            <li class="h4header">
+                                Add icons for categorical fields
+                                <p>Adding icons for status, gender, rank, profit, loss, etc. enables users to quickly identify fields.</p>
+                            </li>
+                            <li class="h4header">
+                                Ensure columns and relative orders are the same in active and inactive views
+                                <p>This ensures consistency in information available for records across both states.</p>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1" id="ModeldrivenApps">
+                        <h3>Model-Driven Apps</h3>
+                        <ol class="pb-10">
+                            <li class="h4header">
+                                Replace the app’s GUID with a user-friendly URL name
+                                <p>Use the app’s URL suffix to access the app instead of the app’s globally unique identifier (GUID). Using the URL suffix is more user-friendly.</p>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1" id="Processes">
+                        <h3>Processes</h3>
+                        <ol class="pb-10">
+                            <li class="h4header">
+                                Update the stage of Business Process Flow (BPF) with custom fields
+                                <p>Instead of performing <b>moveNext()</b> and <b>movePrevious()</b> operations from scripts, update custom fields (e.g. status, gender) from scripts. This triggers the out-of-the-box (OOB) background workflow (registered on BPF Entity) to update the active stage in BPF.</p>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1" id="WebResources">
+                        <h3>Web Resources</h3>
+                        <ol class="pb-10">
+                            <li class="h4header">
+                                Use Namespace for JavaScript web resources
+                                <p>This ensures JavaScript methods are unique and prevents collisions between identifiers.</p>
+                            </li>
+                            <li class="h4header">
+                                Use RELATIVE paths to reference web resources
+                                <p>This ensures the web resource references are environment independent, as absolute path references include the environment name.</p>
+                                <p><b>For example:</b> use an HTML page to reference a JavaScript library.</p>
+                            </li>
+                            <li class="h4header">
+                                Write code in a common JavaScript web resource and add it to entity forms
+                                <p>This saves time by enabling developers to quickly reference and reuse common code.</p>
+                            </li>
+                            <li class="h4header">
+                                Pass ExecutionContext instead of FormContext as a parameter in JavaScript methods wherever possible
+                                <p><b>ExecutionContext</b> is a parent object of <b>FormContext</b>, which enables not only form event handlers, but grid event handlers also using <b>GridContext</b>.</p>
+                            </li>
+                            <li class="h4header">
+                                Bind preSearch lookup field event only on form load and use a global variable for dynamic custom filtration and update it whenever required
+                                <p>This ensures high performance and easy maintenance of code related to custom filtration of lookup fields.</p>
+                            </li>
+                            <li class="h4header">
+                                Use Xrm.Constants
+                                <p>Use Xrm.Constants to access constants like attribute required levels (e.g., none, required, recommended), attribute types (e.g., Boolean, date/time, lookup), and form notification levels (e.g. error, warning).</p>
+                            </li>
+                            <li class="h4header">
+                                Open forms with navigation popup
+                                <p>Use Xrm.Navigation.navigateTo to open forms (entity record, entity list or HTML web resource) as a modal dialog instead of using Xrm.Internal.openDialog or jQuery custom dialog frameworks which are either deprecated or unsupported.</p>
+                            </li>
+                            <li class="h4header">
+                                Use browser-specific web developer tools to debug your code
+                                <p>Debugging a JavaScript web resource in console often requires re-writing code. Debugging from browser tools is faster than using external tools.</p>
+                                <p><b>For example:</b> To retrieve current record data from Xrm.WebApi, use <a href="https://developer.chrome.com/docs/devtools/javascript/snippets/">Chrome DevTools’ Run Snippet</a> feature, which has access to the page's JavaScript context and can run on any page (Firefox DevTools has a similar feature called <a href="https://developer.mozilla.org/en-US/docs/Archive/Tools/Scratchpad">Scratchpad</a>).</p>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1" id="Plug-ins">
+                        <h3>Plug-ins</h3>
+                        <ol class="pb-10">
+                            <li class="h4header">
+                                Use context.depth when updating fields using plug-ins
+                                <p>If <b>context.depth</b> is not used, it causes infinite recursive plug-in calls.</p>
+                            </li>
+                            <li class="h4header">
+                                Update entity by creating a new instance with required fields only
+                                <p>Instead of directly updating a case entity like <b>service.Update(case)</b>, create a new entity using <b>Entity temp = new Entity('case'), temp['x'] = 'value', service.Update(temp))</b>. This creates a new instance with required fields only, which avoids unnecessary field updates and effort.</p>
+                            </li>
+                            <li class="h4header">
+                                Declare main execution function as static
+                                <p>All other helper functions should be declared as private to reduce code duplication and improve performance.</p>
+                            </li>
+                            <li class="h4header">
+                                Create separate C# files to declare constants and XML expressions and to handle custom and system exceptions
+                                <p>Creating separate files improves code readability.</p>
+                            </li>
+                            <li class="h4header">
+                                Limit plug-in files to a maximum of 8MB
+                                <p>Microsoft Dynamics CRM plug-ins have a maximum plug-in size. Exceeding that limit prevents remaining plug-ins from being imported.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row ptb-15">
+                    <div class="col-md-10 offset-md-1 col-sm-10 offset-sm-1">
+
+                        <h3>References</h3>
+                        <ul class="defaultBody">
+                            <li><a href="https://docs.microsoft.com/en-us/powerapps/maker/data-platform/create-solution#solution-publisher">Create a solution in Power Apps - Power Apps</a> | Microsoft Docs, last updated May 19, 2020</li>
+                            <li><a href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/change-solution-publisher-prefix?view=op-9-1">Change the publisher prefix Dynamics 365</a> | Microsoft Docs, last updated November 8, 2018</li>
+                            <li><a href="https://docs.microsoft.com/en-us/power-platform/alm/use-solutions-for-your-customizations">Default solution vs. custom solution - Power Platform</a> | Microsoft Docs, last updated August 5, 2021</li>
+                            <li><a href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/define-alternate-keys-reference-records?view=op-9-1">Define alternate keys for an entity</a> | Microsoft Docs, last updated April 3, 2020</li>
+                            <li><a href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/map-entity-fields?view=op-9-1">Create entity field mapping in Dynamics 365</a> | Microsoft Docs, last updated December 4, 2018</li>
+                            <li><a href="https://docs.microsoft.com/en-us/powerapps/developer/data-platform/tutorial-write-plug-in">Write and register a plug-in (Microsoft Dataverse) - Power Apps</a> | Microsoft Docs, last updated March 16, 2021</li>
+                            <li><a href="https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/build-first-model-driven-app">Build your first model-driven app from scratch with Power Apps - Power Apps</a> | Microsoft Docs, last updated April 14, 2021</li>
+                            <li><a href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/configure-event-handlers-legacy?view=op-9-1">Set up event handlers for a form in Dynamics 365</a> | Microsoft Docs, last updated April 3, 2018</li>
+                            <li><a href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-web-resources?view=op-9-1">Create web resources in Dynamics 365</a> | Microsoft Docs, last updated October 29, 2019</li>
+                            <li><a href="https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto">navigateTo (Client API reference) in model-driven apps - Power Apps</a> | Microsoft Docs, last updated April 21, 2021</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+            </div>
+       
+        <!-- END CONTENT ---------------------------------------------------------------------------->
+        <!-- FOOTER -->
+        <footer class="footer pt-60" id="footer">
+        </footer>
+        <!-- END FOOTER -->
+        <!-- Scroll Top -->
+        <a class="scroll-top">
+            <i class="fa fa-angle-double-up"></i>
+        </a>
+        <!-- End Scroll Top -->
+
+    <!-- Site Wraper End -->
+    <!-- JS -->
+    <!-- Load app main script -->
+    <script src="/js/plugin/tether.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/jquery-1.11.2.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/jquery.easing.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/jquery-ui.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/bootstrap.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/jquery.flexslider.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/jquery.fitvids.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/jquery.viewportchecker.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/jquery.stellar.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/wow.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/jquery.colorbox-min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/owl.carousel.2.0.0-beta.3.min.js"></script>
+    <script src="/js/plugin/isotope.pkgd.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/masonry.pkgd.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/imagesloaded.pkgd.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/jquery.fs.tipper.min.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/plugin/mediaelement-and-player.min.js?v=20170822"></script>
+    <script src="/js/plugin/sidebar-menu.js?v=20170822" type="text/javascript"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="/js/theme.js?v=20170828.6" type="text/javascript"></script>
+    <script src="/js/navigation.js?v=20170822" type="text/javascript"></script>
+    <script src="/js/contact.js?v=20170828.2" type="text/javascript"></script>
+    <script src="/js/common.js?v=20170828.1" type="text/javascript"></script>
+    <script src="/js/home.js?v=20190717" type="text/javascript"></script>
+    <script src="/js/news.js?v=20190717" type="text/javascript"></script>
+    <script src="/js/careers.js?v=20190717"></script>
+    <script>
+        $("#header").load("/header");
+        $("#footer").load("/footer");
+    </script>
+    <script type="application/ld+json">
+        { "@context" : "http://schema.org",
+        "@type" : "Organization",
+        "name" : "MAQ Software",
+        "image" : "https://maqsoftware.com/img/MAQSoftware.png",
+        "address" : {
+        "@type": "PostalAddress",
+        "addressLocality": "Redmond",
+        "addressRegion": "WA ",
+        "postalCode": "98052",
+        "streetAddress": "2027 152nd Avenue NE" },
+        "url" : "https://maqsoftware.com/",
+        "logo" : "https://maqsoftware.com/img/MAQSoftware.png",
+        "email":"sales@MAQSoftware.com",
+        "telephone":"+1-425-526-5399",
+        "sameAs" : [
+        "https://www.linkedin.com/company/maq-software",
+        "https://twitter.com/MAQSoftware",
+        "https://youtube.com/maqsoftware",
+        "https://www.facebook.com/maqsoftware",
+        "https://www.instagram.com/maqsoftware",
+        "https://plus.google.com/104615735701576694043"]
+        }
+    </script>
+    <!-- Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-7928102-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- End Google Analytics -->
+</body>
+
+</html>
+
+<script>
+    loadPlugins();
+</script>
