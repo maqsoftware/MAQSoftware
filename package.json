@@ -1,0 +1,12 @@
+{
+  "name": "sartre",
+  "version": "1.0.7",
+  "devDependencies": {
+    "grunt": ">=1.3.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-jshint": "~0.12.0",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt-contrib-uglify": "~0.5.0"
+  }
+}
