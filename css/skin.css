@@ -4448,7 +4448,7 @@ blockquote.avatar.xlarge span img {
 [class*="stats-"] .counter {
   margin-bottom: 1rem;
   font-size: 3.294rem;
-  font-weight: 300;
+  font-weight: 700;
 }
 [class*="stats-"] .counter.xlarge {
   font-size: 4.381rem;
@@ -4467,7 +4467,7 @@ blockquote.avatar.xlarge span img {
 }
 .stats-3 .mega-stat .counter {
   font-size: 6rem;
-  font-weight: 300;
+  font-weight: 700;
 }
 .stats-3 .description {
   padding-bottom: 2rem;
