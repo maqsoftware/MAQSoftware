@@ -2613,7 +2613,7 @@ body,
 
 /* Fullscreen Section */
 .home-page .fulscreen-sections-wrapper {
-  background: #000;
+  background: transparent;
 }
 .signup-box.box {
   padding: 10%;
