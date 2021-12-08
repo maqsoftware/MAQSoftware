@@ -692,3 +692,25 @@
     color:white;
     font-weight: bold;
 }
+
+.RecognitionImage img {
+    max-width: 210px;
+    max-height: 120px;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+.SemiBold-600 {
+    font-weight: 600 !important;
+    margin-bottom: 1rem;
+}
+
+.topBorder {
+    border-top: 1px solid #dddddd;
+    padding-top: 13px;
+    margin-bottom: 1rem;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}

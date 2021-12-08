@@ -28,7 +28,7 @@
 	<!-- Css -->
 	<link rel="stylesheet" href="/css/core.min.css" />
 	<link rel="stylesheet" href="/css/skin.css" />
-
+	<link rel="stylesheet" href="/css/commonstyle.css" />
 	<!--[if lt IE 9]>
     	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -76,52 +76,37 @@
 	<!-- Intro Title Section 1 End -->
 
 	<!-- Portfolio Grid -->
-	<!-- <div class="section-block pt-0 grid-filter-menu center" data-target-grid="#portfolio-grid">
+	<div class="section-block pt-0 grid-filter-menu center" data-target-grid="#portfolio-grid">
 		<div class="freeze pt-10 pb-10 bkg-white" data-extra-space-top="80" data-extra-space-bottom="0">
 			<div class="row">
 				<div class="column width-12">
 					<div class="filter-menu-inner">
-						<ul>
-							<li><a class="active" href="#" data-filter="*">All</a></li>
-							<li><a href="#" data-filter=".design">Certified</a></li>
-							<li><a href="#" data-filter=".identity">Change over Time</a></li>
-							<li><a href="#" data-filter=".photography">Clustering</a></li>
-							<li><a href="#" data-filter=".application">Comparison</a></li>
-							<li><a href="#" data-filter=".application">Correlation</a></li>
-							<li><a href="#" data-filter=".application">Distribution</a></li>
-							<li><a href="#" data-filter=".application">Flow</a></li>
-							<li><a href="#" data-filter=".application">Forecasting</a></li>
-							<li><a href="#" data-filter=".application">KPI</a></li>
-							<li><a href="#" data-filter=".application">Part-to-Whole</a></li>
-							<li><a href="#" data-filter=".application">Ranking</a></li>
-							<li><a href="#" data-filter=".application">Single Metric</a></li>
-							<li><a href="#" data-filter=".application">Utility</a></li>
-						</ul>
+						<ul class="container-filter categories-filter">
+                            <li><a class="categories active cursor-pointer" onclick="ModifyClass()" data-filter="*">All</a></li>
+                            <li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".certified">Certified</a></li>
+                            <li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".change">Change Over Time</a></li>
+                            <li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".cluster">Clustering</a></li>
+                            <li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".comparison">Comparison</a></li>
+                            <li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".correlation">Correlation</a></li>
+                            <li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".distribution">Distribution</a></li>
+                            <li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".flow">Flow</a></li>
+                            <li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".forecast">Forecast</a></li>
+                            <li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".kpi">KPI</a></li>
+                            <li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".part">Part-to-Whole</a></li>
+                            <li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".ranking">Ranking</a></li>
+                            <li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".single">Single Metric</a></li>
+                            <li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".utility">Utility</a></li>
+                        </ul>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 	<div id="portfolio-grid" class="section-block pb-30 grid-container fade-in-progressively no-padding-top"
 		data-grid-ratio="1.5" data-as-bkg-image>
 		<div class="row">
 			<div class="column width-12">
 				<div class="row grid content-grid-4" id="viewAllVisuals">
-					<!-- <div class="grid-item grid-sizer photography">
-						<div class="thumbnail rounded img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700"
-							data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9">
-							<a class="overlay-link" href="project-style-one.html">
-								<img src="/images/powerbi/Radarchart.png" alt="" />
-								<span class="overlay-info">
-									<span>
-										<span>
-											<span class="project-title">The Wall</span>
-										</span>
-									</span>
-								</span>
-							</a>
-						</div>
-					</div> -->
 				</div>
 			</div>
 		</div>
@@ -139,7 +124,6 @@
 
 <!-- Js -->
 <script src="/js/jquery-3.2.1.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script>
 <script src="/js/timber.master.min.js"></script>
 <script src="/js/theme.js?v=20201112" type="text/javascript"></script>
 <script>
@@ -148,6 +132,16 @@
 </script>
 <script>
 	loadPlugins();
+</script>
+<script>
+	var flag = 0;
+        function ModifyClass() {
+            if (flag == 0) {
+                $('#viewAllVisuals').toggleClass("container-grid");
+                containerGridMasonry();
+                flag = 1;
+            }
+        }
 </script>
 </body>
 
