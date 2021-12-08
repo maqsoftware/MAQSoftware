@@ -2,7 +2,7 @@
 "use strict";
 var oNewsPager = {
     template:
-      '<article class="post"> <div class="post-content with-background"> <h2 class="post-title center"><a href="@href">@title</a> </h2> <div class="post-info center"> <span class="post-date">@date</span> </div> <div class="post-media"> <div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9"> <a class="overlay-link" href="@href"> <img src="@newsimagesrc" alt="News" title="@tooltip"/> <span class="overlay-info"> <span> <span> Read Full Article </span> </span> </span> </a> </div> </div>',
+      '<article class="post"> <div class="post-content with-background"> <h2 class="post-title center"><a href="@href">@title</a> </h2> <div class="post-info center"> <span class="post-date">@date</span> </div> <div class="post-media"> <div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9"> <a class="overlay-link" href="@href"> <img src="@newsimagesrc" alt="News" title="@tooltip"/> <span class="overlay-info"> <span> <span> Read Full Article </span> </span> </span> </a> </div> </div> <p>@content</p>',
     pageIndex: 0,
     pagesize: 3,
 },
