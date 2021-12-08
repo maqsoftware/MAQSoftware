@@ -714,3 +714,16 @@
 .cursor-pointer{
     cursor: pointer;
 }
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.RecognitionImage {
+    text-align: center !important;
+}
+
+.height-70p{
+    height:70%;
+}
