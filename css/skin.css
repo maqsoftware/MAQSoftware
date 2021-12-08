@@ -36,6 +36,7 @@ Copyright: ThemeMountain
 28. Component Styling
 29. Resolution Media Queries
 30. Custom MAQ Containers
+31. MAQ homepage feature image container
 
 
 -------------------------------------------------------------------*/
@@ -5231,3 +5232,16 @@ table.table,
   left: 50%;
   transform: translate(-50%, -50%);
 }
+/*------------------------------------------------------------------
+[31. MAQ Homepage Feature Image]
+*/
+/* Container holding the image */
+.homepage-feature {
+  position: relative;
+  overflow: visible;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 150%;
+  margin-right: -50%;
+  margin-bottom: 5rem;
+  }
