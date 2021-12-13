@@ -4653,6 +4653,14 @@ blockquote.avatar.xlarge span img {
   border: none;
 }
 
+/* Sustainability Styling */
+.sustainability-summary-ruler{
+  background-color:#629677;
+  height:7pt;
+  width:25%;
+  margin-left: 0px;
+}
+
 /* Tabs */
 .tabs .tab-nav > li a {
   padding: 1.3rem 2.5rem;
