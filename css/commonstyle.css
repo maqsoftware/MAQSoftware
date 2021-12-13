@@ -76,8 +76,27 @@
   padding-right: 30px !important;
 }
 
+.plr-50 {
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+}
+
+.plr-60 {
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+}
+
+.plr-80 {
+  padding-left: 80px !important;
+  padding-right: 80px !important;
+}
+
 .pl-0 {
   padding-left: 0;
+}
+
+.pl-30p {
+  padding-left: 30%;
 }
 
 .pr-0 {
@@ -590,6 +609,10 @@
   color: #515151;
 }
 
+.text-left {
+    text-align: left !important
+}
+
 .post-title {
   height: 120px;
 }
@@ -727,4 +750,114 @@
 
 .height-70p {
   height: 70%;
+}
+
+.sustainability-raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+.sustainability-summary-ruler{
+    background-color:#629677;
+    height:7pt;
+    width:25%;
+    margin-left: 0px;
+}
+
+.sustainability-service{
+    text-align: left !important;
+}
+
+.sustainability-green-color{
+    color:#629677;
+}
+
+.sustainability-container > h2 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 0px;
+    line-height: 0;
+    color: #323232;
+    opacity: 1;
+}
+
+.sustainability-container > div > h3 {
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0px;
+    color: #323232;
+    opacity: 1;
+}
+
+.sustainability-raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+.sustainability-container {
+    width: 100%;
+    border-bottom: 4px dotted #629677;
+    margin: 80px auto auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+p.lead, .lead {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 4px 0 2.36px;
+    font-weight: 400;
+}
+
+.whiteHex {
+    position: relative;
+    left: -47px;
+    bottom: -27px;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.whiteHex1 {
+    position: relative;
+    left: -80px;
+    bottom: 0px;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    top: -112px;
+}
+
+.whiteHex2 {
+    position: relative;
+    left: -80px;
+    bottom: 0px;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    top: -93px;
+}
+
+.whiteHex3 {
+    position: relative;
+    left: -80px;
+    bottom: 0px;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    top: -143px;
+}
+
+.whiteHex5 {
+    position: relative;
+    left: -80px;
+    bottom: 0px;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    top: -122px;
 }
