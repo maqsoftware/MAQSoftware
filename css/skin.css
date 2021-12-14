@@ -599,7 +599,7 @@ body,
   border-color: #39d47e;
 }
 .color-green {
-  color: #629677!important;
+  color: #629677 !important;
 }
 .color-hover-green:hover {
   color: #39d47e;
@@ -4654,10 +4654,10 @@ blockquote.avatar.xlarge span img {
 }
 
 /* Sustainability Styling */
-.sustainability-summary-ruler{
-  background-color:#629677;
-  height:7pt;
-  width:25%;
+.sustainability-summary-ruler {
+  background-color: #629677;
+  height: 7pt;
+  width: 25%;
   margin-left: 0px;
 }
 
@@ -5188,7 +5188,7 @@ table.table,
   }
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
 .pull-center {
   align-items: center;
@@ -5252,4 +5252,4 @@ table.table,
   width: 150%;
   margin-right: -50%;
   margin-bottom: 5rem;
-  }
+}
