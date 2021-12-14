@@ -2,12 +2,12 @@ var oIndiaJobPostSection,
   oRedmondJobPostSection,
   oNewsData = null,
   sTemplate =
-    '<div class="accordion style-2 rounded left" data-toggle-icon data-toggle-multiple> <ul> <li> <a>@title</a> <div id="accordion-1-panel-1"> <div class="accordion-content"> @content <br> <a href="#" class="button medium pill bkg-hover-white">Apply on Jobscore</a> </div> </div> </li> </ul> </div>',
+    '<div class="accordion style-2 rounded left" data-toggle-icon data-toggle-multiple> <ul> <li> <a>@title</a> <div id="accordion-1-panel-1"> <div class="accordion-content"> @content <br> <a href="@jobScoreUrl" class="button medium pill bkg-hover-white">Apply on Jobscore</a> </div> </div> </li> </ul> </div>',
   sNoJobMessage =
     '<p class="DataSubContent Color595959">No job openings available at this location.<br />Please come back and check again soon.</p>',
   sJobServiceIssue =
     '<p class="DataSubContent Color595959">Issue in connecting to job-post service.<br />Try loading the section again.</p>';
-
+sindex = 0;
 function careersConstructor() {
   oRedmondJobPostSection = $("#tabs-1-pane-1 .jobs-redmond");
   oMumbaiJobPostSection = $("#tabs-1-pane-2 .jobs-mumbai");
@@ -117,6 +117,8 @@ function renderRedmondTitle(oData) {
     .removeClass("LoadingHeight");
   for (iIterator = 0; iIterator < oData.length; iIterator++) {
     oCurrentPost = oData.item(iIterator);
+    sindex = oData[iIterator].innerHTML.indexOf("https://jsco.re/");
+    sjobScoreUrl = oData[iIterator].innerHTML.slice(sindex, sindex + 21);
     oRedmondJobPostSection.append(
       sTemplate
         .replace(
@@ -128,6 +130,7 @@ function renderRedmondTitle(oData) {
           oCurrentPost.getElementsByTagName("content")[0].childNodes[0]
             .nodeValue
         )
+        .replace(/@jobScoreUrl/g, sjobScoreUrl)
     );
   }
   $("#tabs-1-pane-1 .jobs-redmond *").removeAttr("style");
@@ -168,6 +171,8 @@ function renderMumbaiTitle(oData) {
     .removeClass("LoadingHeight");
   for (iIterator = 0; iIterator < oData.length; iIterator++) {
     oCurrentPost = oData.item(iIterator);
+    sindex = oData[iIterator].innerHTML.indexOf("https://jsco.re/");
+    sjobScoreUrl = oData[iIterator].innerHTML.slice(sindex, sindex + 21);
     oMumbaiJobPostSection.append(
       sTemplate
         .replace(
@@ -179,6 +184,7 @@ function renderMumbaiTitle(oData) {
           oCurrentPost.getElementsByTagName("content")[0].childNodes[0]
             .nodeValue
         )
+        .replace(/@jobScoreUrl/g, sjobScoreUrl)
     );
   }
   $("#tabs-1-pane-2 .jobs-mumbai *").removeAttr("style");
@@ -219,6 +225,8 @@ function renderHyderabadTitle(oData) {
     .removeClass("LoadingHeight");
   for (iIterator = 0; iIterator < oData.length; iIterator++) {
     oCurrentPost = oData.item(iIterator);
+    sindex = oData[iIterator].innerHTML.indexOf("https://jsco.re/");
+    sjobScoreUrl = oData[iIterator].innerHTML.slice(sindex, sindex + 21);
     oHyderabadJobPostSection.append(
       sTemplate
         .replace(
@@ -230,6 +238,7 @@ function renderHyderabadTitle(oData) {
           oCurrentPost.getElementsByTagName("content")[0].childNodes[0]
             .nodeValue
         )
+        .replace(/@jobScoreUrl/g, sjobScoreUrl)
     );
   }
   $("#tabs-1-pane-3 .jobs-hyd *").removeAttr("style");
