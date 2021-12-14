@@ -5240,6 +5240,12 @@ table.table,
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* Background image positioning*/
+.absolute {
+  position: absolute;
+}
+
 /*------------------------------------------------------------------
 [31. MAQ Homepage Feature Image]
 */
