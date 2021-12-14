@@ -49,7 +49,7 @@ body {
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   letter-spacing: 0;
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   line-height: 1.5;
   color: #515151;
 }
@@ -599,7 +599,7 @@ body,
   border-color: #39d47e;
 }
 .color-green {
-  color: #2fca74;
+  color: #629677!important;
 }
 .color-hover-green:hover {
   color: #39d47e;
@@ -4651,6 +4651,14 @@ blockquote.avatar.xlarge span img {
 }
 .accordion.unstyled > ul > li.active > div {
   border: none;
+}
+
+/* Sustainability Styling */
+.sustainability-summary-ruler{
+  background-color:#629677;
+  height:7pt;
+  width:25%;
+  margin-left: 0px;
 }
 
 /* Tabs */
