@@ -92,17 +92,17 @@ function renderCaseStudy() {
           "'>" +
           sCaseStudyTitle +
           "</a></h2>" +
-          "<div class='post-info'>" +
-          "<span class='post-category'><a href='#'>" +
-          sTerm +
-          "</a></span> | <span class='post-date'>" +
-          PublishedMonth +
-          " " +
-          PublishedDateDay +
-          ", " +
-          PublishedYear +
-          "</span>" +
-          "</div>" +
+        //  "<div class='post-info'>" +
+        //  "<span class='post-category'><a href='#'>" +
+        //  sTerm +
+        //  "</a></span> | <span class='post-date'>" +
+        //  PublishedMonth +
+        //  " " +
+        //  PublishedDateDay +
+        //  ", " +
+        //  PublishedYear +
+        //  "</span>" +
+        // "</div>" +
           "<a href='" +
           sAnchorCaseStudy +
           "' class='read-more'>Read More →</a>" +
