@@ -70,11 +70,11 @@ function renderCaseStudy() {
           "<article class='post'>" +
           "<div class='post-content with-background'>" +
           "<div class='post-media'>" +
-          "<div class='thumbnail img-scale-in' data-hover-easing='easeInOut' data-hover-speed='700' data-hover-bkg-color='#ffffff' data-hover-bkg-opacity='0.9'>" +
+          "<div class='thumbnail cs-image img-scale-in' data-hover-easing='easeInOut' data-hover-speed='700' data-hover-bkg-color='#ffffff' data-hover-bkg-opacity='0.9'>" +
           "<a class='overlay-link' href='" +
           sAnchorCaseStudy +
           "'>" +
-          "<img src='" +
+          "<img classs='cs-image' src='" +
           sImageLink +
           "' alt=''/>" +
           "<span class='overlay-info'>" +
