@@ -598,7 +598,7 @@ body,
 .border-focus-green:focus {
   border-color: #39d47e;
 }
-.color-green {
+.color-green-sustainability {
   color: #629677 !important;
 }
 .color-hover-green:hover {
@@ -5240,6 +5240,12 @@ table.table,
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* Background image positioning*/
+.absolute {
+  position: absolute;
+}
+
 /*------------------------------------------------------------------
 [31. MAQ Homepage Feature Image]
 */
