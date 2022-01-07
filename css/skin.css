@@ -37,6 +37,7 @@ Copyright: ThemeMountain
 29. Resolution Media Queries
 30. Custom MAQ Containers
 31. MAQ homepage feature image container
+32. MAQ hero banners
 
 
 -------------------------------------------------------------------*/
@@ -5258,4 +5259,13 @@ table.table,
   width: 150%;
   margin-right: -50%;
   margin-bottom: 5rem;
+}
+/*------------------------------------------------------------------
+[32. MAQ hero banner]
+*/
+/* The image used */
+.banner-powerbi {
+  background-image: 
+  url();
+  background-size: cover;
 }
