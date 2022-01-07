@@ -5267,5 +5267,5 @@ table.table,
 .banner-powerbi {
   background-image: 
   url(../images/assets/banner-powerbi.png);
-  background-size: cover;
+  background-size: auto;
 }
