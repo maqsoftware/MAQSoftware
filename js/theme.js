@@ -4,7 +4,7 @@ var pageSection,
   modalTemplate =
     '<div class="modal fade product_view" id="model@id"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-header"> <h3 class="modal-title pull-left">@title</t><a target="_blank" href="@pbicertifiedurl"><img style="margin-bottom: 0.1em;" src="@pbicertifiedimage"></img></a></h3> <a href="#" data-dismiss="modal" class="class pull-right"> <span class="glyphicon glyphicon-remove"></span> </a> </div><div class="modal-body"> <div class="row"> <div class="col-md-6 embed-responsive embed-responsive-16by9"> <video id = "video@id" class="embed-responsive-item modal_videos" alt="@name" title="@name" loop controls muted style="height:auto !important"> <source src="@img" type = "video/mp4"></video> </div><div class="col-md-6 product_content"> @content<p> Do you have questions about this visual? Check out our <a style="text-decoration:underline" href="@contacturl">Power BI community forum</a>. </p><a href="@url" target="_blank" class="btn btn-md btn-black-line ">See in AppSource</a> </div></div></div></div></div></div>',
   viewAllVisualTemplate =
-    '<div class="grid-item nf-item @category"> <article class="post"> <div class="post-content with-background"> <div class="post-media"> <div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9"><a class="overlay-link" href="@url"><img src="@img" alt=""><span class="overlay-info"><span><span style="font-size:15px">@description</span></span></span></a></div> </div> <h2 class="title-xxssmall"  style="text-align:center"><a href="@url">@name</a><img style="margin-bottom: 0.18em" class="certified" title ="@starimagetitle" src="@certifiedstarimage"></img> </h2> </div> </article> </div>';
+    '<div class="grid-item nf-item @category"> <article class="post"> <div class="post-content with-background"> <div class="post-media"> <div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9"><a class="overlay-link" href="@url"><img src="@img" alt=""><span class="overlay-info"><span><span style="font-size:15px">@description</span></span></span></a></div> </div> <h2 class="title-xxssmall"  style="text-align:center"><a href="@url">@name</a><img style="margin-bottom: 0.18em" class="certified" title ="@starimagetitle" src="@certifiedstarimage"></img> </h2> <div style="text-align: center""> <a href="@linkToArticle"> <img src="@linkToBadge"> </a> </div> </div> </article> </div>';
 Date.prototype.format = function () {
   "use strict";
   var arrMonths = [
@@ -349,18 +349,14 @@ function RenderPowerBIVisuals(oVisualConfig) {
         .replace(/@url/g, oVisualConfig[index][this].url)
         .replace(/@category/g, oVisualConfig[index][this].category)
         .replace(/@description/g, oVisualConfig[index][this].description)
-        .replace(
-          /@certifiedstarimage/g,
-          oVisualConfig[index][this].certifiedstarimage
-        )
+        .replace(/@linkToArticle/g, oVisualConfig[index][this].linkToArticle)
+        .replace(/@linkToBadge/g, oVisualConfig[index][this].linkToBadge)
+        .replace(/@certifiedstarimage/g,oVisualConfig[index][this].certifiedstarimage)
         .replace(/@starimagetitle/g, oVisualConfig[index][this].starimagetitle)
-        .replace(
-          /@pbicertifiedurl/g,
-          oVisualConfig[index][this].pbicertifiedurl
-        )
-        .replace(
-          /@visualpageurl/g,
-          oVisualConfig[index][this].name.replaceAll(" ", "-")
+        .replace(/@pbicertifiedurl/g,oVisualConfig[index][this].pbicertifiedurl)
+        .replace(/@visualpageurl/g, oVisualConfig[index][this].name.replaceAll(" ", "-")
+        .replace(/@linkToArticle/g, oVisualConfig[index][this].linkToArticle)
+        .replace(/@linkToBadge/g, oVisualConfig[index][this].linkToBadge)
         );
     });
   });

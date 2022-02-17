@@ -14,7 +14,9 @@
      "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
      "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
      "starimagetitle": "Power BI Certified",
-     "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "/img/PowerBI/CustomVisualBadge/Radarchart.jpg",
+      "linkToArticle": "https://news.maqsoftware.com/2020/10/power-bi-editors-choice.html"
    }
   },
   {
@@ -32,7 +34,9 @@
       "certifiedstarimage": "",
       "pbicertifiedimage": "",
       "starimagetitle": "",
-     "pbicertifiedurl": ""
+      "pbicertifiedurl": "",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -50,7 +54,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "/img/PowerBI/CustomVisualBadge/SunburstChart.jpg",
+      "linkToArticle": "https://news.maqsoftware.com/2021/09/power-bi-editors-picks-september-2021.html"
     }
   },
   {
@@ -68,7 +74,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -86,7 +94,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "/img/PowerBI/CustomVisualBadge/Calendar.jpg",
+      "linkToArticle": "https://news.maqsoftware.com/2018/11/maq-software-honored-four-times-in.html"
     }
   },
   {
@@ -104,7 +114,9 @@
       "certifiedstarimage": "",
       "pbicertifiedimage": "",
       "starimagetitle": "",
-      "pbicertifiedurl": ""
+      "pbicertifiedurl": "",
+      "linkToBadge": "/img/PowerBI/CustomVisualBadge/ForecastingusingMultipleModels.jpg",
+      "linkToArticle": "https://news.maqsoftware.com/2018/11/maq-software-honored-four-times-in.html"
     }
   },
   {
@@ -122,7 +134,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -140,7 +154,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -158,7 +174,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "/img/PowerBI/CustomVisualBadge/JourneyChart.jpg",
+      "linkToArticle": "https://news.maqsoftware.com/2021/12/power-bi-editors-picks-october-2021.html"
     }
   },
   {
@@ -176,7 +194,9 @@
       "certifiedstarimage": "",
       "pbicertifiedimage": "",
       "starimagetitle": "",
-      "pbicertifiedurl": ""
+      "pbicertifiedurl": "",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -194,7 +214,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -212,7 +234,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -230,7 +254,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -248,7 +274,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "/img/PowerBI/CustomVisualBadge/Hourglass.jpg",
+      "linkToArticle": "https://news.maqsoftware.com/2018/11/maq-software-honored-four-times-in.html"
     }
   },
   {
@@ -266,7 +294,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -284,7 +314,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "/img/PowerBI/CustomVisualBadge/Ratings.jpg",
+      "linkToArticle": "https://news.maqsoftware.com/2021/06/a-strong-start-in-spring-2021-microsoft.html"
     }
   },
   {
@@ -302,7 +334,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -320,7 +354,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -338,7 +374,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -356,7 +394,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "/img/PowerBI/CustomVisualBadge/KPITicker.jpg",
+      "linkToArticle": "https://news.maqsoftware.com/2021/08/power-bi-august-editors-picks-kpi-ticker.html"
     }
   },
   {
@@ -374,7 +414,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "/img/PowerBI/CustomVisualBadge/BrickChart.jpg",
+      "linkToArticle": "https://news.maqsoftware.com/2021/07/power-bi-editors-picks-june-2021.html"
     }
   },
 
@@ -393,7 +435,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -411,7 +455,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "/img/PowerBI/CustomVisualBadge/BoxandWhiskers.jpg",
+      "linkToArticle": "https://news.maqsoftware.com/2021/06/a-strong-start-in-spring-2021-microsoft.html"
     }
   },
   {
@@ -429,7 +475,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -447,7 +495,9 @@
       "certifiedstarimage": "",
       "pbicertifiedimage": "",
       "starimagetitle": "",
-      "pbicertifiedurl": ""
+      "pbicertifiedurl": "",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -465,7 +515,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -483,7 +535,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -501,7 +555,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -519,7 +575,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -537,7 +595,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -555,7 +615,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -573,7 +635,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -591,7 +655,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "/img/PowerBI/CustomVisualBadge/DotPlot.jpg",
+      "linkToArticle": "https://news.maqsoftware.com/2017/08/microsoft-highlights-popular-dot-plot.html"
     }
   },
   {
@@ -609,7 +675,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -627,7 +695,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "/img/PowerBI/CustomVisualBadge/StockChart.jpg",
+      "linkToArticle": "https://news.maqsoftware.com/2020/10/power-bi-editors-choice.html"
     }
   },
   {
@@ -645,7 +715,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -663,7 +735,9 @@
       "certifiedstarimage": "",
       "pbicertifiedimage": "",
       "starimagetitle": "",
-      "pbicertifiedurl": ""
+      "pbicertifiedurl": "",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   },
   {
@@ -681,7 +755,9 @@
       "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
       "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
       "starimagetitle": "Power BI Certified",
-      "pbicertifiedurl": "https://aka.ms/pbicertified"
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "/img/PowerBI/CustomVisualBadge/BowTieChart.jpg",
+      "linkToArticle": "https://news.maqsoftware.com/2020/10/power-bi-editors-choice.html"
     }
   },
   {
@@ -699,7 +775,9 @@
       "certifiedstarimage": "",
       "pbicertifiedimage": "",
       "starimagetitle": "",
-      "pbicertifiedurl": ""
+      "pbicertifiedurl": "",
+      "linkToBadge": "",
+      "linkToArticle": ""
     }
   }
 ]
