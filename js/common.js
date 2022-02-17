@@ -4,6 +4,12 @@
         sValue = arrMonths[this.getMonth()] + ' ' + this.getDate() + ', ' + this.getFullYear();
     return sValue;
 };
+var sLoadingClass = "Loading",
+    oBlogContainer = $("#blogcontent"),
+    iTotalEvent = 0,
+    oEventData = null,
+    events = '',
+    iIterator = 0
 function getParameterByName(name) {
     "use strict";
     name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -120,19 +126,34 @@ function getBloggerData(blogUrl, successCallBack, completeCallBack) {
     });
 }
 
-function load_unload_modal(){
-    //document.getElementById("load-modal-header").show
-   // $('#contact-modal-header').toggleClass("hide");
-}
-
-function Sendmail() {
-    var str = $('#tml-content form').serialize().replace(/&/g, '%0D%0A').replace(/=/g, ': ');
-    var url = 'mailto:Sales@MAQSoftware.com?subject= Inquiry&body=' + str
-    document.location.href = url
-}
-
-function SendmailContact() {
-    var str = $('#contact-form').serialize().replace(/&/g, '%0D%0A').replace(/=/g, ': ');
-    var url = 'mailto:Sales@MAQSoftware.com?subject= Inquiry&body=' + str
-    document.location.href = url
+function loadFullBlog(blogType,blogTitle) {
+    oBlogContainer.html("").addClass(sLoadingClass);
+    $("#loadingicon").html("").addClass("CaseStudyLoading");
+    getBloggerData(
+      "https://www.blogger.com/feeds/3262801613185975083/posts/default/-/"+blogType+"?max-results=999",
+      function (sResponse) {
+        var parser = new DOMParser();
+        oEventData = parser.parseFromString(sResponse, "text/xml");
+        entries = oEventData.getElementsByTagName('entry');
+        entries = Object.values(entries);
+        iTotalEntries = entries.length;
+        for (iIterator = 0; iIterator < iTotalEntries-1; iIterator++)  
+        {  
+            // Find the minimum element in unsorted array  
+            if(entries[iIterator].getElementsByTagName('title')[0].nodeValue = blogTitle){
+                entry = entries[iIterator];
+                blogHTML = entry.getElementsByTagName('content')[0].childNodes[0].nodeValue;
+                blogHTML = blogHTML.replace(/separator/gi,"").replace(/(<|&lt;)br\s*\/*(>|&gt;)/gi,"");
+                blogHTML = blogHTML.replace(/<p/gi,'<p class="text-large"');
+                blogHTML = blogHTML.replace(/<img/,'<img style="margin-bottom:20px;"');
+                // blogHTML = blogHTML.replace(/<li/gi,'<li class="text-xlarge"');
+                oBlogContainer.append('<h1 class="post-title center">'+blogTitle+'</h1>');
+                oBlogContainer.append(blogHTML);
+                break;
+            }
+        }
+    }
+    );
+    oBlogContainer.removeClass(sLoadingClass);
+    $("#loadingicon").hide();
 }

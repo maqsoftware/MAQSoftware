@@ -865,3 +865,8 @@ p.lead, .lead {
 .cs-image{
   height: 195px;
 }
+
+.MsoNoSpacing{
+  margin-left: 0px !important;
+  text-indent: 0px !important;
+}
