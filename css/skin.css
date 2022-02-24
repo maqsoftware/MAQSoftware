@@ -2651,6 +2651,7 @@ body,
 .fullscreen-pattern-6 {
   background-image: url(../images/assets/Banner-swoosh.png);
   background-repeat: no-repeat;
+  overflow: visible;
 }
 
 /*------------------------------------------------------------------
