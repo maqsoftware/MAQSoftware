@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+    <!-- Open Graph -->
+    <meta property="og:title" content="29 Power BI Best Practices | MAQ Software Insights" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/img/blog/BPG006-main.jpg" />
+    <meta property="og:description" content="Improve your Power BI performance, security, and design with these 29 best practices for architects and developers." />
+    <!-- Twitter Theme -->
+    <meta name="twitter:widgets:theme" content="light">
+
+    <!-- Title &amp; Favicon -->
+    <title>Power BI Best Practices | MAQ Software Insights</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/core.min.css" />
+    <link rel="stylesheet" href="/css/skin.css" />
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-S0W302CGQG');
+    </script>
+</head>
+<body class="shop blog">
+
+    <!-- Header -->
+    <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent" data-bkg-threshold="100" data-sticky-threshold="0"></header>
+    <!-- Header End -->
+    <div class="section-block bkg-grey-ultralight"></div>
+    <!-- Content -->
+    <div class="content clearfix">
+        <div class="section-block clearfix pt-0 pb-0 bkg-grey-ultralight">
+            <div class="row">
+                <!-- Content Inner -->
+                <div class="column width-10 offset-1 content-inner blog-single-post bkg-grey-ultralight">
+                    <article class="post">
+                        <div class="post-content with-background">
+                            <h1 class="post-title center">29 Power BI Best Practices</h1>
+                            <div class="post-info center">
+                                <span class="post-date">Last updated: February 23, 2022</span>
+                            </div>
+                            <p class="text-large">This guide covers the 29 best practices you need to improve your Power BI <a href="#security">security</a>, <a href="#performance">performance</a>, and <a href="#design">design</a>. As the 2021 Microsoft Power BI Partner of the Year, we are recognized for our expertise in Power BI implementation and optimization.</p>
+                            <div id="security">
+                                <h2>Security</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Enable <a href="https://docs.microsoft.com/en-us/sql/relational-databases/security/row-level-security?view=sql-server-2017" target="blank">Row-Level Security </a>(RLS)</strong></li>
+                                    <br>
+                                    <p class="text-large">Row-Level Security restricts user access to certain rows in a database depending on the characteristics (role) of the user executing a query. With RLS, Power BI only imports data the user is authorized to view.</p>
+                                    <li class="text-xlarge"><strong>Use <a href="https://docs.microsoft.com/en-us/power-bi/developer/visuals/power-bi-custom-visuals-certified" target="blank">certified custom visuals</a></strong></li>
+                                    <br>
+                                    <p class="text-large">Power BI certified visuals are custom visuals on AppSource that have passed rigorous quality testing. Microsoft verifies that certified custom visuals have robust, high-performance code. Certified custom visuals are the only custom visuals that can be viewed in <a href="https://docs.microsoft.com/en-us/power-bi/consumer/end-user-powerpoint">Export to PowerPoint mode</a> and email subscriptions.</p>
+                                    <li class="text-xlarge"><strong>Categorize report data by business impact</strong></li>
+                                    <br>
+                                    <p class="text-large">Use Power BI sensitivity labels to classify data as high, medium, or low business impact. High Business Impact (HBI) data requires users to request a policy exception to share the data externally. Low Business Impact (LBI) and Medium Business Impact (MBI) data do not require exceptions.</p>
+                                    <p class="text-large">By using Power BI data sensitivity labels, you raise user awareness about security and how reports should be shared inside and outside the organization.</p>
+                                </ol>
+                            </div>
+                            <div id="performance">
+                                <h2>Performance</h2>
+                                <ol start="4">
+                                    <li class="text-xlarge"><strong>Limit the number of visuals in dashboards and reports</strong></li>
+                                    <br>
+                                    <p class="text-large">Using too many visuals on a single report slows report performance. Limit widget visuals to eight per report page and grids to one per page. Limit tiles to 10 per dashboard. In general, limit pages 30 points, assuming each type of visual is worth a different number of points:</p>
+                                    <ul style="list-style: none;">
+                                        <li class="text-xlarge">Cards: 1</li>
+                                        <li class="text-xlarge">Gauges: 2</li>
+                                        <li class="text-xlarge">Charts: 3</li>
+                                        <li class="text-xlarge">Maps: 3</li>
+                                        <li class="text-xlarge">Grids: 5</li>
+                                    </ul>
+                                    <li class="text-xlarge"><strong>Remove unnecessary interactions between visuals</strong></li>
+                                    <br>
+                                    <p class="text-large">By default, all visuals on a report page can interact with one another. By disabling unnecessary interactions, you reduce the number of queries fired at the back end, which improves report performance.</p>
+                                    <li class="text-xlarge"><strong>Use <a href="https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-onprem" target="blank">on-premises data gateway</a> instead of Personal Gateway</strong></li>
+                                    <br>
+                                    <p class="text-large">Personal Gateway imports data into Power BI. On-premises data gateway (also known as Enterprise Gateway) imports nothing, which is more efficient when working with large databases.</p>
+                                    <li class="text-xlarge"><strong>Use separate gateways for <a href="https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-report-lifecycle-datasets" target="blank">Power BI service live connection</a> and <a href="https://docs.microsoft.com/en-us/power-bi/connect-data/refresh-scheduled-refresh" target="blank">scheduled data refresh</a></strong></li>
+                                    <br>
+                                    <p class="text-large">If you use the same gateway for a scheduled refresh and a live connection, live connection performance will slow down during the scheduled refresh.</p>
+                                    <li class="text-xlarge"><strong>Test custom visual performance before use</strong></li>
+                                    <br>
+                                    <p class="text-large">Custom visuals can perform poorly when handling large datasets or complex aggregations. Uncertified custom visuals are generally not tested by the Power BI team. If a custom visual performs poorly, consider replacing it with a different visual.</p>
+                                    <li class="text-xlarge"><strong>Limit complex measures and aggregations in data models</strong></li>
+                                    <br>
+                                    <p class="text-large">Create calculated measures instead of calculated columns. Where possible, push calculated columns and measures to the source. The closer they are to the source, the faster they are likely to perform.</p>
+                                    <li class="text-xlarge"><strong>Use Star schema instead of Snowflake schema when possible</strong></li>
+                                    <br>
+                                    <p class="text-large">Snowflake schema has a complex query structure, making it difficult to implement changes. Star schema is easy to read, uses fewer joins, and tends to reduce data redundancy.</p>
+                                    <li class="text-xlarge"><strong>Use slicers sparingly</strong></li>
+                                    <br>
+                                    <p class="text-large">Slicers are a great way of allowing users to navigate data, but they come at a performance cost. Each slicer generates two queries: one fetches the data, the other fetches selection details. Adding too many slicers drastically slows performance. To remove unnecessary slicers, use the Filter pane to evaluate which slicers are used the least.</p>
+                                    <li class="text-xlarge"><strong>Ensure reports and data sources are in the same region</strong></li>
+                                    <br>
+                                    <p class="text-large">With the tenant and data source in the same region, you can limit the effects of network latency. Sharing a region ensures faster data transfer and faster query execution.</p>
+                                    <li class="text-xlarge"><strong>Import only necessary fields and tables instead of entire data sets</strong></li>
+                                    <br>
+                                    <p class="text-large">Ensure the model is as narrow and lean as possible. Power BI works on columnar indexes, meaning longer and leaner tables perform better. When you need to import a large table, partition it and process multiple partitions in parallel.</p>
+                                    <li class="text-xlarge"><strong>Use templates (.PBIT files) to speed up and standardize report development instead of starting with an empty .PBIX file</strong></li>
+                                    <br>
+                                    <p class="text-large">Templates enable you to develop branded reports faster. With templates, you can save custom color palettes and themes, ensuring corporate branding is pre-applied to all pages. Templates also automatically connect to commonly used data sources and offer commonly used DAX measures.</p>
+                                    <li class="text-xlarge"><strong>Reduce queries</strong></li>
+                                    <br>
+                                    <p class="text-large">Reduce the number of queries sent by Power BI using the Query reduction settings. For slicers, select the “Add an Apply button to each slicer to apply changes when you’re ready” option. For filters, select “Add a single Apply button to the filter pane to apply changes at once (preview).”</p>
+                                    <li class="text-xlarge"><strong>Avoid bi-directional and many-to-many relationships against high cardinality columns</strong></li>
+                                    <br>
+                                    <p class="text-large">Many-to-many and bi-directional relationships navigate more pathways and check more data points. As a result, bi-directional relationships against high-cardinality columns negatively impact report performance.</p>
+                                    <li class="text-xlarge"><strong>Avoid using floating point data types</strong></li>
+                                    <br>
+                                    <p class="text-large">Floating point data types can result in unpredictable round-off errors and can decrease the performance of reports.</p>
+                                    <li class="text-xlarge"><strong>Replace the auto-generated date table with a custom date table in your model</strong></li>
+                                    <br>
+                                    <p class="text-large">Using a date table enables you to leverage the time-series function in Power BI. However, the auto-generated date table creates a date table for each date column, drastically increasing the model size.</p>
+                                    <p class="text-large">You can use a single date table to reduce model size, placing any required relationships in fact tables. When building your date table, split the date and time to improve data compression. Find out how to turn off the auto-generated date table <a href="https://www.youtube.com/watch?v=xu3uDEHtCrg" target="blank">here</a> and how to set and use custom date tables <a href="https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-date-tables" target="blank">here</a>.</p>
+                                    <li class="text-xlarge"><strong>Set IsAvailableinMdx to false on non-attribute columns</strong></li>
+                                    <br>
+                                    <p class="text-large">Disable attribute hierarchy for measure columns and for any columns you don’t want end users to use. This reduces data size and load time.</p>
+                                    <li class="text-xlarge"><strong>Reduce the amount of data loaded on page load</strong></li>
+                                    <br>
+                                    <p class="text-large">Use bookmarks, drill-through pages, and tooltips to reduce the amount of data loaded on page load. This improves page load time for landing pages.</p>
+                                    <li class="text-xlarge"><strong>Use report backgrounds for static images</strong></li>
+                                    <br>
+                                    <p class="text-large">For static images, use report backgrounds rather than multiple visuals. This conveys the same information to the end user at a fraction of the performance cost.</p>
+                                </ol>
+                            </div>
+                            <div id="design">
+                                <h2>Design</h2>
+                                <ol start="22">
+                                    <li class="text-xlarge"><strong>Ensure the cache update frequency aligns with the data source refresh frequency</strong></li>
+                                    <br>
+                                    <p class="text-large">By default, the Power BI cache update frequency is set to one hour. Cache update frequency should be set at similar intervals to data source refresh frequency. If, for example, your data set refreshes only once per day, you should update the cache frequency accordingly. This improves report performance and accuracy for end users.</p>
+                                    <li class="text-xlarge"><strong>Use white or light background colors</strong></li>
+                                    <br>
+                                    <p class="text-large">White or light backgrounds are printer friendly, ensuring your reports can be easily shared online and offline.</p>
+                                    <li class="text-xlarge"><strong>Shorten numbers</strong></li>
+                                    <br>
+                                    <p class="text-large">At most, show up to four numerals when displaying numbers. Be consistent across decimal points, limiting measures to two numerals to the right of the decimal point. When necessary, scale for thousands or millions.</p>
+                                    <li class="text-xlarge"><strong>Use tooltips to provide more information on visuals and metrics</strong></li>
+                                    <br>
+                                    <p class="text-large">Report tooltips are a great way of sharing additional information in a limited report space. Limit which visuals you use in report tooltips to ensure information isn’t overwhelming.</p>
+                                    <li class="text-xlarge"><strong>Use names that are meaningful to users</strong></li>
+                                    <br>
+                                    <p class="text-large">Power BI allows you to give aliases to report objects. Avoid ambiguity for end users when naming columns and measures by using business-friendly names. To avoid confusing users, consider hiding unused columns.</p>
+                                    <li class="text-xlarge"><strong>Allow users to personalize visuals in a report</strong></li>
+                                    <br>
+                                    <p class="text-large">Enable “Personalize visuals” in report settings when sharing reports with users. This enables users to gain further insights through ad-hoc exploration. Combine this feature with personal bookmarks to enable self-service BI.</p>
+                                    <li class="text-xlarge"><strong>Avoid scrolls within the visual and on page</strong></li>
+                                    <br>
+                                    <p class="text-large">Multiple scrolls on a single page lead to a negative user experience. Limit your page size to the standard report sizes when possible. Use the Bookmark and Selection pane to toggle the visibility of visuals if needed.</p>
+                                    <li class="text-xlarge"><strong>Use drillthrough buttons instead of expecting users to right-click on data points</strong></li>
+                                    <br>
+                                    <p class="text-large">Drillthrough buttons are more intuitive than right-click because they clearly signal actions and results to users. Use conditional formatting to ensure button text is context-driven, further enhancing the user experience.</p>
+                                </ol>
+                            </div>
+                            <h2>References</h2>
+                            <ul>
+                                <li class="text-large"><a href="https://docs.microsoft.com/en-us/power-bi/guidance/power-bi-optimization" target="blank">Optimization guide for Power BI</a> – Microsoft Corporation, published January 28, 2022</li>
+                                <li class="text-large"><a href="https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-report-visualizations" target="blank">Visualizations in Power BI reports</a> – Microsoft Corporation, published November 5, 2021</li>
+                                <li class="text-large"><a href="https://docs.microsoft.com/en-us/power-bi/create-reports/service-dashboards-design-tips" target="blank">Tips for designing a great Power BI dashboard</a> – Microsoft Corporation, published September 15, 2021</li>
+                            </ul>
+                            <h2>Download the Infographics</h2>
+                            <ul>
+                                <li class="text-large"><a href="https://maqsoftware.com/img/Improving-Security.pdf" target="blank">Best practices for Power BI security</a></li>
+                                <li class="text-large"><a href="https://maqsoftware.com/img/Improving-Speed.pdf" target="blank">Best practices for Power BI performance</a></li>
+                                <li class="text-large"><a href="https://maqsoftware.com/img/Improving-UX.pdf" target="blank">Best practices for Power BI design</a></li>
+                            </ul>
+                            <h2>More Resources</h2>
+                            <p class="text-large">Check out our free <a href="https://maqdrpowerbi.azurewebsites.net/" target="blank">Dr. Power BI tool</a>. Dr. Power BI analyzes your Power BI reports to identify quick solutions for common problems.</p>
+                            <div class="section-block"></div>
+                            <div class="row">
+                                <div class="column width-6">
+                                    <img src="/img/blog/BPG005-main.jpg" alt="">
+                                </div>
+                                <div class="column width-5 offset-1">
+                                    <p class="title-medium">DAX Best Practice Guide</p><br><p class="title-small">Improve your Power BI speed and functionality with our 22 DAX best practices</p>
+                                    <br><a href="/insights/dax-best-practices.html">Read More &rarr;</a><br>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="section-block bkg-grey-ultralight"></div>
+    </div>
+    <!-- Content End -->
+    <!-- Footer -->
+    <footer id="footer" class="footer footer-light bkg-grey-ultralight"></footer>
+    <!-- Footer End -->
+    <!-- Js -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/timber.master.min.js"></script>
+    <script>
+$("#header").load("/header.html");
+$("#footer").load("/footer.html");
+    </script>
+</body>
+</html>

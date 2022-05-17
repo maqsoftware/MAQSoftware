@@ -1,291 +1,338 @@
 ﻿<!DOCTYPE html>
-<!-- Microdata markup added by Google Structured Data Markup Helper. -->
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <title>Best Practice Guides | MAQ Software</title>
-    <meta name="title" content="Best Practice Guides | MAQ Software" />
-    <meta name="theme-color" content="#c00000">
-    <meta name="description" content=" Best practices for Power BI, DAX, Azure architecture and security, Azure Databricks, Dynamics 365, and more. Find out more." />
-    <meta name="keywords" content="maq software, innovative software, data management, Power BI, Sharepoint, cloud, artificial intelligence" />
-    <meta name="ROBOTS" content="FOLLOW,INDEX" />
-    <!-- Open Graph data -->
-    <meta name="og:title" property="og:title" content="Best Practice Guides | MAQ Software" />
-    <meta name="og:description" property="og:description" content="Best practices for Power BI, DAX, Azure architecture and security, Azure Databricks, Dynamics 365, and more. Find out more." />
-    <meta property="og:image" name="og:image" content="/img/Banners/azure-security-best-practices-banner.jpg" />
-    <meta property="og:image:width" content="450" />
-    <meta property="og:image:height" content="298" />
-    <!-- End Open Graph data -->
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@maqsoftware" />
-    <meta name="twitter:title" content="Best Practice Guides | MAQ Software" />
-    <meta name="twitter:description" content="Best practices for Power BI, DAX, Azure architecture and security, Azure Databricks, Dynamics 365, and more. Find out more." />
-    <meta name="twitter:image" content="/img/Banners/azure-security-best-practices-banner.jpg" />
-    <!-- End Twitter Card data -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="fragment" content="!">
-    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <!-- Favicone Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
-    <link rel="icon" type="image/png" href="/img/favicon.ico">
-    <link rel="apple-touch-icon" href="/img/favicon.ico">
-    <!-- CSS -->
-    <link href="/css/style.css?v=20210603" rel="stylesheet" type="text/css" />
-    <link href="/css/bootstrap.min.css?v=20170822" rel="stylesheet" type="text/css" />
-    <link href="/css/font-awesome.css?v=20170822" rel="stylesheet" type="text/css" />
-    <link href="/css/ionicons.css?v=20170822" rel="stylesheet" type="text/css" />
-    <link href="/css/plugin/sidebar-menu.css?v=20170822" rel="stylesheet" type="text/css" />
-    <link href="/css/plugin/animate.css?v=20170822" rel="stylesheet" type="text/css" />
-    <link href="/css/jquery-ui.css?v=20170822" rel="stylesheet" type="text/css" />
-    <!--<link href="/css/plugin/YTPlayer.css?v=20170822" rel="stylesheet" />-->
-    <link href="/css/plugin/owl.carousel.2.0.0-beta.3.min.css" rel="stylesheet" />
-    <link href="/css/bot.css?v=20190412" rel="stylesheet" />
+	<meta charset="UTF-8" />
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
 
+	<!-- Open Graph -->
+	<meta property="og:title" content="Best Practice Guides | MAQ Software" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="/images/expertise/ai-main" />
+	<meta property="og:description"
+		content="Stay in the loop with the latest tech knowledge from our expert team of engineers." />
 
+	<!-- Twitter Theme -->
+	<meta name="twitter:widgets:theme" content="light">
+
+	<!-- Title &amp; Favicon -->
+	<title>Tech Insights | MAQ Software</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+
+	<!-- Font -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext"
+		rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+	<!-- Css -->
+	<link rel="stylesheet" href="css/core.min.css" />
+	<link rel="stylesheet" href="css/skin.css" />
+	<link rel="stylesheet" href="css/commonstyle.css" />
+
+	<!--[if lt IE 9]>
+    	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-S0W302CGQG');
+    </script>
 </head>
-<body>   
-    <!--Facebook Java SDK-->
-    <div id="fb-root"></div>
-    <script>(function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-    <!-- Preloader -->
-    <section id="preloader">
-        <div class="loader" id="loader">
-            <div class="loader-img"></div>
-        </div>
-    </section>
-    <!-- End Preloader -->
-    <!-- Site Wraper -->
-    <div class="wrapper">
-        <!-- Header -->
-        <header id="header" class="header">
-        </header>
-        <!-- End Header -->
-        <!-- Intro Section -->
-        <section class="inner-intro bg-image parallax parallax-background1 aboutposter" data-background-img="/img/Banners/General_Website_Banner_THIN.png">
-            <div class="container">
-                <div class="row title">
-                    <h2 class="h2"><span style="color:#323232">Best Practice Guides</span></h2>
-                </div>
-            </div>
-        </section>
-        <!-- End Intro Section -->
-        <section class="ptb ptb-sm-40" style="padding-bottom:0px !important">
-            <div class="container">
-                <div class="sidebar-widget" style="margin-bottom:0px !important">
-                    <h5>Popular Tags</h5>
-                    <hr>
-                    <ul class="widget-tag blogcategories-filter ">
-                        <li><a class="blogcategories" data-filter=".powerbi">Power BI</a></li>
-                        <li><a class="blogcategories" data-filter=".datamanagement">Data Management</a></li>
-                        <li><a class="blogcategories" data-filter=".cloudtransformation">Cloud Transformation</a></li>
-                    </ul>
-                </div>
-            </div>    
-        </section>
-        <!-- Case Study Section -->
-        <section id="blog" class="ptb pt-sm-80">
-            <div class="container">
-                <div class="row container-grid">
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-30 pb-15 nf-item powerbi">
-                        <div class="blog-post">
-                            <div class="post-media news-image">
-                                <a href="/expertise/powerbi/power-bi-best-practices">
-                                    <img id="newsimg1" class="item-container news-image" src="/img/Banners/BPG006-main.jpg" alt="Cover image for and link to the Power BI Best Practice Guide" />
-                                </a>
-                            </div>
-                            <p>
-                                Improve the performance and security of Power BI with 29 best practices for architects and developers.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-30 pb-15 nf-item powerbi">
-                        <div class="blog-post">
-                            <div class="post-media news-image">
-                                <a href="/expertise/powerbi/dax-best-practices">
-                                    <img id="newsimg" class="item-container news-image" src="/img/Banners/BPG005-main.jpg" alt="Cover image for and link to the DAX Best Practice Guide" />
-                                </a>
-                            </div>
-                            <p>
-                                Improve  Power BI speed and functionality with our 22 DAX best practices.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-30 pb-15 nf-item datamanagement cloudtransformation">
-                        <div class="blog-post">
-                            <div class="post-media news-image">
-                                <a href="/expertise/cloudtransformation/azure-databricks-best-practices">
-                                    <img id="newsimg1" class="item-container news-image" src="/img/Banners/BPG007-main.jpg" alt="Cover image for and link to the Azure Databricks Best Practice Guide" />
-                                </a>
-                            </div>
-                            <p>
-                                Improve job speed and save storage with our 18 Azure Databricks best practices.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-30 pb-15 nf-item cloudtransformation">
-                        <div class="blog-post">
-                            <div class="post-media news-image">
-                                <a href="/expertise/cloudtransformation/azure-architecture-best-practices">
-                                    <img id="newsimg2" class="item-container news-image" src="/img/Banners/BPG004-main.jpg" alt="Cover image for and link to the Azure optimization Best Practice Guide" />
-                                </a>
-                            </div>
-                            <p>
-                                Optimize your Azure architecture for high performance at a low cost with our 5 best practices.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-30 pb-15 nf-item cloudtransformation">
-                        <div class="blog-post">
-                            <div class="post-media news-image">
-                                <a href="/expertise/cloudtransformation/azure-security-best-practices ">
-                                    <img id="newsimg3" class="item-container news-image" src="/img/Banners/BPG003-main.jpg" alt="Cover image for and link to the Azure security Best Practice Guide" />
-                                </a>
-                            </div>
-                            <p>
-                                Strengthen your cloud security and protect your assets with 19 security best practices.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-30 pb-15 nf-item datamanagement cloudtransformation">
-                        <div class="blog-post">
-                            <div class="post-media news-image">
-                                <a href="/expertise/datamanagement/data-validation-best-practices">
-                                    <img id="newsimg" class="item-container news-image" src="/img/Banners/BPG002-main.jpg" alt="Cover image for and link to the data validation Best Practice Guide" />
-                                </a>
-                            </div>
-                            <p>
-                                Ensure quality data on demand with our 7 data validation best practices.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-30 pb-15 nf-item datamanagement">
-                        <div class="blog-post">
-                            <div class="post-media news-image">
-                                <a href="/expertise/powerbi/d365-deployment-best-practices">
-                                    <img id="newsimg" class="item-container news-image" src="/img/Banners/BPG001-main.jpg" alt="Cover image for and link to the Dynamics 365 deployment Best Practice Guide" />
-                                </a>
-                            </div>
-                            <p>
-                                Deploy Dynamics 365 faster with minimal downtime using our 8 best practices.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-30 pb-15 nf-item datamanagement">
-                        <div class="blog-post">
-                            <div class="post-media news-image">
-                                <a href="/expertise/powerbi/d365-development-best-practices">
-                                    <img id="newsimg" class="item-container news-image" src="/img/Banners/d365devbestpractice.png" alt="Cover image for and link to the Dynamics 365 development Best Practice Guide" />
-                                </a>
-                            </div>
-                            <p>
-                                Deploy Dynamics 365 faster with minimal downtime using our 8 best practices.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Case Study Section -->
-        <!-- END CONTENT ---------------------------------------------------------------------------->
-        <!-- FOOTER -->
-        <footer class="footer pt-60" id="footer">
-        </footer>
-        <!-- END FOOTER -->
-        <!-- Scroll Top -->
-        <a class="scroll-top">
-            <i class="fa fa-angle-double-up"></i>
-        </a>
-        <!-- End Scroll Top -->
-    </div>
-    <!-- Site Wraper End -->
-    <!-- JS -->
-    <!-- Load app main script -->
-    <script src="/js/plugin/tether.min.js?v=20170822" type="text/javascript"></script>
-    <script src="/js/jquery-1.11.2.min.js?v=20170822" type="text/javascript"></script>
-    <script src="/js/plugin/jquery.easing.js?v=20170822" type="text/javascript"></script>
-    <script src="/js/jquery-ui.min.js?v=20170822" type="text/javascript"></script>
-    <script src="/js/bootstrap.min.js?v=20170822" type="text/javascript"></script>
-    <script src="/js/plugin/jquery.flexslider.js?v=20170822" type="text/javascript"></script>
-    <script src="/js/plugin/jquery.fitvids.js?v=20170822" type="text/javascript"></script>
-    <script src="/js/plugin/jquery.viewportchecker.js?v=20170822" type="text/javascript"></script>
-    <script src="/js/plugin/jquery.stellar.min.js?v=20170822" type="text/javascript"></script>
-    <script src="/js/plugin/wow.min.js?v=20170822" type="text/javascript"></script>
-    <script src="/js/plugin/jquery.colorbox-min.js?v=20170822" type="text/javascript"></script>
-    <script src="/js/plugin/owl.carousel.2.0.0-beta.3.min.js"></script>
-    <script src="/js/plugin/isotope.pkgd.min.js?v=20170822" type="text/javascript"></script>
-    <script src="/js/plugin/masonry.pkgd.min.js?v=20170822" type="text/javascript"></script>
-    <script src="/js/plugin/imagesloaded.pkgd.min.js?v=20170822" type="text/javascript"></script>
-    <script src="/js/plugin/jquery.fs.tipper.min.js?v=20170822" type="text/javascript"></script>
-    <script src="/js/plugin/mediaelement-and-player.min.js?v=20170822"></script>
-    <script src="/js/plugin/sidebar-menu.js?v=20170822" type="text/javascript"></script>
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="/js/theme.js?v=20170828.6" type="text/javascript"></script>
-    <script src="/js/navigation.js?v=20170822" type="text/javascript"></script>
-    <script src="/js/contact.js?v=20170828.2" type="text/javascript"></script>
-    <script src="/js/common.js?v=20170828.1" type="text/javascript"></script>
-    <script src="/js/home.js?v=20190717" type="text/javascript"></script>
-    <script src="/js/news.js?v=20190717" type="text/javascript"></script>
-    <!--<script src="/js/app.js?v=20170828.3" type="text/javascript"></script>-->
-    <script src="/js/careers.js?v=20190717"></script>
-    <script type="text/javascript" src="/js/resource.js?v=20190304"></script>
-    <script src="/js/renderBot.js?v=20190401" type="text/javascript"> </script>
-    <script src="https://cdn.botframework.com/botframework-webchat/0.14.1/botchat-es5.js"></script>
-    <script src="/js/FileSaver.js?v=20170822" type="text/javascript"> </script>
-    <script src="/js/html-docx.js?v=20170822" type="text/javascript"> </script>
-    <script>
-        $("#header").load("/header");
-        $("#footer").load("/footer");
-    </script>
 
-    <script type="application/ld+json">
-        { "@context" : "http://schema.org",
-        "@type" : "Organization",
-        "name" : "MAQ Software",
-        "image" : "https://maqsoftware.com/img/MAQSoftware.png",
-        "address" : {
-        "@type": "PostalAddress",
-        "addressLocality": "Redmond",
-        "addressRegion": "WA ",
-        "postalCode": "98052",
-        "streetAddress": "2027 152nd Avenue NE" },
-        "url" : "https://maqsoftware.com/",
-        "logo" : "https://maqsoftware.com/img/MAQSoftware.png",
-        "email":"sales@MAQSoftware.com",
-        "telephone":"+1-425-526-5399",
-        "sameAs" : [
-        "https://www.linkedin.com/company/maq-software",
-        "https://twitter.com/MAQSoftware",
-        "https://youtube.com/maqsoftware",
-        "https://www.facebook.com/maqsoftware",
-        "https://www.instagram.com/maqsoftware",
-        "https://plus.google.com/104615735701576694043"]
-    </script>
-    <!-- Google Analytics -->
-    <script>
-            (function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+<body class="shop blog">
 
-        ga('create', 'UA-7928102-1', 'auto');
-        ga('send', 'pageview');
 
-    </script>
-    <script>
-    loadPlugins();
-    </script>
-    <!-- End Google Analytics -->
+
+	<div class="wrapper reveal-side-navigation">
+		<div class="wrapper-inner">
+
+			<!-- Header -->
+			<header id="header" class="header header-absolute header-fixed-on-mobile header-transparent"
+				data-bkg-threshold="100" data-sticky-threshold="0">
+			</header>
+			<!-- Header End -->
+
+			<!-- Content -->
+			<div class="content clearfix">
+
+
+				<!-- Intro Title Section 2 -->
+				<div class="pt-60">
+					<div class="section-block intro-title-1 small bkg-white">
+						<div class="row">
+							<div class="column width-12">
+								<div class="title-container">
+									<div class="title-container-inner">
+										<div class="row flex">
+											<div class="column width-6 v-align-middle">
+												<div>
+													<h1 class="mb-0">Best Practice Guides</h1>
+													<!-- <p class="lead mb-0 mb-mobile-20">Our team of experts uses their decades of experience to deliver actionable ways to improve your technology implementations</p> -->
+												</div>
+											</div>
+											<div class="column width-6 v-align-middle">
+												<div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Intro Title Section 2 End -->
+				<!--<div class="section-block pt-0 grid-filter-menu center" data-target-grid="#portfolio-grid">
+					<div class="freeze pt-10 pb-10 bkg-white" data-extra-space-top="80" data-extra-space-bottom="0">
+						<div class="row">
+							<div class="column width-12">
+								<div class="filter-menu-inner">
+									<ul>
+										<li><a class="active" href="#" data-filter="*">All</a></li>
+										<li><a href="#" data-filter=".howto">How To</a></li>
+										<li><a href="#" data-filter=".migration">Migration</a></li>
+										<li><a href="#" data-filter=".datamanagement">Data Management</a></li>
+										<li><a href="#" data-filter=".appdevelopment">App Development</a></li>
+										<li><a href="#" data-filter=".cloudtransformation">Cloud Transformation</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>-->
+
+				<!-- Content Inner -->
+				<div class="blog-masonry grid-container mb-30" data-layout-mode="fitRows" data-grid-ratio="1.5"
+					data-animate-resize data-animate-resize-duration="0">
+					<!--<div class="blog-masonry grid-container" data-layout-mode="fitRows" >-->
+					<div class="row">
+						<div class="column width-12">
+							<div class="row grid content-grid-3 clearfix">
+                                <div class="grid-item">
+                                    <article class="post">
+                                        <div class="post-content with-background">
+                                            <div class="post-media">
+                                                <div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700"
+                                                    data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9">
+                                                    <a class="overlay-link" href="/insights/power-bi-best-practices">
+                                                        <img src="/img/blog/BPG006-main.jpg" alt="">
+                                                        <span class="overlay-info">
+                                                            <span>
+                                                                <span>
+                                                                    Read Full Article
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <h2 class="post-title">
+                                                <a href="/insights/power-bi-best-practices">Improve your Power BI performance and security with our 29 best practices</a>
+                                            </h2>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="grid-item">
+                                    <article class="post">
+                                        <div class="post-content with-background">
+                                            <div class="post-media">
+                                                <div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700"
+                                                    data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9">
+                                                    <a class="overlay-link" href="/insights/dax-best-practices">
+                                                        <img src="/img/blog/BPG005-main.jpg" alt="">
+                                                        <span class="overlay-info">
+                                                            <span>
+                                                                <span>
+                                                                    Read Full Article
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <h2 class="post-title">
+                                                <a href="/insights/dax-best-practices">Improve  Power BI speed and functionality with our 22 DAX best practices</a>
+                                            </h2>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="grid-item">
+                                    <article class="post">
+                                        <div class="post-content with-background">
+                                            <div class="post-media">
+                                                <div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700"
+                                                    data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9">
+                                                    <a class="overlay-link" href="/insights/azure-databricks-best-practices">
+                                                        <img src="/img/blog/BPG007-main.jpg" alt="">
+                                                        <span class="overlay-info">
+                                                            <span>
+                                                                <span>
+                                                                    Read Full Article
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <h2 class="post-title">
+                                                <a href="/insights/azure-databricks-best-practices">Improve job speed and save storage with our 18 Azure Databricks best practices</a>
+                                            </h2>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="grid-item">
+                                    <article class="post">
+                                        <div class="post-content with-background">
+                                            <div class="post-media">
+                                                <div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700"
+                                                    data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9">
+                                                    <a class="overlay-link" href="/insights/azure-architecture-best-practices">
+                                                        <img src="/img/blog/BPG004-main.jpg" alt="">
+                                                        <span class="overlay-info">
+                                                            <span>
+                                                                <span>
+                                                                    Read Full Article
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <h2 class="post-title">
+                                                <a href="/insights/azure-architecture-best-practices">Optimize your Azure architecture for high performance at a low cost with our 5 best practices</a>
+                                            </h2>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="grid-item">
+                                    <article class="post">
+                                        <div class="post-content with-background">
+                                            <div class="post-media">
+                                                <div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700"
+                                                    data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9">
+                                                    <a class="overlay-link" href="/insights/azure-security-best-practices">
+                                                        <img src="/img/blog/BPG003-main.jpg" alt="">
+                                                        <span class="overlay-info">
+                                                            <span>
+                                                                <span>
+                                                                    Read Full Article
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <h2 class="post-title">
+                                                <a href="/insights/azure-security-best-practices">Strengthen your cloud security and protect your assets with 19 security best practices</a>
+                                            </h2>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="grid-item">
+                                    <article class="post">
+                                        <div class="post-content with-background">
+                                            <div class="post-media">
+                                                <div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700"
+                                                    data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9">
+                                                    <a class="overlay-link" href="/insights/data-validation-best-practices">
+                                                        <img src="/img/blog/BPG002-main.jpg" alt="">
+                                                        <span class="overlay-info">
+                                                            <span>
+                                                                <span>
+                                                                    Read Full Article
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <h2 class="post-title">
+                                                <a href="/insights/data-validation-best-practices">Ensure quality data on demand with our 7 data validation best practices</a>
+                                            </h2>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="grid-item">
+                                    <article class="post">
+                                        <div class="post-content with-background">
+                                            <div class="post-media">
+                                                <div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700"
+                                                    data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9">
+                                                    <a class="overlay-link" href="/insights/dynamics-365-development-best-practices">
+                                                        <img src="/img/blog/BPG008-main.jpg" alt="">
+                                                        <span class="overlay-info">
+                                                            <span>
+                                                                <span>
+                                                                    Read Full Article
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <h2 class="post-title">
+                                                <a href="/insights/dynamics-365-development-best-practices">Optimize your Dynamics 365 environment with our 32 best practices on developing fields, views, and more</a>
+                                            </h2>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="grid-item">
+                                    <article class="post">
+                                        <div class="post-content with-background">
+                                            <div class="post-media">
+                                                <div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700"
+                                                    data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9">
+                                                    <a class="overlay-link" href="/insights/dynamics-365-deployment-best-practices">
+                                                        <img src="/img/blog/BPG001-main.jpg" alt="">
+                                                        <span class="overlay-info">
+                                                            <span>
+                                                                <span>
+                                                                    Read Full Article
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <h2 class="post-title">
+                                                <a href="/insights/dynamics-365-deployment-best-practices">Deploy Dynamics 365 faster with minimal downtime using our 8 best practices</a>
+                                            </h2>
+                                        </div>
+                                    </article>
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Content Inner End -->
+				<section id="bloggerContent" class="hidden"></section>
+			</div>
+		</div>
+	</div>
+
+	<!-- Content End -->
+
+	<!-- Footer -->
+	<footer id="footer" class="footer footer-light bkg-grey-ultralight">
+	</footer>
+	<!-- Footer End -->
+
+	</div>
+	</div>
+
+	<!-- Js -->
+	<script src="/js/jquery-3.2.1.min.js"></script>
+	<script src="/js/insights.js?v=20211122" type="text/javascript"></script>
+	<script src="/js/timber.master.min.js"></script>
+	<script>
+		$("#header").load("/header");
+	    $("#footer").load("/footer");
+	</script>
 </body>
 
 </html>
