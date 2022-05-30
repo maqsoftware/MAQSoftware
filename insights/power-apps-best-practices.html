@@ -58,53 +58,83 @@
                                     <br>
                                     <p class="text-large">Loading Spinners indicate to users that content is still being loaded, reducing confusion or likelihood of leaving the page.</p>
                                     <p class="text-large">In the <b>Gallery</b> panel, under the <b>Advanced</b> tab, change LoadingSpinner.None to <b>LoadingSpinner.Controls</b> or <b>LoadingSpinner.Data</b> based on your needs.</p>
+                                    <img src="/images/best-practices/PowerApp_EnableGallery.png">
+                                    <br><br>
 
                                     <li class="text-xlarge"><strong>If using more than 20 images, insert them as HTML text</strong></li>
                                     <br>
                                     <p class="text-large">Images uploaded through the Media panel increase the app’s load time. If using more than 20 images, insert them as HTML text to minimize load. For example: Uploading 25 images through the Media panel results in a 3-second load time, whereas uploading 25 images using an <img> tag results in a 1-second load time. </p>
                                     <p class="text-large">Go to <b>Insert > Text > HTML text</b> and enter <b>“< img src='INSERT HYPERLINK'>”</b> in the formula bar.</p>
+                                    <img src="/images/best-practices/PowerApp_HTMLText_1.png">
+                                    <br><br>
+                                    <img src="/images/best-practices/PowerApp_HTMLText_2.png">
+                                    <br><br>                                    
 
                                     <li class="text-xlarge"><strong>Create components for common elements</strong></li>
                                     <br>
                                     <p class="text-large">To save time and unify design across screens or apps, create components for frequently used elements like headers and footers. This enables you to easily reuse elements so you don’t need to recreate them.</p>
                                     <p class="text-large">In the <b>Tree view</b> pane, go to <b>Components > +New component</b> and build your component.</p>
+                                    <img src="/images/best-practices/PowerApp_CommonElement.png">
+                                    <br><br>
 
                                     <li class="text-xlarge"><strong>Use Concurrent function if formula execution is nonsequential</strong></li>
                                     <br>
                                     <p class="text-large">If you have more than one formula in no particular sequence, evaluate the formulas using the Concurrent function. The Concurrent function evaluates multiple formulas simultaneously, enabling your app to load data faster.</p>
+                                    <img src="/images/best-practices/PowerApp_Concurrent.png">
+                                    <br><br>
                             
                                     <li class="text-xlarge"><strong>Use delegable calls over non-delegable calls</strong></li>
                                     <br>
                                     <p class="text-large">When calling data sources, some functions are delegable while others are not. Delegable functions are evaluated on the server with higher performance. Non-delegable functions require the data be downloaded to the client and evaluated locally. This process is slower and more data-intensive than a delegable call.</p>                                    
+                                    <img src="/images/best-practices/PowerApp_DeligableCalls.png">
+                                    <br><br>
 
                                     <li class="text-xlarge"><strong>Use IfError for exception handling</strong></li>
                                     <br>
                                     <p class="text-large">The <b>IfError</b> function tests values for errors. If the function finds an error, it replaces the error with a valid value so downstream calculations can continue without delay.</p>
                                     <p class="text-large">IfError is a Power Apps experimental feature and is turned off by default. To enable it, go to <b>Settings > Upcoming features > Experimental</b> and turn on <b>“Formula-level error management”</b>. Once it’s enabled, enter <b>IfError(1/0, Notify(“Error has occurred”, Error), Notify(“Success”, Success))</b> in the formula bar.</p>
+                                    <img src="/images/best-practices/PowerApp_ExceptionalHandling_1.png">
+                                    <br><br>
+                                    <img src="/images/best-practices/PowerApp_ExceptionalHandling_2.png">
+                                    <br><br>
                                 
                                     <li class="text-xlarge"><strong>Store data in a collection</strong></li>
                                     <br>
                                     <p class="text-large">To avoid repeated calls to the data source (which takes more time), store data in a collection or use the Set function to cache data from the lookup tables locally and then use it everywhere inside the app.</p>
+                                    <img src="/images/best-practices/PowerApp_Collection.png">
+                                    <br><br>
 
                                     <li class="text-xlarge"><strong>Use a global variable or collection to share information between screens</strong></li>
                                     <br>
                                     <p class="text-large">To avoid control dependencies, use a global variable or collection to share information between screens.</p>
                                     <p class="text-large"><b>Example:</b> Do not use ‘Gallery.selected.columnName’ in screens other than where this gallery exists. Instead store this value in a global variable i.e., Set(galData, Gallery.selected.columnName) and then use this variable.</p>
+                                    <img src="/images/best-practices/PowerApp_GlobalVariable.png">
+                                    <br><br>
 
                                     <li class="text-xlarge"><strong>Use combo boxes instead of drop downs</strong></li>
                                     <br>
                                     <p class="text-large">Combo boxes are a combination of a search bar and a drop down. They enable users to search for items or view items by category, instead of having to scroll through long traditional drop down lists.</p> 
                                     <p class="text-large">To add a combo box, go to <b>Insert > Input > Combo Box</b></p> 
+                                    <img src="/images/best-practices/PowerApp_ComboBox.png">
+                                    <br><br>
+                                    <img src="/images/best-practices/PowerApp_ComboBox_2.png">
+                                    <br><br>
 
                                     <li class="text-xlarge"><strong>Use themes</strong></li>
                                     <br>
-                                    <p class="text-large">A theme defines the design properties for controls and components such as colors, fonts, and borders.</p>
-                                    <p class="text-large">Using themes enables you to maintain design consistency across your app.</p>
-                                    <p class="text-large">Under the <b>Home</b> tab, use the <b>Theme</b> drop down to choose a theme.</p>
+                                    <p class="text-large">A theme defines the design properties for controls and components such as colors, fonts, and borders.
+                                        <br>Using themes enables you to maintain design consistency across your app.
+                                        <br><br>Under the <b>Home</b> tab, use the <b>Theme</b> drop down to choose a theme.
+
+                                    </p>                                    
+                                    <img src="/images/best-practices/PowerApp_Theme.png">
+                                    <br><br>
                                         
                                     <li class="text-xlarge"><strong>Limit code inside the OnStart property</strong></li>
                                     <br>
                                     <p class="text-large">Limit the code within the OnStart property to improve the debug process and use StartScreen property to prevent complex, long-running formulas in App. OnStart can significantly slow the startup time of an app.</p>
+                                    <img src="/images/best-practices/PowerApp_OnStart.png">
+                                    <br><br>
                                 </ol>
                             </div>                            
                             <h2>References</h2>
