@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+    <!-- Open Graph -->
+    <meta property="og:title" content="29 Power BI Best Practices | MAQ Software Insights" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/img/blog/BPG006-main.jpg" />
+    <meta property="og:description" content="Improve your Power BI performance, security, and design with these 29 best practices for architects and developers." />
+    <!-- Twitter Theme -->
+    <meta name="twitter:widgets:theme" content="light">
+
+    <!-- Title &amp; Favicon -->
+    <title>Power Apps Best Practices | MAQ Software Insights</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/core.min.css" />
+    <link rel="stylesheet" href="/css/skin.css" />
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-S0W302CGQG');
+    </script>
+</head>
+<body class="shop blog">
+
+    <!-- Header -->
+    <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent" data-bkg-threshold="100" data-sticky-threshold="0"></header>
+    <!-- Header End -->
+    <div class="section-block bkg-grey-ultralight"></div>
+    <!-- Content -->
+    <div class="content clearfix">
+        <div class="section-block clearfix pt-0 pb-0 bkg-grey-ultralight">
+            <div class="row">
+                <!-- Content Inner -->
+                <div class="column width-10 offset-1 content-inner blog-single-post bkg-grey-ultralight">
+                    <article class="post">
+                        <div class="post-content with-background">
+                            <h1 class="post-title center">Power Apps Best Practices</h1>
+                            <div class="post-info center">
+                                <span class="post-date">Last updated: May 30, 2022</span>
+                            </div>
+                            <p class="text-large">This guide covers the 11 best practices you need to optimize your canvas apps.</p>
+                            <div id="security">                                
+                                <ol>
+                                    <li class="text-xlarge"><strong>Enable Loading Spinner for galleries</strong></li>
+                                    <br>
+                                    <p class="text-large">Loading Spinners indicate to users that content is still being loaded, reducing confusion or likelihood of leaving the page.</p>
+                                    <p class="text-large">In the <b>Gallery</b> panel, under the <b>Advanced</b> tab, change LoadingSpinner.None to <b>LoadingSpinner.Controls</b> or <b>LoadingSpinner.Data</b> based on your needs.</p>
+
+                                    <li class="text-xlarge"><strong>If using more than 20 images, insert them as HTML text</strong></li>
+                                    <br>
+                                    <p class="text-large">Images uploaded through the Media panel increase the app’s load time. If using more than 20 images, insert them as HTML text to minimize load. For example: Uploading 25 images through the Media panel results in a 3-second load time, whereas uploading 25 images using an <img> tag results in a 1-second load time. </p>
+                                    <p class="text-large">Go to <b>Insert > Text > HTML text</b> and enter <b>“< img src='INSERT HYPERLINK'>”</b> in the formula bar.</p>
+
+                                    <li class="text-xlarge"><strong>Create components for common elements</strong></li>
+                                    <br>
+                                    <p class="text-large">To save time and unify design across screens or apps, create components for frequently used elements like headers and footers. This enables you to easily reuse elements so you don’t need to recreate them.</p>
+                                    <p class="text-large">In the <b>Tree view</b> pane, go to <b>Components > +New component</b> and build your component.</p>
+
+                                    <li class="text-xlarge"><strong>Use Concurrent function if formula execution is nonsequential</strong></li>
+                                    <br>
+                                    <p class="text-large">If you have more than one formula in no particular sequence, evaluate the formulas using the Concurrent function. The Concurrent function evaluates multiple formulas simultaneously, enabling your app to load data faster.</p>
+                            
+                                    <li class="text-xlarge"><strong>Use delegable calls over non-delegable calls</strong></li>
+                                    <br>
+                                    <p class="text-large">When calling data sources, some functions are delegable while others are not. Delegable functions are evaluated on the server with higher performance. Non-delegable functions require the data be downloaded to the client and evaluated locally. This process is slower and more data-intensive than a delegable call.</p>                                    
+
+                                    <li class="text-xlarge"><strong>Use IfError for exception handling</strong></li>
+                                    <br>
+                                    <p class="text-large">The <b>IfError</b> function tests values for errors. If the function finds an error, it replaces the error with a valid value so downstream calculations can continue without delay.</p>
+                                    <p class="text-large">IfError is a Power Apps experimental feature and is turned off by default. To enable it, go to <b>Settings > Upcoming features > Experimental</b> and turn on <b>“Formula-level error management”</b>. Once it’s enabled, enter <b>IfError(1/0, Notify(“Error has occurred”, Error), Notify(“Success”, Success))</b> in the formula bar.</p>
+                                
+                                    <li class="text-xlarge"><strong>Store data in a collection</strong></li>
+                                    <br>
+                                    <p class="text-large">To avoid repeated calls to the data source (which takes more time), store data in a collection or use the Set function to cache data from the lookup tables locally and then use it everywhere inside the app.</p>
+
+                                    <li class="text-xlarge"><strong>Use a global variable or collection to share information between screens</strong></li>
+                                    <br>
+                                    <p class="text-large">To avoid control dependencies, use a global variable or collection to share information between screens.</p>
+                                    <p class="text-large"><b>Example:</b> Do not use ‘Gallery.selected.columnName’ in screens other than where this gallery exists. Instead store this value in a global variable i.e., Set(galData, Gallery.selected.columnName) and then use this variable.</p>
+
+                                    <li class="text-xlarge"><strong>Use combo boxes instead of drop downs</strong></li>
+                                    <br>
+                                    <p class="text-large">Combo boxes are a combination of a search bar and a drop down. They enable users to search for items or view items by category, instead of having to scroll through long traditional drop down lists.</p> 
+                                    <p class="text-large">To add a combo box, go to <b>Insert > Input > Combo Box</b></p> 
+
+                                    <li class="text-xlarge"><strong>Use themes</strong></li>
+                                    <br>
+                                    <p class="text-large">A theme defines the design properties for controls and components such as colors, fonts, and borders.</p>
+                                    <p class="text-large">Using themes enables you to maintain design consistency across your app.</p>
+                                    <p class="text-large">Under the <b>Home</b> tab, use the <b>Theme</b> drop down to choose a theme.</p>
+                                        
+                                    <li class="text-xlarge"><strong>Limit code inside the OnStart property</strong></li>
+                                    <br>
+                                    <p class="text-large">Limit the code within the OnStart property to improve the debug process and use StartScreen property to prevent complex, long-running formulas in App. OnStart can significantly slow the startup time of an app.</p>
+                                </ol>
+                            </div>                            
+                            <h2>References</h2>
+                            <ul>
+                                <li class="text-large"><a href="https://docs.microsoft.com/en-us/power-platform/guidance/coe/theming-components#:~:text=1%20Go%20to%20make.powerapps.com.%202%20Select%20New%20%3E,or%20components%20that%20you%20add%20to%20the%20screen." target="blank">Theming components - Power Platform | Microsoft Docs</a></li>
+                                <li class="text-large"><a href="https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/delegation-overview" target="blank">Understand delegation in a canvas app - Power Apps | Microsoft Docs</a></li>
+                                <li class="text-large"><a href="https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/performance-tips" target="blank">Tips and best practices to improve performance of canvas apps - Power Apps | Microsoft Docs</a></li>
+                            </ul>
+                            
+                            <div class="section-block"></div>
+                            <div class="row">
+                                <div class="column width-6">
+                                    <img src="/img/blog/BPG005-main.jpg" alt="">
+                                </div>
+                                <div class="column width-5 offset-1">
+                                    <p class="title-medium">DAX Best Practice Guide</p><br><p class="title-small">Improve your Power BI speed and functionality with our 22 DAX best practices</p>
+                                    <br><a href="/insights/dax-best-practices.html">Read More &rarr;</a><br>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="section-block bkg-grey-ultralight"></div>
+    </div>
+    <!-- Content End -->
+    <!-- Footer -->
+    <footer id="footer" class="footer footer-light bkg-grey-ultralight"></footer>
+    <!-- Footer End -->
+    <!-- Js -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/timber.master.min.js"></script>
+    <script>
+$("#header").load("/header.html");
+$("#footer").load("/footer.html");
+    </script>
+</body>
+</html>
