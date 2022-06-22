@@ -2,7 +2,7 @@ var oIndiaJobPostSection,
   oRedmondJobPostSection,
   oNewsData = null,
   sTemplate =
-    '<div class="accordion style-2 rounded left" data-toggle-icon data-toggle-multiple> <ul> <li> <a>@title</a> <div id="accordion-1-panel-1"> <div class="accordion-content"> @content <br> <a href="@jobScoreUrl" class="button medium pill bkg-hover-white">Apply on Jobscore</a> </div> </div> </li> </ul> </div>',
+    '<div class="accordion style-2 rounded left" data-toggle-icon data-toggle-multiple> <ul> <li> <a>@title</a> <div id="accordion-1-panel-1"> <div class="accordion-content"> @content <br> </div> </div> </li> </ul> </div>',
   sNoJobMessage =
     '<p class="DataSubContent Color595959">No job openings available at this location.<br />Please come back and check again soon.</p>',
   sJobServiceIssue =
