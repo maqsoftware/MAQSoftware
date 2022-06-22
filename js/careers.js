@@ -130,7 +130,6 @@ function renderRedmondTitle(oData) {
           oCurrentPost.getElementsByTagName("content")[0].childNodes[0]
             .nodeValue
         )
-        .replace(/@jobScoreUrl/g, sjobScoreUrl)
     );
   }
   $("#tabs-1-pane-1 .jobs-redmond *").removeAttr("style");
@@ -184,7 +183,6 @@ function renderMumbaiTitle(oData) {
           oCurrentPost.getElementsByTagName("content")[0].childNodes[0]
             .nodeValue
         )
-        .replace(/@jobScoreUrl/g, sjobScoreUrl)
     );
   }
   $("#tabs-1-pane-2 .jobs-mumbai *").removeAttr("style");
@@ -238,7 +236,6 @@ function renderHyderabadTitle(oData) {
           oCurrentPost.getElementsByTagName("content")[0].childNodes[0]
             .nodeValue
         )
-        .replace(/@jobScoreUrl/g, sjobScoreUrl)
     );
   }
   $("#tabs-1-pane-3 .jobs-hyd *").removeAttr("style");
