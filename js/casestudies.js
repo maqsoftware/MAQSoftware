@@ -66,7 +66,7 @@ function renderCaseStudy() {
         entry1.getElementsByTagName("title")[0].childNodes[0].nodeValue;
       if (entry1) {
         var oCaseStudyEntry =
-          "<div class='grid-item'>" +
+          "<div class='grid-item nf-item "+ aCategoryFilters.join(' ') +"'>" +
           "<article class='post'>" +
           "<div class='post-content with-background'>" +
           "<div class='post-media'>" +
