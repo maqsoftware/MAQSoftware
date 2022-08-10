@@ -102,8 +102,7 @@
                                     <li class="text-xlarge"><strong>Avoid using floating point data types</strong></li>
                                     <p class="text-large">Floating point data types can result in unpredictable round-off errors and can decrease the performance of reports.</p>
                                     <li class="text-xlarge"><strong>Replace the auto-generated date table with a custom date table in your model</strong></li>
-                                    <p class="text-large">Using a date table enables you to leverage the time-series function in Power BI. However, the auto-generated date table creates a date table for each date column, drastically increasing the model size.</p>
-                                    <p class="text-large">You can use a single date table to reduce model size, placing any required relationships in fact tables. When building your date table, split the date and time to improve data compression. Find out how to turn off the auto-generated date table <a href="https://www.youtube.com/watch?v=xu3uDEHtCrg" target="blank">here</a> and how to set and use custom date tables <a href="https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-date-tables" target="blank">here</a>.</p>
+                                    <p class="text-large">Using a date table enables you to leverage the time-series function in Power BI. However, the auto-generated date table creates a date table for each date column, drastically increasing the model size. You can use a single date table to reduce model size, placing any required relationships in fact tables. When building your date table, split the date and time to improve data compression. Find out how to turn off the auto-generated date table <a href="https://www.youtube.com/watch?v=xu3uDEHtCrg" target="blank">here</a> and how to set and use custom date tables <a href="https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-date-tables" target="blank">here</a>.</p>
                                     <li class="text-xlarge"><strong>Set IsAvailableinMdx to false on non-attribute columns</strong></li>
                                     <p class="text-large">Disable attribute hierarchy for measure columns and for any columns you don’t want end users to use. This reduces data size and load time.</p>
                                     <li class="text-xlarge"><strong>Reduce the amount of data loaded on page load</strong></li>
@@ -134,17 +133,20 @@
                                 </ol>
                             </div>
                             <h2>References</h2>
-                            <p class="text-large"><a href="https://docs.microsoft.com/en-us/power-bi/guidance/power-bi-optimization" target="blank">Optimization guide for Power BI</a> – Microsoft Corporation, published January 28, 2022</p>
-                            <p class="text-large"><a href="https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-report-visualizations" target="blank">Visualizations in Power BI reports</a> – Microsoft Corporation, published November 5, 2021</p>
-                            <p class="text-large"><a href="https://docs.microsoft.com/en-us/power-bi/create-reports/service-dashboards-design-tips" target="blank">Tips for designing a great Power BI dashboard</a> – Microsoft Corporation, published September 15, 2021</p>
+                            <ul class="defaultBody">
+                                <li class="text-large"><a href="https://docs.microsoft.com/en-us/power-bi/guidance/power-bi-optimization" target="blank">Optimization guide for Power BI</a> – Microsoft Corporation, published January 28, 2022</li>
+                                <li class="text-large"><a href="https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-report-visualizations" target="blank">Visualizations in Power BI reports</a> – Microsoft Corporation, published November 5, 2021</li>
+                                <li class="text-large"><a href="https://docs.microsoft.com/en-us/power-bi/create-reports/service-dashboards-design-tips" target="blank">Tips for designing a great Power BI dashboard</a> – Microsoft Corporation, published September 15, 2021</li>
+                            </ul>
                             <h2>Downloadable Infographics</h2>
-                            <p class="text-large"><a href="https://maqsoftware.com/img/Improving-Security.pdf" target="blank">Best practices for Power BI security</a></p>
-                            <p class="text-large"><a href="https://maqsoftware.com/img/Improving-Speed.pdf" target="blank">Best practices for Power BI performance</a></p>
-                            <p class="text-large"><a href="https://maqsoftware.com/img/Improving-UX.pdf" target="blank">Best practices for Power BI design</a></p>
+                            <ul class="defaultBody">
+                                <li class="text-large"><a href="https://maqsoftware.com/img/Improving-Security.pdf" target="blank">Best practices for Power BI security</a></li>
+                                <li class="text-large"><a href="https://maqsoftware.com/img/Improving-Speed.pdf" target="blank">Best practices for Power BI performance</a></li>
+                                <li class="text-large"><a href="https://maqsoftware.com/img/Improving-UX.pdf" target="blank">Best practices for Power BI design</a></li>
                             </ul>
                             <h2>Optimization Tools</h2>
                             <p class="text-large">Dr. Power BI analyzes your reports and prescribes solutions for both UX and DAX errors, enabling you to access faster, more intuitive reports. Try Dr. Power BI free <a href="https://maqdrpowerbi.azurewebsites.net/" target="blank">here.</a></p>
-                            <div class="section-block pt-60 pb-60 bkg-white"></div>
+                            <div class="section-block pt-50 pb-50 bkg-white"></div>
                             <div class="row">
                                 <div class="column width-6">
                                     <img src="/img/blog/BPG005-main.jpg" alt="">
