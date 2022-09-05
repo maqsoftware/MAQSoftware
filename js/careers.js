@@ -12,6 +12,7 @@ function careersConstructor() {
   oRedmondJobPostSection = $("#tabs-1-pane-1 .jobs-redmond");
   oMumbaiJobPostSection = $("#tabs-1-pane-2 .jobs-mumbai");
   oHyderabadJobPostSection = $("#tabs-1-pane-3 .jobs-hyd");
+  oNoidaJobPostSection = $("#tabs-1-pane-4 .jobs-noida");
 
   var MumbaifeedUrl =
     "https://www.blogger.com/feeds/4733689656779828601/posts/default/-/Openings - Mumbai?max-results=999";
@@ -19,6 +20,8 @@ function careersConstructor() {
     "https://www.blogger.com/feeds/4733689656779828601/posts/default/-/Openings - Redmond?max-results=999";
   var HyderabadfeedUrl =
     "https://www.blogger.com/feeds/4733689656779828601/posts/default/-/Openings - Hyderabad?max-results=999";
+  var NoidafeedUrl =
+    "https://www.blogger.com/feeds/4733689656779828601/posts/default/-/Openings - Noida?max-results=999";
   $.ajax({
     url: RedmondfeedUrl,
     type: "GET",
@@ -77,6 +80,27 @@ function careersConstructor() {
     },
     error: function () {
       oHyderabadJobPostSection
+        .html(sJobServiceIssue)
+        .removeClass("Loading")
+        .removeClass("LoadingHeight");
+    },
+  });
+  $.ajax({
+    url: NoidafeedUrl,
+    type: "GET",
+    dataType: "jsonp",
+    success: function (msg) {
+      if (msg) {
+        loadNoidaCareers(msg);
+      } else {
+        oNoidaJobPostSection
+          .html(sNoJobMessage)
+          .removeClass("Loading")
+          .removeClass("LoadingHeight");
+      }
+    },
+    error: function () {
+      oNoidaJobPostSection
         .html(sJobServiceIssue)
         .removeClass("Loading")
         .removeClass("LoadingHeight");
@@ -241,4 +265,56 @@ function renderHyderabadTitle(oData) {
   $("#tabs-1-pane-3 .jobs-hyd *").removeAttr("style");
   var jobs = $("#tabs-1-pane-3 .jobs-hyd").html();
   $("#tabs-1-pane-3 .populate-jobs-hyd").html(jobs);
+}
+
+function loadNoidaCareers(sNewsData) {
+  var oTempData = [],
+    parser;
+  try {
+    parser = new DOMParser();
+    oNewsData = parser.parseFromString(sNewsData, "text/xml");
+
+    if (
+      oNewsData.getElementsByTagName("feed") &&
+      !oNewsData.getElementsByTagName("entry").length
+    ) {
+      oTempData[0] = oNewsData.getElementsByTagName("entry");
+    }
+    renderNoidaTitle(oNewsData.getElementsByTagName("entry"));
+  } catch (exception) {
+    oNoidaJobPostSection
+      .html(sNoJobMessage)
+      .removeClass("Loading")
+      .removeClass("LoadingHeight");
+  }
+  // unbind already binded click event
+  $(".accordion .accordion-section .accordion-title .acc-li").unbind("click");
+}
+
+function renderNoidaTitle(oData) {
+  var oCurrentPost;
+  oNoidaJobPostSection
+    .html("")
+    .removeClass("Loading")
+    .removeClass("LoadingHeight");
+  for (iIterator = 0; iIterator < oData.length; iIterator++) {
+    oCurrentPost = oData.item(iIterator);
+    sindex = oData[iIterator].innerHTML.indexOf("https://jsco.re/");
+    sjobScoreUrl = oData[iIterator].innerHTML.slice(sindex, sindex + 21);
+    oNoidaJobPostSection.append(
+      sTemplate
+        .replace(
+          /@title/g,
+          oCurrentPost.getElementsByTagName("title")[0].childNodes[0].nodeValue
+        )
+        .replace(
+          /@content/g,
+          oCurrentPost.getElementsByTagName("content")[0].childNodes[0]
+            .nodeValue
+        )
+    );
+  }
+  $("#tabs-1-pane-4 .jobs-noida *").removeAttr("style");
+  var jobs = $("#tabs-1-pane-4 .jobs-noida").html();
+  $("#tabs-1-pane-4 .populate-jobs-noida").html(jobs);
 }
