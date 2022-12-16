@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
     <!-- Open Graph -->
-    <meta property="og:title" content="Azure Best Practices | MAQ Software Insights" />
+    <meta property="og:title" content="Azure Cost Optimization Best Practice Guide | MAQ Software Insights" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/images/expertise/cloud-main.jpg" />
     <meta property="og:description" content="Optimize your Azure architecture for high performance at a low cost with our 5 best practices." />
@@ -12,7 +12,7 @@
     <meta name="twitter:widgets:theme" content="light">
 
     <!-- Title &amp; Favicon -->
-    <title>Azure Best Practices | MAQ Software Insights</title>
+    <title>Azure Cost Optimization Best Practice Guide | MAQ Software Insights</title>
     <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext" rel="stylesheet">
@@ -47,61 +47,103 @@
                 <div class="column width-10 offset-1 content-inner blog-single-post bkg-grey-ultralight">
                     <article class="post">
                         <div class="post-content with-background">
-                            <h1 class="post-title center">Azure Best Practice Guide</h1>
+                            <h1 class="post-title center">Azure Cost Optimization Best Practice Guide</h1>
                             <div class="post-info center">
-                                <span class="post-date">Last updated: 27 Jan 2021</span>
+                                <span class="post-date">Last updated: 15 Dec 2022</span>
                             </div>
-                            <p class="text-large">Microsoft Azure is a powerful cloud platform that enables users to store and quickly process terabytes of data. To keep costs down while managing and securing an Azure-based platform, you need an optimized architecture.</p>
-                            <p class="text-large">Building an optimized Azure architecture requires numerous assets including databases, data warehouses, machine learning models, and data streaming services. With so many elements, it can be difficult to keep your costs low while operating at peak performance.</p>
-                            <p class="text-large">At MAQ Software, we’ve migrated hundreds of applications to Azure. Based on our experience, we have compiled five best practices to optimize your Azure platform for high performance and cost.</p>
-                            <div id="GeneralUse">
-                                <h2>For General Use</h2>
-                                <ol>
-                                    <li class="text-xlarge"><strong>To reduce Azure costs, turn off or scale down virtual machines (VMs) at set times</strong></li>
-                                    <br>
-                                    <p class="text-large">Switch off resources during non-usage periods or scale down VMs during off-peak hours to reduce overall subscription costs. There are several ways to schedule auto-shutdowns for Azure VMs. When provisioning a new VM, Azure offers settings for scheduled shutdown time according to time zone.</p>
-                                    <p class="text-large">When administering multiple VMs, runbooks are ideal for scheduling automatic shutdown. Runbooks in Service Management Automation and Microsoft Azure Automation are Windows PowerShell workflows or PowerShell scripts.</p>
-                                    <p class="text-large">In DevOps mode, we maintain four parallel environments: Development, Testing, UAT, and Production. We use ARO Toolbox and runbooks to automatically shut down all non-production environments at the end of business hours. The environments automatically start again before business hours resume. When a VM is shut down, Azure does not charge compute or network fees for the stopped VM. Azure does charge a small fee for storage. Depending on usage patterns, you can reduce your Azure subscription costs by 20% to 30% by turning VMs off outside of business hours.</p>
-                                    <p class="text-large">This best practice also applies to any Azure resource used for compute, including Azure Databricks, Azure Synapse, Azure Data Warehouse, Azure SQL database, Azure App Service, and Azure Cloud Service.</p>
-                                    <li class="text-xlarge"><strong>Use automated tools to monitor network resource configurations and changes</strong></li>
-                                    <br>
-                                    <p class="text-large">Use Azure Activity Log to monitor network resource configurations. You can also use Azure Activity Log to detect changes to network settings and resources related to Azure Functions deployments.</p>
-                                    <p class="text-large">Create alerts in Azure Monitor that highlight changes to critical network settings or resources. With alerts, you can maintain a 360 degree view of all your resources and identify easy optimization opportunities.</p>
-                                </ol>
-                            </div>
-                            <div id="ADW">
-                                <h2>When using Azure SQL Data Warehouse (ADW)</h2>
-                                <ol>
-                                    <li class="text-xlarge"><strong>To optimize query execution time in Azure SQL Data Warehouse, use resource classes</strong></li>
-                                    <br>
-                                    <p class="text-large">Resource classes limit the number of queries that run at the same time (concurrency), and the compute resources assigned to each query (memory). Select the resource class that best suits your needs. Smaller resource classes reduce the maximum memory per query but increase concurrency. Larger resource classes increase the maximum memory per query but reduce concurrency.</p>
-                                    <p class="text-large">There are two types of resource classes:</p>
-                                    <ul>
-                                        <li class="text-large"><strong>Static resource classes:</strong> Choose a static resource class when your resource expectations vary throughout the day. For example, a static resource class works well when your data warehouse contains straightforward data that is queried by many people. With this resource class, scaling the data warehouse does not change the amount of memory allocated to the user. As a result, the system can execute more queries at the same time.</li>
-                                        <li class="text-large"><strong>Dynamic resource classes:</strong> Choose a dynamic resource class when queries are complex but do not need high concurrency. For example, generating daily or weekly reports viewed by leadership. If the reports process large amounts of data, scaling the data warehouse provides more memory to the user's existing resource class. Please note that large dynamic resource classes use many slots, reducing the resources available for additional queries.</li>
-                                    </ul>
-                                    <p class="text-large">To summarize: use static resource classes for fixed data sets and use dynamic resource classes for growing data sets</p>
-                                </ol>
-                            </div>
-                            <div id="AAS">
-                                <h2>When using Azure Analysis Services (AAS)</h2>
-                                <ol>
-                                    <li class="text-xlarge"><strong>To process large volumes of data, dynamically scale Azure Analysis Services</strong></li>
-                                    <br>
-                                    <p class="text-large">To improve processing performance, schedule an automatic scale-up of AAS through a runbook immediately before processing large volumes of data. To optimize costs, schedule a scale-down immediately after processing.</p>
-                                    <li class="text-xlarge"><strong>When processing large amounts of data with Azure Analysis Services, use partitioning</strong></li>
-                                    <br>
-                                    <p class="text-large">Use Azure Durable Functions to process partitions in AAS. Partitioning reduces your data latency and processing time. By dividing your large tables into small, logical partition blocks, you enable the system to process partitions independently. For example, partition large enterprise data such as global support and sales information.</p>
-                                </ol>
-                            </div>
-                            <h2>References</h2>
+                            <p class="text-large">Cost management is a recurring theme at the enterprise level. It is important that all responsible teams review & understand the cost. You can follow the phase-by-phase best practice approach below to optimize the cost of Azure.</p>
+                            <p class="text-large">At MAQ Software, we have migrated hundreds of applications to Azure. Based on our experience, we have compiled five best practices to optimize costs for Azure platforms.</p>
+                            <ol>
+                                <li class="text-xlarge"><strong>Inventory & Tagging</strong>
+                                <ul>
+                                    <li class="text-large">Get all the resource lists for the Azure subscription using automated PowerShell script or using rest API.</li>
+                                    <li class="text-large">Perform Resource tagging such as Owner, Purpose, Environment etc. for data enrichment.</li>
+                                    <li class="text-large">Enforce tagging conventions using Azure policy.</li>
+                                </ul>
+                                </li>
+                                <li class="text-xlarge"><strong>Cleanup</strong>
+                                <ul>
+                                    <li class="text-large">Find unused resources.</li>
+                                    <li class="text-large">Notify owners about the resources.</li>
+                                    <li class="text-large">Clean up idle & orphan resources.</li>
+                                    <li class="text-large">Audit and restrict access on creation of resources.</li>
+                                </ul>
+                            </li>
+                            <li class="text-xlarge"><strong>Resource Optimization</strong>
+                                <ul>
+                                    <li class="text-large">Review correct resource families & Stock Keeping Unit (SKU).</li>
+                                    <li class="text-large">Review correct resources/service types.</li>
+                                    <li class="text-large">Select proper resource location to avoid unwanted data movements between the datacentres.</li>
+                                    <li class="text-large">Identify suitable service plan (consumption basis, pay as you go).</li>
+                                    <li class="text-large">Review different storage configuration (Premium SSD, Standard SSD, Hot Tier, and Cold Tier).</li>
+                                    <li class="text-large">Review and plan for data archival.</li>
+                                </ul>
+                            </li>
+                            <li class="text-xlarge"><strong>Automation</strong>
+                                <ul>
+                                    <li class="text-large">Schedule Runbooks to pause and start different Azure services such as Azure Analysis Services and VMs.</li>
+                                    <li class="text-large">Setup autoscaling based on the CPU/memory usage metrics.</li>
+                                    <li class="text-large">Setup Azure policy to restrict the resource SKU/location while creating the resource.</li>
+                                    <li class="text-large">Setup cost alerts.</li>
+                                </ul>
+                            </li>
+                            <li class="text-xlarge"><strong>Solution Optimization</strong>
+                                <ul>
+                                    <li class="text-large">Review existing architecture.</li>
+                                    <li class="text-large">Identify how data flows in and out of Azure.</li>
+                                    <li class="text-large">Find resource utilization.</li>
+                                    <li class="text-large">Brainstorm to optimize resource instance within teams/environments.</li>
+                                    <li class="text-large">Review individual resource costs.</li>
+                                </ul>
+                            </li>
+                            <li class="text-xlarge"><strong>Setup Cost Budget & Alert</strong>
+                                <ul>
+                                    <li class="text-large">Set cost budgets for the resources to proactively manage costs, and to monitor how spending progresses over time.</li>
+                                    <li class="text-large">Notify owners/users if the cost exceeds the set threshold limit.</li>
+                                </ul>
+                            </li>
+                            <li class="text-xlarge"><strong>Buy Azure Reservation</strong>
+                                <ul>
+                                    <li class="text-large">Identify resources which can be purchased using Azure reservation.</li>
+                                    <li class="text-large">Pre-payment provides a discount on the resources you use. Costs for VM compute, SQL Database compute, Azure Cosmos DB, or other resources can be significantly reduced by up to 72% on pay as you go prices.</li>
+                                    <li class="text-large">Cancel reserved instances.</li>
+                                    <li class="text-large">Reserved instances provide a billing discount and do not affect the runtime state of the resources.</li>
+                                </ul>
+                            </li>
+                            <li class="text-xlarge"><strong>Azure Hybrid Benefits</strong>
+                                <ul>
+                                    <li class="text-large">Enable Azure Hybrid Benefits (AHB) for on-premises licenses in Azure.</li>
+                                    <li class="text-large">Use on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure.</li>
+                                </ul>
+                            </li>
+                            <li class="text-xlarge"><strong>Review Azure Advisor Recommendation</strong>
+                                <ul>
+                                    <li class="text-large">Review Azure Advisor recommendation to identify opportunities to reduce cost.</li>
+                                    <li class="text-large">Act on Azure Advisor recommendations.</li>
+                                    <li class="text-large">Example:
+                                        <ul style="list-style-type: square;">
+                                            <li class="text-large">Identify virtual machines with low utilization from compute or network usage standpoint and either shut down or resize the machine.</li>
+                                            <li class="text-large">Resize Azure SQL database SKU based on current load.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="text-xlarge"><strong>Monitor</strong>
+                                <ul>
+                                    <li class="text-large">Visualize data in consolidated or custom dashboards.</li>
+                                    <li class="text-large">Detect spending anomalies and usage inefficiencies.</li>
+                                    <li class="text-large">Review and act if forecast exceed the defined threshold limit.</li>
+                                    <li class="text-large">Perform cost reviews on regular cadence.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                            <!-- <h2>References</h2>
                             <ul>
                                 <li class="text-large"><a href="https://maqsoftware.com/expertise/cloudtransformation/azure-security-best-practices">Azure Security Best Practices</a> – MAQ Software, last updated June 21, 2021 </li>
                                 <li class="text-large"><a href="https://blog.maqsoftware.com/2020/12/azure-services-product-comparison.html">Azure Services: Product Comparison</a> – MAQ Software, last updated December 21, 2020</li>
                                 <li class="text-large"><a href="https://docs.microsoft.com/en-us/azure/architecture/browse/">Azure Reference Architectures</a> – Microsoft Corporation, updated regularly</li>
                                 <li class="text-large"><a href="https://docs.microsoft.com/en-us/azure/sql-data-warehouse/resource-classes-for-workload-management">Workload management with resource classes in Azure SQL Data Warehouse</a> Microsoft Corporation, last updated February 4, 2020 </li>
-                            </ul>
-                            <div class="section-block"></div>
+                            </ul> -->
                             <div class="row">
                                 <div class="column width-6">
                                     <img src="/images/best-practices/BPG003-main.jpg" alt="">
