@@ -52,30 +52,30 @@
                                 <span class="post-date">Last updated: 15 Dec 2022</span>
                             </div>
                             <p class="text-large">Cost management is a recurring theme at the enterprise level. It is important that all responsible teams review & understand the cost. You can follow the phase-by-phase best practice approach below to optimize the cost of Azure.</p>
-                            <p class="text-large">At MAQ Software, we have migrated hundreds of applications to Azure. Based on our experience, we have compiled five best practices to optimize costs for Azure platforms.</p>
+                            <p class="text-large">At MAQ Software, we have migrated hundreds of applications to Azure. Based on our experience, we have compiled ten best practices to optimize costs for Azure platforms.</p>
                             <ol>
                                 <li class="text-xlarge"><strong>Inventory & Tagging</strong>
                                 <ul>
-                                    <li class="text-large">Get all the resource lists for the Azure subscription using automated PowerShell script or using rest API.</li>
-                                    <li class="text-large">Perform Resource tagging such as Owner, Purpose, Environment etc. for data enrichment.</li>
+                                    <li class="text-large">Get list of all Azure resources using automated PowerShell script or using REST (Representational State Transfer) API.</li>
+                                    <li class="text-large">Perform Resource tagging such as Owner, Purpose, Environment, etc. for data enrichment.</li>
                                     <li class="text-large">Enforce tagging conventions using Azure policy.</li>
                                 </ul>
+                                <p class="text-large">These steps will help centralized governance teams to make wise cost management decisions.</p>
                                 </li>
                                 <li class="text-xlarge"><strong>Cleanup</strong>
                                 <ul>
-                                    <li class="text-large">Find unused resources.</li>
-                                    <li class="text-large">Notify owners about the resources.</li>
+                                    <li class="text-large">Find unused resources and notify the respective owners.</li>
                                     <li class="text-large">Clean up idle & orphan resources.</li>
                                     <li class="text-large">Audit and restrict access on creation of resources.</li>
                                 </ul>
                             </li>
                             <li class="text-xlarge"><strong>Resource Optimization</strong>
                                 <ul>
-                                    <li class="text-large">Review correct resource families & Stock Keeping Unit (SKU).</li>
+                                    <li class="text-large">Review correct resource families & Stock Keeping Units (SKUs).</li>
                                     <li class="text-large">Review correct resources/service types.</li>
-                                    <li class="text-large">Select proper resource location to avoid unwanted data movements between the datacentres.</li>
+                                    <li class="text-large">Select proper resource location to avoid unwanted data movements between the datacenters.</li>
                                     <li class="text-large">Identify suitable service plan (consumption basis, pay as you go).</li>
-                                    <li class="text-large">Review different storage configuration (Premium SSD, Standard SSD, Hot Tier, and Cold Tier).</li>
+                                    <li class="text-large">Review different storage configuration (Premium Solid-State Drives, Standard Solid-State Drives, Hot Tier, and Cold Tier).</li>
                                     <li class="text-large">Review and plan for data archival.</li>
                                 </ul>
                             </li>
@@ -118,12 +118,12 @@
                             </li>
                             <li class="text-xlarge"><strong>Review Azure Advisor Recommendation</strong>
                                 <ul>
-                                    <li class="text-large">Review Azure Advisor recommendation to identify opportunities to reduce cost.</li>
+                                    <li class="text-large">Review Azure Advisor recommendations to identify opportunities to reduce cost.</li>
                                     <li class="text-large">Act on Azure Advisor recommendations.</li>
                                     <li class="text-large">Example:
                                         <ul style="list-style-type: square;">
                                             <li class="text-large">Identify virtual machines with low utilization from compute or network usage standpoint and either shut down or resize the machine.</li>
-                                            <li class="text-large">Resize Azure SQL database SKU based on current load.</li>
+                                            <li class="text-large">Resize Azure SQL database SKUs based on current load.</li>
                                         </ul>
                                     </li>
                                 </ul>
