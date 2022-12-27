@@ -49,23 +49,23 @@
                         <div class="post-content with-background">
                             <h1 class="post-title center">DAX Best Practice Guide</h1>
                             <div class="post-info center">
-                                <span class="post-date">Last Updated: August 27, 2021</span>
+                                <span class="post-date">Last Updated: December 26, 2022</span>
                             </div>
                             <p class="text-large">This guide enables you to speed up your Power BI reports by optimizing their back-end code. As the 2021 Microsoft Power BI Partner of the Year, we are recognized for our expertise in implementing business intelligence and analytics solutions.</p>
-                            <p class="text-large">We have compiled these best practices based on our experience, including:</p>
+                            <p class="text-large">Based on our experience, we have compiled these best practices in the following categories:</p>
                             <ol class="index">
                                 <li class="text-xlarge"><a href="#syntax">Improving DAX Syntax</a></li>
                                 <li class="text-xlarge"><a href="#functions">Optimizing DAX Functions</a></li>
-                                <li class="text-xlarge"><a href="#mistakes">Common Mistakes To Avoid</a></li>
+                                <li class="text-xlarge"><a href="#mistakes">Common Mistakes to Avoid</a></li>
                             </ol>
                             <h2>Before you start:</h2>
-                            <p class="text-large">Tip #1: Always clear your DAX cache before optimizing DAX<br>Your DAX cache builds up from internal VertiPaq queries. You can clear your cache from within DAX Studio. Resetting your cache enables you to effectively measure performance gains.</p>
+                            <p class="text-large">Always remember to clear your DAX cache before optimizing DAX as your DAX cache builds up from internal VertiPaq queries. You can clear your cache from DAX Studio. Resetting your cache also enables you to measure performance gains more effectively.</p>
                             <div id="syntax">
                                 <h2>Improving DAX Syntax</h2>
                                 <ol>
                                     <li class="text-xlarge"><strong>Use DAX Formatter to format your code</strong></li>
                                     <br>
-                                    <p class="text-large">Formatted code is easier to read and maintain. DAX Formatteris a free tool that enables you to transform raw DAX into readable code.</p>
+                                    <p class="text-large">Formatted code is easier to read and maintain. <a href="https://www.daxformatter.com/">DAX Formatter</a> is a free tool that enables you to transform raw DAX into readable code.</p>
                                     <li class="text-xlarge"><strong>Use the DISTINCT() and VALUES() functions consistently</strong></li>
                                     <br>
                                     <p class="text-large">Power BI adds a blank value to a column if it finds a referential integrity violation. When making direct queries, Power BI adds a blank value to columns because it cannot check for violations.</p>
@@ -77,12 +77,23 @@
                                     <p class="text-large">Be consistent in your use of the DISTINCT() and VALUES() functions throughout the entire report. Otherwise, you’ll have inconsistent values for blank columns. We recommend using the VALUES() function if blank values are not an issue.</p>
                                     <li class="text-xlarge"><strong>Add column and measure references in your DAX expressions</strong></li>
                                     <br>
-                                    <p class="text-large">To ensure your DAX can be understood and used by anyone, you need to eliminate ambiguity. By adding column and measure references, you ensure that anyone can easily read your DAX at a glance. We recommend always using fully qualified column references and never using fully qualified measure references. That way, you can quickly differentiate between a column or a measure based on whether it’s fully qualified.</p>
+                                    <p class="text-large">To ensure your DAX code/syntax/etc. can be understood and used by anyone, you need to eliminate ambiguity. By adding column and measure references, you ensure that anyone can easily read your DAX at a glance. We recommend always using fully qualified column references and never using fully qualified measure references. That way, you can quickly differentiate between a column or a measure based on whether it’s fully qualified.</p>
                                     <p class="text-large">Adding column and measure references also ensures that expressions work when a measure home table is changed.</p>
                                     <p class="text-large">With col reference: <code class="color-red bkg-grey-ultralight">Profit = Orders[Sales] - Orders[Cost]</code> </p>
                                     <p class="text-large">Without col reference: <code class="color-red bkg-grey-ultralight">Profit = [Sales] - [Cost]</code> </p>
+                                    <li class="text-xlarge"><strong>Reuse measures</strong></li>
+                                    <br>
+                                    <p class="text-large">Split your calculations in smaller blocks.</p>
+                                    <p class="text-large">Reuse the measure instead of writing the same code. Exercise caution when you have different aggregations and multiple CALCULATE functions.</p>
+                                    <p class="text-large"><code class="color-red bkg-grey-ultralight">Sales $ = SUM ( Orders[Sales] )</code> </p>
+                                    <p class="text-large"><code class="color-red bkg-grey-ultralight">All Sales $ = CALCULATE ( [Sales $], ALL ( Orders ) )</code> </p>
+                                    <p class="text-large"><code class="color-red bkg-grey-ultralight">Sales % = DIVIDE ( [Sales $], [All Sales $] )</code> </p>
+                                    <li class="text-xlarge"><strong>User friendly names and add description for measures</strong></li>
+                                    <br>
+                                    <p class="text-large">Make sure measure and column names are user friendly.</p>
                                 </ol>
                             </div>
+                            <p class="text-large">There is no problem in adding spaces in the names as they should be self-explanatory. Users shouldn’t have to search for its definition. Add a description in the modelling view to provide additional information about the measure.</p>
                             <div id="functions">
                                 <h2>Optimizing DAX Functions</h2>
                                 <ol>
@@ -141,6 +152,17 @@
                                     <li class="text-xlarge"><strong>ALL vs. ALLExcept</strong></li>
                                     <br>
                                     <p class="text-large">ALLEXCEPT() behaves exactly like ALL(), VALUES() as long as the “exempted” columns are columns on the pivot. ALLEXCEPT() does NOT preserve pivot context on columns that are not on the pivot. Use ALL() instead of ALLEXCEPT() when using VALUES()</p>
+                                    <li class="text-xlarge"><strong>Avoid using the entire table with ALL</strong></li>
+                                    <br>
+                                    <p class="text-large">ALL() can be used with the entire table or with specific columns.</p>
+                                    <p class="text-large">Avoid using entire table unless it’s necessary for calculation; the same can be achieved by filtering with a column/columns instead.</p>
+                                    <p class="text-large"><code class="color-red bkg-grey-ultralight">All Sales = CALCULATE( SUM ( Orders[Sales] ), ALL ( Calendar ))</code></p>
+                                    <p class="text-large"><code class="color-red bkg-grey-ultralight">Sales Orders = CALCULATE( SUM ( Orders[Sales] ), ALL ( Calendar[Fiscal Year], Calendar[Fiscal Month] ))</code></p>
+                                    <li class="text-xlarge"><strong>For virtual relationships, use TREATAS instead of INTERSECT or FILTER</strong></li>
+                                    <br>
+                                    <p class="text-large">A virtual relationship is a DAX pattern to transfer a filter context from one table to another, simulating the behaviour of a physical relationship defined in the data model.</code></p>
+                                    <p class="text-large">The rule of thumb is to always use a physical relationship to propagate filters whenever possible. If you cannot use a physical relationship, you should implement a virtual relationship using TREATAS instead of INTERSECT or FILTER</code></p>
+                                    <p class="text-large">References:  <a href = "https://www.sqlbi.com/articles/propagate-filters-using-treatas-in-dax/" target="blank" class="underlined">sqlbi</a></p>
                                 </ol>
                             </div>
                             <div id="mistakes">
