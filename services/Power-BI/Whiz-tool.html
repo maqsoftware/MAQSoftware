@@ -93,78 +93,51 @@
 									<p class="text-large">Its capabilities include:</p>
 									<ul class="text-large">
 										<li>
-											Alignment of visuals on each page of a report.
+											Model Analysis
+											<ul>
+												<li>Summary – Analyze the model against some of best practices and present the results in a single view</li>
+												<li>Spell Check – Identify possible spelling mistakes in table, column, and measure names</li>
+												<li>Measure Formatting – Identify the different types of measure formatting applied to the measures</li>
+												<li>DAX Formatting – Format all the DAX measures using a single click (uses <a href="https://www.nuget.org/packages/Dax.Formatter/" target="_blank">DAX Formatter nuget package</a> developed by SQLBI</li>
+												<li>Documentation – Complete documentation of the Power BI Model including all the tables, columns, measures, and relationships</li>
+												<li>Export – Export actual data from the tables present in Power BI Model for offline analysis</li>
+											  </ul>
 										</li>
 										<li>
-											Use of formatting pane options of visuals in all pages of a report.
-										</li>
-										<li>
-											Choice of the number of visuals on report pages. Too many visuals on a page typically leads to increased page load time.
-										</li>
-										<li>
-											DAX query optimization suggestions to perform calculations faster than ever (Coming soon).
-										</li>
-										<li>
-											Identification of the use of custom visuals
-										</li>
-										<li>
-											Other recommendations to reduce the page load time
+											Report UI Analysis
+											<ul>
+												<li>Summary – Analyze all the pages of the report; display report and page level insights to help users easily understand the different types of visuals on each report pag</li>
+												<li>Spell Check – Identify possible spelling mistakes in common components directly visible to end users (Visual Title, Axis Title, Button Text, and Textbox content)</li>
+												<li>Format Properties Summary – Compare basic format properties for all the visuals of the report in a single view (Title font properties, Axis font properties, etc.)</li>
+												<li>Visual Summary – Document columns and measures used for each visual of the report</li>
+											  </ul>
 										</li>
 									</ul>
-									<h2>Using Dr. Power BI</h2>
-									<p class="text-large">Developers can take advantage of the recommendations from the tool to improve the overall user experience of their reports.</p>
-									<p class="text-large">Power BI tenant admins can inventory all the reports and workspaces they have in order to help them remove unused workspaces and manage the reporting assets.	</p>
+									<h2>Installation Steps</h2>
 									<ol class="text-large">
 										<li>
-											Open the Dr. Power BI tool. Log into the tool using an Office 365 account which has the access to use the report.<br><br>
-											<img src="/images/assets/Dr-Power-BI-1.png" alt="">
-											<div class="center text-medium">Figure 1: Landing page</div><br><br>
+											Download </b>Whiz Setup 2.0.0.exe</b> from the shared location (location to be confirmed).<br>	
 										</li>
 										<li>
-											Enter the report URL of the report hosted on the Power BI Service or upload the ‘pbix’ file. After successful entry of the report URL or file upload, you will be redirected to a “Know your report” page. This page has basic details about your report. Other tabs show additional details by pages of the report. The details are supplemented with a scoring system. A score below 30 is considered a good score.<br><br>
-											<img src="/images/assets/Dr-Power-BI-2.png" alt="">
-											<div class="center text-medium">Figure 2: Know your report page</div><br><br>
+											Run <b>Whiz Setup 2.0.0.exe</b>on your local machine.<br>
 										</li>
 										<li>
-											Use the left navigation pane to view UX suggestions such as:
-											<ul>
-												<li>
-													Alignment: Click on an element’s margins and check its alignment with other elements. You may also enable additional options such as Dimensions, Co-ordinates and Grid Lines for suggestions for better visualization.
-													<br><br>
-													<img src="/images/assets/Dr-Power-BI-3.png" alt="">
-													<div class="center text-medium">Figure 3: Alignment settings on the change report page</div><br><br>
-												</li>
-												<li>
-													Formatting: Provides information about various fonts used on the page and offers suggestions based on formatting options set in the selected report page.
-													<br><br>
-													<img src="/images/assets/Dr-Power-BI-4.png" alt="">
-													<div class="center text-medium">Figure 4: Formatting settings on the change report page</div><br><br>
-												</li>
-											</ul>
+											If prompted about the Windows protection, click on <b>More info</b>, then click on <b>Run Anyway</b>.
+											<img src="/images/assets/Whiz-Installation.png" alt="">
+											<div class="center text-medium">Figure 2: Installation</div><br><br>
 										</li>
 										<li>
-											“DAX Recommendations” is a static list based on our experience in optimizing a wide range of reports built on a plethora of data sources.
+											On the User Control Prompt, click on <b>Yes</b> to start the installation.<br><br>
 										</li>
 										<li>
-											If you have provided a report URL from your Power BI service, you also get three additional options:
-											<li>
-												User status: Provides basic information of the Reports and Workspaces.
-												<br><br>
-												<img src="/images/assets/Dr-Power-BI-5.png" alt="">
-												<div class="center text-medium">Figure 5: User status page</div><br><br>
-											</li>
-											<li>
-												Data information: Provides detailed information on the datasets, data sources and their refresh histories.
-												<br><br>
-												<img src="/images/assets/Dr-Power-BI-6.png" alt="">
-												<div class="center text-medium">Figure 6: Data information page</div><br><br>
-											</li>
-											<li>
-												Security Information: Provides information on the users and their access rights on the current workspace.
-												<br><br>
-												<img src="/images/assets/Dr-Power-BI-7.png" alt="">
-												<div class="center text-medium">Figure 7: Security information page</div><br><br>
-											</li>
+											Search for the ‘Whiz’ Tool and click on <b>Run as Administrator</b> (<b>Run as Administrator</b> is required for performing Report UI Analysis)<br>
+										    <img src="/images/assets/Whiz-Tool.png" alt="">
+											<div class="center text-medium">Figure 5: Whiz Tool - Run as Administrator</div><br><br>
+										</li>
+										<li>
+											The home page will be shown as below.<br>
+												<img src="/images/assets/Whiz-Tool-Home-Page.png" alt="">
+												<div class="center text-medium">Figure 5: Whiz Tool - Home Page</div><br><br>
 										</li>
 									</ol>
 									<p class="text-large">Developers and tenant admins will be able to save time and get more done in less time using the Dr. Power BI tool.</p>
