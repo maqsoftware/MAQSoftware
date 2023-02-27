@@ -5,16 +5,16 @@ var contactTemplate='<h4 class="title-xsmall">Contact Us</h4><p class="title-xsm
 var newVersionTemplate = '<h4 class="title-xsmall">@newVersion</h4>'
 var buttonsTemplate = '<div><a href="@appsourceLink" target="blank" class="button medium pill bkg-theme bkg-hover-white color-white color-hover-theme mb-mobile-40">Get @name</a><a href="@appsourceLink" target="blank"  class="button medium pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white">Download sample report</a></div>'
 
-function getData() {
+function getData(id) {
     $.getJSON("/resources/powerbi visuals/Visuals.json", function (data) {
-        loadData(data)
+        loadData(data,id)
       });
     
 }
 
-function loadData(data){
+function loadData(data,id){
     var query = window.location.href;
-    var id = (query.indexOf('=')>-1)?query.slice(query.lastIndexOf('=')+1):"RadarChart";
+    // var id = (query.indexOf('=')>-1)?query.slice(query.lastIndexOf('=')+1):"RadarChart";
 
     var visualContainer = $("#detailContainer")
     var pbiContainer = $("#pbiReportContainer")
@@ -28,6 +28,7 @@ function loadData(data){
     $.each(data, function (index) {
         $.each(Object.keys(this), function () {
             if(data[index][this].id===id){
+                document.title = data[index][this].name + " | MAQ Software";
 
                 // dynamically load it when available in json
                 var reportURL = data[index][this].pbiReportURL;
