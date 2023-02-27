@@ -4,17 +4,17 @@ var listItemTemplate='<li class="title-xsmall">@placeholder</li> '
 var contactTemplate='<h4 class="title-xsmall">Contact Us</h4><p class="title-xsmall">Thank you for using @name by MAQ Software.</p><p class="title-xsmall">Do you have questions about this or any of our other Power BI custom visuals? Check out our community pages on <a href="https://maqsoftware.zendesk.com/hc/en-us/community/topics" target="_blank">Zendesk</a></p><p class="title-xsmall">For any issues related to any custom visual, contact us at <a href="mailto:support@maqsoftware.com" target="_blank">Support@MAQSoftware.com</a>. </p><p class="title-xsmall">For any priority requests or custom builds, contact us at <a href="mailto:sales@maqsoftware.com" target="_blank">Sales@MAQSoftware.com</a>. </p>'
 var newVersionTemplate = '<h4 class="title-xsmall">@newVersion</h4>'
 
-function getData() {
+function getData(id) {
     $.getJSON("/resources/powerbi visuals/Visuals.json", function (data) {
-        loadData(data)
+        loadData(data,id)
       });
     
 }
 
-function loadData(data){
+function loadData(data,id){
     var query = window.location.href;
     // console.log(query)
-    var id = (query.indexOf('=')>-1)?query.slice(query.lastIndexOf('=')+1):"RadarChart";
+    // var id = (query.indexOf('=')>-1)?query.slice(query.lastIndexOf('=')+1):"RadarChart";
     // console.log(id)
 
     var visualContainer = $("#detailContainer")
