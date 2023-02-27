@@ -1,6 +1,6 @@
 var pageSection,
   visualTemplate =
-    '<div class="item"> <div class="nf-col-padding"> <div class="item-box"> <div class="shop-item"> <div class="item-img"> <img alt="@name" src="@img"/> </div><div class="item-mask"> <div class="item-mask-detail"> <div class="item-caption text-center" style="color:white;"> <div> @description </div><a href="../expertise/powerbi/custom-visuals/@visualpageurl" class="btn btn-line-xs btn-white-line"> <i class="fa"></i>Learn More </a> </div></div></div></div><div class="shop-item-info" style=" display: flex;justify-content: center;align-items: center;"> <h6 class="shop-item-name"><a href="@url" target="_blank"> @name </a></h6> <span> <a target="_blank" href="@pbicertifiedurl"><img class="certified" title ="@starimagetitle" src="@certifiedstarimage"></img></a></span></div></div></div></div>',
+    '<div class="item"><div class="nf-col-padding"><div class="item-box"><div class="shop-item"><div class="item-img"> <img alt="@name" src="@img"/> </div><div class="item-mask"><div class="item-mask-detail"><div class="item-caption text-center" style="color:white;"><div> @description </div><a href="../expertise/powerbi/custom-visuals/@visualpageurl" class="btn btn-line-xs btn-white-line"> <i class="fa"></i>Learn More </a> </div></div></div></div><div class="shop-item-info" style=" display: flex;justify-content: center;align-items: center;"><h6 class="shop-item-name"><a href="@url" target="_blank"> @name </a></h6><span> <a target="_blank" href="@pbicertifiedurl"><img class="certified" title ="@starimagetitle" src="@certifiedstarimage"></img></a></span></div></div></div></div>',
   modalTemplate =
     '<div class="modal fade product_view" id="model@id"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-header"> <h3 class="modal-title pull-left">@title</t><a target="_blank" href="@pbicertifiedurl"><img style="margin-bottom: 0.1em;" src="@pbicertifiedimage"></img></a></h3> <a href="#" data-dismiss="modal" class="class pull-right"> <span class="glyphicon glyphicon-remove"></span> </a> </div><div class="modal-body"> <div class="row"> <div class="col-md-6 embed-responsive embed-responsive-16by9"> <video id = "video@id" class="embed-responsive-item modal_videos" alt="@name" title="@name" loop controls muted style="height:auto !important"> <source src="@img" type = "video/mp4"></video> </div><div class="col-md-6 product_content"> @content<p> Do you have questions about this visual? Check out our <a style="text-decoration:underline" href="@contacturl">Power BI community forum</a>. </p><a href="@url" target="_blank" class="btn btn-md btn-black-line ">See in AppSource</a> </div></div></div></div></div></div>',
   viewAllVisualTemplate =
@@ -331,7 +331,8 @@ function RenderPowerBIVisuals(oVisualConfig) {
         .replace(/@img/g, oVisualConfig[index][this].gif)
         .replace(/@title/g, oVisualConfig[index][this].title)
         .replace(/@id/g, oVisualConfig[index][this].id)
-        .replace(/@url/g, oVisualConfig[index][this].url)
+        // .replace(/@url/g, oVisualConfig[index][this].url)
+        .replace(/@url/g, "/resources/customVisuals/VisualDetail?id="+oVisualConfig[index][this].id)
         .replace(/@contacturl/g, oVisualConfig[index][this].contacturl)
         .replace(/@content/g, oVisualConfig[index][this].content)
         .replace(
@@ -346,7 +347,8 @@ function RenderPowerBIVisuals(oVisualConfig) {
         .replace(/@name/g, oVisualConfig[index][this].name)
         .replace(/@img/g, oVisualConfig[index][this].img)
         .replace(/@id/g, oVisualConfig[index][this].id)
-        .replace(/@url/g, oVisualConfig[index][this].url)
+        // .replace(/@url/g, oVisualConfig[index][this].url)
+        .replace(/@url/g, "/resources/customVisuals/VisualDetail?id="+oVisualConfig[index][this].id)
         .replace(/@category/g, oVisualConfig[index][this].category)
         .replace(/@description/g, oVisualConfig[index][this].description)
         .replace(/@linkToArticle/g, oVisualConfig[index][this].linkToArticle)
