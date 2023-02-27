@@ -294,7 +294,6 @@ function RenderMartech() {
   $("#modelmartech").modal();
 }
 function RenderPowerBIVisuals(oVisualConfig) {
-  var tempArr=[]
   var totalVisuals = oVisualConfig.length,
     visualContainer = $("#power-bi-carousel"),
     modalContainer = $("#modelChart"),
@@ -308,7 +307,6 @@ function RenderPowerBIVisuals(oVisualConfig) {
   var visualContentContainer = $("#PowerBISliderVisual");
   $.each(oVisualConfig, function (index, item) {
     $.each(Object.keys(this), function (visualIndex, visualItem) {
-      tempArr.push(oVisualConfig[index][this].name)
       visualContentHtml += visualTemplate
         .replace(/@name/g, oVisualConfig[index][this].name)
         .replace(/@img/g, oVisualConfig[index][this].img)
@@ -364,7 +362,6 @@ function RenderPowerBIVisuals(oVisualConfig) {
         );
     });
   });
-  console.log(tempArr)
   visualContentContainer.append(visualContentHtml);
   //modalContainer.append(modalContentHtml);
   viewAllContainer.append(viewAllContentHtml);
