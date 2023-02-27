@@ -1,5 +1,57 @@
 [
   {
+    "Violin Plot": {
+      "name": "Violin Plot",
+      "title": "Violin Plot ",
+      "id": "ViolinPlot",
+      "description": "Visualize data distribution across categories",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/maqsoftware1587623472284.violinplotbymaqsoftware?tab=Overview&exp=ubp8",
+      "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/posts/10644089535380-Violin-Plot",
+      "img": "/images/powerbi/ViolinPlot.png",
+      "gif": "/images/powerbi/ViolinPlot.png",
+      "content": "",
+      "category": "certified cluster distribution",
+      "certifiedstarimage": "/images/powerbi/certifiedstarimage.png",
+      "pbicertifiedimage": "/images/powerbi/pbicertifiedimage.png",
+      "starimagetitle": "Power BI Certified",
+      "pbicertifiedurl": "https://aka.ms/pbicertified",
+      "linkToBadge": "",
+      "linkToArticle": "",
+      "detail":"Visualize data distribution across categories",
+      "detailDesc":"Violin Plot by MAQ Software enables you to easily view the distribution of data, including mean, standard deviation, quartile deviation, and probability density. With the plot’s interactive slider and animated play/pause button, you can view and project trends across products, services, locations, and more. ",
+      "businessUses":["Project managers: Compare team productivity across streams by using burndown data  ","Sales and marketing: Project sales across products and analyze historical data for earlier campaigns ","Human resources: Predict, analyze, and plan team expenditure"],
+      "keyFeatures":["Interactive slider to view change over time or across categories" ,"Play/pause animation to view change over time or across categories" ,"Customizable data colors" ,"Cross-filtering with other visuals "],
+      "whatsNew":[],
+      "pbiReportURL":"https://app.powerbi.com/view?r=eyJrIjoiMDQyOWUxNDctYmZiNi00MzMxLTgyMzEtN2I1OWRkMjFkZTI5IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+    }
+  },
+  {
+    "Image Carousel": {
+      "name": "Image Carousel",
+      "title": "Image Carousel ",
+      "id": "ImageCarousel",
+      "description": "Showcase a collection of images with a sliding carousel",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/maqsoftware1587623472284.imagecarouselbymaqsoftware?tab=overview&exp=ubp8",
+      "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/posts/9699670535060-Image-Carousel",
+      "img": "/images/powerbi/ImageCarousel.png",
+      "gif": "/images/powerbi/ImageCarousel.png",
+      "content": "",
+      "category": "utility",
+      "certifiedstarimage": "",
+      "pbicertifiedimage": "",
+      "starimagetitle": "",
+      "pbicertifiedurl": "", 
+      "linkToBadge": "",
+      "linkToArticle": "",
+      "detail":"Showcase a collection of images with a sliding carousel",
+      "detailDesc":"Power BI offers basic out-of-the-box image options that enable you to display images in a table, matrix, slicer, or multi-row card. However, when working with compact spaces or large image collections, these options may not be the right fit. To expand your capabilities, we created Image Carousel, which enables you to cycle through up to ten images. With the visual’s auto-play option, you can effortlessly view new products, project progress, and more. Additionally, you can zoom into images by hovering over them.  ",
+      "businessUses":["Sales and marketing: Tell stories, share details, and showcase products ","Websites: Show company details, customer quotes, products, and more"],
+      "keyFeatures":["Auto-play with customizable intervals ","Play/pause and scroll arrows ","Supports up to 10 images ","Zoom into images on hover ","Customizable layouts and themes "],
+      "whatsNew":[],
+      "pbiReportURL":"https://app.powerbi.com/view?r=eyJrIjoiN2YxNTI0MjctNDU5Yy00YTAwLWFhZjUtYjhkZGI2ZWFkMzZkIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+    }
+  },
+  {
   "Radar Chart": {
     "name": "Radar Chart",
     "title": "Radar Chart ",
