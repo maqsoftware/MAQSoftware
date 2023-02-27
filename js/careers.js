@@ -8,6 +8,16 @@ var oIndiaJobPostSection,
   sJobServiceIssue =
     '<p class="DataSubContent Color595959">Issue in connecting to job-post service.<br />Try loading the section again.</p>';
 sindex = 0;
+
+function callTimber(){
+  const script = document.createElement('script');
+	script.src = '/js/timber.master.min.js';
+
+  // Append to the `head` element
+	document.head.appendChild(script);
+	$("#header").load("/header");
+	$("#footer").load("/footer");
+}
 function careersConstructor() {
   oRedmondJobPostSection = $("#tabs-1-pane-1 .jobs-redmond");
   oMumbaiJobPostSection = $("#tabs-1-pane-2 .jobs-mumbai");
@@ -29,6 +39,7 @@ function careersConstructor() {
     success: function (msg) {
       if (msg) {
         loadRedmondCareers(msg);
+        callTimber();
       } else {
         oRedmondJobPostSection
           .html(sNoJobMessage)
@@ -50,6 +61,7 @@ function careersConstructor() {
     success: function (msg) {
       if (msg) {
         loadMumbaiCareers(msg);
+        callTimber();
       } else {
         oMumbaiJobPostSection
           .html(sNoJobMessage)
@@ -71,6 +83,7 @@ function careersConstructor() {
     success: function (msg) {
       if (msg) {
         loadHyderabadCareers(msg);
+        callTimber();
       } else {
         oHyderabadJobPostSection
           .html(sNoJobMessage)
@@ -92,6 +105,7 @@ function careersConstructor() {
     success: function (msg) {
       if (msg) {
         loadNoidaCareers(msg);
+        callTimber();
       } else {
         oNoidaJobPostSection
           .html(sNoJobMessage)
