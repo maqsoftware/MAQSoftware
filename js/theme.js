@@ -92,6 +92,8 @@ function loadPlugins() {
       );
     }
   });
+  // document.getElementById("#loadingicon").style.display='block'
+  $("#loadingicon").show()
   //   fullScreenSlider();
   //   stickHeader();
   //   int_introHeight();
@@ -287,7 +289,14 @@ function PowerBIsliderConfig() {
 }
 function PowerBIVisualsConfig() {
   $.getJSON("/resources/powerbi visuals/Visuals.json", function (data) {
-    RenderPowerBIVisuals(data);
+    console.log(data[0][Object.keys(data[0])[0]].name)
+    var sortedData = data.sort(function(a,b){
+      if(Object.keys(a)[0] > Object.keys(b)[0]) return 1;
+      if(Object.keys(a)[0]< Object.keys(b)[0])  return -1;
+      return 0;
+    });
+    $("#loadingicon").hide();
+    RenderPowerBIVisuals(sortedData);
   });
 }
 function RenderMartech() {
