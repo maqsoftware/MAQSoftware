@@ -613,13 +613,13 @@
     text-align: left !important
 }
 
-.post-title {
+.post-noDesc-title {
   height: 120px;
 }
 
-.post-info {
+/* .post-info {
   height: 50px;
-}
+} */
 
 .SemiBold {
   font-weight: 500 !important;
