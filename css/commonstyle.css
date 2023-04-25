@@ -613,13 +613,13 @@
     text-align: left !important
 }
 
-.post-title {
+.post-noDesc-title {
   height: 120px;
 }
 
-.post-info {
+/* .post-info {
   height: 50px;
-}
+} */
 
 .SemiBold {
   font-weight: 500 !important;
@@ -869,4 +869,17 @@ p.lead, .lead {
 .MsoNoSpacing{
   margin-left: 0px !important;
   text-indent: 0px !important;
+}
+
+
+/*mobile styles for footer*/
+@media only screen and (max-width:768px) {
+  .mb-footer-items{
+      display: flex;
+      flex-direction: column;
+  }
+
+  .mb-footer-items .mb-align-start{
+      text-align: start;
+  }
 }

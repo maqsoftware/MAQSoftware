@@ -87,7 +87,7 @@ function renderCaseStudy() {
           "</a>" +
           "</div>" +
           "</div>" +
-          "<h2 class='post-title'><a href='" +
+          "<h2 class='post-title post-noDesc-title'><a href='" +
           sAnchorCaseStudy +
           "'>" +
           sCaseStudyTitle +

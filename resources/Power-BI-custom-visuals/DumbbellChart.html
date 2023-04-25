@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dumbbell Chart | MAQ Software" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description"
+        content="<p> Dumbbell Chart by MAQ Software helps users analyze changes in critical data. This visual consists of a dual-axis combination chart: one axis of is marked by a circle, the other is marked by a line that spans data points provided by the user. Dumbbell Chart by MAQ Software is ideal for illustrating change and comparing the distance between data points. R package dependencies (auto-installed): plotly and ggplot2.</p><p>Key features:</p><ul><li>Display the performance of multiple indicators.</li><li>Compare the growth or loss of indicators across various categories.</li><li>Quickly download an image of the chart with the capture image widget.</li></ul>" />
+
+    <!-- Twitter Theme -->
+    <meta name="twitter:widgets:theme" content="light">
+
+    <!-- Title &amp; Favicon -->
+    <!-- <title>DumbbellChart | MAQ Software</title> loaded dynamically in customVisual.JS--> 
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+
+    <!-- Font -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext"
+        rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/core.min.css" />
+    <link rel="stylesheet" href="/css/skin.css" />
+
+    <!--[if lt IE 9]>
+    	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-S0W302CGQG');
+    </script>
+</head>
+
+
+<!-- Header -->
+<header id="header" class="header header-absolute header-fixed-on-mobile header-transparent" data-bkg-threshold="100"
+    data-sticky-threshold="0">
+</header>
+<!-- Header End -->
+
+<!-- Content -->
+<div class="content clearfix">
+    <div class="section-block pb-10 bkg-white">
+        <div class="row">
+            <div class="column width-12">
+                <div>   
+                    <div>
+                        <div class="row">
+                            <div class="column width-12">
+                                <div id="pbiReportContainer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Container for content Start -->
+            <div class="column width-12">
+                <div class="row">
+                    <div class="column width-12" id="contentContainer">
+                        <div id="detailContainer">
+                            <!--... content here will be dynamically loaded in customvisual.js ...-->
+                            <br><br><br>
+                            <!-- detail and desc -->
+
+                            
+                        </div>
+                        <div class="spacer-40"></div>
+                        <div >
+                            <div class="col-md-12" id="businessuseContainer">
+                                <h4 class="title-xsmall">Business uses</h4>
+                                <ul id="businessUsesList">
+                                </ul>
+                            </div>
+                        </div>
+                        <div >
+                            <div class="col-md-12" id="keyFeatureContainer">
+                                <h4 class="title-xsmall">Key Feature</h4>
+                                <ul id="keyFeatureList">
+                                </ul>
+                            </div>
+                        </div>
+                        <div >
+                            <div class="col-md-12" id="whatsNewContainer">
+                                <ul id="whatsNewList">
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-12" id="contactContainer">
+                        </div>
+                        <div id="buttonContainer">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Container for content end -->
+    </div>
+</div>
+<!-- Content End -->
+
+
+<!-- Footer -->
+<footer id="footer" class="footer footer-light bkg-grey-ultralight">
+</footer>
+<!-- Footer End -->
+
+<!-- Js -->
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script>
+<script src="/js/timber.master.min.js"></script>
+<script src="/js/customvisual.js?v=20230301"></script>
+<script>
+	getData("DumbbellChart");
+</script>
+<script>
+    $("#header").load("/header");
+    $("#footer").load("/footer");
+</script>
+</body>
+
+</html>
