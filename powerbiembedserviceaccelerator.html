@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+
+	<!-- Open Graph -->
+	<meta property="og:title" content="Jobs and Career Opportunities | MAQ Software" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="/images/blog/B012/B012-business-apps-landing" />
+	<meta property="og:description"
+		content=" you passionate about new technology? Do you seek exciting and challenging work? Explore career possibilities at MAQ Software." />
+
+	<!-- Twitter Theme -->
+	<meta name="twitter:widgets:theme" content="light">
+
+	<!-- Title &amp; Favicon -->
+	<title>Jobs and Career Opportunities | MAQ Software</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+
+	<!-- Font -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext"
+		rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+
+	<!-- Css -->
+	<link rel="stylesheet" href="css/core.min.css" />
+	<link rel="stylesheet" href="css/skin.css" />
+    <link rel="stylesheet" href="css/isvpage.css" />
+
+	<!--[if lt IE 9]>
+    	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-S0W302CGQG');
+	</script>
+</head>
+
+<body class="shop home-page">
+
+
+
+	<div class="wrapper reveal-side-navigation">
+		<div class="wrapper-inner">
+
+			<!-- Header -->
+			<header id="header" class="header header-absolute header-fixed-on-mobile header-transparent"
+				data-bkg-threshold="100" data-sticky-threshold="0">
+			</header>
+			<!-- Header End -->
+
+			<!-- Feature 1 Section -->
+			<div class="section-block feature-1 overlap-bottom pt-150 bkg-white">
+                <div class="media-overlay background-cover fullscreen-pattern-6"></div>
+                <div class="row flex two-columns-on-tablet">
+                    <div class="column width-6 v-align-middle left center-on-mobile">
+                        <div>
+                            <h1 class="title-large">
+                                <span class="color-black mb-5">
+                                    Power BI Embed Service Accelerator
+                                </span>
+                            </h1>
+                            <p class="text-xlarge mb-30 center-on-mobile">
+                                Efforlessly integrate Power BI into your applications.
+                            </p>
+                            <p class="text-xlarge mb-30 center-on-mobile">
+                                Improve your and your customer's operations by seamlessly integrating Power BI into your apps 
+                                and unlocking a suite of powerful features to elevate your workflow
+                            </p>
+                            <a href="#Services"
+                                class="button medium pill bkg-theme bkg-hover-white color-white color-hover-theme mb-mobile-40">
+                                                                Reach out to learn more</a>
+                        </div>
+                    </div>
+                    <div class="column width-6 right hide-on-mobile">
+                        <div class="feature-image">
+                            <div class="homepage-feature mb-0">
+                                <img src="images\isv\isv-top-image.jpg" width="700"
+                                    alt="Power BI Embed">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<!-- Feature 1 Section End -->	
+
+            <div class="section-block feature-1 overlap-bottom pt-150 bkg-white">
+                <div class="media-overlay background-cover fullscreen-pattern-6"></div>
+                <div class="row flex two-columns-on-tablet">
+                    <div>
+                        <ul class="horizontal-list">
+                            <li>Key Features</li>
+                            <li>Who</li>
+                            <li>Why</li>
+                            <li>Case Studies</li>
+                            <li>Resources</li>
+                            <li>Support</li>
+                            <li>Pricing</li>
+                            <li>Contact Us</li>
+                          </ul>
+                    </div>
+                </div>
+            </div>
+			<!--  List of sections ended -->
+
+			<!-- Footer -->
+			<footer id="footer" class="footer footer-light bkg-grey-ultralight">
+			</footer>
+			<!-- Footer End -->
+
+			<!-- Js -->
+			<script src="/js/jquery-3.2.1.min.js"></script>
+			<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script> -->
+			<!-- <script src="/js/timber.master.min.js"></script> -->
+
+			<script src="/js/common.js?v=20211215.1"></script>
+			<script src="/js/careers.js?v=20220905.1" type="text/javascript"></script>
+			<script>
+				careersConstructor();
+				function sleep(milliseconds) {
+					const date = Date.now();
+					let currentDate = null;
+					do {
+						currentDate = Date.now();
+					} while (currentDate - date < milliseconds);
+				}
+				// sleep(3000);
+				// Create new script element
+				const script = document.createElement('script');
+				script.src = '/js/timber.master.min.js';
+
+				// Append to the `head` element
+				document.head.appendChild(script);
+				$("#header").load("/header");
+				$("#footer").load("/footer");
+			</script>
+			<script type="text/javascript">
+				$(document).ready(function () {
+					//Check if the current URL contains '#'
+					if (document.URL.indexOf("#") == -1) {
+						// Set the URL to whatever it was plus "#".
+						url = document.URL + "#";
+						location = "#";
+
+						//Reload the page
+						location.reload(true);
+					}
+				});
+			</script>
+</body>
+
+</html>
