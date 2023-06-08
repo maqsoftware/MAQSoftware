@@ -9,3 +9,11 @@ ul.horizontal-list {
     float: left;
     margin-right: 20px; /* Adjust the spacing between list items */
   }
+
+  .secondary_nav{
+    position: sticky;
+    padding: 20px 0px;
+    margin: 100px 0px;
+    background-color: #f4f5f6;
+    box-shadow: 0 8px 6px -6px black;
+  }
