@@ -78,7 +78,7 @@
 								apps
 								and unlocking a suite of powerful features to elevate your workflow
 							</p>
-							<a href="#Services"
+							<a onclick="show_popup()"
 								class="button medium pill bkg-theme bkg-hover-white color-white color-hover-theme mb-mobile-40">
 								Reach out to learn more</a>
 						</div>
@@ -95,7 +95,7 @@
 			<!-- Feature 1 Section End -->
 
 			<!-- Secondary nav to navigate between feature items -->
-			<div class="secondary-nav ">
+			<div id="secondaryNav" class="secondary-nav">
 				<div class="row flex two-columns-on-tablet ">
 					<ul class="horizontal-list">
 						<li><a href="#keyFeatures">Key Features</a></li>
@@ -111,79 +111,90 @@
 			</div>
 			<!-- Secondary nav end -->
 
-
-			<!-- Feature 2 Section -->
-			<div id="keyFeatures" class="section-block feature-1 overlap-bottom pt-150 bkg-white feature-block">
-				<div class="row flex">
-					<div class="column width-6 v-align-middle left center-on-mobile">
-						<div>
-							<h1 class="title-large">
-								<span class="color-black mb-5">
-									Key Features
-								</span>
-							</h1>
-							<div class="column width-6">
-								<div class="isv-row isv-flex isv-two-columns-on-tablet">
-									<div>
-										<div class="box xlarge rounded border-grey-light shadow-hover">
-											<h4 class="title-small">Highly Cutomizable</h4>
-											<p class="title-xsmall">Do your reports take over 10 seconds to load? They
-												shouldn't.
-												Our exclusive performance analysis tools quickly identify problem
-												areas and reduce report load time by an average of 50%.
-											</p>
-										</div>
-									</div>
-									<div>
-										<div class="box xlarge rounded border-grey-light shadow-hover">
-											<h4 class="title-small">Scalable and Secure</h4>
-											<p class="title-xsmall">Adopting a new platform can be daunting, especially
-												for new users. Train your teams and build user confidence with Centers
-												of Excellence (CoE) delivered by our team of certified engineers.
-											</p>
-										</div>
-									</div>
-									<div>
-										<div class="box xlarge rounded border-grey-light shadow-hover">
-											<h4 class="title-small">Seamless integration</h4>
-											<p class="title-xsmall">Security is a top concern in today's business world.
-												Our governance solutions enable you to improve report security, increase
-												adoption, and scale your plan to ensure you aren’t spending more than
-												you need to.
-											</p>
-										</div>
-									</div>
-									<div>
-										<div class="box xlarge rounded border-grey-light shadow-hover">
-											<h4 class="title-small">Automatic updates & upgrade</h4>
-											<p class="title-xsmall">Expand your reporting capabilities with our 30+ <a
-													href="https://docs.microsoft.com/en-us/power-bi/developer/visuals/power-bi-custom-visuals-certified"
-													target="_blank">certified</a> visuals free on <a
-													href="https://appsource.microsoft.com/en-us/marketplace/apps?page=1&search=MAQ%20Software"
-													target="_blank">Microsoft AppSource</a>.
-											</p>
-										</div>
-									</div>
-									<div>
-										<div class="box xlarge rounded border-grey-light shadow-hover">
-											<h4 class="title-small">Hassle-free licensing</h4>
-											<p class="title-xsmall">Expand your reporting capabilities with our 30+ <a
-													href="https://docs.microsoft.com/en-us/power-bi/developer/visuals/power-bi-custom-visuals-certified"
-													target="_blank">certified</a> visuals free on <a
-													href="https://appsource.microsoft.com/en-us/marketplace/apps?page=1&search=MAQ%20Software"
-													target="_blank">Microsoft AppSource</a>.
-											</p>
-										</div>
-									</div>
-									<div>
-										<div class="box xlarge rounded border-grey-light shadow-hover">
-											<h4 class="title-small">Role-based access management</h4>
-											<p class="title-xsmall">Expand your reporting capabilities with our 30+ <a
-													href="https://docs.microsoft.com/en-us/power-bi/developer/visuals/power-bi-custom-visuals-certified"
-													target="_blank">certified</a> visuals free on <a
-													href="https://appsource.microsoft.com/en-us/marketplace/apps?page=1&search=MAQ%20Software"
-													target="_blank">Microsoft AppSource</a>.
-											</p>
+			<div class="content">
+				<!-- Feature 2 Section -->
+				<div id="keyFeatures" class="feature-1 bkg-white case-studies">
+					<div class="feature-block">
+						<div class="row flex">
+							<div class="column width-6 v-align-middle left center-on-mobile">
+								<div>
+									<h1 class="title-large">
+										<span class="color-black mb-5">
+											Key Features
+										</span>
+									</h1>
+									<div class="width-6">
+										<div class="feature-div">
+											<div class="feature-card">
+												<div class="feature-icon">
+													<img src="/images/isv/tool.svg" width="40" height="40" />
+													<img src="/images/isv/layers.svg" style="margin-top: 30px;"
+														width="40" height="40" />
+													<img src="/images/isv/pen-tool.svg" width="40" height="40" />
+												</div>
+												<h4 class="title-small">Highly Customizable</h4>
+												<p class="title-xsmall">Custom-fit the features to offer
+													tailored functionalities that meet the
+													unique demands of your business.
+												</p>
+											</div>
+											<div class="feature-card">
+												<div class="feature-icon">
+													<img src="/images/isv/globe.svg" width="40" height="40"
+														style="margin-bottom:30px" />
+												</div>
+												<h4 class="title-small">Scalable and Secure</h4>
+												<p class="title-xsmall">Onboard unlimited customer tenants/
+													workspaces, ensuring data privacy and
+													seamless scalability for your
+													organization.
+												</p>
+											</div>
+											<div class="feature-card">
+												<div class="feature-icon">
+													<img src="/images/isv/key.svg" width="40" height="40"
+														style="margin-bottom:30px" />
+												</div>
+												<h4 class="title-small">Seamless integration</h4>
+												<p class="title-xsmall">Easily integrate our API into your
+													applications, leveraging the power of
+													Power Bl without the complexities.
+												</p>
+											</div>
+											<div class="feature-card">
+												<div class="feature-icon">
+													<img src="/images/isv/checkCircle.svg" width="40" height="40"
+														style="margin-bottom:30px" />
+												</div>
+												<h4 class="title-small">Automatic updates & upgrades</h4>
+												<p class="title-xsmall">Stay up to date with the latest features
+													and enhancements without the need
+													for manual updates.
+												</p>
+											</div>
+											<div class="feature-card">
+												<div class="feature-icon">
+													<img src="/images/isv/tool.svg" width="40" height="40"
+														style="margin-bottom:30px" />
+												</div>
+												<h4 class="title-small">Hassle-free licensing</h4>
+												<p class="title-xsmall">No additional Power Bl licenses required
+													for report editors and sharers, saving
+													costs, and simplifying license
+													management.
+												</p>
+											</div>
+											<div class="feature-card">
+												<div class="feature-icon">
+													<img src="/images/isv/user.svg" width="40" height="40"
+														style="margin-bottom:30px" />
+												</div>
+												<h4 class="title-small">Role-based access management</h4>
+												<p class="title-xsmall">Effortlessly manage user permissions
+													and data security with built-in role-
+													based access controls.
+												</p>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -191,127 +202,300 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- Feature 2 Section End -->
+				<!-- Feature 2 Section End -->
 
-			<!-- Feature 3 Section -->
-			<div id="who" class="section-block pt-30 pb-30 bkg-white feature-block">
-				<div class="row">
-					<div class="column width-12">
-						<div class="column width-6">
-							<div class="feature-image-inner center-on-mobile">
-								<img src="/images/assets/Visual-Export-Tool.png" alt="" />
-							</div>
-						</div>
-						<div class="column width-6">
-							<div class="feature-content-inner">
-								<h2>Who is the <br /> Power BI Embed Service Accelerator for?</h2>
-								<p>The Power Bl Embed Service Accelerator is designed
-									for Independent Software Vendors (ISVs) seeking a
-									streamlined solution. However, any organization can
-									benefit from our API to unleash the power of Power Bl.</p>
+				<!-- Feature 3 Section -->
+				<div id="who" class="section-block pt-30 pb-30 bkg-white">
+					<div class="feature-block">
+						<div class="row">
+							<div class="column width-12">
+								<div class="column width-6">
+									<div class="feature-image-inner center-on-mobile">
+										<img src="/images/isv/who.jpg" alt="" />
+									</div>
+								</div>
+								<div class="column width-6">
+									<div class="feature-content-inner">
+										<h2>Who is the <br /> Power BI Embed Service Accelerator for?</h2>
+										<p>The Power Bl Embed Service Accelerator is designed
+											for Independent Software Vendors (ISVs) seeking a
+											streamlined solution. However, any organization can
+											benefit from our API to unleash the power of Power Bl.</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- Feature 3 Section End -->
+				<!-- Feature 3 Section End -->
 
-			<!-- Feature 4 Section -->
-			<div id="why" class="section-block pt-30 pb-30 bkg-white feature-block">
-				<div class="row">
-					<div class="column width-12">
-						<div class="column width-6">
-							<div class="feature-content-inner">
-								<h2>Why use the <br />Power BI Embed Service Accelerator?</h2>
-								<p>Save time, effort, costs, and resources by embedding
-									Power Bl using our ready-to-use API. Seamlessly
-									integrate with comprehensive features, without
-									having to build from scratch.</p>
-							</div>
-						</div>
-						<div class="column width-6">
-							<div class="feature-image-inner center-on-mobile">
-								<img src="/images/assets/Visual-Export-Tool.png" alt="" />
+				<!-- Feature 4 Section -->
+				<div id="why" class="section-block pt-30 pb-30 bkg-white">
+					<div class="feature-block">
+						<div class="row">
+							<div class="column width-12">
+								<div class="column width-6">
+									<div class="feature-content-inner">
+										<h2>Why use the <br />Power BI Embed Service Accelerator?</h2>
+										<p>Save time, effort, costs, and resources by embedding
+											Power Bl using our ready-to-use API. Seamlessly
+											integrate with comprehensive features, without
+											having to build from scratch.</p>
+									</div>
+								</div>
+								<div class="column width-6">
+									<div class="feature-image-inner center-on-mobile">
+										<img src="/images/isv/why.jpg" alt="" />
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- Feature 4 Section End -->
+				<!-- Feature 4 Section End -->
 
-			<!-- Feature 7 Section -->
-			<div id="support" class="section-block pt-30 pb-30 bkg-white feature-block">
-				<div class="row">
-					<div class="column width-12">
-						<div class="column width-6">
-							<div class="feature-image-inner center-on-mobile">
-								<img src="/images/assets/Visual-Export-Tool.png" alt="" />
+				<!-- Feature 5 Section -->
+				<div id="caseStudies" class="section-block feature-1 case-studies">
+					<div class="feature-block">
+						<div class="row flex">
+							<div class="column width-6 v-align-middle left center-on-mobile">
+								<h1 class="title-large">
+									<span class="color-black mb-5">
+										Case Studies
+									</span>
+								</h1>
 							</div>
-						</div>
-						<div class="column width-6">
-							<div class="feature-content-inner">
-								<h2>Support</h2>
-								<p>Our dedicated support team is here to assist you
-									throughout your journey with the Power Bl Embed
-									Service Accelerator. Whether you have technical
-									questions or need guidance, we're just a message
-									away.</p>
+							<div class="column flex case-studies-article-container">
+								<!-- article 1 -->
+								<div class="grid-item nf-item case-studies-article">
+									<article class="post">
+										<div class="post-content with-background">
+											<div class="post-media">
+												<div class="thumbnail cs-image img-scale-in"
+													data-hover-easing="easeInOut" data-hover-speed="700"
+													data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9"><a
+														class="overlay-link"
+														href="https://blog.maqsoftware.com/2023/02/transforming-customer-support-with.html"><img
+															classs="cs-image"
+															src="https://maqsoftware.com/images/case-studies/CS070-banner.jpg"
+															alt=""><span class="overlay-info"><span><span> Read Full
+																	Article</span></span></span></a></div>
+											</div>
+
+											<h3 class="post-title" style="margin-top: 10px;">
+												<a
+													href="https://blog.maqsoftware.com/2023/02/transforming-customer-support-with.html">
+													Transforming Customer Support with AIOps-Driven Power BI Embedding
+												</a>
+											</h3>
+											<p>In less than two months, we enabled a leading office retailer
+												to migrate 100 reports to Power Bl, reducing operational costs,
+												unifying reporting, and resulting in 80% faster insights and
+												empowered teams.</p>
+											<a href="https://blog.maqsoftware.com/2023/02/transforming-customer-support-with.html"
+												class="read-more">Read More →</a>
+										</div>
+									</article>
+								</div>
+								<!-- article 2 -->
+								<div class="grid-item nf-item case-studies-article">
+									<article class="post">
+										<div class="post-content with-background">
+											<div class="post-media">
+												<div class="thumbnail cs-image img-scale-in"
+													data-hover-easing="easeInOut" data-hover-speed="700"
+													data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9"><a
+														class="overlay-link"
+														href="https://blog.maqsoftware.com/2022/07/improving-insights-and-reducing-costs.html"><img
+															classs="cs-image"
+															src="https://maqsoftware.com/images/case-studies/CS066_banner_2.png"
+															alt=""><span class="overlay-info"><span><span> Read Full
+																	Article</span></span></span></a></div>
+											</div>
+											<h3 class="post-title" style="margin-top: 10px;">
+												<a
+													href="https://blog.maqsoftware.com/2022/07/improving-insights-and-reducing-costs.html">Improving
+													insights and reducing costs through unified reporting
+												</a>
+											</h3>
+											<p>By migrating 100 reports to Power Bl and implementing a
+												unified data model, our client, a leading office retailer,
+												reduced operational costs, achieved unified reporting across
+												their organization, and enabled self-serve reporting.</p>
+											<a href="https://blog.maqsoftware.com/2022/07/improving-insights-and-reducing-costs.html"
+												class="read-more">Read More →</a>
+										</div>
+									</article>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- Feature 7 Section End -->
+				<!-- Feature 5 Section End -->
 
-			<!-- Feature 8 Section -->
-			<div id="pricing" class="section-block pt-30 pb-30 bkg-white feature-block">
-				<div class="row">
-					<div class="column width-12">
-						<div class="column width-6">
-							<div class="feature-content-inner">
-								<h2>Pricing</h2>
-								<p>Save time, effort, costs, and resources by embedding
-									Power Bl using our ready-to-use API. Seamlessly
-									integrate with comprehensive features, without
-									having to build from scratch.</p>
-							</div>
-						</div>
-						<div class="column width-6">
-							<div class="feature-image-inner center-on-mobile">
-								<img src="/images/assets/Visual-Export-Tool.png" alt="" />
+				<!-- Feature 6 Section -->
+				<div id="resources" class="section-block pt-30 pb-30 bkg-white">
+					<div class="feature-block">
+						<div class="row">
+							<div class="column width-12">
+								<div class="column width-6">
+									<div class="feature-content-inner">
+										<h2>Resources</h2>
+										<div id="video_desc" class="resources-div resources-div-click"
+											onclick="resourcesClick('video_desc')">
+											<h3>Demo Video</h3>
+											<p>Watch our demo video to see the Power Bl Embed Service
+												Accelerator in action. Experience how seamlessly it integrates
+												into applications.</p>
+										</div>
+										<div id="documentation_desc" class="resources-div"
+											onclick="resourcesClick('documentation_desc')">
+											<h3>Technical Documentation</h3>
+											<p>Access our <a style="text-decoration: underline;">technical
+													documentation</a> to get in-depth
+												information on integrating and utilizing the Power Bl Embed
+												Service Accelerator API.</p>
+										</div>
+									</div>
+								</div>
+								<div class="column width-6">
+									<div class="feature-image-inner center-on-mobile">
+										<div id="documentation_img" style="display: none;">
+											<img src="/images/isv/support.jpg" alt="" />
+										</div>
+										<div id="demo_video">
+											<!-- <video controls>
+												<source src="movie.mp4" type="video/mp4">
+												Your browser does not support the video tag.
+											</video> -->
+											<iframe
+												src="https://www.youtube.com/embed/FRk-5V0MfkE?rel=0&amp;autoplay=1&mute=1"
+												width="700" height="281"></iframe>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- Feature 8 Section End -->
+				<!-- Feature 6 Section End -->
 
-			<!-- Feature 8 Section -->
-			<div id="contact" class="section-block pt-30 pb-30 bkg-white feature-block">
-				<div class="row">
-					<div class="column width-12">
-						<div class="column width-6">
-							<div class="feature-image-inner center-on-mobile">
-								<img src="/images/generic/contact-us.png" alt="" />
+				<!-- Feature 7 Section -->
+				<div id="support" class="section-block pt-30 pb-30 bkg-white">
+					<div class="feature-block">
+						<div class="row">
+							<div class="column width-12">
+								<div class="column width-6">
+									<div class="feature-image-inner center-on-mobile">
+										<img src="/images/isv/support.jpg" alt="" />
+									</div>
+								</div>
+								<div class="column width-6">
+									<div class="feature-content-inner">
+										<h2>Support</h2>
+										<p>Our dedicated support team is here to assist you
+											throughout your journey with the Power Bl Embed
+											Service Accelerator. Whether you have technical
+											questions or need guidance, we're just a message
+											away.</p>
+										<a class="support-link"
+											href="mailto: sales@maqsoftware.com">Sales@MAQSoftware.com</a>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="column width-6">
-							<div class="feature-content-inner">
-								<h2>Contact Us</h2>
-								<p>Save time, effort, costs, and resources by embedding
-									Power Bl using our ready-to-use API. Seamlessly
-									integrate with comprehensive features, without
-									having to build from scratch.</p>
+					</div>
+				</div>
+				<!-- Feature 7 Section End -->
+
+				<!-- Feature 8 Section -->
+				<div id="pricing" class="section-block pt-30 pb-30 bkg-white">
+					<div class="feature-block">
+						<div class="row">
+							<div class="column width-12">
+								<div class="column width-6">
+									<div class="feature-content-inner">
+										<h2>Pricing</h2>
+										<p>For pricing details and plans tailored to your
+											organization's needs, please fill out the form below in
+											the Contact us section. We offer flexible options to
+											accommodate businesses of all sizes.</p>
+										<a onclick="show_popup()" target="blank"
+											class="button medium pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white mb-mobile-40">
+											Send us a message</a>
+									</div>
+								</div>
+								<div class="column width-6">
+									<div class="feature-image-inner center-on-mobile">
+										<img src="/images/assets/Visual-Export-Tool.png" alt="" />
+									</div>
+								</div>
 							</div>
 						</div>
-						<a href="" target="blank"
-							class="button medium pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white mb-mobile-40">
-							Send us a message</a>
+					</div>
+				</div>
+				<!-- Feature 8 Section End -->
+
+				<!-- Feature 8 Section -->
+				<div id="contact" class="section-block pt-30 pb-30 bkg-white">
+					<div class="feature-block bottom-margin">
+						<div class="row">
+							<div class="column width-12">
+								<div class="column width-6">
+									<div class="feature-image-inner center-on-mobile">
+										<img src="/images/generic/contact-us.png" alt="" />
+									</div>
+								</div>
+								<div class="column width-6">
+									<div class="feature-content-inner">
+										<h2>Contact Us</h2>
+										<p>Ready to unlock the power of Power Bl with our
+											Embed Service Accelerator? Contact us today to learn
+											more, request a demo, or get a personalized quote.</p>
+									</div>
+									<a onclick="show_popup()" target="blank"
+										class="button medium pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white mb-mobile-40">
+										Send us a message</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Feature 8 Section End -->
+			</div>
+
+			<!-- popup form star -->
+			<div id="popup-form" class="popup">
+				<div class="popup-content">
+					<h3>Name</h3>
+					<input id="name" class="input-style" placeholder="Enter name">
+					<h3>Email Address</h3>
+					<input id="email" class="input-style" placeholder="Enter email address">
+					<h3>Phone Number</h3>
+					<input id="phone" class="input-style" placeholder="Enter phone number">
+					<h3>Company</h3>
+					<input id="company" class="input-style" placeholder="Enter company name">
+					<h3>Role</h3>
+					<input id="role" class="input-style" placeholder="Enter role name">
+					<h3>Add Message</h3>
+					<input id="message" class="input-style" placeholder="Enter Message">
+					<p class="disclaimer-text">*Disclaimer: The details provided may be used by the team to contact you.
+					</p>
+					<div class="form-button">
+						<button
+							class="button medium pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white"
+							id="closePopup" onclick="hide_popup()">
+							Close
+						</button>
+						<button
+							class="button medium pill bkg-theme bkg-hover-white color-white color-hover-theme mb-mobile-40"
+							id="closePopup" onclick="send_details()">
+							Send Message
+						</button>
 					</div>
 				</div>
 			</div>
-			<!-- Feature 8 Section End -->
+			<!-- popup form end -->
 
 			<!-- Footer -->
 			<footer id="footer" class="footer footer-light bkg-grey-ultralight">
@@ -325,6 +509,71 @@
 
 			<script src="/js/common.js?v=20211215.1"></script>
 			<script src="/js/careers.js?v=20220905.1" type="text/javascript"></script>
+			<script>
+				window.onscroll = function () { myFunction() };
+
+				var navbar = document.getElementById("secondaryNav");
+				var sticky = navbar.offsetTop;
+
+				function myFunction() {
+					if (window.pageYOffset >= sticky) {
+						navbar.classList.add("sticky")
+					} else {
+						navbar.classList.remove("sticky");
+					}
+				}
+
+				function resourcesClick(id) {
+					var video_desc = document.getElementById("video_desc");
+					var documentation_desc = document.getElementById("documentation_desc");
+					var video_div = document.getElementById("demo_video");
+					var img_div = document.getElementById("documentation_img");
+					if (id === "video_desc") {
+						video_desc.classList.add("resources-div-click");
+						documentation_desc.classList.remove("resources-div-click");
+						img_div.style.display = 'none';
+						video_div.style.display = 'block';
+					} else {
+						video_desc.classList.remove("resources-div-click");
+						documentation_desc.classList.add("resources-div-click");
+						img_div.style.display = 'block';
+						video_div.style.display = 'none';
+					}
+				}
+
+				function show_popup() {
+					var popup = document.getElementById("popup-form");
+					popup.style.visibility = 'visible';
+					popup.classList.add("show");
+				}
+
+				function hide_popup() {
+					var popup = document.getElementById("popup-form");
+					popup.classList.remove("show");
+				}
+
+				function send_details() {
+					var name = document.getElementById("name");
+					var email = document.getElementById("email");
+					var phone = document.getElementById("phone");
+					var company = document.getElementById("company");
+					var role = document.getElementById("role");
+					var message = document.getElementById("message");
+
+					userDetails = {
+						name: name.value,
+						email: email.value,
+						phone: phone.value,
+						company: company.value,
+						role: role.value,
+						message: message.value,
+					}
+					const mailBody = "Name:" + name.value + "\n" + " Email:" + email.value + "\n" + " Phone:" + phone.value + "\n" + " Company:" + company.value + "\n" + " Role:" + role.value + "\n" + " Message:" + message.value + "\n";
+					let mail = document.createElement("a");
+					mail.href = "mailto:sales@maqsoftware.com?subject=Power BI Embed Service Accelerator&body= Details\n" + mailBody;
+					mail.click();
+				}	
+			</script>
 			<script>
 				careersConstructor();
 				function sleep(milliseconds) {
