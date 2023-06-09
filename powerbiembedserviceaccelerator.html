@@ -568,8 +568,9 @@
 						role: role.value,
 						message: message.value,
 					}
+					const mailBody = "Name:" + name.value + "\n" + " Email:" + email.value + "\n" + " Phone:" + phone.value + "\n" + " Company:" + company.value + "\n" + " Role:" + role.value + "\n" + " Message:" + message.value + "\n";
 					let mail = document.createElement("a");
-					mail.href = "mailto:sales@maqsoftware.com?subject=Power BI Embed Service Accelerator&body= Details:" + JSON.stringify(userDetails);
+					mail.href = "mailto:sales@maqsoftware.com?subject=Power BI Embed Service Accelerator&body= Details\n" + mailBody;
 					mail.click();
 				}	
 			</script>
