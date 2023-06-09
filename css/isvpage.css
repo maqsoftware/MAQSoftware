@@ -1,0 +1,36 @@
+ul.horizontal-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul.horizontal-list li {
+  float: left;
+  padding: 8px;
+  margin-right: 20px;
+  /* Adjust the spacing between list items */
+}
+
+ul.horizontal-list a {
+  color: black;
+}
+
+ul.horizontal-list a:hover {
+  color: #a4262c;
+  padding-bottom: 4px;
+  border-bottom: 2px solid;
+  border-bottom-width: thick;
+}
+
+.secondary-nav {
+  position: sticky;
+  padding: 20px 0px;
+  margin: 100px 0px;
+  background-color: #f4f5f6;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.feature-block {
+  margin: 40px 0px;
+}
