@@ -883,3 +883,17 @@ p.lead, .lead {
       text-align: start;
   }
 }
+
+.isv-row {
+  display: flex;
+}
+
+.isv-column {
+  flex-basis: 50%;
+}
+
+@media (max-width: 768px) {
+  .isv-two-columns-on-tablet .column {
+    flex-basis: 100%;
+  }
+}
