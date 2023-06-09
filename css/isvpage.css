@@ -24,13 +24,46 @@ ul.horizontal-list a:hover {
 }
 
 .secondary-nav {
-  position: sticky;
-  padding: 20px 0px;
-  margin: 100px 0px;
+  padding: 10px 0px;
+  margin: 50px 0px 0px 0px;
   background-color: #f4f5f6;
   box-shadow: 0 8px 6px -6px black;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+  background-color: white;
+}
+
 .feature-block {
-  margin: 40px 0px;
+  margin-top: 120px;
+}
+
+.sticky + .content {
+  padding-top: 160px;
+}
+
+.support-link {
+  text-decoration: underline;
+}
+
+.support-link:hover {
+  color: #a4262c;
+  text-decoration: underline;
+}
+
+.case-studies {
+  background-color: #f4f5f6 !important;
+}
+
+.case-studies-article-container{
+  padding: 5px 10px;
+}
+
+.case-studies-article{
+  height: 590px !important;
+  margin: 0px 10px;
 }
