@@ -884,16 +884,19 @@ p.lead, .lead {
   }
 }
 
+.eventsChild{
+  padding-top: 43px;
+}
 .isv-row {
-  display: flex;
+    display: flex;
 }
 
 .isv-column {
-  flex-basis: 50%;
+    flex-basis: 50%;
 }
 
 @media (max-width: 768px) {
-  .isv-two-columns-on-tablet .column {
-    flex-basis: 100%;
-  }
+    .isv-two-columns-on-tablet .column {
+        flex-basis: 100%;
+    }
 }
