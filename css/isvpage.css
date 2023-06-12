@@ -79,7 +79,7 @@ ul.horizontal-list a:hover {
 }
 
 .feature-block {
-  margin-top: 120px;
+  margin-top: 70px;
 }
 
 .sticky+.content {
@@ -172,4 +172,9 @@ ul.horizontal-list a:hover {
 .form-button {
   display: flex;
   flex-direction: row;
+}
+
+.section-padding {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
 }
