@@ -14,6 +14,7 @@ ul.horizontal-list li {
 
 ul.horizontal-list a {
   color: black;
+  font-size: 14px;
 }
 
 ul.horizontal-list a:hover {
@@ -56,7 +57,7 @@ ul.horizontal-list a:hover {
   display: grid;
   margin-bottom: 30px;
   grid-template-columns: repeat(3, 350px);
-  grid-template-rows: repeat(2, 300px);
+  grid-template-rows: repeat(2, 250px);
   grid-gap: 30px 30px;
 }
 
@@ -72,8 +73,13 @@ ul.horizontal-list a:hover {
   justify-content: center;
 }
 
+.single-icon-style{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .feature-block {
-  margin-top: 120px;
+  margin-top: 70px;
 }
 
 .sticky+.content {
@@ -103,7 +109,7 @@ ul.horizontal-list a:hover {
 }
 
 .resources-div {
-  padding: 10px;
+  padding: 20px;
   margin: 5px;
 }
 
@@ -111,12 +117,16 @@ ul.horizontal-list a:hover {
   background-color: #f4f5f6;
 }
 
+.media-div{
+  width: inherit;
+}
+
 .resources-div:hover {
   background-color: #f4f5f6;
 }
 
 .bottom-margin {
-  margin-bottom: 100px;
+  margin-bottom: 120px;
 }
 
 .popup {
@@ -162,4 +172,9 @@ ul.horizontal-list a:hover {
 .form-button {
   display: flex;
   flex-direction: row;
+}
+
+.section-padding {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
 }
