@@ -568,9 +568,9 @@
 						role: role.value,
 						message: message.value,
 					}
-					const mailBody = "Name:" + name.value + "\n" + " Email:" + email.value + "\n" + " Phone:" + phone.value + "\n" + " Company:" + company.value + "\n" + " Role:" + role.value + "\n" + " Message:" + message.value + "\n";
+					const mailBody = "Name: " + name.value + "%0D%0A" + " Email: " + email.value + "%0D%0A" + " Phone: " + phone.value + "%0D%0A" + " Company: " + company.value + "%0D%0A" + " Role: " + role.value + "%0D%0A" + " Message: " + message.value + "%0D%0A";
 					let mail = document.createElement("a");
-					mail.href = "mailto:sales@maqsoftware.com?subject=Power BI Embed Service Accelerator&body= Details\n" + mailBody;
+					mail.href = "mailto:sales@maqsoftware.com?subject=Power BI Embed Service Accelerator&body=Details%0D%0A" + mailBody;
 					mail.click();
 				}	
 			</script>
