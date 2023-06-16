@@ -111,17 +111,17 @@ data-bkg-threshold="100" data-sticky-threshold="0">
 
 			<div class="content">
 				<!-- Feature 2 Section -->
-				<div id="keyFeatures" class="feature-1 bkg-white case-studies">
+				<div id="keyFeatures" class="feature-1 bkg-white">
 					<div class="feature-block">
 						<div class="row flex">
-							<div class="column width-6 v-align-middle left center-on-mobile">
+							<div class="column width-12 v-align-middle left center-on-mobile">
 								<div>
 									<h1 class="title-large">
 										<span class="color-black mb-5">
 											Key Features
 										</span>
 									</h1>
-									<div class="width-6">
+									<!-- <div class="width-6">
 										<div class="feature-div">
 											<div class="feature-card">
 												<div class="feature-icon">
@@ -192,6 +192,124 @@ data-bkg-threshold="100" data-sticky-threshold="0">
 													and data security with built-in role-
 													based access controls.
 												</p>
+											</div>
+										</div>
+									</div> -->
+									<div class="row">
+										<div class="column width-12">
+											<div class="column width-6 pad-0">
+												<div class="feature-content-inner">
+													<div id="seamless-integration" class="resources-div-click"
+														onclick="keyfeaturesClick('seamless-integration','seamless-integration-img')">
+														<div class="row">
+															<div class="column width-2 ptb-30">
+																<img src="/images/isv/key.svg" width="55" height="55"
+																	class="single-icon-style" />
+															</div>
+															<div class="column width-10">
+																<h3>Seamless Integration</h3>
+																<p>Easily integrate our API into your
+																	applications, leveraging the power of
+																	Power Bl without the complexities.</p>
+															</div>
+														</div>
+													</div>
+													<div id="highly-customizable" class=""
+														onclick="keyfeaturesClick('highly-customizable','highly-customizable-img')">
+														<div class="row">
+															<div class="column width-2 ptb-30">
+																<img src="/images/isv/pen-tool.svg" width="55" height="55"
+																	class="single-icon-style" />
+															</div>
+															<div class="column width-10">
+																<h3>Highly customizable</h3>
+																<p>Custom-fit the features to offer
+																	tailored functionalities that meet the
+																	unique demands of your business</p>
+															</div>
+														</div>
+													</div>
+													<div id="role-based-access-management" class=""
+														onclick="keyfeaturesClick('role-based-access-management','role-based-access-management-img')">
+														<div class="row">
+															<div class="column width-2 ptb-30">
+																<img src="/images/isv/user.svg" width="55" height="55"
+																	class="single-icon-style" />
+															</div>
+															<div class="column width-10">
+																<h3>Role-based access management</h3>
+																<p>Effortlessly manage user permissions
+																	and data security with built-in role-
+																	based access controls.</p>
+															</div>
+														</div>
+													</div>
+													<div id="hassle-free-licensing" class=""
+														onclick="keyfeaturesClick('hassle-free-licensing','hassle-free-licensing-img')">
+														<div class="row">
+															<div class="column width-2 ptb-30">
+																<img src="/images/isv/tool.svg" width="55" height="55"
+																	class="single-icon-style" />
+															</div>
+															<div class="column width-10">
+																<h3>Hassle-free licensing</h3>
+																<p>No additional Power Bl licenses required
+																	for report editors and sharers, saving
+																	costs, and simplifying license
+																	management.</p>
+															</div>
+														</div>
+													</div>
+													<div id="scalable-secure" class="" onclick="keyfeaturesClick('scalable-secure','scalable-secure-img')">
+														<div class="row">
+															<div class="column width-2 ptb-30">
+																<img src="/images/isv/globe.svg" width="55" height="55" class="single-icon-style" />
+															</div>
+															<div class="column width-10">
+																<h3>Scalable & secure</h3>
+																<p>Onboard unlimited customer tenants/
+																	workspaces, ensuring data privacy and
+																	seamless scalability for your
+																	organization.</p>
+															</div>
+														</div>
+													</div>
+													<div id="automatic-updates-upgrades" class="" onclick="keyfeaturesClick('automatic-updates-upgrades','automatic-updates-upgrades-img')">
+														<div class="row">
+															<div class="column width-2 ptb-30">
+																<img src="/images/isv/checkCircle.svg" width="55" height="55" class="single-icon-style" />
+															</div>
+															<div class="column width-10">
+																<h3>Automatic updates & upgrades</h3>
+																<p>Stay up to date with the latest features
+																	and enhancements without the need
+																	for manual updates.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="column width-6">
+												<div class="feature-image-inner center-on-mobile media-div">
+													<div id="seamless-integration-img">
+														<img src="/images/isv/Seamless integration.svg" alt="" />
+													</div>
+													<div id="highly-customizable-img" style="display: none;">
+														<img src="/images/isv/Highly customizable.svg" alt="" />
+													</div>
+													<div id="role-based-access-management-img" style="display: none;">
+														<img src="/images/isv/Role-based access management.svg" alt="" />
+													</div>
+													<div id="hassle-free-licensing-img" style="display: none;">
+														<img src="/images/isv/Hassle-free licensing.svg" alt="" />
+													</div>
+													<div id="scalable-secure-img" style="display: none;">
+														<img src="/images/isv/Scalable & secure.svg" alt="" />
+													</div>
+													<div id="automatic-updates-upgrades-img" style="display: none;">
+														<img src="/images/isv/Automatic updates & upgrades.svg" alt="" />
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -521,6 +639,22 @@ data-bkg-threshold="100" data-sticky-threshold="0">
 					mail.href = "mailto:sales@maqsoftware.com?subject=Embed Fast&body= Details\n" + mailBody;
 					mail.click();
 				}	
+				
+				function keyfeaturesClick(featuresectionid,imageid) {
+					var imageelement = document.getElementById(imageid);
+					var imagesiblings = imageelement.parentNode.children;
+					for (var i = 0; i < imagesiblings.length; i++) {
+						imagesiblings[i].style.display = 'none';
+					};
+					imageelement.style.display = 'block';
+
+					var featuresection = document.getElementById(featuresectionid);
+					var featuresiblings = featuresection.parentNode.children;
+					for (var i = 0; i < featuresiblings.length; i++) {
+						featuresiblings[i].classList.remove("resources-div-click");
+					};
+					featuresection.classList.add("resources-div-click");
+				}
 			</script>
 			<script>
 				$("#header").load("/header.html");
