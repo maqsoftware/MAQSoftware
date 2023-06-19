@@ -193,3 +193,12 @@ ul.horizontal-list a:hover {
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
 }
+
+.pad-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.pl-10 {
+  padding-left: 4.5rem;
+}
