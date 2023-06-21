@@ -202,3 +202,17 @@ ul.horizontal-list a:hover {
 .pl-10 {
   padding-left: 4.5rem;
 }
+
+.ptb-18{
+  padding-top: 18px;
+  padding-bottom: 18px;
+  margin-left: 0px !important;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+  display: inline-flex;
+}
+
+.keyfeature-title{
+  margin-bottom: 6px;
+  font-size: 20px;
+}
