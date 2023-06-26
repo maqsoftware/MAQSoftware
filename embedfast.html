@@ -84,7 +84,7 @@ data-bkg-threshold="100" data-sticky-threshold="0">
 					</div>
 					<div class="column width-6 right hide-on-mobile">
 						<div class="feature-image">
-							<div style="margin-right: -25%;">
+							<div>
 								<img src="images\isv\isv-top-image.jpg" width="525" height="350" alt="Power BI Embed">
 							</div>
 						</div>
@@ -116,11 +116,11 @@ data-bkg-threshold="100" data-sticky-threshold="0">
 						<div class="row flex">
 							<div class="column width-12 v-align-middle left center-on-mobile">
 								<div>
-									<h1 class="title-large">
+									<h2>
 										<span class="color-black mb-5">
 											Key Features
 										</span>
-									</h1>
+									</h2>
 									<div class="row">
 										<div class="column width-12 pad-0">
 											<div class="column width-7">
@@ -411,10 +411,6 @@ data-bkg-threshold="100" data-sticky-threshold="0">
 										</div>
 										<p>For more pricing details and plans tailored to your organization's needs, please send us a message.</p>
 
-										<!-- <p>For pricing details and plans tailored to your
-											organization's needs, please fill out the form below in
-											the Contact us section. We offer flexible options to
-											accommodate businesses of all sizes.</p> -->
 										<a onclick="show_popup()" target="blank"
 											class="button medium pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white mb-mobile-40">
 											Send us a message</a>
@@ -471,15 +467,15 @@ data-bkg-threshold="100" data-sticky-threshold="0">
 					<input id="message" class="input-style" placeholder="Enter Message">
 					<p class="disclaimer-text">*Disclaimer: The details provided may be used by the team to contact you.
 					</p>
-					<div class="form-button">
+					<div>
 						<button
 							class="button medium pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white"
-							id="closePopup" onclick="hide_popup()">
+							id="closePopup" style="display: inline-block;" onclick="hide_popup()">
 							Close
 						</button>
 						<button
 							class="button medium pill bkg-theme bkg-hover-white color-white color-hover-theme mb-mobile-40"
-							id="closePopup" onclick="send_details()">
+							id="closePopup" style="float: right;" onclick="send_details()">
 							Send Message
 						</button>
 					</div>
