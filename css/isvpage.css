@@ -88,6 +88,11 @@ ul.horizontal-list a:hover {
   justify-content: center;
 }
 
+.align-center {
+  display: flex;
+  justify-content: center;
+}
+
 .single-icon-style{
   margin-top: 15px;
   margin-bottom: 15px;
