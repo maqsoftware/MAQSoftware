@@ -49,23 +49,12 @@
                         <div class="post-content with-background">
                             <h1 class="post-title center">29 Power BI Best Practices</h1>
                             <div class="post-info center">
-                                <span class="post-date">Last updated: March 23, 2023</span>
+                                <span class="post-date">Last updated: July 3, 2023</span>
                             </div>
-                            <p class="text-large">This guide covers the 29 best practices you need to improve your Power BI <a href="#security">security</a>, <a href="#performance">performance</a>, and <a href="#design">design</a>. As the 2021 Microsoft Power BI Partner of the Year, we are recognized for our expertise in Power BI implementation and optimization.</p>
-                            <div id="security">
-                                <h2>Security</h2>
-                                <ol>
-                                    <li class="text-xlarge"><strong>Enable <a href="https://docs.microsoft.com/en-us/sql/relational-databases/security/row-level-security?view=sql-server-2017" target="blank">Row-Level Security </a>(RLS)</strong></li>
-                                    <p class="text-large">Row-Level Security restricts user access to certain rows in a database depending on the characteristics (role) of the user executing a query. With RLS, Power BI only imports data the user is authorized to view.</p>
-                                    <li class="text-xlarge"><strong>Use <a href="https://docs.microsoft.com/en-us/power-bi/developer/visuals/power-bi-custom-visuals-certified" target="blank">certified custom visuals</a></strong></li>
-                                    <p class="text-large">Power BI certified visuals are custom visuals on AppSource that have passed rigorous quality testing. Microsoft verifies that certified custom visuals have robust, high-performance code. Certified custom visuals are the only custom visuals that can be viewed in <a href="https://docs.microsoft.com/en-us/power-bi/consumer/end-user-powerpoint">Export to PowerPoint mode</a> and email subscriptions.</p>
-                                    <li class="text-xlarge"><strong>Categorize report data by business impact</strong></li>
-                                    <p class="text-large">Use Power BI sensitivity labels to classify data as high, medium, or low business impact. High Business Impact (HBI) data requires users to request a policy exception to share the data externally. Low Business Impact (LBI) and Medium Business Impact (MBI) data do not require exceptions. By using Power BI data sensitivity labels, you raise user awareness about security and how reports should be shared inside and outside the organization.</p>
-                                </ol>
-                            </div>
+                            <p class="text-large">This guide covers the 29 best practices you need to improve your Power BI <a href="#performance">performance</a>, <a href="#security">security</a>, and <a href="#design">design</a>. As the 2021 Microsoft Power BI Partner of the Year, we are recognized for our expertise in Power BI implementation and optimization.</p>
                             <div id="performance">
                                 <h2>Performance</h2>
-                                <ol start="4">
+                                <ol>
                                     <li class="text-xlarge"><strong>Limit the number of visuals in dashboards and reports</strong></li>
                                     <p class="text-large">Using too many visuals on a single report slows report performance. Limit widget visuals to eight per report page and grids to one per page. Limit tiles to 10 per dashboard. In general, limit pages 30 points, assuming each type of visual is worth a different number of points:</p>
                                     <ul style="list-style: none;">
@@ -111,6 +100,17 @@
                                     <p class="text-large">For static images, use report backgrounds rather than multiple visuals. This conveys the same information to the end user at a fraction of the performance cost.</p>
                                 </ol>
                             </div>
+                            <div id="security">
+                                <h2>Security</h2>
+                                <ol start="19">
+                                    <li class="text-xlarge"><strong>Enable <a href="https://docs.microsoft.com/en-us/sql/relational-databases/security/row-level-security?view=sql-server-2017" target="blank">Row-Level Security</a> (RLS)</strong></li>
+                                    <p class="text-large">Row-Level Security restricts user access to certain rows in a database depending on the characteristics (role) of the user executing a query. With RLS, Power BI only imports data the user is authorized to view.</p>
+                                    <li class="text-xlarge"><strong>Use <a href="https://docs.microsoft.com/en-us/power-bi/developer/visuals/power-bi-custom-visuals-certified" target="blank">certified custom visuals</a></strong></li>
+                                    <p class="text-large">Power BI certified visuals are custom visuals on AppSource that have passed rigorous quality testing. Microsoft verifies that certified custom visuals have robust, high-performance code. Certified custom visuals are the only custom visuals that can be viewed in <a href="https://docs.microsoft.com/en-us/power-bi/consumer/end-user-powerpoint">Export to PowerPoint mode</a> and email subscriptions.</p>
+                                    <li class="text-xlarge"><strong>Categorize report data by business impact</strong></li>
+                                    <p class="text-large">Use Power BI sensitivity labels to classify data as high, medium, or low business impact. High Business Impact (HBI) data requires users to request a policy exception to share the data externally. Low Business Impact (LBI) and Medium Business Impact (MBI) data do not require exceptions. By using Power BI data sensitivity labels, you raise user awareness about security and how reports should be shared inside and outside the organization.</p>
+                                </ol>
+                            </div>
                             <div id="design">
                                 <h2>Design</h2>
                                 <ol start="22">
@@ -136,7 +136,7 @@
                             <ul class="defaultBody">
                                 <li class="text-large"><a href="https://docs.microsoft.com/en-us/power-bi/guidance/power-bi-optimization" target="blank">Optimization guide for Power BI</a> – Microsoft Corporation, published February 26, 2023</li>
                                 <li class="text-large"><a href="https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-report-visualizations" target="blank">Visualizations in Power BI reports</a> – Microsoft Corporation, published February 2, 2023</li>
-                                <li class="text-large"><a href="https://docs.microsoft.com/en-us/power-bi/create-reports/service-dashboards-design-tips" target="blank">Tips for designing a great Power BI dashboard</a> – Microsoft Corporation, published November 29, 2022</li>
+                                <li class="text-large"><a href="https://docs.microsoft.com/en-us/power-bi/create-reports/service-dashboards-design-tips" target="blank">Tips for designing a great Power BI dashboard</a> – Microsoft Corporation, published June 29, 2023</li>
                             </ul>
                             <h2>Downloadable Infographics</h2>
                             <ul class="defaultBody">
