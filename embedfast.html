@@ -103,6 +103,7 @@ data-bkg-threshold="100" data-sticky-threshold="0">
 						<li><a href="#caseStudies">Case Studies</a></li>
 						<li><a href="#resources">Resources</a></li>
 						<li><a href="#pricing">Pricing</a></li>
+						<li><a href="#support">Support Plan</a></li>
 						<li><a href="#contact">Contact Us</a></li>
 					</ul>
 				</div>
@@ -455,13 +456,13 @@ data-bkg-threshold="100" data-sticky-threshold="0">
 				<!-- Feature 7 Section End -->
 
 				<!-- Feature 8 Section -->
-				<div id="pricing" class="section-block pt-30 pb-30 bkg-white section-padding">
+				<div id="support" class="section-block pt-30 pb-30 bkg-white section-padding">
 					<div class="feature-block">
 						<div class="row">
 							<div class="column width-12">
 								<div class="column width-6">
 									<div class="feature-content-inner">
-										<h2>Support</h2>
+										<h2>Support Plan</h2>
 										<div class="width-6">
 											<div class="feature-div-rows1">
 												<div class="feature-card-border">
@@ -632,6 +633,7 @@ data-bkg-threshold="100" data-sticky-threshold="0">
 				}
 
 				function send_details() {
+					trackButtonClick()
 					var name = document.getElementById("name");
 					var email = document.getElementById("email");
 					var phone = document.getElementById("phone");
@@ -667,6 +669,13 @@ data-bkg-threshold="100" data-sticky-threshold="0">
 						featuresiblings[i].classList.remove("resources-div-click");
 					};
 					featuresection.classList.add("resources-div-click");
+				}
+
+				function trackButtonClick() {
+					gtag('event', 'click', {
+						'event_category': 'Button',
+						'event_label': 'EmbedFast - Send Message Clicked'
+					});
 				}
 			</script>
 			<script>
