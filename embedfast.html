@@ -642,17 +642,27 @@ data-bkg-threshold="100" data-sticky-threshold="0">
 					var message = document.getElementById("message");
 
 					userDetails = {
-						name: name.value,
+						fullname: name.value,
 						email: email.value,
 						phone: phone.value,
-						company: company.value,
-						role: role.value,
+						companyname: company.value,
+						jobtitle: role.value,
 						message: message.value,
 					}
-					const mailBody = "Name: " + name.value + "%0D%0A" + " Email: " + email.value + "%0D%0A" + " Phone: " + phone.value + "%0D%0A" + " Company: " + company.value + "%0D%0A" + " Role: " + role.value + "%0D%0A" + " Message: " + message.value + "%0D%0A";
-					let mail = document.createElement("a");
-					mail.href = "mailto:sales@maqsoftware.com?subject=Embed Fast&body= Details\n" + mailBody;
-					mail.click();
+					const requestBody = JSON.stringify(userDetails);
+					sendReq(requestBody);
+				}
+			    let sendReq = async (requestBody) => {
+						//URL to run Power Automate Flow 
+						let PowerAutomateURL = 'https://prod-188.westus.logic.azure.com:443/workflows/d433b59d62094998a9db84f583bcb582/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=1O0fI4aZo_c-dhJ6huflPA04YSh_Li1Seqp_rAwi_EI';
+						//POST request to run Power Automate Flow
+						let req = new Request(PowerAutomateURL, {
+							method: 'POST',
+							body: requestBody  // Data to insert in CRM 
+						});
+						//Response from Power Automate Flow
+						const resp = await fetch(req);
+						const val =  await resp.json();
 				}
 
 				function keyfeaturesClick(featuresectionid,imageid) {
