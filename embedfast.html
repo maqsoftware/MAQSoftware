@@ -76,7 +76,7 @@
 								apps
 								and unlocking a suite of powerful features to elevate your workflow.
 							</p>
-							<a onclick="show_popup()"
+							<a onclick="show_success_popup()"
 								class="button medium pill bkg-theme bkg-hover-white color-white color-hover-theme mb-mobile-40">
 								Reach out to learn more</a>
 						</div>
@@ -617,11 +617,42 @@
 									<div class="modal-body">
 										<div class="thank-you-pop" style="text-align: center;">
 											<img src="/images/graphics/Green-Round-Tick.png" alt=""
-												style="display: block; margin: 0 auto;">
+												style="display: block; margin: 0 auto; width: 100px; height: 100px;">
 											<h1 class="text-xxlarge mb-30 center-on-mobile" style="text-align: center;">
 												Thank You!</h1>
 											<p class="text-xlarge mb-30 center-on-mobile">Thank you for showing your
 												interest. <br>We will contact you soon</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--success Popup ends-->
+
+
+			<!--failure Popup starts-->
+			<div id="failure-popup-form" class="popup">
+				<div class="popup-content">
+					<div class="row">
+						<div class="modal fade" id="ignismyModal" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header" style="position: relative;">
+										<button type="button" class="close" data-dismiss="modal" aria-label=""
+											onclick="hide_failure_popup()"
+											style="position: absolute; top: 10px; right: 10px;"><span>×</span></button>
+									</div>
+									<div class="modal-body">
+										<div class="thank-you-pop" style="text-align: center;">
+											<img src="/images/graphics/Red-Round-Tick.png" alt=""
+												style="display: block; margin: 0 auto; width: 100px; height: 100px;">
+											<h1 class="text-xxlarge mb-30 center-on-mobile" style="text-align: center;">
+												Sorry! </h1>
+											<p class="text-xlarge mb-30 center-on-mobile">Not able to get your
+												details.<br> Please try again later.</p>
 										</div>
 									</div>
 								</div>
