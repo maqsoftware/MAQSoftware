@@ -52,9 +52,21 @@ function hide_success_popup() {
     popup.classList.remove("show");
 }
 
+function show_failure_popup() {
+    var popup = document.getElementById("failure-popup-form");
+    popup.style.visibility = 'visible';
+    popup.classList.add("show");
+}
+
+function hide_failure_popup() {
+    var popup = document.getElementById("failure-popup-form");
+    popup.classList.remove("show");
+}
+
 function send_details() {
     trackButtonClick()
     var name = document.getElementById("name");
+
     var email = document.getElementById("email");
     var phone = document.getElementById("phone");
     var company = document.getElementById("company");
@@ -83,6 +95,18 @@ let sendReq = async (requestBody) => {
     //Response from Power Automate Flow
     const resp = await fetch(req);
     const val = await resp.json();
+
+    //Need to check and add status code 
+    if (val.status == 200) {
+        document.getElementById("email").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("company").value = "";
+        document.getElementById("role").value = "";
+        document.getElementById("message").value = "";
+        show_success_popup();
+    } else {
+        show_failure_popup(); //Need to add failure popup
+    }
 }
 
 function keyfeaturesClick(featuresectionid, imageid) {
