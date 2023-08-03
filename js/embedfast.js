@@ -96,18 +96,17 @@ let sendReq = async (requestBody) => {
     const resp = await fetch(req);
     const val = resp.status;
 
-    //Need to check and add status code 
     if (val == 204) {
         document.getElementById("email").value = "";
         document.getElementById("phone").value = "";
         document.getElementById("company").value = "";
         document.getElementById("role").value = "";
         document.getElementById("message").value = "";
-        hide_popup()
+        hide_popup();
         show_success_popup();
     } else {
-        hide_popup()
-        show_failure_popup(); //Need to add failure popup
+        hide_popup();
+        show_failure_popup();
     }
 }
 
