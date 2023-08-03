@@ -66,7 +66,6 @@ function hide_failure_popup() {
 function send_details() {
     trackButtonClick()
     var name = document.getElementById("name");
-
     var email = document.getElementById("email");
     var phone = document.getElementById("phone");
     var company = document.getElementById("company");
@@ -75,11 +74,12 @@ function send_details() {
 
     userDetails = {
         fullname: name.value,
-        email: email.value,
-        phone: phone.value,
+        emailaddress1: email.value,
+        telephone1: phone.value,
         companyname: company.value,
         jobtitle: role.value,
-        message: message.value,
+        description: message.value,
+        mslead_offersource: 'Embed Fast Website'
     }
     const requestBody = JSON.stringify(userDetails);
     sendReq(requestBody);
@@ -94,17 +94,19 @@ let sendReq = async (requestBody) => {
     });
     //Response from Power Automate Flow
     const resp = await fetch(req);
-    const val = await resp.json();
+    const val = resp.status;
 
     //Need to check and add status code 
-    if (val.status == 200) {
+    if (val == 204) {
         document.getElementById("email").value = "";
         document.getElementById("phone").value = "";
         document.getElementById("company").value = "";
         document.getElementById("role").value = "";
         document.getElementById("message").value = "";
+        hide_popup()
         show_success_popup();
     } else {
+        hide_popup()
         show_failure_popup(); //Need to add failure popup
     }
 }
