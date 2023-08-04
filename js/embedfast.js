@@ -65,7 +65,8 @@ function hide_failure_popup() {
 
 function send_details() {
     trackButtonClick()
-    var name = document.getElementById("name");
+    var firstname = document.getElementById("firstname");
+    var lastname = document.getElementById("lastname");
     var email = document.getElementById("email");
     var phone = document.getElementById("phone");
     var company = document.getElementById("company");
@@ -73,7 +74,8 @@ function send_details() {
     var message = document.getElementById("message");
 
     userDetails = {
-        fullname: name.value,
+        firstname: firstname.value,
+        lastname: lastname.value,
         emailaddress1: email.value,
         telephone1: phone.value,
         companyname: company.value,
