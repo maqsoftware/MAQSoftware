@@ -12,16 +12,16 @@
     <meta name="twitter:widgets:theme" content="light">
 
     <!-- Title &amp; Favicon -->
-    <title>Power BI Best Practices | MAQ Software Insights</title>
+    <title>Power BI Best Practices - Improve report performance, security, and design</title>
     <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
     <!-- Extra meta tags -->
-    <meta name="description" content="Learn the best practices for optimizing Power BI reports, improving design, and ensuring security. This guide covers report performance, data visualization, layout, and data protection strategies.">
-    <meta name="keywords" content="Power BI, best practices, report optimization, report design, report security, data visualization, layout, data protection">
-
+    <meta name="description" content="Discover essential Power BI best practices to optimize performance, strengthen security, and improve design of your Power BI reports. Get expert insights to elevate your Power BI reports.">
+    <meta name="keywords" content="Power BI best practices, report optimization, page load time, report performance, report design, report security, data visualization, layout, data protection, Power BI insights, Power BI tips">
+    
     <!-- Css -->
     <link rel="stylesheet" href="/css/core.min.css" />
     <link rel="stylesheet" href="/css/skin.css" />
@@ -51,16 +51,16 @@
                 <div class="column width-10 offset-1 content-inner blog-single-post bkg-grey-ultralight">
                     <article class="post">
                         <div class="post-content with-background">
-                            <h1 class="post-title center">Power BI Best Practices - Improve report performance, security, and design</h1>
-                            <p class="text-large">This guide covers the 30 best practices you need to improve your Power BI <a href="#performance">performance</a>, <a href="#security">security</a>, and <a href="#design">design</a>. As the 2021 Microsoft Power BI Partner of the Year, we are recognized for our expertise in Power BI implementation and optimization.</p>
+                            <h1 class="post-title center">Power BI Best Practices</h1>
+                            <p class="text-large">This guide covers the 30 best practices you need to improve your Power BI report <a href="#performance">performance</a>, <a href="#security">security</a>, and <a href="#design">design</a>. As the 2021 Microsoft Power BI Partner of the Year, we are recognized for our expertise in Power BI implementation and optimization.</p>
                             <div id="performance">
                                 <h2>Performance</h2>
                                 <ol>
                                     <li class="text-xlarge"><strong>Limit the number of visuals in dashboards and reports</strong></li>
                                     <p class="text-large">Using too many visuals on a single report slows report performance. Limit widget visuals to eight per report page and grids to one per page. Limit tiles to 10 per dashboard.</p>
-                                    <li class="text-xlarge"><strong>Use <a href="https://docs.microsoft.com/en-us/power-bi/connect-data/service-gateway-onprem" target="blank">on-premises data gateway</a> instead of Personal Gateway</strong></li>
-                                    <p class="text-large">Personal Gateway imports data into Power BI. On-premises data gateway (also known as Enterprise Gateway) imports nothing, which is more efficient when working with large databases.</p>
-                                    <li class="text-xlarge"><strong>Use separate gateways for <a href="https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-report-lifecycle-datasets" target="blank">Power BI service live connection</a> and <a href="https://docs.microsoft.com/en-us/power-bi/connect-data/refresh-scheduled-refresh" target="blank">scheduled data refresh</a></strong></li>
+                                    <li class="text-xlarge"><strong>Use on-premises data gateway standard mode instead of personal mode</strong></li>
+                                    <p class="text-large">On-premises data gateway personal mode imports data into Power BI. On-premises data gateway standard mode imports nothing, which is more efficient when working with large databases.</p>
+                                    <li class="text-xlarge"><strong>Use separate gateways for Power BI service live connection and scheduled data refresh</strong></li>
                                     <p class="text-large">If you use the same gateway for a scheduled refresh and a live connection, the live connection performance will slow down during the scheduled refresh.</p>
                                     <li class="text-xlarge"><strong>Limit complex measures and aggregations in data models</strong></li>
                                     <p class="text-large">Create calculated measures instead of calculated columns. Where possible, push calculated columns and measures to the source. The closer they are to the source, the faster they are likely to perform.</p>
