@@ -608,20 +608,21 @@
 			<div id="success-popup-form" class="popup">
 				<div class="popup-content">
 					<div class="row">
+						<div class="modal-header" style="position: relative;">
+							<button type="button" class="close" data-dismiss="modal" aria-label=""
+								onclick="hide_success_popup()"
+								style="position: absolute; top: 1px; right: 1px;"><span>×</span></button>
+						</div>
 						<div class="modal fade" id="ignismyModal" role="dialog">
 							<div class="modal-dialog">
 								<div class="modal-content">
-									<div class="modal-header" style="position: relative;">
-										<button type="button" class="close" data-dismiss="modal" aria-label=""
-											onclick="hide_success_popup()"
-											style="position: absolute; top: 10px; right: 10px;"><span>×</span></button>
-									</div>
 									<div class="modal-body">
 										<div class="thank-you-pop" style="text-align: center;">
 											<img src="/images/graphics/Green-Round-Tick.png" alt=""
-												style="display: block; margin: 0 auto; width: 100px; height: 100px;">
-											<h1 class="text-xxlarge mb-30 center-on-mobile" style="text-align: center;">
-												Thank You!</h1>
+												style="display: block; margin: 0 auto; width: 50px; height: 50px;">
+											<h3 class="text-xxlarge mb-30 center-on-mobile" style="text-align: center;">
+												<br>Thank You!
+											</h3>
 											<p class="text-xlarge mb-30 center-on-mobile">Thank you for showing your
 												interest. <br>We will contact you soon</p>
 										</div>
@@ -650,9 +651,10 @@
 									<div class="modal-body">
 										<div class="thank-you-pop" style="text-align: center;">
 											<img src="/images/graphics/Red-Round-Tick.png" alt=""
-												style="display: block; margin: 0 auto; width: 100px; height: 100px;">
-											<h1 class="text-xxlarge mb-30 center-on-mobile" style="text-align: center;">
-												Sorry! </h1>
+												style="display: block; margin: 0 auto; width: 50px; height: 50px;">
+											<h3 class="text-xxlarge mb-30 center-on-mobile" style="text-align: center;">
+												<br>Sorry!
+											</h3>
 											<p class="text-xlarge mb-30 center-on-mobile">Not able to get your
 												details.<br> Please try again later.</p>
 										</div>
@@ -678,7 +680,7 @@
 			<script src="/js/common.js?v=20211215.1"></script>
 			<script src="/js/careers.js?v=20220905.1" type="text/javascript"></script>
 
-			<script src="/js/embedfast.js" type="text/javascript"></script
+			<script src="/js/embedfast.js" type="text/javascript"></script>
 			<script>
 				$("#header").load("/header.html");
 				$("#footer").load("/footer.html");
