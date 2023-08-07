@@ -136,3 +136,78 @@ function trackButtonClick() {
         'event_label': 'EmbedFast - Send Message Clicked'
     });
 }
+
+function validateAndSend() {
+    var firstName = document.getElementById("firstname").value.trim();
+    var lastName = document.getElementById("lastname").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var phone = document.getElementById("phone").value.trim();
+    var company = document.getElementById("company").value.trim();
+    var role = document.getElementById("role").value.trim();
+    var message = document.getElementById("message").value.trim();
+
+    clearErrorMessages();
+    if (firstName === "") {
+        showError("firstname", "Please enter your First Name.");
+    }
+
+    if (lastName === "") {
+        showError("lastname", "Please enter your Last Name.");
+    }
+
+    if (company === "") {
+        showError("company", "Please enter your Company Name.");
+    }
+
+    if (role === "") {
+        showError("role", "Please enter your role.");
+    }
+
+    if (email === "") {
+        showError("email", "Please enter your Email Address.");
+    } else if (!isValidEmail(email)) {
+        showError("email", "Please enter a valid Email Address.");
+    }
+
+    if (phone === "") {
+        showError("phone", "Please enter your Phone Number.");
+    } else if (!isValidPhone(phone)) {
+        showError("phone", "Please enter a valid Phone Number.");
+    }
+    // If all validations pass, you can proceed to send the message
+    if (firstName !== "" && lastName !== "" && email !== "" && isValidEmail(email) && phone !== "" && isValidPhone(phone) && company !== "" && role !== "") {
+        send_details();
+    }
+}
+
+function isValidEmail(email) {
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
+function isValidPhone(phone) {
+    var phonePattern = /^[0-9]{10}$/; //  10-digit phone number
+    return phonePattern.test(phone);
+}
+
+function showError(inputId, errorMessage) {
+    var errorElement = document.getElementById(inputId);
+    errorElement.placeholder.color = 'red';
+    errorElement.style.Color = 'red';
+    errorElement.style.border = '1px solid red';
+    errorElement.style.borderRadius = '10px';
+
+    var errorElement = document.getElementById(inputId + "-error");
+    errorElement.textContent = errorMessage;
+}
+
+
+
+function clearErrorMessages() {
+    var errorElements = document.querySelectorAll(".error-message");
+    errorElements.forEach(function (element) {
+        element.textContent = "";
+
+
+    });
+}
