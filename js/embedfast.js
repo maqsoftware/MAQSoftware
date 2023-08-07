@@ -137,17 +137,6 @@ function trackButtonClick() {
     });
 }
 
-function isValidEmail(email) {
-    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
-}
-
-function isValidPhone(phone) {
-    var phonePattern = /^[0-9]{10}$/; // 10-digit phone number
-    return phonePattern.test(phone);
-}
-
-
 function validateAndSend() {
     var firstName = document.getElementById("firstname").value.trim();
     var lastName = document.getElementById("lastname").value.trim();
@@ -157,32 +146,68 @@ function validateAndSend() {
     var role = document.getElementById("role").value.trim();
     var message = document.getElementById("message").value.trim();
 
+    clearErrorMessages();
     if (firstName === "") {
-        alert("Please enter your First Name.");
-        return;
+        showError("firstname", "Please enter your First Name.");
     }
 
     if (lastName === "") {
-        alert("Please enter your Last Name.");
-        return;
+        showError("lastname", "Please enter your Last Name.");
+    }
+
+    if (company === "") {
+        showError("company", "Please enter your Company Name.");
+    }
+
+    if (role === "") {
+        showError("role", "Please enter your role.");
     }
 
     if (email === "") {
-        alert("Please enter your Email Address.");
-        return;
+        showError("email", "Please enter your Email Address.");
     } else if (!isValidEmail(email)) {
-        alert("Please enter a valid Email Address.");
-        return;
+        showError("email", "Please enter a valid Email Address.");
     }
 
     if (phone === "") {
-        alert("Please enter your Phone Number.");
-        return;
+        showError("phone", "Please enter your Phone Number.");
     } else if (!isValidPhone(phone)) {
-        alert("Please enter a valid Phone Number.");
-        return;
+        showError("phone", "Please enter a valid Phone Number.");
     }
+    // If all validations pass, you can proceed to send the message
+    if (firstName !== "" && lastName !== "" && email !== "" && isValidEmail(email) && phone !== "" && isValidPhone(phone) && company !== "" && role !== "") {
+        send_details();
+    }
+}
 
-    // If all validations pass, send message
-    send_details();
+function isValidEmail(email) {
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
+function isValidPhone(phone) {
+    var phonePattern = /^[0-9]{10}$/; //  10-digit phone number
+    return phonePattern.test(phone);
+}
+
+function showError(inputId, errorMessage) {
+    var errorElement = document.getElementById(inputId);
+    errorElement.placeholder.color = 'red';
+    errorElement.style.Color = 'red';
+    errorElement.style.border = '1px solid red';
+    errorElement.style.borderRadius = '10px';
+
+    var errorElement = document.getElementById(inputId + "-error");
+    errorElement.textContent = errorMessage;
+}
+
+
+
+function clearErrorMessages() {
+    var errorElements = document.querySelectorAll(".error-message");
+    errorElements.forEach(function (element) {
+        element.textContent = "";
+
+
+    });
 }
