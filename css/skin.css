@@ -2176,21 +2176,7 @@ body,
 [class*="intro-title-"].xsmall {
   height: 15rem;
 }
-.intro-title-2 {
-  background-image: url(../images/slider/slide-2-page-intro.jpg);
-}
-.intro-title-2-1 {
-  background-image: url(../images/slider/slide-3-page-intro.jpg);
-}
-.intro-title-2-2 {
-  background-image: url(../images/slider/slide-3-page-intro.jpg);
-}
-.intro-title-2-3 {
-  background-image: url(../images/slider/slide-11-page-intro.jpg);
-}
-.intro-title-2-4 {
-  background-image: url(../images/slider/slide-13-page-intro.jpg);
-}
+
 @media only screen and (max-width: 768px) {
   [class*="intro-title-"],
   [class*="intro-title-"].small {
@@ -2585,10 +2571,7 @@ body,
   line-height: 4.8rem;
 }
 
-/* Stats */
-.stats-1-1 {
-  background-image: url(../images/generic/hero-1.jpg);
-}
+
 
 /* Hero */
 .hero-5-1 .media-column {
@@ -2596,9 +2579,6 @@ body,
 }
 .hero-5-2 .media-column {
   background-image: url(../images/team/hero-half-2.jpg);
-}
-.hero-5-5 .media-column {
-  background-image: url(../images/generic/hero-half-4@.jpg);
 }
 
 /* Call to Action */
@@ -2825,11 +2805,6 @@ h3.project-title {
 }
 .project-attribute.center {
   margin: 0 auto;
-}
-
-/* Hero */
-.hero-5-4 .media-column {
-  background-image: url(../images/portfolio/projects/hero-half-1.jpg);
 }
 
 /* Folio Filter */
@@ -4931,15 +4906,6 @@ blockquote.avatar.xlarge span img {
 .pricing-table-column.callout {
   box-shadow: 0rem 0rem 1.8rem rgba(0, 0, 0, 0.2);
 }
-.pricing-table-column.callout.with-background-image {
-  background-image: url(../images/generic/pricing-table.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.pricing-table-column.callout.with-background-image > * {
-  background-color: rgba(0, 0, 0, 0.4);
-}
 .pricing-table-options del {
   text-decoration: line-through;
 }
@@ -5075,22 +5041,6 @@ table.table,
   only screen and (min-device-pixel-ratio: 2),
   only screen and (min-resolution: 192dpi),
   only screen and (min-resolution: 2dppx) {
-  /* Intro Sections */
-  .intro-title-2 {
-    background-image: url(../images/slider/slide-2-page-intro@2x.jpg);
-  }
-  .intro-title-2-1 {
-    background-image: url(../images/slider/slide-3-page-intro@2x.jpg);
-  }
-  .intro-title-2-2 {
-    background-image: url(../images/slider/slide-3-page-intro@2x.jpg);
-  }
-  .intro-title-2-3 {
-    background-image: url(../images/slider/slide-11-page-intro@2x.jpg);
-  }
-  .intro-title-2-4 {
-    background-image: url(../images/slider/slide-13-page-intro@2x.jpg);
-  }
 
   /* Fullscreen Sections */
   .fullscreen-bkg-1 {
@@ -5101,11 +5051,6 @@ table.table,
   }
   .fullscreen-bkg-3 {
     background-image: url(../images/slider/slide-4-fs@2x.jpg);
-  }
-
-  /* Stat Sections */
-  .stats-1-1 {
-    background-image: url(../images/generic/hero-1@2x.jpg);
   }
 
   /* Hero Sections */
@@ -5153,12 +5098,6 @@ table.table,
   }
   .hero-5-3 .media-column {
     background-image: url(../images/services/hero-half-1@2x.jpg);
-  }
-  .hero-5-4 .media-column {
-    background-image: url(../images/portfolio/projects/hero-half-1@2x.jpg);
-  }
-  .hero-5-5 .media-column {
-    background-image: url(../images/generic/hero-half-4@2x.jpg);
   }
 
   /* Call to Action Sections */
