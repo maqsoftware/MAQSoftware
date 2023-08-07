@@ -136,3 +136,53 @@ function trackButtonClick() {
         'event_label': 'EmbedFast - Send Message Clicked'
     });
 }
+
+function isValidEmail(email) {
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
+function isValidPhone(phone) {
+    var phonePattern = /^[0-9]{10}$/; // 10-digit phone number
+    return phonePattern.test(phone);
+}
+
+
+function validateAndSend() {
+    var firstName = document.getElementById("firstname").value.trim();
+    var lastName = document.getElementById("lastname").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var phone = document.getElementById("phone").value.trim();
+    var company = document.getElementById("company").value.trim();
+    var role = document.getElementById("role").value.trim();
+    var message = document.getElementById("message").value.trim();
+
+    if (firstName === "") {
+        alert("Please enter your First Name.");
+        return;
+    }
+
+    if (lastName === "") {
+        alert("Please enter your Last Name.");
+        return;
+    }
+
+    if (email === "") {
+        alert("Please enter your Email Address.");
+        return;
+    } else if (!isValidEmail(email)) {
+        alert("Please enter a valid Email Address.");
+        return;
+    }
+
+    if (phone === "") {
+        alert("Please enter your Phone Number.");
+        return;
+    } else if (!isValidPhone(phone)) {
+        alert("Please enter a valid Phone Number.");
+        return;
+    }
+
+    // If all validations pass, send message
+    send_details();
+}
