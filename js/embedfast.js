@@ -104,6 +104,8 @@ let sendReq = async (requestBody) => {
         document.getElementById("company").value = "";
         document.getElementById("role").value = "";
         document.getElementById("message").value = "";
+        document.getElementById("firstname").value = "";
+        document.getElementById("lastname").value = "";
         hide_popup();
         show_success_popup();
     } else {
