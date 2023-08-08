@@ -131,10 +131,10 @@
                                 </a>
                             </p>
                             <p class="pull-left" id="1" data-clicked="0">
-                                <a class="number-button"><span>1</span></a>
+                                <a id="a1" class="number-button"><span id="spanElement1">1</span></a>
                             </p>
                             <p class="pull-left" id="2" data-clicked="1">
-                                <a class="number-button"><span>2</span></a>
+                                <a id="a2" class="number-button"><span id="spanElement2">2</span></a>
                             </p>
                             <!-- <p class="pull-left" id="3" data-clicked="2">
                                 <a class="number-button"><span>3</span></a>
@@ -193,7 +193,7 @@
     <script>
         $(document).ready(function () {
             // loadBlogGrid();
-            newsConstructor();
+            newsConstructor(); 
             $("#header").load("/header");
             $("#footer").load("/footer");
         });

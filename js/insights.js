@@ -1,11 +1,11 @@
 ﻿/*jslint plusplus: true */
 "use strict";
 var oNewsPager = {
-    template:
-      '<div class="grid-item"> <article class="post"> <div class="post-content with-background"> <div class="post-media"> <div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9"><a class="overlay-link" href="@sAnchorCaseStudy"><img style="height:11em !important" src="@sImageLink" alt=""><span class="overlay-info"><span><span> Read Full Article</span></span></span></a></div> </div> <h2 class="post-title post-noDesc-title"><a href="@sAnchorCaseStudy">@sCaseStudyTitle</a></h2> <!--<div class="post-info "><span class="post-category"><a href="#">@sTerm </a></span> | <span class="post-date">@PublishedMonth @PublishedDateDay, @PublishedYear</span></div>--> <a href="@sAnchorCaseStudy" class="read-more">Read More →</a> </div> </article> </div>',
-    pageIndex: 0,
-    pagesize: 6,
-  },
+  template:
+    '<div class="grid-item"> <article class="post"> <div class="post-content with-background"> <div class="post-media"> <div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9"><a class="overlay-link" href="@sAnchorCaseStudy"><img style="height:11em !important" src="@sImageLink" alt=""><span class="overlay-info"><span><span> Read Full Article</span></span></span></a></div> </div> <h2 class="post-title post-noDesc-title"><a href="@sAnchorCaseStudy">@sCaseStudyTitle</a></h2> <!--<div class="post-info "><span class="post-category"><a href="#">@sTerm </a></span> | <span class="post-date">@PublishedMonth @PublishedDateDay, @PublishedYear</span></div>--> <a href="@sAnchorCaseStudy" class="read-more">Read More →</a> </div> </article> </div>',
+  pageIndex: 0,
+  pagesize: 6,
+},
   id,
   highlightid,
   sClickedHighlightTitle,
@@ -183,7 +183,7 @@ function loadNews(sNewsData) {
     oNewsData = parser.parseFromString(sNewsData, "text/xml");
     iTotalNews = oNewsData.getElementsByTagName("entry").length;
     if (iTotalNews || oNewsData.getElementsByTagName("content")) {
-      iMaxPageIndex = Math.round(iTotalNews / oNewsPager.pagesize);
+      iMaxPageIndex = Math.round(iTotalNews / oNewsPager.pagesize) + 1;
       $("#Pagination").show();
       renderNews();
     }
@@ -254,8 +254,19 @@ function newsConstructor() {
           // $("#Previous").addClass("hidden");
           // $("#Previous").prop("disabled", true);
         }
-        var buttonID = "#" + selectedButtonNum.toString();
-        $(buttonID).children("a").addClass("selected-button");
+        if (oNewsPager.pageIndex % 2 != 0 && oNewsPager.pageIndex >= 1) {
+          const elementToHide = document.getElementById('2');
+          elementToHide.style.display = "block"
+          const span1 = document.getElementById("spanElement1");
+          span1.textContent = oNewsPager.pageIndex;
+          const a1 = document.getElementById("a1");
+          const span2 = document.getElementById("spanElement2");
+          span2.textContent = oNewsPager.pageIndex + 1;
+        }
+        var buttonID = (selectedButtonNum.toString() % 2 == 0) ? 2 : 1;
+        const unSelectedA = document.getElementById("a" + (buttonID == 1 ? 2 : 1).toString());
+        unSelectedA.classList.remove("selected-button");
+        $("#" + buttonID).children("a").addClass("selected-button");
         selectedButton = buttonID;
       } else if (iClicked === "100") {
         oNewsPager.pageIndex++;
@@ -268,8 +279,20 @@ function newsConstructor() {
           // $("#Previous").removeClass("hidden");
           // $("#Previous").prop("disabled", true);
         }
-        var buttonID = "#" + selectedButtonNum.toString();
-        $(buttonID).children("a").addClass("selected-button");
+        if (oNewsPager.pageIndex >= 2) {
+          const span1 = document.getElementById("spanElement1");
+          span1.textContent = oNewsPager.pageIndex + 1;
+          if (oNewsPager.pageIndex + 1 < iMaxPageIndex)
+            document.getElementById("spanElement2").textContent = oNewsPager.pageIndex + 2;
+          else {
+            const elementToHide = document.getElementById('2');
+            elementToHide.style.display = 'none';
+          }
+        }
+        var buttonID = (selectedButtonNum.toString() % 2 == 0) ? 2 : 1;
+        const unSelectedA = document.getElementById("a" + (buttonID == 1 ? 2 : 1).toString());
+        unSelectedA.classList.remove("selected-button")
+        $("#" + buttonID).children("a").addClass("selected-button");
         selectedButton = buttonID;
       } else {
         oNewsPager.pageIndex = parseInt(iClicked);
