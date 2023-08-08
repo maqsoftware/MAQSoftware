@@ -183,7 +183,7 @@ function loadNews(sNewsData) {
     oNewsData = parser.parseFromString(sNewsData, "text/xml");
     iTotalNews = oNewsData.getElementsByTagName("entry").length;
     if (iTotalNews || oNewsData.getElementsByTagName("content")) {
-      iMaxPageIndex = Math.round(iTotalNews / oNewsPager.pagesize) + 1;
+      iMaxPageIndex = Math.round(iTotalNews / oNewsPager.pagesize);
       $("#Pagination").show();
       renderNews();
     }
