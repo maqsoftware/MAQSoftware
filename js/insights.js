@@ -226,6 +226,7 @@ function getNewsOnComplete() {
 }
 function newsConstructor() {
   oNewsPager.pageIndex = 0;
+  document.getElementById("Previous").classList.add("disabled");
   highlightid = "";
   oNewsContainer = $("#LoadPageNews");
   var iTop = 0;
@@ -239,12 +240,17 @@ function newsConstructor() {
   $(buttonID).children("a").addClass("selected-button");
   selectedButton = buttonID;
   $("#pagination p").click(function () {
+    console.log("pageIndex", oNewsPager.pageIndex);
+    const previous = document.getElementById("Previous");
+    const next = document.getElementById("Next");
+    // oNewsPager.pageIndex==0 && previous.classList.add("disabled");
     $(selectedButton).children("a").removeClass("selected-button");
     var oCurrentElement = $(this),
       iClicked = oCurrentElement.attr("data-clicked");
     console.log("Clicked:", iClicked);
-    if (!oCurrentElement.hasClass("hidden")) {
+    if (!oCurrentElement.hasClass("disabled")) {
       if (iClicked === "000") {
+        next.classList.remove("disabled");
         oNewsPager.pageIndex--;
         // $("#Next").removeClass("hidden");
         selectedButtonNum--;
@@ -269,6 +275,7 @@ function newsConstructor() {
         $("#" + buttonID).children("a").addClass("selected-button");
         selectedButton = buttonID;
       } else if (iClicked === "100") {
+        previous.classList.remove("disabled");
         oNewsPager.pageIndex++;
         selectedButtonNum++;
         if (oNewsPager.pageIndex >= iMaxPageIndex) {
@@ -297,9 +304,14 @@ function newsConstructor() {
       } else {
         oNewsPager.pageIndex = parseInt(iClicked);
         selectedButtonNum = oNewsPager.pageIndex + 1;
-        var buttonID = "#" + selectedButtonNum.toString();
-        $(buttonID).children("a").addClass("selected-button");
+        var buttonID = selectedButtonNum;
+        const unSelectedA = document.getElementById("a" + (buttonID == 1 ? 2 : 1).toString());
+        unSelectedA.classList.remove("selected-button")
+        $("#" + buttonID.toString()).children("a").addClass("selected-button");
         selectedButton = buttonID;
+        console.log(oNewsPager.pageIndex);
+        oNewsPager.pageIndex>0 && previous.classList.remove("disabled");
+        oNewsPager.pageIndex<iMaxPageIndex && next.classList.remove("disabled");
         if (oNewsPager.pageIndex <= 0) {
           oNewsPager.pageIndex = 0;
           // $("#Previous").addClass("hidden");
@@ -311,11 +323,20 @@ function newsConstructor() {
           // $("#Previous").removeClass("hidden");
         }
       }
-      console.log("Page Index", oNewsPager.pageIndex);
       oNewsContainer.html("").addClass(sLoadingClass);
       iTop = oNewsContainer.offset().top - 65; // -65 for header/padding
       $(sScrollElement).animate({ scrollTop: iTop }, 500);
       renderNews();
+    }
+    if (oNewsPager.pageIndex >= iMaxPageIndex) {
+      oNewsPager.pageIndex = iMaxPageIndex;
+      previous.classList.remove("disabled");
+      next.classList.add("disabled");
+    }
+    if (oNewsPager.pageIndex <= 0) {
+      oNewsPager.pageIndex = 0;
+      next.classList.remove("disabled");
+      previous.classList.add("disabled");
     }
   });
   $(".news-highlight").unbind("click");
