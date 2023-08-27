@@ -1,0 +1,36 @@
+        /* Style for the slider container */
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Style for the slider */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Style for each slide */
+        .slide {
+            flex: 0 0 100%;
+        }
+
+        /* Style for the slider navigation dots */
+        .slider-dots {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #888;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #333;
+        }
