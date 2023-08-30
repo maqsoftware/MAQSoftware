@@ -78,8 +78,8 @@ $(document).ready(function() {
     });
 });
 
-function show_fabric_popup() {
-    var popup = document.getElementById("Fabric-popup-form");
+function show_Demo_popup() {
+    var popup = document.getElementById("Demo-popup-form");
     popup.style.visibility = 'visible';
     popup.classList.add("show");
 }
@@ -102,8 +102,8 @@ function show_training_popup() {
     popup.classList.add("show");
 }
 
-function hide_fabric_popup() {
-    var popup = document.getElementById("Fabric-popup-form");
+function hide_demo_popup() {
+    var popup = document.getElementById("Demo-popup-form");
     popup.classList.remove("show");
 }
 
@@ -198,7 +198,7 @@ let sendReq = async (requestBody) => {
 }
 
 function hidePopup(requestBody) {
-    if (requestBody === 'Microsoft Fabric Website') {
+    if (requestBody === 'Microsoft Demo Request via Website') {
         hide_fabric_popup();
     } else if (requestBody === 'Microsoft Fabric Consultation via Website') {
         hide_consultation_popup();
