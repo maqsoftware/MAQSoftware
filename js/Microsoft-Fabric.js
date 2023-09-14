@@ -78,7 +78,8 @@ $(document).ready(function() {
     });
 });
 
-function show_Demo_popup() {
+function show_demo_popup() {
+    
     var popup = document.getElementById("Demo-popup-form");
     popup.style.visibility = 'visible';
     popup.classList.add("show");
@@ -112,6 +113,13 @@ function hide_consultation_popup() {
     popup.classList.remove("show");
 }
 
+
+function hide_Demo_popup() {
+    var popup = document.getElementById("Demo-popup-form");
+    popup.classList.remove("show");
+}
+
+
 function hide_assessment_popup() {
     var popup = document.getElementById("Assesment-popup-form");
     popup.classList.remove("show");
@@ -144,20 +152,42 @@ function hide_failure_popup() {
     popup.classList.remove("show");
 }
 
+function trackButtonClick() {
+    gtag('event', 'click', {
+        'event_category': 'Button',
+        'event_label': 'EmbedFast - Send Message Clicked'
+    });
+}
 
 function send_details(lead_source) {
     trackButtonClick()
-    var firstname = document.getElementById("firstname");
-    var lastname = document.getElementById("lastname");
-    var email = document.getElementById("email");
-    var phone = document.getElementById("phone");
-    var company = document.getElementById("company");
-    var role = document.getElementById("role");
-    var message = document.getElementById("message");
+
+    var requestformtype=''
+    if (lead_source === 'Microsoft Demo Request via Website') {
+        requestformtype= 'Demo-popup-form-'
+    } else if (lead_source === 'Microsoft Fabric Consultation via Website') {
+        requestformtype='Consultation-popup-form-'
+    } else if (lead_source === 'Microsoft Fabric Assessment via Website') {
+        requestformtype='Assesment-popup-form-'
+    } else if (lead_source === 'Microsoft Fabric Training via Website') {
+        requestformtype='Training-popup-form-'
+    }
+
+    
+    var firstName = document.getElementById(requestformtype+"firstname").value.trim();
+    var lastName = document.getElementById(requestformtype+"lastname").value.trim();
+    var email = document.getElementById(requestformtype+"email").value.trim();
+    var phone = document.getElementById(requestformtype+"phone").value.trim();
+    var company = document.getElementById(requestformtype+"company").value.trim();
+    var role = document.getElementById(requestformtype+"role").value.trim();
+    var message = document.getElementById(requestformtype+"message").value.trim();
+
+
+ 
 
     userDetails = {
-        firstname: firstname.value,
-        lastname: lastname.value,
+        firstname: firstName.value,
+        lastname: lastName.value,
         emailaddress1: email.value,
         telephone1: phone.value,
         companyname: company.value,
@@ -166,6 +196,7 @@ function send_details(lead_source) {
         mslead_offersource: lead_source
     }
     const requestBody = JSON.stringify(userDetails);
+   
     sendReq(requestBody);
 }
 
@@ -199,7 +230,7 @@ let sendReq = async (requestBody) => {
 
 function hidePopup(requestBody) {
     if (requestBody === 'Microsoft Demo Request via Website') {
-        hide_fabric_popup();
+        hide_Demo_popup();
     } else if (requestBody === 'Microsoft Fabric Consultation via Website') {
         hide_consultation_popup();
     } else if (requestBody === 'Microsoft Fabric Assessment via Website') {
@@ -211,14 +242,27 @@ function hidePopup(requestBody) {
 
 
 function validateAndSend(lead_source) {
-    var firstName = document.getElementById("firstname").value.trim();
-    var lastName = document.getElementById("lastname").value.trim();
-    var email = document.getElementById("email").value.trim();
-    var phone = document.getElementById("phone").value.trim();
-    var company = document.getElementById("company").value.trim();
-    var role = document.getElementById("role").value.trim();
-    var message = document.getElementById("message").value.trim();
+    var requestformtype=''
+    if (lead_source === 'Microsoft Demo Request via Website') {
+        requestformtype= 'Demo-popup-form-'
+    } else if (lead_source === 'Microsoft Fabric Consultation via Website') {
+        requestformtype='Consultation-popup-form-'
+    } else if (lead_source === 'Microsoft Fabric Assessment via Website') {
+        requestformtype='Assesment-popup-form-'
+    } else if (lead_source === 'Microsoft Fabric Training via Website') {
+        requestformtype='Training-popup-form-'
+    }
 
+    
+    var firstName = document.getElementById(requestformtype+"firstname").value.trim();
+    var lastName = document.getElementById(requestformtype+"lastname").value.trim();
+    var email = document.getElementById(requestformtype+"email").value.trim();
+    var phone = document.getElementById(requestformtype+"phone").value.trim();
+    var company = document.getElementById(requestformtype+"company").value.trim();
+    var role = document.getElementById(requestformtype+"role").value.trim();
+    var message = document.getElementById(requestformtype+"message").value.trim();
+
+    
     clearErrorMessages();
     if (firstName === "") {
         showError("firstname", "Please enter your First Name.");
@@ -249,6 +293,7 @@ function validateAndSend(lead_source) {
     }
     // If all validations pass, you can proceed to send the message
     if (firstName !== "" && lastName !== "" && email !== "" && isValidEmail(email) && phone !== "" && isValidPhone(phone) && company !== "" && role !== "") {
+       
         send_details(lead_source);
     }
 }
