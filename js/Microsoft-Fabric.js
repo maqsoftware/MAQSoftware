@@ -44,11 +44,11 @@ $(document).ready(function() {
     });
 
     // Auto-slide functionality with a 5-second delay
-    function autoSlide() {
-        nextSlide();
-    }
+    // function autoSlide() {
+    //     nextSlide();
+    // }
 
-    var autoSlideInterval = setInterval(autoSlide, 5000); // 5 seconds
+    // var autoSlideInterval = setInterval(autoSlide, 5000); // 5 seconds
 
     // Mouse drag functionality (unchanged)
     $(".slider").on("mousedown", function(e) {
