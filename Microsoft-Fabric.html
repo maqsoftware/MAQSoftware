@@ -256,15 +256,20 @@
 
 
         </div>
-        <div style="height: 70px;"></div>
+        <div style="height: 120px;"></div>
         <!-- Slider Navigation Dots -->
+        
+          </div>
         <div class="slider-dots">
+            <span class="arrow prev">&#9665;</span>
             <span class="dot active"></span>
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
+            <span class="arrow next">&#9655;</span>
         </div>
+        
     </div>
 
 
@@ -806,6 +811,44 @@
         // $("#footer").load("/footer.html");
     </script>
     <script src="js/common.js"></script>
+    <script>
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+    });
+    
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+    }
+
+    function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+    }
+
+    function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+    }
+
+    document.querySelector('.arrow.prev').addEventListener('click', prevSlide);
+    document.querySelector('.arrow.next').addEventListener('click', nextSlide);
+
+    dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+    });
+    });
+
+    showSlide(currentSlide);  // Show the initial slide
+
+    </script>
 </body>
 
 </html>

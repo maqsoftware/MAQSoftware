@@ -60,3 +60,15 @@
             padding-bottom: 20px;
            
         }
+
+        .arrows {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+          }
+          
+          .arrow {
+            padding: 10px;
+            cursor: pointer;
+          }
