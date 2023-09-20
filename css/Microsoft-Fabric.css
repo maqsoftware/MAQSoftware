@@ -36,7 +36,7 @@
         }
 
         .rowFabric{
-            max-width: 150rem;
+            max-width: 175rem;
         }
 
         .flexFabric {
@@ -52,4 +52,10 @@
         .paddingRightFabric {
             padding-left: 2.5%;
             padding-right: 10%;
+        }
+
+        .FabricBlog {
+            padding-left: 0%;
+            padding-right: 0%;
+           
         }
