@@ -25,10 +25,28 @@ ul.horizontal-list a:hover {
 }
 
 .secondary-nav {
-  padding: 10px 0px;
+  padding: 10px 16px;
   margin: 50px 0px 0px 0px;
   background-color: #f4f5f6;
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: row;
+  max-width: 114rem;
+  width: 100%;
+  margin: auto;
+  
+}
+
+.parent-div-nav{
+  background-color: #f4f5f6;
+  margin-top: 5rem;
+}
+
+.MicrosoftMarketPlaceDiv{
+  margin: 2rem auto 5rem auto;
+  height: fit-content;
+  width: auto;
+  text-align: center;
 }
 
 .sticky {
@@ -81,6 +99,16 @@ ul.horizontal-list a:hover {
   background-color: #ffffff;
   padding: 20px;
   border: 1px solid #eaeaea;
+}
+
+.feature-card-border-pricing {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #eaeaea;
+  justify-content: space-between;
+  row-gap: 2rem;
 }
 
 .feature-icon {
@@ -220,4 +248,13 @@ ul.horizontal-list a:hover {
 .keyfeature-title{
   margin-bottom: 6px;
   font-size: 20px;
+}
+
+.pricingCardVisualImage{
+  text-align: center;
+}
+
+.ipHandover{
+  width: 14rem;
+margin: auto;
 }
