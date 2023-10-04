@@ -35,7 +35,7 @@
             background-color: #333;
         }
 
-        .rowFabric{
+        .rowFabric {
             max-width: 175rem;
             padding: 0;
             margin: auto;
@@ -63,7 +63,7 @@
         .FabricBlog {
             padding-left: 0%;
             padding-right: 0%;
-            padding:0;
+            padding: 0;
             height: fit-content;
             /* background-image: url('/img/Microsoft-Fabric/Blog1.png'); */
             /* background-position: center;
@@ -76,30 +76,32 @@
             top: 50%;
             transform: translateY(-50%);
             display: flex;
-          }
-          
-          .arrow {
+        }
+
+        .arrow {
             padding: 10px;
             cursor: pointer;
-          }
+        }
 
-          .bloggerCard {
+        .bloggerCard {
             /* height: 30vh; */
             /* border:1px solid gray; */
             display: flex;
             flex-direction: column;
-          }
 
-          .bloggerCard > div {
+        }
+
+        .bloggerCard>div {
             /* border: 1px black solid; */
-          }
-          .box-content{
+        }
+
+        .box-content {
             padding: 1.5rem;
             border: 1px solid lightgray;
             border-top: none;
-          }
+        }
 
-          .cardContainer{
+        .cardContainer {
             display: flex;
 
-          }
+        }
