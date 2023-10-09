@@ -37,18 +37,6 @@ $(document).ready(function() {
         prevSlide();
     });
 
-    // Handle dot click
-    dots.click(function() {
-        currentIndex = dots.index(this);
-        showSlide(currentIndex);
-    });
-
-    // Auto-slide functionality with a 5-second delay
-    // function autoSlide() {
-    //     nextSlide();
-    // }
-
-    // var autoSlideInterval = setInterval(autoSlide, 5000); // 5 seconds
 
     // Mouse drag functionality (unchanged)
     $(".slider").on("mousedown", function(e) {
