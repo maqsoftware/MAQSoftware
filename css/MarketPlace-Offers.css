@@ -1,0 +1,84 @@
+.offerPage {
+  width: 80%;
+  margin: auto;
+}
+
+.slider-container {
+  width: 100%;
+}
+
+.sliderImage{
+    width: auto;
+}
+
+.sliderTitle{
+    font-size: 3rem;
+}
+
+.slide{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+}
+
+.slideContent{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageContainer{
+    flex: 1;
+}
+
+.slideText{
+    width: 90%;
+    height: 90%;
+}
+
+.slideParent{
+    display: block;
+}
+
+.slider-dots{
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #888;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+.arrow{
+    cursor: pointer;
+}
+
+.buttonContainer{
+    margin-top: 3rem;
+}
+
+.upperRow{
+    text-align: center;
+}
+
+.lowerRow{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.containerButton{
+    margin: 1rem;
+}
