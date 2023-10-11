@@ -37,18 +37,6 @@ $(document).ready(function() {
         prevSlide();
     });
 
-    // Handle dot click
-    dots.click(function() {
-        currentIndex = dots.index(this);
-        showSlide(currentIndex);
-    });
-
-    // Auto-slide functionality with a 5-second delay
-    // function autoSlide() {
-    //     nextSlide();
-    // }
-
-    // var autoSlideInterval = setInterval(autoSlide, 5000); // 5 seconds
 
     // Mouse drag functionality (unchanged)
     $(".slider").on("mousedown", function(e) {
@@ -56,27 +44,27 @@ $(document).ready(function() {
         startPosX = e.pageX;
     });
 
-    $(document).on("mousemove", function(e) {
-        if (isDragging) {
-            endPosX = e.pageX;
-            var distance = endPosX - startPosX;
+//     $(document).on("mousemove", function(e) {
+//         if (isDragging) {
+//             endPosX = e.pageX;
+//             var distance = endPosX - startPosX;
 
-            // Check if the user dragged enough to change the slide
-            if (Math.abs(distance) >= 50) {
-                isDragging = false;
-                if (distance > 0) {
-                    prevSlide();
-                } else {
-                    nextSlide();
-                }
-            }
-        }
+//             // Check if the user dragged enough to change the slide
+//             if (Math.abs(distance) >= 50) {
+//                 isDragging = false;
+//                 if (distance > 0) {
+//                     prevSlide();
+//                 } else {
+//                     nextSlide();
+//                 }
+//             }
+//         }
     });
 
-    $(document).on("mouseup", function() {
-        isDragging = false;
-    });
-});
+//     $(document).on("mouseup", function() {
+//         isDragging = false;
+//     });
+// });
 
 function show_demo_popup() {
     
