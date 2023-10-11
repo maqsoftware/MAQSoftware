@@ -68,10 +68,10 @@
 
 <body class="offerPage">
     <!-- Header -->
-        <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent"
+    <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent"
         data-bkg-threshold="100" data-sticky-threshold="0"></header>
     <!-- Header End -->
-
+    <div class="pt-150">
     <div class="slider-container">
         <div class="slider">
             <!-- Slide 1 -->
@@ -177,45 +177,64 @@
                 </div>
             </div>
             <div class="slider-dots">
-                <span class="arrow prev">&#706;</span>
+                <span class="arrow prev"><img src="/img/Microsoft-Fabric/SliderLeftIcon.png" alt="LeftArrow"></span>
                 <span class="dot active"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
-                <span class="arrow next">&#707;</span>
+                <span class="arrow next"><img src="/img/Microsoft-Fabric/SliderRightIcon.png" alt="RightArrow"></span>
             </div>
         </div>
     </div>  
+</div>
     
  
     <div class="buttonContainer">
         <div class="upperRow">
                 <a onclick=""
+                id="all"
                 class="button large pill bkg-theme bkg-hover-white color-white color-hover-theme containerButton">All</a>
                 <a onclick=""
+                id="apps"
                 class="button large pill bkg-hover-white color-hover-theme containerButton">Apps</a>
                 <a onclick=""
+                id="consulting"
                 class="button large pill bkg-hover-white color-hover-theme containerButton">Consulting Services</a>
         </div>
 
         <div class="lowerRow">
             <a onclick=""
+            id="powerbi"
             class="button large pill bkg-hover-white color-hover-theme">Power BI</a>
             <a onclick=""
+            id="powerplatform"
             class="button large pill bkg-hover-white color-hover-theme">Power Platform</a>
             <a onclick=""
+            id="dynamics"
             class="button large pill bkg-hover-white color-hover-theme">Dynamics</a>
             <a onclick=""
+            id="azure"
             class="button large pill bkg-hover-white color-hover-theme">Azure</a>
             <a onclick=""
+            id="aiml"
             class="button large pill bkg-hover-white color-hover-theme">AI/ML</a>
             <a onclick=""
-            class="button large pill bkg-hover-white color-hover-theme">Generative</a>
+            id="generativeai"
+            class="button large pill bkg-hover-white color-hover-theme">Generative AI</a>
             <a onclick=""
+            id="microsoftfabric"
             class="button large pill bkg-hover-white color-hover-theme">Microsoft Fabric</a>
         </div>
         
     </div>
 
+<div></div>
+
+    <div class="wrapper" id="grid">
+        <!-- Initially, the grid is empty -->
+      </div>
+      
+      <button id="all-button">All</button>
+      <button id="apps-button">Apps</button>
 
 
     <!-- Footer -->
@@ -226,7 +245,7 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/timber.master.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/js/Microsoft-Fabric.js" type="text/javascript"></script>
+    <script src="/js/MarketPlace-Offers.js" type="text/javascript"></script>
     <script>
         $("#header").load("/header");
         $("#footer").load("/footer");
