@@ -82,3 +82,29 @@
 .containerButton{
     margin: 1rem;
 }
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 50px;
+    padding-top: 75px;
+  }
+
+
+.MarketPlaceGrid{
+    padding-left: 20px;
+}
+
+
+.MarketPlaceGridHeader{
+    font-size: 20px;
+    font-weight: bolder;
+    color:black
+}
+
+.MarketPlaceGridSubject{
+    font-size: 16px;
+}
