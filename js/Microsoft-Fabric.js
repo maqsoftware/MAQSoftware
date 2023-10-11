@@ -59,7 +59,7 @@ $(document).ready(function() {
 //                 }
 //             }
 //         }
-//     });
+    });
 
 //     $(document).on("mouseup", function() {
 //         isDragging = false;
