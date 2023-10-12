@@ -422,3 +422,41 @@ document.getElementById("microsoftfabric").addEventListener("click", () => popul
 
 // Initially, populate the grid with "All" category
 populateGrid("all");
+
+
+
+function ButtonPressed(elementId) {
+  var element = document.getElementById('all');
+  element.classList.remove("bkg-theme");
+  element.classList.remove("color-white");
+  var element = document.getElementById('apps');
+  element.classList.remove("bkg-theme");
+  element.classList.remove("color-white");
+  var element = document.getElementById('consulting');
+  element.classList.remove("bkg-theme");
+  element.classList.remove("color-white");
+  var element = document.getElementById('powerbi');
+  element.classList.remove("bkg-theme");
+  element.classList.remove("color-white");
+  var element = document.getElementById('powerplatform');
+  element.classList.remove("bkg-theme");
+  element.classList.remove("color-white");
+  var element = document.getElementById('dynamics');
+  element.classList.remove("bkg-theme");
+  element.classList.remove("color-white");
+  var element = document.getElementById('azure');
+  element.classList.remove("bkg-theme");
+  element.classList.remove("color-white");
+  var element = document.getElementById('aiml');
+  element.classList.remove("bkg-theme");
+  element.classList.remove("color-white");
+  var element = document.getElementById('generativeai');
+  element.classList.remove("bkg-theme");
+  element.classList.remove("color-white");
+  var element = document.getElementById('microsoftfabric');
+  element.classList.remove("bkg-theme");
+  element.classList.remove("color-white");
+  var element = document.getElementById(elementId);
+  element.classList.add("bkg-theme");
+  element.classList.add("color-white");
+}
