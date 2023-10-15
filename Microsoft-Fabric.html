@@ -346,8 +346,8 @@
     
 <div style="height: 20px;"></div>
   <div style="text-align: center;">
-    <a onclick="show_consultation_popup()"
-        class="button pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <a onclick="show_getintouch_popup()"
+        class="button pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get in touch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
   </div>
 
 
@@ -408,40 +408,53 @@
     <!-- popup form start -->
     <div id="Demo-popup-form" class="popup">
         <div class="popup-content">
-            <h3>First Name</h3>
-            <input id="Demo-popup-form-firstname" class="input-style" placeholder="Enter First Name" maxlength="1900">
-            <div class="error-message" id="firstname-error"></div>
+            <div style="display: flex; justify-content: flex-start; ">
+                <h3 style="width: 250px; padding-top: 15px;">First Name</h3>
+                <input id="Demo-popup-form-firstname" class="input-style" placeholder="Enter First Name"
+                    maxlength="1900">
+                </div>
 
-            <h3>Last Name</h3>
-            <input id="Demo-popup-form-lastname" class="input-style" placeholder="Enter Last Name" maxlength="1900">
-            <div class="error-message" id="lastname-error"></div>
+                <div style="display: flex; justify-content: flex-start; ">
+                <h3 style="width: 250px; padding-top: 15px;">Last Name</h3>
+                <input id="Demo-popup-form-lastname" class="input-style" placeholder="Enter Last Name"
+                    maxlength="1900">
+                </div>
 
-            <h3>Email Address</h3>
-            <input id="Demo-popup-form-email" class="input-style" placeholder="Enter Email Address" maxlength="1900">
-            <div class="error-message" id="email-error"></div>
+                <div style="display: flex; justify-content: flex-start; ">
+                <h3 style="width: 250px; padding-top: 15px;">Email Address</h3>
+                <input id="Demo-popup-form-email" class="input-style" placeholder="Enter Email Address"
+                    maxlength="1900">
+                </div>
 
-            <h3>Phone Number</h3>
-            <input id="Demo-popup-form-phone" class="input-style" placeholder="Enter Phone Number" maxlength="10">
-            <div class="error-message" id="phone-error"></div>
+                <div style="display: flex; justify-content: flex-start; ">
+                <h3 style="width: 250px; padding-top: 15px;">Phone Number</h3>
+                <input id="Demo-popup-form-phone" class="input-style" placeholder="Enter Phone Number"
+                    maxlength="10">
+                </div>
 
-            <h3>Company</h3>
-            <input id="Demo-popup-form-company" class="input-style" placeholder="Enter Company Name" maxlength="1900">
-            <div class="error-message" id="company-error"></div>
+                <div style="display: flex; justify-content: flex-start; ">
+                <h3 style="width: 250px; padding-top: 15px;">Company</h3>
+                <input id="Demo-popup-form-company" class="input-style" placeholder="Enter Company Name"
+                    maxlength="1900">
+                </div>
 
-            <h3>Role</h3>
-            <input id="Demo-popup-form-role" class="input-style" placeholder="Enter Role Name" maxlength="1900">
-            <div class="error-message" id="role-error"></div>
+                <div style="display: flex; justify-content: flex-start; ">
+                <h3 style="width: 250px; padding-top: 15px;">Role</h3>
+                <input id="Demo-popup-form-role" class="input-style" placeholder="Enter Role Name" maxlength="1900">
+                </div>
 
-            <h3>Add Message</h3>
-            <input id="Demo-popup-form-message" class="input-style" placeholder="Enter Message" maxlength="1900">
-            <div class="error-message" id="message-error"></div>
+                <div style="display: flex; justify-content: flex-start; ">
+                <h3 style="width: 250px; padding-top: 15px;">Add Message</h3>
+                <input id="Demo-popup-form-message" class="input-style" placeholder="Enter Message"
+                    maxlength="1900">
+                </div>
 
             <p class="disclaimer-text">*Disclaimer: The details provided will be used by the team to contact you.
             </p>
             <div>
                 <button class="button large pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white"
                     id="closePopup" style="display: inline-block;"
-                    onclick="hidePopup('Microsoft Demo Request via Website')">
+                    onclick="hide_demo_popup()">
                     Close
                 </button>
                 <button class="button large pill bkg-theme bkg-hover-white color-white color-hover-theme mb-mobile-40"
@@ -455,53 +468,77 @@
     <!-- popup form end -->
 
     <!-- popup form start -->
-    <div id="Consultation-popup-form" class="popup">
+    <div id="get-in-touch-popup-form" class="popup">
         <div class="popup-content">
-            <h3>First Name</h3>
-            <input id="Consultation-popup-form-firstname" class="input-style" placeholder="Enter First Name"
+            <div style="display: flex; justify-content: flex-start; ">
+            <h3 style="width: 250px; padding-top: 15px;">First Name</h3>
+            <input id="get-in-touch-popup-form-firstname" class="input-style" placeholder="Enter First Name"
                 maxlength="1900">
-            <div class="error-message" id="firstname-error"></div>
+            </div>
+            <!-- <div class="error-message" id="firstname-error"></div> -->
 
-            <h3>Last Name</h3>
-            <input id="Consultation-popup-form-lastname" class="input-style" placeholder="Enter Last Name"
+            <div style="display: flex; justify-content: flex-start; ">
+            <h3 style="width: 250px; padding-top: 15px;">Last Name</h3>
+            <input id="get-in-touch-popup-form-lastname" class="input-style" placeholder="Enter Last Name"
                 maxlength="1900">
-            <div class="error-message" id="lastname-error"></div>
+            </div>
+            <!-- <div class="error-message" id="lastname-error"></div> -->
 
-            <h3>Email Address</h3>
-            <input id="Consultation-popup-form-email" class="input-style" placeholder="Enter Email Address"
+
+            <div style="display: flex; justify-content: flex-start; ">
+            <h3 style="width: 250px; padding-top: 15px;">Email Address</h3>
+            <input id="get-in-touch-popup-form-email" class="input-style" placeholder="Enter Email Address"
                 maxlength="1900">
-            <div class="error-message" id="email-error"></div>
+            </div>
+            <!-- <div class="error-message" id="email-error"></div> -->
 
-            <h3>Phone Number</h3>
-            <input id="Consultation-popup-form-phone" class="input-style" placeholder="Enter Phone Number"
+            <div style="display: flex; justify-content: flex-start; ">
+            <h3 style="width: 250px; padding-top: 15px;">Phone Number</h3>
+            <input id="get-in-touch-popup-form-phone" class="input-style" placeholder="Enter Phone Number"
                 maxlength="10">
-            <div class="error-message" id="phone-error"></div>
+            </div>
+            <!-- <div class="error-message" id="phone-error"></div> -->
 
-            <h3>Company</h3>
-            <input id="Consultation-popup-form-company" class="input-style" placeholder="Enter Company Name"
+            <div style="display: flex; justify-content: flex-start; ">
+            <h3 style="width: 250px; padding-top: 15px;">Company</h3>
+            <input id="get-in-touch-popup-form-company" class="input-style" placeholder="Enter Company Name"
                 maxlength="1900">
-            <div class="error-message" id="company-error"></div>
+            </div>
+            <!-- <div class="error-message" id="company-error"></div> -->
 
-            <h3>Role</h3>
-            <input id="Consultation-popup-form-role" class="input-style" placeholder="Enter Role Name" maxlength="1900">
-            <div class="error-message" id="role-error"></div>
+            <div style="display: flex; justify-content: flex-start; ">
+            <h3 style="width: 250px; padding-top: 15px;">Role</h3>
+            <input id="get-in-touch-popup-form-role" class="input-style" placeholder="Enter Role Name" maxlength="1900">
+            </div>
+            <!-- <div class="error-message" id="role-error"></div> -->
 
-            <h3>Add Message</h3>
-            <input id="Consultation-popup-form-message" class="input-style" placeholder="Enter Message"
+            <div style="display: flex; justify-content: flex-start; ">
+            <h3 style="width: 250px; padding-top: 15px;">Add Message</h3>
+            <input id="get-in-touch-popup-form-message" class="input-style" placeholder="Enter Message"
                 maxlength="1900">
-            <div class="error-message" id="message-error"></div>
+            </div>
+            <!-- <div class="error-message" id="message-error"></div> -->
 
-            <p class="disclaimer-text">*Disclaimer: The details provided will be used by the team to contact you.
+            <div style="display: flex; justify-content: flex-start; ">
+                <h3 style="width: 240px; padding-top: 15px;">Contacting for</h3>
+                <select id="contactingForDropdown" class="input-style" style="width: 100%; padding-left: 25px;"  >
+                    <option value="option1">Technical Assessment</option>
+                    <option value="option2">Consultation Services</option>
+                    <option value="option3">Trainings</option>
+                </select>
+                </div>
+
+            <p class="disclaimer-text" style="padding-top: 10px;">*Disclaimer: The details provided will be used by the team to contact you.
             </p>
             <div>
                 <button class="button large pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white"
                     id="closePopup" style="display: inline-block;"
-                    onclick="hidePopup('Microsoft Fabric Consultation via Website')">
+                    onclick="hide_getintouch_popup()">
                     Close
                 </button>
                 <button class="button large pill bkg-theme bkg-hover-white color-white color-hover-theme mb-mobile-40"
                     id="closePopup" style="float: right;"
-                    onclick="validateAndSend('Microsoft Fabric Consultation via Website')">
+                    onclick="validateAndSend('get-in-touch-popup-form')">
                     Send Message
                 </button>
             </div>
@@ -510,112 +547,7 @@
     <!-- popup form end -->
 
 
-    <!-- popup form start -->
-    <div id="Assesment-popup-form" class="popup">
-        <div class="popup-content">
-            <h3>First Name</h3>
-            <input id="Assesment-popup-form-firstname" class="input-style" placeholder="Enter First Name"
-                maxlength="1900">
-            <div class="error-message" id="firstname-error"></div>
-
-            <h3>Last Name</h3>
-            <input id="Assesment-popup-form-lastname" class="input-style" placeholder="Enter Last Name"
-                maxlength="1900">
-            <div class="error-message" id="lastname-error"></div>
-
-            <h3>Email Address</h3>
-            <input id="Assesment-popup-form-email" class="input-style" placeholder="Enter Email Address"
-                maxlength="1900">
-            <div class="error-message" id="email-error"></div>
-
-            <h3>Phone Number</h3>
-            <input id="Assesment-popup-form-phone" class="input-style" placeholder="Enter Phone Number" maxlength="10">
-            <div class="error-message" id="phone-error"></div>
-
-            <h3>Company</h3>
-            <input id="Assesment-popup-form-company" class="input-style" placeholder="Enter Company Name"
-                maxlength="1900">
-            <div class="error-message" id="company-error"></div>
-
-            <h3>Role</h3>
-            <input id="Assesment-popup-form-role" class="input-style" placeholder="Enter Role Name" maxlength="1900">
-            <div class="error-message" id="role-error"></div>
-
-            <h3>Add Message</h3>
-            <input id="Assesment-popup-form-message" class="input-style" placeholder="Enter Message" maxlength="1900">
-            <div class="error-message" id="message-error"></div>
-
-            <p class="disclaimer-text">*Disclaimer: The details provided will be used by the team to contact you.
-            </p>
-            <div>
-                <button class="button large pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white"
-                    id="closePopup" style="display: inline-block;"
-                    onclick="hidePopup('Microsoft Fabric Assessment via Website')">
-                    Close
-                </button>
-                <button class="button large pill bkg-theme bkg-hover-white color-white color-hover-theme mb-mobile-40"
-                    id="closePopup" style="float: right;"
-                    onclick="validateAndSend('Microsoft Fabric Assessment via Website')">
-                    Send Message
-                </button>
-            </div>
-        </div>
-    </div>
-    <!-- popup form end -->
-
-
-    <!-- popup form start -->
-    <div id="Training-popup-form" class="popup">
-        <div class="popup-content">
-            <h3>First Name</h3>
-            <input id="Training-popup-form-firstname" class="input-style" placeholder="Enter First Name"
-                maxlength="1900">
-            <div class="error-message" id="firstname-error"></div>
-
-            <h3>Last Name</h3>
-            <input id="Training-popup-form-lastname" class="input-style" placeholder="Enter Last Name" maxlength="1900">
-            <div class="error-message" id="lastname-error"></div>
-
-            <h3>Email Address</h3>
-            <input id="Training-popup-form-email" class="input-style" placeholder="Enter Email Address"
-                maxlength="1900">
-            <div class="error-message" id="email-error"></div>
-
-            <h3>Phone Number</h3>
-            <input id="Training-popup-form-phone" class="input-style" placeholder="Enter Phone Number" maxlength="10">
-            <div class="error-message" id="phone-error"></div>
-
-            <h3>Company</h3>
-            <input id="Training-popup-form-company" class="input-style" placeholder="Enter Company Name"
-                maxlength="1900">
-            <div class="error-message" id="company-error"></div>
-
-            <h3>Role</h3>
-            <input id="Training-popup-form-role" class="input-style" placeholder="Enter Role Name" maxlength="1900">
-            <div class="error-message" id="role-error"></div>
-
-            <h3>Add Message</h3>
-            <input id="Training-popup-form-message" class="input-style" placeholder="Enter Message" maxlength="1900">
-            <div class="error-message" id="message-error"></div>
-
-            <p class="disclaimer-text">*Disclaimer: The details provided will be used by the team to contact you.
-            </p>
-            <div>
-                <button class="button large pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white"
-                    id="closePopup" style="display: inline-block;"
-                    onclick="hidePopup('Microsoft Fabric Training via Website')">
-                    Close
-                </button>
-                <button class="button large pill bkg-theme bkg-hover-white color-white color-hover-theme mb-mobile-40"
-                    id="closePopup" style="float: right;"
-                    onclick="validateAndSend('Microsoft Fabric Training via Website')">
-                    Send Message
-                </button>
-            </div>
-        </div>
-    </div>
-    <!-- popup form end -->
-
+  
 
     <!--success Popup starts-->
     <div id="success-popup-form" class="popup">
