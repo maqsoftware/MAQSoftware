@@ -298,9 +298,11 @@
     <div style="height: 75px;"></div>
     
 
-    <div  style="display: flex; justify-content: space-around; width: 100%; padding-left: 100px; padding-right: 100px;">
+    <div class="rowFabric">
+    <div  class="column" style="display: flex;  width: 100%; padding-left: 52px">
         <div class="column">
-            <div> <img src="/img/Microsoft-Fabric/Technicalassessment.png"  alt="" /></div>
+            <div style="width: 500px;"> 
+            <img src="/img/Microsoft-Fabric/Technicalassessment.png"  alt="" />
             <div class="feature-content-inner">
                 <h3 style="text-align: center; padding-top: 10px;">Technical assessment</h3>
                 <div style="font-size: 16px;">Work with our team to:</div>
@@ -314,14 +316,16 @@
                 </ul>
             </div>
         </div>
+        </div>
         <div style="width:20px"></div>
         <div class="column">
-            <div> <img src="/img/Microsoft-Fabric/Tailoredconsultation.png"  alt="" /></div>
+            <div style="width: 500px;"> 
+            <img src="/img/Microsoft-Fabric/Tailoredconsultation.png"  alt="" />
             <div class="feature-content-inner">
                 <h3 style="text-align: center; padding-top: 10px;">Consultation Services</h3>
                 <ul class="lead">
                     <li>Discover growth and efficiency opportunities with Microsoft Fabric.</li>
-                    <li>Strategize with us to understand how Microsoft Fabric can streamline your business<br>
+                    <li>Strategize with us to understand how Microsoft Fabric can streamline your business
                         processes and improve decision-making.</li>
                     <li>Evaluate the long-term benefits and ROI that Microsoft Fabric can offer, customized to 
                         your industry and business model.</li>
@@ -330,19 +334,23 @@
                 </ul>
             </div>
         </div>
+        </div>
         <div class="column">
-            <div> <img src="/img/Microsoft-Fabric/Training.png"  alt="" /></div>
-            <div class="feature-content-inner">
+            <div style="width: 500px;"> 
+                <img src="/img/Microsoft-Fabric/Training.png"  alt="" />
+                <div class="feature-content-inner">
                 <h3 style="text-align: center; padding-top: 10px;">Trainings</h3>
                 <ul class="lead">
                     <li>Engage in hands-on exercises for in-depth comprehension.</li>
-                    <li>Benefit from training modules catering to various roles <br> within your organization.</li>
-                    <li>Choose from customizable training packages to suit your <br> unique requirements.</li>
-                    <li>Explore an extensive range of demo data reflecting real-world <br> scenarios.</li>
+                    <li>Benefit from training modules catering to various roles within your organization.</li>
+                    <li>Choose from customizable training packages to suit your unique requirements.</li>
+                    <li>Explore an extensive range of demo data reflecting real-world scenarios.</li>
                 </ul>
             </div>
         </div>
+        </div>
     </div>
+</div>
     
 <div style="height: 20px;"></div>
   <div style="text-align: center;">
@@ -353,7 +361,7 @@
 
     <div id="WhyMicrosoftFabric">
         <div class="section-block pt-60 pb-30 bkg-white">
-            <h2 class="column width-6 center">Microsoft Fabric blogs</h2>
+            <h2 class="column width-6 offset-3 center">Microsoft Fabric blogs</h2>
             <div style="height: 90px;"></div>
             <div class="rowFabric flexFabric boxes cardContainer">
                 <div class="column width-6">
@@ -457,7 +465,7 @@
                     onclick="hide_demo_popup()">
                     Close
                 </button>
-                <button class="button large pill bkg-theme bkg-hover-white color-white color-hover-theme mb-mobile-40"
+                <button class="button large pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white"
                     id="closePopup" style="float: right;"
                     onclick="validateAndSend('Microsoft Demo Request via Website')">
                     Send Message
@@ -510,14 +518,6 @@
             <h3 style="width: 250px; padding-top: 15px;">Role</h3>
             <input id="get-in-touch-popup-form-role" class="input-style" placeholder="Enter Role Name" maxlength="1900">
             </div>
-            <!-- <div class="error-message" id="role-error"></div> -->
-
-            
-            <h3 style="width: 250px; padding-top: 15px;">Add Message</h3>
-            <textarea id="get-in-touch-popup-form-message" class="input-style" placeholder="Enter Message" rows="3"
-                maxlength="1900"></textarea>
-            
-            <!-- <div class="error-message" id="message-error"></div> -->
 
             <div style="display: flex; justify-content: flex-start; ">
                 <h3 style="width: 240px; padding-top: 15px;">Contacting for</h3>
@@ -528,6 +528,10 @@
                 </select>
                 </div>
 
+            <h3 style="width: 250px; padding-top: 15px;">Add Message</h3>
+            <textarea id="get-in-touch-popup-form-message" class="input-style" placeholder="Enter Message" rows="3"
+                maxlength="1900"></textarea>
+
             <p class="disclaimer-text" style="padding-top: 10px;">*Disclaimer: The details provided will be used by the team to contact you.
             </p>
             <div>
@@ -536,7 +540,7 @@
                     onclick="hide_getintouch_popup()">
                     Close
                 </button>
-                <button class="button large pill bkg-theme bkg-hover-white color-white color-hover-theme mb-mobile-40"
+                <button class="button large pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white"
                     id="closePopup" style="float: right;"
                     onclick="validateAndSend('get-in-touch-popup-form')">
                     Send Message
