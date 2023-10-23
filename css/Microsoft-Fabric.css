@@ -109,3 +109,10 @@
             display: flex;
 
         }
+
+        .dropdownStyle::after {
+            content: "\25BC";
+            position: absolute;
+            right: 25px;
+            transform: translateY(-50%) !important;
+        }
