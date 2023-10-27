@@ -141,10 +141,10 @@ function send_details(lead_source) {
         mslead_offersource: lead_source
     }
     const requestBody = JSON.stringify(userDetails);
-    sendReq(requestBody,lead_source);
+    sendReq(requestformtype,requestBody,lead_source);
 }
 
-let sendReq = async (requestBody,lead_source) => {
+let sendReq = async (requestformtype,requestBody,lead_source) => {
     //URL to run Power Automate Flow 
     let PowerAutomateURL = 'https://prod-188.westus.logic.azure.com:443/workflows/d433b59d62094998a9db84f583bcb582/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=1O0fI4aZo_c-dhJ6huflPA04YSh_Li1Seqp_rAwi_EI';
     //POST request to run Power Automate Flow
@@ -157,13 +157,13 @@ let sendReq = async (requestBody,lead_source) => {
     const val = resp.status;
 
     if (val == 204) {
-        document.getElementById("email").value = "";
-        document.getElementById("phone").value = "";
-        document.getElementById("company").value = "";
-        document.getElementById("role").value = "";
-        document.getElementById("message").value = "";
-        document.getElementById("firstname").value = "";
-        document.getElementById("lastname").value = "";
+        document.getElementById(requestformtype+"email").value = "";
+        document.getElementById(requestformtype+"phone").value = "";
+        document.getElementById(requestformtype+"company").value = "";
+        document.getElementById(requestformtype+"role").value = "";
+        document.getElementById(requestformtype+"message").value = "";
+        document.getElementById(requestformtype+"firstname").value = "";
+        document.getElementById(requestformtype+"lastname").value = "";
         hidePopup(lead_source);
         show_success_popup();
     } else {
