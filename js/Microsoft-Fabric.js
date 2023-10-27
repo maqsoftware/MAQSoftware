@@ -131,13 +131,13 @@ function send_details(lead_source) {
     }
 
     userDetails = {
-        firstname: firstName.value,
-        lastname: lastName.value,
-        emailaddress1: email.value,
-        telephone1: phone.value,
-        companyname: company.value,
-        jobtitle: role.value,
-        description: message.value,
+        firstname: firstName,
+        lastname: lastName,
+        emailaddress1: email,
+        telephone1: phone,
+        companyname: company,
+        jobtitle: role,
+        description: message,
         mslead_offersource: lead_source
     }
     const requestBody = JSON.stringify(userDetails);
