@@ -116,3 +116,14 @@
             right: 25px;
             transform: translateY(-50%) !important;
         }
+
+        .wrapper-messageBox {
+            margin: 0;
+          }
+
+        #the-count {
+            float: right;
+            margin: 0;
+            /* padding: 0.1rem 0 0 0; */
+            font-size: 0.875rem;
+          }
