@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -60,6 +60,18 @@
             align-items: center;
         }
     </style>
+    <style>
+        /* Style to hide the number input spinner arrows */
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+         
+        input[type=number] {
+            -moz-appearance: textfield; /* Firefox */
+        }
+        </style>
     <meta name="description"
         content="With expertise in Power BI, data science, data management, cloud migration, and business apps, MAQ Software accelerates business intelligence and analytics initiatives for large enterprises.">
     <meta name="keywords"
@@ -307,7 +319,7 @@
                 <div style="width: 500px;">
                     <img src="/img/Microsoft-Fabric/Technicalassessment.png" alt="" />
                     <div class="feature-content-inner">
-                        <h3 style="text-align: center; padding-top: 10px;">Technical assessment</h3>
+                        <h3 style="text-align: center; padding-top: 10px;">Technical Assessment</h3>
                         <div style="font-size: 16px;">Work with our team to:</div>
                         <ul class="lead">
                             <li>Design a customized Microsoft Fabric implementation plan aligning with your technical
@@ -433,36 +445,36 @@
             <div style="display: flex; justify-content: flex-start; ">
                 <h3 style="display: flex; align-items: center; width: 250px; padding-top: 5px;">First Name</h3>
                 <input id="Demo-popup-form-firstname" type="text" class="input-style" placeholder="Enter First Name"
-                    maxlength="1900">
+                    maxlength="1900" onkeyup="onKeyPressValidateTextField('firstname')">
             </div>
 
             <div style="display: flex; justify-content: flex-start; ">
                 <h3 style="display: flex; align-items: center; width: 250px; padding-top: 5px;">Last Name</h3>
                 <input id="Demo-popup-form-lastname" type="text" class="input-style" placeholder="Enter Last Name"
-                    maxlength="1900">
+                    maxlength="1900" onkeyup="onKeyPressValidateTextField('lastname')">    
             </div>
 
             <div style="display: flex; justify-content: flex-start; ">
                 <h3 style="display: flex; align-items: center; width: 250px; padding-top: 5px;">Email Address</h3>
                 <input id="Demo-popup-form-email" type="email" class="input-style" placeholder="Enter Email Address"
-                    maxlength="1900">
+                    maxlength="1900" onkeyup="onKeyPressValidateEmail()">
             </div>
 
             <div style="display: flex; justify-content: flex-start; ">
                 <h3 style="display: flex; align-items: center; width: 250px; padding-top: 5px;">Phone Number</h3>
-                <input id="Demo-popup-form-phone" type="tel" inputmode="numeric" pattern="^[0-9\-\+\s\(\)]*$" class="input-style" placeholder="Enter Phone Number"
-                    maxlength="10">
+                <input id="Demo-popup-form-phone" type="number"
+                    class="input-style" placeholder="Enter Phone Number" maxlength="10" onKeyPress="if(this.value.length===10) return false;" onkeyup="onKeyPressValidatePhone()">
             </div>
 
             <div style="display: flex; justify-content: flex-start; ">
                 <h3 style="display: flex; align-items: center; width: 250px; padding-top: 5px;">Company</h3>
                 <input id="Demo-popup-form-company" class="input-style" placeholder="Enter Company Name"
-                    maxlength="1900">
+                    maxlength="1900" onkeyup="onKeyPressValidateTextField('company')">
             </div>
 
             <div style="display: flex; justify-content: flex-start; ">
                 <h3 style="display: flex; align-items: center; width: 250px; padding-top: 5px;">Role</h3>
-                <input id="Demo-popup-form-role" class="input-style" placeholder="Enter Role Name" maxlength="1900">
+                <input id="Demo-popup-form-role" class="input-style" placeholder="Enter Role Name" maxlength="1900" onkeyup="onKeyPressValidateTextField('role')">
             </div>
 
             <div class="wrapper-messageBox">
@@ -474,6 +486,7 @@
                     <span id="current">0</span>
                     <span id="maximum">/ 1900</span>
                 </div>
+                <p style="margin: 0; font-size: 0.875rem;">Please add min 20 characters message</p>
             </div>
 
             <p class="disclaimer-text" style="margin-top: 30px;">*Disclaimer: The details provided will be used by the
@@ -499,50 +512,50 @@
         <div class="popup-content">
             <div style="display: flex; justify-content: flex-start; ">
                 <h3 style="display: flex; align-items: center; width: 250px; padding-top: 5px;">First Name</h3>
-                <input id="get-in-touch-popup-form-firstname" class="input-style" placeholder="Enter First Name"
-                    maxlength="1900">
+                <input id="get-in-touch-popup-form-firstname" type="text" class="input-style" placeholder="Enter First Name"
+                    maxlength="1900" onkeyup="onKeyPressValidateTextField('firstname')">
             </div>
             <!-- <div class="error-message" id="firstname-error"></div> -->
 
             <div style="display: flex; justify-content: flex-start; ">
                 <h3 style="display: flex; align-items: center; width: 250px; padding-top: 5px;">Last Name</h3>
-                <input id="get-in-touch-popup-form-lastname" class="input-style" placeholder="Enter Last Name"
-                    maxlength="1900">
+                <input id="get-in-touch-popup-form-lastname" type="text" class="input-style" placeholder="Enter Last Name"
+                    maxlength="1900" onkeyup="onKeyPressValidateTextField('lastname')">
             </div>
             <!-- <div class="error-message" id="lastname-error"></div> -->
 
 
             <div style="display: flex; justify-content: flex-start; ">
                 <h3 style="display: flex; align-items: center; width: 250px; padding-top: 5px;">Email Address</h3>
-                <input id="get-in-touch-popup-form-email" class="input-style" placeholder="Enter Email Address"
-                    maxlength="1900">
+                <input id="get-in-touch-popup-form-email" type="email" class="input-style" placeholder="Enter Email Address"
+                    maxlength="1900" onkeyup="onKeyPressValidateEmail()">
             </div>
             <!-- <div class="error-message" id="email-error"></div> -->
 
             <div style="display: flex; justify-content: flex-start; ">
                 <h3 style="display: flex; align-items: center; width: 250px; padding-top: 5px;">Phone Number</h3>
-                <input id="get-in-touch-popup-form-phone" class="input-style" placeholder="Enter Phone Number"
-                    maxlength="10">
+                <input id="get-in-touch-popup-form-phone" type="number" class="input-style" placeholder="Enter Phone Number"
+                    maxlength="10" onKeyPress="if(this.value.length===10) return false;" onkeyup="onKeyPressValidatePhone()">
             </div>
             <!-- <div class="error-message" id="phone-error"></div> -->
 
             <div style="display: flex; justify-content: flex-start; ">
                 <h3 style="display: flex; align-items: center; width: 250px; padding-top: 5px;">Company</h3>
-                <input id="get-in-touch-popup-form-company" class="input-style" placeholder="Enter Company Name"
-                    maxlength="1900">
+                <input id="get-in-touch-popup-form-company" type="text" class="input-style" placeholder="Enter Company Name"
+                    maxlength="1900" onkeyup="onKeyPressValidateTextField('company')">
             </div>
             <!-- <div class="error-message" id="company-error"></div> -->
 
             <div style="display: flex; justify-content: flex-start; ">
                 <h3 style="display: flex; align-items: center; width: 250px; padding-top: 5px;">Role</h3>
-                <input id="get-in-touch-popup-form-role" class="input-style" placeholder="Enter Role Name"
-                    maxlength="1900">
+                <input id="get-in-touch-popup-form-role" type="text" class="input-style" placeholder="Enter Role Name"
+                    maxlength="1900" onkeyup="onKeyPressValidateTextField('role')">
             </div>
 
             <div style="display: flex; justify-content: flex-start; ">
                 <h3 style="display: flex; align-items: center; width: 240px; padding-top: 15px;">Contacting for</h3>
                 <select id="contactingForDropdown" class="input-style dropdownStyle"
-                    style="width: 100%; padding-inline-start: 25px; appearance: auto !important;">
+                    style="width: 100%; padding-inline-start: 25px; appearance: auto !important;" onchange="onChangeDropdown()">
                     <option value="">Select dropdown</option>
                     <option value="Technical Assessment">Technical Assessment</option>
                     <option value="Consultation Services">Consultation Services</option>
@@ -550,9 +563,17 @@
                 </select>
             </div>
 
-            <h3 style="width: 250px; padding-top: 15px;">Add Message</h3>
-            <textarea id="get-in-touch-popup-form-message" class="input-style" placeholder="Enter Message" rows="3"
-                maxlength="1900"></textarea>
+            <div class="wrapper-messageBox">
+                <h3 style="width: 250px; padding-top: 15px;">Add Message</h3>
+                <textarea id="get-in-touch-popup-form-message" class="input-style"
+                    style="color: blue; margin-bottom: 0 !important;" placeholder="Enter Message" rows="3"
+                    maxlength="1900"></textarea>
+                <div id="the-count">
+                    <span id="get-in-touch-current">0</span>
+                    <span id="get-in-touch-maximum">/ 1900</span>
+                </div>
+                <p style="margin: 0; font-size: 0.875rem;">Please add min 20 characters message</p>
+            </div>
 
             <p class="disclaimer-text" style="padding-top: 10px;">*Disclaimer: The details provided will be used by the
                 team to contact you.
@@ -678,6 +699,14 @@
             var characterCount = $(this).val().length,
                 current = $('#current'),
                 maximum = $('#maximum'),
+                theCount = $('#the-count');
+
+            current.text(characterCount);
+        });
+        $('#get-in-touch-popup-form-message').keyup(function () {
+            var characterCount = $(this).val().length,
+                current = $('#get-in-touch-current'),
+                maximum = $('#get-in-touch-maximum'),
                 theCount = $('#the-count');
 
             current.text(characterCount);
