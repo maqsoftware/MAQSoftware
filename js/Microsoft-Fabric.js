@@ -47,12 +47,14 @@ $(document).ready(function() {
 
 
 function show_demo_popup() {
+    clearErrorMessages();
     var popup = document.getElementById("Demo-popup-form");
     popup.style.visibility = 'visible';
     popup.classList.add("show");
 }
 
 function show_getintouch_popup() {
+    clearErrorMessages();
     var popup = document.getElementById("get-in-touch-popup-form");
     popup.style.visibility = 'visible';
     popup.classList.add("show");
@@ -60,12 +62,27 @@ function show_getintouch_popup() {
 
 
 function hide_demo_popup() {
+    document.getElementById("Demo-popup-form-firstname").value = ""
+    document.getElementById("Demo-popup-form-lastname").value = ""
+    document.getElementById("Demo-popup-form-email").value = ""
+    document.getElementById("Demo-popup-form-phone").value = ""
+    document.getElementById("Demo-popup-form-company").value = ""
+    document.getElementById("Demo-popup-form-role").value = ""
+    document.getElementById("Demo-popup-form-message").value = ""
     var popup = document.getElementById("Demo-popup-form");
     popup.classList.remove("show");
 }
 
 
 function hide_getintouch_popup() {
+    document.getElementById("get-in-touch-popup-form-firstname").value = ""
+    document.getElementById("get-in-touch-popup-form-lastname").value = ""
+    document.getElementById("get-in-touch-popup-form-email").value = ""
+    document.getElementById("get-in-touch-popup-form-phone").value = ""
+    document.getElementById("get-in-touch-popup-form-company").value = ""
+    document.getElementById("get-in-touch-popup-form-role").value = ""
+    document.getElementById("get-in-touch-popup-form-message").value = ""
+    document.getElementById("contactingForDropdown").value = ""
     var popup = document.getElementById("get-in-touch-popup-form");
     popup.classList.remove("show");
 }
@@ -173,6 +190,7 @@ let sendReq = async (requestformtype,requestBody,lead_source) => {
 }
 
 function hidePopup(lead_source) {
+    clearErrorMessages()
     if (lead_source === 'Microsoft Demo Request via Website') {
         hide_demo_popup();
     } else {
@@ -196,6 +214,7 @@ function validateAndSend(lead_source) {
     var company = document.getElementById(requestformtype+"company").value.trim();
     var role = document.getElementById(requestformtype+"role").value.trim();
     var message = document.getElementById(requestformtype+"message").value.trim();
+    var contactingForDropdown = document.getElementById("contactingForDropdown").value.trim();
 
     clearErrorMessages();
     if (firstName === "") {
@@ -220,6 +239,12 @@ function validateAndSend(lead_source) {
     } else if (!isValidPhone(phone)) {
         showError("phone", "Please enter a valid Phone Number.",requestformtype);
     }
+    if(contactingForDropdown === ""){
+        showError("contactingForDropdown","Please select a valid option","")
+    }
+    if(message.length < 20){
+        showError("message","",requestformtype);
+    }
     // If all validations pass, you can proceed to send the message
     if (firstName !== "" && lastName !== "" && email !== "" && isValidEmail(email) && phone !== "" && isValidPhone(phone) && company !== "" && role !== "") {
         send_details(lead_source);
@@ -241,16 +266,84 @@ function isValidPhone(phone) {
 
 function showError(inputId, errorMessage,requestformtype) {
     var errorElement = document.getElementById(requestformtype+inputId);
-    errorElement.placeholder.color = 'red';
-    errorElement.style.Color = 'red';
-    errorElement.style.border = '2px solid red';
-    errorElement.style.borderRadius = '10px';
+    // errorElement.placeholder.color = 'red';
+    errorElement.classList.add("error-popup")
 }
 
+function onKeyPressValidateEmail(){
+    let email = document.getElementById("Demo-popup-form-email")
+    if(!isValidEmail(email.value)){
+        email.classList.add("error-popup")
+    }else{
+        email.classList.remove("error-popup")
+    }
+
+    email = document.getElementById("get-in-touch-popup-form-email")
+    if(!isValidEmail(email.value)){
+        email.classList.add("error-popup")
+    }else{
+        email.classList.remove("error-popup")
+    }
+}
+
+function onKeyPressValidatePhone(){
+    let phone = document.getElementById("Demo-popup-form-phone")
+    if(!isValidPhone(phone.value)){
+        phone.classList.add("error-popup")
+    }else{
+        phone.classList.remove("error-popup")
+    }
+
+    phone = document.getElementById("get-in-touch-popup-form-phone")
+    if(!isValidPhone(phone.value)){
+        phone.classList.add("error-popup")
+    }else{
+        phone.classList.remove("error-popup")
+    }
+}
+
+function onKeyPressValidateTextField(input_element){
+    let element = document.getElementById("Demo-popup-form-"+input_element)
+    if(element.value === 0){
+        element.classList.add("error-popup")
+    }else{
+        element.classList.remove("error-popup")
+    }
+
+    element = document.getElementById("get-in-touch-popup-form-"+input_element)
+    if(element.value === 0){
+        element.classList.add("error-popup")
+    }else{
+        element.classList.remove("error-popup")
+    }
+}
+
+function onChangeDropdown(){
+    let dropdown = document.getElementById("contactingForDropdown");
+    if(dropdown.value === ""){
+        dropdown.classList.add("error-popup");
+    }else{
+        dropdown.classList.remove("error-popup");
+    }
+}
 
 function clearErrorMessages() {
+    console.log("here")
     var errorElements = document.querySelectorAll(".error-message");
-    errorElements.forEach(function (element) {
-        element.textContent = "";
-    });
+    var requestformtype = ["Demo-popup-form-","get-in-touch-popup-form-"]
+    requestformtype.forEach((formType)=>{
+        document.getElementById(formType+"firstname").classList.remove("error-popup");
+        document.getElementById(formType+"lastname").classList.remove("error-popup");
+        document.getElementById(formType+"company").classList.remove("error-popup");
+        document.getElementById(formType+"role").classList.remove("error-popup");
+        document.getElementById(formType+"email").classList.remove("error-popup");
+        document.getElementById(formType+"phone").classList.remove("error-popup");
+        document.getElementById(formType+"message").classList.remove("error-popup");
+    })
+    document.getElementById("contactingForDropdown").classList.remove("error-popup");
+    // errorElements.forEach(function (element) {
+    //     console.log(element)
+    //     element.textContent = "";
+    //     element.classList.remove("error-popup")
+    // });
 }
