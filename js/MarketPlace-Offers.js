@@ -79,7 +79,7 @@ const data = [
   {
       "category": "consulting",
       "subCategory": "generativeai",
-      "Heading": "Automate KYC for customers: 6-Week Proof of Concept",
+      "Heading": "Automate KYC for Customers: 6-Week Proof of Concept",
       "Content": "Streamline KYC processes with a 6-week proof of concept, ensuring compliance and efficiency.",
       "link": "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services/maqsoftware.automatekycforcustomers-preview?tab=Overview&flightCodes=automatekycforcustomers"
   },
@@ -114,8 +114,8 @@ const data = [
   {
       "category": "consulting",
       "subCategory": "azure",
-      "Heading": "Azure Synapse: 2-Week Proof of Concept",
-      "Content": "Dive into Azure Synapse with a 2-week proof of concept, exploring its capabilities for your data needs.",
+      "Heading": "Azure Synapse Analytics: 2-Week Proof of Concept ",
+      "Content": "Dive into Azure Synapse Analytics with a 2-week proof of concept, exploring its capabilities for your data needs.",
       "link": "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services/maqsoftware.synapse_poc?search=Maq&page=1"
   },
   {
@@ -170,7 +170,7 @@ const data = [
   {
       "category": "consulting",
       "subCategory": "powerbi",
-      "Heading": "Data Migration Strategy for Power BI: 2-Week workshop",
+      "Heading": "Data Migration Strategy for Power BI: 2-Week Workshop ",
       "Content": "Develop a robust data migration strategy for Power BI in a 2-week workshop, ensuring data integrity for your organization.",
       "link": "https://appsource.microsoft.com/en-US/marketplace/consulting-services/maqsoftware.migrationstrategy2?page=1&exp=ubp8&search=maq"
   },
@@ -184,7 +184,7 @@ const data = [
   {
       "category": "consulting",
       "subCategory": "powerbi",
-      "Heading": "Data Viz Center of Excellence: 2-Day Workshop",
+      "Heading": "Data Visualization Center of Excellence: 2-Day Workshop",
       "Content": "Establish a Data Visualization Center of Excellence in a comprehensive 2-day workshop.",
       "link": "https://appsource.microsoft.com/en-US/marketplace/consulting-services/maqsoftware.datavizcoe?page=1&exp=ubp8&search=maq"
   },
@@ -226,7 +226,7 @@ const data = [
   {
       "category": "consulting",
       "subCategory": "generativeai",
-      "Heading": "Knowledge bot for finance: 6-Week Proof of concept",
+      "Heading": "Knowledge Bot for Finance: 6-Week Proof of Concept",
       "Content": "Explore how a knowledge bot for finance can improve your access to information in a 6-week proof of concept.",
       "link": "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services/maqsoftware.knowledgebotforfinance-preview?tab=Overview&flightCodes=knowledgebotforfinance"
   },
@@ -273,37 +273,44 @@ const data = [
       "link": "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services/maqsoftware.microsoftfabricacceleratedpilot?search=Fabric&page=1"
   },
   {
+    "category": "consulting",
+    "subCategory": "microsoftfabric",
+    "Heading": "Microsoft Fabric: 2-Hour Briefing",
+    "Content": "Obtain a clear and insightful understanding through a comprehensive overview of Microsoft Fabric's capabilities",
+    "link": "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services/maqsoftware.microsoftfabricbriefing?search=maq&page=1"
+  },
+  {
       "category": "consulting",
       "subCategory": "powerbi",
-      "Heading": "Migrate Qlik to Power BI: 3-Week Implementation",
+      "Heading": "Qlik to Power BI Migration: 3 Week Implementation ",
       "Content": "Migrate from Qlik to Power BI efficiently in 3 weeks, ensuring seamless data representation.",
       "link": "https://appsource.microsoft.com/en-US/marketplace/consulting-services/maqsoftware.qlikpbibasicmigration2?page=1&exp=ubp8&search=maq"
   },
   {
       "category": "consulting",
       "subCategory": "powerbi",
-      "Heading": "Migrate Qlik to Power BI: 6-Week Implementation",
+      "Heading": "Qlik to Power BI Migration: 6-Week Implementation ",
       "Content": "Make a smooth migration from Qlik to Power BI with a customized 6-week implementation.",
       "link": "https://appsource.microsoft.com/en-US/marketplace/consulting-services/maqsoftware.qlikpbipromigration?page=1&exp=ubp8&search=maq"
   },
   {
       "category": "consulting",
       "subCategory": "powerbi",
-      "Heading": "Migrate Qlik to Power BI: Free 2-Hour Briefing",
+      "Heading": "Qlik to Power BI Migration: Free 2-Hour Briefing",
       "Content": "Learn about the process of migrating from Qlik to Power BI in a complimentary 2-hour briefing.",
       "link": "https://appsource.microsoft.com/en-US/marketplace/consulting-services/maqsoftware.qlikmigrationdiscovery?page=1&exp=ubp8&search=migration%20qlik%20to%20power%20BI"
   },
   {
       "category": "consulting",
       "subCategory": "powerbi",
-      "Heading": "Migrate Tableau to Power BI: 3 Week Implementation",
+      "Heading": "Tableau to Power BI Migration: 3 Week Implementation",
       "Content": "Seamlessly transition from Tableau to Power BI with a streamlined 3-week implementation.",
       "link": "https://appsource.microsoft.com/en-US/marketplace/consulting-services/maqsoftware.tableaupbibasicmigration?page=1&exp=ubp8&search=maq"
   },
   {
       "category": "consulting",
       "subCategory": "powerbi",
-      "Heading": "Migrate Tableau to Power BI: Free 2-Hr Briefing",
+      "Heading": "Tableau to Power BI Migration: Free 2-Hour Briefing ",
       "Content": "Discover the benefits of migrating from Tableau to Power BI in a concise 2-hour briefing.",
       "link": "https://appsource.microsoft.com/en-US/marketplace/consulting-services/maqsoftware.tableaumigrationdiscovery?page=1&exp=ubp8&search=maq"
   },
@@ -317,14 +324,14 @@ const data = [
   {
       "category": "consulting",
       "subCategory": "aiml",
-      "Heading": "ML Forecasting for FMCG: 4-Week Proof of Concept",
+      "Heading": "Machine Learning Forecasting for FMCG: 4-Week Proof of Concept",
       "Content": "Transform FMCG forecasting with a 4-week proof of concept, using machine learning for more accurate predictions.",
       "link": "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services/maqsoftware.mlforecastingforfmcgpoc?search=Maq&page=1"
   },
   {
       "category": "consulting",
       "subCategory": "aiml",
-      "Heading": "ML Forecasting for Retail: 4-Week Proof of Concept",
+      "Heading": "Machine Learning Forecasting for Retail: 4-Week Proof of Concept",
       "Content": "Elevate retail forecasting with a 4-week proof of concept, harnessing machine learning for better insights.",
       "link": "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services/maqsoftware.mlforecastingforretailpoc?search=Maq&page=1"
   },
@@ -366,7 +373,7 @@ const data = [
   {
       "category": "consulting",
       "subCategory": "generativeai",
-      "Heading": "Personalized Recommendation Engine for Finance: 6-Week PoC",
+      "Heading": "Personalized Recommendation Engine for Finance: 6-Week Proof of Concept",
       "Content": "Implement a personalized recommendation engine for finance in a 6-week proof of concept, driving better financial decisions.",
       "link": "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services/maqsoftware.personalizedrecommendationfinance-preview?tab=Overview&flightCodes=0c58e4f9bc0f4aa7a94ca392f49fc5d9"
   },
@@ -380,14 +387,14 @@ const data = [
   {
       "category": "consulting",
       "subCategory": "powerbi",
-      "Heading": "Power BI COE: 10-Week Implementation",
+      "Heading": "Power BI Center of Excellence: 10-Week Implementation",
       "Content": "Establish a Power BI Center of Excellence in a 10-week implementation, ensuring data excellence.",
       "link": "https://appsource.microsoft.com/en-US/marketplace/consulting-services/maqsoftware.power_bi_coe?page=1&exp=ubp8&search=maq"
   },
   {
       "category": "consulting",
       "subCategory": "powerbi",
-      "Heading": "Power BI Governance Reports: 4-Week implementation",
+      "Heading": "Power BI Governance Reports: 4-Week Implementation",
       "Content": "Implement Power BI governance reports in a 4-week process, ensuring data compliance.",
       "link": "https://appsource.microsoft.com/en-US/marketplace/consulting-services/maqsoftware.powerbi_governance?page=1&exp=ubp8&search=maq"
   },
@@ -415,14 +422,14 @@ const data = [
   {
       "category": "consulting",
       "subCategory": "powerplatform",
-      "Heading": "Power Platform CoE Starter Kit: 3-Week Workshop",
+      "Heading": "Power Platform Center of Excellence Starter Kit: 3-Week Workshop",
       "Content": "Launch your Power Platform Center of Excellence with a comprehensive 3-week program.",
       "link": "https://appsource.microsoft.com/en-US/marketplace/consulting-services/maqsoftware.power_platform_coe_starter_kit?page=1&exp=ubp8&search=maq"
   },
   {
       "category": "consulting",
       "subCategory": "powerplatform",
-      "Heading": "Power Platform CoE: Free 1-Hour Briefing",
+      "Heading": "Power Platform Center of Excellence: Free 1-Hour Briefing",
       "Content": "Learn about the benefits of establishing a Power Platform Center of Excellence in a complimentary 1-hour briefing.",
       "link": "https://appsource.microsoft.com/en-US/marketplace/consulting-services/maqsoftware.powerplatform_coe-free_1-hr_consultation?page=1&exp=ubp8&search=maq"
   },
@@ -478,7 +485,7 @@ const data = [
   {
       "category": "consulting",
       "subCategory": "powerbi",
-      "Heading": "Tableau to Power BI: 6-Week Implementation",
+      "Heading": "Tableau to Power BI Migration: 6 Week Implementation",
       "Content": "Migrate from Tableau to Power BI in a streamlined 6-week process, ensuring a seamless transition.",
       "link": "https://appsource.microsoft.com/en-US/marketplace/consulting-services/maqsoftware.tableaupbipromigration?page=1&exp=ubp8&search=maq"
   },
@@ -492,7 +499,7 @@ const data = [
   {
       "category": "consulting",
       "subCategory": "powerbi",
-      "Heading": "Virtual Dashboard In A Day (DIAD): 8-Hr Workshop",
+      "Heading": "Virtual Dashboard In A Day (DIAD): 8-Hour Workshop",
       "Content": "Build virtual dashboards in an 8-hour workshop, improving data visualization and insights.",
       "link": "https://appsource.microsoft.com/en-US/marketplace/consulting-services/maqsoftware.virtualdiad?page=1&exp=ubp8&search=maq"
   },
