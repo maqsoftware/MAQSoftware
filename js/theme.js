@@ -342,7 +342,7 @@ function RenderPowerBIVisuals(oVisualConfig) {
         .replace(/@id/g, oVisualConfig[index][this].id)
         // .replace(/@url/g, oVisualConfig[index][this].url)
         // .replace(/@url/g, "/resources/customVisuals/VisualDetail?id="+oVisualConfig[index][this].id)
-        .replace(/@url/g, "/resources/Power-BI-custom-visuals/"+oVisualConfig[index][this].id)
+        .replace(/@url/g, "/Marketplace-Offers/Power-BI-custom-visuals/"+oVisualConfig[index][this].id+".html")
         .replace(/@contacturl/g, oVisualConfig[index][this].contacturl)
         .replace(/@content/g, oVisualConfig[index][this].content)
         .replace(
@@ -359,7 +359,7 @@ function RenderPowerBIVisuals(oVisualConfig) {
         .replace(/@id/g, oVisualConfig[index][this].id)
         // .replace(/@url/g, oVisualConfig[index][this].url)
         // .replace(/@url/g, "/resources/customVisuals/VisualDetail?id="+oVisualConfig[index][this].id)
-        .replace(/@url/g, "/resources/Power-BI-custom-visuals/"+oVisualConfig[index][this].id)
+        .replace(/@url/g, "/Marketplace-Offers/Power-BI-custom-visuals/"+oVisualConfig[index][this].id+".html")
         .replace(/@category/g, oVisualConfig[index][this].category)
         .replace(/@description/g, oVisualConfig[index][this].description)
         .replace(/@linkToArticle/g, oVisualConfig[index][this].linkToArticle)
