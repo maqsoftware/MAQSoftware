@@ -5,3 +5,14 @@
     justify-content: center;
     margin: 0;
 }
+
+.MarketPlaceGridLearnMore{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px !important;
+}
+
+.MarketPlaceGrid{
+    padding-left: 20px;
+    position: relative;
+}
