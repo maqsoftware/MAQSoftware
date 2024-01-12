@@ -61,194 +61,158 @@
                         <div class="post-content with-background">
                             <h1 class="post-title center">Power BI Best Practices</h1>
                             <h3 class="post-title center">Improve report performance, security, and design</h3>
-                            <p class="text-large">This guide covers the 30 best practices you need to improve your Power
-                                BI report <a href="#performance">performance</a>, <a href="#security">security</a>, and
+                            <p class="text-large">This guide covers the 31 best practices you need to improve your Power
+                                BI <a href="#performance">performance</a>, <a href="#security">security</a>, and
                                 <a href="#design">design</a>. As the 2021 Microsoft Power BI Partner of the Year, we have proven expertise in Power BI migration and optimization.</p>
                             <div id="performance">
                                 <h2>Performance</h2>
                                 <ol>
                                     <li class="text-xlarge"><strong>Limit the number of visuals in dashboards and
                                             reports</strong></li>
-                                    <p class="text-large">Using too many visuals on a single report slows report
-                                        performance. Limit widget visuals to eight per report page and grids to one per
-                                        page. Limit tiles to 10 per dashboard.</p>
+                                    <p class="text-large mb-0">Using too many visuals in a single report slows report performance as each visual requires data processing and rendering. Limit widget visuals to eight per report page and grids to one per page. Limit tiles to 10 per dashboard.</p>
+                                    <p class="text-large mb-0">Limiting the number of visuals reduces the amount of data that needs to be fetched and displayed at once.</p>
+                                    <p class="text-large">Also consider using Power BI’s <a href="https://powerbi.microsoft.com/en-in/blog/new-card-visual-public-preview/" target="blank">new card visual</a>, capable of displaying multiple cards within a single container. This improves report performance and minimizes the number of queries fired by consolidating information into a single query.</p>
+                                    
                                     <li class="text-xlarge"><strong>Use on-premises data gateway standard mode instead
                                             of personal mode</strong></li>
-                                    <p class="text-large">On-premises data gateway personal mode imports data into Power
-                                        BI. On-premises data gateway standard mode imports nothing, which is more
-                                        efficient when working with large databases.</p>
+                                    <p class="text-large mb-0">The personal mode imports data into Power BI, which can cause resource limitations and performance issues (particularly with large databases). On the other hand, the standard mode retains data in its original location.</p>
+                                    <p class="text-large">As the standard mode doesn't import any data into Power BI, it is more efficient. Using this gateway minimizes data duplication, reduces memory usage, and avoids potential performance bottlenecks.</p>
+                                    
                                     <li class="text-xlarge"><strong>Use separate gateways for Power BI service live
                                             connection and scheduled data refresh</strong></li>
-                                    <p class="text-large">If you use the same gateway for a scheduled refresh and a live
-                                        connection, the live connection performance will slow down during the scheduled
-                                        refresh.</p>
-                                    <li class="text-xlarge"><strong>Limit complex measures and aggregations in data
-                                            models</strong></li>
-                                    <p class="text-large">Create calculated measures instead of calculated columns.
-                                        Where possible, push calculated columns and measures to the source. The closer
-                                        they are to the source, the faster they are likely to perform.</p>
-                                    <li class="text-xlarge"><strong>Use Star schema instead of the Snowflake schema when
+                                    <p class="text-large mb-0">A Power BI service live connection (DirectQuery) maintains a real-time connection with data sources. Scheduled data refresh updates imported data at set times. Using the same gateway for both live connections and scheduled data refresh can overload it during refreshes, slowing live connections. </p>
+                                    <p class="text-large">Separating the gateways ensures that both functions can work efficiently without affecting each other.</p>
+                                    
+                                    <li class="text-xlarge"><strong>Use calculated measures and filters to limit complex measures and aggregations in data models</strong></li>
+                                    <p class="text-large">Complex measures and aggregations in data models can slow down query performance. Using calculated measures, which is computed during query execution, are more efficient than calculated columns. Applying filters can also aid in this process.</p>
+                                    
+                                    <li class="text-xlarge"><strong>Push calculations to the source</strong></li>
+                                    <p class="text-large">Pushing calculations to the source is recommended as it offloads the processing to the data source, optimizing query processing. Being closer to the source can increase performance speed.</p>
+                                
+                                    <li class="text-xlarge"><strong>Use Star schema instead of the snowflake schema when
                                             possible</strong></li>
-                                    <p class="text-large">The Snowflake schema has a complex query structure, making it
-                                        difficult to implement changes. On the other hand, Star schema is easy to read,
-                                        uses fewer joins, and tends to reduce data redundancy.</p>
+                                    <p class="text-large mb-0">The star schema is a simpler and more denormalized data model compared to the snowflake schema. The snowflake schema involves more complex queries due to multiple related tables.</p>
+                                    <p class="text-large">The star schema accelerates query execution and eases maintenance by reducing required joins. It improves query efficiency, reduces data redundancy, and simplifies report development.</p>
+                                    
                                     <li class="text-xlarge"><strong>Use slicers sparingly</strong></li>
-                                    <p class="text-large">Slicers are a great way of allowing users to navigate data,
-                                        but they come at a performance cost. Each slicer generates two queries: one
-                                        fetches the data and the other fetches selection details. Adding too many
-                                        slicers drastically slows performance. Use the Filter pane to evaluate and
-                                        remove unnecessary slicers.</p>
-                                    <li class="text-xlarge"><strong>Ensure reports and data sources are in the same
-                                            region</strong></li>
-                                    <p class="text-large">With the tenant and data source in the same region, you can
-                                        limit the effects of network latency. Sharing a region ensures faster data
-                                        transfer and faster query execution.</p>
-                                    <li class="text-xlarge"><strong>Import only necessary fields and tables instead of
-                                            entire data sets</strong></li>
-                                    <p class="text-large">Ensure the model is as narrow and lean as possible. Power BI
-                                        works on columnar indexes, meaning longer and leaner tables perform better. When
-                                        you need to import a large table, partition it and process multiple partitions
-                                        in parallel.</p>
-                                    <li class="text-xlarge"><strong>Use templates (.PBIT files) to speed up and
-                                            standardize report development instead of starting with an empty .PBIX
+                                    <p class="text-large">Slicers are a great way of allowing users to navigate data, but they come at a performance cost. Each slicer generates two queries: one fetches the data and the other fetches selection details. Adding too many slicers drastically slows performance. Use the Filter pane to evaluate and remove unnecessary slicers.</p>
+                                    
+                                    <li class="text-xlarge"><strong>Host reports and data sources in the same region</strong></li>
+                                    <p class="text-large mb-0">A Power BI tenant is the dedicated environment that houses an organization's data, reports, and dashboards. Microsoft operates data centers worldwide to provide and hosts its services. Each data center is in a specific region. </p>
+                                    <p class="text-large">Hosting both tenant and data source in the same region minimizes network latency. This enables quicker data transfer, query execution, and thus faster data retrieval and report rendering.</p>
+                                    
+                                    <li class="text-xlarge"><strong>Partition data and process multiple partitions in parallel for large datasets</strong></li>
+                                    <p class="text-large mb-0">Partitioning is a technique that divides large tables into smaller subsets called partitions based on specific criteria. A columnar index is a type of database index that stores and organizes data by columns rather than rows.</p>
+                                    <p class="text-large">Power BI uses columnar indexes, so longer, leaner tables perform better. The partitioning approach, where only necessary fields and tables are imported, improves data loading efficiency, and reduces resource consumption. This leads to faster report performance.</p>
+                                    
+                                    <li class="text-xlarge"><strong>Use templates (.PBIT files) instead of starting with an empty .PBIX
                                             file</strong></li>
-                                    <p class="text-large">Templates enable you to develop branded reports faster. With
-                                        templates, you can save custom color palettes and themes, ensuring corporate
-                                        branding is pre-applied to all pages. Templates automatically connect to
-                                        commonly used data sources and offer commonly used DAX measures as well.</p>
-                                    <li class="text-xlarge"><strong>Reduce queries</strong></li>
-                                    <p class="text-large">Reduce the number of queries sent by Power BI using the Query
-                                        reduction settings. For slicers, select the “Add an Apply button to each slicer
-                                        to apply changes when you’re ready” option. For filters, select the “Add a
-                                        single Apply button to the filter pane to apply changes at once (preview)”
-                                        option.</p>
+                                    <p class="text-large">Templates enable you to develop standardized and branded reports faster. With templates, you can save custom color palettes and themes, ensuring corporate branding is pre-applied to all pages. Templates automatically connect to commonly used data sources and offer commonly used DAX measures as well. These all help streamline the report creation process and allow more time for analysis.</p>
+                                    
+                                    <li class="text-xlarge"><strong>Use the query reduction settings in Power BI</strong></li>
+                                    <p class="text-large mb-0">Use Power BI's query reduction settings to lower query frequency.</p>
+                                    <p class="text-large mb-0">For slicers, select the <strong>Add an Apply button to each slicer to apply changes when you’re ready</strong> option. With this, changes to slicer selections are only applied when the user clicks the <strong>Apply</strong> button. This reduces the frequency of queries sent.</p>
+                                    <p class="text-large mb-0">For filters, the <strong>Add a single Apply button to the filter pane to apply changes at once (preview)</strong> option consolidates filter changes and applies them all at once, further minimizing query volume.</p>
+                                    <p class="text-large">Reducing the number of queries improves report performance, especially when dealing with complex reports and large datasets.</p>
+
                                     <li class="text-xlarge"><strong>Avoid bi-directional and many-to-many relationships
                                             against high cardinality columns</strong></li>
-                                    <p class="text-large">Many-to-many and bi-directional relationships navigate more
-                                        pathways and check more data points. As a result, bi-directional relationships
-                                        against high-cardinality columns negatively impact report performance.</p>
+                                    <p class="text-large mb-0">Bi-directional relationships refer to the two-way data flow between tables. Many-to-many relationships refer to multiple records in one table being related to multiple records in another. High cardinality columns are columns in a table with many unique values relative to the total number of rows.</p>
+                                    <p class="text-large mb-0">When applied to high-cardinality columns, these relationships can significantly impact report performance due to increased data processing and query complexity.</p>
+                                    <p class="text-large">Avoid these relationships to optimize query performance and reduce resource consumption, leading to faster report rendering. </p>
+
                                     <li class="text-xlarge"><strong>Avoid using floating point data types</strong></li>
-                                    <p class="text-large">Floating point data types can result in unpredictable
-                                        round-off errors and can decrease the performance of reports.</p>
+                                    <p class="text-large mb-0">Floating point data types, such as float and double, can lead to round-off errors and less predictable calculations. They also often require more processing power, which can slow down report performance.</p>
+                                    <p class="text-large">By avoiding these data types, you ensure more accurate data representation and improve report efficiency.</p>
+                                    
                                     <li class="text-xlarge"><strong>Replace the auto-generated date table with a custom
                                             date table in your model</strong></li>
-                                    <p class="text-large">Using a date table enables you to use the time-series function
-                                        in Power BI. However, the auto-generated date table creates a date table for
-                                        each date column, drastically increasing the model size. You can use a single
-                                        date table to reduce the model size, placing any required relationships in fact
-                                        tables. When building your date table, split the date and time to improve data
-                                        compression. Once you learn how to <a
-                                            href="https://www.youtube.com/watch?v=xu3uDEHtCrg" target="blank">turn off
-                                            the auto-generated date table</a> and <a
+                                    <p class="text-large mb-0">Replacing auto-generated date tables with custom ones reduces model size and increases performance. The auto-generated date table creates a separate table for each date column, which can bloat the model. A singular custom date table, with date and time split for better compression, streamlines the model and allows for more efficient use of time-series functions in Power BI.</p>
+                                    <p class="text-large">Once you learn how to <a
+                                            href="https://learn.microsoft.com/en-us/power-bi/guidance/auto-date-time#recommendations" target="blank">turn off
+                                            the auto-generated date table</a> and how to <a
                                             href="https://docs.microsoft.com/en-us/power-bi/transform-model/desktop-date-tables"
-                                            target="blank">how to set and use custom date tables</a>, doing it the next
+                                            target="blank">set and use custom date tables</a>, doing it the next
                                         time will be an easy task.</p>
+                                    
                                     <li class="text-xlarge"><strong>Set IsAvailableinMdx to false on non-attribute
                                             columns</strong></li>
-                                    <p class="text-large">Disable attribute hierarchy for measure columns and for any
-                                        columns you don’t want end users to use. This reduces data size and load time.
-                                    </p>
+                                    <p class="text-large">Disabling attribute hierarchy for non-attribute columns, like measures, streamlines the data model. This setting reduces the overall data size and load time, increasing report performance by focusing on essential data and calculations.</p>
+                                    
                                     <li class="text-xlarge"><strong>Reduce the amount of data loaded on the
                                             page</strong></li>
-                                    <p class="text-large">Use bookmarks, drillthrough pages, and tooltips to reduce the
-                                        amount of data loaded on the page. This improves page load time, especially for
-                                        landing pages.</p>
+                                    <p class="text-large">Using bookmarks, drillthrough pages, and tooltips can significantly reduce the amount of data loaded on a page. This approach improves page load times and improved the user experience, especially on landing pages where quick access to information is crucial. </p>
+                                    
                                     <li class="text-xlarge"><strong>Use report backgrounds for static images</strong>
                                     </li>
-                                    <p class="text-large">For static images, use report backgrounds rather than multiple
-                                        visuals. This conveys the same information to the end user at a fraction of the
-                                        performance cost.</p>
-                                    <li class="text-xlarge"><strong>Choose Storage mode for tables
-                                            appropriately</strong></li>
-                                    <p class="text-large">Storage mode determines where your data for the table will be
-                                        stored and how the queries are sent to the data source.</p>
+                                    <p class="text-large">Employing report backgrounds for static images instead of multiple visuals reduces the performance cost. This strategy uses fewer resources than individual visuals, ensuring the report remains responsive and efficient.</p>
+                                    
+                                    <li class="text-xlarge"><strong>Choose the ideal storage mode for tables</strong></li>
+                                    <p class="text-large">Choosing the right <a href="https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-storage-mode" target="blank">storage mode</a> (Import, DirectQuery, or Dual) based on your data aggregation needs and visualization requirements is crucial. This decision impacts where your data is stored and how queries are processed, directly affecting the report's responsiveness and efficiency. </p>
+                                    
                                     <li class="text-xlarge"><strong>Cross-check referential integrity check for
                                             relationships</strong></li>
-                                    <p class="text-large">For Direct Query Sources where the Primary key is enforced,
-                                        cross-check the “Assume Referential Integrity” value in Relationship. By
-                                        default, this value is set to “Off”. When it is marked as “Off” it performs
-                                        Outer Join instead of Inner Join which can be slower.</p>
+                                    <p class="text-large">In DirectQuery sources with enforced primary keys, verify the <strong>Assume Referential Integrity</strong> setting in relationships. If set to <strong>Off</strong>, Power BI defaults to slower outer joins instead of inner joins. Adjusting this setting can optimize query performance and speed.</p>
 
                                 </ol>
                             </div>
                             <div id="security">
                                 <h2>Security</h2>
                                 <ol start="19">
-                                    <li class="text-xlarge"><strong>Enable <a
+                                    <li class="text-xlarge"><strong>Enable and optimize your <a
                                                 href="https://docs.microsoft.com/en-us/sql/relational-databases/security/row-level-security?view=sql-server-2017"
                                                 target="blank">Row-Level Security</a> (RLS)</strong></li>
-                                    <p class="text-large">Row-Level Security restricts user access to certain rows in a
-                                        database depending on the characteristics (role) of the user executing a query.
-                                        With RLS, Power BI only imports data the user is authorized to view.</p>
+                                    <p class="text-large mb-0">Row-level security limits data access based on user roles. With RLS, Power BI only imports data the user is authorized to view.</p>
+                                    <p class="text-large">Simplifying RLS logic and moving complex calculations to the source is also recommended. This strategy reduces the computational load on Power BI by keeping the RLS calculations straightforward, improving overall performance.</p>
+
                                     <li class="text-xlarge"><strong>Use <a
                                                 href="https://docs.microsoft.com/en-us/power-bi/developer/visuals/power-bi-custom-visuals-certified"
-                                                target="blank">certified custom visuals</a></strong></li>
-                                    <p class="text-large">Power BI-certified visuals are custom visuals on AppSource
-                                        that have passed rigorous quality testing. Microsoft verifies that certified
-                                        custom visuals have robust, high-performance code. Certified custom visuals are
-                                        the only custom visuals that can be viewed in <a
+                                                target="blank">Power BI-Certified custom visuals</a></strong></li>
+                                    <p class="text-large mb-0">Power BI-certified visuals are custom visuals on AppSource that have passed rigorous quality testing. Certified custom visuals are also the only custom visuals that can be viewed in <a
                                             href="https://docs.microsoft.com/en-us/power-bi/consumer/end-user-powerpoint">Export
                                             to PowerPoint mode</a> and email subscriptions.</p>
-                                    <li class="text-xlarge"><strong>Categorize report data by business impact</strong>
+                                    <p class="text-large">Using Power BI-certified visuals is preferred as Microsoft verifies the visuals’ high performance and robustness.</p>
+
+                                    <li class="text-xlarge"><strong>Categorize report data by business impact using sensitivity labels</strong>
                                     </li>
-                                    <p class="text-large">Use Power BI sensitivity labels to classify data as high,
-                                        medium, or low business impact. High Business Impact (HBI) data requires users
-                                        to request a policy exception to share the data externally. Low Business Impact
-                                        (LBI) and Medium Business Impact (MBI) data do not require exceptions. By using
-                                        Power BI data sensitivity labels, you raise user awareness about security and
-                                        how reports should be shared inside and outside the organization.</p>
+                                    <p class="text-large mb-0">Using <a
+                                        href="https://learn.microsoft.com/en-us/power-bi/enterprise/service-security-sensitivity-label-overview"
+                                        target="blank">sensitivity labels</a> in Power BI to categorize data (high, medium, low impact) raises user awareness about data security. High Business Impact (HBI) data requires users to request a policy exception to share the data externally. Low Business Impact (LBI) and Medium Business Impact (MBI) data do not require exceptions.</p>
+                                    <p class="text-large">The use of sensitivity labels aids in managing data sharing and ensures appropriate handling of sensitive information inside and outside of an organization. </p>
                                 </ol>
                             </div>
                             <div id="design">
                                 <h2>Design</h2>
                                 <ol start="22">
-                                    <li class="text-xlarge"><strong>Ensure the cache update frequency aligns with the
-                                            data source refresh frequency</strong></li>
-                                    <p class="text-large">By default, the Power BI cache update frequency is set to one
-                                        hour. The cache update frequency should be set at similar intervals to the data
-                                        source refresh frequency. For example, if your data set refreshes only once per
-                                        day, you should update the cache frequency accordingly. This improves report
-                                        performance and accuracy for end users.</p>
-                                    <li class="text-xlarge"><strong>Use white or light background colors</strong></li>
-                                    <p class="text-large">White or light backgrounds are printer-friendly, ensuring your
-                                        reports can be easily shared online and offline.</p>
-                                    <li class="text-xlarge"><strong>Shorten numbers</strong></li>
-                                    <p class="text-large">At most, show up to four numerals when displaying numbers. Be
-                                        consistent across decimal points, limiting measures to two numerals to the right
-                                        of the decimal point. When necessary, scale for thousands or millions.</p>
-                                    <li class="text-xlarge"><strong>Use tooltips to provide more information on visuals
-                                            and metrics</strong></li>
-                                    <p class="text-large">Report tooltips are a great way of sharing additional
-                                        information in a limited report space. Limit which visuals you use in report
-                                        tooltips to ensure information isn’t overwhelming.</p>
-                                    <li class="text-xlarge"><strong>Use names that are meaningful to users</strong></li>
-                                    <p class="text-large">Power BI allows you to give aliases to report objects. Avoid
-                                        ambiguity for end users when naming columns and measures by using
-                                        business-friendly names. Consider hiding unused columns to avoid confusing
-                                        users.</p>
-                                    <li class="text-xlarge"><strong>Allow users to personalize visuals in a
-                                            report</strong></li>
-                                    <p class="text-large">Enable “Personalize visuals” in report settings when sharing
-                                        reports with users. This enables users to gain further insights through ad-hoc
-                                        exploration. Combine this feature with personal bookmarks to enable self-service
-                                        BI.</p>
-                                    <li class="text-xlarge"><strong>Avoid scrolls within the visual and on the
-                                            page</strong></li>
-                                    <p class="text-large">Multiple scrolls on a single page lead to a negative user
-                                        experience. Limit your page size to the standard report sizes when possible. Use
-                                        the Bookmark and Selection pane to toggle the visibility of visuals if needed.
-                                    </p>
-                                    <li class="text-xlarge"><strong>Use drillthrough buttons instead of expecting users
-                                            to right-click on data points</strong></li>
-                                    <p class="text-large">Drillthrough buttons are more intuitive than right-clicking
-                                        because they clearly signal actions and results to users. Use conditional
-                                        formatting to ensure button texts are context-driven, further improving the user
-                                        experience.</p>
+                                    <li class="text-xlarge"><strong>Align cache update frequency with data source refresh</strong></li>
+                                    <p class="text-large">By default, the Power BI cache update frequency is set to one hour. Synchronizing the cache update frequency with the data source refresh frequency ensures data accuracy and optimizes report performance. This alignment prevents unnecessary data processing and keeps the information up-to-date</p>
+                                    
+                                    <li class="text-xlarge"><strong>Use white or light background colors for reports</strong></li>
+                                    <p class="text-large">White or light backgrounds in reports make them printer-friendly and easier to share. This approach ensures reports are accessible both online and offline, improving their utility.</p>
+                                    
+                                    <li class="text-xlarge"><strong>Shorten displayed numbers</strong></li>
+                                    <p class="text-large">Limiting displayed numbers to four numerals and decimal points to two decimal points improves readability and consistency across reports. This practice makes reports easier to understand and analyze, especially when scaling numbers for thousands or millions.</p>
+                                    
+                                    <li class="text-xlarge"><strong>Use tooltips to provide additional information</strong></li>
+                                    <p class="text-large">Tooltips provide extra context in a compact form, making efficient use of report space. Careful selection of visuals in tooltips ensures information is helpful without being overwhelming, elevating the user experience.</p>
+                                    
+                                    <li class="text-xlarge"><strong>Use meaningful names for report objects</strong></li>
+                                    <p class="text-large">Assigning clear, business-friendly names to columns and measures, and hiding unused columns, reduces user confusion. This clarity improves the usability of the reports, making them more intuitive and effective.</p>
+                                    
+                                    <li class="text-xlarge"><strong>Enable personalization of visuals</strong></li>
+                                    <p class="text-large">Enable the <a
+                                        href="https://learn.microsoft.com/en-us/power-bi/consumer/end-user-personalize-visuals"
+                                        target="blank">Personalize visuals</a> option in report settings when sharing reports with users. This fosters deeper engagement and exploration. Combining this feature with personal bookmarks empowers users, facilitating self-service BI.</p>
+                                    
+                                    <li class="text-xlarge"><strong>Avoid visual/page scrolls and using non-standard report sizes</strong></li>
+                                    <p class="text-large mb-0">Minimizing scrolls within visuals and on the page improves user experience. Having a lot of scrolls can be cumbersome for users, especially when trying to understand a complex visualization or dataset. Scrolling can disrupt the flow of data analysis and make it difficult to get a comprehensive view of the information presented.</p>
+                                    <p class="text-large">Avoiding non-standard report sizes is also ideal as these sizes may not display consistently across different devices and platforms, resulting in poor responsiveness and a disjointed visual presentation.</p>
+
+                                    <li class="text-xlarge"><strong>Use drillthrough buttons instead of expecting users to right-click on data points</strong></li>
+                                    <p class="text-large">Drillthrough buttons, with context-driven conditional formatting, offer an intuitive way for users to explore data. This approach is more user-friendly than right-click navigation, improving the report. </p>
+                                    
                                     <li class="text-xlarge"><strong>Optimize visual interactions</strong></li>
-                                    <p class="text-large">Every visual interacts with other visuals on the page either
-                                        by cross-filtering or cross-highlighting. Evaluate the interactions which are
-                                        relevant to the report audience and remove the unnecessary ones. For Direct
-                                        Query reports, use Optimize Ribbon to optimize reports for interactivity.</p>
+                                    <p class="text-large">Every visual interacts with other visuals on the page either by cross-filtering or cross-highlighting. Evaluate the interactions which are relevant to the report audience and remove the unnecessary ones. For DirectQuery reports, use <strong>Optimize Ribbon</strong> to optimize reports for interactivity.</p>
                                 </ol>
                             </div>
                             <h2>References</h2>
