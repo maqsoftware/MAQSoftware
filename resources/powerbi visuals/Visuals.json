@@ -698,10 +698,14 @@
      "pbicertifiedurl": "https://aka.ms/pbicertified",
      "linkToBadge": "",
      "linkToArticle": "",
-     "detail":"Displays density of distribution using bars along with actual values represented by points ",
-     "detailDesc":"Traditional histogram charts illustrate the density of distributed data, but normally do not showcase specific values. Histogram with Points by MAQ Software addresses this issue by combining a histogram chart with points that show the actual data for each range. Easily track where data clusters (points) are across your data distribution (bars) to identify patterns, trends, and areas of opportunity. ",
-     "businessUses":["Research: Find homogenized populations of customers  ","Marketing: Identify vital demographic clusters for promotional campaigns ","Admin: Display employee salary distribution and salary variation for individual employees "],
-     "keyFeatures":["Configurable points and histogram bars  ","Configurable X-axis, Y-axis-right, or Y-axis-left  ","Configurable gridlines " ,"Able to show/hide all the elements listed above "],
+     "detail":"Visualize the distribution and values of your data| Power BI Certified ",
+     "detailDesc":"Dive deeper into data distribution with our innovative Histogram with Points. Traditional histograms only show data density, but our custom visual goes further by pinpointing exact values within each range. This dual approach of combining histogram bars with specific data points offers a clearer understanding of data clusters, trends, and unique insights, ideal for precise data analysis. ",
+     "businessUses":["<b>Research</b>: Find homogenized populations of customers (i.e., use Histogram with Points to see how the age, income, or education of your customers are clustered, and segment them into groups for further analysis).",
+                    "<b>Marketing</b>: Identify vital demographic clusters for promotional campaigns (i.e., use Histogram with Points to see how the preferences, behaviors, or satisfaction of your customers are distributed and target them with personalized offers or messages).",
+                    "<b>Administration</b>: Display employee salary distribution and salary variation for individual employees (i.e., use Histogram with Points to see how the salary of your employees are distributed and clustered by department, role, or experience, and evaluate their compensation)."],
+     "keyFeatures":["<b>Customizable visualization</b>: Toggle between histogram bars and data points for tailored views. Hide/show them as needed.",
+                    "<b>Flexible axis options</b>: Configure X-axis and Y-axis (right or left) display options.",
+                    "<b>Adjustable gridlines</b>: Opt for visible or hidden gridlines to match your presentation style."],
      "whatsNew":[],
      "pbiReportURL":"https://app.powerbi.com/view?r=eyJrIjoiODBkNGM4ZjktYzkzMS00MmEzLTg3MWYtOTRmNGI0NDdmOWFlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
    }
