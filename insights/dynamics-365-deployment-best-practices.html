@@ -69,7 +69,7 @@
                                     <p class="text-large">To update data as part of data migration activities without triggering business logic, deactivate plugins/workflows registered on the entities present in import file. This reduces import time.</p>
                                     <li class="text-xlarge"><strong>Enable admin mode on your target environment during deployment</strong></li>
                                     <br>
-                                    <p class="text-large">Admin mode locks the environment for all users, meaning only system administrators can access the environment. Enabling admin mode during deployment ensures that data is not compromised by unplanned changes. If an error occurs, data can be restored to previous versions. Note: Admin mode cannot be enabled in the production environment. If you are not permitted to convert the environment to a sandbox, use the global notification method to add a form.</p>
+                                    <p class="text-large">Admin mode locks the environment for all users, meaning only system administrators can access the environment. Enabling admin mode during deployment ensures that data is not compromised by unplanned changes. If an error occurs, data can be restored to previous versions.</p>
                                     <li class="text-xlarge"><strong>Include a user-friendly message while in admin-mode</strong></li>
                                     <br>
                                     <p class="text-large">During deployment, the system may be slow. This is why we recommended locking the system for end users. Messages inform end users that the environment is down due to planned activities and will return after the indicated duration. Clear messages avoid support tickets from confused end users. </p>
@@ -77,7 +77,7 @@
                                     <div class="center text-medium">Figure 3: Enabling Admin mode from Power Platform admin center</div><br><br>
                                     <li class="text-xlarge"><strong>Back up the environment before deployment</strong></li>
                                     <br>
-                                    <p class="text-large">Backups ensure that the system can be restored to its pre-deployment state in case a deployment failure occurs. Backups are faster than creating a copy of the environment. Note: When an environment is restored to an earlier state, the Data Export Service profile needs to be re-established to synchronize the Dynamics 365 data to Azure SQL. </p>
+                                    <p class="text-large">Backups ensure that the system can be restored to its pre-deployment state in case a deployment failure occurs. Backups are faster than creating a copy of the environment.</p>
                                     <img src="/images/best-practices/D365-deployment-4.png" alt="">
                                     <div class="center text-medium">Figure 4: Creating a backup from Power Platform admin center</div><br><br>
                                     <li class="text-xlarge"><strong>Run a test in a cloned production environment prior to production deployment </strong></li>
