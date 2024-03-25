@@ -192,8 +192,7 @@
                                     <br>
                                     <p class="text-large">Adding icons for status, gender, rank, profit, loss, etc.
                                         enables users to quickly identify fields.</p>
-                                    <li class="text-xlarge"><strong>Ensure columns and relative orders are the same in
-                                            active and inactive views</strong></li>
+                                    <li class="text-xlarge"><strong>Ensure columns and relative orders are consistent across both active and inactive views</strong></li>
                                     <br>
                                     <p class="text-large">This ensures consistency in information available for records
                                         across both states.</p>
@@ -217,22 +216,21 @@
                                     <li class="text-xlarge"><strong>Update the stage of Business Process Flow (BPF) with
                                             custom fields</strong></li>
                                     <br>
-                                    <p class="text-large">Instead of performing moveNext() and movePrevious() operations
-                                        from scripts, update custom fields (e.g. status, gender) from scripts. This
-                                        triggers the out-of-the-box (OOB) background workflow (registered on BPF Entity)
-                                        to update the active stage in BPF.</p>
+                                    <p class="text-large">
+                                        Instead of executing moveNext() and movePrevious() operations from scripts, consider updating custom fields (such as status or gender) directly from scripts. 
+                                        This action activates predefined background workflows, plug-ins, and Power Automate flows linked to the Business Process Flow (BPF) entity, updating the active BPF stage.</p>
 
                                 </ol>
                             </div>
                             <div id="web-resources">
                                 <h2>Web Resources</h2>
                                 <ol>
-                                    <li class="text-xlarge"><strong>Use Namespace for JavaScript web resources</strong>
+                                    <li class="text-xlarge"><strong>Use namespace for JavaScript web resources</strong>
                                     </li>
                                     <br>
                                     <p class="text-large">This ensures JavaScript methods are unique and prevents
                                         collisions between identifiers.</p>
-                                    <li class="text-xlarge"><strong>Use RELATIVE paths to reference web
+                                    <li class="text-xlarge"><strong>Use relative paths to reference web
                                             resources</strong></li>
                                     <br>
                                     <p class="text-large">This ensures the web resource references are environment
