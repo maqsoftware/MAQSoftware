@@ -51,7 +51,7 @@ function loadData(data,id){
                 
                 //rendering title with version number
                 var versionNumber = data[index][this].version
-                var addVersion = (typeof versionNumber==='undefined')?"":(" "+versionNumber)
+                var addVersion = (typeof versionNumber==='undefined')?"":(" in "+versionNumber)
                 var title = document.createTextNode("What's new"  + addVersion)
                 var titleElement = document.createElement("h4")
                 titleElement.setAttribute("class","title-xsmall")

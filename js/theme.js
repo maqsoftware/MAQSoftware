@@ -3,8 +3,12 @@ var pageSection,
     '<div class="item"><div class="nf-col-padding"><div class="item-box"><div class="shop-item"><div class="item-img"> <img style="height: 12em !important" alt="@name" src="@img"/> </div><div class="item-mask"><div class="item-mask-detail"><div class="item-caption text-center" style="color:white;"><div> @description </div><a href="../expertise/powerbi/custom-visuals/@visualpageurl" class="btn btn-line-xs btn-white-line"> <i class="fa"></i>Learn More </a> </div></div></div></div><div class="shop-item-info" style=" display: flex;justify-content: center;align-items: center;"><h6 class="shop-item-name"><a href="@url" target="_blank"> @name </a></h6><span> <a target="_blank" href="@pbicertifiedurl"><img class="certified" title ="@starimagetitle" src="@certifiedstarimage"></img></a></span></div></div></div></div>',
   modalTemplate =
     '<div class="modal fade product_view" id="model@id"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h3 class="modal-title pull-left">@title</t><a target="_blank" href="@pbicertifiedurl"><img style="margin-bottom: 0.1em;" src="@pbicertifiedimage"></img></a></h3><a href="#" data-dismiss="modal" class="class pull-right"> <span class="glyphicon glyphicon-remove"></span> </a> </div><div class="modal-body"><div class="row"><div class="col-md-6 embed-responsive embed-responsive-16by9"><video id = "video@id" class="embed-responsive-item modal_videos" alt="@name" title="@name" loop controls muted style="height:auto !important"><source style="height: 12em !important" src="@img" type = "video/mp4"></video></div><div class="col-md-6 product_content">@content<p> Do you have questions about this visual? Check out our <a style="text-decoration:underline" href="@contacturl">Power BI community forum</a>. </p><a href="@url" target="_blank" class="btn btn-md btn-black-line ">See in AppSource</a> </div></div></div></div></div></div>',
-  viewAllVisualTemplate =
-    '<div class="grid-item nf-item @category"><article class="post"><div style="height: 20em !important" class="post-content with-background"><div class="post-media"><div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9"><a class="overlay-link" target="_blank" href="@url"><img style="height:12em !important" src="@img" alt=""><span class="overlay-info"><span><span style="font-size:15px">@description</span></span></span></a></div></div><h2 class="title-xxssmall"  style="text-align:center"><a target="_blank" href="@url">@name</a><a href="@pbicertifiedurl" target="_blank"><img style="margin-bottom: 0.18em" class="certified" title ="@starimagetitle" src="@certifiedstarimage"></img></a> </h2><div style="text-align: center;height: 30px !important"> <a href="@linkToArticle"> <img src="@linkToBadge"> </a> </div></div></article></div>';
+  // viewAllVisualTemplate =
+  //   '<div class="grid-item nf-item @category"><article class="post"><div style="height: 20em !important" class="post-content with-background"><div class="post-media"><div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700" data-hover-bkg-color="#ffffff" data-hover-bkg-opacity="0.9"><a class="overlay-link" target="_blank" href="@url"><img style="height:12em !important" src="@img" alt=""><span class="overlay-info"><span><span style="font-size:15px">@description</span></span></span></a></div></div><h2 class="title-xxssmall"  style="text-align:center"><a target="_blank" href="@url">@name</a><a href="@pbicertifiedurl" target="_blank"><img style="margin-bottom: 0.18em" class="certified" title ="@starimagetitle" src="@certifiedstarimage"></img></a> </h2><div style="text-align: center;height: 30px !important"> <a href="@linkToArticle"> <img src="@linkToBadge"> </a> </div></div></article></div>';
+  viewAllVisualTemplate = 
+    '<div class="grid-item nf-item change @category"> <article class="card"> <div class="card-media"><a class=""target="_blank" href="@url"><img style="height: 8em !important;"src="..@img" alt=""></a></div> <div class="card-content"> <h2 class="card-title"><a style="display: flex; align-items: center;" target="_blank"href="@url">@name <img src="../img/Custom Visual Icons/rightIcon.svg"></a></h2> <p class="card-detail-text">@description</p> </div> <div class="category-container"> <div class="card-category card-category-@mentionStyle"> <p><img src="../img/Custom Visual Icons/@mentionStyle.svg"><a style="color:@mentionColor;" target="_blank" href="@linkToArticle">@mentionText</a></p> </div> <div class="card-certified @isCertified"><a style="display: flex; align-items: center; color:#a36710;" target="_blank" href="https://aka.ms/pbicertified"><img class="certified-margin" src="../img/Custom Visual Icons/certified.svg">Power BI Certified</a></div> </div> </article> </div>'
+  mentionDiv = 
+    '<div class="card-category card-category-@mentionStyle"> <p><img src="../img/Custom Visual Icons/@mentionStyle.svg"><a style="color:@mentionColor;" target="_blank" href="@linkToArticle">@mentionText</a></p> </div>';
 Date.prototype.format = function () {
   "use strict";
   var arrMonths = [
@@ -295,6 +299,7 @@ function PowerBIVisualsConfig() {
       if(Object.keys(a)[0]< Object.keys(b)[0])  return -1;
       return 0;
     });
+    console.log(sortedData);
     $("#loadingicon").hide();
     RenderPowerBIVisuals(sortedData);
   });
@@ -354,6 +359,7 @@ function RenderPowerBIVisuals(oVisualConfig) {
           oVisualConfig[index][this].pbicertifiedurl
         );
       viewAllContentHtml += viewAllVisualTemplate
+        .replace(mentionDiv,oVisualConfig[index][this].mentionStyle==="noCategory"?"":mentionDiv)
         .replace(/@name/g, oVisualConfig[index][this].name)
         .replace(/@img/g, oVisualConfig[index][this].img)
         .replace(/@id/g, oVisualConfig[index][this].id)
@@ -361,6 +367,10 @@ function RenderPowerBIVisuals(oVisualConfig) {
         // .replace(/@url/g, "/resources/customVisuals/VisualDetail?id="+oVisualConfig[index][this].id)
         .replace(/@url/g, "/Marketplace-Offers/Power-BI-custom-visuals/"+oVisualConfig[index][this].id+".html")
         .replace(/@category/g, oVisualConfig[index][this].category)
+        .replace(/@isCertified/g, oVisualConfig[index][this].isCertified?"":"certified-hide")
+        .replace(/@mentionStyle/g, oVisualConfig[index][this].mentionStyle)
+        .replace(/@mentionColor/g,oVisualConfig[index][this].mentionStyle==="editorsPick"?"#3276d2":"#247b1c")
+        .replace(/@mentionText/g, oVisualConfig[index][this].mentionText)
         .replace(/@description/g, oVisualConfig[index][this].description)
         .replace(/@linkToArticle/g, oVisualConfig[index][this].linkToArticle)
         .replace(/@linkToBadge/g, oVisualConfig[index][this].linkToBadge)

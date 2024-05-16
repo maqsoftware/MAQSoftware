@@ -1,0 +1,118 @@
+.title-align{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    height: 300px;
+    width: 270px;
+    border-radius: 10px;
+    border: 2px solid #dbdbdb;
+    padding-top: 5%;
+    flex-direction: column;
+}
+
+.card-category {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    width: max-content;
+    text-wrap: nowrap;
+    border-radius: 4px 4px 4px 4px;
+    padding: 0.5% 2%;
+    margin: 1%;
+}
+
+.category-container{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-self: baseline;
+    margin: 0% 5% 0% 5%;
+}
+
+.card-category-editorsPick{
+    background-color: #e6f3ff;
+    color: #3276d2;
+}
+
+.card-category-featured{
+    background-color: #d7f4da;
+    color: #247b1c;
+}
+
+.card-category-noCategory{
+    visibility: collapse;
+}
+
+.card-category>p {
+    display: contents;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 3px;
+    width: max-content;
+    height: 20px;
+    font-size: x-small;
+}
+
+.card-category>p>img{
+    margin-inline-end: 3px;
+}
+
+.card-media{
+    display: flex;
+    margin-inline: 15%;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+}
+
+.card-content{
+    height: 50px;
+    margin-top: 5%;
+    margin-inline: 5%;
+    margin-bottom: 10%;
+}
+
+.card-certified{
+    display: flex;
+    width: max-content;
+    height: 20px;
+    align-items: center;
+    text-wrap: nowrap;
+    font-size: x-small;
+    color: #a36710;
+    background-color: #fdf4cf;
+    border-radius: 4px 4px 4px 4px;
+    padding: 0.5% 2%;
+    margin: 1%;
+}
+
+.certified-margin{
+    margin-inline-end: 3px;
+}
+
+.certified-hide{
+    display: none;
+}
+
+.card-title{
+    font-size: small; 
+    margin-bottom: 0px;
+}
+
+.card-title>a{
+    color: black !important;   
+}
+
+.card-detail-text{
+    font-size: x-small;
+    color: black;
+}
+
+.card-learn-more{
+    font-size: large;
+    font-weight: bold;
+    align-self: baseline;
+    margin-inline: 10%;
+}
