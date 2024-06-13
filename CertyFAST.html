@@ -42,6 +42,27 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
     <script>
+        
+function keyfeaturesClick(featuresectionid, imageid) {
+    var imageelement = document.getElementById(imageid);
+    var imagesiblings = imageelement.parentNode.children;
+    for (var i = 0; i < imagesiblings.length; i++) {
+        imagesiblings[i].style.display = 'none';
+    };
+    imageelement.style.display = 'block';
+
+    var featuresection = document.getElementById(featuresectionid);
+    var featuresiblings = featuresection.parentNode.children;
+    for (var i = 0; i < featuresiblings.length; i++) {
+        featuresiblings[i].classList.remove("resources-div-click");
+    };
+    featuresection.classList.add("resources-div-click");
+}
+
+
+
+    </script>
+    <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
@@ -124,13 +145,11 @@
                                 </span>
                             </h1>
                             <p class="text-xlarge mb-30 center-on-mobile">
-                                Streamlining Power BI model development with automated error detection, DAX measure
-                                formatting, and simplified documentation, ensuring top-notch quality and adherence to
-                                best practices in enterprises.
+                                Streamlining Power BI model development with automated error detection, DAX measure formatting, and simplified documentation.
+                                Ensure top-notch quality and adherence to best practices in enterprises.
                             </p>
                             <p class="text-xlarge mb-30 center-on-mobile">
-                                Are you ready to revolutionize your data strategy and empower your business with the
-                                dynamic capabilities of Power BI?
+                                Ready to revolutionize your data strategy and empower your business with the capabilities of Power BI?
                             </p>
                             <a href="https://bit.ly/CertyFAST"
                                 class="button medium pill bkg-theme bkg-hover-white color-white color-hover-theme mb-mobile-40">
@@ -182,20 +201,36 @@
                                     Key Features
                                 </span>
                             </h2>
+
                             <div class="row">
                                 <div class="column width-12 pad-0">
-                                    <div class="column width-7">
+                                    <div class="column width-5">
                                         <div class="feature-content-inner">
-                                            <div id="role-based-access-management" class=""
-                                                onclick="keyfeaturesClick('role-based-access-management','role-based-access-management-img')">
+                                            <div id="hassle-free-licensing" class="resources-div-click"
+                                                onclick="keyfeaturesClick('hassle-free-licensing','hassle-free-licensing-img')">
                                                 <div class="row ptb-18">
                                                     <div class="column width-2 feature-icon pad-0 mb-0">
-                                                        <img src="/images/isv/Insights.svg" width="55" height="55" />
+                                                        <img src="/images/isv/Insights.svg" width="55"
+                                                            height="55" />
                                                     </div>
                                                     <div class="column width-10">
                                                         <h3 class="keyfeature-title">Insights</h3>
                                                         <p class="mb-0" style="font-size: 17.5px;">
-                                                            Actively ensures your report aligns with organizational standards, pinpointing any discrepancies that may impact the report’s size, performance, or user experience
+                                                            Ensure your report aligns with organizational standards. Identify discrepancies that impact the report’s size, performance, or user experience.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="seamless-integration" class=""
+                                                onclick="keyfeaturesClick('seamless-integration','seamless-integration-img')">
+                                                <div class="row ptb-18">
+                                                    <div class="column width-2 feature-icon pad-0 mb-0">
+                                                        <img src="/images/isv/Lineage.svg" width="55" height="55" />
+                                                    </div>
+                                                    <div class="column width-10">
+                                                        <h3 class="keyfeature-title">Lineage</h3>
+                                                        <p class="mb-0" style="font-size: 17.5px;">
+                                                            Explore how fields in your semantic model influences report visuals and have a holistic understanding of their impact.
                                                         </p>
                                                     </div>
                                                 </div>
@@ -204,51 +239,50 @@
                                                 onclick="keyfeaturesClick('highly-customizable','highly-customizable-img')">
                                                 <div class="row ptb-18">
                                                     <div class="column width-2 feature-icon pad-0 mb-0">
-                                                        <img src="/images/isv/Lineage.svg" width="55" height="55" />
+                                                        <img src="/images/isv/Alignment.svg" width="55"
+                                                            height="55" />
                                                     </div>
                                                     <div class="column width-10">
-                                                        <h3 class="keyfeature-title">Lineage</h3>
-                                                        <p class="mb-0" style="font-size: 17.5px;">Explore how each field in your semantic model influences report visuals, ensuring a holistic understanding of their impact across the entire report
+                                                        <h3 class="keyfeature-title">Alignment</h3>
+                                                        <p class="mb-0" style="font-size: 17.5px;">
+                                                            View visual alignment problems in the report that affect user experience.
                                                         </p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div id="hassle-free-licensing" class=""
-                                                onclick="keyfeaturesClick('hassle-free-licensing','hassle-free-licensing-img')">
+                                            <div id="role-based-access-management" class=""
+                                                onclick="keyfeaturesClick('role-based-access-management','role-based-access-management-img')">
                                                 <div class="row ptb-18">
                                                     <div class="column width-2 feature-icon pad-0 mb-0">
-                                                        <img src="/images/isv/Alignment.svg" width="55" height="55" />
+                                                        <img src="/images/isv/Documentation.svg" width="55"
+                                                            height="55" />
                                                     </div>
                                                     <div class="column width-10">
-                                                        <h3 class="keyfeature-title">Alignment</h3>
-                                                        <p class="mb-0" style="font-size: 17.5px;">Showcases visual
-                                                            alignment problems in the report that affect user
-                                                            experience.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="seamless-integration" class=""
-                                                onclick="keyfeaturesClick('seamless-integration','seamless-integration-img')">
-                                                <div class="row ptb-18">
-                                                    <div class="column width-2 feature-icon pad-0 mb-0">
-                                                        <img src="/images/isv/Documentation.svg" width="55" height="55" />
-                                                    </div>
-                                                    <div class="column width-10">
-                                                        <h3 class="keyfeature-title">Documentation</h3>
-                                                        <p class="mb-0" style="font-size: 17.5px;">Detailed
-                                                            documentation of semantic model and report visuals, helping
-                                                            developers to create knowledge
-                                                            documents consistently and easily.</p>
+                                                        <h3 class="keyfeature-title">
+                                                            Documentation
+                                                        </h3>
+                                                        <p class="mb-0" style="font-size: 17.5px;">
+                                                            Access detailed documentation of semantic models and report visuals, aiding developers in creating consistent knowledge documents.
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="column width-5">
+                                    <div class="column width-7">
                                         <div class="feature-image-inner center-on-mobile media-div">
-                                            <div id="hassle-free-licensing-img">
-                                                <img src="/images/assets/CertyFASTkeyfeatures.png" alt="" />
-                                                <img src="/images/assets/CertyFAST Insights.png" alt="" />
+                                            <div id="hassle-free-licensing-img" >
+                                                <img src="/img/CertyFAST/gif/Insights.gif" alt="" />
+                                            </div>
+                                            <div id="seamless-integration-img" style="display: none;">
+                                                <img src="/img/CertyFAST/gif/Lineage.gif" alt="" />
+                                            </div>
+                                            <div id="highly-customizable-img" style="display: none;">
+                                                <img src="/img/CertyFAST/gif/Alignment.gif" alt="" />
+                                            </div>
+                                            <div id="role-based-access-management-img" style="display: none;">
+                                                <img src="/img/CertyFAST/gif/Documentation.gif"
+                                                    alt="" />
                                             </div>
                                         </div>
                                     </div>
@@ -303,12 +337,17 @@
                         <div class="column width-6">
                             <div class="feature-content-inner">
                                 <h2>Why use the <br />CertyFAST?</h2>
-                                <p>The tool efficiently automates the review process, saving time and effort by
-                                    identifying errors, formatting DAX measures, and creating knowledge base documents
-                                    effortlessly. It ensures high-quality Power BI solutions by swiftly providing
-                                    insights and highlighting deviations from best practices, ensuring alignment with
-                                    organizational standards. Proactively, it maintains consistency in Power BI
-                                    solutions, adhering to brand standards for clear communication and governance.</p>
+                                <ul>
+                                    <li>
+                                        Automate the review process, saving time and effort by effortlessly identifying errors, formatting DAX measures, and creating knowledge base documents. 
+                                    </li>
+                                    <li>
+                                        Ensure high-quality Power BI solutions by efficiently receiving insights and identifying deviations from best practices. 
+                                    </li>
+                                    <li>
+                                        Maintain consistency in Power BI solutions, adhering to brand standards for clear communication and governance.
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <div class="column width-6">
@@ -321,40 +360,43 @@
             </div>
         </div>
 
-        <!-- technical documentaiton -->
-        <!-- <div class="rowFabric">
-            <div class="WhyMicrosoftFabric"
-                style="display: flex;  width: 100%; padding-left: 52px;padding-inline: 200px; justify-content: left; align-items: baseline;">
-                <div class="column" style="display: flex; justify-content: center; align-items: center;">
-                    <div style="width: 500px; ">
-                        <div class="feature-content-inner">
-                            <h1 style="text-align: left;padding-top: 10px;">Technical <br> documentation</h1>
-                            <div style="text-align: left;font-size: 16px;">
-                                Access our technical documentation to get in-depth information on integrating and using
-                                CertyFAST. </div>
-
-                        </div>
-
-                        <div style="padding-top: 20%;">
-                            <a href="https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmaqsoftware.gitbook.io%2Fpbi-load-analyzer-technical-documentation%2F&data=05%7C02%7Cganeshprasads%40maqsoftware.com%7C359de9029359487102c008dc3e7c0e04%7Ce4d98dd2919942e5ba8bda3e763ede2e%7C0%7C0%7C638453949759580193%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=PuweppZbkntI9fcwH8wyeMpweYYn0JySzGvccNDNfLw%3D&reserved=0"
-                                target="_blank"
-                                class="button medium pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white"
-                                style="margin-left: 10px;">View documentation</a>
-                        </div>
-                    </div>
-                </div>
-                 <div style="width:20px"></div>
-                <div class="column" style="display: flex; justify-content: center; align-items: center;">
-                    <div style="width: 500px;">
-                        <img src="/img/LoadFast/Documentation.png" alt="" />
 
 
-                    </div>
-                </div>
+<!-- Feature 5 Section -->
+<div id="caseStudies" class="feature-1 case-studies pb-60">
+    <div class="feature-block">
+        <div class="row">
+            <div class="column width-12 v-align-middle left center-on-mobile">
+                <h2>
+                    <span class="color-black mb-5">
+                        Installation and user guide
+                    </span>
+                </h2>
             </div>
-        </div> -->
-        <!-- case study -->
-        <!-- <div style="height: 40px;"></div> -->
+        </div>
+        <div class="row">
+            <div class="column width-5">
+                <img src="/img/CertyFAST/CertyFASTLaptopPaperImage.png" />
+                <div class="feature-content-inner" style="border: 1px solid #ddd; padding: 5%; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                    <h3 style="text-align: left;padding-top: 10px;">Certify your Power BI Reports with CertyFAST</h3>
+                    <div style="text-align: left;font-size: 16px;">
+                        Let's have an in-depth understanding of CertyFAST
+                    </div>
+                    <a href="/services/Power-BI/CertyFast.html"
+                        target="_blank"
+                        class="button medium pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white"
+                        style="margin-left: 10px; margin-top: 25px;">Read
+                        more
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Feature 5 Section End -->
+
+
 
         <!-- start of embedding -->
         <div id="resources" class="section-block pt-30 pb-30 bkg-white section-padding">
@@ -375,20 +417,36 @@
                                 <div id="video_desc" class="resources-div resources-div-click"
                                     onclick="resourcesClick('video_desc')">
                                     <h3>Demo Video</h3>
-                                    <p>Watch our demo video to see the CertyFAST
-                                        in action. Experience how seamlessly it integrates
-                                        into applications.</p>
+                                    <p>
+                                        Watch our demo video to see the CertyFAST
+                                        in action.
+                                        <br>
+                                        See how you can take your Power BI reports to the next level.
+                                    </p>
                                 </div>
                                 <div id="partner_video_desc" class="resources-div"
                                     onclick="resourcesClick('partner_video_desc')">
-                                    <h3>Case Studies</h3>
+                                    <h3>Installation and user guide</h3>
                                     <!-- <p>Watch our partner showcase video to see the CertyFAST
                                         in action. Experience how seamlessly it integrates
                                         into applications.</p> -->
-                                    <p>Coming Soon</p>
+                                    <p>Click here for instructions on how to install and use CertyFAST.</p>
                                 </div>
                             </div>
                         </div>
+
+
+
+
+                        
+
+
+
+
+
+
+
+
 
                         <!-- Start Youtube link for the demo-->
                         <div class="column width-6">
@@ -399,9 +457,26 @@
                                         width="520 !important" height="350 !important"></iframe>
                                 </div>
                                 <div id="partner_demo_video" style="display: none;">
-                                    <!-- <iframe id="partner_embedfast_demo_video"
-                                        src="https://www.youtube.com/embed/iwhMYf58SqE?playlist=iwhMYf58SqE&loop=1&autoplay=1&mute=1"
-                                        width="520 !important" height="350 !important"></iframe> -->
+                                
+                                    <div class="column width-9">
+                                        <img src="/img/CertyFAST/CertyFASTLaptopPaperImage.png" />
+                                        <div class="feature-content-inner" style="border: 1px solid #ddd; padding: 5%; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                                            <h3 style="text-align: left;padding-top: 10px;">CertyFAST Installation and Usage Guide</h3>
+                                            <div style="text-align: left;font-size: 16px;">
+                                                With CertyFAST you can certify your Power BI reports. 
+                                            </div>
+                                            <a href="/services/Power-BI/InstallationandUsageGuide.html"
+                                                target="_blank"
+                                                class="button medium pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white"
+                                                style="margin-left: 10px; margin-top: 25px;">Read
+                                                more
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+
+
+                                    
                                 </div>
                             </div>
                         </div>
