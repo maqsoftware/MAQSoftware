@@ -59,15 +59,66 @@
                 <div class="column width-10 offset-1 content-inner blog-single-post bkg-grey-ultralight">
                     <article class="post">
                         <div class="post-content with-background">
-                            <h1 class="post-title center">Best Practices for Creating Enterprise-Wide Knowledge Bots</h1>
-                            <h3 class="post-title center">Improve bot performance, security, and design</h3>
-                            <p class="text-large">This guide covers the best practices you need to improve your enterprise-wide knowledge bots' performance, security, and design. These practices ensure optimal functionality and user experience.</p>
+                            <h1 class="post-title center">Best practices for creating enterprise-wide knowledge bots</h1>
+                            <p class="text-large">This blog covers the best practices you need to improve your enterprise-wide knowledge bot's performance, security, and design. These practices ensure optimal functionality and user experience.</p>
                             
-                            <div id="objectives">
-                                <h2>Objectives and scope of the bot</h2>
+                            <div id="what">
+                                <h1 class="post-title center">‘What’</h1>
+                                <p class="text-large mb-0">This section discusses the ‘what’ aspect of creating enterprise-wide knowledge bots, namely what things should be considered when creating the bot and what things the bot should do. </p>
+                                <div id="objectives">
+                                    <h2>Objective and scope of the bot</h2>
+                                    <ul>
+                                        <li class="text-xlarge" style="line-height: 1.5;"><strong>Define objectives</strong></li>
+                                        <p class="text-large mb-0">Clearly outline the primary goals and objectives of the bot. Determine what problems it aims to solve and what tasks it will perform. Establish the scope of the bot’s functionality, including the types of interactions it will handle and its target audience.</p>
+                                    </ul>
+                                </div>
+                                
+                                <div id="response">
+                                    <h2>Expected response from bot</h2>
+                                    <ul>
+                                        <li class="text-xlarge" style="line-height: 1.5;"><strong>Ensure accuracy and relevance</strong></li>
+                                        <p class="text-large mb-0">Ensure that responses are accurate and relevant to the user’s query. Maintain consistency in responses to similar queries. This helps build user trust and ensures a reliable user experience.</p>
+                                        
+                                        <li class="text-xlarge" style="line-height: 1.5;"><strong>Implement error handling</strong></li>
+                                        <p class="text-large">Implement comprehensive error handling to manage cases where the bot cannot understand or process a query. Provide helpful fallback responses and guide users towards useful actions.</p>
+                                    </ul>
+                                </div>
+                                
+                                <div id="representation">
+                                    <h2>Representation of response</h2>
+                                    <ul>
+                                        <li class="text-xlarge" style="line-height: 1.5;"><strong>Ensure clear and concise responses</strong></li>
+                                        <p class="text-large mb-0">Ensure responses are clear, concise, and easy to understand. Avoid long-paragraph explanations, highlight key points, and use simple language.</p>
+                                        
+                                        <li class="text-xlarge" style="line-height: 1.5;"><strong>Maintain consistent tone and style</strong></li>
+                                        <p class="text-large">Maintain a consistent tone and style that matches the brand and audience. Whether it’s formal or casual, ensure the bot’s personality aligns with user expectations.</p>
+                                    </ul>
+                                </div>
+                                
+                                <div id="cost-optimization">
+                                    <h2>Cost estimates and optimization</h2>
+                                    <ul>
+                                        <li class="text-xlarge" style="line-height: 1.5;"><strong>Estimate initial development and operational cost</strong></li>
+                                        <p class="text-large mb-0">Include design, planning, coding, testing, hosting, and maintenance expenses. Account for API usage fees, data retrieval costs, and expenses related to scaling the bot for increased traffic.</p>
+                                        
+                                        <li class="text-xlarge" style="line-height: 1.5;"><strong>Conduct cost-benefit analysis and optimization</strong></li>
+                                        <p class="text-large">Evaluate the bot’s ROI and identify opportunities to reduce or optimize costs. Create a detailed budget, regularly update forecasts based on actual usage, track expenses, and establish cost control measures.</p>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div id="how">
+                            <h1 class="post-title center">‘How’</h1>
+                            <p class="text-large mb-0">This next section is about how the knowledge bot should be created, discussing elements that should be implemented and done in the creation process.</p>
+                            
+                            <div id="process-tracking">
+                                <h2>Process tracking and code management</h2>
                                 <ul>
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Define objectives</strong></li>
-                                    <p class="text-large mb-0">Clearly outline the primary goals and objectives of the bot. Determine what problems it aims to solve and what tasks it will perform. Establish the scope of the bot’s functionality, including the types of interactions it will handle and its target audience.</p>
+                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Document all processes</strong></li>
+                                    <p class="text-large mb-0">Document all aspects of the bot’s development, deployment, and maintenance processes. Ensure the documentation is accessible to all relevant stakeholders.</p>
+                            
+                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Use version control</strong></li>
+                                    <p class="text-large mb-0">Use version control systems like Git to manage changes to the bot’s codebase. Maintain clear commit messages and documentation to track changes and facilitate rollback if needed.</p>
                                 </ul>
                             </div>
                             
@@ -76,160 +127,101 @@
                                 <ul>
                                     <li class="text-xlarge" style="line-height: 1.5;"><strong>Implement PII data checks</strong></li>
                                     <p class="text-large mb-0">Improve Retrieval-Augmented Generation (RAG) applications by integrating PII detection mechanisms. This is crucial for compliance with privacy regulations like GDPR and CCPA, safeguarding sensitive information, and building user trust.</p>
-                                    <p class="text-large mb-0">Implementation strategy: Use a Flask-based Python web application hosted on Azure App Service to integrate Azure Language Service for PII detection. When a user submits a query containing PII data, the bot should respond with a message asking them to rephrase their query without personal information. Log these interactions for transparency and auditing purposes.</p>
                                 </ul>
                             </div>
                             
-                            <div id="reliability">
-                                <h2>Reliability</h2>
-                                <ul>
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Implement failover mechanisms</strong></li>
-                                    <p class="text-large mb-0">Implement automatic failover mechanisms, such as using a secondary instance that can take over if the primary instance fails. This can be achieved through load balancers or cloud services that support failover configurations.</p>
-                    
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Set up automated alerts</strong></li>
-                                    <p class="text-large mb-0">Use monitoring tools to continuously track the bot’s performance, uptime, and error rates. Set up automated alerts to notify the support team of any anomalies, downtime, or performance issues. This enables quick response and resolution of potential problems before they impact users.</p>
-                    
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Develop a disaster recovery plan</strong></li>
-                                    <p class="text-large">Develop a detailed disaster recovery (DR) plan that outlines steps to recover from several types of failures, including hardware, software, and network issues.</p>
-                                </ul>
-                            </div>
-                    
-                            <div id="deployment">
-                                <h2>Deployment</h2>
-                                <ul>
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Establish a CI/CD pipeline</strong></li>
-                                    <p class="text-large mb-0">Implement a continuous integration/continuous deployment (CI/CD) pipeline to automate the deployment process. This ensures quick and reliable updates.</p>
-                    
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Set up monitoring and logging</strong></li>
-                                    <p class="text-large">Set up monitoring and logging to track the bot’s performance and detect issues in real time. Use these tools to gather insights and continuously improve the bot.</p>
-                                </ul>
-                            </div>
-                    
-                            <div id="response">
-                                <h2>Expected response from bot</h2>
-                                <ul>
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Ensure accuracy and relevance</strong></li>
-                                    <p class="text-large mb-0">Ensure that responses are accurate and relevant to the user’s query. Maintain consistency in responses to similar queries. This helps build user trust and ensures a reliable user experience.</p>
-                    
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Implement error handling</strong></li>
-                                    <p class="text-large">Implement comprehensive error handling to manage cases where the bot cannot understand or process a query. Provide helpful fallback responses and guide users towards useful actions.</p>
-                                </ul>
-                            </div>
-                    
-                            <div id="representation">
-                                <h2>Representation of response</h2>
-                                <ul>
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Ensure clear and concise responses</strong></li>
-                                    <p class="text-large mb-0">Ensure responses are clear, concise, and easy to understand. Avoid long-paragraph explanations, highlight key points, and use simple language.</p>
-                    
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Maintain consistent tone and style</strong></li>
-                                    <p class="text-large">Maintain a consistent tone and style that matches the brand and audience. Whether it’s formal or casual, ensure the bot’s personality aligns with user expectations.</p>
-                                </ul>
-                            </div>
-                    
-                            <div id="efficiency">
-                                <h2>Performance efficiency</h2>
-                                <ul>
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Categorize content effectively</strong></li>
-                                    <p class="text-large mb-0">Use tools like Microsoft Purview to categorize and manage content effectively. This helps in organizing data, making it easier to retrieve and update information.</p>
-                    
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Clean data regularly</strong></li>
-                                    <p class="text-large mb-0">Ensure data is clean, free of duplicates, and standardized. Remove irrelevant information and normalize data formats.</p>
-                    
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Ensure data relevance and recency</strong></li>
-                                    <p class="text-large mb-0">Use up-to-date and contextually relevant data. Regularly update the data to reflect the latest information and trends. Implement policies to retire or archive outdated data. Monitor trends and emerging topics to update the bot’s knowledge base proactively.</p>
-                    
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Incorporate source diversity</strong></li>
-                                    <p class="text-large">Incorporate data from multiple sources, including internal documents, FAQs, and user manuals, to provide comprehensive coverage. Cross-check information from multiple sources to ensure accuracy and reliability. Regularly update each source to reflect the latest information.</p>
-                    
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Integrate system smoothly</strong></li>
-                                    <p class="text-large">Integrate the bot with existing systems in a way that allows it to function smoothly within the current technological ecosystem. This means ensuring that the bot can communicate and exchange data effectively with other software and platforms already in use.</p>
-                                </ul>
-                            </div>
-                    
-                            <div id="token-limits">
-                                <h2>Handling token limits</h2>
-                                <ul>
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Manage token exceed limits in bot context summaries</strong></li>
-                                    <p class="text-large mb-0">Dynamically manage token limits imposed by OpenAI models to ensure successful responses without errors.</p>
-                    
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Monitor token limits</strong></li>
-                                    <p class="text-large mb-0">Continuously monitor the total number of tokens in the input history and current query.</p>
-                    
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Drop the oldest history entry</strong></li>
-                                    <p class="text-large mb-0">Remove the oldest conversation history entries to stay within the limit. Continue removing entries until the total token count is within the permissible limit.</p>
-                    
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Retain recent history</strong></li>
-                                    <p class="text-large">Ensure that the most recent interactions are preserved for context continuity. This approach prevents token exceed errors and maintains the quality of interactions by retaining relevant history.</p>
-                                </ul>
-                            </div>
-                    
-                            <div id="Orchestration">
+                            <div id="orchestration">
                                 <h2>Orchestration</h2>
                                 <ul>
                                     <li class="text-xlarge" style="line-height: 1.5;"><strong>Implement workflow management</strong></li>
                                     <p class="text-large mb-0">Implement workflow management to handle complex interactions and guide users through multi-step processes. This ensures a smooth and logical flow of conversation.</p>
-                    
+                            
                                     <li class="text-xlarge" style="line-height: 1.5;"><strong>Integrate with services</strong></li>
                                     <p class="text-large">Integrate the bot with relevant third-party services and APIs to improve its capabilities. Ensure seamless data exchange between the bot and external systems.</p>
                                 </ul>
                             </div>
-                    
-                            <div id="cost-optimization">
-                                <h2>Cost estimates and optimization</h2>
-                                <ul>
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Estimate initial development and operational cost</strong></li>
-                                    <p class="text-large mb-0">Include design, planning, coding, testing, hosting, and maintenance expenses. Account for API usage fees, data retrieval costs, and expenses related to scaling the bot for increased traffic.</p>
-                    
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Conduct cost-benefit analysis and optimization</strong></li>
-                                    <p class="text-large">Evaluate the bot’s ROI and identify opportunities to
-                    
-                     reduce or optimize costs. Create a detailed budget, regularly update forecasts based on actual usage, track expenses, and establish cost control measures.</p>
-                                </ul>
-                            </div>
-                    
-                            <div id="operational-excellence">
-                                <h2>Operational excellence</h2>
-                                <ul>
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Document all processes</strong></li>
-                                    <p class="text-large mb-0">Document all aspects of the bot’s development, deployment, and maintenance processes. Ensure the documentation is accessible to all relevant stakeholders.</p>
-                    
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Provide training for users and administrators</strong></li>
-                                    <p class="text-large mb-0">Provide training sessions for users to help them understand how to interact with the bot effectively. Train administrators on how to manage and maintain the bot, including handling updates and addressing issues.</p>
-                    
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Use version control</strong></li>
-                                    <p class="text-large mb-0">Use version control systems like Git to manage changes to the bot’s codebase. Maintain clear commit messages and documentation to track changes and facilitate rollback if needed.</p>
-                    
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Monitor app service instances using health check</strong></li>
-                                    <p class="text-large">Integrate Azure's health check service to monitor App Service instances. This increases application availability by rerouting requests away from unhealthy instances and replacing instances that remain unhealthy. It pings a specified path of your web application at 1-minute intervals, ensuring that all endpoints for the bot are live and working.</p>
-                                </ul>
-                            </div>
-                    
-                            <div id="testing">
-                                <h2>Testing and evaluation</h2>
-                                <ul>
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Simulate real-world scenarios and edge cases</strong></li>
-                                    <p class="text-large mb-0">Test the bot in conditions that mimic actual usage as closely as possible. Test for edge cases where users may intentionally try to exploit or abuse the bot, such as spamming or using offensive language. Ensuring the bot can handle and mitigate such behavior is crucial for maintaining a positive user experience.</p>
-                    
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Perform model evaluation</strong></li>
-                                    <p class="text-large mb-0">Perform ‘groundedness’ testing to evaluate response accuracy, feedback tracking based on user satisfaction ratings, and engagement levels. Define KPIs to help track progress and identify areas for improvement.</p>
-                    
-                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Monitor user feedback</strong></li>
-                                    <p class="text-large">Monitor how users engage with the bot, including frequent questions, issues, and feedback. Use this data to identify trends and areas where the bot may need adjustments or improvements.</p>
-                                </ul>
-                            </div>
-                    
+                            
                             <div id="prompt-engineering">
                                 <h2>Prompt engineering</h2>
                                 <ul>
                                     <li class="text-xlarge" style="line-height: 1.5;"><strong>Design clear and effective prompts</strong></li>
                                     <p class="text-large mb-0">Design prompts that are easy to understand. Clear prompts help users know exactly what is expected of them, reducing confusion, and enhancing overall interaction.</p>
-                    
+                            
                                     <li class="text-xlarge" style="line-height: 1.5;"><strong>Use personalization</strong></li>
                                     <p class="text-large">Use information available to tailor prompts to users' specific needs or preferences. Personalized prompts can improve user engagement and satisfaction by making interactions feel more relevant and customized.</p>
                                 </ul>
                             </div>
-                    
+                            
+                            <div id="efficiency">
+                                <h2>Performance efficiency</h2>
+                                <ul>
+                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Categorize content effectively</strong></li>
+                                    <p class="text-large mb-0">Use tools like Microsoft Purview to categorize and manage content effectively. This helps in organizing data, making it easier to retrieve and update information.</p>
+                            
+                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Clean data regularly</strong></li>
+                                    <p class="text-large mb-0">Ensure data is clean, free of duplicates, and standardized. Remove irrelevant information and normalize data formats.</p>
+                            
+                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Ensure data relevance and recency</strong></li>
+                                    <p class="text-large mb-0">Use up-to-date and contextually relevant data. Regularly update the data to reflect the latest information and trends. Implement policies to retire or archive outdated data. Monitor trends and emerging topics to update the bot’s knowledge base proactively.</p>
+                            
+                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Incorporate source diversity</strong></li>
+                                    <p class="text-large mb-0">Incorporate data from multiple sources, including internal documents, FAQs, and user manuals, to provide comprehensive coverage. Cross-check information from multiple sources to ensure accuracy and reliability. Regularly update each source to reflect the latest information.</p>
+                            
+                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Integrate system smoothly</strong></li>
+                                    <p class="text-large">Integrate the bot with existing systems in a way that allows it to function smoothly within the current technological ecosystem. This means ensuring that the bot can communicate and exchange data effectively with other software and platforms already in use.</p>
+                                </ul>
+                            </div>
+                            
+                            <div id="testing">
+                                <h2>Testing and evaluation</h2>
+                                <ul>
+                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Simulate real-world scenarios and edge cases</strong></li>
+                                    <p class="text-large mb-0">Test the bot in conditions that mimic actual usage as closely as possible. Test for edge cases where users may intentionally try to exploit or abuse the bot, such as spamming or using offensive language. Ensuring the bot can handle and mitigate such behavior is crucial for maintaining a positive user experience.</p>
+                            
+                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Perform model evaluation</strong></li>
+                                    <p class="text-large mb-0">Perform ‘groundedness’ testing to evaluate response accuracy, feedback tracking based on user satisfaction ratings, and engagement levels. Define KPIs to help track progress and identify areas for improvement.</p>
+                            
+                                    <li class="text-xlarge" style="line-height: 1.5;"><strong>Monitor user feedback</strong></li>
+                                    <p class="text-large">Monitor how users engage with the bot, including frequent questions, issues, and feedback. Use this data to identify trends and areas where the bot may need adjustments or improvements.</p>
+                                </ul>
+                            </div>
+                            </div>
+                            
+                            <div id="reliability">
+                                <h1>Ensuring reliability and continuity</h1>
+                                <p class="text-large mb-0">In this section, we cover the critical practices needed to ensure the reliability and continuity of your knowledge bot. From monitoring tools to disaster recovery plans, these strategies are essential for effectively deploying your bot and keeping it running smoothly.</p>
+                                                        
+                                <div id="deployment">
+                                    <h2>Deployment</h2>
+                                    <ul>
+                                        <li class="text-xlarge" style="line-height: 1.5;"><strong>Establish a CI/CD pipeline</strong></li>
+                                        <p class="text-large mb-0">Implement a continuous integration/continuous deployment (CI/CD) pipeline to automate the deployment process. This ensures quick and reliable updates.</p>
+                                
+                                        <li class="text-xlarge" style="line-height: 1.5;"><strong>Set up monitoring and logging</strong></li>
+                                        <p class="text-large">Set up monitoring and logging to track the bot’s performance and detect issues in real time. Use these tools to gather insights and continuously improve the bot.</p>
+                                    </ul>
+                                </div>
+                                <div id="operational-excellence">
+                                    <h2>Operational excellence</h2>
+                                    <ul>
+                                        <li class="text-xlarge" style="line-height: 1.5;"><strong>Provide training for users and administrators</strong></li>
+                                        <p class="text-large mb-0">Provide training sessions for users to help them understand how to interact with the bot effectively. Train administrators on how to manage and maintain the bot, including handling updates and addressing issues.</p>
+                                
+                                        <li class="text-xlarge" style="line-height: 1.5;"><strong>Monitor app service instances using health check</strong></li>
+                                        <p class="text-large mb-0">Integrate Azure's health check service to monitor App Service instances. This increases application availability by rerouting requests away from unhealthy instances and replacing instances that remain unhealthy. It pings a specified path of your web application at 1-minute intervals, ensuring that all endpoints for the bot are live and working.</p>
+                                
+                                        <li class="text-xlarge" style="line-height: 1.5;"><strong>Implement failover mechanisms</strong></li>
+                                        <p class="text-large mb-0">Implement automatic failover mechanisms, such as using a secondary instance that can take over if the primary instance fails. This can be achieved through load balancers or cloud services that support failover configurations.</p>
+                                
+                                        <li class="text-xlarge" style="line-height: 1.5;"><strong>Set up automated alerts</strong></li>
+                                        <p class="text-large mb-0">Use monitoring tools to continuously track the bot’s performance, uptime, and error rates. Set up automated alerts to notify the support team of any anomalies, downtime, or performance issues. This enables quick response and resolution of potential problems before they impact users.</p>
+                                
+                                        <li class="text-xlarge" style="line-height: 1.5;"><strong>Develop a disaster recovery plan</strong></li>
+                                        <p class="text-large">Develop a detailed disaster recovery (DR) plan that outlines steps to recover from several types of failures, including hardware, software, and network issues.</p>
+                                    </ul>
+                                </div>
+                            </div> 
+
                             <div class="section-block pt-10 pb-10 bkg-white"></div>
                             <div class="post-info center">
                                 <span class="post-date">Last updated: August 1, 2024</span>
