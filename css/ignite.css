@@ -119,4 +119,13 @@
       margin-left: 2.5rem;
       margin-right: 2.5rem;
     }
+    .color-black.mb-5.h3{
+        font-size: 20px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
   }
+
+.pt-100{
+    padding-top: 10rem;
+}
