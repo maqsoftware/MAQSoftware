@@ -1,0 +1,134 @@
+        /* Style for the slider container */
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Style for the slider */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Style for each slide */
+        .slide {
+            flex: 0 0 100%;
+        }
+
+        /* Style for the slider navigation dots */
+        .slider-dots {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .dot {
+            position: relative;
+            top: 1px;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #888;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            position: relative;
+            top: 1px;
+            background-color: #333;
+        }
+
+        .rowFabric {
+            max-width: 175rem;
+            padding: 0;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            column-gap: 2rem;
+        }
+
+        .flexFabric {
+            width: 100%;
+            display: contents;
+        }
+
+        .paddingLeftFabric {
+            padding-left: 10%;
+            padding-right: 2.5%;
+        }
+
+        .paddingRightFabric {
+            padding-left: 2.5%;
+            padding-right: 10%;
+        }
+
+        .FabricBlog {
+            padding-left: 0%;
+            padding-right: 0%;
+            padding: 0;
+            height: fit-content;
+            /* background-image: url('/img/Microsoft-Fabric/Blog1.png'); */
+            /* background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat; */
+        }
+
+        .arrows {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+        }
+
+        .arrow {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .bloggerCard {
+            /* height: 30vh; */
+            /* border:1px solid gray; */
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .bloggerCard>div {
+            /* border: 1px black solid; */
+        }
+
+        .box-content {
+            padding: 1.5rem;
+            border: 1px solid lightgray;
+            border-top: none;
+        }
+
+        .cardContainer {
+            display: flex;
+
+        }
+
+        .dropdownStyle::after {
+            content: "\25BC";
+            position: absolute;
+            right: 25px;
+            transform: translateY(-50%) !important;
+        }
+
+        .wrapper-messageBox {
+            margin: 0;
+          }
+
+        #the-count {
+            float: right;
+            margin: 0;
+            /* padding: 0.1rem 0 0 0; */
+            font-size: 0.875rem;
+          }
+
+        .error-popup {
+            border: 2px solid red;
+            border-radius: 10px;
+        }

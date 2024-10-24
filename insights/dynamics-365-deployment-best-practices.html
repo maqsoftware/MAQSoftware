@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dynamics 365 Deployment Best Practices | MAQ Software Insights" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/best-practices/BPG001-main.jpg" />
+    <meta property="og:description" content="Deploy Dynamics 365 faster with minimal downtime using our 8 best practices." />
+    <!-- Twitter Theme -->
+    <meta name="twitter:widgets:theme" content="light">
+
+    <!-- Title &amp; Favicon -->
+    <title>Dynamics 365 Deployment Best Practices | MAQ Software Insights</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/core.min.css" />
+    <link rel="stylesheet" href="/css/skin.css" />
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-S0W302CGQG');
+    </script>
+</head>
+<body class="shop blog">
+
+    <!-- Header -->
+    <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent" data-bkg-threshold="100" data-sticky-threshold="0"></header>
+    <!-- Header End -->
+    <div class="section-block bkg-grey-ultralight"></div>
+    <!-- Content -->
+    <div class="content clearfix best-practices-text">
+        <div class="section-block clearfix pt-0 pb-0 bkg-grey-ultralight">
+            <div class="row">
+                <!-- Content Inner -->
+                <div class="column width-10 offset-1 content-inner blog-single-post bkg-grey-ultralight">
+                    <article class="post">
+                        <div class="post-content with-background">
+                            <h1 class="post-title center">Dynamics 365 Deployment Best Practice Guide</h1>
+                            <p class="text-large">Microsoft Dynamics 365 is a leading line of enterprise resource planning (ERP) and customer relationship management (CRM) applications. With the platform’s high business impact, it is critical for enterprise leaders to follow best practices. In the past five years, we have deployed Dynamics 365 over 100 times for our Fortune 500 customers. Here are the eight best practices we use to optimize every deployment.</p>
+                                <h2>Solutions</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Avoid broken references after deployment</strong></li>
+                                    <br>
+                                    <p class="text-large">Maintain the same GUIDs across environments for records referenced in workflows/views. Use custom actions to parameterize the referenced records instead of directly referencing a record in the workflow.</p>
+                                    <img src="/images/best-practices/D365-deployment-1.png" alt="">
+                                    <div class="center text-medium">Figure 1: Referencing records directly in the workflow</div><br><br>
+                                    <img src="/images/best-practices/D365-deployment-2.png" alt="">
+                                    <div class="center text-medium">Figure 2: Referencing records retrieved dynamically with custom actions in the workflow</div><br><br>
+                                    <li class="text-xlarge"><strong>Import multiple files at once with .zip</strong></li>
+                                    <br>
+                                    <p class="text-large">Individually importing multiple data files is time-consuming and requires the files to be imported in the correct order to resolve inter-file column references. When you zip multiple files together for import, you save time and don’t have to worry about import order; Dynamics 365 takes care of it for you.</p>
+                                    <li class="text-xlarge"><strong>Include only required fields in data import files</strong></li>
+                                    <br>
+                                    <p class="text-large">Including unnecessary fields in the data import file increases import time and may trigger workflows/plugins registered on those fields. For example, to update a contact address, don’t include unnecessary fields like first and last name in the import file.</p>
+                                    <li class="text-xlarge"><strong>Deactivate relevant plugins/workflows before bulk updating records</strong></li>
+                                    <br>
+                                    <p class="text-large">To update data as part of data migration activities without triggering business logic, deactivate plugins/workflows registered on the entities present in import file. This reduces import time.</p>
+                                    <li class="text-xlarge"><strong>Enable admin mode on your target environment during deployment</strong></li>
+                                    <br>
+                                    <p class="text-large">Admin mode locks the environment for all users, meaning only system administrators can access the environment. Enabling admin mode during deployment ensures that data is not compromised by unplanned changes. If an error occurs, data can be restored to previous versions.</p>
+                                    <li class="text-xlarge"><strong>Include a user-friendly message while in admin-mode</strong></li>
+                                    <br>
+                                    <p class="text-large">During deployment, the system may be slow. This is why we recommended locking the system for end users. Messages inform end users that the environment is down due to planned activities and will return after the indicated duration. Clear messages avoid support tickets from confused end users. </p>
+                                    <img src="/images/best-practices/D365-deployment-3.png" alt="">
+                                    <div class="center text-medium">Figure 3: Enabling Admin mode from Power Platform admin center</div><br><br>
+                                    <li class="text-xlarge"><strong>Back up the environment before deployment</strong></li>
+                                    <br>
+                                    <p class="text-large">Backups ensure that the system can be restored to its pre-deployment state in case a deployment failure occurs. Backups are faster than creating a copy of the environment.</p>
+                                    <img src="/images/best-practices/D365-deployment-4.png" alt="">
+                                    <div class="center text-medium">Figure 4: Creating a backup from Power Platform admin center</div><br><br>
+                                    <li class="text-xlarge"><strong>Run a test in a cloned production environment prior to production deployment </strong></li>
+                                    <br>
+                                    <p class="text-large">Tests enable team members to prepare a mitigation plan. Issues can be proactively flagged and resolved, mitigating end-user impact.</p>
+                                </ol>
+
+                                <h2>References</h2>
+                            <ul>
+                                <li class="text-large"><a href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/invoke-custom-actions-workflow-dialog" target="blank">Invoke custom actions from a workflow</a> – Microsoft, last updated February 15, 2022</li>
+                            </ul>
+                            <div class="row">
+                                <div class="column width-3">
+                                    <img src="/images/case-studies/CS050/CS050-data-management-landing.jpg" alt="">
+                                </div>
+                                <div class="column width-8 offset-1">
+                                    <p class="title-medium">Up Next</p><br><p class="title-small">Create a Single Source of Truth with Dynamics 365</p><br><a href="https://blog.maqsoftware.com/2020/12/dynamics-365-single-source-of-truth.html">Learn More &rarr;</a><br>
+                                </div>
+                            </div>
+                            <div class="section-block pt-10 pb-10 bkg-white"></div>
+                            <div class="post-info center">
+                                <span class="post-date">Last updated: March 25, 2024</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="section-block bkg-grey-ultralight"></div>
+    </div>
+    <!-- Content End -->
+    <!-- Footer -->
+    <footer id="footer" class="footer footer-light bkg-grey-ultralight"></footer>
+    <!-- Footer End -->
+    <!-- Js -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/timber.master.min.js"></script>
+    <script>
+$("#header").load("/header.html");
+$("#footer").load("/footer.html");
+    </script>
+</body>
+</html>

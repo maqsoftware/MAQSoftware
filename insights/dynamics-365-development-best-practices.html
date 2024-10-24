@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dynamics 365 Development Best Practices | MAQ Software Insights" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/best-practices/d365devbestpractice.png" />
+    <meta property="og:description"
+        content="Optimize your Dynamics 365 environment with our 32 best practices on developing fields, views, and more." />
+    <!-- Twitter Theme -->
+    <meta name="twitter:widgets:theme" content="light">
+
+    <!-- Title &amp; Favicon -->
+    <title>Dynamics 365 Development Best Practices | MAQ Software Insights</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+    <!-- Font -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/core.min.css" />
+    <link rel="stylesheet" href="/css/skin.css" />
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-S0W302CGQG');
+    </script>
+</head>
+
+<body class="shop blog">
+
+    <!-- Header -->
+    <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent"
+        data-bkg-threshold="100" data-sticky-threshold="0"></header>
+    <!-- Header End -->
+    <div class="section-block bkg-grey-ultralight"></div>
+    <!-- Content -->
+    <div class="content clearfix best-practices-text">
+        <div class="section-block clearfix pt-0 pb-0 bkg-grey-ultralight">
+            <div class="row">
+                <!-- Content Inner -->
+                <div class="column width-10 offset-1 content-inner blog-single-post bkg-grey-ultralight">
+                    <article class="post">
+                        <div class="post-content with-background">
+                            <h1 class="post-title center">Dynamics 365 Development Best Practice Guide</h1>
+                            <p class="text-large">This guide provides the best practices you need to optimize the
+                                following Dynamics 365 (D365) functions:</p>
+                            <ol class="index">
+                                <li class="text-xlarge"><a href="#solutions">Solutions</a></li>
+                                <li class="text-xlarge"><a href="#fields">Fields</a></li>
+                                <li class="text-xlarge"><a href="#relationships">Relationships</a></li>
+                                <li class="text-xlarge"><a href="#forms">Forms</a></li>
+                                <li class="text-xlarge"><a href="#views">Views</a></li>
+                                <li class="text-xlarge"><a href="#model-driven-apps">Model-driven Apps</a></li>
+                                <li class="text-xlarge"><a href="#processes">Processes</a></li>
+                                <li class="text-xlarge"><a href="#web-resources">Web Resources</a></li>
+                                <li class="text-xlarge"><a href="#plug-ins">Plug-ins</a></li>
+                            </ol>
+                            <div id="solutions">
+                                <h2>Solutions</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Add a publisher prefix</strong></li>
+                                    <br>
+                                    <p class="text-large">Adding a prefix to solution components that’s relative to you
+                                        or your organization enables users to quickly identify who created or customized
+                                        each component.</p>
+                                    <li class="text-xlarge"><strong>Manage customizations in custom solutions (not
+                                            default solutions)</a></strong></li>
+                                    <br>
+                                    <p class="text-large">Customizations created within default solutions cannot be
+                                        exported or distributed to other environments. In addition, the default
+                                        solutions use their default publisher, which results in an
+                                        unspecified/uncontrolled publisher being assigned to components. To avoid these
+                                        issues, create custom components (e.g., entities, web resources, modern apps,
+                                        processes, security roles) within custom solutions. If you want to customize
+                                        out-of-the-box (OOB) components, add them to the custom solution before
+                                        customization. </p>
+                                    <li class="text-xlarge"><strong>Add detailed component descriptions</strong></li>
+                                    <br>
+                                    <p class="text-large">Adding detailed descriptions to entities, forms, views,
+                                        fields, and processes prevents confusion and enables fellow developers to easily
+                                        identify what the component is for.</p>
+                                    <li class="text-xlarge"><strong>Export unmanaged and managed solutions for every
+                                            release</strong></li>
+                                    <br>
+                                    <p class="text-large">Unmanaged solutions can be used to reconfigure the system or
+                                        set up a new instance if the development environment fails. Managed solutions
+                                        must be used to deploy customizations in higher environments (QA,
+                                        pre-production, and production).</p>
+                                    <li class="text-xlarge"><strong>Create separate, unmanaged solutions for ribbon
+                                            customizations </strong></li>
+                                    <br>
+                                    <p class="text-large">Ribbon workbench imports entire solutions, recreates each
+                                        entity ribbon, and then publishes them. Fewer entities reduce ribbon update
+                                        time.</p>
+                                </ol>
+                            </div>
+                            <div id="fields">
+                                <h2>Fields</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Use unique field names</strong></li>
+                                    <br>
+                                    <p class="text-large">Duplicate field names may cause an error while importing data,
+                                        or confuse users creating personal views, Power Automate flows, and more.</p>
+                                    <li class="text-xlarge"><strong>Choose the correct field data type</strong></li>
+                                    <br>
+                                    <p class="text-large">Choose a data type that accurately reflects the data you want
+                                        to store. If your data contains null values, ensure the data type you select
+                                        supports null values.</p>
+                                    <p class="text-large"><strong>For example:</strong> If time is not required for a
+                                        date, then choose the “Date Only” field data type. Or, if a field allows only
+                                        two values without any default value, then choose the “Option Set” data type.
+                                    </p>
+                                    <li class="text-xlarge"><strong>Create alternate keys for fields or group of
+                                            fields</strong></li>
+                                    <br>
+                                    <p class="text-large">This prevents the user from creating records with duplicate
+                                        field values or combination of field values.</p>
+                                    <p class="text-large"><strong>Warning:</strong> Once the key is deployed to the
+                                        managed environment, it cannot be deleted.</p>
+                                    <li class="text-xlarge"><strong>Check ‘Disable most recently used items for this
+                                            field’ setting for filtered lookup fields</strong></li>
+                                    <br>
+                                    <p class="text-large">This prevents users from selecting unrelated options from
+                                        recent searches.</p>
+                                    <p class="text-large"><strong>For example:</strong> If the lookup fields are ‘State’
+                                        and ‘City’, disable most recently used items for ‘City’. If not disabled, users
+                                        may be able to select a city from recent searches irrelevant to the selected
+                                        state.</p>
+                                </ol>
+                            </div>
+                            <div id="relationships">
+                                <h2>Relationships</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Enable field mapping</strong></li>
+                                    <br>
+                                    <p class="text-large">Enable field mapping to auto-populate field data from a parent
+                                        record when a child record is created (common for sub-grids).</p>
+                                </ol>
+                            </div>
+                            <div id="forms">
+                                <h2>Forms</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Remove asynchronous function calls when saving quick
+                                            create forms</strong></li>
+                                    <br>
+                                    <p class="text-large">On quick create forms, the Save & Close button does not wait
+                                        for asynchronous function calls to complete (e.g. retrieve record WebAPI). If
+                                        possible, remove asynchronous calls when saving quick create forms and instead
+                                        execute the calls upon form load, or upon change of field values.</p>
+                                    <li class="text-xlarge"><strong>Register Event Handlers for field events
+                                            programmatically</strong></li>
+                                    <br>
+                                    <p class="text-large">Use JavaScript method addOnChange to bind field onChange
+                                        events instead of binding it from form properties. This helps you
+                                        programmatically gain control over field events.</p>
+                                </ol>
+                            </div>
+                            <div id="views">
+                                <h2>Views</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Use only alphanumeric characters for view
+                                            names</strong></li>
+                                    <br>
+                                    <p class="text-large">Using special characters for view names may cause issues when
+                                        importing from Excel.</p>
+                                    <li class="text-xlarge"><strong>Limit view columns to show only required
+                                            fields</strong></li>
+                                    <br>
+                                    <p class="text-large">Optional fields may not have data and may increase the size of
+                                        the grid to accommodate empty cells.</p>
+                                    <li class="text-xlarge"><strong>For sub-grid views, which show related records,
+                                            don't add a parent column to view</strong></li>
+                                    <br>
+                                    <p class="text-large">If you add a parent column to sub-grid views, the same value
+                                        will be shown for all related records.</p>
+                                    <p class="text-large"><strong>For example:</strong> If a state entity is added as a
+                                        sub-grid in a country entity, don't add a country column in sub-grid view of
+                                        state, as it will be the same for every country record.</p>
+                                    <li class="text-xlarge"><strong>Add icons for categorical fields</strong></li>
+                                    <br>
+                                    <p class="text-large">Adding icons for status, gender, rank, profit, loss, etc.
+                                        enables users to quickly identify fields.</p>
+                                    <li class="text-xlarge"><strong>Ensure columns and relative orders are consistent across both active and inactive views</strong></li>
+                                    <br>
+                                    <p class="text-large">This ensures consistency in information available for records
+                                        across both states.</p>
+                                </ol>
+                            </div>
+                            <div id="model-driven-apps">
+                                <h2>Model-driven Apps</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Replace the app’s GUID with a user-friendly URL
+                                            name</strong></li>
+                                    <br>
+                                    <p class="text-large">Use the app’s URL suffix to access the app instead of the
+                                        app’s globally unique identifier (GUID). Using the URL suffix is more
+                                        user-friendly.</p>
+
+                                </ol>
+                            </div>
+                            <div id="processes">
+                                <h2>Processes</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Update the stage of Business Process Flow (BPF) with
+                                            custom fields</strong></li>
+                                    <br>
+                                    <p class="text-large">
+                                        Instead of executing moveNext() and movePrevious() operations from scripts, consider updating custom fields (such as status or gender) directly from scripts. 
+                                        This action activates predefined background workflows, plug-ins, and Power Automate flows linked to the Business Process Flow (BPF) entity, updating the active BPF stage.</p>
+
+                                </ol>
+                            </div>
+                            <div id="web-resources">
+                                <h2>Web Resources</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Use namespace for JavaScript web resources</strong>
+                                    </li>
+                                    <br>
+                                    <p class="text-large">This ensures JavaScript methods are unique and prevents
+                                        collisions between identifiers.</p>
+                                    <li class="text-xlarge"><strong>Use relative paths to reference web
+                                            resources</strong></li>
+                                    <br>
+                                    <p class="text-large">This ensures the web resource references are environment
+                                        independent, as absolute path references include the environment name.</p>
+                                    <p class="text-large"><strong>For example:</strong> use an HTML page to reference a
+                                        JavaScript library.</p>
+                                    <li class="text-xlarge"><strong>Write code in a common JavaScript web resource and
+                                            add it to entity forms</strong></li>
+                                    <br>
+                                    <p class="text-large">This saves time by enabling developers to quickly reference
+                                        and reuse common code.</p>
+                                    <li class="text-xlarge"><strong>Pass ExecutionContext only when it's necessary; otherwise, use FormContext</strong></li>
+                                    <br>
+                                    <p class="text-large">ExecutionContext is a parent object of FormContext, which
+                                        enables not only form event handlers, but grid event handlers also using
+                                        GridContext.</p>
+                                    <li class="text-xlarge"><strong>Bind preSearch lookup field event only on form load
+                                            and use a global variable for dynamic custom filtration and update it
+                                            whenever required</strong></li>
+                                    <br>
+                                    <p class="text-large">This ensures high performance and easy maintenance of code
+                                        related to custom filtration of lookup fields.</p>
+                                    <li class="text-xlarge"><strong>Use Xrm.Constants</strong></li>
+                                    <br>
+                                    <p class="text-large">Use Xrm.Constants to access constants like attribute required
+                                        levels (e.g., none, required, recommended), attribute types (e.g., Boolean,
+                                        date/time, lookup), and form notification levels (e.g. error, warning).</p>
+                                    <li class="text-xlarge"><strong>Open forms with navigation popup</strong></li>
+                                    <br>
+                                    <p class="text-large">Use Xrm.Navigation.navigateTo to open forms (entity record,
+                                        entity list or HTML web resource) as a modal dialog instead of using
+                                        Xrm.Internal.openDialog or jQuery custom dialog frameworks which are either
+                                        deprecated or unsupported.</p>
+                                    <li class="text-xlarge"><strong>Use browser-specific web developer tools to debug
+                                            your code</strong></li>
+                                    <br>
+                                    <p class="text-large">Debugging a JavaScript web resource in console often requires
+                                        re-writing code. Debugging from browser tools is faster than using external
+                                        tools.</p>
+                                    <p class="text-large"><strong>For example:</strong> To retrieve current record data
+                                        from Xrm.WebApi, use Chrome DevTools’ Run Snippet feature, which has access to
+                                        the page's JavaScript context and can run on any page (Firefox DevTools has a
+                                        similar feature called Scratchpad).</p>
+                                </ol>
+                            </div>
+                            <div id="plug-ins">
+                                <h2>Plug-ins</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Use context.depth when updating fields using
+                                            plug-ins</strong></li>
+                                    <br>
+                                    <p class="text-large">If context.depth is not used, it causes infinite recursive
+                                        plug-in calls.</p>
+                                    <li class="text-xlarge"><strong>Update entity by creating a new instance with
+                                            required fields only</strong></li>
+                                    <br>
+                                    <p class="text-large">Instead of directly updating a case entity like
+                                        service.Update(case), create a new entity using Entity temp = new
+                                        Entity('case'), temp['x'] = 'value', service.Update(temp)). This creates a new
+                                        instance with required fields only, which avoids unnecessary field updates and
+                                        effort.</p>
+                                    <li class="text-xlarge"><strong>Declare main execution function as static</strong>
+                                    </li>
+                                    <br>
+                                    <p class="text-large">All other helper functions should be declared as private to
+                                        reduce code duplication and improve performance.</p>
+                                    <li class="text-xlarge"><strong>Create separate C# files to declare constants and
+                                            XML expressions and to handle custom and system exceptions</strong></li>
+                                    <br>
+                                    <p class="text-large">Creating separate files improves code readability.</p>
+                                    <li class="text-xlarge"><strong>Limit plug-in files to a maximum of 8MB</strong>
+                                    </li>
+                                    <br>
+                                    <p class="text-large">Microsoft Dynamics CRM plug-ins have a maximum plug-in size.
+                                        Exceeding that limit prevents remaining plug-ins from being imported.</p>
+                                </ol>
+                            </div>
+                            <h2>References</h2>
+                            <ul>
+                                <li class="text-large"><a
+                                        href="https://docs.microsoft.com/en-us/powerapps/maker/data-platform/create-solution#solution-publisher"
+                                        target="blank">Create a solution in Power Apps - Power Apps</a> – Microsoft
+                                    Docs, last updated June 14, 2023</li>
+                                <li class="text-large"><a
+                                        href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/define-alternate-keys-reference-records?view=op-9-1"
+                                        target="blank">Define alternate keys to reference records</a> – Microsoft Docs,
+                                    last updated March 30, 2023</li>
+                                <li class="text-large"><a
+                                        href="https://docs.microsoft.com/en-us/powerapps/developer/data-platform/tutorial-write-plug-in"
+                                        target="blank">Write and register a plug-in (Microsoft Dataverse) - Power
+                                        Apps</a> – Microsoft Docs, last updated September 8, 2023</li>
+                                <li class="text-large"><a
+                                        href="https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto"
+                                        target="blank">navigateTo (Client API reference) in model-driven apps - Power
+                                        Apps</a> – Microsoft Docs, last updated November 29, 2022</li>
+                                <li class="text-large"><a
+                                        href="https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/build-first-model-driven-app"
+                                        target="blank">Build your first model-driven app</a> – Microsoft Docs, last
+                                    updated February 22, 2022</li>
+                                <li class="text-large"><a
+                                        href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/change-solution-publisher-prefix?view=op-9-1"
+                                        target="blank">Change the prefix for the default publisher</a> – Microsoft Docs,
+                                    last updated February 15, 2022</li>
+                                <li class="text-large"><a
+                                        href="https://docs.microsoft.com/en-us/power-platform/alm/use-solutions-for-your-customizations"
+                                        target="blank">Default solution vs. custom solution - Power Platform</a> –
+                                    Microsoft Docs, last updated February 15, 2022</li>
+                                <li class="text-large"><a
+                                        href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/map-entity-fields?view=op-9-1"
+                                        target="blank">Create or edit mapping between entity fields</a> – Microsoft
+                                    Docs, last updated February 15, 2022</li>
+                                <li class="text-large"><a
+                                        href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/configure-event-handlers-legacy?view=op-9-1"
+                                        target="blank">Configure event handlers for a form in Dynamics 365</a> –
+                                    Microsoft Docs, last updated February 15, 2022</li>
+                                <li class="text-large"><a
+                                        href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-web-resources?view=op-9-1"
+                                        target="blank">Create web resources in Dynamics 365</a> – Microsoft Docs, last
+                                    updated February 15, 2022</li>
+                            </ul>
+                            <div class="row">
+                                <div class="column width-6">
+                                    <img src="/images/best-practices/BPG001-main.jpg" alt="">
+                                </div>
+                                <div class="column width-5 offset-1">
+                                    <p class="title-medium">Up Next</p><br>
+                                    <p class="title-small">Dynamics 365 Deployment Best Practices</p><br><a
+                                        href="/insights/dynamics-365-deployment-best-practices.html">Learn More
+                                        &rarr;</a><br>
+                                </div>
+                            </div>
+                            <div class="section-block pt-10 pb-10 bkg-white"></div>
+                            <div class="post-info center">
+                                <span class="post-date">Last updated: March 27, 2024</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="section-block bkg-grey-ultralight"></div>
+    </div>
+    <!-- Content End -->
+    <!-- Footer -->
+    <footer id="footer" class="footer footer-light bkg-grey-ultralight"></footer>
+    <!-- Footer End -->
+    <!-- Js -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/timber.master.min.js"></script>
+    <script>
+        $("#header").load("/header.html");
+        $("#footer").load("/footer.html");
+    </script>
+</body>
+
+</html>

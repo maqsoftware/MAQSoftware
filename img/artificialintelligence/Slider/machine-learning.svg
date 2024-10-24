@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="222" height="60" viewBox="0 0 222 60">
+  <defs>
+    <clipPath id="clip-Web_1920_6">
+      <rect width="222" height="60"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_6" data-name="Web 1920 – 6" clip-path="url(#clip-Web_1920_6)">
+    <rect width="222" height="60" fill="#fff"/>
+    <g id="Group_14" data-name="Group 14" transform="translate(1.405)">
+      <text id="Machine_Learning" data-name="Machine
+Learning" transform="translate(97 28)" font-size="18" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Machine</tspan><tspan x="0" y="18">Learning</tspan></text>
+      <g id="Group_11" data-name="Group 11" transform="translate(-367 21.368)">
+        <path id="Exclusion_3" data-name="Exclusion 3" d="M27.123,29.875H3.8L2.512,28.589,3.8,29.858,13.88,12.533h7.9L19.54,9.049V.11H9.875V8.836l-.1.177v.036L.024,26.1v0h0L0,26.076,9.774,9.013l0,0V9.012l0-8.9V0H19.54V.11h.119V8.836L30.417,26.581l-3.293,3.293h0ZM2.287,28.368.008,26.126.023,26.1l2.266,2.267Z" transform="translate(420.595 -4.6)" fill="#027dde" stroke="#027dde" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="Line_1" data-name="Line 1" x2="12.657" transform="translate(428.9 -4.459)" fill="none" stroke="#027dde" stroke-linecap="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>
