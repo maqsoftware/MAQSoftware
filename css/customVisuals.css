@@ -1,3 +1,12 @@
+.custom-visuals-body {
+
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 1.5;
+    color: #161616;
+  }
 .title-align{
     display: flex;
     align-items: center;
@@ -116,3 +125,120 @@
     align-self: baseline;
     margin-inline: 10%;
 }
+
+/* footer section */
+.flex-col-2{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .img{
+    width: 140px;
+    height: 140px;
+  }
+  .flex-col-2-contact-header{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+  }
+  
+  .section-block-padding-sm{
+    padding: 4% 10%;
+  }
+  
+  .section-block-padding-md{
+    padding: 8% 10%;
+  }
+  
+  .section-block-padding-lg{
+    padding: 10% 10%;
+  }
+  
+  .section-block-padding-footer{
+    padding: 0% 10%;
+  }
+
+  .max-section-size-footer{
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .footer-heading{
+    font-size: 1.5em;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .footer-links{
+    margin-top: 0.5em;
+    font-size: 1.2em;
+  }
+  
+  .specializations {
+    margin-top: 0.5em;
+    margin-right: 24px;
+  }
+  
+  .specializations-link{
+    color: white;
+  }
+  
+  .specializations-link:hover{
+    color: white;
+    /* text-decoration: underline; */
+  }
+
+  .flex-col-2-specializations{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+  }
+  
+  .footer-bottom{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 114rem;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .footer-top{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 114rem;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 2rem;
+  }
+
+  .centered-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .display-medium{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5em;
+    width: auto;
+    margin-bottom: 4px;
+  }
+  @media only screen and (max-width: 768px) {
+    .footer-top.two-columns-on-tablet > .row > [class*="width-"] {
+      width: 100% !important;
+    }
+    .mb-footer{
+      display: none;
+    }
+    .mb-footer-bottom{
+      display: flex;
+      flex-direction: column;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      align-items: center;
+    }
+  }
