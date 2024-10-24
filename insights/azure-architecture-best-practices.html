@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Azure Cost Optimization Best Practice Guide | MAQ Software Insights" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/expertise/cloud-main.jpg" />
+    <meta property="og:description" content="Optimize your Azure architecture for high performance at a low cost with our 5 best practices." />
+    <!-- Twitter Theme -->
+    <meta name="twitter:widgets:theme" content="light">
+
+    <!-- Title &amp; Favicon -->
+    <title>Azure Cost Optimization Best Practice Guide | MAQ Software Insights</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/core.min.css" />
+    <link rel="stylesheet" href="/css/skin.css" />
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-S0W302CGQG');
+    </script>
+</head>
+<body class="shop blog">
+
+    <!-- Header -->
+    <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent" data-bkg-threshold="100" data-sticky-threshold="0"></header>
+    <!-- Header End -->
+    <div class="section-block bkg-grey-ultralight"></div>
+    <!-- Content -->
+    <div class="content clearfix best-practices-text">
+        <div class="section-block clearfix pt-0 pb-0 bkg-grey-ultralight">
+            <div class="row">
+                <!-- Content Inner -->
+                <div class="column width-10 offset-1 content-inner blog-single-post bkg-grey-ultralight">
+                    <article class="post">
+                        <div class="post-content with-background">
+                            <h1 class="post-title center">Azure Cost Optimization Best Practice Guide</h1>
+
+                            <p class="text-large">Cost management is a recurring theme at the enterprise level. It is important that all responsible teams review & understand the cost. You can follow the phase-by-phase best practice approach below to optimize the cost of Azure.</p>
+                            <p class="text-large">At MAQ Software, we have migrated hundreds of applications to Azure. Based on our experience, we have compiled ten best practices to optimize costs for Azure platforms.</p>
+                            <ol>
+                                <li class="text-xlarge"><strong>Inventory & Tagging</strong>
+                                <ul>
+                                    <li class="text-large">Get list of all Azure resources using automated PowerShell script or using REST (Representational State Transfer) API.</li>
+                                    <li class="text-large">Perform Resource tagging such as Owner, Purpose, Environment, etc. for data enrichment.</li>
+                                    <li class="text-large">Enforce tagging conventions using Azure policy.</li>
+                                </ul>
+                                <p class="text-large">These steps will help centralized governance teams to make wise cost management decisions.</p>
+                                </li>
+                                <li class="text-xlarge"><strong>Cleanup</strong>
+                                <ul>
+                                    <li class="text-large">Find unused resources and notify the respective owners.</li>
+                                    <li class="text-large">Clean up idle & orphan resources.</li>
+                                    <li class="text-large">Audit and restrict access on creation of resources.</li>
+                                </ul>
+                            </li>
+                            <li class="text-xlarge"><strong>Resource Optimization</strong>
+                                <ul>
+                                    <li class="text-large">Review correct resource families & Stock Keeping Units (SKUs).</li>
+                                    <li class="text-large">Review correct resources/service types.</li>
+                                    <li class="text-large">Select proper resource location to avoid unwanted data movements between the datacenters.</li>
+                                    <li class="text-large">Identify suitable service plan (consumption basis, pay as you go).</li>
+                                    <li class="text-large">Review different storage configuration (Premium Solid-State Drives, Standard Solid-State Drives, Hot Tier, and Cold Tier).</li>
+                                    <li class="text-large">Review and plan for data archival.</li>
+                                </ul>
+                            </li>
+                            <li class="text-xlarge"><strong>Automation</strong>
+                                <ul>
+                                    <li class="text-large">Schedule Runbooks to pause and start different Azure services such as Azure Analysis Services and VMs.</li>
+                                    <li class="text-large">Setup autoscaling based on the CPU/memory usage metrics.</li>
+                                    <li class="text-large">Setup Azure policy to restrict the resource SKU/location while creating the resource.</li>
+                                    <li class="text-large">Setup cost alerts.</li>
+                                </ul>
+                            </li>
+                            <li class="text-xlarge"><strong>Solution Optimization</strong>
+                                <ul>
+                                    <li class="text-large">Review existing architecture.</li>
+                                    <li class="text-large">Identify how data flows in and out of Azure.</li>
+                                    <li class="text-large">Find resource utilization.</li>
+                                    <li class="text-large">Brainstorm to optimize resource instance within teams/environments.</li>
+                                    <li class="text-large">Review individual resource costs.</li>
+                                </ul>
+                            </li>
+                            <li class="text-xlarge"><strong>Setup Cost Budget & Alert</strong>
+                                <ul>
+                                    <li class="text-large">Set cost budgets for the resources to proactively manage costs, and to monitor how spending progresses over time.</li>
+                                    <li class="text-large">Notify owners/users if the cost exceeds the set threshold limit.</li>
+                                </ul>
+                            </li>
+                            <li class="text-xlarge"><strong>Buy Azure Reservation</strong>
+                                <ul>
+                                    <li class="text-large">Identify resources which can be purchased using Azure reservation.</li>
+                                    <li class="text-large">Pre-payment provides a discount on the resources you use. Costs for VM compute, SQL Database compute, Azure Cosmos DB, or other resources can be significantly reduced by up to 72% on pay as you go prices.</li>
+                                    <li class="text-large">Cancel reserved instances.</li>
+                                    <li class="text-large">Reserved instances provide a billing discount and do not affect the runtime state of the resources.</li>
+                                </ul>
+                            </li>
+                            <li class="text-xlarge"><strong>Azure Hybrid Benefits</strong>
+                                <ul>
+                                    <li class="text-large">Enable Azure Hybrid Benefits (AHB) for on-premises licenses in Azure.</li>
+                                    <li class="text-large">Use on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure.</li>
+                                </ul>
+                            </li>
+                            <li class="text-xlarge"><strong>Review Azure Advisor Recommendation</strong>
+                                <ul>
+                                    <li class="text-large">Review Azure Advisor recommendations to identify opportunities to reduce cost.</li>
+                                    <li class="text-large">Act on Azure Advisor recommendations.</li>
+                                    <li class="text-large">Example:
+                                        <ul style="list-style-type: square;">
+                                            <li class="text-large">Identify virtual machines with low utilization from compute or network usage standpoint and either shut down or resize the machine.</li>
+                                            <li class="text-large">Resize Azure SQL database SKUs based on current load.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="text-xlarge"><strong>Monitor</strong>
+                                <ul>
+                                    <li class="text-large">Visualize data in consolidated or custom dashboards.</li>
+                                    <li class="text-large">Detect spending anomalies and usage inefficiencies.</li>
+                                    <li class="text-large">Review and act if forecast exceed the defined threshold limit.</li>
+                                    <li class="text-large">Perform cost reviews on regular cadence.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                            <!-- <h2>References</h2>
+                            <ul>
+                                <li class="text-large"><a href="https://maqsoftware.com/expertise/cloudtransformation/azure-security-best-practices">Azure Security Best Practices</a> – MAQ Software, last updated June 21, 2021 </li>
+                                <li class="text-large"><a href="https://blog.maqsoftware.com/2020/12/azure-services-product-comparison.html">Azure Services: Product Comparison</a> – MAQ Software, last updated December 21, 2020</li>
+                                <li class="text-large"><a href="https://docs.microsoft.com/en-us/azure/architecture/browse/">Azure Reference Architectures</a> – Microsoft Corporation, updated regularly</li>
+                                <li class="text-large"><a href="https://docs.microsoft.com/en-us/azure/sql-data-warehouse/resource-classes-for-workload-management">Workload management with resource classes in Azure SQL Data Warehouse</a> Microsoft Corporation, last updated February 4, 2020 </li>
+                            </ul> -->
+                            <div class="row">
+                                <div class="column width-6">
+                                    <img src="/images/best-practices/BPG003-main.jpg" alt="">
+                                </div>
+                                <div class="column width-5 offset-1">
+                                    <p class="title-medium">Up Next</p><br><p class="title-small">Azure Security Best Practices</p><br><a href="/insights/azure-security-best-practices.html">Learn More &rarr;</a><br>
+                                </div>
+                            </div>
+                            <div class="section-block pt-10 pb-10 bkg-white"></div>
+                            <div class="post-info center">
+                                <span class="post-date">Last updated: July 27, 2023</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="section-block bkg-grey-ultralight"></div>
+    </div>
+    <!-- Content End -->
+    <!-- Footer -->
+    <footer id="footer" class="footer footer-light bkg-grey-ultralight"></footer>
+    <!-- Footer End -->
+    <!-- Js -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/timber.master.min.js"></script>
+    <script>
+// $("#header").load("/header");
+// $("#footer").load("/footer");
+$("#header").load("/header.html");
+$("#footer").load("/footer.html");
+    </script>
+</body>
+</html>

@@ -1,0 +1,429 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+    <!-- Open Graph -->
+    <meta property="og:title" content="DAX Best Practices | MAQ Software Insights" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/solutions/cloud-main.jpg" />
+    <meta property="og:description"
+        content="Improve the speed and functionality of your Power BI reports. Optimize DAX syntax and queries and discover the 8 most common mistakes to avoid." />
+    <!-- Twitter Theme -->
+    <meta name="twitter:widgets:theme" content="light">
+
+    <!-- Title &amp; Favicon -->
+    <title>DAX Best Practices | MAQ Software Insights</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+    <!-- Font -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Extra meta tags -->
+    <meta name="description"
+        content="Improve the speed and functionality of your Power BI reports. Optimize DAX syntax and queries and discover the 8 most common mistakes to avoid." />
+    <meta name="keywords"
+        content="DAX best practices, report optimization, improve speed, report performance, Power BI insights, Power BI tips">
+
+
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/core.min.css" />
+    <link rel="stylesheet" href="/css/skin.css" />
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-S0W302CGQG');
+    </script>
+</head>
+
+<body class="shop blog">
+
+    <!-- Header -->
+    <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent"
+        data-bkg-threshold="100" data-sticky-threshold="0"></header>
+    <!-- Header End -->
+    <div class="section-block bkg-grey-ultralight"></div>
+    <!-- Content -->
+    <div class="content clearfix best-practices-text">
+        <div class="section-block clearfix pt-0 pb-0 bkg-grey-ultralight">
+            <div class="row">
+                <!-- Content Inner -->
+                <div class="column width-10 offset-1 content-inner blog-single-post bkg-grey-ultralight">
+                    <article class="post">
+                        <div class="post-content with-background">
+                            <h1 class="post-title center">DAX Best Practices</h1>
+                            <h3 class="post-title center">Improve performance of your reports</h3>
+                            <p class="text-large">This guide enables you to speed up your Power BI reports by optimizing
+                                their back-end code. As the 2021 Microsoft Power BI Partner of the Year, we have proven
+                                expertise in implementing business intelligence and analytics
+                                solutions.</p>
+                            <p class="text-large">Based on our experience, we have compiled these best practices in the
+                                following categories:</p>
+                            <ol class="index">
+                                <li class="text-xlarge"><a href="#syntax">Improving DAX Syntax</a></li>
+                                <li class="text-xlarge"><a href="#functions">Optimizing DAX Functions</a></li>
+                                <li class="text-xlarge"><a href="#mistakes">Common Mistakes to Avoid</a></li>
+                            </ol>
+                            <h3>Before you start:</h3>
+                            <p class="text-large">Clear your DAX cache before optimizing DAX as your DAX cache builds up
+                                from internal VertiPaq queries. You can clear your cache from DAX Studio. Resetting your
+                                cache also enables you to measure performance gains more effectively.</p>
+                            <div id="syntax">
+                                <h2>Improving DAX Syntax</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Use DAX Formatter to format your code</strong></li>
+                                    <p class="text-large">Formatted code is easier to read and maintain. <a
+                                            href="https://www.daxformatter.com/">DAX Formatter</a> is a free tool that
+                                        enables you to transform raw DAX into readable code.</p>
+                                    <li class="text-xlarge"><strong>Use the DISTINCT() and VALUES() functions
+                                            consistently</strong></li>
+                                    <p class="text-large">Power BI adds a blank value to a column if it finds a
+                                        referential integrity violation. When making direct queries, Power BI adds a
+                                        blank value to columns because it cannot check for violations.</p>
+                                    <p class="text-large">DISTINCT() and VALUES() functions are different:</p>
+                                    <ol>
+                                        <li class="text-large">DISTINCT(): Does not return any blanks added due to an
+                                            integrity violation. The DISTINCT() function includes a blank only if it is
+                                            part of the original data.</li>
+                                        <li class="text-large">VALUES(): Returns both blanks from the original data and
+                                            blanks that Power BI added due to referential integrity violations.</li>
+                                    </ol>
+                                    <p class="text-large">Be consistent in your use of the DISTINCT() and VALUES()
+                                        functions throughout the entire report. Otherwise, you’ll have inconsistent
+                                        values for blank columns. We recommend using the VALUES() function if blank
+                                        values are not an issue.</p>
+                                    <li class="text-xlarge"><strong>Add column and measure references in your DAX
+                                            expressions</strong></li>
+                                    <p class="text-large">To ensure your DAX code/syntax/etc. can be understood and used
+                                        by anyone, you need to eliminate ambiguity. By adding column and measure
+                                        references, you ensure that anyone can easily read your DAX at a glance. We
+                                        recommend always using fully qualified column references and never using fully
+                                        qualified measure references. That way, you can quickly differentiate between a
+                                        column or a measure based on whether it’s fully qualified.</p>
+                                    <p class="text-large">Adding column and measure references also ensures that
+                                        expressions work when a measure home table is changed.</p>
+                                    <p class="text-large">With col reference: <code
+                                            class="color-red bkg-grey-ultralight">Profit = Orders[Sales] - Orders[Cost]</code>
+                                    </p>
+                                    <p class="text-large">Without col reference: <code
+                                            class="color-red bkg-grey-ultralight">Profit = [Sales] - [Cost]</code> </p>
+                                    <li class="text-xlarge"><strong>Reuse measures</strong></li>
+                                    <p class="text-large">Split your calculations in smaller blocks.</p>
+                                    <p class="text-large">Reuse the measure instead of writing the same code. Exercise
+                                        caution when you have different aggregations and multiple CALCULATE functions.
+                                    </p>
+                                    <p class="text-large"><code
+                                            class="color-red bkg-grey-ultralight">Sales $ = SUM ( Orders[Sales] )</code>
+                                    </p>
+                                    <p class="text-large"><code
+                                            class="color-red bkg-grey-ultralight">All Sales $ = CALCULATE ( [Sales $], ALL ( Orders ) )</code>
+                                    </p>
+                                    <p class="text-large"><code
+                                            class="color-red bkg-grey-ultralight">Sales % = DIVIDE ( [Sales $], [All Sales $] )</code>
+                                    </p>
+                                    <li class="text-xlarge"><strong>Use friendly names and add description for
+                                            measures</strong></li>
+                                    <p class="text-large">Make sure measure and column names are user friendly.</p>
+                                </ol>
+                            </div>
+                            <p class="text-large">There is no problem in adding spaces in the names as they should be
+                                self-explanatory. Users shouldn’t have to search for its definition. Add a description
+                                in the modelling view to provide additional information about the measure.</p>
+                            <div id="functions">
+                                <h2>Optimizing DAX Functions</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Use ISBLANK() instead of =Blank() check</strong>
+                                    </li>
+
+                                    <p class="text-large">Use the built-in function ISBLANK() to check for any blank
+                                        values instead of using the comparison operator = Blank(). While = Blank()
+                                        returns ‘True’ value for either blank values or empty strings, IsBlank
+                                        exclusively checks for blanks.</p>
+                                    <li class="text-xlarge"><strong>Use = 0 instead of checking for ISBLANK() || =
+                                            0</strong></li>
+
+                                    <p class="text-large">The BLANK value in Power BI is associated with the base value
+                                        of a column’s data type. The BLANK value corresponds to “0” for integers,
+                                        “(empty string)” for string columns, and “1–1–1900” for date fields.</p>
+                                    <p class="text-large">ISBLANK() || = 0 enacts two checks: first it checks if a
+                                        column is BLANK, then it checks for zeroes. = 0 performs both checks at once,
+                                        improving calculation speed.</p>
+                                    <p class="text-large">To check exclusively for zero, use the IN operator.</p>
+                                    <li class="text-xlarge"><strong>Use SELECTEDVALUE() instead of
+                                            HASONEVALUE()</strong></li>
+
+                                    <p class="text-large">It is common practice to use HASONEVALUE() to check if there
+                                        is only one value present in a column after applying slicers and filters.
+                                        However, when you do this, you also have to use the VALUES(ColumnName) DAX
+                                        function to retrieve that single value.</p>
+                                    <p class="text-large">SELECTEDVALUE() performs the above steps internally. It
+                                        automatically retrieves the single value if there is one and returns a blank if
+                                        there are multiple values available.</p>
+                                    <li class="text-xlarge"><strong>Use SELECTEDVALUE() instead of VALUES()</strong>
+                                    </li>
+
+                                    <p class="text-large">The VALUES() function returns an error if it encounters
+                                        multiple values. Often, users address the error using Error functions, which
+                                        negatively affects performance.</p>
+                                    <p class="text-large">Instead of using VALUES(), use SELECTEDVALUE(). The
+                                        SELECTEDVALUE() function returns a blank if it encounters multiple values
+                                        (instead of an error).</p>
+                                    <li class="text-xlarge"><strong>Use variables instead of repeating measures inside
+                                            the IF branch</strong></li>
+
+                                    <p class="text-large">Incorrect DAX: <code
+                                            class="color-red bkg-grey-ultralight">Ratio = IF([Total Rows] > 10, SUM(Revenue) /[Total Rows], 0)</code>
+                                    </p>
+                                    <p class="text-large">Here, measures are calculated continuously, meaning the [Total
+                                        Rows] expression is calculated twice: first for the condition check, then for
+                                        the true condition expression.</p>
+                                    <p class="text-large">Correct DAX: <code
+                                            class="color-red bkg-grey-ultralight">VAR totalRows = [Total Rows]; Ratio = IF(totalRows > 10, SUM(Revenue) / totalRows,0)</code>
+                                    </p>
+                                    <p class="text-large">Instead of calculating the same expression multiple times, you
+                                        can store the resulting measure value in a variable. You can use a variable
+                                        reference wherever required. The same variable process applies to all instances
+                                        where you call the same measure. Variables can help you avoid repetitive
+                                        functions.</p>
+                                    <p class="text-large">Note: Be aware that variables are actually constants.</p>
+                                    <li class="text-xlarge"><strong>Use DIVIDE() instead of /</strong></li>
+
+                                    <p class="text-large">/ raises an exception if the denominator is zero. The DIVIDE()
+                                        function internally performs a check to validate whether the denominator is
+                                        zero. If it is, it returns the value specified in a third (extra) parameter.</p>
+                                    <p class="text-large">For “invalid denominator” cases, you need to use the IF
+                                        condition when using the “/” operator. The DIVIDE() function performs IF checks
+                                        internally.</p>
+                                    <p class="text-large">Note: If you are certain the denominator value is not zero, it
+                                        is better to use the “/” operator without an IF check.</p>
+                                    <li class="text-xlarge"><strong>Use KEEPFILTERS() instead of FILTER(T)</strong></li>
+
+                                    <p class="text-large">The FILTER function overrides any existing set of filters on a
+                                        column applied via slicers. The KEEPFILTER function does not override the
+                                        existing set of filters. Instead, it uses the intersection of values present in
+                                        both, thus maintaining the current context. Use it when you want to maintain any
+                                        filters applied by slicers or at a report level while performing calculations.
+                                    </p>
+                                    <li class="text-xlarge"><strong>Use FILTER(all(ColumnName)) instead of
+                                            FILTER(values()) or FILTER(T)</strong></li>
+
+                                    <p class="text-large">To calculate measures independent of any filters applied to a
+                                        column, combine the All(ColumnName) function with the FILTER function instead of
+                                        using Table or VALUE(). For example: <code
+                                            class="color-red bkg-grey-ultralight">CALCULATE([Total Sales], FILTER(ALL(Products[Color]), Color = ‘Red’))</code>
+                                    </p>
+                                    <p class="text-large">Use ALL along with the FILTER function if there is no need to
+                                        keep the current context. Directly applying filters using expressions instead of
+                                        the FILTER function behaves in the same way as mentioned above. This method
+                                        internally translates using the ALL function in the filter. For example: <code
+                                            class="color-red bkg-grey-ultralight">CALCULATE([Total Sales], FILTER(ALL(Products[Color]), Color = ‘Red’))</code>
+                                    </p>
+                                    <p class="text-large">It is always better to apply filters to the desired column
+                                        than to the whole table, as this can easily scale.</p>
+                                    <p class="text-large">References: <a
+                                            href="https://pbidax.wordpress.com/2016/05/22/simple-filter-in-dax-measures/"
+                                            target="blank" class="underlined">hpbidax</a> and <a
+                                            href="https://www.sqlbi.com/articles/filter-arguments-in-calculate/"
+                                            target="blank" class="underlined">sqlbi</a></p>
+                                    <li class="text-xlarge"><strong>Use COUNTROWS instead of COUNT</strong></li>
+
+                                    <p class="text-large">In Power BI, you can either use the COUNT function to count
+                                        column values, or the COUNTROWS function to count table rows. Both functions
+                                        achieve the same result if the counted column contains no BLANKs.</p>
+                                    <p class="text-large">COUNTROWS is usually the better option for three reasons:</p>
+                                    <ol>
+                                        <li class="text-xlarge">It's more efficient, and will perform better</li>
+                                        <li class="text-xlarge">It doesn't consider BLANKs</li>
+                                        <li class="text-xlarge">The formula intention is clearer and self-descriptive
+                                        </li>
+                                    </ol>
+                                    <p class="text-large">For example: <code
+                                            class="color-red bkg-grey-ultralight">Sales Orders = COUNT(Sales [OrderDate])</code>
+                                    </p>
+                                    <p class="text-large">versus <code
+                                            class="color-red bkg-grey-ultralight">Sales Orders = COUNTROWS(Sales)</code>
+                                    </p>
+                                    <p class="text-large">Reference: <a
+                                            href="https://docs.microsoft.com/en-us/power-bi/guidance/dax-countrows"
+                                            target="blank" class="underlined">DAX-CountRows</a></p>
+                                    <li class="text-xlarge"><strong>Use SEARCH() with the last parameter</strong></li>
+
+                                    <p class="text-large">The SEARCH() DAX function accepts the last parameter as the
+                                        value that the query must return if the search string is not found. You should
+                                        always use the SEARCH() function instead of using Error functions along with
+                                        SEARCH().</p>
+                                    <li class="text-xlarge"><strong>ALL vs. ALLExcept</strong></li>
+
+                                    <p class="text-large">ALLEXCEPT() behaves exactly like ALL(), VALUES() as long as
+                                        the “exempted” columns are columns on the pivot. ALLEXCEPT() does NOT preserve
+                                        pivot context on columns that are not on the pivot. Use ALL() instead of
+                                        ALLEXCEPT() when using VALUES()</p>
+                                    <li class="text-xlarge"><strong>Avoid using the entire table with ALL</strong></li>
+
+                                    <p class="text-large">ALL() can be used with the entire table or with specific
+                                        columns.</p>
+                                    <p class="text-large">Avoid using entire table unless it’s necessary for
+                                        calculation; the same can be achieved by filtering with a column/columns
+                                        instead.</p>
+                                    <p class="text-large"><code
+                                            class="color-red bkg-grey-ultralight">All Sales = CALCULATE( SUM ( Orders[Sales] ), ALL ( Calendar ))</code>
+                                    </p>
+                                    <p class="text-large"><code
+                                            class="color-red bkg-grey-ultralight">Sales Orders = CALCULATE( SUM ( Orders[Sales] ), ALL ( Calendar[Fiscal Year], Calendar[Fiscal Month] ))</code>
+                                    </p>
+                                    <li class="text-xlarge"><strong>For virtual relationships, use TREATAS instead of
+                                            INTERSECT or FILTER</strong></li>
+
+                                    <p class="text-large">A virtual relationship is a DAX pattern to transfer a filter
+                                        context from one table to another, simulating the behaviour of a physical
+                                        relationship defined in the data model.</code></p>
+                                    <p class="text-large">The rule of thumb is to always use a physical relationship to
+                                        propagate filters whenever possible. If you cannot use a physical relationship,
+                                        you should implement a virtual relationship using TREATAS instead of INTERSECT
+                                        or FILTER</code></p>
+                                    <p class="text-large">References: <a
+                                            href="https://www.sqlbi.com/articles/propagate-filters-using-treatas-in-dax/"
+                                            target="blank" class="underlined">sqlbi</a></p>
+                                </ol>
+                            </div>
+                            <div id="mistakes">
+                                <h2>Common Mistakes To Avoid</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Do not change BLANK values to zeros or other
+                                            strings</strong></li>
+
+                                    <p class="text-large">It is common practice to replace blanks with zeros or other
+                                        strings. However, Power BI automatically filters all rows with blank values.
+                                        When viewing results from tables with large amounts of data, this limits the
+                                        result set and improves performance.</p>
+                                    <p class="text-large">If you replace blanks, Power BI does not filter the unwanted
+                                        rows, negatively affecting performance.</p>
+                                    <li class="text-xlarge"><strong>Use (a-b)/b along with variables instead of a/b — 1
+                                            or a/b*100–100</strong></li>
+
+                                    <p class="text-large">It is common practice to use a/b — 1 to calculate a ratio and
+                                        avoid duplicate measure calculations. However, you can achieve the same
+                                        performance by using variables and using (a-b)/b to calculate the ratio.</p>
+                                    <p class="text-large">If both a and b are blank values, then (a-b)/b returns a blank
+                                        value and Power BI will filter the values out. a/b — 1 would return -1 as the
+                                        result because both a and b are integers.</p>
+                                    <p class="text-large">Reference: <a
+                                            href="https://www.sqlbi.com/articles/optimizing-if-conditions-using-variables/"
+                                            target="blank" class="underlined">sqlbi</a></p>
+                                    <li class="text-xlarge"><strong>Stop using IFERROR() and ISERROR()</strong></li>
+
+                                    <p class="text-large">The IFERROR() and ISERROR() functions were widely used in
+                                        Excel when applying the FIND() and SEARCH() functions. They were necessary
+                                        because FIND() and SEARCH() returned errors if the query did not obtain the
+                                        required result.</p>
+                                    <p class="text-large">The IFERROR() and ISERROR() functions force the Power BI
+                                        engine to perform a step-by-step execution of each row to check for errors.
+                                        There is currently no method to directly state which row returned the error.</p>
+                                    <p class="text-large">The FIND() and SEARCH() DAX functions provide an extra
+                                        parameter that the query can pass. The parameter is returned if the search
+                                        string is not present. The FIND() and SEARCH() DAX functions check if more than
+                                        one value is returned. They also ensure nothing is divided by zero.</p>
+                                    <p class="text-large">You can avoid using the FIND() and SEARCH() DAX functions
+                                        altogether by using situationally appropriate DAX functions such as DIVIDE() and
+                                        SELECTEDVALUE(). The DIVIDE() and SELECTEDVALUE() functions perform error check
+                                        internally and return the expected results.</p>
+                                    <p class="text-large">Remember: You can <i>always</i> use DAX expressions in such a
+                                        way that they never return an error.</p>
+                                    <li class="text-xlarge"><strong>Do not use scalar variables in SUMMARIZE()</strong>
+                                    </li>
+
+                                    <p class="text-large">The SUMMARIZE() function is traditionally used to group
+                                        columns and return resulting aggregations. However, the SUMMARIZECOLUMNS()
+                                        function is newer and more optimized. Use that instead.</p>
+                                    <p class="text-large">Only use SUMMARIZE() for grouped elements of a table that
+                                        don’t have any associated measures or aggregations. For example: <code
+                                            class="color-red bkg-grey-ultralight">SUMMARIZE(Table, Column1, Column2)</code>
+                                    </p>
+                                    <li class="text-xlarge"><strong>Avoid using the AddColumns() function inside measure
+                                            expressions</strong></li>
+
+                                    <p class="text-large">Measures are calculated iteratively by default. If measure
+                                        definitions use iterative functions such as AddColumns(), Power BI creates
+                                        nested iterations, which negatively affect report performance.</p>
+                                    <li class="text-xlarge"><strong>Check if you can convert your column to a Boolean
+                                            column</strong></li>
+                                    <p class="text-large">If there are only two distinct values in a column, check if
+                                        the column can be converted to use a Boolean data type (true/false). Boolean
+                                        data types speed up processing when you have a large number of rows.</p>
+                                    <li class="text-xlarge"><strong>Avoid filtering on string columns</strong></li>
+                                    <p class="text-large">Instead, use ID columns for filtering. For example, if you
+                                        need to filter by sales location, assign each location a numeric ID. This means
+                                        you filter by integer columns rather than string columns. Now, you can take
+                                        advantage of the VertiPaq engine, which uses value encoding to reduce the memory
+                                        of a column.</p>
+                                    <p class="text-large">Note: Value encoding only works on integers.</p>
+                                    <li class="text-xlarge"><strong>Work upstream, if possible</strong></li>
+                                    <p class="text-large">If certain calculations require complex DAX formular, or if
+                                        multiple filters are applied repeatedly in DAX measures and calculations,
+                                        consider creating calculated columns or flags in the back end.</p>
+                                </ol>
+                            </div>
+                            <h2>References</h2>
+                            <ul class="defaultBody">
+                                <li class="text-large"><a
+                                        href="https://docs.microsoft.com/en-us/dax/data-analysis-expressions-dax-reference">Data
+                                        Analysis Expressions (DAX) Reference</a> – Microsoft Corporation, updated
+                                    regularly</li>
+                                <li class="text-large"><a
+                                        href="https://docs.microsoft.com/en-us/dax/dax-function-reference">DAX function
+                                        reference</a> – Microsoft Corporation, published June 21, 2022 </li>
+                                <li class="text-large"><a
+                                        href="https://docs.microsoft.com/en-us/power-bi/power-bi-reports-performance">Optimization
+                                        guide for Power BI</a> – Microsoft Corporation, published February 26, 2023
+                                </li>
+                            </ul>
+
+                            <div class="row">
+                                <div class="column width-6">
+                                    <img src="/img/blog/AzureDevOpsBestPracticeguide.png" alt="">
+                                </div>
+                                <div class="column width-6">
+                                    <H2>Azure DevOps Best Practice Guide</H2>
+                                    <p class="text-large">Optimize your DevOps strategies with our 9 essential best
+                                        practices</p>
+                                    <a href="/insights/azure-dev-ops-best-practices-guide.html">Read More &rarr;</a><br>
+                                </div>
+                            </div>
+                            <div class="section-block pt-10 pb-10 bkg-white"></div>
+                            <div class="post-info center">
+                                <span class="post-date">Last updated: July 27, 2023</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="section-block bkg-grey-ultralight"></div>
+    </div>
+    <!-- Content End -->
+    <!-- Footer -->
+    <footer id="footer" class="footer footer-light bkg-grey-ultralight"></footer>
+    <!-- Footer End -->
+    <!-- Js -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script>
+    <script src="/js/timber.master.min.js"></script>
+    <script>
+        // $("#header").load("/header");
+        // $("#footer").load("/footer");
+        $("#header").load("/header.html");
+        $("#footer").load("/footer.html");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Azure Databricks Best Practices | MAQ Software Insights" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/expertise/cloud-main.jpg" />
+    <meta property="og:description"
+        content="Improve the speed and functionality of your Power BI reports. Optimize DAX syntax and queries and discover the 8 most common mistakes to avoid." />
+    <!-- Twitter Theme -->
+    <meta name="twitter:widgets:theme" content="light">
+
+    <!-- Title &amp; Favicon -->
+    <title>Azure DevOps Best Practices | MAQ Software Insights</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+    <!-- Font -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/core.min.css" />
+    <link rel="stylesheet" href="/css/skin.css" />
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-S0W302CGQG');
+    </script>
+</head>
+
+<body class="shop blog">
+
+    <!-- Header -->
+    <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent"
+        data-bkg-threshold="100" data-sticky-threshold="0"></header>
+    <!-- Header End -->
+    <div class="section-block bkg-grey-ultralight"></div>
+    <!-- Content -->
+    <div class="content clearfix best-practices-text">
+        <div class="section-block clearfix pt-0 pb-0 bkg-grey-ultralight">
+            <div class="row">
+                <!-- Content Inner -->
+                <div class="column width-10 offset-1 content-inner blog-single-post bkg-grey-ultralight">
+                    <article class="post">
+                        <div class="post-content with-background">
+                            <h1 class="post-title center">Azure DevOps Best Practice Guide</h1>
+
+                            <div id="security">
+                                <ol>
+                                    <li class="text-xlarge"><strong>Plan sprints effectively</strong></li>
+                                    <br>
+                                    <p class="text-large">Define sprint goals, prioritize activities, estimate efforts,
+                                        track tasks, and create sprint backlogs in Azure DevOps. After each sprint, do a
+                                        sprint retrospective to analyze the activities done in the sprint. Plan for the
+                                        next sprint effectively based on the sprint backlogs. </p>
+                                    <li class="text-xlarge"><strong>Create a wiki</strong></li>
+                                    <br>
+                                    <p class="text-large">Creating a centralized knowledge base helps in improving
+                                        collaboration and communication between team members. Creating a wiki in ADO
+                                        also stores project architectures, personas, and knowledge base artifacts. Here
+                                        are some steps to take:
+                                    <ol>
+                                        <li class="text-large">Create deployment documents to guide team members on how
+                                            to build and deploy applications in the environments.</li>
+                                        <li class="text-large">Create SOP (Standard Operating Procedure) documents to
+                                            provide clarification on the accountability of team members on the tasks.
+                                        </li>
+                                    </ol>
+                                    </p>
+                                    <li class="text-xlarge"><strong>Implement Continuous Integration/Continuous Delivery
+                                            (CI/CD) </strong></li>
+                                    <br>
+                                    <p class="text-large">CI/CD is a key component of DevOps that emphasizes automation,
+                                        collaboration, and fast feedback. In general:
+                                    <ol>
+                                        <li class="text-large">Focus on continuous delivery by planning and setting up
+                                            policies to develop the code. </li>
+                                        <li class="text-large">Secure critical files by adding mandatory reviews for
+                                            each release. </li>
+                                        <li class="text-large"> Validate each build before sending it to the next stage.
+                                        </li>
+                                        <li class="text-large">Configure pipelines to run environment setup scripts as
+                                            part of the deployment process. </li>
+                                    </ol>
+                                    </p>
+                                    <p class="text-large"><b>Continuous integration</b> can be done through the building
+                                        and testing of new code, and the following steps:
+                                    <ol>
+                                        <li class="text-large">Create different task groups if multiple pipelines run
+                                            the same tasks. </li>
+                                        <li class="text-large">Automate quality checks that catch quality issues on the
+                                            dev servers. </li>
+                                    </ol>
+                                    </p>
+                                    <p class="text-large">Advancements in tools and cloud infrastructure have made
+                                        continuous integration easier than before. Through all this, customers benefit
+                                        from timely access to the latest release.</p>
+                                    <p class="text-large">Similarly, there are also steps that are taken for continuous
+                                        deployment:
+                                    <ol>
+                                        <li class="text-large">Deploy code changes to production automatically once they
+                                            have passed the necessary tests. This enables teams to release code faster
+                                            and more frequently. However, it also requires more robust testing and
+                                            monitoring processes to ensure that issues are caught and addressed quickly.
+                                        </li>
+                                        <li class="text-large">Store no secrets in the release pipeline.</li>
+                                        <li class="text-large">Upload required certificates and signing keys to secure
+                                            files.</li>
+                                        <li class="text-large">Identify post-deployment scenarios and run them after
+                                            deployment.</li>
+                                    </ol>
+                                    </p>
+                                    <p class="text-large">Links to setup CI/CD pipelines: </p>
+                                    <link><a class="text-large"
+                                        href="https://learn.microsoft.com/en-us/azure/devops/pipelines/apps/cd/azure/cicd-data-overview?view=azure-devops">Overview
+                                        of CI/CD data pipelines on Microsoft Azure - Azure Pipelines | Microsoft Learn
+                                    </a></link>
+                                    <br>
+                                    <a class="text-large"
+                                        href="https://learn.microsoft.com/en-us/azure/app-service/deploy-azure-pipelines?tabs=yaml">Configure
+                                        CI/CD with Azure Pipelines - Azure App Service | Microsoft Learn </a>
+                                    <br>
+                                    <br>
+                                    <li class="text-xlarge"><strong>Implement security practices continuously</strong>
+                                    </li>
+                                    <br>
+                                    <p class="text-large">Ensure continuous implementation of security practices in
+                                        DevOps by integrating security into every aspect of the software development
+                                        lifecycle. This should occur from planning, all the way to deployment and
+                                        maintenance.</p>
+                                    <p class="text-large">Incorporate security testing into the CI/CD pipeline. This
+                                        approach enables you to test and detect security vulnerabilities early in the
+                                        development process. You can identify potential security threats and risks by
+                                        conducting threat modeling at the beginning of projects.</p>
+                                    <p class="text-large">Secure Configuration Management (SCM) ensures that all
+                                        software and hardware configurations are secure and up to date. This includes
+                                        managing access controls, encryption keys, and other security-related settings.
+                                    </p>
+                                    <li class="text-xlarge"><strong>Monitor the right metrics continuously</strong></li>
+                                    <br>
+                                    <p class="text-large">Continuous monitoring is the key to ensuring that the software
+                                        is working as expected. You can continuously monitor the software's performance
+                                        and progress using burn-down and burn-up charts. These charts provide visual
+                                        representations of the work completed and the work remaining—enabling effective
+                                        tracking and monitoring.</p>
+                                    <p class="text-large">Setting up dashboards in Azure DevOps is another option. Use
+                                        the dashboards to track key project execution metrics, including capacity,
+                                        velocity, and other relevant indicators. </p>
+                                    <li class="text-xlarge"><strong>Focus on quality over quantity </strong>
+                                    </li>
+                                    <br>
+                                    <p class="text-large">Prioritizing quality over quantity is essential when
+                                        delivering software. To achieve this, teams must focus on building software that
+                                        meets or exceeds expected standards for functionality, usability, reliability,
+                                        and security.</p>
+                                    <p class="text-large">By emphasizing quality, teams ensure that the software
+                                        delivered is more reliable, secure, and user-friendly. They achieve this by:
+                                    <ul>
+                                        <li class="text-large">Implementing code review practices through pull requests.
+                                        </li>
+                                        <li class="text-large">Conducting thorough testing using well-defined test plans
+                                            and test suites. </li>
+                                        <li class="text-large">Identifying and addressing issues early in the
+                                            development process.</li>
+                                    </ul>
+                                    </p>
+                                    <br>
+                                    <p class="text-large">This approach minimizes the need for rework and enables faster
+                                        and more frequent releases, delivering exceptional software that builds customer
+                                        trust and loyalty while reducing the risk of errors, downtime, or security
+                                        breaches.</p>
+                                    <li class="text-xlarge"><strong>Focus on concepts first, and then on tools </strong>
+                                    </li>
+                                    <br>
+                                    <p class="text-large">In DevOps, selecting the right tool can improve the
+                                        collaboration and efficiency of the team. It helps them to build great software.
+                                        Follow these steps to optimize your process:
+                                    <ol>
+                                        <li class="text-large">Define your requirements first and do deep research on
+                                            available tools in the marketplace. </li>
+                                        <li class="text-large">Do the feasibility analysis of the tool based on your
+                                            requirements.</li>
+                                        <li class="text-large">Check how the tool can be integrated with other tools in
+                                            the project.</li>
+                                        <li class="text-large">Review all security and data protection features to avoid
+                                            any vulnerabilities.</li>
+                                        <li class="text-large">Assess the cost matrix to select the product with the
+                                            best value for money.</li>
+                                    </ol>
+                                    </p>
+                                    <p class="text-large">Repeatedly pursuing new tools will force the team to redo the
+                                        steps mentioned above. That would result in wasted cost, time, and effort. </p>
+
+                                    <li class="text-xlarge"><strong>Put the customer’s satisfaction first </strong></li>
+                                    <br>
+                                    <p class="text-large">Ensure customer preferences are prioritized throughout the
+                                        SDLC (Software Development Life Cycle). Begin by gathering customer requirements
+                                        and regularly seeking feedback from them. Doing this will help ensure alignment
+                                        and satisfaction from the customer throughout the development process.
+                                    </p>
+                                    <p class="text-large">Implement continuous delivery practices to provide value
+                                        frequently and focus on creating user-friendly software. Continuously collect
+                                        user feedback through surveys, customer interactions, and collaborative
+                                        workshops. You can utilize tools such as checklists and templates to streamline
+                                        the process. </p>
+                                    <li class="text-xlarge"><strong>Switch to microservices </strong></li>
+                                    <br>
+                                    <p class="text-large">Microservices are small services combined to make a larger
+                                        project. Switching to them will provide greater agility and scalability.
+                                        Identify the boundaries and plan for the architecture for a smooth delivery of
+                                        the project. </p>
+                                </ol>
+                            </div>
+                            <div class="row">
+                                <div class="column width-6">
+                                    <img src="/img/blog/BPG007-main.jpg" alt="">
+                                </div>
+                                <div class="column width-6">
+                                    <H2>Azure Databricks Best Practice Guide</H2>
+                                    <p class="text-large">Improve job speed and save storage with our 18 Azure
+                                        Databricks best practices</p>
+                                    <a href="/insights/azure-databricks-best-practices.html">Read More &rarr;</a><br>
+                                </div>
+                            </div>
+                            <div class="section-block pt-10 pb-10 bkg-white"></div>
+                            <div class="post-info center">
+                                <span class="post-date">Last updated: June 13, 2023</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="section-block bkg-grey-ultralight"></div>
+    </div>
+    <!-- Content End -->
+    <!-- Footer -->
+    <footer id="footer" class="footer footer-light bkg-grey-ultralight"></footer>
+    <!-- Footer End -->
+    <!-- Js -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/timber.master.min.js"></script>
+    <script>
+        // $("#header").load("/header");
+        // $("#footer").load("/footer");
+        $("#header").load("/header.html");
+        $("#footer").load("/footer.html");
+    </script>
+</body>
+
+</html>

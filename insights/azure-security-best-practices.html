@@ -1,0 +1,406 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Azure Security Best Practices | MAQ Software Insights" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/expertise/cloud-main.jpg" />
+    <meta property="og:description"
+        content="Strengthen your cloud security and protect your assets with 19 security best practices." />
+    <!-- Twitter Theme -->
+    <meta name="twitter:widgets:theme" content="light">
+
+    <!-- Title &amp; Favicon -->
+    <title>Azure Security Best Practices | MAQ Software Insights</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+    <!-- Font -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/core.min.css" />
+    <link rel="stylesheet" href="/css/skin.css" />
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-S0W302CGQG');
+    </script>
+</head>
+
+<body class="shop blog">
+
+    <!-- Header -->
+    <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent"
+        data-bkg-threshold="100" data-sticky-threshold="0"></header>
+    <!-- Header End -->
+    <div class="section-block bkg-grey-ultralight"></div>
+    <!-- Content -->
+    <div class="content clearfix best-practices-text">
+        <div class="section-block clearfix pt-0 pb-0 bkg-grey-ultralight">
+            <div class="row">
+                <!-- Content Inner -->
+                <div class="column width-10 offset-1 content-inner blog-single-post bkg-grey-ultralight">
+                    <article class="post">
+                        <div class="post-content with-background">
+                            <h1 class="post-title center">Azure Security Best Practice Guide</h1>
+                            <p class="text-large">This Azure security best practice guide will help you improve, scale,
+                                and centralize your cloud security. We have compiled these best practices based on our
+                                experience, including:</p>
+                            <ol class="index">
+                                <li class="text-xlarge"><a href="#Access">Limiting Access to Sensitive Data</a></li>
+                                <li class="text-xlarge"><a href="#Threat">Implementing Threat Protection and
+                                        Safeguards</a></li>
+                                <li class="text-xlarge"><a href="#Security">Centralizing and Managing Security</a></li>
+                            </ol>
+                            <div id="Access">
+                                <h2>Limiting Access to Sensitive Data</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Implement a <a
+                                                href="https://www.microsoft.com/en-us/security/business/zero-trust"
+                                                target="_blank">Zero Trust</a> security model</strong></li>
+                                    <br>
+                                    <p class="text-large">The Zero Trust model is a security model that constantly
+                                        checks whether users within the system should have access to certain files and
+                                        systems. With hybrid work on the rise, <a
+                                            href="https://www.wsj.com/articles/why-the-hybrid-workplace-is-a-cybersecurity-nightmare-11623164400"
+                                            target="_blank">cyberattacks jumped 238%</a>. From a security standpoint,
+                                        it’s more important now than ever to plan for the worst-case scenario. The Zero
+                                        Trust model operates on the principle of “never trust, always verify.” It
+                                        assumes the corporate firewall has already been breached and verifies each
+                                        request that comes through as if it was coming from an uncontrolled network.
+                                    </p>
+                                    <p class="text-large">The Zero Trust model’s guiding principles are:</p>
+                                    <ul>
+                                        <li class="text-large">Verify explicitly: Authenticate and authorize using all
+                                            available data points, including user identity, location, device health,
+                                            service, data classification, and anomalies.</li>
+                                        <li class="text-large">Use least-privileged access: Limit user access to data
+                                            using risk-based adaptive policies and Just-in-Time and Just-Enough Access
+                                            (JIT/JEA)</li>
+                                        <li class="text-large">Assume breach: Segment access by networks, user, devices,
+                                            and application awareness. Encrypt all sessions end to end and use analytics
+                                            to analyze and improve your existing defenses.</li>
+                                    </ul>
+                                    <li class="text-xlarge"><strong>Restrict access to <a
+                                                href="https://docs.microsoft.com/en-us/azure/virtual-machines/security-recommendations#networking"
+                                                target="_blank">management ports</a></strong></li>
+                                    <br>
+                                    <p class="text-large">Management ports are the ports you use to connect to your
+                                        Azure virtual machines (VMs). Remote Desktop Protocol (RDP - 3389) and the
+                                        Secure Shell (SSH - 22) protocol are commonly used management ports that enable
+                                        admins to manage VMs from remote locations. However, using these protocols over
+                                        the internet enables attackers to use brute force techniques to gain access to
+                                        VMs. For example, attackers have been known to scan public cloud IP ranges for
+                                        known vulnerabilities and common passwords.</p>
+                                    <p class="text-large">Mitigate the risk by restricting access to management ports
+                                        with techniques like <a
+                                            href="https://docs.microsoft.com/en-us/azure/security-center/security-center-just-in-time"
+                                            target="_blank">just-in-time (JIT) VM access</a> to lock down inbound
+                                        traffic to your Azure VMs.</p>
+                                    <li class="text-xlarge"><strong>Use IP whitelisting (when applicable)</strong></li>
+                                    <br>
+                                    <p class="text-large">IP restrictions enable you to define which IP addresses can
+                                        access your service. Whitelisting IP addresses prevents unwanted or unauthorized
+                                        machines from accessing the service. The “allow” list can include individual IP
+                                        addresses or a range of IP addresses defined by a subnet mask. This gives you
+                                        close control over who can access your cloud data. Don’t assign allow rules with
+                                        broad ranges (for example, “allow 0.0.0.0 through 255.255.255.255”). </p>
+                                    <p class="text-large">Even when whitelisting IP address, protect your virtual
+                                        network using Azure Firewall. On top of limiting access to IP ranges, restrict
+                                        access to limited ports.</p>
+                                    <li class="text-xlarge"><strong>Use <a
+                                                href="https://docs.microsoft.com/en-us/azure/security/fundamentals/azure-disk-encryption-vms-vmss"
+                                                target="_blank">Azure Disk Encryption</a> to encrypt Azure VMs</strong>
+                                    </li>
+                                    <br>
+                                    <p class="text-large">Most Azure managed disks are automatically encrypted via
+                                        server-side encryption (SSE) with a platform-managed key (PMK). For OS and data
+                                        disks, you should also enable Azure Disk Encryption (ADE). This way, your data
+                                        has two levels of protection. ADE helps protect and safeguard your data by using
+                                        Azure Key Vault to control and manage encryption keys and secrets. With only SSE
+                                        enabled, downloaded VHD files will be decrypted and can be used to create a new
+                                        VM. With both SSE and ADE enabled, users cannot use downloaded VHD files to
+                                        create a new VM unless provided the decryption key.</p>
+                                    <p class="text-large">Similarly, always enable Transparent Data Encryption (TDE) on
+                                        SQL databases to secure data at rest</p>
+                                    <li class="text-xlarge"><strong>Secure your Azure Active Directory (AD) <a
+                                                href="https://docs.microsoft.com/en-us/azure/active-directory/develop/secure-least-privileged-access"
+                                                target="_blank">app registrations</a></strong></li>
+                                    <br>
+                                    <p class="text-large">Azure AD app registrations are a critical part of your
+                                        business and security operations. Any misconfiguration or lapse in app hygiene
+                                        not only increases downtime for end users, but actually compromises the entire
+                                        system. To ensure your Azure AD app registrations are secure, implement the
+                                        following practices:</p>
+                                    <ul>
+                                        <li class="text-large">Use least privileged access. Grant only the minimum set
+                                            of permissions required for end users to perform the required tasks in an
+                                            application, service, or system. </li>
+                                        <li class="text-large">Clearly define app registration credentials. Credentials
+                                            are key when using app registrations as a confidential client. If your app
+                                            registration is used only as a Public Client App (allows users to sign in
+                                            using a public endpoint), ensure that you don't have any credentials on your
+                                            application object. </li>
+                                        <li class="text-large">Minimize app ownership. Once a quarter, run through the
+                                            app owners list to ensure owners are still part of the organization. </li>
+                                    </ul>
+                                    <li class="text-xlarge"><strong>Use <a
+                                                href="https://docs.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-configure#:~:text=Privileged%20Identity%20Management%20(PIM)%20is,Microsoft%20365%20or%20Microsoft%20Intune."
+                                                target="_blank">Privileged Identity Management</a> (PIM)</strong></li>
+                                    <br>
+                                    <p class="text-large">PIM is an Azure AD service that enables you to manage,
+                                        control, and monitor access to key resources in your organization. With PIM, you
+                                        can provide as-needed and just-in-time (JIT) access to Azure resources and other
+                                        online Microsoft services such as Microsoft 365 and Microsoft Intune. PIM
+                                        provides time-based and approval-based role activation. This reduces the chance
+                                        of a malicious attacker gaining access to your system. It also limits authorized
+                                        users inadvertently impacting sensitive resources.</p>
+                                </ol>
+                            </div>
+                            <div id="Threat">
+                                <h2>Implementing Threat Protection and Safeguards</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Enable <a
+                                                href="https://azure.microsoft.com/en-us/services/azure-defender/#overview"
+                                                target="_blank">Azure Defender</a></strong></li>
+                                    <br>
+                                    <p class="text-large">Formerly known as Azure Advanced Threat Protection (ATP),
+                                        Azure Defender protects enterprise environments from targeted cyber-attacks and
+                                        insider threats. Azure Defender is a part of the Azure Security Center. It
+                                        detects threats throughout the phases of an advanced attack, including
+                                        reconnaissance, credential compromise, lateral movement, privilege escalation,
+                                        and domain dominance. Azure Defender is ideal for both cloud-native and hybrid
+                                        workload protection. Early threat detection is the key to halting attacks before
+                                        they impact your business.</p>
+                                    <li class="text-xlarge"><strong>Enable <a
+                                                href="https://docs.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks"
+                                                target="_blank">Multi-factor Authentication</a> (MFA)</strong></li>
+                                    <br>
+                                    <p class="text-large">Multi-factor authentication, also known as two-factor
+                                        authentication, adds a secondary layer of security to your systems. Azure AD MFA
+                                        verifies user identities via phone call, text message, or mobile app
+                                        notification. Azure AD MFA replaces outdated username and password
+                                        authentication, restricting unauthorized access. Because Azure AD MFA requires
+                                        access to a user’s phone, the user’s data and applications are protected even if
+                                        the user’s password is compromised. Organizations that do not add this extra
+                                        layer of identity protection are more susceptible to credential theft.</p>
+                                    <li class="text-xlarge"><strong>Maintain platform hygiene</strong></li>
+                                    <br>
+                                    <p class="text-large">A clean platform is a secure platform. Clean up your Azure
+                                        subscription by removing deprecated identities, users, and resources.
+                                        Periodically review access for existing users in your subscription. Follow Azure
+                                        Security Center guidelines by ensuring no more than three individuals are
+                                        identified as subscription owners.</p>
+                                    <li class="text-xlarge"><strong>Turn off Azure services and servers when not in use
+                                            and remove inactive resources</strong></li>
+                                    <br>
+                                    <p class="text-large">Only turn on the services you are actively using. This will
+                                        not only reduce the surface area of security threats, it will also reduce the
+                                        cost of Azure services. You shouldn’t be paying for a service you aren’t using.
+                                        To manage resources, create runbooks that automatically turn resources on/off at
+                                        scheduled times.</p>
+                                    <li class="text-xlarge"><strong>Set up locks on your resource groups</strong></li>
+                                    <br>
+                                    <p class="text-large">Locks safeguard the development teams from accidentally
+                                        deleting resources.</p>
+                                </ol>
+                            </div>
+                            <div id="Security">
+                                <h2>Centralizing and Managing Security</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong> Use the Azure <a
+                                                href="https://azure.microsoft.com/en-us/services/security-center/"
+                                                target="_blank">Security Center</a></strong></li>
+                                    <br>
+                                    <p class="text-large">Azure Security Center is a worthwhile investment to secure
+                                        your cloud assets and view your security status. Azure Security Center uses
+                                        machine learning and advanced analytics to detect existing and potential
+                                        threats, and suggest preventative actions. With Azure Security Center, you can:
+                                    </p>
+                                    <ul class="defaultBody">
+                                        <li class="text-large">Instantly implement Azure-native security solutions</li>
+                                        <li class="text-large">Manage security policy and compliance </li>
+                                        <li class="text-large">Continuously assess security status with real-time
+                                            monitoring</li>
+                                        <li class="text-large">Access a network map</li>
+                                        <li class="text-large">Improve security by following recommended controls for
+                                            each Azure service</li>
+                                        <li class="text-large">Protect against threats on both infrastructure as a
+                                            service (IaaS) and platform as a service (PaaS) environments</li>
+                                    </ul>
+                                    <br>
+                                    <p class="text-large"><strong>How to use Azure Security Center:</strong></p>
+                                    <p class="text-large">Define your security admins. The security admin role handles
+                                        alerts, Azure Defender, security policy, and the auto provisioning of log
+                                        analytics and extensions. As a rule of thumb, developers should be classified
+                                        using the Security Reader role.</p>
+                                    <p class="text-large">To review your security status using Azure Security Center, go
+                                        to the Azure menu and select Security Center>Overview. You will see:</p>
+                                    <ul class="defaultBody">
+                                        <li class="text-large">Azure Secure Score, which measures the security status of
+                                            your subscriptions (a higher score means lower risk level)</li>
+                                        <li class="text-large">Azure Defender Status (for all enabled resource types)
+                                        </li>
+                                        <li class="text-large">Inventory of resource health state </li>
+                                        <li class="text-large">Regulatory compliance such as SOC TSP, ISO 27001, PCO DSS
+                                            3.2.1 (you can enable the platform’s out-of-the-box compliance controls or
+                                            input custom controls)</li>
+                                        <li class="text-large">High-impact security recommendations and the potential
+                                            percentage increase in Azure Secure Score if implemented</li>
+                                    </ul>
+                                    <li class="text-xlarge"><strong> Use <a
+                                                href="https://docs.microsoft.com/en-us/azure/web-application-firewall/ag/ag-overview"
+                                                target="_blank">Azure Web Application Firewall</a> (WAF) on Azure
+                                            Application Gateway</strong></li>
+                                    <br>
+                                    <p class="text-large">WAF centralizes your web app protection to enable easy
+                                        monitoring and customization. WAF protects your web apps from vulnerabilities,
+                                        common exploits, and malicious attacks. WAF protects against cross-scripting and
+                                        SQL injection attacks, some of the most common web attacks in the last few
+                                        years.</p>
+                                    <p class="text-large">WAF also automatically updates to include protections against
+                                        new vulnerabilities, without the need to add additional configurations. </p>
+                                    <li class="text-xlarge"><strong>Use Azure Active Directory (AD) to manage identities
+                                            and access to cloud applications</strong></li>
+                                    <br>
+                                    <p class="text-large">Azure AD is a multi-tenant cloud directory and identity
+                                        management service. Azure AD secures and simplifies user access to cloud
+                                        applications with single sign-on. <a
+                                            href="https://azure.microsoft.com/en-us/services/active-directory/"
+                                            target="_blank">According to Microsoft</a>, Azure AD protects users from
+                                        99.9% of cybersecurity attacks. Azure AD also protects sensitive data and
+                                        applications with multi-factor authentication and machine learning-based
+                                        reports, which identify inconsistent access patterns.</p>
+                                    <li class="text-xlarge"><strong>Assign resource access to Active Directory groups,
+                                            not individuals</strong></li>
+                                    <br>
+                                    <p class="text-large">Many organizations give individual developers access to
+                                        resources such as Azure VMs or SQL Servers when they begin work on a project.
+                                        When those developers move to a different project, it becomes difficult to keep
+                                        track of access privileges that are no longer required. Individual permissions
+                                        often remain active even when the individual is no longer assigned to the
+                                        project. By assigning access to Azure AD groups instead of individuals, you
+                                        simplify access management and ensure that developers only have access to
+                                        resources for their projects. The group owner is empowered to ensure that only
+                                        those who are currently assigned to the project have access to its data.</p>
+                                    <p class="text-large">Periodically review your Azure AD groups. Assign roles based
+                                        on least privileged access policies, with subscription always restricted to a
+                                        reader role.</p>
+                                    <li class="text-xlarge"><strong>Use <a
+                                                href="https://azure.microsoft.com/en-us/services/key-vault/"
+                                                target="_blank">Azure Key Vault</a></strong></li>
+                                    <br>
+                                    <p class="text-large">Azure Key Vault safeguards cryptographic keys and secrets used
+                                        by cloud applications and services. With this feature, you can ensure
+                                        applications never have direct access to keys. Developers manage keys used for
+                                        Dev/Test and can seamlessly migrate keys managed by security operations to
+                                        production.</p>
+                                    <p class="text-large">When using Azure keys, ensure you: </p>
+                                    <ul class="text-large">
+                                        <li class="text-large">Limit user and identity access to certificates, secrets,
+                                            and keys </li>
+                                        <li class="text-large">Enable soft delete to retrieve objects that have been
+                                            accidentally deleted from the key vault</li>
+                                    </ul>
+                                    <li class="text-xlarge"><strong>Use managed identity wherever possible</strong></li>
+                                    <br>
+                                    <p class="text-large">A managed identity in Azure Active Directory (AAD) enables
+                                        applications to easily access other AAD-protected resources such as Azure Key
+                                        Vault. The Azure platform manages identities, eliminating the need to provision
+                                        or rotate secrets.</p>
+                                    <p class="text-large">Managed identity also automatically renews service principals,
+                                        which should always be enabled. Service principals are AAD application resources
+                                        that perform unattended resource and service-level operations.</p>
+                                    <img src="/images/best-practices/BPG003-1.jpg" style="border:ridge">
+                                    <br>
+                                    <br>
+                                    <li class="text-xlarge"><strong>Remove in-development copies of databases</strong>
+                                    </li>
+                                    <br>
+                                    <p class="text-large">During the software development process, programmers create
+                                        copies of existing databases to test their code. Additional backups are created
+                                        during system software upgrades when installing new versions of applications.
+                                        Over time, developers move on to new projects. Often, after moving to a new
+                                        project, developers do not remove unused copies and files from previous systems.
+                                        Leaving clutter on the server and file store is like leaving tools on the floor
+                                        of a factory. Someone is bound to trip and get hurt.</p>
+                                    <p class="text-large">Security starts and ends with discipline. To keep track of
+                                        your resources, create an automated runbook that informs admins of historical
+                                        databases. Remove any resource you aren’t using. This will ensure your workspace
+                                        is clean and organized.</p>
+                                    <li class="text-xlarge"><strong>Update your system as often as possible</strong>
+                                    </li>
+                                    <br>
+                                    <p class="text-large">Today’s internet landscape features evolving security threats.
+                                        To outpace cybersecurity attackers, Microsoft continually updates its products
+                                        and services. Update your own resources when the newest patches release to
+                                        ensure your security system is up to date and secure.</p>
+                                </ol>
+                            </div>
+                            <h3> References</h3>
+                            <ul class="defaultBody">
+                                <li class="text-large"><a
+                                        href="https://docs.microsoft.com/en-us/azure/security/security-best-practices-and-patterns">Azure
+                                        security best practices and patterns</a> – Microsoft Corporation, published
+                                    March 22, 2023 </li>
+                                <li class="text-large"><a
+                                        href="https://docs.microsoft.com/en-us/azure/security/azure-security-network-security-best-practices">Azure
+                                        network security best practices</a> – Microsoft Corporation, published March 16,
+                                    2023 </li>
+                                <li class="text-large"><a
+                                        href="https://docs.microsoft.com/en-us/azure/security/azure-security-identity-management-best-practices">Azure
+                                        Identity Management and access control security best practices</a> – Microsoft
+                                    Corporation, published December 19, 2022 </li>
+                                <li class="text-large"><a
+                                        href="https://www.microsoft.com/en-us/security/business/zero-trust">Embrace
+                                        proactive security with Zero Trust</a> – Microsoft Corporation</li>
+                            </ul>
+                            <div class="row">
+                                <div class="column width-6">
+                                    <img src="/images/best-practices/BPG002-main.jpg" alt="">
+                                </div>
+                                <div class="column width-5 offset-1">
+                                    <p class="title-medium">Up Next</p><br>
+                                    <p class="title-small">Data Validation Best Practices</p><br><a
+                                        href="/insights/data-validation-best-practices.html">Learn More &rarr;</a><br>
+                                </div>
+                            </div>
+                            <div class="section-block pt-10 pb-10 bkg-white"></div>
+                            <div class="post-info center">
+                                <span class="post-date">Last updated: August 2, 2023</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="section-block bkg-grey-ultralight"></div>
+    </div>
+    <!-- Content End -->
+    <!-- Footer -->
+    <footer id="footer" class="footer footer-light bkg-grey-ultralight"></footer>
+    <!-- Footer End -->
+    <!-- Js -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/timber.master.min.js"></script>
+    <script>
+        // $("#header").load("/header");
+        // $("#footer").load("/footer");
+        $("#header").load("/header.html");
+        $("#footer").load("/footer.html");
+    </script>
+</body>
+
+</html>

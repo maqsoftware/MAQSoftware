@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Security Best Practices in Dataverse | MAQ Software Insights" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/best-practices/BPG001-main.jpg" />
+    <meta property="og:description" content="Security Best Practices in Dataverse using our 7 best practices." />
+    <!-- Twitter Theme -->
+    <meta name="twitter:widgets:theme" content="light">
+
+    <!-- Title &amp; Favicon -->
+    <title>Security Best Practices in Dataverse | MAQ Software Insights</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+    <!-- Font -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/core.min.css" />
+    <link rel="stylesheet" href="/css/skin.css" />
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-S0W302CGQG');
+    </script>
+</head>
+
+<body class="shop blog">
+
+    <!-- Header -->
+    <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent"
+        data-bkg-threshold="100" data-sticky-threshold="0"></header>
+    <!-- Header End -->
+    <div class="section-block bkg-grey-ultralight"></div>
+    <!-- Content -->
+    <div class="content clearfix best-practices-text">
+        <div class="section-block clearfix pt-0 pb-0 bkg-grey-ultralight">
+            <div class="row">
+                <!-- Content Inner -->
+                <div class="column width-10 offset-1 content-inner blog-single-post bkg-grey-ultralight">
+                    <article class="post">
+                        <div class="post-content with-background">
+                            <h1 class="post-title center">Security Best Practices in Dataverse</h1>
+
+                            <h2>Solutions</h2>
+                            <ol>
+
+                                <!-- 1 -->
+                                <li class="text-xlarge">
+                                    <strong>Create separate environments for dev, UAT, and production</strong>
+                                </li>
+                                <br>
+                                <p class="text-large">Creating separate environments for dev, UAT, and production
+                                    enables you to resolve bugs and test new features before deploying to end users. In
+                                    addition, resource administration is easier as all the resources are bound to the
+                                    location of the Dataverse environment. You can also create environments based on
+                                    geographical locations, although you must consider GDPR, as the database will be
+                                    provisioned in the region you specify during creation.</p>
+                                <br>
+
+                                <!-- 2 -->
+                                <li class="text-xlarge">
+                                    <strong>Restrict access to environments through security groups</strong>
+                                </li>
+                                <br>
+                                <p class="text-large">By default, security group is not selected, which means any user
+                                    in the tenant can access the environment. To restrict access to environments and
+                                    strengthen security, select a security group.</p>
+                                <br>
+
+                                <!-- 3 -->
+                                <li class="text-xlarge">
+                                    <strong>Manage permissions through Azure Active Directory groups</strong>
+                                </li>
+                                <br>
+                                <p class="text-large">Security roles can also be associated with an Azure Active
+                                    Directory group. To simplify permissions and data access, create Azure Active
+                                    Directory groups and associate roles.</p>
+                                <br>
+
+                                <!-- 4 -->
+                                <li class="text-xlarge">
+                                    <strong>Extend existing security roles</strong>
+                                </li>
+                                <br>
+                                <p class="text-large">Instead of creating a new security role from scratch, you can copy
+                                    an existing role and update the privileges and access levels per the new role
+                                    requirements.</p>
+                                <br>
+
+                                <!-- 5 -->
+                                <li class="text-xlarge">
+                                    <strong>Use the rule of Least Privilege when creating security roles</strong>
+                                </li>
+                                <br>
+                                <p class="text-large">When creating security roles, use the rule of least privilege,
+                                    i.e., grant only minimum level of privileges required to any security role. Provide
+                                    access to the minimum amount of business data required for the task. Assign users
+                                    the appropriate role for their job with minimum required access. Create a basic user
+                                    role with the least permissions that all users must have.</p>
+                                <br>
+
+                                <!-- 6 -->
+                                <li class="text-xlarge">
+                                    <strong>Limit the number of System Administrators</strong>
+                                </li>
+                                <br>
+                                <p class="text-large">Strictly limit the number of people assigned the System
+                                    Administrator role. Don’t grant system admin or any other similar role with high
+                                    level of privileges to too many users or service accounts especially on production
+                                    environment.</p>
+                                <br>
+
+                                <!-- 7 -->
+                                <li class="text-xlarge">
+                                    <strong>Use Teams to assign same roles to group of users</strong>
+                                </li>
+                                <br>
+                                <p class="text-large">If many users require the same access, it’s a good idea to create
+                                    a team of users and assign the required security role to the team only instead of
+                                    assigning it to all team members. Use teams to create cross-functional groups so
+                                    that specific objects can be shared with the team.</p>
+                                <br>
+                            </ol>
+
+                            <h2>References</h2>
+                            <ul>
+                                <li class="text-large">
+                                    <a href="https://learn.microsoft.com/en-us/power-platform/admin/copy-security-role"
+                                        target="blank">Copy a security role - Power Platform - Microsoft</a> –
+                                    Microsoft, last updated February 15, 2022
+                                </li>
+                                <li class="text-large">
+                                    <a href="https://learn.microsoft.com/en-us/training/modules/create-manage-environments/"
+                                        target="blank">Create and manage environments in Dataverse - Microsoft</a> –
+                                    Microsoft, last updated 2022
+                                </li>
+                            </ul>
+                            <div class="section-block pt-10 pb-10 bkg-white"></div>
+                            <div class="post-info center">
+                                <span class="post-date">Last updated: August 2, 2023</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="section-block bkg-grey-ultralight"></div>
+    </div>
+    <!-- Content End -->
+    <!-- Footer -->
+    <footer id="footer" class="footer footer-light bkg-grey-ultralight"></footer>
+    <!-- Footer End -->
+    <!-- Js -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/timber.master.min.js"></script>
+    <script>
+        // $("#header").load("/header.html");
+        // $("#footer").load("/footer.html");
+        $("#header").load("/header.html");
+        $("#footer").load("/footer.html");
+    </script>
+</body>
+
+</html>

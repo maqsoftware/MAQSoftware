@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="222" height="60" viewBox="0 0 222 60">
+  <defs>
+    <clipPath id="clip-Web_1920_3">
+      <rect width="222" height="60"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_3" data-name="Web 1920 – 3" clip-path="url(#clip-Web_1920_3)">
+    <rect width="222" height="60" fill="#fff"/>
+    <g id="Group_5" data-name="Group 5" transform="translate(-20 -10)">
+      <g id="Group_4" data-name="Group 4" transform="translate(54 23)">
+        <g id="Group_3" data-name="Group 3" transform="translate(0)">
+          <path id="Path_3" data-name="Path 3" d="M23.5,26.625,6.939,8.739,23.5-8.326" transform="translate(-6.939 8.326)" fill="none" stroke="#0079d6" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <path id="Path_4" data-name="Path 4" d="M6.939,26.625,23.5,8.739,6.939-8.326" transform="translate(23.805 8.326)" fill="none" stroke="#0079d6" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+        </g>
+        <g id="Group_2" data-name="Group 2" transform="translate(16.276 15.372)">
+          <circle id="Ellipse_1" data-name="Ellipse 1" cx="2.713" cy="2.713" r="2.713" transform="translate(0 0)" fill="#0079d6"/>
+          <circle id="Ellipse_2" data-name="Ellipse 2" cx="2.713" cy="2.713" r="2.713" transform="translate(10.851 0)" fill="#0079d6"/>
+        </g>
+      </g>
+      <text id="Bot_Framework" data-name="Bot
+Framework" transform="translate(117 39)" font-size="18" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Bot</tspan><tspan x="0" y="18">Framework</tspan></text>
+    </g>
+  </g>
+</svg>

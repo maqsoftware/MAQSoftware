@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Data Validation Best Practices | MAQ Software Insights" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/expertise/cloud-main.jpg" />
+    <meta property="og:description" content="Ensure quality data on demand with our 7 data validation best practices." />
+    <!-- Twitter Theme -->
+    <meta name="twitter:widgets:theme" content="light">
+
+    <!-- Title &amp; Favicon -->
+    <title>Data Validation Best Practices | MAQ Software Insights</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/core.min.css" />
+    <link rel="stylesheet" href="/css/skin.css" />
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-S0W302CGQG');
+    </script>
+</head>
+<body class="shop blog">
+
+    <!-- Header -->
+    <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent" data-bkg-threshold="100" data-sticky-threshold="0"></header>
+    <!-- Header End -->
+    <div class="section-block bkg-grey-ultralight"></div>
+    <!-- Content -->
+    <div class="content clearfix best-practices-text">
+        <div class="section-block clearfix pt-0 pb-0 bkg-grey-ultralight">
+            <div class="row">
+                <!-- Content Inner -->
+                <div class="column width-10 offset-1 content-inner blog-single-post bkg-grey-ultralight">
+                    <article class="post">
+                        <div class="post-content with-background">
+                            <h1 class="post-title center">Data Validation Best Practice Guide</h1>
+                            <p class="text-large">Quality data is critical for identifying performance gaps, key industry trends, and revenue opportunities. Since the data wave, businesses have shifted toward unstructured and semi-structured data, increasing the need for BI processing and validation. Validating your data provides the following benefits:</p>
+                            <ol class="index">
+                                <li class="text-large">Access to reliable data on-demand</li>
+                                <li class="text-large">Minimized effort, cost, and errors</li>
+                                <li class="text-large">Increased competitive edge with more accurate insights</li>
+                            </ol>
+                            <p class ="text-large">At MAQ Software, we’re committed to sharing our expertise with growing businesses. Our exclusive data validation framework can be implemented in any BI project with 100% accuracy for descriptive, prescriptive, and other insights.</p>
+                            <img src="/images/best-practices/CS035-body.png" style="border:ridge"><br></br>
+                            <div>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Inventory upstream data sources</strong></li>
+                                    <br>
+                                    <p class="text-large">Ensure upstream data is accessible. Record the number of data records to identify if data is lost or duplicated during the next steps.</p>
+                                    <li class="text-xlarge"><strong>Perform data staging</strong></li>
+                                    <br>
+                                    <p class="text-large">Identify data with a unique combination of attributes. Perform a trend analysis of key attributes. Examples: the rate of attribute changes or the rate of data changes period over period.</p>
+                                    <li class="text-xlarge"><strong>Push to data mart</strong></li>
+                                    <br>
+                                    <p class="text-large">If using Azure Databricks (ADB), process notebooks in parallel (versus sequentially) to reduce refresh time. Identify platform run failures. If using tabular models, cross-check the data consistency between data mart and tabular models. For non-cloud environment where SSIS or other ETL tools might be used, implement similar checks for staging against data mart publish. Example: data profiling in SSI</p>
+                                    <li class="text-xlarge"><strong>Validate data staging and mart</strong></li>
+                                    <br>
+                                    <p class="text-large">Perform build verification testing (BVT), table-level BVT, and BVT for multiple sources.</p>
+                                    <li class="text-xlarge"><strong>Publish data for end users</strong></li>
+                                    <br>
+                                    <p class="text-large">Validate the data to ensure data was not lost or duplicated while being pulled from databases. Example: Azure Data Warehouse (ADW) dump failure tracking. Check for data loss when changing the schema from temporary format to end user agreed schema format. Track downstream user data usage and remove unused tables/views to improve report performance.</p>
+                                    <li class="text-xlarge"><strong>Track tabular or multidimensional model performance</strong></li>
+                                    <br>
+                                    <p class="text-large">Track measure execution time to detect time lags. Remove unused reporting measures. Check all tabular/multidimensional columns to prevent failure while processing data. Compare previous tabular/multidimensional refreshes with the current refresh for sudden drop/increase in the number of records processed beyond a predefined threshold limit.</p>
+                                    <li class="text-xlarge"><strong>Verify BI reporting</strong></li>
+                                    <br>
+                                    <p class="text-large">Import vs. tabular model validator: compare consistency of datapoints rendered in BI report through import model and tabular. Track BI report usage to understand the number of visitors across pages, active users, and historical data about report usage patterns.</p>
+                                </ol>
+                            </div>
+                            <h2>More Resources</h2>
+                            <ul>
+                                <li class="text-large">Check out how our data validation framework <a href="https://blog.maqsoftware.com/2019/06/case-study-data-validation-framework.html" class="underlined">reduced our client’s support tickets</a></li>   
+                                <li class="text-large">Using Power BI? Try our <a href="/services/Power-BI/Dr-Power-BI" class="underlined">free Dr. Power BI tool</a> to quickly analyze and fix report issues</li>
+                            </ul>
+                            <div class="row">
+                                <div class="column width-6">
+                                    <img src="/images/best-practices/d365devbestpractice.png" alt="">
+                                </div>
+                                <div class="column width-5 offset-1">
+                                    <p class="title-medium">Up Next</p><br><p class="title-small">Dynamics 365 Development Best Practices</p><br><a href="/insights/dynamics-365-development-best-practices.html">Learn More &rarr;</a><br>
+                                </div>
+                            </div>
+                            <div class="section-block pt-10 pb-10 bkg-white"></div>
+                            <div class="post-info center">
+                                <span class="post-date">Last updated: July 31, 2023</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="section-block bkg-grey-ultralight"></div>
+    </div>
+    <!-- Content End -->
+    <!-- Footer -->
+    <footer id="footer" class="footer footer-light bkg-grey-ultralight"></footer>
+    <!-- Footer End -->
+    <!-- Js -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/timber.master.min.js"></script>
+    <script>
+// $("#header").load("/header");
+// $("#footer").load("/footer");
+$("#header").load("/header.html");
+$("#footer").load("/footer.html");
+    </script>
+</body>
+</html>
