@@ -8,24 +8,26 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Image Carousel | MAQ Software" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Showcase a collection of images with a sliding carousel" />
+    <meta property="og:description"
+        content="Showcase a collection of images with a sliding carousel" />
 
     <!-- Twitter Theme -->
     <meta name="twitter:widgets:theme" content="light">
 
     <!-- Title &amp; Favicon -->
-    <!-- <title>ImageCarousel | MAQ Software</title> loaded dynamically in customVisual.JS-->
+    <!-- <title>ImageCarousel | MAQ Software</title> loaded dynamically in customVisual.JS--> 
     <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
 
     <!-- Font -->
     <link
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
     <!-- Css -->
     <link rel="stylesheet" href="/css/core.min.css" />
     <link rel="stylesheet" href="/css/skin.css" />
+    <link rel="stylesheet" href="/css/styles.css"/>
 
     <!--[if lt IE 9]>
     	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -34,17 +36,9 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-S0W302CGQG');
-    </script>
-    <!--Microsoft Clarity -->
-    <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "oekduyvjws");
     </script>
 </head>
 
@@ -60,7 +54,7 @@
     <div class="section-block pb-10 bkg-white">
         <div class="row">
             <div class="column width-12">
-                <div>
+                <div>   
                     <div>
                         <div class="row">
                             <div class="column width-12">
@@ -72,7 +66,7 @@
                 </div>
             </div>
             <!-- Container for content Start -->
-            <div class="column width-12">
+            <div class="column width-12 visualization-page-text section-block-vis-desc">
                 <div class="row">
                     <div class="column width-12" id="contentContainer">
                         <div id="detailContainer">
@@ -80,12 +74,12 @@
                             <br><br><br>
                             <!-- detail and desc -->
 
-
+                            
                         </div>
                         <div class="spacer-40"></div>
 
                         <!-- Key benefits -->
-                        <div>
+                        <div >
                             <div class="col-md-12" id="keyFeatureContainer">
                                 <h4 class="title-xsmall">Key benefits</h4>
                                 <ul id="keyFeatureList">
@@ -94,15 +88,15 @@
                         </div>
 
                         <!-- What's new -->
-                        <div>
+                        <div >
                             <div class="col-md-12" id="whatsNewContainer">
                                 <ul id="whatsNewList">
                                 </ul>
                             </div>
                         </div>
-
+                        
                         <!-- Use cases -->
-                        <div>
+                        <div >
                             <div class="col-md-12" id="businessuseContainer">
                                 <h4 class="title-xsmall">Use cases</h4>
                                 <ul id="businessUsesList">
@@ -112,7 +106,7 @@
                         <div class="col-md-12" id="contactContainer">
                         </div>
                         <div id="buttonContainer">
-
+                            
                         </div>
                     </div>
                 </div>
@@ -135,11 +129,13 @@
 <script src="/js/timber.master.min.js"></script>
 <script src="/js/customvisual.js?v=20230301"></script>
 <script>
-    getData("ImageCarousel");
+	getData("ImageCarousel");
 </script>
 <script>
-    $("#header").load("/header");
-    $("#footer").load("/footer");
+    // $("#header").load("/header");
+    // $("#footer").load("/footer");
+    $("#header").load("/header.html");
+    $("#footer").load("/footer.html");
 </script>
 </body>
 

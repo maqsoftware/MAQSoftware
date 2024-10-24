@@ -10,7 +10,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/images/expertise/ai-main" />
     <meta property="og:description"
-        content="Stay in the loop with the latest tech knowledge from our expert team of engineers." />
+          content="Stay in the loop with the latest tech knowledge from our expert team of engineers." />
 
     <!-- Twitter Theme -->
     <meta name="twitter:widgets:theme" content="light">
@@ -20,15 +20,15 @@
     <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
 
     <!-- Font -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext"
+          rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
     <!-- Css -->
-    <link rel="stylesheet" href="css/core.min.css" />
-    <link rel="stylesheet" href="css/skin.css" />
-    <link rel="stylesheet" href="css/commonstyle.css" />
+    <link rel="stylesheet" href="../css/core.min.css" />
+    <link rel="stylesheet" href="../css/skin.css" />
+    <link rel="stylesheet" href="../css/commonstyle.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
 
     <!--[if lt IE 9]>
         <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -41,15 +41,6 @@
         gtag('js', new Date());
         gtag('config', 'G-S0W302CGQG');
     </script>
-    
-    <!--Microsoft Clarity -->
-    <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "oekduyvjws");
-    </script>
 </head>
 
 <body class="shop blog">
@@ -60,42 +51,20 @@
 
     <!-- Header -->
     <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent"
-        data-bkg-threshold="100" data-sticky-threshold="0"></header>
+            data-bkg-threshold="100" data-sticky-threshold="0"></header>
     <!-- Header End -->
     <!-- Content -->
     <div class="content clearfix">
 
-        <div class="wrapper reveal-side-navigation">
-            <div class="wrapper-inner">
-                <!-- Intro Title Section 2 -->
-                <div class="pt-60">
-                    <div class="section-block intro-title-1 small bkg-white">
-                        <div class="row">
-                            <div class="column width-12">
-                                <div class="title-container">
-                                    <div class="title-container-inner">
-                                        <div class="row flex">
-                                            <div class="column width-6 v-align-middle">
-                                                <div>
-                                                    <h1 class="mb-0">Insights</h1>
-                                                    <!-- <p class="lead mb-0 mb-mobile-20">
-                                                        Stay in the loop with the latest
-                                                        tech knowledge from our expert team of engineers.
-                                                    </p> -->
-                                                </div>
-                                            </div>
-                                            <div class="column width-6 v-align-middle">
-                                                <div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="section-block-padding-sm hero-section centered-section news-section-margin lg-section-block-padding-hero">
+            <div class="flex-col-2">
+                <div class="hero-item-1">
+                    <h1 class="big">
+                        Insights
+                    </h1>
                 </div>
+            </div>
+        </div>
                 <!-- Intro Title Section 2 End -->
                 <!--<div class="section-block pt-0 grid-filter-menu center" data-target-grid="#portfolio-grid">
                     <div class="freeze pt-10 pb-10 bkg-white" data-extra-space-top="80" data-extra-space-bottom="0">
@@ -120,7 +89,7 @@
                 <div id="loadingicon" class="CaseStudyLoading"></div>
                 <!-- Content Inner -->
                 <div class="blog-masonry grid-container mb-30" data-layout-mode="fitRows" data-grid-ratio="1.5"
-                    data-animate-resize data-animate-resize-duration="0">
+                     data-animate-resize data-animate-resize-duration="0">
                     <!--<div class="blog-masonry grid-container" data-layout-mode="fitRows" >-->
                     <div class="row">
                         <div class="column width-12">
@@ -203,9 +172,11 @@
     <script>
         $(document).ready(function () {
             // loadBlogGrid();
-            newsConstructor();
-            $("#header").load("/header");
-            $("#footer").load("/footer");
+            newsConstructor(); 
+            // $("#header").load("/header");
+            // $("#footer").load("/footer");
+            $("#header").load("/header.html");
+            $("#footer").load("/footer.html");
         });
     </script>
 </body>

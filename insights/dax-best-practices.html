@@ -32,6 +32,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="/css/core.min.css" />
     <link rel="stylesheet" href="/css/skin.css" />
+    <link rel="stylesheet" href="/css/styles.css"/>
     <!--[if lt IE 9]>
         <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -43,15 +44,6 @@
         gtag('js', new Date());
         gtag('config', 'G-S0W302CGQG');
     </script>
-
-    <!--Microsoft Clarity -->
-    <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "oekduyvjws");
-    </script>
 </head>
 
 <body class="shop blog">
@@ -62,7 +54,7 @@
     <!-- Header End -->
     <div class="section-block bkg-grey-ultralight"></div>
     <!-- Content -->
-    <div class="content clearfix">
+    <div class="content clearfix best-practices-text">
         <div class="section-block clearfix pt-0 pb-0 bkg-grey-ultralight">
             <div class="row">
                 <!-- Content Inner -->
@@ -404,7 +396,7 @@
                                     <H2>Azure DevOps Best Practice Guide</H2>
                                     <p class="text-large">Optimize your DevOps strategies with our 9 essential best
                                         practices</p>
-                                    <a href="/insights/azure-dev-ops-best-practices-guide">Read More &rarr;</a><br>
+                                    <a href="/insights/azure-dev-ops-best-practices-guide.html">Read More &rarr;</a><br>
                                 </div>
                             </div>
                             <div class="section-block pt-10 pb-10 bkg-white"></div>
@@ -427,8 +419,10 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script>
     <script src="/js/timber.master.min.js"></script>
     <script>
-        $("#header").load("/header");
-        $("#footer").load("/footer");
+        // $("#header").load("/header");
+        // $("#footer").load("/footer");
+        $("#header").load("/header.html");
+        $("#footer").load("/footer.html");
     </script>
 </body>
 
