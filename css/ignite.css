@@ -1,0 +1,131 @@
+.h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.2;
+    color:rgba(70,54,104,255);
+    font-size: 32px;
+    font-weight: 700;
+}
+ 
+.h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.3;
+    font-size: 28px;
+    font-weight: 700;
+}
+ 
+.h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+    font-size: 24px;
+    font-weight: 700;
+}
+ 
+.h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color:rgba(70,54,104,255);
+    font-size: 20px;
+}
+ 
+.p {
+    font-family: 'Roboto';
+    line-height: 1.6;
+    font-size: 16px;
+}
+ 
+.small-h {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color:rgba(70,54,104,255);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+:root {
+    --white: #fff;
+    --MAQRed: #BA141A;
+    --MAQBlack: #212121;
+    --MAQGrey: #F0F0F0;
+    --StrokeGrey: #D9D9D9;
+    --DarkGrey: #616161;
+    --MAQLogoGrey: #58595B;
+    --LightGrey: #F7F7F7;
+}
+
+.centered-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.max-section-size {
+    width: 100%;
+    max-width: 114rem;
+}
+
+.section-block-padding-sm {
+    padding: 3%;
+}
+
+.contact-gray-section {
+    background-color: var(--MAQGrey);
+}
+
+.contact-max-width {
+    margin: 5% 10%;
+}
+
+.btn-primary {
+    background-color: var(--MAQRed);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25em;
+    color: white;
+}
+
+.btn-contact-us {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+}
+
+.tabler--mail {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/%3E%3Cpath d='m3 7l9 6l9-6'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    margin-right: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+    .center-on-mobile .project-swatch {
+      margin-left: 2.5rem;
+      margin-right: 2.5rem;
+    }
+    .color-black.mb-5.h3{
+        font-size: 20px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+  }
+
+.pt-100{
+    padding-top: 10rem;
+}
