@@ -78,6 +78,7 @@ h1.big{
     font-weight: 700;
     font-style: normal;
     font-size: 5em;
+    margin-bottom: 0.5rem;
   
   }
   
@@ -725,6 +726,7 @@ p{
 
 .homepage-feature-img{
   max-height: 300px;
+  width: auto;
 }
 
 .icon-container-card{
@@ -2787,7 +2789,7 @@ img .accordion-img{
 }
 
 /* Mobile Settings */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1100px) {
   .footer-top.two-columns-on-tablet > .row > [class*="width-"] {
     width: 100% !important;
   }
@@ -2867,6 +2869,7 @@ img .accordion-img{
   }
   h1.big{
     font-size: 3.5rem;
+    margin-bottom: 0.5rem;
   }
   .section-block-padding-sm{
     padding-bottom: 10%;
