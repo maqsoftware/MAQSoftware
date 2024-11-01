@@ -78,6 +78,7 @@ h1.big{
     font-weight: 700;
     font-style: normal;
     font-size: 5em;
+    margin-bottom: 0.5rem;
   
   }
   
@@ -234,6 +235,13 @@ h1.big{
     font-style: normal;
     font-size: 1.5rem;
     margin-bottom: 0px;
+  }
+
+  .section-subheading-body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.8em;
   }
 
   .hero-section-subheading{
@@ -520,6 +528,14 @@ p{
   flex: 1;
 }
 
+.width-who-we-are-left{
+  width: 35%;
+}
+
+.width-who-we-are-right{
+  width: 65%;
+}
+
 /* buttons */
 
 .btn-primary{
@@ -632,6 +648,35 @@ p{
   flex-direction: column;
 }
 
+.card-link {
+  color: var(--MAQBlack);
+}
+
+
+.large-card {
+  background-color: var(--white);
+  color: var(--MAQBlack);
+  border: 1px solid var(--StrokeGrey);
+  border-radius: 5px;
+  padding: 20px;
+  align-items: center;
+}
+
+.large-card-image-container{
+  background-color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.large-card-image{
+  max-height: 230px;
+}
+
+.large-card-text{
+  flex-grow: 1;
+}
+
 .min-card-height-int-rep{
   min-height: 448.41px;
 }
@@ -696,6 +741,7 @@ p{
 
 .homepage-feature-img{
   max-height: 300px;
+  width: auto;
 }
 
 .icon-container-card{
@@ -1356,6 +1402,7 @@ p{
   background-position: center;
   background-size: cover;
   margin-right: 8px;
+  margin-bottom: 0.5em;
 }
 
 .service-icon-size {
@@ -1375,6 +1422,20 @@ p{
 }
 
 /* Service Icons Section */
+
+.fluent--location-24-regular {
+  display: inline-block;
+  width: 192px;
+  height: 192px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M5.843 4.568a8.707 8.707 0 0 1 12.314 12.314l-1.187 1.174q-1.312 1.287-3.406 3.312a2.25 2.25 0 0 1-3.128 0l-3.491-3.396q-.659-.646-1.102-1.09a8.707 8.707 0 0 1 0-12.314m11.253 1.06A7.207 7.207 0 1 0 6.903 15.822l1.488 1.468q1.228 1.201 3.088 3a.75.75 0 0 0 1.042 0l3.395-3.3q.705-.691 1.18-1.168a7.207 7.207 0 0 0 0-10.192M12 7.999a3.002 3.002 0 1 1 0 6.004A3.002 3.002 0 0 1 12 8m0 1.5a1.502 1.502 0 1 0 0 3.004a1.502 1.502 0 0 0 0-3.003'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
 
 .fluent--building-24-regular {
   display: inline-block;
@@ -2743,9 +2804,17 @@ img .accordion-img{
 }
 
 /* Mobile Settings */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1100px) {
   .footer-top.two-columns-on-tablet > .row > [class*="width-"] {
     width: 100% !important;
+  }
+  .RecognitionImage{
+    margin-bottom: 16px;
+  }
+  .mb-recognitions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .mb-footer{
     display: none;
@@ -2815,6 +2884,7 @@ img .accordion-img{
   }
   h1.big{
     font-size: 3.5rem;
+    margin-bottom: 0.5rem;
   }
   .section-block-padding-sm{
     padding-bottom: 10%;
