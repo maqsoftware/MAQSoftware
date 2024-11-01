@@ -237,6 +237,13 @@ h1.big{
     margin-bottom: 0px;
   }
 
+  .section-subheading-body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.8em;
+  }
+
   .hero-section-subheading{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -519,6 +526,14 @@ p{
 
 .hero-item-2 {
   flex: 1;
+}
+
+.width-who-we-are-left{
+  width: 35%;
+}
+
+.width-who-we-are-right{
+  width: 65%;
 }
 
 /* buttons */
