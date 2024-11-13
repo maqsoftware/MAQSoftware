@@ -211,13 +211,6 @@ const data = [
     },
     {
         "category": "consulting",
-        "subCategory": "powerbi",
-        "Heading": "Export Power BI to PPT Tool: 1-Hour Briefing",
-        "Content": "Master the art of exporting Power BI to PowerPoint in this focused 1-hour session.",
-        "link": "https://appsource.microsoft.com/en-US/marketplace/consulting-services/maqsoftware.maqpowerbiexporttoppt?page=1&exp=ubp8&search=maq"
-    },
-    {
-        "category": "consulting",
         "subCategory": "aiml",
         "Heading": "Forecasting Machine Learning Model: 4-Week Implementation",
         "Content": "Implement a forecasting machine learning model in just 4 weeks, improving decision-making and predictions.",
