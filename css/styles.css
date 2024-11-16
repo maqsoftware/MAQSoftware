@@ -2690,6 +2690,7 @@ img .accordion-img{
   transition: right 0.8s;
   z-index: 1001;
   overflow-y: auto;
+  scrollbar-width: none;
   
 }
 
