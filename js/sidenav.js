@@ -1,11 +1,11 @@
 $("#header").load("/header.html", function() {
     $('#header .icon-menu-hamburger').on('click', function() {
-      console.log('Nav item clicked in header!');
+      // console.log('Nav item clicked in header!');
         const navbar = document.getElementById('navbar-right');
         navbar.classList.toggle('closed');
     });
     $('#header .dismiss-button').on('click', function() {
-      console.log('Dismiss clicked!');
+      // console.log('Dismiss clicked!');
         const navbar = document.getElementById('navbar-right');
         navbar.classList.toggle('closed');
     });
