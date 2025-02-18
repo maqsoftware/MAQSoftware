@@ -16,6 +16,7 @@
     max-width: 100%;
     overflow-x: hidden;
     color: var(--MAQBlack);
+    scroll-behavior: smooth;
   }
 
 /*text styles*/
@@ -536,6 +537,98 @@ p{
   width: 65%;
 }
 
+/* Hero Carousel Section */
+.hero-carousel-spacer {
+  height: 4em;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+.chevron-btn {
+  /* position: absolute;
+  top: 50%;
+  transform: translateY(-50%); */
+  background-color: white;
+  color: var(--MAQLogoGrey);
+  border: none;
+  font-size: 2em;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  margin: 0;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.menu-btns {
+  /* Remove this section for btn menu below carousel */
+  /* position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); */
+  /* End of section */
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 10px;
+  border-radius: 15px;
+  /* opacity: calc(0.5); */
+}
+
+.menu-btns:hover {
+  opacity: calc(1);
+  transition: transform 1s ease-in-out;
+}
+
+.menu-btn-carousel {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  border: none;
+  width: 3px;
+  height: 3px;
+  padding: 5px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.menu-btn-selected {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.menu-btn-carousel:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Hero Carousel Section End */
+
 /* buttons */
 
 .btn-primary{
@@ -692,7 +785,10 @@ p{
 .card-item:hover, .customer-stories-card:hover, .card:hover, .community-card:hover{
   /* background-color: var(--LightGrey); */
   /* box-shadow: 4px 4px 5px 12px var(--MAQLogoGrey) */
+  transition-property: box-shadow;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.09);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 
 }
 
@@ -2693,7 +2789,7 @@ img .accordion-img{
 } */
 
 
-/*carousel */
+/*Carousel */
 
 .carousel img {
   width: 70px;

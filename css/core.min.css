@@ -6278,7 +6278,7 @@ textarea {
     }
     .freeze,
     .sticky {
-        position: static !important;
+        position: fixed !important;
     }
 }
 @media only screen and (max-width: 600px) {

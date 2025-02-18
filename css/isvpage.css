@@ -51,6 +51,12 @@ ul.horizontal-list a:hover {
   .isv-two-columns-on-tablet .column {
     flex-basis: 100%;
   }
+  .sticky{
+    position: fixed;
+    margin-top: 78px;
+    margin-right: 5px;
+    left: 0;
+  }
 }
 
 .feature-div {
