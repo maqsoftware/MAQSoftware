@@ -509,9 +509,20 @@ p{
   padding-right: 10%;
 }
 
+
 .hero-section, .products-hero-section, .contact-section-contactpage{
   background: linear-gradient(to bottom, #FFFFFF, #F0F0F0);
 
+}
+
+.banner-item-1 {
+  flex: 1.25;
+}
+
+.banner-item-2 {
+  flex: 1.75;
+  display: flex;
+  align-items: center;
 }
 
 .hero-item-1 {
@@ -527,6 +538,18 @@ p{
 
 .hero-item-2 {
   flex: 1;
+}
+
+.dot-swish-background {
+  position :relative;
+  background-image: url('../images-new/isv/wave_dots.svg');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 5%;
+  padding-bottom: 9%;
+  padding-top: 5%;
+  margin-top: 1em;
 }
 
 .width-who-we-are-left{
@@ -2497,7 +2520,7 @@ img.customer-stories-img{
 }
 
 
-.support-plan-gray, .accordion-gray, .insights, .explore-our-products-section, .steps-section, .customer-stories-section, .business-outcomes-section, .contact-gray-section, .specializations-section,
+.support-plan-gray, .accordion-gray, .insights, .explore-our-products-section, .steps-section, .customer-stories-section, .business-outcomes-section, .contact-gray-section, .callout-section,
 .product-pricing-section, .sustainability-principles-section, .promises-section, .community-section{
   background-color: var(--MAQGrey);
   /* background: linear-gradient(to bottom, #F0F0F0, #FFFFFF,#F0F0F0); */
@@ -2942,6 +2965,13 @@ img .accordion-img{
 }
 
 @media screen and (max-width: 768px) {
+  .contact-us-section-heading {
+    font-size: 2em;
+  }
+
+  .section-subheading-body {
+    font-size: 1.3em;
+  }
   .hamburger {
       display: block;  /* Show hamburger menu on mobile */
   }
@@ -3130,11 +3160,17 @@ img .accordion-img{
     padding-top: 3.5%;
     padding-bottom: 2%;
   }
+  .dot-swish-background {
+    padding-bottom: 7%;
+  }
   .customer-stories-card{
     width: 24.15%;
   }
   h1.big{
     font-size: 4rem;
+  }
+  .section-subheading-body {
+    font-size: 2em;
   }
 
 }
