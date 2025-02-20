@@ -2387,6 +2387,20 @@ p{
   mask-size: 100% 100%;
 }
 
+.fluent--chat-empty-12-regular {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath fill='%23000' d='M1 6a5 5 0 1 1 2.59 4.382l-1.944.592a.5.5 0 0 1-.624-.624l.592-1.947A5 5 0 0 1 1 6m5-4a4 4 0 0 0-3.417 6.08a.5.5 0 0 1 .051.406l-.383 1.259l1.257-.383a.5.5 0 0 1 .407.052A4 4 0 1 0 6 2'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
 /* EmbedFAST Icons */
 .fluent--checkmark-24-regular {
   display: inline-block;
@@ -3171,6 +3185,9 @@ img .accordion-img{
   }
   .section-subheading-body {
     font-size: 2em;
+  }
+  .body-text {
+    font-size: 1.4em;
   }
 
 }
