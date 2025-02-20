@@ -1493,6 +1493,7 @@ p{
 .card-list{
   font-size: 1.25em;
   margin-bottom: auto;
+  padding-bottom: 16px;
 }
 
 .price-item{
@@ -2997,6 +2998,9 @@ img .accordion-img{
   
   .main-content.shift {
       margin-left: 0;
+  }
+  .pricing-flex-grid {
+    flex-direction: column;
   }
 }
 
