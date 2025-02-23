@@ -29,6 +29,7 @@ ul.horizontal-list a:hover {
   margin: 50px 0px 0px 0px;
   background-color: #f4f5f6;
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.18);
+  left: 0;
 }
 
 .sticky {
@@ -50,6 +51,12 @@ ul.horizontal-list a:hover {
 @media (max-width: 768px) {
   .isv-two-columns-on-tablet .column {
     flex-basis: 100%;
+  }
+  .sticky{
+    position: fixed;
+    margin-top: 78px;
+    margin-right: 5px;
+    left: 0;
   }
 }
 
