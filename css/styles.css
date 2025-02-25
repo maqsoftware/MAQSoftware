@@ -3034,6 +3034,10 @@ img .accordion-img{
   .hamburger {
       display: block;  /* Show hamburger menu on mobile */
   }
+
+  .show-on-mobile {
+      display: block;
+  }
   
   /* Navbar should not be visible until hamburger is clicked */
   /* .navbar {
@@ -3212,6 +3216,9 @@ img .accordion-img{
   .hidden-section{
     display: none;
   }
+  .show-on-mobile {
+    display: none;
+  }
 
 /* Large Screen Settings */
 @media only screen and (min-width: 1920px) {
@@ -3237,6 +3244,9 @@ img .accordion-img{
   .body-text {
     font-size: 1.4em;
   }
+  .show-on-mobile {
+    display: none;
+}
 
 }
 
@@ -3363,6 +3373,9 @@ img .accordion-img{
   }
 
   .mb-hide-img{
+    display: none;
+  }
+  .show-on-mobile {
     display: none;
   }
 }
