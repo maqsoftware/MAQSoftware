@@ -57,6 +57,12 @@
     margin: 5px 0;
   }
   
+  .maq-text{
+    color:#BA141A;
+    font-weight: bold;
+ 
+  }
+
   @media (min-width: 600px) {
     .footer-row {
       flex: 1 1 auto;
