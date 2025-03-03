@@ -2984,6 +2984,10 @@ img .accordion-img{
   display: flex;
 }
 
+.li-space {
+  margin-bottom: 8px;
+}
+
 /* Navbar */
 .navbar-right {
   position: fixed;
