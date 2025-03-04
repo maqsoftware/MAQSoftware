@@ -197,6 +197,14 @@ h1.big{
     line-height: 1.5;
   }
 
+  .card-title-step{
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.75rem;
+    line-height: 1.5;
+  }
+
   .card-title-small{
     font-family: "Roboto", sans-serif;
     font-weight: 600;
@@ -762,6 +770,33 @@ p{
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+}
+
+/* Step Card CSS */
+
+.grid-3-col {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 16px;
+
+
+}
+
+.step-card {
+  display: flex;
+  flex: 1 1 calc(33.333% - 10px);
+  flex-direction: row;
+  margin: 2em;
+  box-sizing: border-box;
+}
+
+.step-num {
+  display: flex;
+  color: var(--MAQRed);
+  font-size: 4em;
+  margin-right: 16px;
+  font-weight: 600;
+  align-items: center;
 }
 
 .card-link {
@@ -2599,8 +2634,6 @@ img.customer-stories-img{
 .max-section-size{
   width: 100%;
   max-width: 114rem;
-  display: flex;
-  flex-grow: 1;
 }
 
 .max-section-size-footer{
@@ -3330,7 +3363,7 @@ img .accordion-img{
   .mb-grid-product{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
   .mb-product-card{
     height: 194.25px;
