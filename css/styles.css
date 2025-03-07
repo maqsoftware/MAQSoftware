@@ -1143,6 +1143,25 @@ p{
     margin-bottom: 0;
   }
 
+  .badge-container {
+  
+    color: var(--MAQBlack);
+    flex: 1 1 calc(33.333% - 10px);
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2em;
+    margin-left: 2em;
+  }
+
+  .badge-img {
+    width: auto;
+
+  }
+
   .testimonials-img {
     width: 160px;
     max-height: 70px;
@@ -3176,6 +3195,13 @@ img .accordion-img{
     margin-top: 8px;
     margin-bottom: 4px;
 
+  }
+  .flex-col-2 {
+    flex-direction: column;
+  }
+  
+  .badge-container {
+    margin-bottom: 2em;
   }
 }
 
