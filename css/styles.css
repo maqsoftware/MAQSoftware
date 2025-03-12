@@ -292,6 +292,11 @@ h1.big{
   transition: color 0.3s ease;
 }
 
+.specialization-li {
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
 
 .chevron {
     margin-left: 5px;
@@ -2699,7 +2704,7 @@ img.customer-stories-img{
 }
 
 
-.support-plan-gray, .accordion-gray, .insights, .explore-our-products-section, .steps-section, .customer-stories-section, .business-outcomes-section, .contact-gray-section, .callout-section,
+.support-plan-gray, .accordion-gray, .insights, .explore-our-products-section, .steps-section, .customer-stories-section, .business-outcomes-section, .contact-gray-section,
 .product-pricing-section, .sustainability-principles-section, .promises-section, .community-section{
   background-color: var(--MAQGrey);
   /* background: linear-gradient(to bottom, #F0F0F0, #FFFFFF,#F0F0F0); */
@@ -2990,6 +2995,9 @@ img .accordion-img{
   font-size: 1.5em;
 } */
 
+#headingFive button{
+  font-size: 1.75rem;
+}
 
 /*Carousel */
 
@@ -3173,6 +3181,7 @@ img .accordion-img{
   }
   .pricing-flex-grid {
     flex-direction: column;
+    align-items: center;
   }
 
   .sticky-section {
@@ -3202,6 +3211,10 @@ img .accordion-img{
   
   .badge-container {
     margin-bottom: 2em;
+  }
+
+  .flex-row {
+    flex-direction: column;
   }
 }
 
@@ -3437,7 +3450,7 @@ img .accordion-img{
   .mb-grid-product{
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
   }
   .mb-product-card{
     height: 194.25px;
