@@ -3275,6 +3275,10 @@ img .accordion-img{
   .flex-row {
     flex-direction: column;
   }
+  .stat-item > .card-title{
+    text-align: center;
+
+  }
 }
 
 /* Side nav GPT end */
@@ -3586,7 +3590,10 @@ img .accordion-img{
   .stat-item{
     max-width: 178.39px;
     margin-bottom: 5%;
+    align-items: center;
   }
+
+
   .mb-rem-margin{
     margin-bottom: 1rem;
   }
