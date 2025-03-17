@@ -55,7 +55,6 @@ body {
   color: #161616;
 }
 
-
 /* 
 
 h1, 
@@ -83,7 +82,8 @@ textarea,
 .dropdown a,
 [class*="stats-"] .counter {
   font-family: "Inter", "Helvetica Neue", sans-serif;
-} */
+}
+*/
 
 /* Titles */
 /* h1,
@@ -372,8 +372,6 @@ body,
 .post-comment-respond.with-background {
   background-color: #fff;
   border: 1px solid var(--StrokeGrey);
-
-
 }
 .post,
 .with-background,
@@ -2579,8 +2577,6 @@ body,
   line-height: 4.8rem;
 }
 
-
-
 /* Hero */
 .hero-5-1 .media-column {
   background-image: url(../images/generic/hero-half-1.jpg);
@@ -3774,10 +3770,9 @@ textarea.required-field {
   text-transform: none;
   font-style: normal;
 }
-.footer .widget{
+.footer .widget {
   margin-bottom: 1rem;
 }
-
 
 .footer-top a:not(.button) {
   /* font-size: 1.2rem; */
@@ -3897,7 +3892,7 @@ textarea.required-field {
   .footer-top.two-columns-on-tablet > .row > [class*="width-"] {
     width: 100% !important;
   }
-  .mb-footer{
+  .mb-footer {
     display: none;
   }
 }
@@ -3923,10 +3918,10 @@ textarea.required-field {
 }
 
 .footer-heading {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 1.25em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.25em;
 }
 
 .footer-links {
@@ -3951,7 +3946,7 @@ textarea.required-field {
   padding-right: 10%;
 }
 
-.footer-bottom p{
+.footer-bottom p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -3966,18 +3961,14 @@ textarea.required-field {
 @media (min-width: 600px) {
   .footer-row {
     flex: 1 1 auto;
-
   }
 }
 
 @media (min-width: 900px) {
   .footer-row {
     flex: 1 1 auto;
-
   }
 }
-
-
 
 /*------------------------------------------------------------------
 [24. Sidebar]
@@ -4742,18 +4733,18 @@ blockquote.avatar.xlarge span img {
 } */
 
 .tabs .tab-nav > li a {
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: var(--white);
-    border: 1px solid var(--StrokeGrey);
-    border-radius: 4px;
-    margin-right: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: var(--white);
+  border: 1px solid var(--StrokeGrey);
+  border-radius: 4px;
+  margin-right: 10px;
 }
 
 .tabs .tab-nav > li a:hover {
   background-color: var(--LightGrey);
 }
- 
+
 .tabs .tab-nav > li,
 .tabs.vertical .tab-nav > li {
   margin: 0;
@@ -5147,7 +5138,6 @@ table.table,
   only screen and (min-device-pixel-ratio: 2),
   only screen and (min-resolution: 192dpi),
   only screen and (min-resolution: 2dppx) {
-
   /* Fullscreen Sections */
   .fullscreen-bkg-1 {
     background-image: url(../images/slider/slide-2-fs@2x.jpg);
@@ -5296,17 +5286,14 @@ table.table,
   position: absolute;
 }
 
-
 /*------------------------------------------------------------------
 [32. MAQ hero banner]
 */
 /* The image used */
 .banner-powerbi {
-  background-image: 
-  url(../images/assets/banner-powerbi.png);
+  background-image: url(../images/assets/banner-powerbi.png);
   background-size: auto;
 }
-
 
 /*-------------------------------transfered from styles.css to apply global styles----------------------------------*/
 
@@ -5329,10 +5316,10 @@ table.table,
 }
 
 .footer-heading {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 1.25em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.25em;
 }
 
 .footer-links {
@@ -5357,7 +5344,7 @@ table.table,
   padding-right: 10%;
 }
 
-.footer-bottom p{
+.footer-bottom p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -5372,31 +5359,29 @@ table.table,
 @media (min-width: 600px) {
   .footer-row {
     flex: 1 1 auto;
-
   }
 }
 
 @media (min-width: 900px) {
   .footer-row {
     flex: 1 1 auto;
-
   }
 }
 
-
 /* Global Colors */
 :root {
-  --white: #fff; 
-  --MAQRed: #BA141A; 
-  --MAQBlack: #212121; 
-  --MAQGrey: #F0F0F0; 
-  --StrokeGrey: #D9D9D9; 
-  --DarkGrey: #616161; 
-  --MAQLogoGrey: #58595B; 
-  --LightGrey: #F7F7F7; 
+  --white: #fff;
+  --MAQRed: #ba141a;
+  --MAQBlack: #212121;
+  --MAQGrey: #f0f0f0;
+  --StrokeGrey: #d9d9d9;
+  --DarkGrey: #616161;
+  --MAQLogoGrey: #58595b;
+  --LightGrey: #f7f7f7;
 }
 
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
   color: var(--MAQBlack);
@@ -5404,113 +5389,94 @@ html, body {
 
 /*text styles*/
 
-h1.big{
-
+h1.big {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 5em;
-
 }
 
-h1.normal{
-
+h1.normal {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 2em;
   margin-bottom: 20px;
-
 }
 
-h2.normal{
-
+h2.normal {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: 1.5em;
-
 }
 
-h2.big{
-
+h2.big {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 4.5em;
-
 }
 
-h3.normal{
-
+h3.normal {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: 1.25em;
-
 }
 
-h3.big{
-
+h3.big {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 3em;
-
 }
 
-.body-text{
-
+.body-text {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 1em;
-
 }
 
-.body-text-centered{
+.body-text-centered {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 1em;
   text-align: center;
-
 }
 
-.body-bold{
-
+.body-bold {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: 1em;
-
 }
 
-.card-title{
+.card-title {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: 1.5em;
 }
 
-.card-title-small{
+.card-title-small {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 1.5em;  
+  font-size: 1.5em;
 }
 
-.btn-text{
-  
+.btn-text {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 1em;
   color: white;
-
 }
 
-.section-subheading{
+.section-subheading {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -5518,7 +5484,7 @@ h3.big{
   margin-bottom: 20px;
 }
 
-.contact-us-subheading{
+.contact-us-subheading {
   margin-bottom: 0;
 }
 
@@ -5539,52 +5505,52 @@ h3.big{
   transition: margin-left 0.3s ease;
 }
 
-
-p{
-margin: 0;
+.learn-more-link:hover .chevron {
+  margin-left: 10px;
 }
 
-.display-large{
-font-family: "Roboto", sans-serif;
-font-weight: 700;
-font-style: normal;
-font-size: 5rem;
-display: inline-block;
-
+p {
+  margin: 0;
 }
 
-.display-medium{
-font-family: "Roboto", sans-serif;
-font-weight: 700;
-font-style: normal;
-font-size: 2.25em;
-width: auto;
-margin-bottom: 20px;
-
+.display-large {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 5rem;
+  display: inline-block;
 }
 
-.one-third-text{
-width: 66.6%;
+.display-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.25em;
+  width: auto;
+  margin-bottom: 20px;
 }
 
-.display-small{
-font-family: "Roboto", sans-serif;
-font-weight: 700;
-font-style: normal;
-font-size: 3rem;
-
+.one-third-text {
+  width: 66.6%;
 }
 
-.email-link{
-font-family: "Roboto", sans-serif;
-font-weight: 700;
-font-style: normal;
-font-size: 2em;
-color: var(--MAQRed);
-text-decoration: none;
+.display-small {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3rem;
 }
 
-.email-link:hover{
-text-decoration: underline;
-color: var(--MAQRed);
+.email-link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2em;
+  color: var(--MAQRed);
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+  color: var(--MAQRed);
 }
