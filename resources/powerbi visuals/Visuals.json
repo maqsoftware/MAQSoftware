@@ -577,7 +577,7 @@
       "title": "Gantt Chart ",
       "id": "GanttChart",
       "description": "Monitor project milestones with a unique grid feature.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiOTUwODEyY2UtYTAxYS00MzU3LWI0YTktYTA1N2FmODU5Y2Y3IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://app.powerbi.com/view?r=eyJrIjoiN2MyODcyODYtYzdhMC00OWQ1LTgzZTQtNjlkNDIwMmIxYTNlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002087892-Gantt-Chart",
       "img": "/images/powerbi/svg/GanttChart.svg",
       "gif": "/images/powerbi/Gantt_Chart.mp4",
@@ -618,7 +618,7 @@
         "Added toggle for changing sort behavior – Independent sort "
       ],
       "version": "4.0.3.1",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiOTUwODEyY2UtYTAxYS00MzU3LWI0YTktYTA1N2FmODU5Y2Y3IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiN2MyODcyODYtYzdhMC00OWQ1LTgzZTQtNjlkNDIwMmIxYTNlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
