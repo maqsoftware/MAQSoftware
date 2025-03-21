@@ -123,7 +123,7 @@
       "title": "Brick Chart ",
       "id": "BrickChart",
       "description": "Display data percentages creatively using colorful shaded bricks.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiMTg1ZmEwODItZTIzMC00NmI2LTljMTktNWI2NjA5YzAxZjIxIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380836?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081211-Brick-Chart",
       "img": "/images/powerbi/svg/BrickChart.svg",
       "gif": "/images/powerbi/Brick_Chart.mp4",
@@ -160,7 +160,7 @@
       "title": "Calendar ",
       "id": "Calendar",
       "description": "View key events on your reports with an intuitive calendar layout.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiYTE2YzY2NDgtMzYxOC00YTliLWE5NjAtNzY5NDhlNjVlNTU4IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381844?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081231-Calendar",
       "img": "/images/powerbi/svg/Calendar.svg",
       "gif": "/images/powerbi/CalendarByMAQSoftware.mp4",
@@ -199,7 +199,7 @@
         "Add weekend toggle configuration to show/hide weekends "
       ],
       "version": "4.0.4.1",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiYTE2YzY2NDgtMzYxOC00YTliLWE5NjAtNzY5NDhlNjVlNTU4IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiYzc2NjI4M2QtYmRhMC00YTc1LWIwOTktNDA2YjBiYTNmNjkzIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -208,7 +208,7 @@
       "title": "Circular Gauge ",
       "id": "CircularGaugeChart",
       "description": "Gauge progress toward goals with a pie or donut chart.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiM2MzOTkwOTMtYjc5Yy00ZTNhLTgyOGMtNmFlODBkYzJkZTEwIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380837?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002087772-Circular-Gauge",
       "img": "/images/powerbi/svg/CircularGauge.svg",
       "gif": "/images/powerbi/Circular_Gauge.mp4",
@@ -239,7 +239,7 @@
         "Enabled the context menu"
       ],
       "version": "4.0.0",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiM2MzOTkwOTMtYjc5Yy00ZTNhLTgyOGMtNmFlODBkYzJkZTEwIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiMjQ2YzhkNTktYTgzNS00Yzc3LTgwNTgtNjJiNzc2N2E2MDczIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -248,7 +248,7 @@
       "title": "Clustering using OPTICS ",
       "id": "ClusteringUsingOPTICS",
       "description": "Group data effectively with a user-friendly density-based clustering algorithm.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiOTU2MTU3MWQtNDE3Zi00NDJlLWJhMmEtMWM1OWUyZjlhYWM1IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381463?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002087832-Clustering-using-OPTICS",
       "img": "/images/powerbi/svg/ClusterUsingOptics.svg",
       "gif": "/images/powerbi/Clustering_Using_OPTICS.mp4",
@@ -272,7 +272,7 @@
         "Capability to manually adjust the parameters of the clustering model "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiOTU2MTU3MWQtNDE3Zi00NDJlLWJhMmEtMWM1OWUyZjlhYWM1IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiN2Y4NDUwMGEtOTMwMC00ZWRiLTk2MWItNDcwZjRiYzZjODA3IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -281,7 +281,7 @@
       "title": "Cylindrical Gauge ",
       "id": "CylindricalGaugeChart",
       "description": "Compare metrics with an easy-to-read 3D cylinder visual.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiNmEyMmUxMGUtYWZiZi00ODZlLWIyYWItNzM4ZDc1YzQxMTg2IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380874?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081251-Cylindrical-Gauge",
       "img": "/images/powerbi/svg/CylindricalGauge.svg",
       "gif": "/images/powerbi/Cylindrical_Gauge.mp4",
@@ -310,7 +310,7 @@
         "Optional fill line for added clarity "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNmEyMmUxMGUtYWZiZi00ODZlLWIyYWItNzM4ZDc1YzQxMTg2IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNDRiYmIyYmItMGJiMS00MmFmLTgxYTUtZjlmODUwMjg3YjkzIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -319,7 +319,7 @@
       "title": "Data Insights ",
       "id": "DataInsights",
       "description": "Gain insights with a variety of visual formats for better understanding.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiNjFlMjQzYTgtZGRlMC00M2U2LTgzMDAtM2Y0M2Q4NzA4YWRlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381454?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081271-Data-Insights",
       "img": "/images/powerbi/svg/DataInsights.svg",
       "gif": "/images/powerbi/Data_Insights.mp4",
@@ -347,7 +347,7 @@
         "Data by color and legends "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNjFlMjQzYTgtZGRlMC00M2U2LTgzMDAtM2Y0M2Q4NzA4YWRlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNDZhZDY0NTYtNTg3ZC00OWIzLWFkMGMtMzc5NWJmOTRkOTYzIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -356,7 +356,7 @@
       "title": "Dot Plot ",
       "id": "DotPlotChart",
       "description": "Spot gaps and clusters easily with a simple dot plot.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiZTkwNDg5MDktM2JjNi00MmZlLWFiY2YtMGUxYWNiODViZmJkIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381101?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081291-Dot-Plot",
       "img": "/images/powerbi/svg/DotPlot.svg",
       "gif": "/images/powerbi/Dot_Plot.mp4",
@@ -386,7 +386,7 @@
         "Support for context menu "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZTkwNDg5MDktM2JjNi00MmZlLWFiY2YtMGUxYWNiODViZmJkIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiYTdiN2E2MWYtY2FhMC00MzdkLWI3ZWMtN2IyMGViNDIzYjMyIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -395,7 +395,7 @@
       "title": "Dumbbell Chart ",
       "id": "DumbbellChart",
       "description": "Visualize business measures over time or categories clearly.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiMzVkZDcwMjQtOGI2MC00M2YwLWFhM2UtZjVlZGM1MDU1ZTUzIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381460?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002087852-Dumbbell-Chart",
       "img": "/images/powerbi/svg/DumbbellChart.svg",
       "gif": "/images/powerbi/Dumbbell_Chart.mp4",
@@ -419,7 +419,7 @@
         "Quickly download an image of the chart with the capture image widget "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiMzVkZDcwMjQtOGI2MC00M2YwLWFhM2UtZjVlZGM1MDU1ZTUzIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiMWFhYTZlY2EtNWM1Yy00NzVhLTk4YjYtMDFjNzE1YTkzYWI5IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -428,7 +428,7 @@
       "title": "Dynamic Tooltip ",
       "id": "DynamicTooltipChart",
       "description": "Improve report readability with informative dynamic tooltips.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiM2YwYzYwMDYtYzVlZi00YmJlLWFhZjUtYTIxZTI0Mjg0NjQ2IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380983?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081311-Dynamic-Tooltip",
       "img": "/images/powerbi/svg/DynamicTooltip.svg",
       "gif": "/images/powerbi/Dynamic_Tooltip.mp4",
@@ -460,7 +460,7 @@
         "Added separate data fields for header and body values of the tooltip"
       ],
       "version": "4.3.0",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiM2YwYzYwMDYtYzVlZi00YmJlLWFhZjUtYTIxZTI0Mjg0NjQ2IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNDIzMGQxN2ItODI2NS00MGQzLWFkYmUtZDdhMjkzOGI0ZWRkIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -469,7 +469,7 @@
       "title": "Forecast using Multiple Models ",
       "id": "ForecastUsingMultipleModels",
       "description": "Forecast using various models for comprehensive predictions.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiYjliNjNhMTItYTRlZC00NTM3LWJkNGEtMjAzN2QyNjFjNjM4IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://app.powerbi.com/view?r=eyJrIjoiNTI3ZmNlNDktMTAzMC00NDgzLTg3Y2ItMTg2Yzc0YzEzZDZhIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002087872-Forecast-using-Multiple-Models",
       "img": "/images/powerbi/svg/ForecastingusingMultipleModels.svg",
       "gif": "/images/powerbi/forecast-multiple-models.mp4",
@@ -496,7 +496,7 @@
         "Forecast options include the choice of algorithm, showing or hiding confidence intervals deciding on the split point, and applying data transformation "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiYjliNjNhMTItYTRlZC00NTM3LWJkNGEtMjAzN2QyNjFjNjM4IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiOTZhZTA0OTEtMzU2MS00MGU2LWJkYjAtOTg2NDc0YzU0NjA1IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -505,7 +505,7 @@
       "title": "Forecast using Neural Network ",
       "id": "ForecastUsingNeuralNetwork",
       "description": "Predict future values accurately with a Neural Network algorithm.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiNTI3ZmNlNDktMTAzMC00NDgzLTg3Y2ItMTg2Yzc0YzEzZDZhIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381428?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081331-Forecast-using-Neural-Network",
       "img": "/images/powerbi/svg/ForecastingusingNeuralNetworks.svg",
       "gif": "/images/powerbi/Forecast_Using_Neural_Network.mp4",
@@ -531,7 +531,7 @@
         "Capability to manually adjust the parameters of the learning model "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNTI3ZmNlNDktMTAzMC00NDgzLTg3Y2ItMTg2Yzc0YzEzZDZhIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNmFlZWNjM2ItNjY5Zi00YzhlLThlNmEtY2Q3NjUwODcwNDI2IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -540,7 +540,7 @@
       "title": "Funnel with Source ",
       "id": "FunnelWithSourceChart",
       "description": "Track data flow end-to-end, highlighting each data source.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiYjg0ZjI5ZmItYmZiMS00ODFhLWFkOTgtYzUxYzdhYzQ2YTU2IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381334?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081351-Funnel-with-Source",
       "img": "/images/powerbi/svg/FunnelwithSource.svg",
       "gif": "/images/powerbi/Funnel_with_source.mp4",
@@ -568,7 +568,7 @@
         "Configurable colors, font, and labels "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiYjg0ZjI5ZmItYmZiMS00ODFhLWFkOTgtYzUxYzdhYzQ2YTU2IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZmI0OTg3YmEtMzFkNC00ODExLWIxMDktZDZmMDhjODE4OTM0IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -577,7 +577,7 @@
       "title": "Gantt Chart ",
       "id": "GanttChart",
       "description": "Monitor project milestones with a unique grid feature.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiN2MyODcyODYtYzdhMC00OWQ1LTgzZTQtNjlkNDIwMmIxYTNlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381364?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002087892-Gantt-Chart",
       "img": "/images/powerbi/svg/GanttChart.svg",
       "gif": "/images/powerbi/Gantt_Chart.mp4",
@@ -618,7 +618,7 @@
         "Added toggle for changing sort behavior – Independent sort "
       ],
       "version": "4.0.3.1",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiN2MyODcyODYtYzdhMC00OWQ1LTgzZTQtNjlkNDIwMmIxYTNlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiN2FmN2U2ZmQtNjdmMi00NGNiLTg3ZmEtZjRkMDdjZDUxMWY2IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -627,7 +627,7 @@
       "title": "Grid ",
       "id": "GridChart",
       "description": "Navigate large datasets easily with a paginated grid format.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiZmEzMzYwNTItMjIwNy00Mjk2LTgyZWQtYThiNmI5OGE1NGRkIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380825?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081411-Grid",
       "img": "/images/powerbi/svg/Grid.svg",
       "gif": "/images/powerbi/Grid.mp4",
@@ -658,7 +658,7 @@
         "Added support for the context menu "
       ],
       "version": "4.0.0",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZmEzMzYwNTItMjIwNy00Mjk2LTgyZWQtYThiNmI5OGE1NGRkIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZmM0YmUzODMtMGM0YS00ZTkxLWEyZTQtOWE3MDU4ZWNkNDljIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -667,7 +667,7 @@
       "title": "Hierarchy Chart ",
       "id": "HierarchyChart",
       "description": "Visually depict the structure and relationships of authorities in an organization.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiNTk4OWY4MmEtNjFmOC00MDc3LTgwMWMtY2IzMDA5NWFkNGVkIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/maqsoftware1587623472284.hierarchychartbymaqsoftware?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/12846049921044-Power-BI-Hierarchy-Chart",
       "img": "/images/powerbi/svg/HierarchyChart.svg",
       "gif": "/images/powerbi/Histogram_With_Points.mp4",
@@ -698,7 +698,7 @@
         "Navigational freedom: Zoom and drag features allow for adaptable visualization positioning."
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNTk4OWY4MmEtNjFmOC00MDc3LTgwMWMtY2IzMDA5NWFkNGVkIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNTZkZTgyNjgtZjI3OS00MzllLWIwNmUtYTVhNDI2NDQyYWViIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -707,7 +707,7 @@
       "title": "Histogram With Points ",
       "id": "HistogramChart",
       "description": "Compare distribution density and actual values effectively.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiODBkNGM4ZjktYzkzMS00MmEzLTg3MWYtOTRmNGI0NDdmOWFlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381032?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002088032-Histogram-with-Points",
       "img": "/images/powerbi/svg/HistogramwithPoints.svg",
       "gif": "/images/powerbi/Histogram_With_Points.mp4",
@@ -736,7 +736,7 @@
         "Able to show/hide all the elements listed above "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiODBkNGM4ZjktYzkzMS00MmEzLTg3MWYtOTRmNGI0NDdmOWFlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZDZiYTBhZTItYTRhMy00NzFiLTgwMDQtODYwOGY0ZWM1Y2FlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -745,7 +745,7 @@
       "title": "Horizontal Funnel ",
       "id": "HorizontalFunnelChart",
       "description": "Break down process stages horizontally for clearer insights.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiN2YwMzQ0NDMtMmNjNi00ZTUxLWE5N2UtM2E3MjgyNWU2YzgxIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380846?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081471-Horizontal-Funnel",
       "img": "/images/powerbi/svg/HorizontalFunnel.svg",
       "gif": "/images/powerbi/Horizontal_Funnel.mp4",
@@ -777,7 +777,7 @@
         "Support for the context menu"
       ],
       "version": "4.0.0",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiN2YwMzQ0NDMtMmNjNi00ZTUxLWE5N2UtM2E3MjgyNWU2YzgxIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiMGQ0YzFhYjEtYTM4MS00MmU4LTlhYWQtZTY5Y2FmMDc2OTc2IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -786,7 +786,7 @@
       "title": "Hourglass Chart ",
       "id": "HourglassChart",
       "description": "Compare category values before and after an event simply.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiZTRhMjQ5MTMtZWY4OS00MTYwLWE0ZGEtZjY1OThjMWI1Y2Y3IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381843?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081651-Hourglass-Chart",
       "img": "/images/powerbi/svg/Hourglass.svg",
       "gif": "/images/powerbi/hourglass-visual.mp4",
@@ -815,7 +815,7 @@
         "Configurable conversion box (add or remove) "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZTRhMjQ5MTMtZWY4OS00MTYwLWE0ZGEtZjY1OThjMWI1Y2Y3IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiMDMwNzBjOTQtYTA3OC00NmYzLWFlZGItYWMzOGZiN2UwM2Y1IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -824,7 +824,7 @@
       "title": "Image Carousel ",
       "id": "ImageCarousel",
       "description": "Showcase images seamlessly with a sliding carousel visual.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiN2YxNTI0MjctNDU5Yy00YTAwLWFhZjUtYjhkZGI2ZWFkMzZkIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/maqsoftware1587623472284.imagecarouselbymaqsoftware?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/posts/9699670535060-Image-Carousel",
       "img": "/images/powerbi/svg/ImageCarousel.svg",
       "gif": "/images/powerbi/ImageCarousel.png",
@@ -853,7 +853,7 @@
         "Customizable layouts and themes "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiN2YxNTI0MjctNDU5Yy00YTAwLWFhZjUtYjhkZGI2ZWFkMzZkIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiODYwNjYwNWEtZTgzMi00YzJlLWJkMDktNzgzNjAyOGNlMmYxIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -862,7 +862,7 @@
       "title": "Journey Chart ",
       "id": "JourneyChart",
       "description": "Transform statistical data into a network of categories and relationships.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiMzU0YjdjZjQtMzE1MS00NWYyLTk0ZTUtN2E2OTkyYWJlMzhjIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380989?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081671-Journey-Chart",
       "img": "/images/powerbi/svg/JourneyChart.svg",
       "gif": "/images/powerbi/Journey_Chart.mp4",
@@ -890,7 +890,7 @@
         "Option to add a legend to clarify complex graphs "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiMzU0YjdjZjQtMzE1MS00NWYyLTk0ZTUtN2E2OTkyYWJlMzhjIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiM2IwNzRhYWUtZTJlNC00MTNlLTlhNzAtZDNmYmU4YjRiYzNiIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -899,7 +899,7 @@
       "title": "KPI Column ",
       "id": "KPIColumnChart",
       "description": "Measure progress with color-coded columns and an integrated line chart.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiODMyOWQxZGYtZWExOC00NzdiLTk2ZTYtMTJjNjkxZmFkOTg0IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380996?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081691-KPI-Column",
       "img": "/images/powerbi/svg/KPIColumn.svg",
       "gif": "/images/powerbi/KPI_Column.mp4",
@@ -931,7 +931,7 @@
         "Increased support to handle 5000 records"
       ],
       "version": "4.0.0",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiODMyOWQxZGYtZWExOC00NzdiLTk2ZTYtMTJjNjkxZmFkOTg0IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZjlhZjliYmItNzMyZC00N2Y3LTk1YTAtMTYyZDAzYzQ5MmM4IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -940,7 +940,7 @@
       "title": "KPI Grid ",
       "id": "KPIGridChart",
       "description": "Display hierarchical data, separate categories, and illustrate trends.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiZmRmMjVmZTAtY2JhZC00YzJjLThjODctYmM4ZjkwMGFkMzZmIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380947?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002088192-KPI-Grid",
       "img": "/images/powerbi/svg/KPIGrid.svg",
       "gif": "/images/powerbi/KPI_Grid.mp4",
@@ -973,7 +973,7 @@
         "Context menu support"
       ],
       "version": "4.0.0",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZmRmMjVmZTAtY2JhZC00YzJjLThjODctYmM4ZjkwMGFkMzZmIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZTY2YWIzN2UtMjM4Zi00MzRjLWE1NmQtOWMxZjZjNzI2MzAzIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -982,7 +982,7 @@
       "title": "KPI Ticker ",
       "id": "KPITickerChart",
       "description": "Rotate through multiple KPIs in an auto-scrolling visual.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiZjk5YjMyMWItNmYzMi00NmZhLThjNzgtMGNmYmYzNTY1NTc2IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380946?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002088212-KPI-Ticker",
       "img": "/images/powerbi/svg/KPITicker.svg",
       "gif": "/images/powerbi/KPI_Ticker.mp4",
@@ -1015,7 +1015,7 @@
         "Handle percentage values"
       ],
       "version": "4.0.3",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZjk5YjMyMWItNmYzMi00NmZhLThjNzgtMGNmYmYzNTY1NTc2IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNGNlMWFmZjMtZmFhNC00NzI0LTkwMjYtZjhkMzkwNDEwMjBiIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -1024,7 +1024,7 @@
       "title": "Linear Gauge ",
       "id": "LinearGaugeChart",
       "description": "Compare progress against goals with an easy-to-read linear gauge.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiNWJhZTUyYTEtYjk3Ny00MGNmLTkzNDMtZGIxYTk2MjQ1MzY5IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380821?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081711-Linear-Gauge",
       "img": "/images/powerbi/svg/LinearGauge.svg",
       "gif": "/images/powerbi/Linear_Gauge.mp4",
@@ -1068,7 +1068,7 @@
         "Bug fixes "
       ],
       "version": "4.0.0",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNWJhZTUyYTEtYjk3Ny00MGNmLTkzNDMtZGIxYTk2MjQ1MzY5IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiYTUwYjY5ODEtNDY3Zi00NzdmLWEyODMtZjI4OWIyZGYwMzVjIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -1077,7 +1077,7 @@
       "title": "Organization Chart ",
       "id": "OrganizationChart",
       "description": "Display organizational hierarchy or functional structure.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiNjRiZDdiZDYtOTJjZi00N2JhLWI5ZWMtZmNiYzEwYWI2YWJlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA200001120?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002088232-Organization-Chart",
       "img": "/images/powerbi/svg/Organizationchart.svg",
       "gif": "/images/powerbi/Organizationchart.mp4",
@@ -1114,7 +1114,7 @@
         "Support for context menu"
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNjRiZDdiZDYtOTJjZi00N2JhLWI5ZWMtZmNiYzEwYWI2YWJlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNDJjNzk4ZjctZDUwMS00ZTM3LWJhZTgtYzY4OWU1MzM2Y2Q0IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -1123,7 +1123,7 @@
       "title": "Quadrant Chart ",
       "id": "QuadrantChart",
       "description": "Represent data distribution and common traits in separate quadrants.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiMjVmY2JjZmMtY2QxMy00YjFjLTgwMGUtMGU5OWNjYWYyYWNkIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381011?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081731-Quadrant-Chart",
       "img": "/images/powerbi/svg/QuadrantChart.svg",
       "gif": "/images/powerbi/Quadrant_Chart.mp4",
@@ -1152,7 +1152,7 @@
         "Supports context menu "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiMjVmY2JjZmMtY2QxMy00YjFjLTgwMGUtMGU5OWNjYWYyYWNkIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiOGEzMTQ5MzEtMDY1Mi00YmUxLTkwZTQtMGEwZTAwYzM4NWYzIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -1161,7 +1161,7 @@
       "title": "Radar Chart ",
       "id": "RadarChart",
       "description": "Compare data across multiple variables in a two-dimensional chart.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiOGQyMzlmZTMtODIzYi00ZjFjLTljZWItYjUwY2FlYTBhNDM0IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA200001561?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081751-Radar-Chart",
       "img": "/images/powerbi/svg/Radarchart.svg",
       "gif": "/images/powerbi/Radarchart.mp4",
@@ -1198,7 +1198,7 @@
         "Option to display data values and set text color "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiOGQyMzlmZTMtODIzYi00ZjFjLTljZWItYjUwY2FlYTBhNDM0IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiOTBiZTk0ZWEtMjZlOC00MGIyLWIyYjQtMTM3NWI4OTU5ZWUwIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -1207,7 +1207,7 @@
       "title": "Ratings ",
       "id": "Ratings",
       "description": "Show performance or approval scores within your Power BI reports.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiZjJmY2FkOGMtZGFhYi00MzkxLTk0YmQtODVlYzQxZjJiMmNiIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381838?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002088371-Ratings",
       "img": "/images/powerbi/svg/Ratings.svg",
       "gif": "/images/powerbi/RatingsByMAQSoftware.mp4",
@@ -1235,7 +1235,7 @@
         "Configurable fill color (solid or gradient) "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZjJmY2FkOGMtZGFhYi00MzkxLTk0YmQtODVlYzQxZjJiMmNiIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZjc1YTNlNTQtYjA5Zi00NmMyLWJhNzItNmI5Yjc1M2E0ODJmIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -1244,7 +1244,7 @@
       "title": "Ring Chart ",
       "id": "RingChart",
       "description": "Display relationships between values segmented in a ring.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiYzlkYmFiMjMtZWIyOS00M2MyLTg4ZDUtYTA2MTMyOGExYmU4IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380824?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002088391-Ring-Chart",
       "img": "/images/powerbi/svg/RingChart.svg",
       "gif": "/images/powerbi/Ring_Chart.mp4",
@@ -1273,7 +1273,7 @@
         "Resolved a minor bug with the tooltip "
       ],
       "version": "4.5.3",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiYzlkYmFiMjMtZWIyOS00M2MyLTg4ZDUtYTA2MTMyOGExYmU4IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNzcyYmNmNzQtYjQ4Mi00NmNjLTgxZTQtMGFiOTQwM2MyZDA2IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -1282,7 +1282,7 @@
       "title": "Rotating Chart ",
       "id": "RotatingChart",
       "description": "Showcase multiple KPIs with a rotating bar chart for dynamic insights.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiNWViZDg2OGEtNjQ3Zi00MTMwLTkzM2QtNDEwODAzNTg4ZmE1IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381007?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002088252-Rotating-Chart",
       "img": "/images/powerbi/svg/RotatingChart.svg",
       "gif": "/images/powerbi/Rotating_Chart.mp4",
@@ -1311,7 +1311,7 @@
         "Standard formatting options such as font type, size, and color for the label and title, background, and tile borders "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNWViZDg2OGEtNjQ3Zi00MTMwLTkzM2QtNDEwODAzNTg4ZmE1IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZDBjNjY4MmUtMjM5Yy00NmRjLTgyMDctM2Y2YmE5ZjlmZGU3IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -1320,7 +1320,7 @@
       "title": "Rotating Tile ",
       "id": "RotatingTileChart",
       "description": "Display multiple KPIs with an automatically flipping, customizable tile.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiZmY5MTdkMGYtOTQ0My00OWMxLWFhYTMtMThiYWI4MzNiZjdkIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380877?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002088272-Rotating-Tile",
       "img": "/images/powerbi/svg/RotatingTiles.svg",
       "gif": "/images/powerbi/Rotating_Tile.mp4",
@@ -1349,7 +1349,7 @@
         "Standard formatting options such as font type, size, and color for the label and title, background, and tile borders "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZmY5MTdkMGYtOTQ0My00OWMxLWFhYTMtMThiYWI4MzNiZjdkIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNTY4OTZhODctZmQyMC00YjcxLWFkOTktMDVjNmE3MDRlNGQ5IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -1358,7 +1358,7 @@
       "title": "Slope Chart ",
       "id": "SlopeChart",
       "description": "Analyze trends with a visual representation of slopes between data points.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiOTFlNmQxNGUtNWIzYi00YTczLTg2OWUtMDlkM2M2Y2M3ZGRhIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381393?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002088292-Slope-Chart",
       "img": "/images/powerbi/svg/SlopeChart.svg",
       "gif": "/images/powerbi/Slope_Chart.mp4",
@@ -1382,7 +1382,7 @@
         "Quickly download an image of the chart with the capture image widget "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiOTFlNmQxNGUtNWIzYi00YTczLTg2OWUtMDlkM2M2Y2M3ZGRhIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZDJmMmRjYzUtOWVhYi00NTI1LTllZmEtYmY5NDI2Y2QwMzgzIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -1441,7 +1441,7 @@
       "title": "Text Enhancer ",
       "id": "TextEnhancer",
       "description": "Customize text in Power BI reports with adjustable shadow, rotation, and more.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiMTBjYTEyMzgtMGU1Yy00MTk4LWFmMjQtNjI2YmVhNTE0ZWY1IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381762?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081631-Text-Enhancer",
       "img": "/images/powerbi/svg/TextEnhancer.svg",
       "gif": "/images/powerbi/TextEnhancer2.mp4",
@@ -1471,7 +1471,7 @@
         "Support for the context menu"
       ],
       "version": "4.0.0",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiMTBjYTEyMzgtMGU1Yy00MTk4LWFmMjQtNjI2YmVhNTE0ZWY1IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZDc1NzAwMTUtOWZiNy00MTI3LTg0NTMtOWM5MDkxMzI4M2M1IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -1480,7 +1480,7 @@
       "title": "Text Wrapper ",
       "id": "TextWrapperChart",
       "description": "Represent complete data with enabled text wrapping on Power BI reports.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiMmIwMTAxMDgtZjNkMi00ZWQ3LThlNDctNzBhNWNhYjZlZTZlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380826?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081611-Text-Wrapper",
       "img": "/images/powerbi/svg/TextWrap.svg",
       "gif": "/images/powerbi/Text_Wrapper.mp4",
@@ -1504,7 +1504,7 @@
         "Dynamic text field value (updates according to the selected filter or slicer, keeping the static text intact) "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiMmIwMTAxMDgtZjNkMi00ZWQ3LThlNDctNzBhNWNhYjZlZTZlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiYTkwYjk3ZTQtMmQ0NS00N2RjLTlmMmQtM2Y0MTU2MTUzNTAxIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -1513,7 +1513,7 @@
       "title": "Thermometer ",
       "id": "ThermometerChart",
       "description": "Illustrate progress towards goals with a customizable thermometer graphic.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiN2M5MmU3MTgtMzgzMS00YzU3LTgxNzMtZGY5OWYzNzhiYWFlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380847?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081591-Thermometer",
       "img": "/images/powerbi/svg/Thermometer.svg",
       "gif": "/images/powerbi/Thermometer.mp4",
@@ -1544,7 +1544,7 @@
         "Fixed target and fill issue"
       ],
       "version": "4.0.0",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiN2M5MmU3MTgtMzgzMS00YzU3LTgxNzMtZGY5OWYzNzhiYWFlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZTVhMjY5Y2QtNTRlNS00YTYzLThmZTktZWM0Y2JjNjEyZGMyIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -1553,7 +1553,7 @@
       "title": "Trading Chart ",
       "id": "TradingChart",
       "description": "Simplify historical trading records with a color-coded chart.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiZjM5YjA0N2ItNzc1Ny00ZjU1LWE4ZDUtNWMwNmEwYjg5YzkzIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380823?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002088152-Trading-Chart",
       "img": "/images/powerbi/svg/StockChart.svg",
       "gif": "/images/powerbi/Stock_Chart.mp4",
@@ -1583,7 +1583,7 @@
         "Support for the context menu"
       ],
       "version": "4.0.0",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZjM5YjA0N2ItNzc1Ny00ZjU1LWE4ZDUtNWMwNmEwYjg5YzkzIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiYWY2YjU4MjEtZTNmYi00MTMzLTkzZTQtNDIwNzQ0YjMwOWNlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -1592,7 +1592,7 @@
       "title": "Treemap Bar Chart ",
       "id": "TreemapBarChart",
       "description": "Categorize hierarchical data with color-coded, proportional rectangles.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiZmEyNjU3NDItZGNlMS00Y2NkLWI1M2ItZDZlMTNlMGYwZjI2IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA200000043?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081571-Treemap-Bar-Chart",
       "img": "/images/powerbi/svg/TreeMap.svg",
       "gif": "/images/powerbi/TreemapBarChart.mp4",
@@ -1631,7 +1631,7 @@
         "Context menu support"
       ],
       "version": "4.0.0",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZmEyNjU3NDItZGNlMS00Y2NkLWI1M2ItZDZlMTNlMGYwZjI2IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNjI0ZmI2MTctMGNkNS00ZjA4LWIwOWItZjVhZTgzOTFmYTMyIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -1640,7 +1640,7 @@
       "title": "Venn Diagram ",
       "id": "VennDiagram",
       "description": "Compare and contrast data across multiple sets with a clear Venn diagram.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiOTM5ZGU4NjQtYmVlOC00MTRkLWFiMjItMWU3NTEwMTYwM2Y0IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381231?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002088132-Venn-Diagram",
       "img": "/images/powerbi/svg/VennDiagram.svg",
       "gif": "/images/powerbi/Venn_Diagram.mp4",
@@ -1671,7 +1671,7 @@
         "Updated with the latest certification ruleset "
       ],
       "version": "3.1.1",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiOTM5ZGU4NjQtYmVlOC00MTRkLWFiMjItMWU3NTEwMTYwM2Y0IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiMDhhYTQwM2UtYTQyZC00YTIyLWI2YjItMmI1ZDE2YjRjODVlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -1680,7 +1680,7 @@
       "title": "Violin Plot ",
       "id": "ViolinPlot",
       "description": "Visualize data distribution across categories with a simple and effective plot.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiMDQyOWUxNDctYmZiNi00MzMxLTgyMzEtN2I1OWRkMjFkZTI5IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/maqsoftware1587623472284.violinplotbymaqsoftware?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/posts/10644089535380-Violin-Plot",
       "img": "/images/powerbi/svg/ViolinPlot.svg",
       "gif": "/images/powerbi/ViolinPlot.png",
@@ -1709,7 +1709,7 @@
         "Cross-filtering with other visuals "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiMDQyOWUxNDctYmZiNi00MzMxLTgyMzEtN2I1OWRkMjFkZTI5IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZmU0MDZjMGYtNDUyNC00OTQ0LTk3NDMtYTIwNGIyOGM5YjM0IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   }
 ]
