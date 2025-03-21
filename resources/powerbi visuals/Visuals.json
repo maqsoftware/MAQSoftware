@@ -31,7 +31,7 @@
       "keyFeatures": [],
       "whatsNew": [],
       "version": "",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiMTBlYmUzOTktMjlhMC00NDdhLWIxYzQtZmFkNzIzZGI3YTQ5IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiMWE3NmUyZjItM2Y3ZS00MzFmLTkyZTktZDAzNDlkMDMwNzVmIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -40,7 +40,7 @@
       "title": "Bowtie Chart ",
       "id": "BowtieChart",
       "description": "Compare data flow between processes using a clear and simple bowtie visualization.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiYjYzZTIxYzAtYzJlOC00ZDM1LWE0YTQtOWU5NzNhODlhNzMyIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380838?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081171-Bowtie-Chart",
       "img": "/images/powerbi/svg/BowtieChart.svg",
       "gif": "/images/powerbi/Bowtie_Chart.mp4",
@@ -73,7 +73,7 @@
         "Fixed the summary label position"
       ],
       "version": "4.0.1",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiYjYzZTIxYzAtYzJlOC00ZDM1LWE0YTQtOWU5NzNhODlhNzMyIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZjNhNTc1YmEtNzE0MC00ZTA4LWFiMjgtZjY5MTMwZjM2ZTA0IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -82,7 +82,7 @@
       "title": "Box and Whisker Chart ",
       "id": "BoxAndWhiskers",
       "description": "See data spread at a glance with a chart showing mean, median, and quartiles.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiYjlmNDZjNmQtMWJjMy00MThjLWFmNjgtMzhmZTZhYjdiMmU1IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381351?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081191-Box-and-Whisker",
       "img": "/images/powerbi/svg/BoxandWhiskers.svg",
       "gif": "/images/powerbi/Box_and_Whisker.mp4",
@@ -114,7 +114,7 @@
         "Added support for the context menu "
       ],
       "version": "4.0.0",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiYjlmNDZjNmQtMWJjMy00MThjLWFmNjgtMzhmZTZhYjdiMmU1IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNTBiOWI3MjgtYzgzNi00MzE4LThjNzYtNzY5YjJjMGNlOTA1IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -151,7 +151,7 @@
         "Customizable width and height "
       ],
       "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiMTg1ZmEwODItZTIzMC00NmI2LTljMTktNWI2NjA5YzAxZjIxIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiMGY0ZWJmYzAtNTNhMS00ZjEwLTg5ODktNjhlNjdlNmRlMzkxIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
