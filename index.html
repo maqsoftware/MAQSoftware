@@ -42,6 +42,7 @@
 
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 
   <!--[if lt IE 9]>
@@ -84,7 +85,9 @@
 </head>
 
 <body>
-  
+    <button id="scrollToTopBtn" class="scroll-to-top" title="Scroll to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
   <!-- Header -->
   <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent" data-bkg-threshold="100"
     data-sticky-threshold="0"></header>
@@ -947,7 +950,23 @@
         $("#footer").load("/footer.html");
       </script>
       <script src="js/common.js"></script>
-      <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous">
+         document.addEventListener("DOMContentLoaded", function () {
+    let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 200) {
+            scrollToTopBtn.style.display = "flex";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    });
+
+    scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
+      </script>
 
 
 
