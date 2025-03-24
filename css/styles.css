@@ -333,7 +333,7 @@ p{
 
 }
 
-.display-medium{
+.display-medium, .banner-text {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -3231,6 +3231,13 @@ img .accordion-img{
 }
 
 @media screen and (max-width: 768px) {
+  .banner-text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5em;
+    width: auto;
+  }
   .contact-us-section-heading {
     font-size: 2em;
   }
