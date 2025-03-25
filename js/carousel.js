@@ -6,26 +6,26 @@ $("#carousel-call").load("/carousel.html", function() {
         moveSlide(1);
     }, 10000);
 
-    console.log("carousel loaded successfully")
+    // console.log("carousel loaded successfully")
 
     const itemCheck = document.getElementById('carousel-chevron-prev');
-    console.log(itemCheck);
+    // console.log(itemCheck);
 
     $('#carousel-chevron-next').on('click', function() {
         // console.log('Nav item clicked in header!');
         moveSlide(1);
-          console.log("Current slide index: " + currentSlideIndex);
+        //   console.log("Current slide index: " + currentSlideIndex);
           const prev = document.getElementById('carousel-chevron-prev');
-          console.log("prev has been pressed.")
+        //   console.log("prev has been pressed.")
           prev.classList.toggle('closed');
     });
 
     $('#carousel-chevron-prev').on('click', function() {
       // console.log('Nav item clicked in header!');
         moveSlide(-1);
-        console.log("Current slide index: " + currentSlideIndex);
+        // console.log("Current slide index: " + currentSlideIndex);
         const prev = document.getElementById('carousel-chevron-prev');
-        console.log("prev has been pressed.")
+        // console.log("prev has been pressed.")
         prev.classList.toggle('closed');
     });
     
@@ -33,25 +33,25 @@ $("#carousel-call").load("/carousel.html", function() {
     $('#menu-btn-0').on('click', function() {
       // console.log('Dismiss clicked!');
         goToSlide(0);
-        console.log(currentSlideIndex);
+        // console.log(currentSlideIndex);
     });
 
     $('#menu-btn-1').on('click', function() {
         // console.log('Dismiss clicked!');
         goToSlide(1);
-        console.log(currentSlideIndex);
+        // console.log(currentSlideIndex);
     });
     
     $('#menu-btn-2').on('click', function() {
     // console.log('Dismiss clicked!');
         goToSlide(2);
-        console.log(currentSlideIndex);
+        // console.log(currentSlideIndex);
     });
 
     $('#menu-btn-3').on('click', function() {
     // console.log('Dismiss clicked!');
         goToSlide(3);
-        console.log(currentSlideIndex);
+        // console.log(currentSlideIndex);
     });
 
     // Function that updates the state of the carousel
@@ -60,15 +60,15 @@ $("#carousel-call").load("/carousel.html", function() {
         const carousel = document.querySelector('.carousel');
         carousel.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
         resetAutoSlide();
-        console.log("Current slide index movement:" + currentSlideIndex * 100);
+        // console.log("Current slide index movement:" + currentSlideIndex * 100);
     }
 
     // When provided a positive or negative integer, changes slides depending on positive or negative direction
     function moveSlide(direction) {
         currentSlideIndex = (currentSlideIndex + direction + totalSlides) % totalSlides;
-        console.log("Move slide has been activated.");
-        console.log("This is the direction: " + direction)
-        console.log("This is slide index we are moving to: " + currentSlideIndex);
+        // console.log("Move slide has been activated.");
+        // console.log("This is the direction: " + direction)
+        // console.log("This is slide index we are moving to: " + currentSlideIndex);
         updateCarousel();
         resetAutoSlide();
     }
@@ -76,8 +76,8 @@ $("#carousel-call").load("/carousel.html", function() {
     // When provided with an index, changes to slide with matching index value
     function goToSlide(index) {
         currentSlideIndex = index;
-        console.log("Go to slide has been activated.")
-        console.log(currentSlideIndex);
+        // console.log("Go to slide has been activated.")
+        // console.log(currentSlideIndex);
         updateCarousel();
         resetAutoSlide();
     }
@@ -91,11 +91,11 @@ $("#carousel-call").load("/carousel.html", function() {
 
     function updateSelectedState() {
         let selectedButtons = document.querySelector('.menu-btn-selected');
-        console.log("Selected buttons:" + selectedButtons);
+        // console.log("Selected buttons:" + selectedButtons);
         selectedButtons.classList.remove('menu-btn-selected');
-        console.log("Button we are changing to: " + 'menu-btn-' + currentSlideIndex)
+        // console.log("Button we are changing to: " + 'menu-btn-' + currentSlideIndex)
         let currentButton = document.getElementById('menu-btn-' + (currentSlideIndex));
-        console.log(currentButton);
+        // console.log(currentButton);
         currentButton.classList.add('menu-btn-selected');
     }
 
