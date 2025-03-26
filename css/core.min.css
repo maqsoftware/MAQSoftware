@@ -7807,7 +7807,17 @@ body.boxed .grid-container.small-margins.full-width > .row > .column {
     .grid-container .grid .grid-item,
     .grid-container.full-width .grid .grid-item {
         width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
     }
+
+    /* New CSS */
+    .grid-item {
+        align-items: center;
+    }
+    /* New CSS End */
+
     .grid-container:not(.small-margins):not(.no-margins) .grid .grid-item.no-image {
         height: auto !important;
     }
