@@ -3308,6 +3308,7 @@ img .accordion-img{
 /* Side nav GPT end */
 
 @media screen and (min-width: 768px) {
+  
   .carousel-item {
     display: block;
     margin-right: 0;
@@ -3511,10 +3512,29 @@ img .accordion-img{
 
 }
 
-/* Mobile Settings */
+/* Tablet Settings */
 @media only screen and (max-width: 1100px) {
   .footer-top.two-columns-on-tablet > .row > [class*="width-"] {
     width: 100% !important;
+  }
+  
+
+  .flex-row{
+    flex-direction: column;
+    margin-bottom: 4%;
+    align-items: center;
+  }
+
+  .width-3 {
+    width: 100%;
+  }
+  
+  .badge-container{
+    margin-bottom: 2em;
+  }
+  .badge-img {
+    max-height: 75%;
+    width: auto;
   }
   .RecognitionImage{
     margin-bottom: 16px;
@@ -3539,6 +3559,15 @@ img .accordion-img{
     flex-direction: column;
     align-items: center;
   }
+  .mb-partner-designation-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 50%;
+    min-width: 40%;
+  }
+
   .mb-product-card{
     height: 194.25px;
     flex-grow: 1;
@@ -3674,4 +3703,24 @@ img .accordion-img{
 
 .scroll-to-top:hover {
   background-color: rgb(0, 0, 0);
+}
+
+/* Mobile settings */
+@media only screen and (max-width: 768px) {
+  .mb-partner-designation-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 75%;
+    min-width: 40%;
+  }
+  .recognitions {
+    margin-bottom: 40px;
+  }
+  .flex-row {
+    flex-direction: column;
+    margin-bottom: 4%;
+    align-items: center;
+  }
 }
