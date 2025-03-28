@@ -469,7 +469,7 @@
       "title": "Forecast using Multiple Models ",
       "id": "ForecastUsingMultipleModels",
       "description": "Forecast using various models for comprehensive predictions.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiNTI3ZmNlNDktMTAzMC00NDgzLTg3Y2ItMTg2Yzc0YzEzZDZhIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381845?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002087872-Forecast-using-Multiple-Models",
       "img": "/images/powerbi/svg/ForecastingusingMultipleModels.svg",
       "gif": "/images/powerbi/forecast-multiple-models.mp4",
@@ -1391,7 +1391,7 @@
       "title": "Sunburst ",
       "id": "Sunburst",
       "description": "Break down hierarchical data with color-coded concentric rings.",
-      "url": "https://app.powerbi.com/view?r=eyJrIjoiZmIxNTRjNTQtZWJkZi00ZmRhLTlkYWUtMTBkNWUyNzVlNzI3IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA200000097?tab=Overview",
       "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002088172-Sunburst",
       "img": "/images/powerbi/svg/SunburstChart.svg",
       "gif": "/images/powerbi/SunburstMP4.mp4",
@@ -1432,7 +1432,7 @@
         "Added toggle for changing sort behavior – Independent sort "
       ],
       "version": "4.0.3.1",
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZmIxNTRjNTQtZWJkZi00ZmRhLTlkYWUtMTBkNWUyNzVlNzI3IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
+      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiYjE2ZjgyODktYjJmNC00ODI5LWE4YzUtMzdkMDI2NGUyN2Y0IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
