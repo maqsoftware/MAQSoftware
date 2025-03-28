@@ -89,6 +89,15 @@ h1{
 
 }
 
+h1.hero {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5em;
+  margin-bottom: 1rem;
+
+}
+
 h1.big{
 
     font-family: "Roboto", sans-serif;
@@ -579,6 +588,20 @@ p{
   padding-bottom: 9%;
   padding-top: 5%;
   margin-top: 1em;
+}
+
+.hero-image-background {
+  position :relative;
+  background-image: url('../images-new/home-page-images/hero-background.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 4%;
+  padding-bottom: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+  /* margin-top: 1em; */
+  text-align: center;
 }
 
 .width-who-we-are-left{
@@ -3493,7 +3516,7 @@ img .accordion-img{
   .customer-stories-card{
     width: 24.15%;
   }
-  h1.big{
+  h1.big, h1.hero{
     font-size: 4rem;
   }
   .section-subheading-body {
@@ -3619,7 +3642,7 @@ img .accordion-img{
   .mb-grid-insights{
     flex-direction: column;
   }
-  h1.big{
+  h1.big, h1.hero{
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
   }
