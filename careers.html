@@ -343,10 +343,13 @@
 				// sleep(3000);
 				// Create new script element
 				const script = document.createElement('script');
+				const navScript = document.createElement('script');
+				navScript.src = '/js/sidenav.js';
 				script.src = '/js/timber.master.min.js';
 
 				// Append to the `head` element
 				document.head.appendChild(script);
+				document.head.appendChild(navScript);
 				// $("#header").load("/header");
 				// $("#footer").load("/footer");
 				// $("#header").load("/header.html");
