@@ -104,13 +104,13 @@
 				<div class="column width-12">
 					<div class="filter-menu-inner">
 						<ul class="container-filter categories-filter">
-							<li><a class="categories active cursor-pointer" onclick="ModifyClass()" data-filter="*">All</a></li>
-							<li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".aiandmachinelearning">Gen AI & machine learning</a></li>
-							<li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".dataandanalytics">Data & analytics</a></li>
-							<li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".reportingandvisualization">Reporting & visualization</a></li>
-							<li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".applicationmodernization">Application modernization</a></li>	
-							<li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".cloud">Cloud optimization</a></li>
-							<li><a class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".security">Security</a></li>		
+							<li><a id="all" class="categories cursor-pointer" onclick="ModifyClass()" data-filter="*">All</a></li>
+							<li><a id="gen-ai-and-machine-learning" class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".aiandmachinelearning">Gen AI & machine learning</a></li>
+							<li><a id="data-and-analytics" class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".dataandanalytics">Data & analytics</a></li>
+							<li><a id="reporting-and-visualization" class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".reportingandvisualization">Reporting & visualization</a></li>
+							<li><a id="application-modernization" class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".applicationmodernization">Application modernization</a></li>	
+							<li><a id="cloud-optimization" class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".cloud">Cloud optimization</a></li>
+							<li><a id="security" class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".security">Security</a></li>		
 						</ul>
 					</div>
 				</div>
@@ -144,6 +144,7 @@
 <script src="/js/theme.js?v=20220218" type="text/javascript"></script>
 <script src="/js/casestudies.js?v=20211216.1" type="text/javascript"></script>
 <script src="js/sidenav.js"></script>
+
 <script>
 	loadCaseStudyGrid();
 	// $("#header").load("/header");
@@ -163,6 +164,34 @@
                 flag = 1;
             }
         }
+</script>
+
+<script>
+	function getQueryParam(param) {
+		const urlParams = new URLSearchParams(window.location.search);
+		console.log(urlParams.get(param));
+		return urlParams.get(param);
+	}
+
+	// Get the filter value from the URL
+	const filterValue = getQueryParam("filter");
+
+	if (filterValue) {
+		// Find the target element
+		let element = document.querySelector("#" + filterValue);
+
+		// Apply the class based on the filter
+		window.onload = function() {
+			element.click();
+			// document.querySelector('.blog-masonry').classList.remove('hidden');
+			// console.log(document.querySelector('.blog-masonry'));
+		};
+		// element.classList.add('active');
+
+		// let allFilter = document.querySelector("#all-filter");
+		// allFilter.classList.remove('active');
+		
+	}
 </script>
 </body>
 
