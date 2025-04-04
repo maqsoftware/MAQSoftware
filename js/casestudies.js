@@ -74,7 +74,7 @@ function renderCaseStudy() {
           "<a class='overlay-link' href='" +
           sAnchorCaseStudy +
           "'>" +
-          "<img classs='cs-image' loading='lazy' src='" +
+          "<img classs='cs-image' src='" +
           sImageLink +
           "' alt=''/>" +
           "<span class='overlay-info'>" +
