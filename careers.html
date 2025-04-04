@@ -366,6 +366,20 @@
 					}
 				});
 			</script>
+
+			<script>
+				// Load header and add event listeners
+				// Current work around for sidenav.js DOM load issue
+				$("#header").load("/header.html");
+				$(document).on("click", ".icon-menu-hamburger", function() {
+					$("#navbar-right").toggleClass("closed");
+				});
+
+				$(document).on("click", ".dismiss-button", function() {
+					$("#navbar-right").toggleClass("closed");
+				});
+			</script>
+			
 		</div>
 	</div>
 </body>
