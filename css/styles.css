@@ -166,6 +166,18 @@ h1.big{
     line-height: 120%;
      
   }
+
+  .guide-text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+  }
+
+  .guide-list > li{
+    margin-bottom: 0.5em;
+  }
   
   .body-text{
   
@@ -983,6 +995,10 @@ p{
 
 
 /* Images & Icons */
+
+.guide-img {
+  margin-bottom: 36px;
+}
 
 .homepage-feature-img{
   max-height: 300px;
@@ -3254,6 +3270,9 @@ img .accordion-img{
 }
 
 @media screen and (max-width: 768px) {
+  .post-title{
+    font-size: 2.25em;
+  }
   .banner-text {
     font-family: "Roboto", sans-serif;
     font-weight: 600;
