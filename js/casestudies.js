@@ -166,7 +166,6 @@ function getBlogOnComplete() {
   const filterValue = getQueryParam("filter");
   // console.log(filterValue)
   if(filterValue != null && filterList.includes(filterValue)){
-    console.log(filterList)
     let element = document.querySelector("#" + filterValue);
     element.click();
   }
