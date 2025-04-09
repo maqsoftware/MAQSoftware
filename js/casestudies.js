@@ -8,6 +8,10 @@ var oBlogContainer,
   caseStudyImageSource,
   iIterator = 0;
 
+// List of filters/filter IDs from case-studies.html
+// Used to check if filter value exists, error catching for getBlogOnComplete()
+const filterList = ["gen-ai-and-machine-learning", "data-and-analytics", "reporting-and-visualization", "application-modernization", "cloud-optimization", "security"]
+
 function renderCaseStudy() {
   var entry1,
     aCategoryFilters,
@@ -161,7 +165,8 @@ function getQueryParam(param) {
 function getBlogOnComplete() {
   const filterValue = getQueryParam("filter");
   // console.log(filterValue)
-  if(filterValue != null){
+  if(filterValue != null && filterList.includes(filterValue)){
+    console.log(filterList)
     let element = document.querySelector("#" + filterValue);
     element.click();
   }
