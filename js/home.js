@@ -1,11 +1,13 @@
 
-function showText(id) {
-    document.getElementById(id).style.display = 'block';
-}
+// function showText(id) {
+//     console.log("Show text: "+ id);
+//     document.getElementById(id).style.display = 'block';
+// }
 
-function hideText(id) {
-    document.getElementById(id).style.display = 'none';
-}
+// function hideText(id) {
+//     console.log("Hide text: "+ id);
+//     document.getElementById(id).style.display = 'none';
+// }
 
 /* -------------------------customer stories carousel------------------------- */
 let currentIndex = 0;
