@@ -243,39 +243,6 @@
     }
   },
   {
-    "Clustering using OPTICS": {
-      "name": "Clustering using OPTICS",
-      "title": "Clustering using OPTICS ",
-      "id": "ClusteringUsingOPTICS",
-      "description": "Group data effectively with a user-friendly density-based clustering algorithm.",
-      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381463?tab=Overview",
-      "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002087832-Clustering-using-OPTICS",
-      "img": "/images/powerbi/svg/ClusterUsingOptics.svg",
-      "gif": "/images/powerbi/Clustering_Using_OPTICS.mp4",
-      "content": "<p>Clustering using OPTICS by MAQ Software analyzes and identifies data clusters. The algorithm relies on density-based clustering, allowing users to identify outlier points and closely-knit groups within larger groups. This visual includes adjustable clustering parameters to control hierarchy depth and cluster sizes. R package dependencies (auto-installed): Dbscan, plotly, ggplot2.</p><p>Key Features:</p><ul><li>Data is scaled and pre-processed automatically, eliminating the need to do so externally.</li><li>Hover tooltips and zoom effects.</li><li>Capability to manually adjust the parameters of the clustering model.</li></ul>",
-      "category": "cluster",
-      "isCertified": false,
-      "mentionStyle": "noCategory",
-      "mentionText": "",
-      "certifiedstarimage": "",
-      "pbicertifiedimage": "",
-      "starimagetitle": "",
-      "pbicertifiedurl": "",
-      "linkToBadge": "",
-      "linkToArticle": "",
-      "detail": "Use the density-based clustering algorithm, OPTICS, to analyze groups within a dataset",
-      "detailDesc": "Clustering using OPTICS by MAQ Software analyzes and identifies data clusters. The algorithm relies on density-based clustering, allowing users to identify outlier points and closely-knit groups within larger groups. This visual includes adjustable clustering parameters to control hierarchy depth and cluster sizes.  <br><br>R package dependencies (auto-installed): Dbscan, plotly, ggplot2. ",
-      "businessUses": [],
-      "keyFeatures": [
-        "Data is scaled and pre-processed automatically, eliminating the need to do so externally ",
-        "Hover tooltips and zoom effects ",
-        "Capability to manually adjust the parameters of the clustering model "
-      ],
-      "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiN2Y4NDUwMGEtOTMwMC00ZWRiLTk2MWItNDcwZjRiYzZjODA3IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
-    }
-  },
-  {
     "Cylindrical Gauge": {
       "name": "Cylindrical Gauge",
       "title": "Cylindrical Gauge ",
@@ -390,39 +357,6 @@
     }
   },
   {
-    "Dumbbell Chart": {
-      "name": "Dumbbell Chart",
-      "title": "Dumbbell Chart ",
-      "id": "DumbbellChart",
-      "description": "Visualize business measures over time or categories clearly.",
-      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381460?tab=Overview",
-      "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002087852-Dumbbell-Chart",
-      "img": "/images/powerbi/svg/DumbbellChart.svg",
-      "gif": "/images/powerbi/Dumbbell_Chart.mp4",
-      "content": "<p> Dumbbell Chart by MAQ Software helps users analyze changes in critical data. This visual consists of a dual-axis combination chart: one axis of is marked by a circle, the other is marked by a line that spans data points provided by the user. Dumbbell Chart by MAQ Software is ideal for illustrating change and comparing the distance between data points. R package dependencies (auto-installed): plotly and ggplot2.</p><p>Key features:</p><ul><li>Display the performance of multiple indicators.</li><li>Compare the growth or loss of indicators across various categories.</li><li>Quickly download an image of the chart with the capture image widget.</li></ul>",
-      "category": "comparison changeOverTime",
-      "isCertified": false,
-      "mentionStyle": "noCategory",
-      "mentionText": "",
-      "certifiedstarimage": "",
-      "pbicertifiedimage": "",
-      "starimagetitle": "",
-      "pbicertifiedurl": "",
-      "linkToBadge": "",
-      "linkToArticle": "",
-      "detail": "Display critical business measures and show changes over time or across various categories ",
-      "detailDesc": "Dumbbell Chart by MAQ Software helps users analyze changes in critical data. This visual consists of a dual-axis combination chart: one axis is marked by a circle and the other is marked by a line that spans data points provided by the user. Dumbbell Chart by MAQ Software is ideal for illustrating change and comparing the distance between data points. <br><br>R package dependencies (auto-installed): plotly and ggplot2. ",
-      "businessUses": [],
-      "keyFeatures": [
-        "Display the performance of multiple indicators ",
-        "Compare the growth or loss of indicators across various categories ",
-        "Quickly download an image of the chart with the capture image widget "
-      ],
-      "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiMWFhYTZlY2EtNWM1Yy00NzVhLTk4YjYtMDFjNzE1YTkzYWI5IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
-    }
-  },
-  {
     "Dynamic Tooltip": {
       "name": "Dynamic Tooltip",
       "title": "Dynamic Tooltip ",
@@ -461,77 +395,6 @@
       ],
       "version": "4.3.0",
       "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNDIzMGQxN2ItODI2NS00MGQzLWFkYmUtZDdhMjkzOGI0ZWRkIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
-    }
-  },
-  {
-    "Forecast using Multiple Models": {
-      "name": "Forecast using Multiple Models",
-      "title": "Forecast using Multiple Models ",
-      "id": "ForecastUsingMultipleModels",
-      "description": "Forecast using various models for comprehensive predictions.",
-      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381845?tab=Overview",
-      "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002087872-Forecast-using-Multiple-Models",
-      "img": "/images/powerbi/svg/ForecastingusingMultipleModels.svg",
-      "gif": "/images/powerbi/forecast-multiple-models.mp4",
-      "content": "<p>Forecast Using Multiple Models by MAQ Software lets you implement four different forecasting models to learn from historical data and predict future values. The forecasting models include linear regression, ARIMA, exponential smoothing, and neural network.</p><p>This visual is excellent for forecasting budgets, sales, demand, or inventory.</p><p>R package dependencies (auto-installed): forecast, plotly, zoo, lubridate.</p><p>Key features:</p><ul><li>Four different forecasting methods/models.</li><li>Ability to adjust the parameters of the learning model.</li><li>Wide range of date and time formats. </li><li>Ability to choose algorithm, show or hide confidence intervals, decide on the split point, and apply data transformation.</li></ul>",
-      "category": "forecast",
-      "isCertified": false,
-      "mentionStyle": "featured",
-      "mentionText": "Featured | Nov 2018",
-      "certifiedstarimage": "",
-      "pbicertifiedimage": "",
-      "starimagetitle": "",
-      "pbicertifiedurl": "",
-      "linkToBadge": "/img/PowerBI/CustomVisualBadge/ForecastingusingMultipleModels.jpg",
-      "linkToArticle": "https://news.maqsoftware.com/2018/11/maq-software-honored-four-times-in.html",
-      "detail": "Test time series models to forecast future values based on historical data",
-      "detailDesc": "Forecast Using Multiple Models by MAQ Software lets you implement four different forecasting models to learn from historical data and predict future values. The forecasting models include Linear Regression, ARIMA, Exponential Smoothing, and Neural Networks. <br/><br/>R package dependencies (auto-installed): forecast, plotly, zoo, and lubridate.",
-      "businessUses": [
-        "This visual is excellent for forecasting budgets, sales, demand, or inventory."
-      ],
-      "keyFeatures": [
-        "Use four different forecasting methods/models ",
-        "Manually adjust the parameters of the learning model ",
-        "Supports a wide range of date and time formats ",
-        "Forecast options include the choice of algorithm, showing or hiding confidence intervals deciding on the split point, and applying data transformation "
-      ],
-      "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiOTZhZTA0OTEtMzU2MS00MGU2LWJkYjAtOTg2NDc0YzU0NjA1IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
-    }
-  },
-  {
-    "Forecast using Neural Network": {
-      "name": "Forecast using Neural Network",
-      "title": "Forecast using Neural Network ",
-      "id": "ForecastUsingNeuralNetwork",
-      "description": "Predict future values accurately with a Neural Network algorithm.",
-      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381428?tab=Overview",
-      "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002081331-Forecast-using-Neural-Network",
-      "img": "/images/powerbi/svg/ForecastingusingNeuralNetworks.svg",
-      "gif": "/images/powerbi/Forecast_Using_Neural_Network.mp4",
-      "content": "<p>Forecasting using Neural Network by MAQ Software implements an “Artificial Neural Network” to learn from historical data and predict future values. This visual uses a single layer feed forward network with lagged inputs to process time series values. R package dependencies (auto-installed): forecast, plotly, zoo, xts.</p><p>Forecasting using Neural Network by MAQ Software is useful for forecasting budgets, sales, demand, or inventory.</p><p>Key features:</p><ul><li>Ability to use years or distinct numerical values in place of date and time field. (The visual will work for both numerical series, i.e. years or numbers, and proper date and time values).</li><li>Hover tooltips and highlighting of specific portions of the plot.</li><li>Capability to manually adjust the parameters of the learning model.</li></ul>",
-      "category": "changeOverTime flow forecast",
-      "isCertified": false,
-      "mentionStyle": "noCategory",
-      "mentionText": "",
-      "certifiedstarimage": "",
-      "pbicertifiedimage": "",
-      "starimagetitle": "",
-      "pbicertifiedurl": "",
-      "linkToBadge": "",
-      "linkToArticle": "",
-      "detail": "Use the Neural Network algorithm to forecast future values based on historical data",
-      "detailDesc": "Forecast using Neural Network by MAQ Software implements an “Artificial Neural Network” to learn from historical data and predict future values. This visual uses a single layer feed forward network with lagged inputs to process time series values.<br><br>R package dependencies (auto-installed): forecast, plotly, zoo, and xts. ",
-      "businessUses": [
-        "Forecasting using Neural Network by MAQ Software is useful for forecasting budgets, sales, demand, or inventory."
-      ],
-      "keyFeatures": [
-        "Ability to use years or distinct numerical values in place of date and time fields (the visual will work for both numerical series, i.e. years or numbers, and proper date and time values) ",
-        "Hover tooltips and highlighting of specific portions of the plot ",
-        "Capability to manually adjust the parameters of the learning model "
-      ],
-      "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNmFlZWNjM2ItNjY5Zi00YzhlLThlNmEtY2Q3NjUwODcwNDI2IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
@@ -1350,39 +1213,6 @@
       ],
       "whatsNew": [],
       "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiNTY4OTZhODctZmQyMC00YjcxLWFkOTktMDVjNmE3MDRlNGQ5IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
-    }
-  },
-  {
-    "Slope Chart": {
-      "name": "Slope Chart",
-      "title": "Slope Chart ",
-      "id": "SlopeChart",
-      "description": "Analyze trends with a visual representation of slopes between data points.",
-      "url": "https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381393?tab=Overview",
-      "contacturl": "https://maqsoftware.zendesk.com/hc/en-us/community/topics/360002088292-Slope-Chart",
-      "img": "/images/powerbi/svg/SlopeChart.svg",
-      "gif": "/images/powerbi/Slope_Chart.mp4",
-      "content": "<p>Slope Chart by MAQ Software allows users to analyze trends in data at a glance.This visual is useful for comparing interactions between two data points based on time or other user-chosen parameters.R package dependencies (auto-installed): plotly and ggplot2.</p><p>Key features:</p><ul><li>Quick comparison of indicator growth or loss across categories.</li><li>Easy interaction with many data points using zoom functionality.</li><li>Quickly download an image of the chart with the capture image widget.</li></ul>",
-      "category": "comparison changeOverTime ranking",
-      "isCertified": false,
-      "mentionStyle": "noCategory",
-      "mentionText": "",
-      "certifiedstarimage": "",
-      "pbicertifiedimage": "",
-      "starimagetitle": "",
-      "pbicertifiedurl": "",
-      "linkToBadge": "",
-      "linkToArticle": "",
-      "detail": "Show upward or downward trends between two data points ",
-      "detailDesc": "Slope Chart by MAQ Software allows users to analyze trends in data at a glance. This visual is useful for comparing interactions between two data points based on time or other user-chosen parameters.  <br><br>R package dependencies (auto-installed): plotly and ggplot2. ",
-      "businessUses": [],
-      "keyFeatures": [
-        "Enables a quick comparison of indicator growth or loss across categories ",
-        "Easy interaction with many data points using zoom functionality ",
-        "Quickly download an image of the chart with the capture image widget "
-      ],
-      "whatsNew": [],
-      "pbiReportURL": "https://app.powerbi.com/view?r=eyJrIjoiZDJmMmRjYzUtOWVhYi00NTI1LTllZmEtYmY5NDI2Y2QwMzgzIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9"
     }
   },
   {
