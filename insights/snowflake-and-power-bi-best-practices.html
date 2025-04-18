@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Best practices in Snowflake for Power BI | MAQ Software Insights" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/solutions/cloud-main.jpg" />
+    <meta property="og:description"
+        content="Improve the speed and functionality of your Power BI reports. Optimize DAX syntax and queries and discover the 8 most common mistakes to avoid." />
+    <!-- Twitter Theme -->
+    <meta name="twitter:widgets:theme" content="light">
+
+    <!-- Title &amp; Favicon -->
+    <title>Snowflake for Power BI Best Practices | MAQ Software Insights</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+    <!-- Font -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Extra meta tags -->
+    <meta name="description"
+        content="Improve the speed and functionality of your Power BI reports. Optimize DAX syntax and queries and discover the 8 most common mistakes to avoid." />
+    <meta name="keywords"
+        content="DAX best practices, report optimization, improve speed, report performance, Power BI insights, Power BI tips">
+
+
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/core.min.css" />
+    <link rel="stylesheet" href="/css/skin.css" />
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-S0W302CGQG');
+    </script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ouperab56x");
+    </script>
+</head>
+
+<body class="shop blog">
+
+    <!-- Header -->
+    <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent"
+        data-bkg-threshold="100" data-sticky-threshold="0"></header>
+    <!-- Header End -->
+    <div class="section-block bkg-grey-ultralight"></div>
+    <!-- Content -->
+    <div class="content clearfix best-practices-text">
+        <div class="section-block clearfix pt-0 pb-0 bkg-grey-ultralight">
+            <div class="row">
+                <!-- Content Inner -->
+                <div class="column width-10 offset-1 content-inner blog-single-post bkg-grey-ultralight">
+                    <article class="post">
+                        <div class="post-content with-background">
+                            <h1 class="post-title center">Best practices in Snowflake for Power BI</h1>
+                            <h3 class="post-title center">Improve performance of your reports</h3>
+                            <p class="text-large">To optimize Snowflake storage for efficient Power BI data extraction, focus on structuring and managing your Snowflake tables in a way that aligns with Power BI’s querying patterns, minimizes computing costs, and ensures fast performance. Below are some suggestions.</p>
+                            
+                            <ol class="index">
+                                <li class="text-xlarge"><a href="#star schema">Using a Star Schema Design</a></li>
+                                <li class="text-xlarge"><a href="#clustering keys">Leverage Clustering Keys</a></li>
+                                <li class="text-xlarge"><a href="#large tables">Partition Large Tables</a></li>
+                                <li class="text-xlarge"><a href="#storage compression">Optimize Storage with Compression</a></li>
+                                <li class="text-xlarge"><a href="#materialized views">Use Materialized Views for Pre-Aggregated Data</a></li>
+                                <li class="text-xlarge"><a href="#search optimization">Enable Search Optimization for High-Cardinality Lookups</a></li>
+                                <li class="text-xlarge"><a href="#align storage mode">Align Storage Mode with Power BI Usage</a></li>
+                                <li class="text-xlarge"><a href="#incremental data loading">Implement Incremental Data Loading</a></li>
+                                <li class="text-xlarge"><a href="#data redundancy">Minimize Data Redundancy</a></li>
+                                <li class="text-xlarge"><a href="#snowflake features">Monitor and Tune with Snowflake Features</a></li>
+
+                            </ol>
+                            
+                            <div id="star schema">
+                                <h2>Using a Star Schema Design</h2>
+                                <ul type="a" class="indented-list">
+                                    <li class="text-xlarge"><strong>Why:</strong></li>
+                                    <ol type="i">
+                                        <li class="text-large">Power BI performs best with dimensional models like star schemas, which separate fact tables (containing transactional data) and dimension tables (containing descriptive data). This reduces query complexity and improves performance.</li>
+                                    </ol>
+                                    <li class="text-xlarge"><strong>How:</strong></li>
+                                
+                                    <ol type="i">
+                                        <li class="text-large">Store large, frequently updated transactional data in a central fact table.</li>
+                                        <li class="text-large">Keep smaller, less volatile reference data (e.g., categories, dates, or customer details) in dimension tables.</li>
+                                        <li class="text-large">Ensure relationships are well-defined in Snowflake (even though Power BI will handle joins in its model).</li>
+                                    </ol>
+                                </ul>
+                            </div>
+                            
+                            <div id="clustering keys">
+                                <h2>Leverage Clustering Keys</h2>
+                                <ul type="a" class="indented-list">
+                                    <li class="text-xlarge"><strong>Why:</strong></li>
+                                    <ol type="i">
+                                        <li class="text-large">Clustering organizes data in Snowflake’s micro-partitions based on specific columns, reducing the amount of data scanned during Power BI queries.</li>
+                                    </ol>
+                                    <li class="text-xlarge"><strong>How:</strong></li>
+                                
+                                    <ol type="i">
+                                        <li class="text-large">Identify columns commonly used in Power BI filters or joins (e.g., `date`, `customer_id`, or `product_id`).</li>
+                                        <li class="text-large">Set a clustering key on these columns using <code 
+                                            class="color-red bkg-grey-ultralight">`ALTER TABLE <table_name> CLUSTER BY (column1, column2)`</code>.</li>
+                                    </ol>
+                                </ul>
+                            </div>
+
+                            <div id="large tables">
+                                <h2>Partition Large Tables</h2>
+                                <ul type="a" class="indented-list">
+                                    <li class="text-xlarge"><strong>Why:</strong></li>
+                                    <ol type="i">
+                                        <li class="text-large">Partitioning logically organizes data, making it faster to retrieve specific subsets in Power BI, especially with DirectQuery or incremental refresh.</li>
+                                    </ol>
+                                    <li class="text-xlarge"><strong>How:</strong></li>
+                            
+                                    <ol type="i">
+                                        <li class="text-large">Use a date-based column (e.g., <code class="color-red bkg-grey-ultralight">transaction_date</code>) to partition data naturally in Snowflake.</li>
+                                        <li class="text-large">Combine this with clustering to align physical storage with query patterns. (For example, partition by year or month if Power BI reports focus on time-based analysis.)</li>
+                                    </ol>
+                                </ul>
+                            </div>
+                            
+                            <div id="storage compression">
+                                <h2>Optimize Storage with Compression</h2>
+                                <ul type="a" class="indented-list">
+                                    <li class="text-xlarge"><strong>Why:</strong></li>
+                                    <ol type="i">
+                                        <li class="text-large">Snowflake automatically compresses data, but you can enhance this by structuring tables to maximize compression efficiency, reducing storage costs and speeding up data retrieval.</li>
+                                    </ol>
+                                    <li class="text-xlarge"><strong>How:</strong></li>
+
+                                    <ol type="i">
+                                        <li class="text-large">Store columns with low cardinality (e.g., status flags, categories) as smaller data types (e.g., <code 
+                                            class="color-red bkg-grey-ultralight">VARCHAR(10)</code> instead of <code 
+                                            class="color-red bkg-grey-ultralight">VARCHAR(255)</code>).</li>
+                                        <li class="text-large">Avoid over-normalization; keep related data together in wider tables where it makes sense for Power BI’s needs.</li>
+                                    </ol>
+                                </ul>
+                            </div>
+
+                            <div id="materialized views">
+                                <h2>Use Materialized Views for Pre-Aggregated Data</h2>
+                                <ul type="a" class="indented-list">
+                                    <li class="text-xlarge"><strong>Why:</strong></li>
+                                    <ol type="i">
+                                        <li class="text-large">Power BI often requires aggregated data for visualizations. Materialized views store pre-computed results, reducing query time and compute usage.</li>
+                                    </ol>
+                                    <li class="text-xlarge"><strong>How:</strong></li>
+                                    
+                                    <ol type="i">
+                                        <li class="text-large">Create materialized views for common aggregations (e.g., <code 
+                                            class="color-red bkg-grey-ultralight">SUM(sales) BY date, region)</code>.</li>
+                                        <ul style="list-style: none; margin: 0; padding: 0;">
+                                            <li class="text-large">Example: <code 
+                                                class="color-red bkg-grey-ultralight">CREATE MATERIALIZED VIEW sales_summary AS SELECT date, region, SUM(sales) FROM fact_sales GROUP BY date, region;</code></li>
+                                        </ul>
+                                        <li class="text-large">Use these views as the source for Power BI instead of querying raw tables.</li>
+                                    </ol>
+                                </ul>
+                            </div>
+
+                            <div id="search optimization">
+                                <h2>Enable Search Optimization for High-Cardinality Lookups</h2>
+                                <ul type="a" class="indented-list">
+                                    <li class="text-xlarge"><strong>Why:</strong></li>
+                                    <ol type="i">
+                                        <li class="text-large">If Power BI queries involve filtering on high-cardinality columns (e.g., unique IDs), search optimization can speed up point lookups.</li>
+                                    </ol>
+                                    <li class="text-xlarge"><strong>How:</strong></li>
+                                    
+                                    <ol type="i">
+                                        <li class="text-large">Enable it on specific columns: <code 
+                                            class="color-red bkg-grey-ultralight">ALTER TABLE <table_name> ADD SEARCH OPTIMIZATION ON (column_name);</code> (Best for dimension tables where Power BI performs frequent lookups.)</li>
+                                    </ol>
+                                </ul>
+                            </div>
+
+                            <div id="align storage mode">
+                                <h2>Align Storage Mode with Power BI Usage</h2>
+                                <ul type="a" class="indented-list">
+                                    <li class="text-xlarge"><strong>Why:</strong></li>
+                                    <ol type="i">
+                                        <li class="text-large">Power BI supports Import, DirectQuery, and Composite modes, each with different storage implications in Snowflake.</li>
+                                    </ol>
+                                    <li class="text-xlarge"><strong>How:</strong></li>
+                                    
+                                    <ol type="i">
+                                        <li class="text-large"><strong>Import Mode:</strong> Pre-aggregate data in Snowflake to reduce the dataset size Power BI pulls. Use views or tables with only the necessary columns and rows.</li>
+                                        <li class="text-large"><strong>DirectQuery Mode:</strong> Keep raw data in Snowflake and optimize with clustering and materialized views to handle live queries efficiently.</li>
+                                        <li class="text-large"><strong>Composite Mode:</strong> Store large fact tables in DirectQuery mode and smaller dimension tables in Import mode within Power BI, leveraging Snowflake’s scalability for the former.</li>
+                                    </ol>
+                                </ul>
+                            </div>
+
+                            <div id="incremental data loading">
+                                <h2>Implement Incremental Data Loading</h2>
+                                <ul type="a" class="indented-list">
+                                    <li class="text-xlarge"><strong>Why:</strong></li>
+                                    <ol type="i">
+                                        <li class="text-large">Power BI’s incremental refresh feature works best when Snowflake tables are structured to support efficient updates.</li>
+                                    </ol>
+                                    <li class="text-xlarge"><strong>How:</strong></li>
+                                    
+                                    <ol type="i">
+                                        <li class="text-large">Add a last_updated timestamp column to track changes.</li>
+                                        <li class="text-large">Partition data by this column and use it in Power BI’s incremental refresh policy. </li>
+                                        <ul style="list-style: none; margin: 0; padding: 0;">
+                                            <li class="text-large">Example: <code 
+                                                class="color-red bkg-grey-ultralight">WHERE last_updated >= RangeStart AND last_updated < RangeEnd</code></li>
+                                        </ul>
+                                    </ol>
+                                </ul>
+                            </div>
+                    
+                            <div id="data redundancy">
+                                <h2>Minimize Data Redundancy </h2>
+                                <ul type="a" class="indented-list">
+                                    <li class="text-xlarge"><strong>Why:</strong></li>
+                                    <ol type="i">
+                                        <li class="text-large">Redundant data increases storage costs and can slow down queries if Power BI pulls unnecessary rows.</li>
+                                    </ol>
+                                    <li class="text-xlarge"><strong>How:</strong></li>
+                                    
+                                    <ol type="i">
+                                        <li class="text-large">Use views or dynamic tables in Snowflake to transform data on-the-fly instead of duplicating it in separate tables.</li>
+                                        <li class="text-large">Remove unused columns from tables or create leaner views specifically for Power BI.</li>
+                                    </ol>
+                                </ul>
+                            </div>
+
+                            <div id="snowflake features">
+                                <h2>Monitor and Tune with Snowflake Features</h2>
+                                <ul type="a" class="indented-list">
+                                    <li class="text-xlarge"><strong>Why:</strong></li>
+                                    <ol type="i">
+                                        <li class="text-large">Snowflake’s built-in tools can help you identify and resolve inefficiencies in storage and querying.</li>
+                                    </ol>
+                                    <li class="text-xlarge"><strong>How:</strong></li>
+                                    
+                                    <ol type="i">
+                                        <li class="text-large">Use <code 
+                                            class="color-red bkg-grey-ultralight">SHOW TABLES and DESCRIBE TABLE</code> to review storage usage and column definitions.</li>
+                                        <li class="text-large">Analyze query performance in Snowflake’s Query History to see which Power BI queries scan the most data, then adjust clustering or add materialized views accordingly.</li>
+                                        <li class="text-large">Set up automatic suspension for warehouses used by Power BI to minimize idle compute costs.</li>
+                                    </ol>
+                                </ul>
+                            </div>
+
+                            <div class="section-block pt-10 pb-10 bkg-white"></div>
+                            <div class="row">
+                                <div class="column width-6">
+                                    <img src="/img/blog/BPG010-main.png" alt="">
+                                </div>
+                                <div class="column width-6">
+                                    <H2>Best practices for creating enterprise-wide knowledge bots</H2>
+                                    <p class="text-large">Improve your enterprise-wide knowledge bot's performance, security, and design with our best practices</p>
+                                    <a href="/insights/knowledge-bot-best-practices.html">Read More &rarr;</a><br>
+                                </div>
+                            </div>
+                            <div class="section-block pt-10 pb-10 bkg-white"></div>
+                            <div class="post-info center">
+                                <span class="post-date">Last updated: April 17, 2025</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="section-block bkg-grey-ultralight"></div>
+    </div>
+    <!-- Content End -->
+    <!-- Footer -->
+    <footer id="footer" class="footer footer-light bkg-grey-ultralight"></footer>
+    <!-- Footer End -->
+    <!-- Js -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script>
+    <script src="/js/timber.master.min.js"></script>
+    <script src="../js/sidenav.js"></script>
+    <script>
+        // $("#header").load("/header");
+        // $("#footer").load("/footer");
+        // $("#header").load("/header.html");
+        $("#footer").load("/footer.html");
+    </script>
+</body>
+
+</html>
