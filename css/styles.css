@@ -21,9 +21,21 @@
 
 /*text styles*/
 
-.post-title{
+h1.post-title{
   font-size: 3.75rem;
+  margin-bottom: 0.25em;
 }
+
+h3.post-title{
+  font-size: 3rem;
+  font-weight: 500;
+  margin-top: 0px;
+}
+
+.indented-list {
+  list-style-type: none;
+}
+
 .best-practices-text{
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   letter-spacing: 0;
@@ -3270,8 +3282,15 @@ img .accordion-img{
 }
 
 @media screen and (max-width: 768px) {
-  .post-title{
+  /* .post-title{
     font-size: 2.25em;
+  } */
+  h1.post-title{
+    font-size: 2.25rem;
+  }
+  
+  h3.post-title{
+    font-size: 2rem;
   }
   .banner-text {
     font-family: "Roboto", sans-serif;
