@@ -9,7 +9,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/images/solutions/cloud-main.jpg" />
     <meta property="og:description"
-        content="Improve the speed and functionality of your Power BI reports. Optimize DAX syntax and queries and discover the 8 most common mistakes to avoid." />
+        content="Optimize Snowflake storage for efficient Power BI data extraction" />
     <!-- Twitter Theme -->
     <meta name="twitter:widgets:theme" content="light">
 
@@ -24,10 +24,11 @@
 
     <!-- Extra meta tags -->
     <meta name="description"
-        content="Improve the speed and functionality of your Power BI reports. Optimize DAX syntax and queries and discover the 8 most common mistakes to avoid." />
+        content="Optimize Snowflake storage for efficient Power BI data extraction" />
     <meta name="keywords"
-        content="DAX best practices, report optimization, improve speed, report performance, Power BI insights, Power BI tips">
-
+        content="Snowflake, Power BI, Snowflake Power BI integration, Power BI performance, Snowflake optimization, Snowflake best practices,
+        Snowflake data modeling, Star schema, Snowflake clustering keys, Snowflake partitioning, Snowflake for business intelligence, Improve Power BI report speed,
+        Power BI data extraction, Snowflake performance tuning, Enterprise data modeling">
 
     <!-- Css -->
     <link rel="stylesheet" href="/css/core.min.css" />
@@ -131,7 +132,7 @@
                             
                                     <ol type="i">
                                         <li class="text-large">Use a date-based column (e.g., <code class="color-red bkg-grey-ultralight">transaction_date</code>) to partition data naturally in Snowflake.</li>
-                                        <li class="text-large">Combine this with clustering to align physical storage with query patterns (for example, partition by year or month if Power BI reports focus on time-based analysis).</li>
+                                        <li class="text-large">Combine this with clustering to align physical storage with query patterns (e.g., partition by year or month if Power BI reports focus on time-based analysis).</li>
                                     </ol>
                                 </ul>
                             </div>
@@ -165,7 +166,7 @@
                                     
                                     <ol type="i">
                                         <li class="text-large">Create materialized views for common aggregations (e.g., <code 
-                                            class="color-red bkg-grey-ultralight">SUM(sales) BY date, region)</code>.</li>
+                                            class="color-red bkg-grey-ultralight">SUM(sales) BY date, region</code>).</li>
                                         <ul style="list-style: none; margin: 0; padding: 0;">
                                             <li class="text-large">Example: <code 
                                                 class="color-red bkg-grey-ultralight">CREATE MATERIALIZED VIEW sales_summary AS SELECT date, region, SUM(sales) FROM fact_sales GROUP BY date, region;</code></li>
@@ -186,7 +187,7 @@
                                     
                                     <ol type="i">
                                         <li class="text-large">Enable it on specific columns: <code 
-                                            class="color-red bkg-grey-ultralight">ALTER TABLE <table_name> ADD SEARCH OPTIMIZATION ON (column_name);</code> (Best for dimension tables where Power BI performs frequent lookups.)</li>
+                                            class="color-red bkg-grey-ultralight">ALTER TABLE <table_name> ADD SEARCH OPTIMIZATION ON (column_name);</code> (Best for dimension tables where Power BI performs frequent lookups).</li>
                                     </ol>
                                 </ul>
                             </div>
