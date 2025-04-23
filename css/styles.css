@@ -150,7 +150,38 @@ h1.big{
   h2.left-align{
     flex-grow: 1;
   }
+
+  /* News section CSS */
+
+  .post-content {
+    font-size: 1.75rem;
+    line-height: 1.5;
+  }
   
+  h2.post-title, .post-content > h2 {
+    font-size: 3rem;
+  }
+
+  .post-content > p {
+    margin-bottom: 3rem;
+  }
+
+  .post-content > h3 {
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
+
+
+  .post-content > br {
+    font-size: 3rem;
+  }
+
+  .post-content > .post-media {
+    margin-bottom: 1.75rem;
+  }
+
+  /* News section CSS end */
+
   h3.normal{
   
     font-family: "Roboto", sans-serif;
