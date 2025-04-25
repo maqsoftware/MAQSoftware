@@ -1,7 +1,7 @@
 var pbiReportTemplate='<iframe referrerpolicy="no-referrer-when-downgrade" style="height:80vh"src="@pbiURL"frameborder="0" allowFullScreen="true"></iframe>';
 var contentTemplate='<div class="col-md-8"><h3 class="title-medium">@title by MAQ Software</h3></div><div class="col-md-12"><h3 class="title-small">@detail</h3><p class="title-xsmall">@Desc</p></div>'
 var listItemTemplate='<li class="title-xsmall">@placeholder</li> '
-var contactTemplate='<h4 class="title-xsmall">Contact Us</h4><p class="title-xsmall">Thank you for using @name by MAQ Software.</p><p class="title-xsmall">Do you have questions about this or any of our other Power BI custom visuals? Check out our community pages on <a href="https://maqsoftware.zendesk.com/hc/en-us/community/topics" target="_blank">Zendesk</a></p><p class="title-xsmall">For any issues related to any custom visual, contact us at <a href="mailto:support@maqsoftware.com" target="_blank">Support@MAQSoftware.com</a>. </p><p class="title-xsmall">For any priority requests or custom builds, contact us at <a href="mailto:CustomerSuccess@MAQSoftware.com" target="_blank">CustomerSuccess@MAQSoftware.com</a>. </p>'
+var contactTemplate='<h4 class="title-xsmall">Contact Us</h4><p class="title-xsmall">Thank you for using @name by MAQ Software.</p><p class="title-xsmall">Do you have questions about this or any of our other Power BI custom visuals? Check out our community pages on <a href="https://maqsoftware.zendesk.com/hc/en-us/community/topics" target="_blank">Zendesk</a></p><p class="title-xsmall">For any issues related to any custom visual, contact us at <a href="mailto:support@maqsoftware.com?subject=Support%20-%20@name&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you." target="_blank">Support@MAQSoftware.com</a>. </p><p class="title-xsmall">For any priority requests or custom builds, contact us at <a href="mailto:CustomerSuccess@MAQSoftware.com?subject=Priority%20request%20-%20@name&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you." target="_blank">CustomerSuccess@MAQSoftware.com</a>. </p>'
 var newVersionTemplate = '<h4 class="title-xsmall">@newVersion</h4>'
 var buttonsTemplate = '<div><a href="@appsourceLink" target="blank" class="button medium pill bkg-theme bkg-hover-white color-white color-hover-theme mb-mobile-40">Get @name</a><a href="@appsourceLink" target="blank"  class="button medium pill border-theme bkg-white bkg-hover-theme color-theme color-hover-white">Download sample report</a></div>'
 
@@ -68,7 +68,9 @@ function loadData(data,id){
                     .replace(/@appsourceLink/g, data[index][this].url)
                 
                 contact +=contactTemplate
-                    .replace(/@name/g, data[index][this].name)    
+                    .replace(/@name/g, data[index][this].name)
+                console.log(data[index][this].name)
+                    
             }
         });
     });
