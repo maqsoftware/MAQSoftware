@@ -114,7 +114,7 @@
                                     <li class="text-xlarge"><strong>How:</strong></li>
                                 
                                     <ol type="i">
-                                        <li class="text-large">Identify columns commonly used in Power BI filters or joins (e.g., `date`, `customer_id`, or `product_id`).</li>
+                                        <li class="text-large">Identify columns commonly used in Power BI filters or joins (e.g., <code class="color-red bkg-grey-ultralight">`date`</code>, <code class="color-red bkg-grey-ultralight">`customer_id`</code>, or <code class="color-red bkg-grey-ultralight">`product_id`</code>).</li>
                                         <li class="text-large">Set a clustering key on these columns using <code 
                                             class="color-red bkg-grey-ultralight">`ALTER TABLE <table_name> CLUSTER BY (column1, column2)`</code>.</li>
                                     </ol>
@@ -256,7 +256,8 @@
                                     
                                     <ol type="i">
                                         <li class="text-large">Use <code 
-                                            class="color-red bkg-grey-ultralight">SHOW TABLES and DESCRIBE TABLE</code> to review storage usage and column definitions.</li>
+                                            class="color-red bkg-grey-ultralight">SHOW TABLES</code> and <code 
+                                            class="color-red bkg-grey-ultralight">DESCRIBE TABLE</code> to review storage usage and column definitions.</li>
                                         <li class="text-large">Analyze query performance in Snowflake’s Query History to see which Power BI queries scan the most data, then adjust clustering or add materialized views accordingly.</li>
                                         <li class="text-large">Set up automatic suspension for warehouses used by Power BI to minimize idle compute costs.</li>
                                     </ol>
