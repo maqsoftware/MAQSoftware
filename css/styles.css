@@ -2761,6 +2761,21 @@ tbody tr:last-child{
 
 /* accordian */
 
+/* third of screen item */
+.row-section {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+}
+
+.col-3-8 {
+  width: 40%
+}
+
+.col-4-8 {
+  width: 50%;
+  aspect-ratio: 16/9;
+}
 
 /* accordion */
 
@@ -3057,6 +3072,21 @@ img .accordion-img{
   /* .post-title{
     font-size: 2.25em;
   } */
+
+  .col-3-8 {
+    width: 100%;
+  }
+
+  .col-4-8 {
+    width: 100%;
+  }
+
+  .row-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
   h1.post-title{
     font-size: 2.25rem;
   }
@@ -3350,6 +3380,21 @@ img .accordion-img{
   .footer-top.two-columns-on-tablet > .row > [class*="width-"] {
     width: 100% !important;
   }
+
+    .col-3-8 {
+    width: 100%;
+  }
+
+  .col-4-8 {
+    width: 100%;
+  }
+
+  .row-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
   
 
   .flex-row{
