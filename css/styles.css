@@ -970,6 +970,19 @@ p{
   
 }
 
+.highlight-card-blue {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: #F6FEF7; */
+  /* border-radius: 6px; */
+  width: 100%;
+  border-left: 5px solid #006eff;
+  padding: 1rem;
+  gap: 4px;
+  
+}
+
 /* sustainability icons */
 .fluent--leaf-three-24-regular {
   display: inline-block;
