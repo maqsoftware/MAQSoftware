@@ -52,6 +52,14 @@
 			y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 		})(window, document, "clarity", "script", "oekduyvjws");
 	</script>
+
+    <!-- Page element scripts -->
+	<script src="../js/accordion.js"></script>
+	<script src="../js/borderless-centered-cards.js"></script>
+	<script src="../js/image-card.js"></script>
+	<script src="../js/icon-cards.js"></script>
+    <script src="../js/price-card.js"></script>
+    <script src="../js/step-image-card.js"></script>
 </head>
 
 <body class="shop home-page">
@@ -64,20 +72,22 @@
 		<div class="wrapper-inner">
 			<!-- Hero section -->
 			<div class="section-block-padding-sm hero-section centered-section lg-section-block-padding-hero">
-				<div class="flex-col-2 max-section-size mb-column">
-					<div class="hero-item-2">
-						<h1 class="big">
-							Careers
-						</h1>
-					</div>
-					<div class="hero-item-1">
-						<div>
-							<div class="video-container mb-0 shadow">
-								<iframe src="https://www.youtube.com/embed/FRk-5V0MfkE?rel=0&amp;autoplay=1&mute=1"
-									width="500" height="281"></iframe>
-							</div>
+				<div class="section-container">
+					<div class="flex-col-2 max-section-size mb-column">
+						<div class="hero-item-2">
+							<h1 class="page-title">
+								Careers
+							</h1>
 						</div>
-						
+						<div class="hero-item-1">
+							<div>
+								<div class="video-container mb-0 shadow">
+									<iframe src="https://www.youtube.com/embed/FRk-5V0MfkE?rel=0&amp;autoplay=1&mute=1"
+										width="500" height="281"></iframe>
+								</div>
+							</div>
+							
+						</div>
 					</div>
 				</div>
 			</div>
@@ -85,225 +95,223 @@
 
 
 			<!-- Service Section -->
-			<div class="section-block-padding-sm centered-section">
-				<div class="row">
-					<div class="section-heading-container">				
-						<h1 class="display-medium">Why do A-players choose to work with us?</h1> 
-					</div>						
-					<!--Outcomes Section-->       
-					<div class="business-outcomes-flex-grid mb-grid-product">
-						<div class="card-item-centered">
-							<div class="icon-container-card">
-								<span class="fluent--arrow-trending-24-regular service-icon-size"></span>
-							</div>
-							<p class="card-title-centered">Professional growth opportunities</p>
-							<p class="body-text-centered">
-								Substantial responsibility at an early stage of the career. Exposure to all aspects of delivery lifecycle and project
-								management. Continuous learning.
-							</p>
-						</div>
-						<div class="card-item-centered">
-							<div class="icon-container-card">
-								<span class="fluent--toolbox-24-regular service-icon-size"></span>
-							</div>
-							<p class="card-title-centered">Type of work</p>
-							<p class="body-text-centered">
-								Exciting and challenging work. Exposure to the latest and variety of technologies.There is never a dull moment (fast-paced work).
-							</p>
-						</div>
-						<div class="card-item-centered">
-							<div class="icon-container-card">
-								<span class="fluent--people-community-24-regular service-icon-size"></span>
-							</div>
-							<p class="card-title-centered">Company culture</p>
-							<p class="body-text-centered">
-								Transparency, lack of bureaucracy. Ownership and accountability. Autonomy (with seniority). Peers with strong technical background. Supportive managers with technical know-how. 
-							</p>
+			<div class="section-block-padding-sm">
+					<div id="whyCareers" class="section-container">
+						<div class="section-heading-container-centered">
+							<h1 class="section-header">Why do A-players choose to work with us?</h1>
 						</div>
 					</div>
-				</div> 
-			</div>
+					<script>
+						const reasons = [
+							{
+								icon: "fluent--arrow-trending-24-regular",
+								title: "Professional growth opportunities",
+								body: "Substantial responsibility at an early stage of the career. Exposure to all aspects of delivery lifecycle and project management. Continuous learning."
+							},
+							{
+								icon: "fluent--toolbox-24-regular",
+								title: "Type of work",
+								body: "Exciting and challenging work. Exposure to the latest and variety of technologies. There is never a dull moment (fast-paced work)."
+							},
+							{
+								icon: "fluent--people-community-24-regular",
+								title: "Company culture",
+								body: "Transparency, lack of bureaucracy. Ownership and accountability. Autonomy (with seniority). Peers with strong technical background. Supportive managers with technical know-how."
+							}
+						];
+						renderCards("#whyCareers", reasons, 3);
+					</script>
+				</div>
 
 			<!-- Book Section -->
-			<div id="documentation" class="section-block-padding-sm book-section">
-				<div>
-					<div class="row">
-						<div class="column width-6">
-
-							<div class="section-heading-container max-section-size">
-								<h1 class="display-medium">Offered a position at our company?</h1>
-								<p class="section-subheading">If you are offered a position with our company, we
-									will provide you copies of <a href="http://www.iitbook.com/" target="_blank"><i>What I
-											Did Not Learn at IIT</i></a> and <a href="https://www.mbabook.in/"
-										target="_blank"><i>What I Did Not Learn in B-School</i></a>.
-									Many successful candidates found these two books useful in understanding our customers’
-									expectations,
-									our work, and our point of view. We advise you to not accept our position unless you
-									have reviewed the books.</p>
-							</div>
-
-						</div>
-
-						<div class="column width-6">
+			<div class="section-block-padding-sm grey-bg">
+				<div class="section-container">
+					<div id="documentation">
+						<div>
 							<div class="row">
-								<div class="column width-6 center">
-									<a href="http://www.iitbook.com/" target="_blank"><img
-											src="/img/Careers/iitbook-careers.png" width="200"
-											title="What I Did Not Learn at IIT"
-											alt="What I Did Not Learn at IIT" /></br>IITbook.in</a>
+								<div class="column width-6">
+
+									<div class="section-heading-container max-section-size">
+										<h1 class="section-header">Offered a position at our company?</h1>
+										<p class="section-subheading">If you are offered a position with our company, we
+											will provide you copies of <a href="http://www.iitbook.com/" target="_blank"><i>What I
+													Did Not Learn at IIT</i></a> and <a href="https://www.mbabook.in/"
+												target="_blank"><i>What I Did Not Learn in B-School</i></a>.
+											Many successful candidates found these two books useful in understanding our customers’
+											expectations,
+											our work, and our point of view. We advise you to not accept our position unless you
+											have reviewed the books.</p>
+									</div>
+
 								</div>
-								<div class="column width-6 center">
-									<a href="https://www.mbabook.in/" target="_blank"><img
-											src="/img/Careers/mbabook-careers.png" width="200"
-											tite="What I Did Not Learn in B-School"
-											alt="What I Did Not Learn in B-School" /></br>MBAbook.in</a>
+
+								<div class="column width-6">
+									<div class="row">
+										<div class="column width-6 center">
+											<a href="http://www.iitbook.com/" target="_blank"><img
+													src="/img/Careers/iitbook-careers.png" width="200"
+													title="What I Did Not Learn at IIT"
+													alt="What I Did Not Learn at IIT" /></br>IITbook.in</a>
+										</div>
+										<div class="column width-6 center">
+											<a href="https://www.mbabook.in/" target="_blank"><img
+													src="/img/Careers/mbabook-careers.png" width="200"
+													tite="What I Did Not Learn in B-School"
+													alt="What I Did Not Learn in B-School" /></br>MBAbook.in</a>
+										</div>
+									</div>
 								</div>
+
 							</div>
 						</div>
-
 					</div>
+
 				</div>
 			</div>
 			<!-- Book Section End -->
 
             <!-- Contact -->
 
-            <div class="section-block-padding-sm contact-section centered-section">
-                <div class="flex-col-2 max-section-size">
-                    <div class="hero-item-1">
-                        <h1 class="contact-us-section-heading margin-sm">
-                            Want to join the MAQ Software team?
-                        </h1>
-						<p class="section-subheading margin-sm"> Apply to open positions on JobScore</p>
-						<div class="one-rem-div"></div>  
-						<div>
-							<a href="https://careers.jobscore.com/careers/maqsoftware"
-								class="btn-primary btn-text"
-								target="_blank">Go to JobScore</a>
+            <div class="section-block-padding-sm contact-section centered-section" style="padding-bottom: 0;">
+				<div class="section-container">
+					<div class="flex-col-2 max-section-size">
+						<div class="hero-item-1">
+							<h1 class="section-header margin-sm">
+								Want to join the MAQ Software team?
+							</h1>
+							<p class="section-subheading margin-sm"> Apply to open positions on JobScore</p>
+							<div class="one-rem-div"></div>  
+							<div>
+								<a href="https://careers.jobscore.com/careers/maqsoftware"
+									class="btn-primary btn-text"
+									target="_blank">Go to JobScore</a>
+							</div>
 						</div>
-                    </div>
-                </div>
+					</div>
+				</div>
             </div>
 
             <!-- Contact section end -->			
 
 			<!-- Tabs Button Nav -->
-			<div>
-				<div class="row">
-					<div class="column width-8 offset-2 center">
-						<h2 class="normal">Open positions</h2>
-					</div>
-					<div class="column width-12">
-						<div class="tabs medium center">
+            <div class="section-block-padding-sm contact-section centered-section">
+				<div class="section-container">
+					<div class="row">
+						<div class="column width-8 offset-2 center">
+							<h2 class="normal">Open positions</h2>
+						</div>
+						<div class="column width-12">
+							<div class="tabs medium center">
 
-							<ul class="tab-nav">
-								<li class="active">
-									<a class="categories cursor-pointer" href="#tabs-1-pane-1">Redmond</a>
-								</li>
-								<li>
-									<a href="#tabs-1-pane-2">Mumbai</a>
-								</li>
-								<li>
-									<a href="#tabs-1-pane-3">Hyderabad</a>
-								</li>
-								<li>
-									<a href="#tabs-1-pane-4">Noida</a>
-								</li>
-							</ul>
+								<ul class="tab-nav">
+									<li class="active">
+										<a class="categories cursor-pointer" href="#tabs-1-pane-1">Redmond</a>
+									</li>
+									<li>
+										<a href="#tabs-1-pane-2">Mumbai</a>
+									</li>
+									<li>
+										<a href="#tabs-1-pane-3">Hyderabad</a>
+									</li>
+									<li>
+										<a href="#tabs-1-pane-4">Noida</a>
+									</li>
+								</ul>
 
-							<div class="tab-panes">
-								<div id="tabs-1-pane-1" class="active animate">
-									<div class="tab-content">
-										<div class="section-block clearfix no-padding">
-											<div class="row">
-												<div class="column center content-inner">
-													<div class="jobs-redmond hidden">
-													</div>
-													<div class="populate-jobs-redmond">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div id="tabs-1-pane-2" class="animate">
-									<div class="tab-content">
-										<div class="section-block clearfix no-padding">
-											<div class="row">
-												<div class="column center content-inner">
-													<div class="jobs-mumbai hidden">
-													</div>
-													<div class="populate-jobs-mumbai">
+								<div class="tab-panes">
+									<div id="tabs-1-pane-1" class="active animate">
+										<div class="tab-content">
+											<div class="section-block clearfix no-padding">
+												<div class="row">
+													<div class="column center content-inner">
+														<div class="jobs-redmond hidden">
+														</div>
+														<div class="populate-jobs-redmond">
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div id="tabs-1-pane-2" class="active animate hidden">
-									<div class="tab-content">
-										<div class="section-block clearfix no-padding">
-											<div class="row">
-												<div class="column center content-inner">
-													<div class="jobs-mumbai hidden">
-													</div>
-													<div class="populate-jobs-mumbai">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div id="tabs-1-pane-3" class="animate">
-									<div class="tab-content">
-										<div class="section-block clearfix no-padding">
-											<div class="row">
-												<div class="column center content-inner">
-													<div class="jobs-hyd hidden">
-													</div>
-													<div class="populate-jobs-hyd">
+									<div id="tabs-1-pane-2" class="animate">
+										<div class="tab-content">
+											<div class="section-block clearfix no-padding">
+												<div class="row">
+													<div class="column center content-inner">
+														<div class="jobs-mumbai hidden">
+														</div>
+														<div class="populate-jobs-mumbai">
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div id="tabs-1-pane-3" class="active animate hidden">
-									<div class="tab-content">
-										<div class="section-block clearfix pt-0">
-											<div class="row">
-												<div class="column center content-inner">
-													<div class="jobs-hyd hidden">
-													</div>
-													<div class="populate-jobs-hyd">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div id="tabs-1-pane-4" class="animate">
-									<div class="tab-content">
-										<div class="section-block clearfix pt-0">
-											<div class="row">
-												<div class="column center content-inner">
-													<div class="jobs-noida hidden">
-													</div>
-													<div class="populate-jobs-noida">
+									<div id="tabs-1-pane-2" class="active animate hidden">
+										<div class="tab-content">
+											<div class="section-block clearfix no-padding">
+												<div class="row">
+													<div class="column center content-inner">
+														<div class="jobs-mumbai hidden">
+														</div>
+														<div class="populate-jobs-mumbai">
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div id="tabs-1-pane-4" class="active animate hidden">
-									<div class="tab-content">
-										<div class="section-block clearfix pt-0">
-											<div class="row">
-												<div class="column center content-inner">
-													<div class="jobs-noida hidden">
+									<div id="tabs-1-pane-3" class="animate">
+										<div class="tab-content">
+											<div class="section-block clearfix no-padding">
+												<div class="row">
+													<div class="column center content-inner">
+														<div class="jobs-hyd hidden">
+														</div>
+														<div class="populate-jobs-hyd">
+														</div>
 													</div>
-													<div class="populate-jobs-noida">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="tabs-1-pane-3" class="active animate hidden">
+										<div class="tab-content">
+											<div class="section-block clearfix pt-0">
+												<div class="row">
+													<div class="column center content-inner">
+														<div class="jobs-hyd hidden">
+														</div>
+														<div class="populate-jobs-hyd">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="tabs-1-pane-4" class="animate">
+										<div class="tab-content">
+											<div class="section-block clearfix pt-0">
+												<div class="row">
+													<div class="column center content-inner">
+														<div class="jobs-noida hidden">
+														</div>
+														<div class="populate-jobs-noida">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="tabs-1-pane-4" class="active animate hidden">
+										<div class="tab-content">
+											<div class="section-block clearfix pt-0">
+												<div class="row">
+													<div class="column center content-inner">
+														<div class="jobs-noida hidden">
+														</div>
+														<div class="populate-jobs-noida">
+														</div>
 													</div>
 												</div>
 											</div>
@@ -330,7 +338,7 @@
 
 
 			<script src="/js/common.js?v=20211215.1"></script>
-			<script src="/js/careers.js?v=20220905.1" type="text/javascript"></script>
+			<script src="/js/careers.js?v=20250719.1" type="text/javascript"></script>
 			<script src="js/sidenav.js"></script>
 			<script>
 				careersConstructor();
