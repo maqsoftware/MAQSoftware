@@ -3206,6 +3206,7 @@ ul li > [class*="icon-"]:first-child {
     padding: 2.5rem;
     overflow: hidden;
     display: block;
+    font-size: 1.4rem;
 }
 .accordion > ul > li > div > :first-child {
     margin-top: 0;
