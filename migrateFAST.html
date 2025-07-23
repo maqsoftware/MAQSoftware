@@ -130,6 +130,15 @@
         content="With expertise in Power BI, data science, data management, cloud migration, and business apps, MAQ Software accelerates business intelligence and analytics initiatives for large enterprises.">
     <meta name="keywords"
         content="Power BI, Power BI experts, Power BI Partner of the Year, Power BI Partner of the Year 2021, Microsoft Partner, Microsoft Partner Seattle, Microsoft Partner Redmond, Power BI Partner, Microsoft Gold Partner, Power BI solutions, Power BI optimization, Power BI report optimization, data science, Data Science solutions, data management, Data management solutions, cloud migration, Azure migration, cloud solutions, cloud migration solutions, business apps, app development, business apps solutions, Inc. 5000 companies in Seattle, Inc. 5000 companies in Redmond, Microsoft Power Platform workshops, Microsoft solutions, Microsoft platform solutions">
+    
+    <!-- Page element scripts -->
+	<script src="../js/accordion.js"></script>
+	<script src="../js/borderless-centered-cards.js"></script>
+	<script src="../js/image-card.js"></script>
+	<script src="../js/icon-cards.js"></script>
+    <script src="../js/price-card.js"></script>
+    <script src="../js/step-image-card.js"></script>
+    <script src="../js/contact-section.js"></script>
 </head>
 
 <body class="shop home-page">
@@ -140,81 +149,73 @@
     <!-- Header End -->
     <!--Hero Section-->
     <div class="section-block-padding-sm products-hero-section lg-section-block-padding-hero">
-                    <div class="row flex two-columns-on-tablet">
-                        <div class="column width-6 v-align-middle left center-on-mobile">
-                            <div>
-                                <h1 class="big">
-                                    MigrateFAST
-                                </h1>
-                                <!-- <div class="red-underline-rectangle center-on-mobile"></div> -->
+        <div class="section-container">
+            <div class="row flex two-columns-on-tablet">
+                <div class="column width-6 v-align-middle left center-on-mobile">
+                    <div class="section-heading-container">
+                        <h1 class="page-title">
+                            MigrateFAST
+                        </h1>
+                        <!-- <div class="red-underline-rectangle center-on-mobile"></div> -->
 
-                                <p class="card-title-normal center-on-mobile break">
-                                    Accelerate your migration journey to Microsoft Fabric.
-                                </p>
-                                <p class="section-subheading center-on-mobile">
-                                    Simplify data and reporting platform migration to Microsoft Fabric with AI-powered tools for faster and easier transitions. 
-                                </p>
-                                <div class="one-rem-div"></div>
-                                <div class="flex-row mb-column">
-                                    <a href="mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you." class="btn-primary btn-text" target="_blank" rel="noopener noreferrer">Contact our team</a>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="column width-6 right hide-on-mobile">
-                            <div class="feature-image img-placeholder">
-                                <div class="homepage-feature mb-0">
-                                    <img class="homepage-feature-img" src="images-new/isv/migrate-fast.jpg" alt="Power BI Embed">
-                                </div>
-                            </div>
+                        <p class="section-subheading center-on-mobile break">
+                            Accelerate your migration journey to Microsoft Fabric.
+                        </p>
+                        <p class="section-subheading center-on-mobile">
+                            Simplify data and reporting platform migration to Microsoft Fabric with AI-powered tools for faster and easier transitions. 
+                        </p>
+                        <div class="flex-row mb-column">
+                            <a href="mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you." class="btn-primary btn-text" target="_blank" rel="noopener noreferrer">Contact our team</a>
                         </div>
 
                     </div>
-                    <!-- Feature 1 Section End -->
-    </div>
+                </div>
 
+                <div class="column width-6 right hide-on-mobile">
+                    <div class="feature-image img-placeholder">
+                        <div class="homepage-feature mb-0">
+                            <img class="homepage-feature-img" src="images-new/isv/migrate-fast.jpg" alt="Power BI Embed">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <!--Hero Section End-->
 
 
     <!--Outcomes Section-->
 
-    <div class="section-block-padding-sm centered-section">
-        <div class="section-heading-container-centered">
-            <h2 class="display-medium">See how your business can benefit from MigrateFAST</h2>
-            <p class="section-subheading">Let our accelerator do the heavy lifting for you.</p>
-        </div>
-        <div class="business-outcomes-flex-grid max-section-size mb-grid-product">
-            <div class="card-item-centered">
-                <div class="icon-container-card">
-                    <span class="fluent--tray-item-remove-24-regular service-icon-size"></span>
-                </div>
-                <p class="card-title-centered">Large-scale migration</p>
-                <p class="body-text-centered">
-                    Enables large scale migration of reports from Tableau to Power BI.
-                </p>
-            </div>
-            <div class="card-item-centered">
-                <div class="icon-container-card">
-                    <span class="fluent--money-hand-24-regular service-icon-size"></span>
-                </div>
-                <p class="card-title-centered">Cost savings</p>
-                <p class="body-text-centered">
-                    Reduces the time and resources required to migrate reports using AI, resulting in cost savings of 40%.
-                </p>
-            </div>
-            <div class="card-item-centered">
-                <div class="icon-container-card">
-                    <span class="fluent--arrow-circle-up-sparkle-24-regular service-icon-size"></span>
-                </div>
-                <p class="card-title-centered">Optimization</p>
-                <p class="body-text-centered">
-                    Optimizes the migration process to ensure high-quality and accurate report conversion.
-                </p>
+    <div class="section-block-padding-sm">
+        <div id="security-business-outcomes" class="section-container">
+            <div class="section-heading-container-centered">
+                <h1 class="section-header">See how your business can benefit from EmbedFAST</h1>
+                <p class="section-subheading">Let our automation toolkit do the heavy lifting for you.</p>
             </div>
         </div>
-        
+        <script>
+            const businessOutcomes = [
+                {
+                    icon: "fluent--tray-item-remove-24-regular",
+                    title: "Large-scale migration",
+                    body: "Enables large scale migration of reports from Tableau to Power BI."
+                },
+                {
+                    icon: "fluent--money-hand-24-regular",
+                    title: "Cost savings",
+                    body: "Reduces the time and resources required to migrate reports using AI, resulting in cost savings of 40%."
+                },
+                {
+                    icon: "fluent--arrow-circle-up-sparkle-24-regular",
+                    title: "Optimization",
+                    body: "Optimizes the migration process to ensure high-quality and accurate report conversion."
+                }
+            ];
+            renderCards("#security-business-outcomes", businessOutcomes, 3);
+        </script>
     </div>
+
 
     <!--Outcomes Section End-->
 
@@ -255,80 +256,83 @@
     
     <!--Steps Section-->
 
-    <div class="section-block-padding-sm steps-section centered-section">
-        <div class="section-heading-container-centered">
-            <h2 class="display-medium">Our 6-step migration process</h2>
-            <p class="section-subheading">MigrateFAST guarantees accurate results with maximum efficiency</p>
-        </div>
-
-        <div class="grid-3-col max-section-size mb-grid-product">
-            <div class="step-card">
-                <div class="step-num">
-                    <p>1</p>
-                </div>
-                <div>
-                    <p class="card-title-step">Inventory analysis</p>
-                    <p class="body-text">
-                        Extract metadata, analyze reports, and assess data compatibility for a structured migration plan.
-                    </p>
-                </div>
-            </div>
-            <div class="step-card">
-                <div class="step-num">
-                    <p>2</p>
-                </div>
-                <div>
-                    <p class="card-title-step">Estimation and planning</p>
-                    <p class="body-text">
-                        Estimate costs, finalize architecture, identify risks, and define roles.
-                    </p>
-                </div>
-            </div>
-            <div class="step-card">
-                <div class="step-num">
-                    <p>3</p>
-                </div>
-                <div>
-                    <p class="card-title-step">Semantic model and report creation</p>
-                    <p class="body-text">
-                        Build a Power BI model, optimize data, and replicate report interactions for seamless functionality.
-                    </p>
-                </div>
+    <div class="section-block-padding-sm centered-section grey-bg">
+        <div class="section-container">
+            <div class="section-heading-container-centered">
+                <h1 class="section-header">Our 6-step migration process</h1>
+                <p class="section-subheading">MigrateFAST guarantees accurate results with maximum efficiency</p>
             </div>
 
-            <div class="step-card">
-                <div class="step-num">
-                    <p>4</p>
+            <div class="grid-3-col max-section-size mb-grid-product" style="margin-top: 3rem;">
+                <div class="step-card">
+                    <div class="step-num">
+                        <p>1</p>
+                    </div>
+                    <div>
+                        <p class="card-title">Inventory analysis</p>
+                        <p class="body-text">
+                            Extract metadata, analyze reports, and assess data compatibility for a structured migration plan.
+                        </p>
+                    </div>
                 </div>
-                <div>
-                    <p class="card-title-step">Review</p>
-                    <p class="body-text">
-                        Optimize performance, ensure uniformity, verify data accuracy, and certify reports.
-                    </p>
+                <div class="step-card">
+                    <div class="step-num">
+                        <p>2</p>
+                    </div>
+                    <div>
+                        <p class="card-title">Estimation and planning</p>
+                        <p class="body-text">
+                            Estimate costs, finalize architecture, identify risks, and define roles.
+                        </p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">
+                        <p>3</p>
+                    </div>
+                    <div>
+                        <p class="card-title">Semantic model and report creation</p>
+                        <p class="body-text">
+                            Build a Power BI model, optimize data, and replicate report interactions for seamless functionality.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-num">
+                        <p>4</p>
+                    </div>
+                    <div>
+                        <p class="card-title">Review</p>
+                        <p class="body-text">
+                            Optimize performance, ensure uniformity, verify data accuracy, and certify reports.
+                        </p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">
+                        <p>5</p>
+                    </div>
+                    <div>
+                        <p class="card-title">Governance</p>
+                        <p class="body-text">
+                            Track data lineage, maintain best practices, monitor performance, and set alerts.
+                        </p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">
+                        <p>6</p>
+                    </div>
+                    <div>
+                        <p class="card-title">Center of Excellence (CoE)</p>
+                        <p class="body-text">
+                            Ongoing support, user training, troubleshooting, and KPI tracking post-migration.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="step-card">
-                <div class="step-num">
-                    <p>5</p>
-                </div>
-                <div>
-                    <p class="card-title-step">Governance</p>
-                    <p class="body-text">
-                        Track data lineage, maintain best practices, monitor performance, and set alerts.
-                    </p>
-                </div>
-            </div>
-            <div class="step-card">
-                <div class="step-num">
-                    <p>6</p>
-                </div>
-                <div>
-                    <p class="card-title-step">Center of Excellence (CoE)</p>
-                    <p class="body-text">
-                        Ongoing support, user training, troubleshooting, and KPI tracking post-migration.
-                    </p>
-                </div>
-            </div>
+            
         </div>
         
 
@@ -389,11 +393,13 @@
         </div> -->
     </div>
     <div class="section-block-padding-sm centered-section">
-        <div class="row-section max-section-size">
+        <div class="section-container row-section">
             <div class="col-3-8">
-                <h2 class="display-medium">Discover how MigrateFAST automates a Tableau-to-Power BI migration.</h2>
+                <div class="section-heading-container">
+                    <h1 class="section-header">Discover how MigrateFAST automates a Tableau-to-Power BI migration.</h1>
+                </div>
                 
-                    <ul class="body-text">
+                    <ul class="body-text" style="margin-top: 2rem;">
                         <li>Upload Tableau reports and auto-extract metadata</li>
                         <li>Get timeline estimates for the migration</li>
                         <li>Analyze report similarity to remove duplicates</li>
@@ -483,34 +489,18 @@
    
 
     <!-- Contact Section-->
+    <div id="contact"></div>
+    <script>
+        renderContactSection(
+            "#contact",
+            "Connect with us for pricing options",
+            "Let's discuss how we can tailor a plan for you.",
+            "mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us%20-%20MigrateFAST&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you.",
+            true
+        );
+    </script>
 
-    <div class="section-block-padding-sm centered-section support-plan-gray">
-        <div class="flex-col-2 max-section-size">
-            <div class="hero-item-1">
-                <h1 class="contact-us-section-heading margin-sm">
-                  Connect with us for pricing options
-                </h1>
-                <p class="card-title-normal">
-                    Let's discuss how we can tailor a plan for you.
-                </p>
-                <div class="one-rem-div"></div>
-                <a href="mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us%20-%20MigrateFAST&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you." class="email-link email-link-container">
-                    <span class="tabler--mail"></span><p class="email-link">CustomerSuccess@MAQSoftware.com</p>
-                </a>
-            </div>
-            <div class="hero-item-2 mb-hide-img">
-                <!-- <p class="">
-                    Contact us at:
-                </p> -->
-                <!-- <a href="mailto:example@example.com?subject=Contact%20Us&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you." class="email-link">CustomerSuccess@MAQSoftware.com</a> -->
-                <!-- <a href="mailto:example@example.com?subject=Contact%20Us&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you."
-                    class="btn-primary btn-text">CustomerSuccess@MAQSoftware.com
-                </a> -->
-            </div>
-        </div>
-    </div>
-
-         <!-- Contact section end -->
+    <!-- Contact section end -->
 
 
 
