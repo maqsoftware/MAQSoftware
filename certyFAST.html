@@ -130,6 +130,15 @@
         content="With expertise in Power BI, data science, data management, cloud migration, and business apps, MAQ Software accelerates business intelligence and analytics initiatives for large enterprises.">
     <meta name="keywords"
         content="Power BI, Power BI experts, Power BI Partner of the Year, Power BI Partner of the Year 2021, Microsoft Partner, Microsoft Partner Seattle, Microsoft Partner Redmond, Power BI Partner, Microsoft Gold Partner, Power BI solutions, Power BI optimization, Power BI report optimization, data science, Data Science solutions, data management, Data management solutions, cloud migration, Azure migration, cloud solutions, cloud migration solutions, business apps, app development, business apps solutions, Inc. 5000 companies in Seattle, Inc. 5000 companies in Redmond, Microsoft Power Platform workshops, Microsoft solutions, Microsoft platform solutions">
+    <!-- Page element scripts -->
+	<script src="../js/accordion.js"></script>
+	<script src="../js/borderless-centered-cards.js"></script>
+	<script src="../js/image-card.js"></script>
+	<script src="../js/icon-cards.js"></script>
+    <script src="../js/price-card.js"></script>
+    <script src="../js/step-image-card.js"></script>
+    <script src="../js/contact-section.js"></script>
+
 </head>
 
 <body class="shop home-page">
@@ -139,169 +148,149 @@
         data-bkg-threshold="100" data-sticky-threshold="0"></header>
     <!-- Header End -->
     <!--Hero Section-->
+
     <div class="section-block-padding-sm products-hero-section lg-section-block-padding-hero">
-        <div class="products-slider-container">
-            <div class="slider">
-                <div class="slide">
-                    <div class="row flex two-columns-on-tablet">
-                        <div class="column width-6 v-align-middle left center-on-mobile">
-                            <div>
-                                <h1 class="big">
-                                    CertyFAST
-                                </h1>
-                                <!-- <div class="red-underline-rectangle center-on-mobile"></div> -->
+        <div class="section-container">
+            <div class="row flex two-columns-on-tablet">
+                <div class="column width-6 v-align-middle left center-on-mobile">
+                    <div class="section-heading-container">
+                        <h1 class="page-title">
+                            CertyFAST
+                        </h1>
+                        <!-- <div class="red-underline-rectangle center-on-mobile"></div> -->
 
-                                <p class="section-subheading center-on-mobile break">
-                                    Streamlining Power BI model development with automated error detection, DAX measure formatting, and simplified documentation. 
-                                    Ensure top-quality reports and adherence to best practices.
-                                </p>
-                                <p class="section-subheading center-on-mobile">
-                                    Ready to revolutionize your data strategy and empower your business with the capabilities of Power BI?
-                                </p>
-                                
-                                <div class="flex-row mb-column">
-                                    <a href="https://github.com/maqsoftware/CertyFAST" class="btn-primary btn-text" target="_blank" rel="noopener noreferrer">Download now</a>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="column width-6 right hide-on-mobile">
-                            <div class="feature-image img-placeholder">
-                                <div class="homepage-feature mb-0">
-                                    <img src="/images-new/isv/who.jpg" 
-                                    class="homepage-feature-img"
-                                        alt="Power BI report on computer monitor">
-                                </div>
-                            </div>
+                        <p class="section-subheading center-on-mobile break">
+                            Streamlining Power BI model development with automated error detection, DAX measure formatting, and simplified documentation.
+                            Ensure top-quality reports and adherence to best practices.
+                        </p>
+                        <p class="section-subheading center-on-mobile">
+                            Ready to revolutionize your data strategy and empower your business with the capabilities of Power BI?
+                        </p>
+                        <div class="flex-row mb-column">
+                            <a href="https://github.com/maqsoftware/CertyFAST" class="btn-primary btn-text" target="_blank" rel="noopener noreferrer">Download now</a>
                         </div>
 
                     </div>
-                    <!-- Feature 1 Section End -->
                 </div>
-                
+
+                <div class="column width-6 right hide-on-mobile">
+                    <div class="feature-image img-placeholder">
+                        <div class="homepage-feature mb-0">
+                            <img class="homepage-feature-img" src="/images-new/isv/who.jpg" alt="Power BI report on computer monitor">
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-
     </div>
 
     <!--Hero Section End-->
 
 
     <!--Outcomes Section-->
-
-    <div class="section-block-padding-sm centered-section">
-        <div class="section-heading-container-centered">
-            <h2 class="display-medium">See how your business can benefit from CertyFAST</h2>
-            <p class="section-subheading">Let our automation toolkit do the heavy lifting for you.</p>
-        </div>
-        <div class="business-outcomes-flex-grid max-section-size mb-grid-product">
-            <div class="card-item-centered">
-                <div class="icon-container-card">
-                    <span class="fluent--comment-error-24-regular service-icon-size"></span>
-                </div>
-                <p class="card-title-centered">Automate the review process</p>
-                <p class="body-text-centered">
-                    Save time and effort by easily identifying errors, formatting DAX measures, and creating knowledge base documents.
-                </p>
-            </div>
-            <div class="card-item-centered">
-                <div class="icon-container-card">
-                    <span class="fluent--document-one-page-sparkle-24-regular service-icon-size"></span>
-                </div>
-                <p class="card-title-centered">Error free reporting</p>
-                <p class="body-text-centered">
-                    Ensure your report aligns with organizational standards. Identify discrepancies that impact the report’s size, performance, or user experience.
-                </p>
-            </div>
-            <div class="card-item-centered">
-                <div class="icon-container-card">
-                    <span class="fluent--folder-people-24-regular service-icon-size"></span>
-                </div>
-                <p class="card-title-centered">Accurate and uniform reports</p>
-                <p class="body-text-centered">
-                    Access detailed documentation of semantic models and report visuals, aiding developers in creating consistent knowledge documents.
-                </p>
+   <div class="section-block-padding-sm">
+        <div id="security-business-outcomes" class="section-container">
+            <div class="section-heading-container-centered">
+                <h1 class="section-header">See how your business can benefit from CertyFAST</h1>
+                <p class="section-subheading">Let our automation toolkit do the heavy lifting for you.</p>
             </div>
         </div>
+        <script>
+            const businessOutcomes = [
+                {
+                    icon: "fluent--comment-error-24-regular",
+                    title: "Automate the review process",
+                    body: "Save time and effort by easily identifying errors, formatting DAX measures, and creating knowledge base documents."
+                },
+                {
+                    icon: "fluent--document-one-page-sparkle-24-regular",
+                    title: "Error free reporting",
+                    body: "Ensure your report aligns with organizational standards. Identify discrepancies that impact the report’s size, performance, or user experience."
+                },
+                {
+                    icon: "fluent--folder-people-24-regular",
+                    title: "Accurate and uniform reports",
+                    body: "Access detailed documentation of semantic models and report visuals, aiding developers in creating consistent knowledge documents."
+                }
+            ];
+            renderCards("#security-business-outcomes", businessOutcomes, 3);
+        </script>
     </div>
-
     <!--Outcomes Section End-->
 
     <!--Steps Section-->
-
     <div class="section-block-padding-sm steps-section centered-section">
-        <div class="section-heading-container-centered">
-            <h2 class="display-medium">Improve your Power BI models in three easy steps</h2>
-            <p class="section-subheading">CertyFAST automates error detection, DAX formatting, and documentation for high-quality, consistent reports.</p>
-        </div>
-        <div class="business-outcomes-flex-grid max-section-size mb-grid-product">
-            <div class="card-item-centered">
-                <img src="..\images-new\isv\reports4.svg" alt="https://storyset.com/illustration/setup-analytics/pana" class="steps-img-story">
-                <p class="card-title-centered">Analyze your report</p>
-                <p class="body-text-centered">
-                    Automatically detect errors, discrepancies, and performance issues impacting report quality.
-                </p>
-            </div>
-            <div class="card-item-centered">
-                <img src="..\images-new\isv\review.svg" alt="https://storyset.com/illustration/online-document/pana" class="steps-img-story">
-                <p class="card-title-centered">Review insights</p>
-                <p class="body-text-centered">
-                    Explore field lineage and generate detailed documentation of your Power BI models.
-                </p>
-            </div>
-            <div class="card-item-centered">
-                <img src="..\images-new\isv\optimize.svg" alt="https://storyset.com/illustration/conversion-rate-optimization/pana" class="steps-img-story">
-                <p class="card-title-centered">Optimize and deploy</p>
-                <p class="body-text-centered">
-                    Fix alignment issues and ensure adherence to best practices for seamless report delivery.
-                </p>
+        <div id="stepSection" class="section-container">
+            <div class="section-heading-container-centered">
+                <h1 class="section-header">Improve your Power BI models in three easy steps</h1>
+                <p class="section-subheading">CertyFAST automates error detection, DAX formatting, and documentation for high-quality, consistent reports.</p>
             </div>
         </div>
     </div>
+
+    <script>
+        const steps = [
+            {
+                imgSrc: "../images-new/isv/reports4.svg",
+                imgAlt: "https://storyset.com/illustration/setup-analytics/pana",
+                title: "Analyze your report",
+                body: "Automatically detect errors, discrepancies, and performance issues impacting report quality."
+            },
+            {
+                imgSrc: "../images-new/isv/review.svg",
+                imgAlt: "https://storyset.com/illustration/online-document/pana",
+                title: "Review insights",
+                body: "Explore field lineage and generate detailed documentation of your Power BI models."
+            },
+            {
+                imgSrc: "../images-new/isv/optimize.svg",
+                imgAlt: "https://storyset.com/illustration/conversion-rate-optimization/pana",
+                title: "Optimize and deploy",
+                body: "Fix alignment issues and ensure adherence to best practices for seamless report delivery."
+            }
+        ];
+        renderStepImageCards("#stepSection", steps, 3);
+    </script>
 
     <!--Steps Section End-->
 
     <div class="section-block-padding-sm centered-section">
-        <div class="centered-section max-section-size">
-            <div class="">
-                <h2 class="display-medium">Explore how CertyFAST improves Power BI report quality control </h2>
-                    <!-- <ul class="body-text">
-                        <li>Automate the detection of errors and performance issues</li>
-                        <li>Identify discrepancies impacting report performance and user experience</li>
-                        <li>Get detailed documentation of Power BI models and report visuals</li>
-                    </ul> -->
+        <div class="section-container center">
+            <div class="section-header">
+                <h1 class="section-header">Explore how CertyFAST improves Power BI report quality control </h1>
             </div>
-            <iframe class="col-4-8" src="https://www.youtube.com/embed/KIiI16IKHIY?si=ohsb-fK3J1cylEi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            
+            <iframe class="col-4-8" src="https://www.youtube.com/embed/KIiI16IKHIY?si=ohsb-fK3J1cylEi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="margin-top: 3rem;"></iframe>
         </div>
     </div>
     
 
     <!-- Disabled Resource Section until Installation Guide is fixed. -->
     <!--Accordian Section-->
-    <div class="section-block-padding-sm centered-section contact-gray-section">
-        <div class="accordion-header-container max-section-size">
-            <h2 class="display-medium">Resources</h2>
-        </div>
-        <div class="max-accordion-size">
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="True" aria-controls="collapseOne">
-                            Technical documentation
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <div class="flex-col-2 accordion-body-2">
-                                <img src="../img/Microsoft-Fabric/Slider1.png" class="accordion-img mb-accordion-img"alt="Power BI report on computer monitor">
-                                <div class="accordion-text">
-                                    <div class="accordion-text-group">
-                                        <p class="accordion-title"><strong>Access our technical documentation to get in-depth information on integrating and using CertyFAST.</strong></p>
-                                        <p class="body-text">Discover step-by-step instructions, best practices, and troubleshooting tips to ensure seamless implementation and optimal performance.</p>
+    <div class="section-block-padding-sm centered-section grey-bg">
+        <div class="section-container">
+            <div class="section-heading-container">
+                <h1 class="section-header">Resources</h1>
+            </div>
+            <div class="max-accordion-size">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="True" aria-controls="collapseOne">
+                                Technical documentation
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flex-col-2 accordion-body-2">
+                                    <img src="../img/Microsoft-Fabric/Slider1.png" class="accordion-img mb-accordion-img"alt="Power BI report on computer monitor">
+                                    <div class="accordion-text">
+                                        <div class="accordion-text-group">
+                                            <p class="accordion-title"><strong>Access our technical documentation to get in-depth information on integrating and using CertyFAST.</strong></p>
+                                            <p class="body-text">Discover step-by-step instructions, best practices, and troubleshooting tips to ensure seamless implementation and optimal performance.</p>
+                                        </div>
+                                        <a href="https://maqsoftware.com/services/Power-BI/InstallationandUsageGuide" class="learn-more-link body-bold" target="_blank" rel="noopener noreferrer">CertyFAST installation and user guide<span class="chevron">&gt;</span></a>
                                     </div>
-                                    <a href="https://maqsoftware.com/services/Power-BI/InstallationandUsageGuide" class="learn-more-link body-bold large-link" target="_blank" rel="noopener noreferrer">CertyFAST installation and user guide<span class="chevron">&gt;</span></a>
                                 </div>
                             </div>
                         </div>
@@ -313,33 +302,17 @@
 	<!--Accordian Section End-->
 
     <!-- Contact Section-->
-
-    <div class="section-block-padding-sm centered-section">
-        <div class="flex-col-2 max-section-size">
-            <div class="hero-item-1">
-                <h1 class="big margin-sm">
-                  Connect with us
-                </h1>
-                <p class="card-title-normal">
-                  Let’s accelerate your delivery and optimize your operations.
-                </p>
-                <a href="mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us%20-%20CertyFAST&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you." class="email-link email-link-container">
-                    <span class="tabler--mail"></span><p class="email-link">CustomerSuccess@MAQSoftware.com</p>
-                </a>
-            </div>
-            <div class="hero-item-2 mb-hide-img">
-                <!-- <p class="">
-                    Contact us at:
-                </p> -->
-                <!-- <a href="mailto:example@example.com?subject=Contact%20Us&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you." class="email-link">CustomerSuccess@MAQSoftware.com</a> -->
-                <!-- <a href="mailto:example@example.com?subject=Contact%20Us&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you."
-                    class="btn-primary btn-text">CustomerSuccess@MAQSoftware.com
-                </a> -->
-            </div>
-        </div>
-    </div>
-
-         <!-- Contact section end -->
+    <div id="contact"></div>
+    <script>
+        renderContactSection(
+            "#contact",
+            "Connect with us",
+            "Let’s accelerate your delivery and optimize your operations.",
+            "mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us%20-%20CertyFAST&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you.",
+            false
+        );
+    </script>
+    <!-- Contact section end -->
 
 
 
