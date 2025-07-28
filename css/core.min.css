@@ -5976,10 +5976,10 @@ textarea {
     [class*="content-grid-"] .grid-item {
         width: 50%;
     }
-    header .primary-nav-column,
+    /* header .primary-nav-column,
     header .primary-navigation {
         display: none !important;
-    }
+    } */
     header .logo-column,
     header .secondary-nav-column {
         width: auto !important;
@@ -8212,10 +8212,10 @@ body.boxed .header .header-inner {
     }
 }
 @media only screen and (max-width: 960px) {
-    .header {
+    /* .header {
         background: 0 0;
         position: static !important;
-    }
+    } */
     .header-fixed-on-mobile .header-inner,
     body.boxed .header-fixed-on-mobile {
         width: 100%;
@@ -8237,12 +8237,12 @@ body.boxed .header .header-inner {
     .header .nav-bar {
         border-top: none !important;
     }
-    .header,
+    /* .header,
     .header .header-inner {
         height: 8rem !important;
         padding-top: 0;
         border: none;
-    }
+    } */
     .header .header-inner .dropdown > .nav-icon,
     .header .header-inner .navigation > ul > li,
     .header .header-inner .navigation > ul > li > a:not(.button),

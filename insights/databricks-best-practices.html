@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Best practices in Snowflake for Power BI | MAQ Software Insights" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/solutions/cloud-main.jpg" />
+    <meta property="og:description"
+        content="Optimize Snowflake storage for efficient Power BI data extraction" />
+    <!-- Twitter Theme -->
+    <meta name="twitter:widgets:theme" content="light">
+
+    <!-- Title &amp; Favicon -->
+    <title>Databricks Best Practices | MAQ Software Insights</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+    <!-- Font -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Extra meta tags -->
+    <meta name="description"
+        content="Optimize Snowflake storage for efficient Power BI data extraction" />
+    <meta name="keywords"
+        content="Snowflake, Power BI, Snowflake Power BI integration, Power BI performance, Snowflake optimization, Snowflake best practices,
+        Snowflake data modeling, Star schema, Snowflake clustering keys, Snowflake partitioning, Snowflake for business intelligence, Improve Power BI report speed,
+        Power BI data extraction, Snowflake performance tuning, Enterprise data modeling">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/core.min.css" />
+    <link rel="stylesheet" href="/css/skin.css" />
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-S0W302CGQG');
+    </script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "oekduyvjws");
+    </script>
+</head>
+
+<body class="shop blog">
+
+    <!-- Header -->
+    <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent"
+        data-bkg-threshold="100" data-sticky-threshold="0"></header>
+    <!-- Header End -->
+    <div class="section-block bkg-grey-ultralight"></div>
+    <!-- Content -->
+    <div class="content clearfix best-practices-text">
+        <div class="section-block clearfix pt-0 pb-0 bkg-grey-ultralight">
+            <div class="row">
+                <!-- Content Inner -->
+                <div class="column width-10 offset-1 content-inner blog-single-post bkg-grey-ultralight">
+                    <article class="post">
+                        <div class="post-content with-background">
+                            <h1 class="post-title center">Best practices in Databricks</h1>
+                            <h3 class="post-title center">Optimizing Performance, Collaboration, and Security</h3>
+                            <p class="text-large">Databricks is a unified analytics platform, providing cloud-based services for big data and machine learning. This guide outlines best practices to optimize Databricks performance, enhance collaboration, and ensure security. </p>
+                            
+                            <ol class="index" style="padding-bottom: 3rem;">
+                                <li class="text-xlarge"><a href="#optimizing-performance">Optimizing Performance</a></li>
+                                <li class="text-xlarge"><a href="#cluster-configuration">Cluster Configuration</a></li>
+                                <li class="text-xlarge"><a href="#data-management">Efficient Data Management</a></li>
+                                <li class="text-xlarge"><a href="#query-optimization">Optimizing Queries</a></li>
+                                <li class="text-xlarge"><a href="#collaboration-tools">Enhancing Collaboration</a></li>
+                                <li class="text-xlarge"><a href="#shared-workspaces">Shared Workspaces</a></li>
+                                <li class="text-xlarge"><a href="#version-control">Version Control</a></li>
+                                <li class="text-xlarge"><a href="#job-scheduling">Job Scheduling</a></li>
+                                <li class="text-xlarge"><a href="#security-practices">Ensuring Security</a></li>
+                                <li class="text-xlarge"><a href="#access-control">Access Control</a></li>
+                                <li class="text-xlarge"><a href="#data-encryption">Data Encryption</a></li>
+                                <li class="text-xlarge"><a href="#monitoring-auditing">Monitoring and Auditing</a></li>
+                            </ol>
+
+                            <div id="optimizing-performance" class="section-heading-container">
+                                <h1 class="section-header">
+                                    Optimizing Performance
+                                </h1>
+                            </div>
+
+                            <div id="cluster-configuration">
+                                <!-- <h2>Cluster Configuration</h2> -->
+                                <ul type="a" class="indented-list">
+                                    <li class="text-xlarge"><strong>Cluster Configuration</strong></li>
+                                    <ul type="i">
+                                        <li class="text-large">Choose the Right Cluster: Select clusters based on workload type (e.g., Standard, High-Concurrency).</li>
+                                        <li class="text-large">Auto-scaling: Enable auto-scaling to manage resources efficiently, scaling up during high workload periods and scaling down when idle.</li>
+                                        <li class="text-large">Spot Instances: Use spot instances for cost savings on non-critical workloads.</li>
+                                    </ul>
+
+                                    <li id="data-management" class="text-xlarge"><strong>Efficient Data Management</strong></li>
+                                    <ul type="i">
+                                        <li class="text-large">Data Partitioning: Partition data based on usage patterns to optimize query performance.</li>
+                                        <li class="text-large">Delta Lake: Utilize Delta Lake for ACID transactions, scalable metadata handling, and unified streaming and batch data processing.</li>
+                                        <li class="text-large">Cache Data: Cache intermediate results to reduce redundant computations.</li>
+                                    </ul>
+
+                                    <li id="query-optimization" class="text-xlarge"><strong>Optimizing Queries</strong></li>
+                                    <ul type="i">
+                                        <li class="text-large">Cost-Based Optimization (CBO): Enable CBO to automatically select the most efficient query execution plan.</li>
+                                        <li class="text-large">Broadcast Hash Joins: Use broadcast joins for small tables to avoid shuffling large datasets across nodes. </li>
+                                        <li class="text-large">SQL Query Best Practices: Write efficient SQL queries by avoiding unnecessary computations and using appropriate indexing.</li>
+                                        <li class="text-large">Optimization Techniques: Use techniques such as VACUUM, Optimize, Z Order, V Order, and Liquid Clustering to enhance performance and maintain data organization.</li>
+                                    </ul>
+                                </ul>
+                            </div>
+
+                            <div class="section-heading-container">
+                                <h1 class="section-header">
+                                    Enhancing Collaboration
+                                </h1>
+                            </div>
+
+                            <div id="collaboration-tools">
+                                <!-- <h2>Leverage Clustering Keys</h2> -->
+                                <ul type="a" class="indented-list">
+                                    <li id="shared-workspaces" class="text-xlarge"><strong>Shared Workspaces</strong></li>
+                                    <ul type="i">
+                                        <li class="text-large">Organize Workspaces: Structure workspaces for easy navigation and access control based on team roles.</li>
+                                        <li class="text-large">Notebook Best Practices: Use notebooks for collaborative data analysis, version control, and documentation.</li>
+                                        <li class="text-large">Comments and Reviews: Encourage code reviews and comments within notebooks for collaborative improvement.</li>
+                                    </ul>
+
+                                    <li id="version-control" class="text-xlarge"><strong>Version Control</strong></li>
+                                    <ul type="i">
+                                        <li class="text-large">Git Integration: Integrate Databricks with Git for version control, enabling collaboration and code traceability.</li>
+                                        <li class="text-large">Branching Strategy: Implement a branching strategy (e.g., feature branches, main branch) to manage development workflows.</li>
+                                    </ul>
+
+                                    <li id="job-scheduling" class="text-xlarge"><strong>Job Scheduling</strong></li>
+                                    <ul type="i">
+                                        <li class="text-large">Databricks Jobs: Use Databricks Jobs to schedule and orchestrate workflows, ensuring dependencies and retries.</li>
+                                        <li class="text-large">Task Dependencies: Define task dependencies to ensure the correct sequence of execution.</li>
+                                    </ul>
+                                </ul>
+                            </div>
+
+                            <div class="section-heading-container">
+                                <h1 class="section-header">
+                                    Ensuring Security
+                                </h1>
+                            </div>
+
+                            <div id="security-practices">
+                                <ul type="a" class="indented-list">
+                                    <li id="access-control" class="text-xlarge"><strong>Access Control</strong></li>
+                                    <ul type="i">
+                                        <li class="text-large">Role-Based Access Control (RBAC): Implement RBAC to grant permissions based on user roles.</li>
+                                        <li class="text-large">Workspace Permissions: Set permissions at workspace and object levels to restrict access to sensitive data.</li>
+                                    </ul>
+
+                                    <li id="data-encryption" class="text-xlarge"><strong>Data Encryption</strong></li>
+                                    <ul type="i">
+                                        <li class="text-large">Encryption at Rest: Ensure data is encrypted at rest using cloud provider encryption services.</li>
+                                        <li class="text-large">Encryption in Transit: Use HTTPS and other encryption protocols to protect data in transit.</li>
+                                    </ul>
+
+                                    <li id="monitoring-auditing" class="text-xlarge"><strong>Monitoring and Auditing</strong></li>
+                                    <ul type="i">
+                                        <li class="text-large">Audit Logs: Enable audit logs to track user activity and changes within Databricks.</li>
+                                        <li class="text-large">Monitoring Tools: Use monitoring tools to detect anomalies and ensure system health.</li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="section-block pt-10 pb-10 bkg-white"></div>
+                            <div class="row">
+                                <div class="column width-6">
+                                    <img src="/img/blog/BPG010-main.png" alt="">
+                                </div>
+                                <div class="column width-6">
+                                    <H2>Best practices for creating enterprise-wide knowledge bots</H2>
+                                    <p class="text-large">Improve your enterprise-wide knowledge bot's performance, security, and design with our best practices</p>
+                                    <a href="/insights/knowledge-bot-best-practices.html">Read More &rarr;</a><br>
+                                </div>
+                            </div>
+                            <div class="section-block pt-10 pb-10 bkg-white"></div>
+                            <div class="post-info center">
+                                <span class="post-date">Last updated: July 25, 2025</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="section-block bkg-grey-ultralight"></div>
+    </div>
+    <!-- Content End -->
+    <!-- Footer -->
+    <footer id="footer" class="footer footer-light bkg-grey-ultralight"></footer>
+    <!-- Footer End -->
+    <!-- Js -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script>
+    <script src="/js/timber.master.min.js"></script>
+    <script src="../js/sidenav.js"></script>
+    <script>
+        // $("#header").load("/header");
+        // $("#footer").load("/footer");
+        // $("#header").load("/header.html");
+        $("#footer").load("/footer.html");
+    </script>
+</body>
+
+</html>
