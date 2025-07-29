@@ -4107,6 +4107,10 @@ img .accordion-img{
 /* ============================== */
 /* MD (max-width: 960px) */
 @media screen and (max-width: 960px) {
+  .hero-background-padding {
+    padding-top: 6rem;
+  }
+
   header .primary-nav-column,
   header .primary-navigation {
       display: none !important;
