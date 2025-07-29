@@ -1240,9 +1240,9 @@ body,
     -webkit-transform: scale(1) !important;
     transform: scale(1) !important;
   }
-  .header .logo a:last-child {
+  /* .header .logo a:last-child {
     display: none !important;
-  }
+  } */
 }
 
 /*------------------------------------------------------------------
