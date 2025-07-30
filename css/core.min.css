@@ -8094,7 +8094,8 @@ body.boxed .header .header-inner {
 }
 .mobile .header,
 .mobile .header .header-inner {
-    height: 8rem !important;
+    /* height: 8rem !important; */
+    height: 4rem !important;
     padding-top: 0;
 
 }
