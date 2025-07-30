@@ -481,6 +481,10 @@ body {
   margin-left: 250px;  /* This pushes the content to the left */
 }
 
+.secondary-navigation {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .hamburger {
       display: block;  /* Show hamburger menu on mobile */
