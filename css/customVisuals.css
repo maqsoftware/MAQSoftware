@@ -481,8 +481,32 @@ body {
   margin-left: 250px;  /* This pushes the content to the left */
 }
 
-.secondary-navigation {
+/* .secondary-navigation {
   display: none;
+} */
+
+.mobile-navigation {
+  list-style: none;
+  display: none;
+}
+
+.nav > ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* ============================== */
+/* Full width of primary nav (max-width: 1200px) */
+@media screen and (max-width: 1200px) {
+  .primary-navigation {
+    display: none;
+  }
+
+  .mobile-navigation {
+    display: block;
+  }
+
+
 }
 
 @media screen and (max-width: 768px) {
@@ -501,3 +525,53 @@ body {
 }
 
 /* Side nav GPT end */
+
+/* Footer additional CSS */
+.grid-4-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8rem;
+  width: 100%;
+  align-items: start;
+  grid-auto-rows: 1fr;
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 960) {
+    .grid-4-footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 8rem;
+    width: 100%;
+    align-items: stretch;
+    grid-auto-rows: auto;
+    margin-top: 3rem;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+    h1.hero, h1.page-title{
+    font-size: 2rem;
+  }
+  .mb-footer-show {
+    display: block;
+  }
+  .mb-footer-hide {
+    display: none;
+  }
+  .grid-4-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem 8rem;
+    width: 100%;
+    align-items: stretch;
+    grid-auto-rows: auto;
+    margin-top: 3rem;
+  }
+  .footer-bottom {
+    font-size: 1rem;
+  }
+  .flex-table {
+    font-size: 14px;
+  }
+}
