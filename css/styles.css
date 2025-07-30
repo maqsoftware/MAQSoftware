@@ -1091,6 +1091,14 @@ p{
   font-size: 1rem;
 }
 
+.post {
+  height: 100%;
+}
+
+.post-content {
+  height: 100%;
+}
+
 .grid-col-1 {
   display: grid;
   grid-template-columns: 1fr;
@@ -1214,7 +1222,7 @@ p{
 .highlight-card-snowflake-blue {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   width: 100%;
   border-left: 5px solid #006eff;
   padding: 1rem;
@@ -4091,7 +4099,7 @@ img .accordion-img{
 }
 
 /* ============================== */
-/* Full width of primary nav (max-width: 1100px) */
+/* Full width of primary nav (max-width: 1200px) */
 @media screen and (max-width: 1200px) {
   .primary-navigation {
     display: none;
@@ -4107,8 +4115,13 @@ img .accordion-img{
 /* ============================== */
 /* MD (max-width: 960px) */
 @media screen and (max-width: 960px) {
+  /* .logo-container {
+    height: 4rem !important;
+    line-height: 8rem !important;
+    font-size: 4rem;
+  } */
   .hero-background-padding {
-    padding-top: 6rem;
+    padding-top: 5rem;
   }
 
   header .primary-nav-column,
