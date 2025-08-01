@@ -317,22 +317,29 @@
     </script>
     <!-- Partner Description Section End -->
 
-    <!-- Blogs Section-->
+    <!-- Guide Section-->
     <div class="section-block-padding-sm grey-bg">
-        <div id="blogSection" class="section-container">
+        <div id="guideSection" class="section-container">
             <div class="section-heading-container">
-                <h1 class="section-header">Related blogs and case studies</h1>
+                <h1 class="section-header">Databricks guides</h1>
             </div>
         </div>
     </div>
 
     <script>
-        const blogCards = [
+        const guideCards = [
         {
             href: "https://maqsoftware.com/insights/databricks-best-practices.html",
             imageSrc: "../img/blog/databricks-best-practice-guide.png",
             imageAlt: "Image of a computer and a coffee mug",
-            title: "Databricks Best Practice Guide",
+            title: "Databricks Best Practices Guide",
+            bodyText: ""
+        },
+        {
+            href: "https://maqsoftware.com/insights/azure-databricks-best-practices.html",
+            imageSrc: "../img/blog/BPG007-main.jpg",
+            imageAlt: "Image of a computer and a coffee mug",
+            title: "ADB Optimization Best Practices Guide",
             bodyText: ""
         },
         {
@@ -343,18 +350,18 @@
             bodyText: ""
         },
                 {
-            href: "https://blog.maqsoftware.com/2024/07/harnessing-generative-ai-for-tailored.html",
+            href: "https://blog.maqsoftware.com/2025/08/unlocking-business-insights-integrating.html",
             imageSrc: "../images/case-studies/cover-images/unlocking-advanced-analytics-with-databricks.jpeg",
             imageAlt: "Image of a closeup of a woman shopping for groceries",
-            title: "Unlocking Advanced Analytics with Databricks",
+            title: "Unlocking business insights: Integrating Databricks with Power BI",
             bodyText: ""
         }
         ];
         // The final digit represents the number of cards per row
-        renderImageCards("#blogSection", blogCards, 3);
+        renderImageCards("#guideSection", guideCards, 4);
     </script>
 
-    <!-- Blogs Section End-->
+    <!-- Guide Section End-->
 
     <!-- Case Study Section-->
     <!-- <div class="section-block-padding-sm">
