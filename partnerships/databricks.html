@@ -156,13 +156,13 @@
                 <div class="column width-6 v-align-middle left center-on-mobile">
                     <div class="section-heading-container">
                         <h1 class="page-title">
-                            Databricks
+                            MAQ Software and Databricks
                         </h1>
                         <!-- <div class="red-underline-rectangle center-on-mobile"></div> -->
 
-                        <p class="section-subheading center-on-mobile break">
-                            Empowering Businesses with Data, Analytics, and AI Solutions and Accelerators
-                        </p>
+                        <!-- <p class="section-subheading center-on-mobile break">
+                            Empowering Businesses with Data, Analytics, AI Solutions, and Accelerators
+                        </p> -->
                         <p class="section-subheading center-on-mobile">
                             Unlock the power of your data with MAQ Software and Databricks—where innovation meets intelligence. Together, we transform data into actionable insights through next-generation analytics, seamless integration, and AI-driven accelerators. Experience agility, scalability, and security like never before as we propel your business to new heights in the data-driven era.
                         </p>
@@ -246,10 +246,10 @@
         const stats = [
             { stat: "34+", description: "Databricks Data Engineering <br>Associates" },
             { stat: "7+", description: "Databricks Data Engineering <br>Professionals" },
-            { stat: "66+", description: "Databricks Sales <br>Badges" },
-            { stat: "", description: "Databricks Implementations" }
+            { stat: "66+", description: "Databricks Sales Badges" }
+            // { stat: "", description: "Databricks Implementations" }
         ];
-        renderStatCards("#statsContainer", stats, 4);
+        renderStatCards("#statsContainer", stats, 3);
     </script>
 	<!-- Callout section end -->
 
@@ -321,7 +321,7 @@
     <div class="section-block-padding-sm grey-bg">
         <div id="blogSection" class="section-container">
             <div class="section-heading-container">
-                <h1 class="section-header">Related blogs</h1>
+                <h1 class="section-header">Related blogs and case studies</h1>
             </div>
         </div>
     </div>
@@ -329,17 +329,24 @@
     <script>
         const blogCards = [
         {
-            href: "https://blog.maqsoftware.com/2024/08/modernizing-reporting-platforms-through.html",
-            imageSrc: "../images-new/case-studies/modernizing-reporting-platforms.webp",
+            href: "https://maqsoftware.com/insights/databricks-best-practices.html",
+            imageSrc: "../img/blog/databricks-best-practice-guide.png",
             imageAlt: "Image of a computer and a coffee mug",
-            title: "Modernizing reporting platforms through AI-driven SQL Migration",
+            title: "Databricks Best Practice Guide",
             bodyText: ""
         },
         {
-            href: "https://blog.maqsoftware.com/2024/07/harnessing-generative-ai-for-tailored.html",
-            imageSrc: "../images-new/case-studies/harnessing-gen-ai-for-marketing.webp",
+            href: "https://blog.maqsoftware.com/2025/07/unlocking-advanced-analytics-with.html",
+            imageSrc: "../images/case-studies/cover-images/unlocking-advanced-analytics-with-databricks.jpeg",
             imageAlt: "Image of a closeup of a woman shopping for groceries",
-            title: "Harnessing Gen AI for tailored marketing: Personalized content clusters for every account",
+            title: "Unlocking Advanced Analytics with Databricks",
+            bodyText: ""
+        },
+                {
+            href: "https://blog.maqsoftware.com/2024/07/harnessing-generative-ai-for-tailored.html",
+            imageSrc: "../images/case-studies/cover-images/unlocking-advanced-analytics-with-databricks.jpeg",
+            imageAlt: "Image of a closeup of a woman shopping for groceries",
+            title: "Unlocking Advanced Analytics with Databricks",
             bodyText: ""
         }
         ];
@@ -350,7 +357,7 @@
     <!-- Blogs Section End-->
 
     <!-- Case Study Section-->
-    <div class="section-block-padding-sm">
+    <!-- <div class="section-block-padding-sm">
         <div id="caseStudySection" class="section-container">
             <div class="section-heading-container">
                 <h1 class="section-header">Related case studies</h1>
@@ -384,7 +391,7 @@
         ];
         // The final digit represents the number of cards per row
         renderImageCards("#caseStudySection", caseStudyCards, 3);
-    </script>
+    </script> -->
 
     <!-- Case Study Section End-->
 
@@ -398,7 +405,7 @@
             "Connect with us",
             "As a Databricks Technology Partner, MAQ Software brings deep expertise in helping organizations unlock the full potential of Databricks. Whether you're looking for guidance on implementing data solutions or optimizing your existing platform, we’re here to support you every step of the way.",
             "mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us%20-%20Databricks&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you.",
-            true
+            false
         );
     </script>
 
