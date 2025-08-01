@@ -317,22 +317,29 @@
     </script>
     <!-- Partner Description Section End -->
 
-    <!-- Blogs Section-->
+    <!-- Guide Section-->
     <div class="section-block-padding-sm grey-bg">
-        <div id="blogSection" class="section-container">
+        <div id="guideSection" class="section-container">
             <div class="section-heading-container">
-                <h1 class="section-header">Related blogs and case studies</h1>
+                <h1 class="section-header">Databricks guides</h1>
             </div>
         </div>
     </div>
 
     <script>
-        const blogCards = [
+        const guideCards = [
         {
             href: "https://maqsoftware.com/insights/databricks-best-practices.html",
             imageSrc: "../img/blog/databricks-best-practice-guide.png",
             imageAlt: "Image of a computer and a coffee mug",
-            title: "Databricks Best Practice Guide",
+            title: "Databricks Best Practices Guide",
+            bodyText: ""
+        },
+        {
+            href: "https://maqsoftware.com/insights/azure-databricks-best-practices.html",
+            imageSrc: "../img/blog/BPG007-main.jpg",
+            imageAlt: "Image of a computer and a coffee mug",
+            title: "ADB Optimization Best Practices Guide",
             bodyText: ""
         },
         {
@@ -343,21 +350,21 @@
             bodyText: ""
         },
                 {
-            href: "https://blog.maqsoftware.com/2024/07/harnessing-generative-ai-for-tailored.html",
-            imageSrc: "../images/case-studies/cover-images/unlocking-advanced-analytics-with-databricks.jpeg",
+            href: "https://blog.maqsoftware.com/2025/08/unlocking-business-insights-integrating.html",
+            imageSrc: "../images/case-studies/cover-images/unlocking-business-insights-integrating-databricks-with-power-bi.jpeg",
             imageAlt: "Image of a closeup of a woman shopping for groceries",
-            title: "Unlocking Advanced Analytics with Databricks",
+            title: "Unlocking business insights: Integrating Databricks with Power BI",
             bodyText: ""
         }
         ];
         // The final digit represents the number of cards per row
-        renderImageCards("#blogSection", blogCards, 3);
+        renderImageCards("#guideSection", guideCards, 4);
     </script>
 
-    <!-- Blogs Section End-->
+    <!-- Guide Section End-->
 
     <!-- Case Study Section-->
-    <!-- <div class="section-block-padding-sm">
+    <div class="section-block-padding-sm">
         <div id="caseStudySection" class="section-container">
             <div class="section-heading-container">
                 <h1 class="section-header">Related case studies</h1>
@@ -368,30 +375,16 @@
     <script>
         const caseStudyCards = [
         {
-            href: "https://blog.maqsoftware.com/2024/08/modernizing-reporting-platforms-through.html",
-            imageSrc: "../images-new/case-studies/modernizing-reporting-platforms.webp",
+            href: "https://blog.maqsoftware.com/2025/08/delivering-personalization-intelligence.html",
+            imageSrc: "../images/case-studies/mlops-and-databricks-ci-cd-framework/MLOps-Databricks-framework.jpg",
             imageAlt: "Image of a computer and a coffee mug",
-            title: "Modernizing reporting platforms through AI-driven SQL Migration",
-            bodyText: ""
-        },
-        {
-            href: "https://blog.maqsoftware.com/2024/07/harnessing-generative-ai-for-tailored.html",
-            imageSrc: "../images-new/case-studies/harnessing-gen-ai-for-marketing.webp",
-            imageAlt: "Image of a closeup of a woman shopping for groceries",
-            title: "Harnessing Gen AI for tailored marketing: Personalized content clusters for every account",
-            bodyText: ""
-        },
-        {
-            href: "https://blog.maqsoftware.com/2023/02/transforming-customer-support-with.html",
-            imageSrc: "../images-new/case-studies/transforming-customer-support.webp",
-            imageAlt: "Image of a person pointing to a tablet screen showing a chart",
-            title: "Transforming customer support with AIOps-Driven Power BI embedding",
+            title: "Delivering personalization intelligence with MLOps and Databricks CI/CD framework",
             bodyText: ""
         }
         ];
         // The final digit represents the number of cards per row
         renderImageCards("#caseStudySection", caseStudyCards, 3);
-    </script> -->
+    </script>
 
     <!-- Case Study Section End-->
 
@@ -405,7 +398,7 @@
             "Connect with us",
             "As a Databricks Technology Partner, MAQ Software brings deep expertise in helping organizations unlock the full potential of Databricks. Whether you're looking for guidance on implementing data solutions or optimizing your existing platform, we’re here to support you every step of the way.",
             "mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us%20-%20Databricks&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you.",
-            false
+            true
         );
     </script>
 
