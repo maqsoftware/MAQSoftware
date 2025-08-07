@@ -1604,7 +1604,6 @@ p{
   display: block;
 }
 
-
 /* -------------------------customer stories carousel------------------------- */
 
   .case-study-display {
@@ -1640,8 +1639,6 @@ p{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-
-
   }
   
   .customer-stories-image {
@@ -1650,6 +1647,23 @@ p{
     height: auto;
   }
   
+  .fluent--arrow-left-24-regular {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23060606' d='M10.733 19.79a.75.75 0 0 0 1.034-1.086L5.516 12.75H20.25a.75.75 0 0 0 0-1.5H5.516l6.251-5.955a.75.75 0 0 0-1.034-1.086l-7.42 7.067a1 1 0 0 0-.3.58a.8.8 0 0 0 .001.289a1 1 0 0 0 .3.579z'/%3E%3C/svg%3E");
+  }
+
+  .fluent--arrow-right-24-regular {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23060606' d='M13.267 4.209a.75.75 0 0 0-1.034 1.086l6.251 5.955H3.75a.75.75 0 0 0 0 1.5h14.734l-6.251 5.954a.75.75 0 0 0 1.034 1.087l7.42-7.067a1 1 0 0 0 .3-.58a.8.8 0 0 0-.001-.29a1 1 0 0 0-.3-.578z'/%3E%3C/svg%3E");
+  }
   /* .overlay {
     position: absolute;
     top: 0;
@@ -1679,14 +1693,15 @@ p{
   } */
   
   .carousel-controls {
-    position: absolute;
-    bottom: -60px;
+    /* position: absolute; */
+    /* bottom: -60px; */
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    padding-top: 2rem;
+ 
+    /* margin-bottom: 80px; */
   }
   
   .carousel-dots {
@@ -1714,6 +1729,9 @@ p{
     font-size: 24px;
     margin: 0 10px;
     user-select: none;
+    border: solid #161616;
+    padding: 16px;
+    border-radius: 100px;
   }
 
 /* -------------------------testimonials carousel------------------------- */
@@ -3990,6 +4008,20 @@ img .accordion-img{
     grid-gap: 16px;
     justify-content: left;
   }
+    .customer-stories-card {
+    flex: 0 0 auto;
+    width: 49%;
+    position: relative;
+    margin: 5px;
+    background-color: var(--white);
+    color: var(--MAQBlack);
+    padding: 20px;
+    border: 1.5px solid var(--StrokeGrey);
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
   /* .grid-5 {
     grid-template-columns: repeat(3, 2fr);
   } */
@@ -4167,7 +4199,7 @@ img .accordion-img{
     display: block;
   }
   .carousel-display {
-    display: none;
+    /* display: none; */
   }
   .mb-center {
     display: flex;
