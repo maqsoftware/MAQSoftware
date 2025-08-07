@@ -1628,14 +1628,15 @@ p{
   
   .customer-stories-card {
     flex: 0 0 auto;
+    gap: 16px;
     width: 24%;
     position: relative;
     margin: 5px;
     background-color: var(--white);
-    color: var(--MAQBlack);
-    padding: 20px;
-    border: 1.5px solid var(--StrokeGrey);
-    border-radius: 5px;
+    color: black;
+    padding: 24px;
+    border: 1px solid var(--StrokeGrey);
+    border-radius: 8px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;

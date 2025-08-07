@@ -91,6 +91,7 @@
   <script src="../js/icon-cards.js"></script>
   <script src="../js/price-card.js"></script>
   <script src="../js/step-image-card.js"></script>
+  <script src="/js/customer-story-carousel-cards.js"></script>
 </head>
 
 <body>
@@ -342,216 +343,121 @@
 
 
       <!-- Customer Stories -->
-      <div class="section-block-padding-sm home-case-studies carousel-display">
-        <div class="section-container">
-          <div class="max-section-size-carousel">
-            <div class="section-heading-container">
-              <h1 class="section-header">Case Studies</h1>
-              <p class="section-subheading">Learn how we’ve helped our clients achieve their goals</p>
-            </div>
-
-            <div class="customer-stories-carousel-container max-accordion-size">
-
-              <div class="customer-stories-carousel" id="customer-stories-carousel">
-
-                <!-- Card 1 -->
-                <!-- <a class="linked-card" href="https://blog.maqsoftware.com/2024/02/improving-lead-management-and-campaign.html" aria-label="Go to Power BI visual guides">
-                  <div class="img-container-insights">
-                    <img src="../images-new/MAQ-homepage-images-webp/improving-lead-management-and-campaign-optimization-with-Microsoft-technologies.webp" alt="Image of a computer and a coffee mug"
-                      class="services-case-study-img" loading="lazy">
-                  </div>
-                  <p class="card-title">Improving lead management and campaign optimization with Microsoft
-                        technologies</p>
-                  <p class="card-body-text"></p>
-                  <p class="learn-more-link body-bold">Read More <span class="chevron">&gt;</span></p>
-                </a> -->
-
-                <a class="card-link" href="https://blog.maqsoftware.com/2024/02/improving-lead-management-and-campaign.html">
-                  <div class="customer-stories-card">
-                      <div class="img-container">
-                        <img src="../images-new/MAQ-homepage-images-webp/improving-lead-management-and-campaign-optimization-with-Microsoft-technologies.webp" alt="Image of a computer and a coffee mug"
-                          class="services-case-study-img" loading="lazy">
-                      </div>
-                      <p class="card-title-small">Improving lead management and campaign optimization with Microsoft
-                        technologies</p>
-                      <a href="https://blog.maqsoftware.com/2024/02/improving-lead-management-and-campaign.html"
-                        class="learn-more-link body-bold">Read more <span class="chevron">&gt;</span></a>
-                  </div>
-                </a>
-
-                <!-- Card 2 -->
-                <a class="card-link" href="https://blog.maqsoftware.com/2022/06/real-time-reporting-for-organic.html">
-                  <div class="customer-stories-card">
-                      <div class="img-container">
-                        <img src="../images-new/MAQ-homepage-images-webp/real-time-reporting-for-an-organic-supermarket-chain.webp" alt="Image of a computer and a coffee mug"
-                          class="services-case-study-img" loading="lazy">
-                      </div>
-                      <p class="card-title-small">Real-time reporting for an organic supermarket chain</p>
-                      <a href="https://blog.maqsoftware.com/2022/06/real-time-reporting-for-organic.html"
-                        class="learn-more-link body-bold">Read more <span class="chevron">&gt;</span></a>
-                  </div>
-                </a>
-
-                <!-- Card 3 -->
-                <a class="card-link" href="https://blog.maqsoftware.com/2022/07/improving-insights-and-reducing-costs.html">
-                  <div class="customer-stories-card">
-                      <div class="img-container">
-                        <img src="../images-new/MAQ-homepage-images-webp/improving-insights-and-reducing-costs-through-unified-reporting.webp" alt="Image of a computer and a coffee mug"
-                          class="services-case-study-img" loading="lazy">
-                      </div>
-                      <p class="card-title-small">Improving insights and reducing costs through unified reporting</p>
-                      <a href="https://blog.maqsoftware.com/2022/07/improving-insights-and-reducing-costs.html"
-                        class="learn-more-link body-bold">Read more <span class="chevron">&gt;</span></a>
-                  </div>
-                </a>
-
-                <!-- Card 4 -->
-                <a class="card-link" href="https://blog.maqsoftware.com/2022/06/enhancing-fintech-analytics-to-provide.html">
-                  <div class="customer-stories-card">
-                      <div class="img-container">
-                        <img src="../images-new/MAQ-homepage-images-webp/enhancing-fintech-analytics-to-provide-millions-of-borrowers-with-better-loan-options.webp" alt="Image of a computer and a coffee mug"
-                          class="services-case-study-img" loading="lazy">
-                      </div>
-                      <p class="card-title-small">Enhancing fintech analytics to provide millions of borrowers with better
-                        loan options</p>
-                      <a href="https://blog.maqsoftware.com/2022/06/enhancing-fintech-analytics-to-provide.html"
-                        class="learn-more-link body-bold">Read more <span class="chevron">&gt;</span></a>
-                  </div>
-                </a>
-
-                <!-- Card 5 -->
-                <a class="card-link" href="https://blog.maqsoftware.com/2024/08/modernizing-reporting-platforms-through.html">
-                  <div class="customer-stories-card">
-                      <div class="img-container">
-                        <img src="../images-new/MAQ-homepage-images-webp/modernizing-reporting-platforms-through-ai-driven-sql-migration.webp" alt="Image of a computer and a coffee mug"
-                          class="services-case-study-img" loading="lazy">
-                      </div>
-                      <p class="card-title-small">Modernizing reporting platforms through AI-driven SQL Migration</p>
-                      <a href="https://blog.maqsoftware.com/2024/08/modernizing-reporting-platforms-through.html"
-                        class="learn-more-link body-bold">Read more <span class="chevron">&gt;</span></a>
-                  </div>
-                </a>
-
-                <!-- Card 6 -->
-                <a class="card-link" href="https://blog.maqsoftware.com/2024/08/unifying-data-management-with.html">
-                  <div class="customer-stories-card">
-                      <div class="img-container">
-                        <img src="../images-new/MAQ-homepage-images-webp/unifying-data-management-with-a-centralized-framework.webp" alt="Image of a computer and a coffee mug"
-                          class="services-case-study-img" loading="lazy">
-                      </div>
-                      <p class="card-title-small">Unifying data management with a centralized framework</p>
-                      <a href="https://blog.maqsoftware.com/2024/08/unifying-data-management-with.html"
-                        class="learn-more-link body-bold">Read more <span class="chevron">&gt;</span></a>
-                  </div>
-                </a>
-
-                <!-- Card 7 -->
-                <a class="card-link" href="https://blog.maqsoftware.com/2024/08/streamlining-event-information-access.html">
-                  <div class="customer-stories-card">
-                      <div class="img-container">
-                        <img src="../images-new/MAQ-homepage-images-webp/improving-event-experience-for-thousands-using-ai-agents.webp" alt="Image of a computer and a coffee mug"
-                          class="services-case-study-img" loading="lazy">
-                      </div>
-                      <p class="card-title-small">Improving event experience for thousands using AI Agents</p>
-                      <a href="https://blog.maqsoftware.com/2024/08/streamlining-event-information-access.html"
-                        class="learn-more-link body-bold">Read more <span class="chevron">&gt;</span></a>
-                  </div>
-                </a>
-
-                <!-- Card 8 -->
-                <a class="card-link" href="https://blog.maqsoftware.com/2024/07/streamlining-information-retrieval-with.html">
-                  <div class="customer-stories-card">
-                      <div class="img-container">
-                        <img src="../images-new/MAQ-homepage-images-webp/streamlining-information-retrieval-with-ai-copilots.webp" alt="Image of a computer and a coffee mug"
-                          class="services-case-study-img" loading="lazy">
-                      </div>
-                      <p class="card-title-small">Streamlining information retrieval with AI copilots</p>
-                      <a href="https://blog.maqsoftware.com/2024/07/streamlining-information-retrieval-with.html"
-                        class="learn-more-link body-bold">Read more <span class="chevron">&gt;</span></a>
-                  </div>
-                </a>
-
-                <!-- Card 9 -->
-                <a class="card-link" href="https://blog.maqsoftware.com/2024/07/increasing-efficiency-by-switching-from.html">
-                  <div class="customer-stories-card">
-                      <div class="img-container">
-                        <img src="../images-new/MAQ-homepage-images-webp/increasing-efficiency-by-switching-from-batch-processing-to-real-time-streaming.webp" alt="Image of a computer and a coffee mug"
-                          class="services-case-study-img" loading="lazy">
-                      </div>
-                      <p class="card-title-small">Increasing efficiency by switching from batch processing to real-time
-                        streaming</p>
-                      <a href="https://blog.maqsoftware.com/2024/07/increasing-efficiency-by-switching-from.html"
-                        class="learn-more-link body-bold">Read more <span class="chevron">&gt;</span></a>
-                  </div>
-                </a>
-
-                <!-- Card 10 -->
-                <a class="card-link" href="https://blog.maqsoftware.com/2024/07/harnessing-generative-ai-for-tailored.html">
-                  <div class="customer-stories-card">
-                      <div class="img-container">
-                        <img src="../images-new/MAQ-homepage-images-webp/harnessing-generative-AI-for-tailored-marketing-personalized-content-clusters-for-every-account.webp" alt="Image of a computer and a coffee mug"
-                          class="services-case-study-img" loading="lazy">
-                      </div>
-                      <p class="card-title-small">Harnessing generative AI for tailored marketing: Personalized content
-                        clusters for every account</p>
-                      <a href="https://blog.maqsoftware.com/2024/07/harnessing-generative-ai-for-tailored.html"
-                        class="learn-more-link body-bold">Read more <span class="chevron">&gt;</span></a>
-                  </div>
-                </a>
-
-                <!-- Card 11 -->
-                <a class="card-link" href="https://blog.maqsoftware.com/2024/06/optimizing-task-management-with-smart.html">
-                  <div class="customer-stories-card">
-                      <div class="img-container">
-                        <img src="../images-new/MAQ-homepage-images-webp/optimizing-task-management-with-smart-recommendations.webp" alt="Image of a computer and a coffee mug"
-                          class="services-case-study-img" loading="lazy">
-                      </div>
-                      <p class="card-title-small">Optimizing task management with smart recommendations</p>
-                      <a href="https://blog.maqsoftware.com/2024/06/optimizing-task-management-with-smart.html"
-                        class="learn-more-link body-bold">Read more <span class="chevron">&gt;</span></a>
-                  </div>
-                </a>
-
-                <!-- Card 12 -->
-                <a class="card-link" href="https://blog.maqsoftware.com/2023/02/transforming-customer-support-with.html">
-                  <div class="customer-stories-card">
-                      <div class="img-container">
-                        <img src="../images-new/MAQ-homepage-images-webp/transforming-customer-support-with-AIOps-driven-Power-BI-Embedding.webp" alt="Image of a computer and a coffee mug"
-                          class="services-case-study-img" loading="lazy">
-                      </div>
-                      <p class="card-title-small">Transforming customer support with AIOps-driven Power BI Embedding</p>
-                      <a href="https://blog.maqsoftware.com/2023/02/transforming-customer-support-with.html"
-                        class="learn-more-link body-bold">Read more <span class="chevron">&gt;</span></a>
-                  </div>
-                </a>
-
-              </div>
-
-              <div class="carousel-controls">
-                <span class="carousel-chevron" onclick="prevSlide()">
-                    <span class="fluent--arrow-left-24-regular service-icon-size"></span>
-                </span>
-                <div class="carousel-dots" id="carousel-dots">
-                  <!-- <span class="carousel-dot" onclick="currentSlide(1)"></span>
-                  <span class="carousel-dot" onclick="currentSlide(2)"></span>
-                  <span class="carousel-dot" onclick="currentSlide(3)"></span> -->
-                  <!-- <span class="carousel-dot" onclick="currentSlide(4)"></span>
-                      <span class="carousel-dot" onclick="currentSlide(5)"></span>
-                      <span class="carousel-dot" onclick="currentSlide(6)"></span>
-                      <span class="carousel-dot" onclick="currentSlide(7)"></span>
-                      <span class="carousel-dot" onclick="currentSlide(8)"></span>
-                      <span class="carousel-dot" onclick="currentSlide(9)"></span>
-                      <span class="carousel-dot" onclick="currentSlide(10)"></span> -->
-                </div>
-                <span class="carousel-chevron" onclick="nextSlide()">
-                    <span class="fluent--arrow-right-24-regular service-icon-size"></span>
-                </span>
-              </div>
-
-            </div>
-          </div>
+    <div class="section-block-padding-sm home-case-studies carousel-display">
+    <div class="section-container">
+        <div class="max-section-size-carousel">
+        <div class="section-heading-container">
+            <h1 class="section-header">Case Studies</h1>
+            <p class="section-subheading">Learn how we’ve helped our clients achieve their goals</p>
         </div>
-      </div>
+
+        <div class="customer-stories-carousel-container max-accordion-size">
+            <div class="customer-stories-carousel" id="customer-stories-carousel"></div>
+
+            <script>
+            const customerStories = [
+                {
+                link: "https://blog.maqsoftware.com/2024/02/improving-lead-management-and-campaign.html",
+                imageSrc: "../images-new/MAQ-homepage-images-webp/improving-lead-management-and-campaign-optimization-with-Microsoft-technologies.webp",
+                imageAlt: "Image of a computer and a coffee mug",
+                title: "Improving lead management and campaign optimization with Microsoft technologies",
+                body: ""
+                },
+                {
+                link: "https://blog.maqsoftware.com/2022/06/real-time-reporting-for-organic.html",
+                imageSrc: "../images-new/MAQ-homepage-images-webp/real-time-reporting-for-an-organic-supermarket-chain.webp",
+                imageAlt: "Image of a computer and a coffee mug",
+                title: "Real-time reporting for an organic supermarket chain",
+                body: ""
+                },
+                {
+                link: "https://blog.maqsoftware.com/2022/07/improving-insights-and-reducing-costs.html",
+                imageSrc: "../images-new/MAQ-homepage-images-webp/improving-insights-and-reducing-costs-through-unified-reporting.webp",
+                imageAlt: "Image of a computer and a coffee mug",
+                title: "Improving insights and reducing costs through unified reporting",
+                body: ""
+                },
+                {
+                link: "https://blog.maqsoftware.com/2022/06/enhancing-fintech-analytics-to-provide.html",
+                imageSrc: "../images-new/MAQ-homepage-images-webp/enhancing-fintech-analytics-to-provide-millions-of-borrowers-with-better-loan-options.webp",
+                imageAlt: "Image of a computer and a coffee mug",
+                title: "Enhancing fintech analytics to provide millions of borrowers with better loan options",
+                body: ""
+                },
+                {
+                link: "https://blog.maqsoftware.com/2024/08/modernizing-reporting-platforms-through.html",
+                imageSrc: "../images-new/MAQ-homepage-images-webp/modernizing-reporting-platforms-through-ai-driven-sql-migration.webp",
+                imageAlt: "Image of a computer and a coffee mug",
+                title: "Modernizing reporting platforms through AI-driven SQL Migration",
+                body: ""
+                },
+                {
+                link: "https://blog.maqsoftware.com/2024/08/unifying-data-management-with.html",
+                imageSrc: "../images-new/MAQ-homepage-images-webp/unifying-data-management-with-a-centralized-framework.webp",
+                imageAlt: "Image of a computer and a coffee mug",
+                title: "Unifying data management with a centralized framework",
+                body: ""
+                },
+                {
+                link: "https://blog.maqsoftware.com/2024/08/streamlining-event-information-access.html",
+                imageSrc: "../images-new/MAQ-homepage-images-webp/improving-event-experience-for-thousands-using-ai-agents.webp",
+                imageAlt: "Image of a computer and a coffee mug",
+                title: "Improving event experience for thousands using AI Agents",
+                body: ""
+                },
+                {
+                link: "https://blog.maqsoftware.com/2024/07/streamlining-information-retrieval-with.html",
+                imageSrc: "../images-new/MAQ-homepage-images-webp/streamlining-information-retrieval-with-ai-copilots.webp",
+                imageAlt: "Image of a computer and a coffee mug",
+                title: "Streamlining information retrieval with AI copilots",
+                body: ""
+                },
+                {
+                link: "https://blog.maqsoftware.com/2024/07/increasing-efficiency-by-switching-from.html",
+                imageSrc: "../images-new/MAQ-homepage-images-webp/increasing-efficiency-by-switching-from-batch-processing-to-real-time-streaming.webp",
+                imageAlt: "Image of a computer and a coffee mug",
+                title: "Increasing efficiency by switching from batch processing to real-time streaming",
+                body: ""
+                },
+                {
+                link: "https://blog.maqsoftware.com/2024/07/harnessing-generative-ai-for-tailored.html",
+                imageSrc: "../images-new/MAQ-homepage-images-webp/harnessing-generative-AI-for-tailored-marketing-personalized-content-clusters-for-every-account.webp",
+                imageAlt: "Image of a computer and a coffee mug",
+                title: "Harnessing generative AI for tailored marketing: Personalized content clusters for every account",
+                body: ""
+                },
+                {
+                link: "https://blog.maqsoftware.com/2024/06/optimizing-task-management-with-smart.html",
+                imageSrc: "../images-new/MAQ-homepage-images-webp/optimizing-task-management-with-smart-recommendations.webp",
+                imageAlt: "Image of a computer and a coffee mug",
+                title: "Optimizing task management with smart recommendations",
+                body: ""
+                },
+                {
+                link: "https://blog.maqsoftware.com/2023/02/transforming-customer-support-with.html",
+                imageSrc: "../images-new/MAQ-homepage-images-webp/transforming-customer-support-with-AIOps-driven-Power-BI-Embedding.webp",
+                imageAlt: "Image of a computer and a coffee mug",
+                title: "Transforming customer support with AIOps-driven Power BI Embedding",
+                body: ""
+                }
+            ];
+            renderCustomerStoryCarouselCards("#customer-stories-carousel", customerStories);
+            </script>
+
+            <div class="carousel-controls">
+            <span class="carousel-chevron" onclick="prevSlide()">
+                <span class="fluent--arrow-left-24-regular service-icon-size"></span>
+            </span>
+            <div class="carousel-dots" id="carousel-dots">
+                <!-- Optional dots can be added here -->
+            </div>
+            <span class="carousel-chevron" onclick="nextSlide()">
+                <span class="fluent--arrow-right-24-regular service-icon-size"></span>
+            </span>
+            </div>
+        </div>
+        </div>
+    </div>
     </div>
       <!-- Customer Stories end -->
 

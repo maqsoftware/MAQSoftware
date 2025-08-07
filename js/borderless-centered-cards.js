@@ -1,14 +1,11 @@
 function renderCards(containerSelector, cards, cardsPerRow = 3) {
-    console.log("Borderless-centered-cards ran");
 
     if (!Array.isArray(cards) || cards.length === 0) {
-        console.log("error empty array");
         return;
     }
 
     const container = document.querySelector(containerSelector);
     if (!container) {
-        console.log("error not container");
         return;
     }
 
