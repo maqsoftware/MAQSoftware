@@ -28,12 +28,9 @@ function updateCarousel() {
 
 
 function getVisibleSlides() {
-    console.log("get visible run");
     if (window.innerWidth >= 1300) {
-        console.log("Visible Cards: 4");
         return 4;
     } else {
-        console.log("Visible Cards: 2");
         return 2;
     }
 }
@@ -49,9 +46,7 @@ function indexAdjustmentCheck() {
 
 function nextSlide() {
   const totalCards = document.getElementsByClassName('customer-stories-card').length;
-  console.log("Next Slide");
   currentIndex = (indexAdjustmentCheck() + getVisibleSlides()) % totalCards;
-  console.log("Current Index: " + currentIndex);
   updateCarousel();
 }
 
