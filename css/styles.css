@@ -4102,9 +4102,7 @@ img .accordion-img{
     grid-template-columns: repeat(1, 1fr);
   }
   .stat-item {
-    max-width: 178.39px;
     margin-bottom: 5%;
-    align-items: center;
   }
   .mb-rem-margin {
     margin-bottom: 1rem;
@@ -4210,6 +4208,7 @@ img .accordion-img{
   .stat-item {
     max-width: none;
     width: 100%;
+    align-items: center;
   }
   .mb-accordion-img, .mb-footer, .mb-hide-img {
     display: none;
