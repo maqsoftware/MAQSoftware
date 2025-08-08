@@ -4102,9 +4102,7 @@ img .accordion-img{
     grid-template-columns: repeat(1, 1fr);
   }
   .stat-item {
-    max-width: 178.39px;
     margin-bottom: 5%;
-    align-items: center;
   }
   .mb-rem-margin {
     margin-bottom: 1rem;
@@ -4210,6 +4208,7 @@ img .accordion-img{
   .stat-item {
     max-width: none;
     width: 100%;
+    align-items: center;
   }
   .mb-accordion-img, .mb-footer, .mb-hide-img {
     display: none;
@@ -4304,6 +4303,20 @@ img .accordion-img{
 /* ============================== */
 /* SM (max-width: 599px) */
 @media only screen and (max-width: 599px) {
+    .customer-stories-card {
+    flex: 0 0 auto;
+    width: 90%;
+    position: relative;
+    margin: 5px;
+    background-color: var(--white);
+    color: var(--MAQBlack);
+    padding: 20px;
+    border: 1.5px solid var(--StrokeGrey);
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
     h1.hero, h1.page-title{
     font-size: 2rem;
   }

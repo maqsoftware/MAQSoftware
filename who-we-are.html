@@ -60,6 +60,7 @@
 	<script src="../js/icon-cards.js"></script>
     <script src="../js/price-card.js"></script>
     <script src="../js/step-image-card.js"></script>
+	<script src="../js/stat-cards.js"></script>
 </head>
 
 <body class="shop">
@@ -123,49 +124,22 @@
 	<!-- Hero Section end -->
 
 	<!-- Callout section -->
-	<div class="section-block-padding-sm callout-section centered-section">
-		<div class="section-container">
+	<div class="section-block-padding-sm callout-section">
+		<div id="statsContainer" class="section-container">
 			<div class="section-heading-container-centered max-section-size">
-				<p class="section-header one-third-text ">Driven by expertise, proven by results</p>
-			</div>
-			<div class="products-flex-grid max-section-size mb-grid-product" style="margin-top: 3rem;">
-
-				<div class="stat-item">
-					<div class="stat-flex">
-						<p class="display-large">10</p>
-						<div class="red-underline"></div>
-					</div>                           
-					<p class="card-title">Microsoft specializations</p>
-				</div>
-
-				<div class="stat-item">
-					<div class="stat-flex">
-						<p class="display-large">4</p>
-						<div class="red-underline"></div>
-					</div>
-					<p class="card-title">Microsoft solution partner designations</p>
-				</div>
-
-				<div class="stat-item">
-					<div class="stat-flex">
-						<p class="display-large">4.5K+</p>
-						<div class="red-underline"></div>
-					</div>
-					<p class="card-title">Microsoft technical certifications</p>
-				</div>
-
-				<div class="stat-item">
-					<div class="stat-flex">
-						<p class="display-large">200+</p>
-						<div class="red-underline"></div>
-					</div>
-					<p class="card-title">Microsoft Fabric solutions implemented</p>
-				</div>
-
-			</div>           
-
+				<p class="section-header">Driven by expertise, proven by results</p>
+			</div>         
 		</div>     
 	</div>
+    <script>
+        const stats = [
+            { stat: "10", description: "Microsoft specializations" },
+            { stat: "4", description: "Microsoft solution partner designations" },
+            { stat: "4.5K+", description: "Microsoft technical certifications" },
+            { stat: "200+", description: "Microsoft Fabric solutions implemented" },
+        ];
+        renderStatCards("#statsContainer", stats, 4);
+    </script>
 	<!-- Callout section end -->
 
 	<!-- 25 years banner -->
@@ -423,39 +397,6 @@
 	<!-- Recognition Section -->
 	<div class="section-block-padding-sm recognitions-section centered-section">
 		<div class="section-container">
-
-		<!-- <div id="recognitions">
-			<div class="section-heading-container-centered">
-				<h1 class="display-medium">Recognitions</h1>
-			</div>
-			<div class="products-flex-grid max-section-size mb-grid-product">
-				<div class="stat-item">
-					<div class="grid-item RecognitionImage">
-						<a href="http://www.inc.com/profile/maq-software" target="_blank"><img
-								src="/images/logos/Inc5000-2.png"
-								alt="Inc. 5000, Fastest Growing Companies in America, 2007-2012"
-								title="Inc. 5000, Fastest Growing Companies in America, 2007-2015"></a>
-					</div>
-				</div>
-				<div class="stat-item">
-					<div class="grid-item RecognitionImage">
-						<a class="mb-10"
-							href="https://news.maqsoftware.com/2021/07/maq-software-honored-as-winner-of-2021.html"
-							target="_blank"><img src="/images/logos/Power_BI_Partner_Apr2023.png"
-								alt="2021 Microsoft Power BI Partner of the Year"
-								title="2021 Microsoft Power BI Partner of the Year"></a>
-					</div>
-				</div>
-				<div class="stat-item">
-					<div class="grid-item RecognitionImage">
-						<a href="https://www.microsoft.com/en-us/procurement/msp-overview.aspx" target="_blank"><img
-								src="/images/logos/MS_Preferred_Partner.png"
-								alt="Microsoft Preferred Supplier, Since 2000"
-								title="Microsoft Preferred Supplier, Since 2000"></a>
-					</div>
-				</div>
-			</div>
-		</div> -->
 
 			<div id="recognitions gray">
 				<div class="section-heading-container-centered">

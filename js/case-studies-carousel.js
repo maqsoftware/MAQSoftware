@@ -26,19 +26,30 @@ function updateCarousel() {
 //   dots[Math.floor(currentIndex / 4)].className += ' active';
 }
 
+  function reportScreenSize() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    indexAdjustmentCheck();
+    updateCarousel();
+  }
+
 
 function getVisibleSlides() {
     if (window.innerWidth >= 1300) {
-        return 4;
+      return 4;
+    } if (window.innerWidth >= 600) {
+      return 2
     } else {
-        return 2;
+      return 1;
     }
 }
 
 /* Adjusts index in the case of screen size change affecting card placement */
 function indexAdjustmentCheck() {
-    if ((currentIndex == 2 || currentIndex == 6 || currentIndex == 10) && (getVisibleSlides() == 4)){
-        return currentIndex - 2;
+    if (currentIndex % 4 > 0 && (getVisibleSlides() == 4)){
+        return Math.floor(currentIndex / 4) * 4;
+    } if (currentIndex % 2 > 0 && (getVisibleSlides() == 2)){
+        return Math.floor(currentIndex / 2) * 2;
     } else {
         return currentIndex;
     }
@@ -63,7 +74,10 @@ function currentSlide(index) {
 
 document.addEventListener('DOMContentLoaded', () => {
   updateCarousel();
+  reportScreenSize();
+  window.addEventListener("resize", reportScreenSize);
 });
+
 
 
 /* -------------------------testimonials carousel------------------------- */
