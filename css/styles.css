@@ -4304,6 +4304,20 @@ img .accordion-img{
 /* ============================== */
 /* SM (max-width: 599px) */
 @media only screen and (max-width: 599px) {
+    .customer-stories-card {
+    flex: 0 0 auto;
+    width: 90%;
+    position: relative;
+    margin: 5px;
+    background-color: var(--white);
+    color: var(--MAQBlack);
+    padding: 20px;
+    border: 1.5px solid var(--StrokeGrey);
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
     h1.hero, h1.page-title{
     font-size: 2rem;
   }
