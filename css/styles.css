@@ -512,7 +512,7 @@ h1.big{
   text-decoration: none;
   color: var(--MAQBlack);
   display: flex;
-  align-items: center;
+  align-items: start;
   transition: color 0.3s ease;
 }
 
@@ -1784,7 +1784,8 @@ p{
   }
 
   .badge-img {
-    width: auto;
+    width: 100%;
+    height: auto;
 
   }
 
@@ -1944,6 +1945,27 @@ p{
   line-height: 24px;
   gap: 8px;
 }
+
+.partnership-card{
+  color: var(--MAQBlack);
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  line-height: 24px;
+  gap: 8px;
+  height: 100%;
+}
+.partnership-card > a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
 .card-list{
   font-size: 1rem;
   margin-bottom: auto;
@@ -3338,6 +3360,17 @@ div.flex{
 
 /* tables */
 
+.accomplishments-container {
+  margin-top: 3rem;
+}
+
+.mb-recognitions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .flex-table {
   display: flex;
   flex-direction: column;
@@ -3707,7 +3740,6 @@ img .accordion-img{
   display: none;
 } */
 
-
 .mobile-navigation {
   list-style: none;
   display: none;
@@ -4003,6 +4035,15 @@ img .accordion-img{
 /* ============================== */
 /* XL (max-width: 1299px) */
 @media only screen and (max-width: 1299px) {
+  .RecognitionImage {
+    margin-bottom: 2rem;
+  }
+  .mb-recognitions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .grid-3-steps {
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -4055,15 +4096,15 @@ img .accordion-img{
   .badge-container {
     margin-bottom: 2em;
   }
-  .badge-img {
+  /* .badge-img {
     max-height: 75%;
     width: auto;
     max-width: 25%;
-  }
+  } */
   .RecognitionImage {
     margin-bottom: 16px;
   }
-  .mb-recognitions, .mb-footer-bottom, .mb-grid-product, .mb-partner-designation-list,
+  .mb-footer-bottom, .mb-grid-product, .mb-partner-designation-list,
   .mb-grid-community, .mb-grid-case-study,
   .mb-grid-service, .mb-grid-insights {
     display: flex;
@@ -4151,8 +4192,15 @@ img .accordion-img{
     line-height: 8rem !important;
     font-size: 4rem;
   } */
+  .partnership-card > a > img {
+    max-width: 70%;
+  }
   .hero-background-padding {
     padding-top: 5rem;
+  }
+    .badge-img {
+    max-width: 500px;
+    height: auto;
   }
 
   header .primary-nav-column,
