@@ -3,6 +3,16 @@ function renderCustomerStoryCarouselCards(containerSelector, cards) {
     if (!container) return;
 
     cards.forEach(card => {
+        // Check if all fields are blank/empty
+        const allBlank = !card.link && !card.imageSrc && !card.title && !card.body;
+
+        if (allBlank) {
+            const emptyDiv = document.createElement("div");
+            emptyDiv.className = "empty-customer-stories transparent";
+            container.appendChild(emptyDiv);
+            return; // skip card creation
+        }
+
         // Create main <a> wrapper
         const cardLink = document.createElement("a");
         cardLink.className = "customer-stories-card";

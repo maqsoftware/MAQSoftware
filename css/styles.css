@@ -163,10 +163,6 @@ h3.post-title{
   flex-direction: row;
 }
 
-h1{
-  margin-top: 0;
-}
-
 /* .hero-item-1 h1{
   margin-bottom: 4px;
 } */
@@ -1469,7 +1465,15 @@ p{
   min-height: 78px;
 }
 
-.linked-card:hover, .card-item:hover, .customer-stories-card:hover, .card:hover, .community-card:hover{
+.empty-customer-stories.transparent {
+    background: transparent; /* removes any background */
+    border: none;            /* optional, in case borders exist */
+    opacity: 0;              /* makes it fully invisible */
+    pointer-events: none;    /* ensures it doesn’t interfere with clicks */
+    height: 0;               /* or set a height if you want it to keep space */
+}
+
+.linked-card:hover, .card-item:hover, .customer-stories-card:hover, .card:hover, .community-card:hover, .partnership-img-card:hover{
   /* background-color: var(--LightGrey); */
   /* box-shadow: 4px 4px 5px 12px var(--MAQLogoGrey) */
   transition-property: box-shadow;
@@ -1625,6 +1629,27 @@ p{
     display: flex;
     transition: transform 0.5s ease;
   }
+
+  .partnership-img-card {
+    flex: 0 0 auto;
+    gap: 16px;
+    width: 100%;
+    position: relative;
+    margin: 5px;
+    background-color: var(--white);
+    color: black;
+    padding: 32px 24px;
+    border: 1px solid var(--StrokeGrey);
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .partnership-img {
+    max-width: 100%;
+    height: auto;
+  }
   
   .customer-stories-card {
     flex: 0 0 auto;
@@ -1659,6 +1684,7 @@ p{
 
   .fluent--arrow-right-24-regular {
     display: inline-block;
+    color: var(--MAQRed);
     width: 24px;
     height: 24px;
     background-repeat: no-repeat;
