@@ -485,12 +485,12 @@ h1.big{
   mask-size: 100% 100%;
 }
 
-  .learn-more-link {
-    text-decoration: none;
-    color: var(--MAQRed);
-    display: flex;
-    align-items: center;
-    transition: color 0.3s ease;
+.learn-more-link {
+  text-decoration: none;
+  color: var(--MAQRed);
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
 }
 
 .learn-more-link-inactive {
@@ -1924,6 +1924,10 @@ p{
 }
 
 /* flex grids */
+
+.center-on-mobile{
+  text-align: left;
+}
 
 
 .services-flex-grid {
@@ -3868,6 +3872,7 @@ img .accordion-img{
   border: 0;
 }
 
+
 .carousel-control-prev,
 .carousel-control-next {
   width: 3rem;
@@ -4218,6 +4223,9 @@ img .accordion-img{
     line-height: 8rem !important;
     font-size: 4rem;
   } */
+  .center-on-mobile {
+    text-align: center;
+  }
   .partnership-card > a > img {
     max-width: 70%;
   }
