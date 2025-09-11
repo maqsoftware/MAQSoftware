@@ -8,7 +8,9 @@ function renderCustomerStoryCarouselCards(containerSelector, cards) {
 
         if (allBlank) {
             const emptyDiv = document.createElement("div");
-            emptyDiv.className = "empty-customer-stories transparent";
+            emptyDiv.className = "empty-card customer-stories-card";
+            const emptyContent = document.createElement("div");
+            emptyDiv.appendChild(emptyContent);
             container.appendChild(emptyDiv);
             return; // skip card creation
         }
