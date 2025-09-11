@@ -1465,12 +1465,21 @@ p{
   min-height: 78px;
 }
 
-.empty-customer-stories.transparent {
-    background: transparent; /* removes any background */
-    border: none;            /* optional, in case borders exist */
-    opacity: 0;              /* makes it fully invisible */
-    pointer-events: none;    /* ensures it doesn’t interfere with clicks */
-    height: 0;               /* or set a height if you want it to keep space */
+.empty-card {
+    flex: 0 0 auto;
+    gap: 16px;
+    width: 24%;
+    position: relative;
+    margin: 5px;
+    background-color: var(--white);
+    color: black;
+    padding: 24px;
+    border: 1px solid var(--StrokeGrey);
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
 }
 
 .linked-card:hover, .card-item:hover, .customer-stories-card:hover, .card:hover, .community-card:hover, .partnership-img-card:hover{
@@ -4398,6 +4407,9 @@ img .accordion-img{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+  }
+  .empty-card {
+    display: none;
   }
     h1.hero, h1.page-title{
     font-size: 2rem;

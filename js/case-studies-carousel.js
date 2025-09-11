@@ -35,13 +35,22 @@ function updateCarousel() {
 
 
 function getVisibleSlides() {
-    if (window.innerWidth >= 1300) {
+  if (window.innerWidth >= 1300) {
+      totalCards = document.getElementsByClassName('customer-stories-card').length;
       return 4;
-    } if (window.innerWidth >= 600) {
-      return 2
-    } else {
-      return 1;
-    }
+  } if (window.innerWidth >= 600) {
+    const oddExtra = getRealCards().length % 2;
+    totalCards = getRealCards().length + oddExtra;
+    return 2;
+  } else {
+    totalCards = getRealCards().length;
+    return 1;
+  }
+}
+
+function getRealCards() {
+  return Array.from(document.getElementsByClassName('customer-stories-card'))
+    .filter(card => !card.classList.contains('empty-card'));
 }
 
 /* Adjusts index in the case of screen size change affecting card placement */
@@ -56,13 +65,13 @@ function indexAdjustmentCheck() {
 }
 
 function nextSlide() {
-  const totalCards = document.getElementsByClassName('customer-stories-card').length;
+  // const totalCards = document.getElementsByClassName('customer-stories-card').length;
   currentIndex = (indexAdjustmentCheck() + getVisibleSlides()) % totalCards;
   updateCarousel();
 }
 
 function prevSlide() {
-  const totalCards = document.getElementsByClassName('customer-stories-card').length;
+  // const totalCards = document.getElementsByClassName('customer-stories-card').length;
   currentIndex = (indexAdjustmentCheck() - getVisibleSlides() + totalCards) % totalCards;
   updateCarousel();
 }
