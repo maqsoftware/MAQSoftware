@@ -1095,6 +1095,31 @@ p{
   height: 100%;
 }
 
+/* Media and Content */
+.media-and-content, .content-and-media {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.one-third {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.two-third {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  flex: 2;
+}
+
+
 .grid-col-1 {
   display: grid;
   grid-template-columns: 1fr;
@@ -1326,6 +1351,47 @@ p{
   mask-size: 100% 100%;
 }
 
+.fluent--task-list-square-ltr-24-regular {
+  display: inline-block;
+  width: 196px;
+  height: 196px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12.5 9.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1-.75-.75m.75 4.75a.75.75 0 1 0 0 1.5h3.5a.75.75 0 1 0 0-1.5zm-2.47-5.22a.75.75 0 1 0-1.06-1.06L8.25 9.19l-.47-.47a.75.75 0 0 0-1.06 1.06l1 1a.75.75 0 0 0 1.06 0zm0 4.44a.75.75 0 0 1 0 1.06l-2 2a.75.75 0 0 1-1.06 0l-1-1a.75.75 0 1 1 1.06-1.06l.47.47l1.47-1.47a.75.75 0 0 1 1.06 0M6.25 3A3.25 3.25 0 0 0 3 6.25v11.5A3.25 3.25 0 0 0 6.25 21h11.5A3.25 3.25 0 0 0 21 17.75V6.25A3.25 3.25 0 0 0 17.75 3zM4.5 6.25c0-.966.784-1.75 1.75-1.75h11.5c.966 0 1.75.784 1.75 1.75v11.5a1.75 1.75 0 0 1-1.75 1.75H6.25a1.75 1.75 0 0 1-1.75-1.75z'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.fluent--settings-cog-multiple-24-regular {
+  display: inline-block;
+  width: 196px;
+  height: 196px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='m8.406 3.532l-.26 1.34a1.75 1.75 0 0 1-2.288 1.322l-1.294-.447q-.354.481-.598 1.033l1.035.898a1.75 1.75 0 0 1 0 2.643l-1.035.898q.244.552.598 1.034l1.294-.447a1.75 1.75 0 0 1 2.289 1.322l.26 1.34c.392.042.803.042 1.195 0l.26-1.34a1.75 1.75 0 0 1 2.288-1.322l1.288.444q.354-.482.599-1.036l-1.03-.893a1.75 1.75 0 0 1 0-2.643l1.03-.893a5.5 5.5 0 0 0-.6-1.036l-1.287.445a1.75 1.75 0 0 1-2.289-1.322l-.259-1.34a5.6 5.6 0 0 0-1.196 0m-.782-1.397a7 7 0 0 1 2.762.002a.75.75 0 0 1 .588.593l.36 1.857a.25.25 0 0 0 .327.189l1.784-.616a.75.75 0 0 1 .808.213a7 7 0 0 1 1.383 2.394a.75.75 0 0 1-.219.806L13.991 8.81a.25.25 0 0 0 0 .378l1.426 1.238c.23.199.317.517.22.805a7 7 0 0 1-1.384 2.395a.75.75 0 0 1-.807.213l-1.785-.616a.25.25 0 0 0-.327.189l-.36 1.857a.75.75 0 0 1-.588.593a7 7 0 0 1-2.762.002a.75.75 0 0 1-.59-.593l-.36-1.86a.25.25 0 0 0-.327-.188l-1.79.618a.75.75 0 0 1-.808-.213a7 7 0 0 1-1.383-2.39a.75.75 0 0 1 .219-.807L4.017 9.19a.25.25 0 0 0 0-.378L2.585 7.568a.75.75 0 0 1-.22-.807a7 7 0 0 1 1.384-2.39a.75.75 0 0 1 .808-.213l1.79.618a.25.25 0 0 0 .327-.19l.36-1.858a.75.75 0 0 1 .59-.593m6.317 12.499a.47.47 0 0 0-.53.15c-.223.295-.412.62-.558.965a.47.47 0 0 0 .135.533l1.007.875a.455.455 0 0 1 0 .686l-1.008.874a.47.47 0 0 0-.134.533q.221.52.559.966a.47.47 0 0 0 .528.15l1.26-.435a.455.455 0 0 1 .595.343l.253 1.309c.039.2.194.358.395.383a4.5 4.5 0 0 0 1.114 0a.47.47 0 0 0 .395-.383l.253-1.309a.455.455 0 0 1 .595-.343l1.26.435a.47.47 0 0 0 .528-.15q.338-.445.559-.966a.47.47 0 0 0-.134-.533l-1.008-.874a.455.455 0 0 1 0-.686l1.008-.875a.47.47 0 0 0 .134-.533a4.5 4.5 0 0 0-.559-.965a.47.47 0 0 0-.529-.15l-1.259.435a.455.455 0 0 1-.595-.344l-.253-1.308a.47.47 0 0 0-.395-.383a4.5 4.5 0 0 0-1.114 0a.47.47 0 0 0-.395.383l-.253 1.308a.455.455 0 0 1-.595.344zM17 18.75a1.25 1.25 0 1 1 0-2.502a1.25 1.25 0 0 1 0 2.502M8 9a1 1 0 1 1 2 0a1 1 0 0 1-2 0m1-2.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 0 0 0-5'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.fluent--connector-24-regular {
+  display: inline-block;
+  width: 196px;
+  height: 196px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M8.252 4a.75.75 0 0 1 .743.648l.007.102v2.773l1.874 2.815a.75.75 0 0 1 .117.306l.009.11v4.496a.75.75 0 0 1-.649.743l-.101.007H8.998v3.254a.75.75 0 0 1-1.492.101l-.007-.101L7.498 16l-1.995-.001v3.258a.75.75 0 0 1-1.493.101l-.006-.101l-.001-3.258l-1.25.001a.75.75 0 0 1-.742-.648l-.007-.102v-4.496a.75.75 0 0 1 .071-.32l.055-.096l1.874-2.815V4.75a.75.75 0 0 1 1.493-.102l.007.102v3a.75.75 0 0 1-.072.32l-.054.096l-1.874 2.815V14.5h5.998v-3.52L7.627 8.167a.75.75 0 0 1-.117-.306l-.008-.11v-3a.75.75 0 0 1 .75-.75m7.004.001h4.496a.75.75 0 0 1 .743.649l.007.101L20.5 8h.75a.75.75 0 0 1 .744.648l.007.102v4.496a.75.75 0 0 1-.072.32l-.054.096l-1.874 2.815v2.773a.75.75 0 0 1-1.494.102l-.006-.102v-3c0-.11.024-.22.071-.32l.054-.096l1.875-2.815V9.5h-5.998v3.52l1.874 2.814a.75.75 0 0 1 .118.306l.008.11v3a.75.75 0 0 1-1.493.102l-.007-.102v-2.773l-1.874-2.815a.75.75 0 0 1-.118-.306l-.008-.11V8.75a.75.75 0 0 1 .648-.743L13.754 8h.752V4.751a.75.75 0 0 1 .648-.743zh4.496zm3.746 1.5h-2.996V8H19z'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
 
 
 
@@ -1550,6 +1616,18 @@ p{
 
 .grey-bg, .explore-our-products-section, .business-outcomes-section, .book-section, .why-work-with-us-section, .location-section{
   background-color: var(--MAQGrey);
+}
+
+.soft-red-bg-btm-top{
+  background: linear-gradient(to bottom,#fdf9f9, #FFFFFF, #fdf9f9);
+}
+
+.soft-red-bg{
+  background: linear-gradient(to top, #fdfbfb);
+}
+
+.soft-grey-bg {
+  background: linear-gradient(to bottom, #FFFFFF, #F0F0F0);
 }
 
 .community-section{
@@ -4394,6 +4472,12 @@ img .accordion-img{
 /* ============================== */
 /* SM (max-width: 599px) */
 @media only screen and (max-width: 599px) {
+  .media-and-content {
+    flex-direction: column;
+  }
+  .content-and-media {
+    flex-direction: column-reverse;
+  }
     .customer-stories-card {
     flex: 0 0 auto;
     width: 90%;
