@@ -141,6 +141,8 @@
     <script src="../js/contact-section.js"></script>
     <script src="../js/stat-cards.js"></script>
     <script src="../js/highlight-cards.js"></script>
+    <script src="../js/customer-story-carousel-cards.js"></script>
+    <script src="../js/case-studies-carousel.js"></script>
 </head>
 
 <body class="shop home-page">
@@ -318,7 +320,7 @@
     <!-- Partner Description Section End -->
 
     <!-- Guide Section-->
-    <div class="section-block-padding-sm grey-bg">
+    <!-- <div class="section-block-padding-sm grey-bg">
         <div id="guideSection" class="section-container">
             <div class="section-heading-container">
                 <h1 class="section-header">Databricks guides</h1>
@@ -349,7 +351,7 @@
             title: "Unlocking advanced analytics with Databricks",
             bodyText: ""
         },
-                {
+        {
             href: "https://blog.maqsoftware.com/2025/08/unlocking-business-insights-integrating.html",
             imageSrc: "../images/case-studies/cover-images/unlocking-business-insights-integrating-databricks-with-power-bi.jpeg",
             imageAlt: "Image of a closeup of a woman shopping for groceries",
@@ -359,9 +361,97 @@
         ];
         // The final digit represents the number of cards per row
         renderImageCards("#guideSection", guideCards, 4);
-    </script>
+    </script> -->
 
     <!-- Guide Section End-->
+
+    <div class="section-block-padding-sm home-case-studies carousel-display grey-bg">
+    <div class="section-container">
+        <div class="max-section-size-carousel">
+        <div class="section-heading-container">
+            <h1 class="section-header">Databricks guides</h1>
+        </div>
+
+        <div class="customer-stories-carousel-container max-accordion-size">
+            <div class="customer-stories-carousel" id="customer-stories-carousel"></div>
+
+            <script>
+            const customerStories = [
+                {
+                    link: "https://maqsoftware.com/insights/databricks-best-practices.html",
+                    imageSrc: "../img/blog/databricks-best-practice-guide.png",
+                    imageAlt: "Image of a computer and a coffee mug",
+                    title: "Databricks best practices guide",
+                    body: ""
+                },
+                {
+                    link: "https://maqsoftware.com/insights/azure-databricks-best-practices.html",
+                    imageSrc: "../img/blog/BPG007-main.jpg",
+                    imageAlt: "Image of a computer and a coffee mug",
+                    title: "ADB optimization best practices guide",
+                    body: ""
+                },
+                {
+                    link: "https://blog.maqsoftware.com/2025/07/unlocking-advanced-analytics-with.html",
+                    imageSrc: "../images/case-studies/cover-images/unlocking-advanced-analytics-with-databricks.jpeg",
+                    imageAlt: "Image of a closeup of a woman shopping for groceries",
+                    title: "Unlocking advanced analytics with Databricks",
+                    body: ""
+                },
+                {
+                    link: "https://blog.maqsoftware.com/2025/08/unlocking-business-insights-integrating.html",
+                    imageSrc: "../images/case-studies/cover-images/unlocking-business-insights-integrating-databricks-with-power-bi.jpeg",
+                    imageAlt: "Image of a closeup of a woman shopping for groceries",
+                    title: "Unlocking business insights: Integrating Databricks with Power BI",
+                    body: ""
+                },
+                {
+                link: "https://blog.maqsoftware.com/2025/09/unlocking-business-value-with-data.html",
+                imageSrc: "../images-new/isv/unlocking-business-value-with-data-sharing-in-databricks.jpg",
+                imageAlt: "Image of a computer and a coffee mug",
+                title: "Unlocking business value with data sharing in Databricks",
+                body: ""
+                },
+                {
+                link: "https://blog.maqsoftware.com/2025/09/real-time-structured-streaming-in.html",
+                imageSrc: "../images-new/isv/real-time-structured-streaming-in-databricks.jpg",
+                imageAlt: "Image of a computer and a coffee mug",
+                title: "Real-time structured streaming in Databricks: Powering modern data applications",
+                body: ""
+                },
+                {
+                link: "https://blog.maqsoftware.com/2025/09/databricks-genie-and-aibi-dashboards.html",
+                imageSrc: "../images-new/isv/databricks-genie-and-ai-bi-dashboards.jpg",
+                imageAlt: "Image of a computer and a coffee mug",
+                title: "Databricks Genie and AI/BI Dashboards: Revolutionizing data analytics",
+                body: ""
+                },
+                {
+                link: "",
+                imageSrc: "",
+                imageAlt: "",
+                title: "",
+                body: ""
+                }
+            ];
+            renderCustomerStoryCarouselCards("#customer-stories-carousel", customerStories);
+            </script>
+
+            <div class="carousel-controls">
+            <span class="carousel-chevron" onclick="prevSlide()">
+                <span class="fluent--arrow-left-24-regular service-icon-size"></span>
+            </span>
+            <div class="carousel-dots" id="carousel-dots">
+                <!-- Optional dots can be added here -->
+            </div>
+            <span class="carousel-chevron" onclick="nextSlide()">
+                <span class="fluent--arrow-right-24-regular service-icon-size"></span>
+            </span>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
 
     <!-- Case Study Section-->
     <div class="section-block-padding-sm">

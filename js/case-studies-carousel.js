@@ -36,8 +36,8 @@ function updateCarousel() {
 
 function getVisibleSlides() {
   if (window.innerWidth >= 1300) {
-      totalCards = document.getElementsByClassName('customer-stories-card').length;
-      return 4;
+    totalCards = document.getElementsByClassName('customer-stories-card').length;
+    return 4;
   } if (window.innerWidth >= 600) {
     const oddExtra = getRealCards().length % 2;
     totalCards = getRealCards().length + oddExtra;
