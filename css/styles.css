@@ -549,9 +549,9 @@ p{
 
 .banner-text {
   font-family: "Roboto", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   width: auto;
   margin-bottom: 4px;
 }
@@ -4435,8 +4435,8 @@ img .accordion-img{
   }
   .banner-text {
     font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 1.5rem;
+    font-weight: 400;
+    font-size: 1.25rem;
     margin-bottom: 4px;
   }
   .contact-us-section-heading {
