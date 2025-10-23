@@ -178,6 +178,7 @@ h3.post-title{
 
 .notification-banner {
   padding: 0% 10%;
+  padding-bottom: 24px;
 
   background: var(--MAQGrey);
 
@@ -537,11 +538,20 @@ p{
 
 }
 
-.display-medium .banner-text {
+.display-medium {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 2.5em;
+  width: auto;
+  margin-bottom: 4px;
+}
+
+.banner-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
   width: auto;
   margin-bottom: 4px;
 }
@@ -4426,7 +4436,7 @@ img .accordion-img{
   .banner-text {
     font-family: "Roboto", sans-serif;
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-bottom: 4px;
   }
   .contact-us-section-heading {
@@ -4479,6 +4489,12 @@ img .accordion-img{
 /* ============================== */
 /* SM (max-width: 599px) */
 @media only screen and (max-width: 599px) {
+
+  .notification-banner {
+    padding: 0% 10%;
+    padding-bottom: 24px;
+    background: var(--MAQGrey);
+  }
   .media-and-content {
     flex-direction: column;
   }
