@@ -1,0 +1,50 @@
+# Robots.txt for MAQ Software
+# This file provides crawling instructions for search engine bots
+
+# Allow all crawlers to access the entire site
+User-agent: *
+Allow: /
+
+# Sitemap location for search engines
+Sitemap: https://maqsoftware.com/sitemap.xml
+
+# Specific instructions for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Block access to administrative and sensitive directories (if they exist)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /temp/
+Disallow: /tmp/
+
+# Block access to specific file types that shouldn't be indexed
+Disallow: /*.log$
+
+# Allow access to important resources for SEO
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /img/
+Allow: /fonts/
+
+# Block specific files that shouldn't be indexed but allow important content
+Disallow: /package.json
+Disallow: /Gruntfile.js
+Disallow: /README.md
+
+# Allow important pages that might have extensions
+Allow: /privacystatement.html
+Allow: /termsofservice.html
+Allow: /pbivisualeula.html
