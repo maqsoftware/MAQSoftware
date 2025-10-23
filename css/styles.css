@@ -1119,6 +1119,13 @@ p{
   flex: 2;
 }
 
+.one-half-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
 
 .grid-col-1 {
   display: grid;
