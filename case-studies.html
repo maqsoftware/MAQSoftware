@@ -5,35 +5,432 @@
 	<meta charset="UTF-8" />
 	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
 
-	<!-- Open Graph -->
-	<meta property="og:title" content="Case Studies | MAQ Software" />
-	<meta property="og:type" content="website" />
-	<meta property="og:image" content="/images/expertise/ai-main" />
-	<meta property="og:description"
-		content="Find out how we've helped our clients cut costs, improve productivity, streamline operations, and eliminate routine tasks." />
+	<!-- SEO Meta Tags: Essential tags that tell search engines how to crawl and index this page -->
+	<!-- Robots: Instructs search engines to index the page, follow links, and allows unlimited snippet length and large image previews for rich results -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<!-- Google-specific crawling instructions: Ensures Google can fully index content and display rich snippets -->
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<!-- Bing-specific crawling instructions: Ensures Bing search engine can properly index the page -->
+	<meta name="bingbot" content="index, follow" />
+	<!-- Author attribution: Helps establish content authorship and contributes to E-A-T (Expertise, Authoritativeness, Trustworthiness) signals -->
+	<meta name="author" content="MAQ Software" />
+	<!-- Publisher: Identifies the organization responsible for the content, important for business credibility -->
+	<meta name="publisher" content="MAQ Software" />
+	<!-- Copyright: Legal attribution that helps protect intellectual property and establishes content ownership -->
+	<meta name="copyright" content="MAQ Software" />
+	<!-- Language: Specifies primary language for search engines and screen readers, improves accessibility -->
+	<meta name="language" content="en-US" />
+	<!-- Revisit frequency: Suggests how often search engines should re-crawl this page (case studies updated regularly) -->
+	<meta name="revisit-after" content="7 days" />
+	<!-- Content rating: Indicates content is suitable for general audiences, helps with content filtering -->
+	<meta name="rating" content="general" />
+	<!-- Distribution: Specifies global availability, helps with international SEO -->
+	<meta name="distribution" content="global" />
+	
+	<!-- Page Information: Additional metadata that helps AI engines and advanced crawlers understand page context -->
+	<!-- Page type: Clearly identifies this as a case studies showcase page for better categorization -->
+	<meta name="page-type" content="case-studies" />
+	<!-- Page topic: Summarizes main page focus for AI engines and topic-based search algorithms -->
+	<meta name="page-topic" content="Microsoft Fabric Case Studies - AI and Data Analytics Success Stories" />
+	<!-- Expiration: Indicates content doesn't expire, preventing premature removal from search indexes -->
+	<meta name="expires" content="never" />
+	<!-- Cache control: Allows public caching for better performance and CDN optimization -->
+	<meta name="cache-control" content="public" />
+	
+	<!-- Security Headers: Enhanced security directives for browser protection -->
+	<!-- Referrer Policy: Controls information sent in referrer header for privacy -->
+	<meta name="referrer" content="strict-origin-when-cross-origin" />
+	<!-- Format Detection: Prevents automatic phone number detection on mobile -->
+	<meta name="format-detection" content="telephone=no" />
+	
+	<!-- Canonical URL: Prevents duplicate content issues by specifying the preferred URL for this page -->
+	<!-- Essential for SEO: Consolidates page authority when multiple URLs could show same content -->
+	<link rel="canonical" href="https://maqsoftware.com/case-studies/" />
+	
+	<!-- Sitemap Reference: Helps search engines discover and efficiently crawl all website pages -->
+	<!-- Critical for large sites: Ensures no important pages are missed during indexing -->
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="https://maqsoftware.com/sitemap.xml" />
+	
+	<!-- DNS Prefetch and Preconnect for Performance: Speeds up loading of external resources -->
+	<!-- DNS prefetch: Resolves domain names before they're needed, reducing connection time -->
+	<link rel="dns-prefetch" href="//www.googletagmanager.com" />
+	<link rel="dns-prefetch" href="//www.clarity.ms" />
+	<link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+	<link rel="dns-prefetch" href="//unpkg.com" />
+	<link rel="dns-prefetch" href="//blog.maqsoftware.com" />
+	<!-- Preconnect: Establishes early connections to critical external resources for faster loading -->
+	<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+	<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+	
+	<!-- Alternate Languages: Comprehensive international SEO for global case studies reach -->
+	<!-- Primary English markets -->
+	<link rel="alternate" hreflang="en-us" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-gb" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-ca" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-au" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-in" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-sg" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-hk" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-za" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-nz" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-ie" href="https://maqsoftware.com/case-studies/" />
+	
+	<!-- European markets -->
+	<link rel="alternate" hreflang="en-de" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-fr" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-nl" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-ch" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-se" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-no" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-dk" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-fi" href="https://maqsoftware.com/case-studies/" />
+	
+	<!-- Asia-Pacific markets -->
+	<link rel="alternate" hreflang="en-jp" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-kr" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-cn" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-ph" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-th" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-my" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-id" href="https://maqsoftware.com/case-studies/" />
+	
+	<!-- Middle East & Africa -->
+	<link rel="alternate" hreflang="en-ae" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-sa" href="https://maqsoftware.com/case-studies/" />
+	<link rel="alternate" hreflang="en-il" href="https://maqsoftware.com/case-studies/" />
+	
+	<!-- Generic and default fallbacks -->
+	<link rel="alternate" hreflang="en" href="https://maqsoftware.com/case-studies/" />
+	<!-- x-default: Fallback for users whose language/region isn't specifically targeted -->
+	<link rel="alternate" hreflang="x-default" href="https://maqsoftware.com/case-studies/" />
+	
+	<!-- Geo Location: Improves local SEO and helps search engines understand business location -->
+	<!-- Geographic region: Helps with location-based search results and local business listings -->
+	<meta name="geo.region" content="US-WA" />
+	<!-- Place name: Human-readable location that enhances local search visibility -->
+	<meta name="geo.placename" content="Redmond, Washington" />
+	<!-- GPS coordinates: Precise location for mapping services and location-based features -->
+	<meta name="geo.position" content="47.6740;-122.1215" />
+	<!-- ICBM coordinates: Alternative coordinate format for broader compatibility with geo-location systems -->
+	<meta name="ICBM" content="47.6740, -122.1215" />
 
-	<!-- Twitter Theme -->
+	<!-- Primary Meta Description: Search engine display snippet that summarizes page content and value proposition -->
+	<meta name="description" content="Explore MAQ Software's client success stories showcasing Microsoft Fabric, AI, Power BI, data analytics, and cloud migration solutions. Learn how Fortune 500 companies achieve measurable ROI through our data and AI expertise. Microsoft Fabric Featured Partner case studies." />
+	
+	<!-- Enhanced SEO Meta Tags: Additional metadata for comprehensive search engine optimization -->
+	<!-- Keywords: Comprehensive case study terms with Microsoft Fabric and AI emphasis -->
+	<meta name="keywords" content="Microsoft Fabric case studies, AI case studies, Power BI success stories, data analytics case studies, cloud migration success, Azure case studies, business intelligence success stories, data modernization case studies, Microsoft Fabric Featured Partner, Fortune 500 case studies, AI transformation success, data migration case studies, Power BI migration, real-time analytics case studies, machine learning case studies, Databricks case studies, Snowflake case studies, data warehouse migration, customer success stories, ROI case studies, digital transformation success, enterprise AI case studies, Microsoft specialization case studies" />
+	
+	<!-- AI Engine Optimization: Specialized metadata that helps AI systems understand and categorize content -->
+	<!-- Subject: Primary domain area for AI content classification -->
+	<meta name="subject" content="Microsoft Fabric Case Studies | AI and Data Analytics Success Stories" />
+	<!-- Topic: Specific focus area within the subject domain -->
+	<meta name="topic" content="Client Success Stories in Microsoft Fabric, AI, Power BI, and Data Modernization" />
+	<!-- Summary: Concise page description for AI engines and automated systems -->
+	<meta name="summary" content="Comprehensive collection of client success stories showcasing MAQ Software's expertise in Microsoft Fabric, AI solutions, Power BI migrations, data analytics, and cloud transformations. Featuring Fortune 500 case studies with measurable ROI and proven results from a Microsoft Fabric Featured Partner." />
+	<!-- Classification: Page category for directory services and AI categorization -->
+	<meta name="classification" content="Case Studies, Client Success Stories, Microsoft Fabric Success Stories" />
+	<!-- Owner: Content ownership for rights management and attribution -->
+	<meta name="owner" content="MAQ Software" />
+	<!-- URL identifier: Canonical URL reference for content management systems -->
+	<meta name="url" content="https://maqsoftware.com/case-studies/" />
+	<meta name="identifier-URL" content="https://maqsoftware.com/case-studies/" />
+	<!-- Category: Multiple content categories for broader discoverability -->
+	<meta name="category" content="Case Studies, Success Stories, Microsoft Fabric Case Studies, AI Case Studies, Power BI Success Stories, Data Analytics Case Studies, Cloud Migration Success Stories, Digital Transformation Case Studies, Enterprise AI Success, Business Intelligence Case Studies, Fortune 500 Success Stories" />
+	<!-- Coverage: Geographic and market scope for business listings -->
+	<meta name="coverage" content="Worldwide" />
+	
+	<!-- Business Information: Contact and organizational details for business directories and AI systems -->
+	<!-- Company name: Official business name for directory listings -->
+	<meta name="company" content="MAQ Software" />
+	<!-- Contact email: Primary business contact for lead generation systems -->
+	<meta name="contact" content="CustomerSuccess@MAQSoftware.com" />
+	<!-- Designer: Website creator attribution for portfolio and credit purposes -->
+	<meta name="designer" content="MAQ Software" />
+
+	<!-- Open Graph: Controls how content appears when shared on Facebook, LinkedIn, and other social platforms -->
+	<!-- OG title: Displayed as the headline when shared on social media -->
+	<meta property="og:title" content="Microsoft Fabric Case Studies | AI & Data Analytics Success Stories | MAQ Software" />
+	<!-- OG type: Tells social platforms this is a business website page -->
+	<meta property="og:type" content="website" />
+	<!-- OG URL: Canonical URL for social sharing, prevents duplicate social signals -->
+	<meta property="og:url" content="https://maqsoftware.com/case-studies/" />
+	<!-- Site name: Displayed as the site attribution in social shares -->
+	<meta property="og:site_name" content="MAQ Software" />
+	<!-- OG image: Main image shown in social media previews (recommended: 1200x630px) -->
+	<meta property="og:image" content="https://maqsoftware.com/images/case-studies/case-studies-social-preview.png" />
+	<!-- Secure image URL: HTTPS version for secure social media platforms -->
+	<meta property="og:image:secure_url" content="https://maqsoftware.com/images/case-studies/case-studies-social-preview.png" />
+	<!-- Image dimensions: Helps social platforms optimize display layout -->
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<!-- Image format: Specifies file type for proper handling -->
+	<meta property="og:image:type" content="image/png" />
+	<!-- Image alt text: Accessibility and context for screen readers and when image fails to load -->
+	<meta property="og:image:alt" content="MAQ Software Case Studies - Microsoft Fabric Featured Partner Success Stories" />
+	<!-- OG description: Text shown below the title in social media previews -->
+	<meta property="og:description" content="Explore client success stories showcasing Microsoft Fabric, AI, Power BI, and data analytics solutions. Learn how Fortune 500 companies achieve measurable ROI through MAQ Software's expertise as a Microsoft Fabric Featured Partner." />
+	<!-- Primary locale: Specifies content language for social platforms -->
+	<meta property="og:locale" content="en_US" />
+	<!-- Alternate locales: Additional language versions for international social sharing -->
+	<meta property="og:locale:alternate" content="en_GB" />
+	<meta property="og:locale:alternate" content="en_CA" />
+	<!-- Last modified: Helps social platforms know when to refresh cached previews -->
+	<meta property="og:updated_time" content="2025-10-24T00:00:00Z" />
+
+	<!-- Twitter Card: Optimizes appearance and functionality when shared on Twitter/X -->
+	<!-- Card type: Large image format provides maximum visual impact in Twitter feeds -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<!-- Twitter site account: Associates shares with official company Twitter account -->
+	<meta name="twitter:site" content="@MAQSoftware" />
+	<!-- Twitter creator: Attribution for the content creator (same as site for corporate pages) -->
+	<meta name="twitter:creator" content="@MAQSoftware" />
+	<!-- Twitter title: Headline displayed in Twitter card (can differ from page title) -->
+	<meta name="twitter:title" content="Microsoft Fabric Case Studies | AI & Data Analytics Success Stories | MAQ Software" />
+	<!-- Twitter description: Text shown in Twitter card preview -->
+	<meta name="twitter:description" content="Explore client success stories showcasing Microsoft Fabric, AI, Power BI, and data analytics solutions. Learn how Fortune 500 companies achieve measurable ROI." />
+	<!-- Twitter image: Visual displayed in Twitter card (recommended: 1200x600px minimum) -->
+	<meta name="twitter:image" content="https://maqsoftware.com/images/case-studies/case-studies-social-preview.png" />
+	<!-- Twitter image alt text: Accessibility description for screen readers -->
+	<meta name="twitter:image:alt" content="MAQ Software Case Studies - Microsoft Fabric Featured Partner Success Stories" />
+	<!-- Twitter widgets theme: Controls appearance of embedded Twitter elements -->
 	<meta name="twitter:widgets:theme" content="light">
 
+	<!-- Progressive Web App (PWA) Configuration: Enables app-like behavior on mobile devices -->
+	<!-- Theme color: Controls browser UI color on mobile devices for brand consistency -->
+	<meta name="theme-color" content="#0078d4">
+	<!-- Microsoft tile color: Background color for Windows Start Menu tiles -->
+	<meta name="msapplication-TileColor" content="#0078d4">
+	<!-- Browser configuration: References external file with detailed browser customization settings -->
+	<meta name="msapplication-config" content="/browserconfig.xml">
+
+	<!-- Structured Data: JSON-LD schema markup for rich snippets and enhanced search results -->
+	<!-- Collection Page Schema: Tells search engines this is a collection of case studies -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "CollectionPage",
+		"name": "Case Studies",
+		"description": "Client success stories showcasing Microsoft Fabric, AI, Power BI, and data analytics solutions from MAQ Software.",
+		"url": "https://maqsoftware.com/case-studies/",
+		"mainEntity": {
+			"@type": "ItemList",
+			"name": "MAQ Software Case Studies",
+			"description": "Success stories demonstrating measurable ROI through Microsoft Fabric, AI, and data analytics implementations",
+			"numberOfItems": 100,
+			"itemListElement": [
+				{
+					"@type": "Article",
+					"name": "Microsoft Fabric Migration Success Stories",
+					"description": "Real-world examples of successful Microsoft Fabric implementations across various industries"
+				},
+				{
+					"@type": "Article",
+					"name": "AI and Machine Learning Case Studies", 
+					"description": "AI transformation success stories demonstrating measurable business value"
+				},
+				{
+					"@type": "Article",
+					"name": "Power BI Migration Case Studies",
+					"description": "Successful Power BI migrations from legacy platforms with improved performance"
+				}
+			]
+		},
+		"breadcrumb": {
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://maqsoftware.com/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Case Studies",
+					"item": "https://maqsoftware.com/case-studies/"
+				}
+			]
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "MAQ Software",
+			"url": "https://maqsoftware.com",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://maqsoftware.com/images/logos/MAQ-Software-URL.png"
+			}
+		},
+		"inLanguage": "en-US",
+		"isPartOf": {
+			"@type": "WebSite",
+			"name": "MAQ Software",
+			"url": "https://maqsoftware.com"
+		}
+	}
+	</script>
+
+	<!-- Organization Schema: Enhanced business information for rich snippets -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "MAQ Software",
+		"url": "https://maqsoftware.com",
+		"logo": "https://maqsoftware.com/images/logos/MAQ-Software-URL.png",
+		"description": "Microsoft Fabric Featured Partner specializing in AI, Power BI, data analytics, and cloud migration solutions for Fortune 500 companies.",
+		"foundingDate": "2000",
+		"industry": "Software Development",
+		"numberOfEmployees": "500+",
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "2027 152nd Avenue NE",
+			"addressLocality": "Redmond",
+			"addressRegion": "WA",
+			"postalCode": "98052",
+			"addressCountry": "US"
+		},
+		"contactPoint": {
+			"@type": "ContactPoint",
+			"telephone": "+1-425-526-5399",
+			"contactType": "Customer Service",
+			"email": "CustomerSuccess@MAQSoftware.com"
+		},
+		"sameAs": [
+			"https://www.linkedin.com/company/maq-software",
+			"https://twitter.com/MAQSoftware",
+			"https://github.com/maqsoftware"
+		],
+		"hasCredential": [
+			{
+				"@type": "EducationalOccupationalCredential",
+				"name": "Microsoft Fabric Featured Partner",
+				"credentialCategory": "Partnership"
+			},
+			{
+				"@type": "EducationalOccupationalCredential",
+				"name": "Top 25 Global Microsoft Partner",
+				"credentialCategory": "Award"
+			}
+		],
+		"offers": {
+			"@type": "Service",
+			"serviceType": [
+				"Microsoft Fabric Migration",
+				"Power BI Consulting",
+				"AI & Machine Learning Solutions",
+				"Data Analytics Services",
+				"Cloud Migration Services"
+			]
+		},
+		"award": [
+			"Microsoft Partner of the Year",
+			"Inc. 5000",
+			"Microsoft Fabric Featured Partner"
+		]
+	}
+	</script>
+
+	<!-- WebPage Schema: Detailed page information for search engines -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"name": "Case Studies",
+		"description": "Explore MAQ Software's client success stories showcasing Microsoft Fabric, AI, Power BI, data analytics, and cloud migration solutions with measurable ROI.",
+		"url": "https://maqsoftware.com/case-studies/",
+		"inLanguage": "en-US",
+		"isPartOf": {
+			"@type": "WebSite",
+			"name": "MAQ Software",
+			"url": "https://maqsoftware.com"
+		},
+		"author": {
+			"@type": "Organization",
+			"name": "MAQ Software"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "MAQ Software",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://maqsoftware.com/images/logos/MAQ-Software-URL.png"
+			}
+		},
+		"datePublished": "2020-01-01T00:00:00Z",
+		"dateModified": "2025-10-24T00:00:00Z",
+		"mainContentOfPage": {
+			"@type": "WebPageElement",
+			"cssSelector": ".case-study-container"
+		},
+		"specialty": [
+			"Microsoft Fabric Case Studies",
+			"AI Success Stories", 
+			"Power BI Migration Case Studies",
+			"Data Analytics Success Stories"
+		],
+		"keywords": [
+			"Microsoft Fabric case studies",
+			"AI transformation success stories",
+			"Power BI migration case studies",
+			"Data analytics ROI",
+			"Fortune 500 success stories"
+		]
+	}
+	</script>
+
 	<!-- Title &amp; Favicon -->
-	<title>Case Studies | MAQ Software</title>
+	<title>Microsoft Fabric Case Studies | AI & Data Analytics Success Stories | MAQ Software</title>
 	<link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+	<!-- Multiple favicon sizes: Ensures proper icon display across all devices and platforms -->
+	<!-- Standard desktop favicon sizes for optimal display quality -->
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/logos/MAQ-Software-URL.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/logos/MAQ-Software-URL.png">
+	<!-- Apple Touch Icon: High-resolution icon for iOS devices when saved to home screen -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/logos/MAQ-Software-URL.png">
+	
+	<!-- Apple-Specific Meta Tags: Enhanced iOS Safari experience -->
+	<!-- Mobile web app capability: Enables full-screen mode when added to home screen -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!-- Status bar style: Controls appearance of status bar in full-screen mode -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<!-- App title: Name displayed when added to iOS home screen -->
+	<meta name="apple-mobile-web-app-title" content="MAQ Software Case Studies" />
 
-	<!-- Font -->
+	<!-- Font Loading: External fonts for enhanced typography and brand consistency -->
+	<!-- Font optimization: Preconnect to Google Fonts for faster loading -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- Google Fonts: Primary typography including Roboto and Hind Madurai for body text -->
 	<link
-		href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext"
+		href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext&display=swap"
 		rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+	<!-- Inter font: Modern, accessible font for UI elements and headings -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-	<!-- Css -->
+	<!-- CSS Resources: Stylesheets for UI components, frameworks, and custom styling -->
+	<!-- Fluent UI Icons: Microsoft's design system icons for consistent interface elements -->
+	<link rel="stylesheet" href="https://unpkg.com/@fluentui/font-icons-mdl2@1.0.2/dist/fluentui-icons-mdl2.css">
+	<!-- Font Awesome Icons: Comprehensive icon library for UI elements -->
+	<!-- Font Awesome 4.7.0: Legacy icons for backward compatibility -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Font Awesome 6.4.2: Latest icons with enhanced accessibility features -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	
+	<!-- Custom CSS: Application-specific styling and responsive design -->
+	<!-- Core styles: Base framework and component styles -->
 	<link rel="stylesheet" href="/css/core.min.css" />
+	<!-- Skin styles: Theme and color scheme customization -->
 	<link rel="stylesheet" href="/css/skin.css" />
+	<!-- Common styles: Shared utility classes and layout styles -->
 	<link rel="stylesheet" href="/css/commonstyle.css" />
+	<!-- Custom page styles: Case studies specific styling and responsive adjustments -->
 	<link rel="stylesheet" href="/css/styles.css" />
 
 
 	<!--[if lt IE 9]>
-    	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha384-qNG5dSM4J7/yCOzl8w+qidZI8jxt6qJPmjM0FiZkPGk4c6pH6WKEnpF+A+LrqTWE" crossorigin="anonymous"></script>
     <![endif]-->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
@@ -52,17 +449,35 @@
 	</script>
 </head>
 
+<body>
 
-<!-- Header -->
+<!-- ========================================
+     ACCESSIBILITY NAVIGATION
+     ======================================== -->
+<!-- Skip Navigation: Allows keyboard users to jump directly to main content -->
+<a class="sr-only sr-only-focusable" href="#main-content">Skip to main content</a>
+
+<!-- ========================================
+     HEADER NAVIGATION
+     ======================================== -->
+<!-- Header: Dynamic navigation bar loaded via JavaScript -->
 <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent" data-bkg-threshold="100"
-	data-sticky-threshold="0">
+	data-sticky-threshold="0" role="banner">
+	<!-- Header content loaded dynamically via footer script -->
 </header>
 <!-- Header End -->
 
-<!-- Content -->
+<!-- ========================================
+     MAIN PAGE CONTENT
+     ======================================== -->
+<!-- Content: Main container for all page sections -->
 <div class="content clearfix">
 
-	<!-- Intro Title Section 1 -->
+	<!-- ========================================
+	     HERO SECTION
+	     ======================================== -->
+	<!-- Page Title Hero: Prominent display of Case Studies heading -->
+	<!-- Note: Legacy title section commented out - kept for potential future use -->
 	<!-- <div class="pt-60">
 		<div class="section-block intro-title-1 small">
 			<div class="row">
@@ -84,89 +499,227 @@
 			</div>
 		</div>
 	</div> -->
+	
+	<!-- Current Hero Section: Responsive centered title layout -->
 	<div class="section-block-padding-sm hero-section centered-section max lg-section-block-padding-hero">
 		<div class="flex-col-2">
 			<div class="hero-item-1">
+				<!-- Main page heading with semantic H1 tag for SEO -->
 				<h1 class="page-title">
 					Case Studies
 				</h1>
 			</div>
 		</div>
 	</div>
-	
-	<!-- Intro Title Section 1 End -->
+	<!-- Hero Section End -->
 
-
+	<!-- ========================================
+	     CASE STUDIES CONTENT SECTION
+	     ======================================== -->
+	<!-- Main Content Container: Houses filtering and case study grid -->
 	<div class="section-block-padding-sm">
 		<div class="case-study-container">
+			
+			<!-- ========================================
+			     CATEGORY FILTER NAVIGATION
+			     ======================================== -->
+			<!-- Filter Menu: JavaScript-powered category filtering for case studies -->
+			<!-- Note: Currently hidden, activated by JavaScript interaction -->
 			<div class="section-block pt-0 grid-filter-menu center hide" data-target-grid="#portfolio-grid">
-			<div class="pt-10 pb-10 bkg-white" data-extra-space-top="80" data-extra-space-bottom="0">
-				<div class="row">
-					<div class="column width-12">
-						<div class="filter-menu-inner">
-							<ul class="container-filter categories-filter">
-								<li><a class="categories active cursor-pointer" onclick="ModifyClass()" data-filter="*">All</a></li>
-								<li><a id="gen-ai-and-machine-learning" class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".genaiandmachinelearning">Gen AI & machine learning</a></li>
-								<li><a id="data-and-analytics" class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".dataandanalytics">Data & analytics</a></li>
-								<li><a id="reporting-and-visualization" class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".reportingandvisualization">Reporting & visualization</a></li>
-								<li><a id="application-modernization" class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".applicationmodernization">Application modernization</a></li>	
-								<li><a id="cloud-optimization" class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".cloud">Cloud optimization</a></li>
-								<li><a id="security" class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".security">Security</a></li>		
-							</ul>
+				<div class="pt-10 pb-10 bkg-white" data-extra-space-top="80" data-extra-space-bottom="0">
+					<div class="row">
+						<div class="column width-12">
+							<div class="filter-menu-inner">
+								<!-- Category Filter List: Interactive buttons for filtering case studies by service type -->
+								<!-- Navigation role for screen readers -->
+								<ul class="container-filter categories-filter" role="tablist" aria-label="Case study category filters">
+									<li role="presentation"><a id="case-study-filter-all" class="categories active cursor-pointer" onclick="ModifyClass()" data-filter="*" role="tab" aria-selected="true" aria-controls="LoadPageCaseStudy" tabindex="0">All</a></li>
+									<li role="presentation"><a id="gen-ai-and-machine-learning" class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".genaiandmachinelearning" role="tab" aria-selected="false" aria-controls="LoadPageCaseStudy" tabindex="0">Gen AI & machine learning</a></li>
+									<li role="presentation"><a id="data-and-analytics" class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".dataandanalytics" role="tab" aria-selected="false" aria-controls="LoadPageCaseStudy" tabindex="0">Data & analytics</a></li>
+									<li role="presentation"><a id="reporting-and-visualization" class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".reportingandvisualization" role="tab" aria-selected="false" aria-controls="LoadPageCaseStudy" tabindex="0">Reporting & visualization</a></li>
+									<li role="presentation"><a id="application-modernization" class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".applicationmodernization" role="tab" aria-selected="false" aria-controls="LoadPageCaseStudy" tabindex="0">Application modernization</a></li>	
+									<li role="presentation"><a id="cloud-optimization" class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".cloud" role="tab" aria-selected="false" aria-controls="LoadPageCaseStudy" tabindex="0">Cloud optimization</a></li>
+									<li role="presentation"><a id="security" class="categories cursor-pointer" onclick="ModifyClass()" data-filter=".security" role="tab" aria-selected="false" aria-controls="LoadPageCaseStudy" tabindex="0">Security</a></li>		
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		
-		<div id="loadingicon" class="CaseStudyLoading"></div>
-		<!-- Content Inner -->
-		<div class="blog-masonry grid-container mb-30" data-grid-ratio="1.5" data-as-bkg-image>
-			<div class="row">
-				<div class="column width-12">
-					<div class="row grid content-grid-3" id="LoadPageCaseStudy">
+			<!-- Filter Menu End -->
+			
+			<!-- ========================================
+			     LOADING INDICATOR
+			     ======================================== -->
+			<!-- Loading Animation: Displays while case studies are being fetched -->
+			<div id="loadingicon" class="CaseStudyLoading" aria-label="Loading case studies" role="status">
+				<span class="sr-only">Loading case studies...</span>
+			</div>
+			
+			<!-- ========================================
+			     CASE STUDIES GRID DISPLAY
+			     ======================================== -->
+			<!-- Content Grid: Masonry layout for displaying case study cards -->
+			<!-- Populated dynamically via JavaScript from casestudies.js -->
+			<main id="main-content" class="blog-masonry grid-container mb-30" data-grid-ratio="1.5" data-as-bkg-image role="main">
+				<div class="row">
+					<div class="column width-12">
+						<!-- Dynamic Content Container: Case study articles loaded here -->
+						<section class="row grid content-grid-3" id="LoadPageCaseStudy" role="tabpanel" aria-live="polite" aria-label="Case study results" aria-labelledby="case-study-filter-all">
+							<!-- Case study content loaded dynamically via loadCaseStudyGrid() function -->
+							<!-- Content will include proper article tags and semantic structure -->
+						</section>
 					</div>
 				</div>
-			</div>
-		</div>
-		<!-- Portfolio Grid End -->
-
+			</main>
+			<!-- Case Studies Grid End -->
 
 		</div>
 	</div>
-	
-<!-- Content End -->
+	<!-- Case Studies Content Section End -->
 
-<!-- Footer -->
+</div>
+<!-- Main Content Container End -->
+
+<!-- ========================================
+     FOOTER SECTION
+     ======================================== -->
+<!-- Footer: Site-wide footer loaded dynamically -->
 <footer id="footer" class="footer footer-light bkg-grey-ultralight">
+	<!-- Footer content loaded dynamically via JavaScript -->
 </footer>
 <!-- Footer End -->
 
-<!-- Js -->
+<!-- ========================================
+     JAVASCRIPT RESOURCES
+     ======================================== -->
+<!-- Core JavaScript Libraries -->
+<!-- jQuery 3.2.1: Foundation library for DOM manipulation and AJAX -->
 <script src="/js/jquery-3.2.1.min.js"></script>
+<!-- Timber Master: Theme framework providing UI components and animations -->
 <script src="/js/timber.master.min.js"></script>
+<!-- Custom Theme Scripts: Site-specific functionality and interactions -->
 <script src="/js/theme.js?v=20220218" type="text/javascript"></script>
+<!-- Case Studies Logic: Handles dynamic loading and filtering of case study content -->
 <script src="/js/casestudies.js?v=20211216.1" type="text/javascript"></script>
-<script src="js/sidenav.js"></script>
+<!-- Side Navigation: Mobile menu and navigation interactions -->
+<script src="/js/sidenav.js"></script>
+
+<!-- ========================================
+     PAGE INITIALIZATION SCRIPTS
+     ======================================== -->
+<!-- Primary Content Loading: Initialize case studies grid and load dynamic content -->
 <script>
-	loadCaseStudyGrid();
-	// $("#header").load("/header");
-	// $("#footer").load("/footer");
-	// $("#header").load("/header.html");
-	$("#footer").load("/footer.html");
+	// Ensure jQuery is loaded before executing
+	$(document).ready(function() {
+		// Load case study articles into the grid container
+		if (typeof loadCaseStudyGrid === 'function') {
+			loadCaseStudyGrid();
+		} else {
+			console.warn('loadCaseStudyGrid function not available');
+		}
+		
+		// Dynamic content loading for header and footer
+		// Note: Header loading commented out - using different implementation
+		// $("#header").load("/header");
+		// $("#header").load("/header.html");
+		
+		// Load footer content dynamically with error handling
+		$("#footer").load("/footer.html").fail(function() {
+			console.warn('Failed to load footer content');
+		});
+
+		// Accessibility: Manage tab states for case study filters
+		var $filterTabs = $('.categories');
+		var $caseStudyPanel = $('#LoadPageCaseStudy');
+
+		function setActiveFilter($tab) {
+			if (!$tab || !$tab.length) {
+				return;
+			}
+			$filterTabs.attr('aria-selected', 'false');
+			$tab.attr('aria-selected', 'true');
+			var tabId = $tab.attr('id');
+			if (tabId) {
+				$caseStudyPanel.attr('aria-labelledby', tabId);
+			}
+		}
+
+		// Initialize tab state on load
+		setActiveFilter($filterTabs.filter('[aria-selected="true"]'));
+
+		// Update ARIA state on click
+		$filterTabs.on('click', function () {
+			setActiveFilter($(this));
+		});
+
+		// Support keyboard activation (Enter/Space)
+		$filterTabs.on('keydown', function (event) {
+			if (event.key === 'Enter' || event.key === ' ') {
+				event.preventDefault();
+				$(this).trigger('click');
+			}
+		});
+	});
 </script>
+
+<!-- Plugin Initialization: Initialize theme plugins and components -->
 <script>
-	loadPlugins();
+	// Initialize all theme plugins and UI components with error handling
+	$(document).ready(function() {
+		if (typeof loadPlugins === 'function') {
+			loadPlugins();
+		} else {
+			console.warn('loadPlugins function not available');
+		}
+	});
 </script>
+
+<!-- ========================================
+     FILTER FUNCTIONALITY
+     ======================================== -->
+<!-- Filter Toggle Logic: Manages masonry grid layout when filtering is activated -->
 <script>
-	var flag = 0;
-        function ModifyClass() {
-            if (flag == 0) {
-                $('#LoadPageCaseStudy').toggleClass("container-grid");
-                containerGridMasonry();
-                flag = 1;
-            }
-        }
+	// Flag to track filter initialization state
+	var filterInitialized = false;
+	
+	/**
+	 * ModifyClass: Initializes masonry grid layout on first filter interaction
+	 * Called when user clicks any category filter button
+	 * Ensures grid layout is properly configured before filtering
+	 * @returns {boolean} Success status of initialization
+	 */
+	function ModifyClass() {
+		try {
+			if (!filterInitialized) {
+				var $gridContainer = $('#LoadPageCaseStudy');
+				
+				// Check if grid container exists
+				if ($gridContainer.length === 0) {
+					console.warn('Grid container #LoadPageCaseStudy not found');
+					return false;
+				}
+				
+				// Toggle grid class for masonry layout
+				$gridContainer.toggleClass("container-grid");
+				
+				// Initialize masonry grid functionality if available
+				if (typeof containerGridMasonry === 'function') {
+					containerGridMasonry();
+				} else {
+					console.warn('containerGridMasonry function not available');
+				}
+				
+				// Set flag to prevent re-initialization
+				filterInitialized = true;
+				return true;
+			}
+		} catch (error) {
+			console.error('Error initializing filter functionality:', error);
+			return false;
+		}
+		return true;
+	}
 </script>
 </body>
 
