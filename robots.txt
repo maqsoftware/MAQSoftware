@@ -28,6 +28,7 @@ Disallow: /.git/
 Disallow: /node_modules/
 Disallow: /temp/
 Disallow: /tmp/
+Disallow: /archived/
 
 # Block access to specific file types that shouldn't be indexed
 Disallow: /*.log$
