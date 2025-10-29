@@ -315,276 +315,131 @@
   <!-- Structured Data (JSON-LD): Machine-readable business information for search engines and AI systems -->
   <!-- This comprehensive schema markup helps search engines understand the business context and enables rich snippets -->
   <!-- Benefits: Enhanced search results, better AI understanding, improved click-through rates, local SEO boost -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        // Organization Schema: Complete business profile for search engines and business directories
-        "@type": "Organization",
-        "@id": "https://maqsoftware.com/#organization",
-        "name": "MAQ Software",
-        "url": "https://maqsoftware.com/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://maqsoftware.com/images/logos/MAQ-Software-URL.png",
-          "width": 400,
-          "height": 400
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://maqsoftware.com/#organization",
+      "name": "MAQ Software",
+      "url": "https://maqsoftware.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://maqsoftware.com/images/logos/MAQ-Software-URL.png",
+        "width": 400,
+        "height": 400
+      },
+      "image": "https://maqsoftware.com/images/logos/MAQ-Software-URL.png",
+      "description": "MAQ Software accelerates enterprise Data & AI initiatives, with expertise in Microsoft Fabric, Power BI, data modernization and Azure migration.",
+      "foundingDate": "2000",
+      "numberOfEmployees": { "@type": "QuantitativeValue", "value": 1800 },
+      "founders": [{ "@type": "Person", "name": "Rajeev Agarwal" }],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2027 152nd AVE NE",
+        "addressLocality": "Redmond",
+        "addressRegion": "WA",
+        "postalCode": "98052",
+        "addressCountry": "US"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-425-526-5399",
+          "contactType": "customer service",
+          "availableLanguage": ["English"],
+          "areaServed": "Worldwide"
         },
-        "description": "With expertise in Microsoft Fabric, Power BI, data modernization, data migration, and Azure migration, MAQ Software accelerates data and AI initiatives for enterprises. 20+ years proven expertise, 8 Microsoft specializations, Inc. 5000 recognized 12 times for sustained organic growth. Microsoft Fabric Featured Partner. Microsoft Power BI Partner of the Year Award winner",
-        "foundingDate": "2000",
-        "numberOfEmployees": "1800+",
-        "founders": [
-          {
-            "@type": "Person",
-            "name": "Rajeev Agarwal"
-          }
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "2027 152nd AVE NE",
-          "addressLocality": "Redmond",
-          "addressRegion": "WA",
-          "postalCode": "98052",
-          "addressCountry": "US"
-        },
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "+1-425-526-5399",
-            "contactType": "customer service",
-            "availableLanguage": ["English"],
-            "areaServed": "Worldwide"
-          },
-          {
-            "@type": "ContactPoint",
-            "email": "CustomerSuccess@MAQSoftware.com",
-            "contactType": "sales",
-            "availableLanguage": ["English"],
-            "areaServed": "Worldwide"
-          }
-        ],
-        "sameAs": [
-          "https://www.linkedin.com/company/maq-software",
-          "https://twitter.com/MAQSoftware",
-          "https://www.facebook.com/MAQSoftware",
-          "https://www.youtube.com/c/MAQSoftware"
-        ],
-        "award": [
-          "Microsoft Power BI Partner of the Year",
-          "Inc. 5000 Fastest Growing Companies (12 times recognition)",
-          "Microsoft Solutions Partner for Data & AI",
-          "Microsoft Fabric Featured Partner",
-          "Top 25 Global Microsoft Partner",
-          "Microsoft 8 Specializations Achievement"
-        ],
-        "knowsAbout": [
-          "Microsoft Fabric Implementation",
-          "Data modernization",
-          "Data migration",
-          "Power BI migration",
-          "Azure migration",
-          "Power BI Custom Visual",
-          "Power BI Best Practices",
-          "AI-powered Business Intelligence",
-          "Enterprise Data Analytics",
-          "Power BI Consulting",
-          "Data Modernization",
-          "Cloud Migration Services",
-          "Artificial Intelligence Solutions",
-          "Machine Learning Implementation",
-          "Azure Analytics Platform",
-          "Well-Architected Framework",
-          "Real-Time Intelligence",
-          "Microsoft Copilot Integration",
-          "Data Governance",
-          "Enterprise Software Delivery",
-          "Fortune 500 Consulting"
-        ],
-        "slogan": "Accelerating Business Intelligence and Analytics Initiatives",
-        "memberOf": {
-          "@type": "Organization",
-          "name": "Microsoft Partner Network - Top 25 Global Partners"
+        {
+          "@type": "ContactPoint",
+          "email": "CustomerSuccess@MAQSoftware.com",
+          "contactType": "sales",
+          "availableLanguage": ["English"],
+          "areaServed": "Worldwide"
         }
-      },
-      {
-        // Website Schema: Defines the website structure and enables search functionality in rich results
-        "@type": "WebSite",
-        "@id": "https://maqsoftware.com/#website",
-        "url": "https://maqsoftware.com/",
-        "name": "MAQ Software",
-        "description": "With expertise in Microsoft Fabric, Power BI, data modernization, data migration, and Azure migration, MAQ Software accelerates data and AI initiatives for enterprises.",
-        "publisher": {
-          "@id": "https://maqsoftware.com/#organization"
-        },
-        "potentialAction": [
-          {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": "https://maqsoftware.com/search?q={search_term_string}"
-            },
-            "query-input": "required name=search_term_string"
-          }
-        ]
-      },
-      {
-        // WebPage Schema: Specific page information for better search result presentation
-        "@type": "WebPage",
-        "@id": "https://maqsoftware.com/#webpage",
-        "url": "https://maqsoftware.com/",
-        "name": "Data & Artificial Intelligence (AI) Services | Microsoft Fabric Featured Partner | MAQ Software",
-        "isPartOf": {
-          "@id": "https://maqsoftware.com/#website"
-        },
-        "about": {
-          "@id": "https://maqsoftware.com/#organization"
-        },
-        "description": "With expertise in Microsoft Fabric, Power BI, data modernization, data migration, and Azure migration, MAQ Software accelerates data and AI initiatives for enterprises.",
-        "breadcrumb": {
-          "@id": "https://maqsoftware.com/#breadcrumb"
-        },
-        "inLanguage": "en-US",
-        "potentialAction": [
-          {
-            "@type": "ReadAction",
-            "target": ["https://maqsoftware.com/"]
-          }
-        ]
-      },
-      {
-        // Breadcrumb Schema: Defines navigation structure for enhanced search result display
-        "@type": "BreadcrumbList",
-        "@id": "https://maqsoftware.com/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://maqsoftware.com/"
-          }
-        ]
-      },
-      {
-        // Primary Service Schema: Highlights main business offering for service-based search results
-        "@type": "Service",
-        "name": "Data & Artificial Intelligence (AI) Services | Microsoft Fabric Featured Partner | MAQ Software",
-        "provider": {
-          "@id": "https://maqsoftware.com/#organization"
-        },
-        "serviceType": "Enterprise Data & AI Solutions",
-        "description": "Leading Microsoft Fabric Featured Partner delivering comprehensive AI-powered business intelligence solutions, data modernization, and analytics acceleration for Fortune 500 companies. Expertise includes Well-Architected Framework implementation, governance frameworks, team capability building, and proven delivery methodologies with daily updates and transparent workflows.",
-        "areaServed": "Worldwide",
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Fortune 500 Enterprise"
-        },
-        "brand": {
-          "@type": "Brand",
-          "name": "Premier Microsoft Fabric Featured Partner"
-        },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Enterprise Data & AI Solutions",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "name": "Microsoft Fabric Implementation"
-            },
-            {
-              "@type": "Offer", 
-              "name": "AI-Powered Business Intelligence"
-            },
-            {
-              "@type": "Offer",
-              "name": "Data Modernization Services"
-            }
-          ]
-        }
-      },
-      {
-        // Services List Schema: Comprehensive service catalog for enhanced search visibility
-        "@type": "ItemList",
-        "name": "MAQ Software Services",
-        "description": "Comprehensive technology services offered by MAQ Software",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@type": "Service",
-              "name": "Gen AI & Machine Learning",
-              "description": "Harness the power of artificial intelligence and machine learning to automate processes and uncover hidden patterns",
-              "provider": {
-                "@id": "https://maqsoftware.com/#organization"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@type": "Service",
-              "name": "Data & Analytics",
-              "description": "Drive growth through data-driven insights and powerful analytics",
-              "provider": {
-                "@id": "https://maqsoftware.com/#organization"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "item": {
-              "@type": "Service",
-              "name": "Reporting & Visualization",
-              "description": "Visualize your data with intuitive reports and dashboards that provide clarity and insight at a glance",
-              "provider": {
-                "@id": "https://maqsoftware.com/#organization"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "item": {
-              "@type": "Service",
-              "name": "Application Modernization",
-              "description": "Update legacy systems with modern, scalable applications that enhance performance and user experience",
-              "provider": {
-                "@id": "https://maqsoftware.com/#organization"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 5,
-            "item": {
-              "@type": "Service",
-              "name": "Cloud Optimization",
-              "description": "Adopt technologies for flexible, scalable, and cost-effective IT solutions that grow with your business",
-              "provider": {
-                "@id": "https://maqsoftware.com/#organization"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 6,
-            "item": {
-              "@type": "Service",
-              "name": "Security",
-              "description": "Fortify your business with advanced security solutions that protect data, systems, and users from evolving threats",
-              "provider": {
-                "@id": "https://maqsoftware.com/#organization"
-              }
-            }
-          }
-        ]
-      }
-    ]
-  }
-  </script>
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/maq-software",
+        "https://twitter.com/MAQSoftware",
+        "https://www.facebook.com/MAQSoftware",
+        "https://www.youtube.com/c/MAQSoftware"
+      ],
+      "award": [
+        "Microsoft Power BI Partner of the Year",
+        "Inc. 5000 Fastest Growing Companies (12 times)",
+        "Microsoft Solutions Partner for Data & AI",
+        "Microsoft Fabric Featured Partner"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://maqsoftware.com/#website",
+      "url": "https://maqsoftware.com/",
+      "name": "MAQ Software",
+      "publisher": { "@id": "https://maqsoftware.com/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://maqsoftware.com/#webpage",
+      "url": "https://maqsoftware.com/",
+      "name": "Microsoft Fabric Featured Partner | MAQ Software",
+      "isPartOf": { "@id": "https://maqsoftware.com/#website" },
+      "about": { "@id": "https://maqsoftware.com/#organization" },
+      "description": "Enterprise Data & AI services, Microsoft Fabric expertise, Power BI, and modernization.",
+      "inLanguage": "en-US",
+      "potentialAction": [{ "@type": "ReadAction", "target": ["https://maqsoftware.com/"] }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://maqsoftware.com/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://maqsoftware.com/" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://maqsoftware.com/#primary-service",
+      "name": "Data & Artificial Intelligence Services",
+      "provider": { "@id": "https://maqsoftware.com/#organization" },
+      "serviceType": "Enterprise Data & AI Solutions",
+      "areaServed": "Worldwide",
+      "description": "Implementation and modernization with Microsoft Fabric, Power BI, and Azure."
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://maqsoftware.com/#service-catalog",
+      "name": "MAQ Software Services",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1,
+          "item": { "@type": "Service", "name": "Gen AI & Machine Learning",
+            "url": "https://maqsoftware.com/services/artificial-intelligence-and-machine-learning",
+            "provider": { "@id": "https://maqsoftware.com/#organization" } } },
+        { "@type": "ListItem", "position": 2,
+          "item": { "@type": "Service", "name": "Data & Analytics",
+            "url": "https://maqsoftware.com/services/data-and-analytics",
+            "provider": { "@id": "https://maqsoftware.com/#organization" } } },
+        { "@type": "ListItem", "position": 3,
+          "item": { "@type": "Service", "name": "Reporting & Visualization",
+            "url": "https://maqsoftware.com/services/reporting-and-visualization",
+            "provider": { "@id": "https://maqsoftware.com/#organization" } } },
+        { "@type": "ListItem", "position": 4,
+          "item": { "@type": "Service", "name": "Application Modernization",
+            "url": "https://maqsoftware.com/services/application-modernization",
+            "provider": { "@id": "https://maqsoftware.com/#organization" } } },
+        { "@type": "ListItem", "position": 5,
+          "item": { "@type": "Service", "name": "Cloud Optimization",
+            "url": "https://maqsoftware.com/services/cloud",
+            "provider": { "@id": "https://maqsoftware.com/#organization" } } },
+        { "@type": "ListItem", "position": 6,
+          "item": { "@type": "Service", "name": "Security",
+            "url": "https://maqsoftware.com/services/security",
+            "provider": { "@id": "https://maqsoftware.com/#organization" } } }
+      ]
+    }
+  ]
+}
+</script>
   
   <!-- Page Element Scripts: Component-specific JavaScript for interactive elements -->
   <!-- Contact section: Form handling and interaction management -->
