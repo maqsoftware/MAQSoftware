@@ -7,7 +7,7 @@
     <!-- Page-Specific SEO Tags -->
     <title>Azure Databricks Best Practices | MAQ Software Insights</title>
     <meta name="description" content="Boost Azure Databricks performance with our ADB Optimization Best Practice Guide. Learn how to improve query speed, manage clusters, enable autoscaling, and optimize Delta tables for faster, more efficient workloads.">
-    <meta name="keywords" content="Azure Databricks optimization, ADB best practices, Databricks performance tuning, Delta tables, Spark optimization, cluster autoscaling, adaptive query execution, Azure Data Factory, data engineering, ADB Premium, MAQ Software">
+    <meta name="keywords" content="Azure Databricks optimization, ADB best practices, Databricks performance tuning, Delta tables, Spark optimization, cluster autoscaling, adaptive query execution, Azure Data Factory, data engineering, ADB Premium, Unity Catalog, Photon Engine, Serverless SQL, Liquid Clustering, FinOps, MAQ Software">
     <meta name="page-type" content="insight">
     <meta name="page-topic" content="Azure Databricks Best Practices | MAQ Software Insights">
 
@@ -23,6 +23,35 @@
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:alt" content="Azure Databricks Best Practices | MAQ Software Insights">
     <meta property="og:locale" content="en_US">
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Azure Databricks Best Practices Guide",
+      "description": "Boost Azure Databricks performance with our ADB Optimization Best Practice Guide. Learn how to improve query speed, manage clusters, enable autoscaling, and optimize Delta tables.",
+      "image": "https://maqsoftware.com/images/expertise/cloud-main.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "MAQ Software",
+        "url": "https://maqsoftware.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "MAQ Software",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://maqsoftware.com/images/logos/MAQ-Software-URL.png"
+        }
+      },
+      "dateModified": "2025-12-10",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://maqsoftware.com/insights/azure-databricks-best-practices.html"
+      }
+    }
+    </script>
 
     <!-- Twitter Theme -->
     <meta name="twitter:widgets:theme" content="light">
@@ -72,99 +101,83 @@
                         <div class="post-content with-background">
                             <h1 class="post-title center">ADB Optimization Best Practice Guide</h1>
 
-                            <p class="text-large">Azure Databricks (ADB) has the power to process terabytes of data, while simultaneously running heavy data science workloads. Over time, as data input and workloads increase, job performance decreases. As an ADB developer, optimizing your platform enables you to work faster and save hours of effort for you and your team. Below are the 18 best practices you need to optimize your ADB environment.</p>
-                            <div id="security">
+                            <p class="text-large">Azure Databricks (ADB) has the power to process terabytes of data, while simultaneously running heavy data science workloads. Over time, as data input and workloads increase, job performance decreases. As an ADB developer, optimizing your platform enables you to work faster and save hours of effort for you and your team. Below are the best practices you need to optimize your ADB environment.</p>
+                            
+                            <div id="cost-optimization">
+                                <h2>Cost Optimization</h2>
                                 <ol>
-                                    <li class="text-xlarge"><strong>Delete temporary tables after notebook execution</strong></li>
-                                    <br>
-                                    <p class="text-large">Delete temporary tables that were created as intermediate tables during notebook execution. Deleting tables saves storage, especially if the notebook is scheduled daily.</p>
-                                    <li class="text-xlarge"><strong>Use <code class="color-red-light bkg-grey-ultralight">dbutils.fs.rm()</code> to permanently delete temporary table metadata</strong></li>
-                                    <br>
-                                    <p class="text-large">ADB clusters store table metadata, even if you use drop statements to delete. Before creating temporary tables, use <code class="color-red bkg-grey-ultralight">dbutils.fs.rm()</code> to permanently delete metadata. If you don’t use this statement, an error message will appear stating that the table already exists. To avoid this error in daily refreshes, you must use <code class="color-red bkg-grey-ultralight">dbutils.fs.rm()</code>.</p>
-                                    <li class="text-xlarge"><strong>Use Lower() or Upper() when comparing strings to avoid losing data</strong></li>
-                                    <br>
-                                    <p class="text-large">ADB can't compare strings with different casing. To avoid losing data, use case conversion statements Lower() or Upper(). Example:</p>
-                                    <p class="text-large"><strong><code class="color-red bkg-grey-ultralight">SELECT 'MAQSoftware' = 'maqsoftware' AS WithOutLowerOrUpper
-                                        <br>,LOWER('MAQSoftware') = 'maqsoftware' AS WithLower
-                                        <br>,UPPER('MAQSoftware') = 'MAQSOFTWARE' AS WithUpper</code></strong></p>
-                                    <li class="text-xlarge"><strong>Use Scala for data processing</strong></li>
-                                    <br>
-                                    <p class="text-large">ADB’s data processing is based on Apache Spark, which is written in Scala. As a result, Scala performs better than SQL in ADB. Note: Python should still be used for machine learning functions in ADB.</p>
-                                    <li class="text-xlarge"><strong>Use custom functions to simplify complex calculations</strong></li>
-                                    <br>
-                                    <p class="text-large">If your calculation requires multiple steps, you can save time and by creating a one-step custom function. ADB offers a variety of built in SQL functions, however to create custom functions, known as user-defined functions (UDF), use Scala. Once you have a custom function, you can call it every time you need to perform that specific calculation.</p>
-                                    <li class="text-xlarge"><strong>Use Delta tables for DML commands</strong></li>
-                                    <br>
-                                    <p class="text-large">In ADB, Hive tables do not support UPDATE and MERGE statements or NOT NULL and CHECK constraints. Delta tables do support these commands, however running large amounts of data on Delta tables decreases query performance. So not to decrease performance, store table versions.</p>
-                                    <li class="text-xlarge"><strong>Use views when creating intermediate tables</strong></li>
-                                    <br>
-                                    <p class="text-large">If you need to create intermediate tables, use views to minimize storage usage and save costs. Views are session-oriented and will automatically remove tables from storage after query execution. For optimal query performance, do not use joins or subqueries in views.</p>
-                                    <li class="text-xlarge"><strong>Enable adaptive query execution (AQE)</strong></li>
-                                    <br>
-                                    <p class="text-large">AQE improves large query performance. By default, AQE is disabled in ADB. To enable it, use: <code class="color-red bkg-grey-ultralight">set spark.sql.adaptive.enabled = true;</code></p>
-                                    <li class="text-xlarge"><strong>Partition by columns</strong></li>
-                                    <br>
-                                    <p class="text-large">Delta tables in ADB support partitioning, which enhances performance. You can partition by a column if you expect data in that partition to be at least 1 GB. If column cardinality is high, do not use that column for partitioning. For example, if you partition by user ID and there are 1M distinct user IDs, partitioning would increase table load time. Syntax example:
-                                        <br>
-                                        <code class="color-red bkg-grey-ultralight">
-                                        <br>CREATE TABLE events (
-                                        <br>DATE DATE
-                                        <br>,eventId STRING
-                                        <br>,eventType STRING
-                                        <br>,data STRING
-                                        <br>) USING delta PARTITIONED BY (DATE)</code>
-                                    </p>
-                                    <li class="text-xlarge"><strong>Use key vault credentials when creating mount points</strong></li>
-                                    <br>
-                                    <p class="text-large">When creating mount points to Azure Data Lake Storage (ADLS), use a key vault client ID and client secret to enhance security.</p>
-                                    <li class="text-xlarge"><strong>Query directly on parquet files from ADLS</strong></li>
-                                    <br>
-                                    <p class="text-large">If you need to use the data from parquet files, do not extract into ADB in intermediate table format. Instead, directly query on the parquet file to save time and storage. Example:
-                                        <br><code class="color-red bkg-grey-ultralight">SELECT ColumnName FROM parquet.`Location of the file`</code>
-                                    </p>
-                                    <li class="text-xlarge"><strong>Specify distribution when publishing data to Azure Data Warehouse (ADW)</strong></li>
-                                    <br>
-                                    <p class="text-large">Use hash distribution for fact tables or large tables, round robin for dimensional tables, replicated for small dimensional tables. Example:
-                                        <br>
-                                        <code class="color-red bkg-grey-ultralight">
-                                        df.write \
-                                        <br>.format("com.databricks.spark.sqldw") \
-                                        <br>.option("url", "jdbc:sqlserver://<the-rest-of-the-connection-string>
-                                        <br>") \
-                                        <br>.option("forwardSparkAzureStorageCredentials", "true") \
-                                        <br>.option("dbTable", "my_table_in_dw_copy") \
-                                        <br>.option("tableOptions", "table_options") \
-                                        <br>.save()</code>
-                                    </p>
-                                    <li class="text-xlarge"><strong>Customize cluster termination time</strong></li>
-                                    <br>
-                                    <p class="text-large">Terminating inactive clusters saves costs. ADB automatically terminates clusters based on a default down time. As different projects have different needs, it’s important to customize the down time to avoid premature or delayed termination. For example: set a longer down time for development environments, as work is continuous.</p>
-                                    <li class="text-xlarge"><strong>Enable cluster autoscaling</strong></li>
-                                    <br>
-                                    <p class="text-large">ADB offers cluster autoscaling, which is disabled by default. Enable this feature to enhance job performance. Instead of providing a fixed number of worker nodes during cluster creation, you should provide a minimum and maximum. ADB then automatically reallocates the worker nodes based on job characteristics.</p>
-                                    <li class="text-xlarge"><strong>Use Azure Data Factory (ADF) to run ADB notebook jobs</strong></li>
-                                    <br>
-                                    <p class="text-large">If you run numerous notebooks daily, the ADB job scheduler will not be efficient. The ADB job scheduler cannot set notebook dependency, so you would have to store all notebooks in one master, which is difficult to debug. Instead, schedule jobs through Azure Data Factory, which enables you to set dependency and easily debug if anything fails.</p>
-                                    <li class="text-xlarge"><strong>Use the retry feature in ADF when scheduling jobs</strong></li>
-                                    <br>
-                                    <p class="text-large">Processing notebooks in ADB through ADF can overload the cluster, causing notebooks to fail. If failure occurs, the entire job should not stop. To continue work from the point of failure, set ADF to retry two to three times with five-minute intervals. As a result, the processing should continue from the set time, saving you time and effort.</p>
-                                    <li class="text-xlarge"><strong>Implement failure checkpoints while publishing data</strong></li>
-                                    <br>
-                                    <p class="text-large">With ADB, you can dump data into multiple resources like ADW or ADLS. Publishing numerous tables to another resource takes time. If publishing fails, do not restart the entire process. Implement checkpoints, so that you can restart from the point of failure.</p>
-                                    <li class="text-xlarge"><strong>Consider upgrading to ADB Premium</strong></li>
-                                    <br>
-                                    <p class="text-large">Your business’s data has never been more valuable. Additional security is a worthwhile investment. ADB Premium includes 5-level access control. For more features, check out: <a href="https://azure.microsoft.com/en-us/pricing/details/databricks/" target="blank" class="underlined">Premium vs. Standard</a>.</p>
+                                    <li class="text-xlarge"><strong>Use Serverless Compute</strong></li>
+                                    <p class="text-large">Adopt <strong>Serverless SQL Warehouses</strong> for interactive SQL workloads to eliminate infrastructure management overhead and optimize costs through consumption-based billing. Serverless compute starts instantly and scales automatically.</p>
+
+                                    <li class="text-xlarge"><strong>Leverage Cluster Policies</strong></li>
+                                    <p class="text-large">Implement compute policies to enforce cost-effective configurations across all workspaces. Restrict instance types, enforce auto-termination settings, and ensure tagging compliance to prevent cost overruns.</p>
+
+                                    <li class="text-xlarge"><strong>Customize Cluster Termination</strong></li>
+                                    <p class="text-large">Terminating inactive clusters saves costs. Customize the auto-termination time based on the environment (e.g., shorter for production jobs, longer for development) to avoid paying for idle resources.</p>
+
+                                    <li class="text-xlarge"><strong>Enable Cluster Autoscaling</strong></li>
+                                    <p class="text-large">Enable autoscaling to allow clusters to resize based on workload. Provide a minimum and maximum number of worker nodes so ADB can automatically reallocate resources as needed.</p>
+
+                                    <li class="text-xlarge"><strong>Use Spot Instances</strong></li>
+                                    <p class="text-large">For interruptible workloads like development or testing, use Azure Spot VMs to save up to 90% on compute costs.</p>
+                                </ol>
+                            </div>
+
+                            <div id="performance">
+                                <h2>Performance Tuning</h2>
+                                <ol start="6">
+                                    <li class="text-xlarge"><strong>Enable Photon Engine</strong></li>
+                                    <p class="text-large">Use the <strong>Photon</strong> engine, a native vectorized query engine, to accelerate SQL queries and DataFrame API calls. It provides significant performance improvements for data ingestion, ETL, and interactive queries.</p>
+
+                                    <li class="text-xlarge"><strong>Optimize Delta Tables</strong></li>
+                                    <p class="text-large">Regularly run <code class="color-red bkg-grey-ultralight">OPTIMIZE</code> and <code class="color-red bkg-grey-ultralight">VACUUM</code> commands. <code class="color-red bkg-grey-ultralight">OPTIMIZE</code> compacts small files into larger ones to improve read performance, while <code class="color-red bkg-grey-ultralight">VACUUM</code> removes old files to save storage costs.</p>
+
+                                    <li class="text-xlarge"><strong>Use Liquid Clustering</strong></li>
+                                    <p class="text-large">Replace traditional partitioning and Z-Ordering with <strong>Liquid Clustering</strong>. It automatically adjusts data layout based on query patterns, solving the "small files" problem and improving query performance without manual tuning.</p>
+
+                                    <li class="text-xlarge"><strong>Adaptive Query Execution (AQE)</strong></li>
+                                    <p class="text-large">Ensure Adaptive Query Execution (AQE) is enabled (default in newer runtimes). AQE optimizes query plans at runtime based on actual data statistics, handling data skew and join strategies dynamically.</p>
+
+                                    <li class="text-xlarge"><strong>Cache Frequently Accessed Data</strong></li>
+                                    <p class="text-large">Use the Delta Cache (Disk Cache) to accelerate data reads by creating copies of remote files in the local storage (NVMe SSDs) of the worker nodes.</p>
+                                </ol>
+                            </div>
+
+                            <div id="governance-security">
+                                <h2>Governance & Security</h2>
+                                <ol start="11">
+                                    <li class="text-xlarge"><strong>Implement Unity Catalog</strong></li>
+                                    <p class="text-large">Use <strong>Unity Catalog</strong> for centralized access control, auditing, and data discovery across all Databricks workspaces. It provides a unified governance model for files, tables, and ML models.</p>
+
+                                    <li class="text-xlarge"><strong>Secure Secrets Management</strong></li>
+                                    <p class="text-large">Never hardcode credentials. Use <strong>Azure Key Vault</strong> backed secret scopes to securely manage and access secrets, keys, and tokens within notebooks and jobs.</p>
+
+                                    <li class="text-xlarge"><strong>Network Security</strong></li>
+                                    <p class="text-large">Deploy Databricks in your own Virtual Network (VNet Injection) to enable secure connectivity to other Azure services using Service Endpoints or Private Links.</p>
+                                </ol>
+                            </div>
+
+                            <div id="operational-excellence">
+                                <h2>Operational Excellence</h2>
+                                <ol start="14">
+                                    <li class="text-xlarge"><strong>Orchestrate with Azure Data Factory</strong></li>
+                                    <p class="text-large">Use Azure Data Factory (ADF) or Azure Synapse Pipelines to orchestrate complex workflows. This allows for better dependency management, retries, and monitoring across different Azure services.</p>
+
+                                    <li class="text-xlarge"><strong>CI/CD & Version Control</strong></li>
+                                    <p class="text-large">Integrate with Git (Azure DevOps or GitHub) for version control. Use <strong>Databricks Asset Bundles (DABs)</strong> or Terraform for Infrastructure as Code (IaC) to automate deployments across environments.</p>
+
+                                    <li class="text-xlarge"><strong>Clean Up Temporary Data</strong></li>
+                                    <p class="text-large">Use <code class="color-red bkg-grey-ultralight">dbutils.fs.rm()</code> to remove temporary files and drop intermediate tables after execution to maintain a clean environment and reduce storage costs.</p>
                                 </ol>
                             </div>
 
                             <h2>References</h2>
-                            <ul>
-                                <li class="text-large"><a href="https://docs.databricks.com/en/clusters/clusters-manage.html#automatic-termination">Automatic termination</a> – Databricks, last updated August 1, 2023</li>
-                                <li class="text-large"><a href="https://docs.microsoft.com/en-us/azure/databricks/clusters/configure#cluster-size-and-autoscaling">Configure Clusters (Autoscaling)</a> – Microsoft Corporation, last updated July 31, 2023</li>
-                                <li class="text-large"><a href="https://learn.microsoft.com/en-us/azure/databricks/security/secrets/">Create an Azure Key Vault-backed secret scope</a> – Microsoft Corporation, last updated July 27, 2023</li>
-                                <li class="text-large"><a href="https://docs.microsoft.com/en-us/azure/databricks/delta/">What is Delta Lake</a> – Microsoft Corporation, last updated June 28, 2023</li>
-                                <li class="text-large"><a href="https://docs.microsoft.com/en-us/azure/databricks/spark/latest/spark-sql/language-manual/sql-ref-datatypes#sql">Datatypes in ADB</a> – Microsoft Corporation, last updated April 14, 2023</li>
-                                <li class="text-large"><a href="https://databricks.com/blog/2020/05/29/adaptive-query-execution-speeding-up-spark-sql-at-runtime.html">Adaptive Query Execution: Speeding Up Spark SQL at Runtime</a> – Databricks, last updated May 29, 2020</li>
+                            <ul class="defaultBody">
+                                <li class="text-large"><a href="https://learn.microsoft.com/en-us/azure/databricks/lakehouse-architecture/cost-optimization/best-practices" target="_blank" rel="noopener noreferrer">Best practices for cost optimization</a> – Microsoft Corporation</li>
+                                <li class="text-large"><a href="https://learn.microsoft.com/en-us/azure/databricks/compute/photon" target="_blank" rel="noopener noreferrer">Photon Acceleration</a> – Microsoft Corporation</li>
+                                <li class="text-large"><a href="https://learn.microsoft.com/en-us/azure/databricks/delta/clustering" target="_blank" rel="noopener noreferrer">Liquid Clustering for Delta Tables</a> – Microsoft Corporation</li>
+                                <li class="text-large"><a href="https://learn.microsoft.com/en-us/azure/databricks/data-governance/unity-catalog/" target="_blank" rel="noopener noreferrer">Unity Catalog Governance</a> – Microsoft Corporation</li>
+                                <li class="text-large"><a href="https://learn.microsoft.com/en-us/azure/databricks/optimizations/aqe" target="_blank" rel="noopener noreferrer">Adaptive Query Execution</a> – Microsoft Corporation</li>
                             </ul>
                             <div class="row">
                                 <div class="column width-6">
@@ -176,7 +189,7 @@
                             </div>
                             <div class="section-block pt-10 pb-10 bkg-white"></div>
                             <div class="post-info center">
-                                <span class="post-date">Last updated: August 2, 2023</span>
+                                <span class="post-date">Last updated: December 10, 2025</span>
                             </div>
                         </div>
                     </article>
