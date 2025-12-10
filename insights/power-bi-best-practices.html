@@ -15,6 +15,7 @@
 
     <!-- Title &amp; Favicon -->
     <title>Power BI Best Practices - Improve report performance, security, and design</title>
+    <link rel="canonical" href="https://maqsoftware.com/insights/power-bi-best-practices" />
     <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
     <!-- Font -->
     <link
@@ -24,9 +25,38 @@
 
     <!-- Extra meta tags -->
     <meta name="description"
-        content="Discover essential Power BI best practices to optimize performance, strengthen security, and improve design of your Power BI reports. Get expert insights to elevate your Power BI reports.">
+        content="Discover essential Power BI best practices to optimize performance, strengthen security, and improve design of your Power BI reports. Updated for Microsoft Fabric.">
     <meta name="keywords"
-        content="Power BI best practices, report optimization, page load time, report performance, report design, report security, data visualization, layout, data protection, Power BI insights, Power BI tips">
+        content="Power BI best practices, Microsoft Fabric, Power BI performance optimization, semantic model, DAX optimization, report security, data visualization, Power BI tips">
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Power BI Best Practices",
+      "description": "Improve your Power BI performance, security, and design with these best practices for architects and developers.",
+      "image": "https://maqsoftware.com/img/blog/BPG006-main.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "MAQ Software",
+        "url": "https://maqsoftware.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "MAQ Software",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://maqsoftware.com/images/logos/MAQ-Software-URL.png"
+        }
+      },
+      "dateModified": "2025-12-10",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://maqsoftware.com/insights/power-bi-best-practices"
+      }
+    }
+    </script>
 
     <!-- Css -->
     <link rel="stylesheet" href="/css/core.min.css" />
@@ -69,9 +99,9 @@
                         <div class="post-content with-background">
                             <h1 class="post-title center">Power BI Best Practices</h1>
                             <h3 class="post-title center">Improve report performance, security, and design</h3>
-                            <p class="text-large">This guide covers the 31 best practices you need to improve your Power
+                            <p class="text-large">This guide covers the 33 best practices you need to improve your Power
                                 BI <a href="#performance">performance</a>, <a href="#security">security</a>, and
-                                <a href="#design">design</a>. As the 2021 Microsoft Power BI Partner of the Year, we have proven expertise in Power BI migration and optimization.</p>
+                                <a href="#design">design</a>. As a Microsoft Fabric Featured Partner and the 2021 Power BI Partner of the Year, we have proven expertise in Power BI migration and optimization.</p>
                             <div id="performance">
                                 <h2>Performance</h2>
                                 <ol>
@@ -109,10 +139,13 @@
                                     <p class="text-large mb-0">A Power BI tenant is the dedicated environment that houses an organization's data, reports, and dashboards. Microsoft operates data centers worldwide to provide and hosts its services. Each data center is in a specific region. </p>
                                     <p class="text-large">Hosting both tenant and data source in the same region minimizes network latency. This enables quicker data transfer, query execution, and thus faster data retrieval and report rendering.</p>
                                     
-                                    <li class="text-xlarge"><strong>Partition data and process multiple partitions in parallel for large datasets</strong></li>
+                                    <li class="text-xlarge"><strong>Partition data and process multiple partitions in parallel for large semantic models</strong></li>
                                     <p class="text-large mb-0">Partitioning is a technique that divides large tables into smaller subsets called partitions based on specific criteria. A columnar index is a type of database index that stores and organizes data by columns rather than rows.</p>
                                     <p class="text-large">Power BI uses columnar indexes, so longer, leaner tables perform better. The partitioning approach, where only necessary fields and tables are imported, improves data loading efficiency, and reduces resource consumption. This leads to faster report performance.</p>
                                     
+                                    <li class="text-xlarge"><strong>Use calculation groups to reduce redundant measures</strong></li>
+                                    <p class="text-large">Calculation groups allow you to define calculations (like time intelligence) once and apply them to multiple measures. This reduces the number of measures in your model and simplifies maintenance.</p>
+
                                     <li class="text-xlarge"><strong>Use templates (.PBIT files) instead of starting with an empty .PBIX
                                             file</strong></li>
                                     <p class="text-large">Templates enable you to develop standardized and branded reports faster. With templates, you can save custom color palettes and themes, ensuring corporate branding is pre-applied to all pages. Templates automatically connect to commonly used data sources and offer commonly used DAX measures as well. These all help streamline the report creation process and allow more time for analysis.</p>
@@ -121,7 +154,7 @@
                                     <p class="text-large mb-0">Use Power BI's query reduction settings to lower query frequency.</p>
                                     <p class="text-large mb-0">For slicers, select the <strong>Add an Apply button to each slicer to apply changes when you’re ready</strong> option. With this, changes to slicer selections are only applied when the user clicks the <strong>Apply</strong> button. This reduces the frequency of queries sent.</p>
                                     <p class="text-large mb-0">For filters, the <strong>Add a single Apply button to the filter pane to apply changes at once (preview)</strong> option consolidates filter changes and applies them all at once, further minimizing query volume.</p>
-                                    <p class="text-large">Reducing the number of queries improves report performance, especially when dealing with complex reports and large datasets.</p>
+                                    <p class="text-large">Reducing the number of queries improves report performance, especially when dealing with complex reports and large semantic models.</p>
 
                                     <li class="text-xlarge"><strong>Avoid bi-directional and many-to-many relationships
                                             against high cardinality columns</strong></li>
@@ -213,7 +246,7 @@
                                         target="blank">Personalize visuals</a> option in report settings when sharing reports with users. This fosters deeper engagement and exploration. Combining this feature with personal bookmarks empowers users, facilitating self-service BI.</p>
                                     
                                     <li class="text-xlarge"><strong>Avoid visual/page scrolls and using non-standard report sizes</strong></li>
-                                    <p class="text-large mb-0">Minimizing scrolls within visuals and on the page improves user experience. Having a lot of scrolls can be cumbersome for users, especially when trying to understand a complex visualization or dataset. Scrolling can disrupt the flow of data analysis and make it difficult to get a comprehensive view of the information presented.</p>
+                                    <p class="text-large mb-0">Minimizing scrolls within visuals and on the page improves user experience. Having a lot of scrolls can be cumbersome for users, especially when trying to understand a complex visualization or semantic model. Scrolling can disrupt the flow of data analysis and make it difficult to get a comprehensive view of the information presented.</p>
                                     <p class="text-large">Avoiding non-standard report sizes is also ideal as these sizes may not display consistently across different devices and platforms, resulting in poor responsiveness and a disjointed visual presentation.</p>
 
                                     <li class="text-xlarge"><strong>Use drillthrough buttons instead of expecting users to right-click on data points</strong></li>
@@ -221,6 +254,9 @@
                                     
                                     <li class="text-xlarge"><strong>Optimize visual interactions</strong></li>
                                     <p class="text-large">Every visual interacts with other visuals on the page either by cross-filtering or cross-highlighting. Evaluate the interactions which are relevant to the report audience and remove the unnecessary ones. For DirectQuery reports, use <strong>Optimize Ribbon</strong> to optimize reports for interactivity.</p>
+
+                                    <li class="text-xlarge"><strong>Use field parameters for dynamic reporting</strong></li>
+                                    <p class="text-large">Field parameters allow users to dynamically change the measures or dimensions being analyzed in a visual. This reduces the need for multiple visuals or bookmarks, improving report performance and user experience.</p>
                                 </ol>
                             </div>
                             <h2>References</h2>
@@ -241,7 +277,7 @@
                             
                             <div class="row">
                                 <div class="column width-6">
-                                    <img src="/img/blog/BPG005-main.jpg" alt="">
+                                    <img src="/img/blog/BPG005-main.jpg" alt="DAX Best Practices Guide Cover Image">
                                 </div>
                                 <div class="column width-6">
                                     <H2>DAX Best Practice Guide</H2>
@@ -252,7 +288,7 @@
                             </div>
                             <div class="section-block pt-10 pb-10 bkg-white"></div>
                             <div class="post-info center">
-                                <span class="post-date">Last updated: July 7, 2025</span>
+                                <span class="post-date">Last updated: December 10, 2025</span>
                             </div>
                         </div>
                     </article>
