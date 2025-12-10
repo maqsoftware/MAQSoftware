@@ -7,14 +7,14 @@
 
     <!-- Page-Specific SEO Tags -->
     <title>DAX Best Practices | MAQ Software Insights</title>
-    <meta name="description" content="Master DAX best practices to boost Power BI performance. Learn how to optimize DAX syntax, functions, and measures, avoid common mistakes, and speed up report processing.">
-    <meta name="keywords" content="DAX best practices, DAX optimization, Power BI performance optimization, Power BI performance tuning, DAX query best practices, Power BI report speed, common DAX mistakes, efficient DAX syntax, DAX performance tuning, Power BI data modeling, enterprise BI optimization, DAX for business intelligence">
+    <meta name="description" content="Master DAX with best practices for Visual Calculations, Calculation Groups, and DAX Query View. Optimize Power BI performance and simplify your data model.">
+    <meta name="keywords" content="DAX best practices, Visual Calculations, Calculation Groups, DAX Query View, Power BI performance optimization, DAX variables, COALESCE, INFO functions, MAQ Software">
     <meta name="page-type" content="insight">
     <meta name="page-topic" content="DAX Best Practices | Power BI Optimization | MAQ Software">
 
     <!-- Open Graph / Social -->
     <meta property="og:title" content="DAX Best Practices | MAQ Software Insights">
-    <meta property="og:description" content="Master DAX best practices to boost Power BI performance. Learn how to optimize DAX syntax, functions, and measures, avoid common mistakes, and speed up report processing.">
+    <meta property="og:description" content="Master DAX with best practices for Visual Calculations, Calculation Groups, and DAX Query View. Optimize Power BI performance.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://maqsoftware.com/insights/dax-best-practices">
     <meta property="og:site_name" content="MAQ Software">
@@ -30,9 +30,40 @@
     <meta name="twitter:site" content="@MAQSoftware">
     <meta name="twitter:creator" content="@MAQSoftware">
     <meta name="twitter:title" content="DAX Best Practices | MAQ Software Insights">
-    <meta name="twitter:description" content="Master DAX best practices to boost Power BI performance. Learn how to optimize DAX syntax, functions, and measures, avoid common mistakes, and speed up report processing.">
+    <meta name="twitter:description" content="Master DAX with best practices for Visual Calculations, Calculation Groups, and DAX Query View. Optimize Power BI performance.">
     <meta name="twitter:image" content="/images/solutions/cloud-main.jpg">
     <meta name="twitter:image:alt" content="DAX Best Practices | MAQ Software Insights">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "DAX Best Practices: Visual Calculations, Calculation Groups, and Performance",
+      "description": "A comprehensive guide to DAX best practices, covering Visual Calculations, Calculation Groups, DAX Query View, and performance optimization.",
+      "author": {
+        "@type": "Organization",
+        "name": "MAQ Software",
+        "url": "https://maqsoftware.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "MAQ Software",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://maqsoftware.com/images/logos/MAQ-Software-URL.png"
+        }
+      },
+      "datePublished": "2021-08-10",
+      "dateModified": "2025-12-01",
+      "image": "https://maqsoftware.com/images/solutions/cloud-main.jpg",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://maqsoftware.com/insights/dax-best-practices"
+      },
+      "keywords": "DAX, Power BI, Visual Calculations, Calculation Groups, Performance Optimization"
+    }
+    </script>
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
@@ -86,12 +117,13 @@
                             <h1 class="post-title center">DAX Best Practices</h1>
                             <h3 class="post-title center">Improve performance of your reports</h3>
                             <p class="text-large">This guide enables you to speed up your Power BI reports by optimizing
-                                their back-end code. As the 2021 Microsoft Power BI Partner of the Year, we have proven
+                                their back-end code. As an award-winning Microsoft Power BI Partner of the Year, we have proven
                                 expertise in implementing business intelligence and analytics
                                 solutions.</p>
                             <p class="text-large">Based on our experience, we have compiled these best practices in the
                                 following categories:</p>
                             <ol class="index">
+                                <li class="text-xlarge"><a href="#modern-features">Leveraging Modern DAX Features</a></li>
                                 <li class="text-xlarge"><a href="#syntax">Improving DAX Syntax</a></li>
                                 <li class="text-xlarge"><a href="#functions">Optimizing DAX Functions</a></li>
                                 <li class="text-xlarge"><a href="#mistakes">Common Mistakes to Avoid</a></li>
@@ -100,6 +132,21 @@
                             <p class="text-large">Clear your DAX cache before optimizing DAX as your DAX cache builds up
                                 from internal VertiPaq queries. You can clear your cache from DAX Studio. Resetting your
                                 cache also enables you to measure performance gains more effectively.</p>
+
+                            <div id="modern-features">
+                                <h2>Leveraging Modern DAX Features</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Use Visual Calculations</strong></li>
+                                    <p class="text-large"><strong>Visual calculations</strong> allow you to create calculations directly on the visual, referencing columns, measures, or other visual calculations. This approach simplifies DAX by handling complex logic (like running totals or moving averages) at the visual level, reducing semantic model complexity and improving performance.</p>
+
+                                    <li class="text-xlarge"><strong>Implement Calculation Groups</strong></li>
+                                    <p class="text-large">Use <strong>Calculation Groups</strong> to reduce measure sprawl. Instead of creating separate measures for YTD, QTD, and MTD for every metric (Sales, Cost, Profit), create a single calculation group to apply these time intelligence patterns dynamically to any measure.</p>
+
+                                    <li class="text-xlarge"><strong>Utilize DAX Query View</strong></li>
+                                    <p class="text-large">Use the <strong>DAX Query View</strong> in Power BI Desktop to write, run, and debug DAX queries natively. Use "Quick Queries" to instantly analyze table statistics and preview data without creating visuals.</p>
+                                </ol>
+                            </div>
+
                             <div id="syntax">
                                 <h2>Improving DAX Syntax</h2>
                                 <ol>
@@ -171,6 +218,9 @@
                                         values instead of using the comparison operator = Blank(). While = Blank()
                                         returns ‘True’ value for either blank values or empty strings, IsBlank
                                         exclusively checks for blanks.</p>
+
+                                    <li class="text-xlarge"><strong>Use COALESCE() for simpler null handling</strong></li>
+                                    <p class="text-large">Use the <strong>COALESCE()</strong> function to handle blank values more efficiently than nested IF statements. For example, use <code class="color-red bkg-grey-ultralight">COALESCE([Measure], 0)</code> instead of <code class="color-red bkg-grey-ultralight">IF(ISBLANK([Measure]), 0, [Measure])</code>. This improves readability and performance.</p>
                                     <li class="text-xlarge"><strong>Use = 0 instead of checking for ISBLANK() || =
                                             0</strong></li>
 
@@ -397,16 +447,19 @@
                             </div>
                             <h2>References</h2>
                             <ul class="defaultBody">
+                                <li class="text-large"><a href="https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-visual-calculations-overview" target="_blank" rel="noopener noreferrer">Visual calculations overview</a> – Microsoft Corporation</li>
+                                <li class="text-large"><a href="https://learn.microsoft.com/en-us/power-bi/transform-model/dax-query-view" target="_blank" rel="noopener noreferrer">DAX query view</a> – Microsoft Corporation</li>
+                                <li class="text-large"><a href="https://learn.microsoft.com/en-us/analysis-services/tabular-models/calculation-groups" target="_blank" rel="noopener noreferrer">Calculation groups</a> – Microsoft Corporation</li>
                                 <li class="text-large"><a
                                         href="https://docs.microsoft.com/en-us/dax/data-analysis-expressions-dax-reference">Data
                                         Analysis Expressions (DAX) Reference</a> – Microsoft Corporation, updated
                                     regularly</li>
                                 <li class="text-large"><a
                                         href="https://docs.microsoft.com/en-us/dax/dax-function-reference">DAX function
-                                        reference</a> – Microsoft Corporation, published June 21, 2022 </li>
+                                        reference</a> – Microsoft Corporation</li>
                                 <li class="text-large"><a
                                         href="https://docs.microsoft.com/en-us/power-bi/power-bi-reports-performance">Optimization
-                                        guide for Power BI</a> – Microsoft Corporation, published February 26, 2023
+                                        guide for Power BI</a> – Microsoft Corporation
                                 </li>
                             </ul>
 
@@ -423,7 +476,7 @@
                             </div>
                             <div class="section-block pt-10 pb-10 bkg-white"></div>
                             <div class="post-info center">
-                                <span class="post-date">Last updated: July 27, 2023</span>
+                                <span class="post-date">Last updated: December 1, 2025</span>
                             </div>
                         </div>
                     </article>
