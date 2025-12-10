@@ -15,6 +15,7 @@
 
     <!-- Title & Favicon -->
     <title>Azure Cost Optimization Best Practice Guide | MAQ Software Insights</title>
+    <link rel="canonical" href="https://maqsoftware.com/insights/azure-architecture-best-practices" />
     <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
 
     <!-- Font -->
@@ -23,7 +24,36 @@
 
     <!-- Extra meta tags -->
     <meta name="description" content="Reduce Azure costs with our proven best practice guide. Learn how to tag resources, automate scaling, use Azure reservations, and apply cost alerts to optimize cloud spend." />
-    <meta name="keywords" content="Azure cost optimization, Azure best practices, cloud cost management, reduce Azure costs, Azure tagging, Azure automation, Azure reservations, Azure Hybrid Benefits, Azure Advisor, Azure budgets, cost alerts, Azure governance" />
+    <meta name="keywords" content="Azure cost optimization, Azure best practices, cloud cost management, reduce Azure costs, Azure tagging, Azure automation, Azure reservations, Azure Hybrid Benefits, Azure Advisor, Azure budgets, cost alerts, Azure governance, FinOps, Azure Savings Plans, Spot Instances" />
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Azure Cost Optimization Best Practice Guide",
+      "description": "Reduce Azure costs with our proven best practice guide. Learn how to tag resources, automate scaling, use Azure reservations, and apply cost alerts to optimize cloud spend.",
+      "image": "https://maqsoftware.com/images/expertise/cloud-main.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "MAQ Software",
+        "url": "https://maqsoftware.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "MAQ Software",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://maqsoftware.com/images/logos/MAQ-Software-URL.png"
+        }
+      },
+      "dateModified": "2025-12-10",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://maqsoftware.com/insights/azure-architecture-best-practices"
+      }
+    }
+    </script>
 
     <!-- Css -->
     <link rel="stylesheet" href="/css/core.min.css" />
@@ -70,90 +100,89 @@
 
                             <p class="text-large">Cost management is a recurring theme at the enterprise level. It is important that all responsible teams review & understand the cost. You can follow the phase-by-phase best practice approach below to optimize the cost of Azure.</p>
                             <p class="text-large">At MAQ Software, we have migrated hundreds of applications to Azure. Based on our experience, we have compiled ten best practices to optimize costs for Azure platforms.</p>
-                            <ol>
-                                <li class="text-xlarge"><strong>Inventory & Tagging</strong>
-                                <ul>
-                                    <li class="text-large">Get list of all Azure resources using automated PowerShell script or using REST (Representational State Transfer) API.</li>
-                                    <li class="text-large">Perform Resource tagging such as Owner, Purpose, Environment, etc. for data enrichment.</li>
-                                    <li class="text-large">Enforce tagging conventions using Azure policy.</li>
-                                </ul>
-                                <p class="text-large">These steps will help centralized governance teams to make wise cost management decisions.</p>
-                                </li>
-                                <li class="text-xlarge"><strong>Cleanup</strong>
-                                <ul>
-                                    <li class="text-large">Find unused resources and notify the respective owners.</li>
-                                    <li class="text-large">Clean up idle & orphan resources.</li>
-                                    <li class="text-large">Audit and restrict access on creation of resources.</li>
-                                </ul>
-                            </li>
-                            <li class="text-xlarge"><strong>Resource Optimization</strong>
-                                <ul>
-                                    <li class="text-large">Review correct resource families & Stock Keeping Units (SKUs).</li>
-                                    <li class="text-large">Review correct resources/service types.</li>
-                                    <li class="text-large">Select proper resource location to avoid unwanted data movements between the datacenters.</li>
-                                    <li class="text-large">Identify suitable service plan (consumption basis, pay as you go).</li>
-                                    <li class="text-large">Review different storage configuration (Premium Solid-State Drives, Standard Solid-State Drives, Hot Tier, and Cold Tier).</li>
-                                    <li class="text-large">Review and plan for data archival.</li>
-                                </ul>
-                            </li>
-                            <li class="text-xlarge"><strong>Automation</strong>
-                                <ul>
-                                    <li class="text-large">Schedule Runbooks to pause and start different Azure services such as Azure Analysis Services and VMs.</li>
-                                    <li class="text-large">Setup autoscaling based on the CPU/memory usage metrics.</li>
-                                    <li class="text-large">Setup Azure policy to restrict the resource SKU/location while creating the resource.</li>
-                                    <li class="text-large">Setup cost alerts.</li>
-                                </ul>
-                            </li>
-                            <li class="text-xlarge"><strong>Solution Optimization</strong>
-                                <ul>
-                                    <li class="text-large">Review existing architecture.</li>
-                                    <li class="text-large">Identify how data flows in and out of Azure.</li>
-                                    <li class="text-large">Find resource utilization.</li>
-                                    <li class="text-large">Brainstorm to optimize resource instance within teams/environments.</li>
-                                    <li class="text-large">Review individual resource costs.</li>
-                                </ul>
-                            </li>
-                            <li class="text-xlarge"><strong>Setup Cost Budget & Alert</strong>
-                                <ul>
-                                    <li class="text-large">Set cost budgets for the resources to proactively manage costs, and to monitor how spending progresses over time.</li>
-                                    <li class="text-large">Notify owners/users if the cost exceeds the set threshold limit.</li>
-                                </ul>
-                            </li>
-                            <li class="text-xlarge"><strong>Buy Azure Reservation</strong>
-                                <ul>
-                                    <li class="text-large">Identify resources which can be purchased using Azure reservation.</li>
-                                    <li class="text-large">Pre-payment provides a discount on the resources you use. Costs for VM compute, SQL Database compute, Azure Cosmos DB, or other resources can be significantly reduced by up to 72% on pay as you go prices.</li>
-                                    <li class="text-large">Cancel reserved instances.</li>
-                                    <li class="text-large">Reserved instances provide a billing discount and do not affect the runtime state of the resources.</li>
-                                </ul>
-                            </li>
-                            <li class="text-xlarge"><strong>Azure Hybrid Benefits</strong>
-                                <ul>
-                                    <li class="text-large">Enable Azure Hybrid Benefits (AHB) for on-premises licenses in Azure.</li>
-                                    <li class="text-large">Use on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure.</li>
-                                </ul>
-                            </li>
-                            <li class="text-xlarge"><strong>Review Azure Advisor Recommendation</strong>
-                                <ul>
-                                    <li class="text-large">Review Azure Advisor recommendations to identify opportunities to reduce cost.</li>
-                                    <li class="text-large">Act on Azure Advisor recommendations.</li>
-                                    <li class="text-large">Example:
-                                        <ul style="list-style-type: square;">
-                                            <li class="text-large">Identify virtual machines with low utilization from compute or network usage standpoint and either shut down or resize the machine.</li>
-                                            <li class="text-large">Resize Azure SQL database SKUs based on current load.</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="text-xlarge"><strong>Monitor</strong>
-                                <ul>
-                                    <li class="text-large">Visualize data in consolidated or custom dashboards.</li>
-                                    <li class="text-large">Detect spending anomalies and usage inefficiencies.</li>
-                                    <li class="text-large">Review and act if forecast exceed the defined threshold limit.</li>
-                                    <li class="text-large">Perform cost reviews on regular cadence.</li>
-                                </ul>
-                            </li>
-                        </ol>
+                            
+                            <div id="governance">
+                                <h2>Governance & Monitoring</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>Inventory & Tagging</strong></li>
+                                    <p class="text-large mb-0">Get a list of all Azure resources using <strong>Azure Resource Graph</strong> for efficient querying, or automated PowerShell scripts.</p>
+                                    <p class="text-large mb-0">Perform resource tagging such as Owner, Purpose, Environment, etc., for data enrichment.</p>
+                                    <p class="text-large">Enforce tagging conventions using Azure Policy. These steps will help centralized governance teams to make wise cost management decisions.</p>
+
+                                    <li class="text-xlarge"><strong>Setup Cost Budget & Alert</strong></li>
+                                    <p class="text-large mb-0">Set cost budgets for the resources to proactively manage costs, and to monitor how spending progresses over time.</p>
+                                    <p class="text-large">Notify owners/users if the cost exceeds the set threshold limit.</p>
+
+                                    <li class="text-xlarge"><strong>Monitor</strong></li>
+                                    <p class="text-large mb-0">Visualize data in consolidated or custom dashboards.</p>
+                                    <p class="text-large mb-0">Detect spending anomalies and usage inefficiencies.</p>
+                                    <p class="text-large mb-0">Review and act if forecast exceed the defined threshold limit.</p>
+                                    <p class="text-large">Perform cost reviews on regular cadence.</p>
+                                </ol>
+                            </div>
+
+                            <div id="resource-management">
+                                <h2>Resource Management</h2>
+                                <ol start="4">
+                                    <li class="text-xlarge"><strong>Cleanup</strong></li>
+                                    <p class="text-large mb-0">Find unused resources and notify the respective owners.</p>
+                                    <p class="text-large mb-0">Clean up idle & orphan resources using <strong>Azure Advisor</strong> recommendations.</p>
+                                    <p class="text-large">Audit and restrict access on creation of resources.</p>
+
+                                    <li class="text-xlarge"><strong>Automation</strong></li>
+                                    <p class="text-large mb-0">Schedule Runbooks to pause and start different Azure services such as Azure Analysis Services and VMs.</p>
+                                    <p class="text-large mb-0">Setup autoscaling based on the CPU/memory usage metrics.</p>
+                                    <p class="text-large mb-0">Setup Azure policy to restrict the resource SKU/location while creating the resource.</p>
+                                    <p class="text-large">Setup cost alerts.</p>
+
+                                    <li class="text-xlarge"><strong>Review Azure Advisor Recommendation</strong></li>
+                                    <p class="text-large mb-0">Review Azure Advisor recommendations to identify opportunities to reduce cost.</p>
+                                    <p class="text-large mb-0">Act on Azure Advisor recommendations.</p>
+                                    <p class="text-large mb-0">Example: Identify virtual machines with low utilization from compute or network usage standpoint and either shut down or resize the machine.</p>
+                                    <p class="text-large">Resize Azure SQL database SKUs based on current load.</p>
+                                </ol>
+                            </div>
+
+                            <div id="rate-optimization">
+                                <h2>Rate Optimization</h2>
+                                <ol start="7">
+                                    <li class="text-xlarge"><strong>Buy Azure Reservations & Savings Plans</strong></li>
+                                    <p class="text-large mb-0">Identify resources which can be purchased using Azure Reservations for stable workloads (up to 72% savings).</p>
+                                    <p class="text-large mb-0">Use <strong>Azure Savings Plans for Compute</strong> for dynamic or evolving workloads (up to 65% savings).</p>
+                                    <p class="text-large">Pre-payment provides a discount on the resources you use. Reserved instances provide a billing discount and do not affect the runtime state of the resources.</p>
+
+                                    <li class="text-xlarge"><strong>Azure Hybrid Benefits</strong></li>
+                                    <p class="text-large mb-0">Enable Azure Hybrid Benefits (AHB) for on-premises licenses in Azure.</p>
+                                    <p class="text-large">Use on-premises Software Assurance-enabled Windows Server and SQL Server licenses on Azure.</p>
+                                </ol>
+                            </div>
+
+                            <div id="infrastructure-optimization">
+                                <h2>Infrastructure Optimization</h2>
+                                <ol start="9">
+                                    <li class="text-xlarge"><strong>Resource Optimization</strong></li>
+                                    <p class="text-large mb-0">Review correct resource families & Stock Keeping Units (SKUs).</p>
+                                    <p class="text-large mb-0">Consider <strong>Azure Spot Virtual Machines</strong> for interruptible workloads to save up to 90%.</p>
+                                    <p class="text-large mb-0">Select proper resource location to avoid unwanted data movements between the datacenters.</p>
+                                    <p class="text-large mb-0">Identify suitable service plan (consumption basis, pay as you go).</p>
+                                    <p class="text-large">Review different storage configuration (Premium Solid-State Drives, Standard Solid-State Drives, Hot Tier, and Cold Tier) and plan for data archival.</p>
+
+                                    <li class="text-xlarge"><strong>Solution Optimization</strong></li>
+                                    <p class="text-large mb-0">Review existing architecture.</p>
+                                    <p class="text-large mb-0">Identify how data flows in and out of Azure.</p>
+                                    <p class="text-large mb-0">Find resource utilization.</p>
+                                    <p class="text-large mb-0">Brainstorm to optimize resource instance within teams/environments.</p>
+                                    <p class="text-large">Review individual resource costs.</p>
+                                </ol>
+                            </div>
+
+                            <h2>References</h2>
+                            <ul class="defaultBody">
+                                <li class="text-large"><a href="https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/" target="_blank" rel="noopener noreferrer">Azure Well-Architected Framework - Cost Optimization</a> – Microsoft Corporation</li>
+                                <li class="text-large"><a href="https://learn.microsoft.com/en-us/azure/cost-management-billing/savings-plan/savings-plan-compute-overview" target="_blank" rel="noopener noreferrer">Azure Savings Plans for Compute</a> – Microsoft Corporation</li>
+                                <li class="text-large"><a href="https://learn.microsoft.com/en-us/azure/cost-management-billing/reservations/save-compute-costs-reservations" target="_blank" rel="noopener noreferrer">Azure Reservations</a> – Microsoft Corporation</li>
+                                <li class="text-large"><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms" target="_blank" rel="noopener noreferrer">Azure Spot Virtual Machines</a> – Microsoft Corporation</li>
+                            </ul>
                             <!-- <h2>References</h2>
                             <ul>
                                 <li class="text-large"><a href="https://maqsoftware.com/expertise/cloudtransformation/azure-security-best-practices">Azure Security Best Practices</a> – MAQ Software, last updated June 21, 2021 </li>
@@ -171,7 +200,7 @@
                             </div>
                             <div class="section-block pt-10 pb-10 bkg-white"></div>
                             <div class="post-info center">
-                                <span class="post-date">Last updated: July 27, 2023</span>
+                                <span class="post-date">Last updated: December 10, 2025</span>
                             </div>
                         </div>
                     </article>
