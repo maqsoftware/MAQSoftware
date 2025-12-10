@@ -2,226 +2,108 @@
 <html lang="en">
 
 <head>
+  <!-- ========================= -->
+  <!-- META TAGS (TOP PRIORITY) -->
+  <!-- ========================= -->
   <meta charset="UTF-8" />
-  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
-
-  <!-- SEO Meta Tags: Essential tags that tell search engines how to crawl and index this page -->
-  <!-- Robots: Instructs search engines to index the page, follow links, and allows unlimited snippet length and large image previews for rich results -->
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <!-- Google-specific crawling instructions: Ensures Google can fully index content and display rich snippets -->
-  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <!-- Bing-specific crawling instructions: Ensures Bing search engine can properly index the page -->
-  <meta name="bingbot" content="index, follow" />
-  <!-- Author attribution: Helps establish content authorship and contributes to E-A-T (Expertise, Authoritativeness, Trustworthiness) signals -->
-  <meta name="author" content="MAQ Software" />
-  <!-- Publisher: Identifies the organization responsible for the content, important for business credibility -->
-  <meta name="publisher" content="MAQ Software" />
-  <!-- Copyright: Legal attribution that helps protect intellectual property and establishes content ownership -->
-  <meta name="copyright" content="MAQ Software" />
-  <!-- Language: Specifies primary language for search engines and screen readers, improves accessibility -->
-  <meta name="language" content="en-US" />
-  <!-- Revisit frequency: Suggests how often search engines should re-crawl this page (homepage changes frequently) -->
-  <meta name="revisit-after" content="7 days" />
-  <!-- Content rating: Indicates content is suitable for general audiences, helps with content filtering -->
-  <meta name="rating" content="general" />
-  <!-- Distribution: Specifies global availability, helps with international SEO -->
-  <meta name="distribution" content="global" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
   
-  <!-- Page Information: Additional metadata that helps AI engines and advanced crawlers understand page context -->
-  <!-- Page type: Clearly identifies this as the main homepage for better categorization -->
+  <!-- SEO, Crawlers, and Attribution -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow" />
+  <meta name="author" content="MAQ Software" />
+  <meta name="publisher" content="MAQ Software" />
+  <meta name="copyright" content="MAQ Software" />
+  <meta name="language" content="en-US" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="rating" content="general" />
+  <meta name="distribution" content="global" />
   <meta name="page-type" content="homepage" />
-  <!-- Page topic: Summarizes main business focus for AI engines and topic-based search algorithms -->
   <meta name="page-topic" content="Microsoft Fabric Featured Partner - Data & Artificial Intelligence (AI) Services and Solutions" />
-  <!-- Expiration: Indicates content doesn't expire, preventing premature removal from search indexes -->
   <meta name="expires" content="never" />
-  <!-- Cache control: Allows public caching for better performance and CDN optimization -->
   <meta name="cache-control" content="public" />
   
-  <!-- Canonical URL: Prevents duplicate content issues by specifying the preferred URL for this page -->
-  <!-- Essential for SEO: Consolidates page authority when multiple URLs could show same content -->
+  <!-- Canonical and Sitemap -->
   <link rel="canonical" href="https://maqsoftware.com/" />
-  
-  <!-- Sitemap Reference: Helps search engines discover and efficiently crawl all website pages -->
-  <!-- Critical for large sites: Ensures no important pages are missed during indexing -->
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://maqsoftware.com/sitemap.xml" />
   
-  <!-- DNS Prefetch and Preconnect for Performance: Speeds up loading of external resources -->
-  <!-- DNS prefetch: Resolves domain names before they're needed, reducing connection time -->
-  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-  <link rel="dns-prefetch" href="//www.clarity.ms" />
-  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
-  <!-- Preconnect: Establishes early connections to critical external resources for faster loading -->
-  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
-  
-  <!-- Alternate Languages: Comprehensive international SEO for global AI & data consulting reach -->
-  <!-- Primary English markets -->
-  <link rel="alternate" hreflang="en-us" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-gb" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-ca" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-au" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-in" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-sg" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-hk" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-za" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-nz" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-ie" href="https://maqsoftware.com/" />
-  
-  <!-- European markets -->
-  <link rel="alternate" hreflang="en-de" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-fr" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-nl" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-ch" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-se" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-no" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-dk" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-fi" href="https://maqsoftware.com/" />
-  
-  <!-- Asia-Pacific markets -->
-  <link rel="alternate" hreflang="en-jp" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-kr" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-cn" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-ph" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-th" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-my" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-id" href="https://maqsoftware.com/" />
-  
-  <!-- Middle East & Africa -->
-  <link rel="alternate" hreflang="en-ae" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-sa" href="https://maqsoftware.com/" />
-  <link rel="alternate" hreflang="en-il" href="https://maqsoftware.com/" />
-  
-  <!-- Generic and default fallbacks -->
+  <!-- Language & Geo Targeting -->
   <link rel="alternate" hreflang="en" href="https://maqsoftware.com/" />
-  <!-- x-default: Fallback for users whose language/region isn't specifically targeted -->
+  <link rel="alternate" hreflang="en-us" href="https://maqsoftware.com/" />
   <link rel="alternate" hreflang="x-default" href="https://maqsoftware.com/" />
-  
-  <!-- Geo Location: Improves local SEO and helps search engines understand business location -->
-  <!-- Geographic region: Helps with location-based search results and local business listings -->
   <meta name="geo.region" content="US-WA" />
-  <!-- Place name: Human-readable location that enhances local search visibility -->
   <meta name="geo.placename" content="Redmond, Washington" />
-  <!-- GPS coordinates: Precise location for mapping services and location-based features -->
   <meta name="geo.position" content="47.6740;-122.1215" />
-  <!-- ICBM coordinates: Alternative coordinate format for broader compatibility with geo-location systems -->
   <meta name="ICBM" content="47.6740, -122.1215" />
-  
-  <!-- Open Graph: Controls how content appears when shared on Facebook, LinkedIn, and other social platforms -->
-  <!-- OG title: Displayed as the headline when shared on social media -->
+
+  <!-- Social Sharing (Open Graph & Twitter) -->
   <meta property="og:title" content="Microsoft Fabric Featured Partner | Data & Artificial Intelligence (AI) Services | MAQ Software" />
-  <!-- OG type: Tells social platforms this is a business website homepage -->
   <meta property="og:type" content="website" />
-  <!-- OG URL: Canonical URL for social sharing, prevents duplicate social signals -->
   <meta property="og:url" content="https://maqsoftware.com/" />
-  <!-- Site name: Displayed as the site attribution in social shares -->
   <meta property="og:site_name" content="MAQ Software" />
-  <!-- OG image: Main image shown in social media previews (recommended: 1200x630px) -->
   <meta property="og:image" content="https://maqsoftware.com/images/logos/MAQ-Software-URL.png" />
-  <!-- Secure image URL: HTTPS version for secure social media platforms -->
   <meta property="og:image:secure_url" content="https://maqsoftware.com/images/logos/MAQ-Software-URL.png" />
-  <!-- Image dimensions: Helps social platforms optimize display layout -->
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <!-- Image format: Specifies file type for proper handling -->
   <meta property="og:image:type" content="image/png" />
-  <!-- Image alt text: Accessibility and context for screen readers and when image fails to load -->
   <meta property="og:image:alt" content="MAQ Software - Microsoft Fabric Featured Partner - Top 25 Global Microsoft Partner" />
-  <!-- OG description: Text shown below the title in social media previews -->
-  <meta property="og:description"
-    content="With expertise in Microsoft Fabric, Power BI, data modernization, data migration, and Azure migration, MAQ Software accelerates data and AI initiatives for enterprises. Top 25 Global Microsoft Partner, Inc. 5000 recognized 12 times." />
-  <!-- Primary locale: Specifies content language for social platforms -->
+  <meta property="og:description" content="With expertise in Microsoft Fabric, Power BI, data modernization, data migration, and Azure migration, MAQ Software accelerates data and AI initiatives for enterprises. Top 25 Global Microsoft Partner, Inc. 5000 recognized 12 times." />
   <meta property="og:locale" content="en_US" />
-  <!-- Alternate locales: Additional language versions for international social sharing -->
   <meta property="og:locale:alternate" content="en_GB" />
   <meta property="og:locale:alternate" content="en_CA" />
-  <!-- Last modified: Helps social platforms know when to refresh cached previews -->
   <meta property="og:updated_time" content="2025-10-23T00:00:00Z" />
-  <!-- Business contact information: Enhanced business profile data for social platforms -->
-  <meta property="business:contact_data:street_address" content="2027 152nd AVE NE" />
-  <meta property="business:contact_data:locality" content="Redmond" />
-  <meta property="business:contact_data:region" content="WA" />
-  <meta property="business:contact_data:postal_code" content="98052" />
-  <meta property="business:contact_data:country_name" content="United States" />
-  
-  <!-- Twitter Card: Optimizes appearance and functionality when shared on Twitter/X -->
-  <!-- Card type: Large image format provides maximum visual impact in Twitter feeds -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <!-- Twitter site account: Associates shares with official company Twitter account -->
-  <meta name="twitter:site" content="@MAQSoftware" />
-  <!-- Twitter creator: Attribution for the content creator (same as site for corporate pages) -->
-  <meta name="twitter:creator" content="@MAQSoftware" />
-  <!-- Twitter title: Headline displayed in Twitter card (can differ from page title) -->
-  <meta name="twitter:title" content="Microsoft Fabric Featured Partner | Data & Artificial Intelligence (AI) Services | MAQ Software" />
-  <!-- Twitter description: Text shown in Twitter card preview -->
-  <meta name="twitter:description" content="With expertise in Microsoft Fabric, Power BI, data modernization, data migration, and Azure migration, MAQ Software accelerates data and AI initiatives for enterprises. Top 25 Global Microsoft Partner, Inc. 5000 recognized 12 times." />
-  <!-- Twitter image: Visual displayed in Twitter card (recommended: 1200x600px minimum) -->
-  <meta name="twitter:image" content="https://maqsoftware.com/images/logos/MAQ-Software-URL.png" />
-  <!-- Twitter image alt text: Accessibility description for screen readers -->
-  <meta name="twitter:image:alt" content="MAQ Software - Microsoft Fabric Featured Partner - Top 25 Global Microsoft Partner" />
-  <!-- Twitter widgets theme: Controls appearance of embedded Twitter elements -->
-  <meta name="twitter:widgets:theme" content="light" />
 
-  <!-- Title & Favicon -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@MAQSoftware" />
+  <meta name="twitter:creator" content="@MAQSoftware" />
+  <meta name="twitter:title" content="Microsoft Fabric Featured Partner | Data & Artificial Intelligence (AI) Services | MAQ Software" />
+  <meta name="twitter:description" content="With expertise in Microsoft Fabric, Power BI, data modernization, data migration, and Azure migration, MAQ Software accelerates data and AI initiatives for enterprises." />
+  <meta name="twitter:image" content="https://maqsoftware.com/images/logos/MAQ-Software-URL.png" />
+  <meta name="twitter:image:alt" content="MAQ Software - Microsoft Fabric Featured Partner - Top 25 Global Microsoft Partner" />
+
+  <!-- Core SEO Metadata -->
+  <meta name="description" content="Leading AI & data consulting firm delivering transformative business intelligence solutions. Top 25 Global Microsoft Partner, premier Fabric expert, 1,800+ engineers." />
+  <meta name="keywords" content="AI consulting, Microsoft Fabric, Power BI consulting, Azure AI services, data modernization, enterprise AI solutions" />
+
+  <!-- Business and Schema Info -->
+  <meta name="company" content="MAQ Software" />
+  <meta name="owner" content="MAQ Software" />
+  <meta name="contact" content="CustomerSuccess@MAQSoftware.com" />
+  <meta name="target" content="Fortune 500 Companies, Enterprise Leaders" />
+  <meta name="audience" content="Chief Data Officers, CTOs, BI Managers" />
+  
+  <!-- ========================= -->
+  <!-- STRUCTURAL LINKS (MIDDLE) -->
+  <!-- ========================= -->
   <title>Microsoft Fabric Featured Partner | MAQ Software</title>
   <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
-  <!-- Multiple favicon sizes: Ensures proper icon display across all devices and platforms -->
-  <!-- Standard desktop favicon sizes for optimal display quality -->
   <link rel="icon" type="image/png" sizes="32x32" href="/images/logos/MAQ-Software-URL.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/logos/MAQ-Software-URL.png">
-  <!-- Apple Touch Icon: High-resolution icon for iOS devices when saved to home screen -->
   <link rel="apple-touch-icon" sizes="180x180" href="/images/logos/MAQ-Software-URL.png">
-  
-  <!-- Progressive Web App (PWA) Configuration: Enables app-like behavior on mobile devices -->
-  <!-- Theme color: Controls browser UI color on mobile devices for brand consistency -->
-  <meta name="theme-color" content="#0078d4">
-  <!-- Microsoft tile color: Background color for Windows Start Menu tiles -->
-  <meta name="msapplication-TileColor" content="#0078d4">
-  <!-- Browser configuration: References external file with detailed browser customization settings -->
-  <meta name="msapplication-config" content="/browserconfig.xml">
+  <meta name="theme-color" content="#0078d4" />
+  <meta name="msapplication-TileColor" content="#0078d4" />
+  <meta name="msapplication-config" content="/browserconfig.xml" />
 
-  <!-- Font Loading: External fonts for enhanced typography and brand consistency -->
-  <!-- Google Fonts: Primary typography including Roboto and Hind Madurai for body text -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&subset=latin-ext"
-    rel="stylesheet">
-  <!-- Font optimization: Preconnect to Google Fonts for faster loading -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Inter font: Modern, accessible font for UI elements and headings -->
+  <!-- ========================= -->
+  <!-- IMPORTS & SCRIPTS (BOTTOM) -->
+  <!-- ========================= -->
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&subset=latin-ext" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-
-  <!-- CSS Resources: Stylesheets for UI components, frameworks, and custom styling -->
-  <!-- Fluent UI Icons: Microsoft's design system icons for consistent interface elements -->
+  
+  <!-- CSS -->
   <link rel="stylesheet" href="https://unpkg.com/@fluentui/font-icons-mdl2@1.0.2/dist/fluentui-icons-mdl2.css">
-  <!-- Office Fabric UI: Microsoft's component library for enterprise applications -->
-  <link rel="stylesheet"
-    href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css" />
-  
-  <!-- Custom CSS: Application-specific styling and responsive design -->
-  <!-- Core styles: Base framework and component styles -->
+  <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css" />
   <link rel="stylesheet" href="css/core.min.css" />
-  <!-- Skin styles: Theme and color scheme customization -->
   <link rel="stylesheet" href="css/skin.css" />
-  <!-- Common styles: Shared utility classes and layout styles -->
   <link rel="stylesheet" href="css/commonstyle.css" />
-  <!-- Reset styles: Commented out - normalize browser default styling -->
-  <!-- <link rel="stylesheet" href="css/reset.css" /> -->
-  <!-- Custom page styles: Homepage-specific styling and responsive adjustments -->
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   
-  <!-- Font Awesome Icons: Comprehensive icon library for UI elements -->
-  <!-- Font Awesome 4.7.0: Legacy icons for backward compatibility -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Font Awesome 6.4.2: Latest icons with enhanced accessibility features -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-
-  <!-- Legacy Browser Support: Compatibility shims for older browsers -->
-  <!--[if lt IE 9]>
-        <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    
-  <!-- Analytics & Tracking: Performance monitoring and user behavior analysis -->
-  <!-- Google Analytics: Comprehensive website analytics for traffic and user insights -->
+  <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -230,7 +112,6 @@
     gtag('config', 'G-S0W302CGQG');
   </script>
 
-  <!-- Microsoft Clarity: User session recordings and heatmaps for UX optimization -->
   <script type="text/javascript">
     (function (c, l, a, r, i, t, y) {
       c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
@@ -239,221 +120,18 @@
     })(window, document, "clarity", "script", "oekduyvjws");
   </script>
 
-  <!-- JavaScript Libraries: Core functionality and interactive components -->
-  <!-- jQuery: Foundation library for DOM manipulation and event handling -->
+  <!-- JS Libraries -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- Case studies carousel: Custom component for displaying client success stories -->
   <script src="js/case-studies-carousel.js"></script>
-  <!-- Microsoft Clarity backup script: Commented out duplicate implementation -->
-  <!-- <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "oekduyvjws");
-  </script> -->
-
-  <!-- Primary Meta Description: Search engine display snippet that summarizes page content and value proposition -->
-  <!-- This appears in search results and influences click-through rates from search engines -->
-  <meta name="description"
-    content="Leading AI & data consulting firm delivering transformative business intelligence solutions. As a Top 25 Global Microsoft Partner and premier Fabric expert with 1,800+ engineers, we help Fortune 500 companies achieve 10-15% revenue growth through AI-powered data modernization. 20+ years proven expertise, 8 Microsoft specializations, Inc. 5000 recognized 12 times.">
-  
-  <!-- Enhanced SEO Meta Tags: Additional metadata for comprehensive search engine optimization -->
-  <!-- Keywords: Comprehensive AI & data consulting terms with Microsoft Fabric expertise emphasis -->
-  <meta name="keywords"
-    content="AI consulting, artificial intelligence consulting, data consulting, AI for enterprises, AI services, artificial intelligence services, AI solutions, data and AI consulting, business intelligence consulting, data analytics consulting, AI-powered business intelligence, enterprise AI solutions, data modernization services, AI transformation consulting, Microsoft Fabric expert, Microsoft Fabric consulting, Premier Microsoft Fabric Featured Partner, Top 25 Microsoft global partner, Fortune 500 AI consulting, enterprise data solutions, AI strategy consulting, generative AI consulting, machine learning consulting, data science consulting, cloud AI solutions, AI implementation services, business intelligence acceleration, data-driven transformation, AI adoption services, enterprise analytics, data platform consulting, AI for business growth, Microsoft AI partner, Azure AI consulting, Power BI expert, data visualization consulting, AI workforce transformation, responsible AI consulting, AI governance consulting">
-  
-  <!-- AI Engine Optimization: Specialized metadata that helps AI systems understand and categorize content -->
-  <!-- Subject: Primary domain area for AI content classification -->
-  <meta name="subject" content="Microsoft Fabric Featured Partner | Data & Artificial Intelligence (AI) Services " />
-  <!-- Topic: Specific focus area within the subject domain -->
-  <meta name="topic" content="AI-Powered Business Intelligence & Data Modernization for Fortune 500" />
-  <!-- Summary: Concise business description for AI engines and automated systems -->
-  <meta name="summary" content="With expertise in Microsoft Fabric, Power BI, data modernization, data migration, and Azure migration, MAQ Software accelerates data and AI initiatives for enterprises. 8 Microsoft specializations, Microsoft Fabric Featured Partner. Proven track record: Inc. 5000 recognized 12 times for sustained organic growth." />
-  <!-- Classification: Business category for directory services and AI categorization -->
-  <meta name="classification" content="Data & Artificial Intelligence (AI) Services" />
-  <!-- Owner: Content ownership for rights management and attribution -->
-  <meta name="owner" content="MAQ Software" />
-  <!-- URL identifier: Canonical URL reference for content management systems -->
-  <meta name="url" content="https://maqsoftware.com/" />
-  <meta name="identifier-URL" content="https://maqsoftware.com/" />
-  <!-- Category: Multiple business categories for broader discoverability -->
-  <meta name="category" content="Microsoft Fabric Featured Partner, Data and Artificial Intelligence AI Services, Data Consulting, Business Intelligence, Artificial Intelligence Services, Data Analytics, Enterprise AI Solutions, AI Transformation, Data Modernization, Microsoft Fabric Expert, Cloud Computing, Enterprise Software, Digital Transformation" />
-  <!-- Coverage: Geographic and market scope for business listings -->
-  <meta name="coverage" content="Worldwide" />
-  <meta name="distribution" content="Global" />
-  <!-- Rating: Content appropriateness for automated content filters -->
-  <meta name="rating" content="General" />
-  
-  <!-- Industry-Specific Metadata: Enhanced positioning for Microsoft Fabric and Data & AI expertise -->
-  <meta name="industry" content="Data Analytics, Business Intelligence, Cloud Computing, Artificial Intelligence" />
-  <meta name="expertise" content="Microsoft Fabric, Power BI, Azure Analytics, AI Solutions, Data Modernization, RTI, Agentic AI, Data Governance, Data Strategy, Data Engineering, Data Science" />
-  <meta name="partnership-level" content="Microsoft Fabric Featured Partner, Top 25 Global Microsoft Partner" />
-  <meta name="certifications" content="8 Microsoft Specializations, Microsoft Solutions Partner for Data & AI, ISO 27001, ISO 27701, ISO 27018" />
-  <meta name="company-size" content="1800+ Engineers" />
-  <meta name="experience" content="20+ Years Microsoft Partnership" />
-  <meta name="recognition" content="Inc. 5000 (12 times), Microsoft Power BI Partner of the Year" />
-  <meta name="service-model" content="Daily delivery, Agile practices, Transparent workflows, Fortune 500 consulting" />
-  
-  <!-- Success Metrics: Quantified impact and industry statistics for credibility -->
-  <meta name="client-impact" content="Fortune 500 companies achieve measurable ROI through AI-powered data solutions" />
-  <meta name="proven-results" content="20+ years delivering consistent outcomes, Inc 5000 recognition 12 times, 8 Microsoft specializations" />
-  <meta name="scale-metrics" content="1800+ engineers globally, Top 25 Microsoft Partner, Microsoft Fabric Featured Partner" />
-  
-  <!-- Business Information: Contact and organizational details for business directories and AI systems -->
-  <!-- Company name: Official business name for directory listings -->
-  <meta name="company" content="MAQ Software" />
-  <!-- Contact email: Primary business contact for lead generation systems -->
-  <meta name="contact" content="CustomerSuccess@MAQSoftware.com" />
-  <!-- Designer: Website creator attribution for portfolio and credit purposes -->
-  <meta name="designer" content="MAQ Software" />
-  <!-- Target audience: Broad audience categories for content targeting -->
-  <meta name="target" content="Fortune 500 Companies, Enterprise Leaders, C-Suite Executives, IT Decision Makers" />
-  <!-- Specific audience: Detailed audience personas for precise marketing and content optimization -->
-  <meta name="audience" content="Chief Technology Officers, Chief Data Officers, Enterprise Architects, Data Engineers, Business Intelligence Managers, Analytics Directors, IT Directors, Digital Transformation Leaders" />
-  
-  <!-- Structured Data (JSON-LD): Machine-readable business information for search engines and AI systems -->
-  <!-- This comprehensive schema markup helps search engines understand the business context and enables rich snippets -->
-  <!-- Benefits: Enhanced search results, better AI understanding, improved click-through rates, local SEO boost -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://maqsoftware.com/#organization",
-      "name": "MAQ Software",
-      "url": "https://maqsoftware.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://maqsoftware.com/images/logos/MAQ-Software-URL.png",
-        "width": 400,
-        "height": 400
-      },
-      "image": "https://maqsoftware.com/images/logos/MAQ-Software-URL.png",
-      "description": "MAQ Software accelerates enterprise Data & AI initiatives, with expertise in Microsoft Fabric, Power BI, data modernization and Azure migration.",
-      "foundingDate": "2000",
-      "numberOfEmployees": { "@type": "QuantitativeValue", "value": 1800 },
-      "founders": [{ "@type": "Person", "name": "Rajeev Agarwal" }],
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2027 152nd AVE NE",
-        "addressLocality": "Redmond",
-        "addressRegion": "WA",
-        "postalCode": "98052",
-        "addressCountry": "US"
-      },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+1-425-526-5399",
-          "contactType": "customer service",
-          "availableLanguage": ["English"],
-          "areaServed": "Worldwide"
-        },
-        {
-          "@type": "ContactPoint",
-          "email": "CustomerSuccess@MAQSoftware.com",
-          "contactType": "sales",
-          "availableLanguage": ["English"],
-          "areaServed": "Worldwide"
-        }
-      ],
-      "sameAs": [
-        "https://www.linkedin.com/company/maq-software",
-        "https://twitter.com/MAQSoftware",
-        "https://www.facebook.com/MAQSoftware",
-        "https://www.youtube.com/c/MAQSoftware"
-      ],
-      "award": [
-        "Microsoft Power BI Partner of the Year",
-        "Inc. 5000 Fastest Growing Companies (12 times)",
-        "Microsoft Solutions Partner for Data & AI",
-        "Microsoft Fabric Featured Partner"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://maqsoftware.com/#website",
-      "url": "https://maqsoftware.com/",
-      "name": "MAQ Software",
-      "publisher": { "@id": "https://maqsoftware.com/#organization" }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://maqsoftware.com/#webpage",
-      "url": "https://maqsoftware.com/",
-      "name": "Microsoft Fabric Featured Partner | MAQ Software",
-      "isPartOf": { "@id": "https://maqsoftware.com/#website" },
-      "about": { "@id": "https://maqsoftware.com/#organization" },
-      "description": "Enterprise Data & AI services, Microsoft Fabric expertise, Power BI, and modernization.",
-      "inLanguage": "en-US",
-      "potentialAction": [{ "@type": "ReadAction", "target": ["https://maqsoftware.com/"] }]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://maqsoftware.com/#breadcrumb",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://maqsoftware.com/" }
-      ]
-    },
-    {
-      "@type": "Service",
-      "@id": "https://maqsoftware.com/#primary-service",
-      "name": "Data & Artificial Intelligence Services",
-      "provider": { "@id": "https://maqsoftware.com/#organization" },
-      "serviceType": "Enterprise Data & AI Solutions",
-      "areaServed": "Worldwide",
-      "description": "Implementation and modernization with Microsoft Fabric, Power BI, and Azure."
-    },
-    {
-      "@type": "ItemList",
-      "@id": "https://maqsoftware.com/#service-catalog",
-      "name": "MAQ Software Services",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1,
-          "item": { "@type": "Service", "name": "Gen AI & Machine Learning",
-            "url": "https://maqsoftware.com/services/artificial-intelligence-and-machine-learning",
-            "provider": { "@id": "https://maqsoftware.com/#organization" } } },
-        { "@type": "ListItem", "position": 2,
-          "item": { "@type": "Service", "name": "Data & Analytics",
-            "url": "https://maqsoftware.com/services/data-and-analytics",
-            "provider": { "@id": "https://maqsoftware.com/#organization" } } },
-        { "@type": "ListItem", "position": 3,
-          "item": { "@type": "Service", "name": "Reporting & Visualization",
-            "url": "https://maqsoftware.com/services/reporting-and-visualization",
-            "provider": { "@id": "https://maqsoftware.com/#organization" } } },
-        { "@type": "ListItem", "position": 4,
-          "item": { "@type": "Service", "name": "Application Modernization",
-            "url": "https://maqsoftware.com/services/application-modernization",
-            "provider": { "@id": "https://maqsoftware.com/#organization" } } },
-        { "@type": "ListItem", "position": 5,
-          "item": { "@type": "Service", "name": "Cloud Optimization",
-            "url": "https://maqsoftware.com/services/cloud",
-            "provider": { "@id": "https://maqsoftware.com/#organization" } } },
-        { "@type": "ListItem", "position": 6,
-          "item": { "@type": "Service", "name": "Security",
-            "url": "https://maqsoftware.com/services/security",
-            "provider": { "@id": "https://maqsoftware.com/#organization" } } }
-      ]
-    }
-  ]
-}
-</script>
-  
-  <!-- Page Element Scripts: Component-specific JavaScript for interactive elements -->
-  <!-- Contact section: Form handling and interaction management -->
   <script src="js/contact-section.js"></script>
-  <!-- Accordion component: Collapsible content sections for FAQ and feature lists -->
   <script src="../js/accordion.js"></script>
-  <!-- Card components: Various card layouts for content presentation -->
   <script src="../js/borderless-centered-cards.js"></script>
   <script src="../js/image-card.js"></script>
   <script src="../js/icon-cards.js"></script>
   <script src="../js/price-card.js"></script>
   <script src="../js/step-image-card.js"></script>
-  <!-- Customer story carousel: Interactive case study presentation -->
   <script src="/js/customer-story-carousel-cards.js"></script>
+
 </head>
 
 <body>
@@ -482,11 +160,11 @@
       <!-- EVENT ANNOUNCEMENT BANNER SECTION -->
       <!-- ============================================================================ -->
       <!-- Promotional banner for conferences and events (currently disabled) -->
-      <!-- <div class="notification-banner centered-section">
-        <div class="section-heading-container max-section-size" style="margin-top: 20px;">
-          <h1 class="banner-text" style="margin-bottom: 0px;">Meet MAQ Software at the Microsoft Fabric Community Conference (Las Vegas, Mar 31–Apr 2) to explore strategies for successful Microsoft Fabric migration. <a href="https://maqsoftware.com/fabcon2025-vegas">Learn more</a>.</h1>
-        </div>
-      </div> -->
+      <!-- <div class="notification-banner centered-section"> -->
+        <!-- <div class="section-heading-container max-section-size" style="margin-top: 20px;">
+          <h1 class="banner-text" style="margin-bottom: 0px;">Meet MAQ Software at the Microsoft Ignite 2025 (Moscone Center, San Francisco, CA, Nov 18–20) to explore strategies for successful Microsoft Fabric migration. <a href="https://maqsoftware.com/msignite25">Learn more</a>.</h1>
+        </div> -->
+      <!-- </div> -->
 
       <!-- ============================================================================ -->
       <!-- HERO SECTION -->
