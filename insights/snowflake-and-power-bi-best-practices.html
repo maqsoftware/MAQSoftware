@@ -8,7 +8,7 @@
     <!-- Page-Specific SEO Tags -->
     <title>Snowflake and Power BI Best Practices | MAQ Software Insights</title>
     <meta name="description" content="Discover best practices for optimizing Snowflake performance in Power BI. Learn how to use star schemas, clustering keys, materialized views, and incremental loading to improve query speed and reduce costs.">
-    <meta name="keywords" content="Snowflake best practices, Power BI optimization, Snowflake Power BI performance, star schema, clustering keys, materialized views, incremental refresh, data modeling, query optimization, MAQ Software">
+    <meta name="keywords" content="Snowflake best practices, Power BI optimization, Snowflake Power BI performance, star schema, clustering keys, materialized views, incremental refresh, data modeling, query optimization, Fabric Mirroring, Dynamic Tables, Snowflake Connector 2.0, MAQ Software">
     <meta name="page-type" content="insight">
     <meta name="page-topic" content="Snowflake and Power BI Best Practices | MAQ Software">
 
@@ -24,6 +24,35 @@
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:alt" content="Snowflake and Power BI Best Practices | MAQ Software Insights">
     <meta property="og:locale" content="en_US">
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Snowflake and Power BI Best Practices Guide",
+      "description": "Discover best practices for optimizing Snowflake performance in Power BI. Learn how to use star schemas, clustering keys, materialized views, and incremental loading.",
+      "image": "https://maqsoftware.com/images/expertise/cloud-main.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "MAQ Software",
+        "url": "https://maqsoftware.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "MAQ Software",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://maqsoftware.com/images/logos/MAQ-Software-URL.png"
+        }
+      },
+      "dateModified": "2025-12-10",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://maqsoftware.com/insights/snowflake-and-power-bi-best-practices"
+      }
+    }
+    </script>
 
     <!-- Twitter Theme -->
     <meta name="twitter:widgets:theme" content="light">
@@ -79,22 +108,38 @@
                         <div class="post-content with-background">
                             <h1 class="post-title center">Best practices in Snowflake for Power BI</h1>
                             <h3 class="post-title center">Improve performance of your reports</h3>
-                            <p class="text-large">To optimize Snowflake storage for efficient Power BI data extraction, focus on structuring and managing your Snowflake tables in a way that aligns with Power BI’s querying patterns, minimizes computing costs, and ensures fast performance. Below are some suggestions.</p>
+                            <p class="text-large">To optimize Snowflake storage for efficient Power BI data extraction, focus on structuring and managing your Snowflake tables in a way that aligns with Power BI’s querying patterns, minimizes computing costs, and ensures fast performance. Below are the best practices for 2025.</p>
                             
-                            <ol class="index">
-                                <li class="text-xlarge"><a href="#star schema">Using a Star Schema Design</a></li>
-                                <li class="text-xlarge"><a href="#clustering keys">Leverage Clustering Keys</a></li>
-                                <li class="text-xlarge"><a href="#large tables">Partition Large Tables</a></li>
-                                <li class="text-xlarge"><a href="#storage compression">Optimize Storage with Compression</a></li>
-                                <li class="text-xlarge"><a href="#materialized views">Use Materialized Views for Pre-Aggregated Data</a></li>
-                                <li class="text-xlarge"><a href="#search optimization">Enable Search Optimization for High-Cardinality Lookups</a></li>
-                                <li class="text-xlarge"><a href="#align storage mode">Align Storage Mode with Power BI Usage</a></li>
-                                <li class="text-xlarge"><a href="#incremental data loading">Implement Incremental Data Loading</a></li>
-                                <li class="text-xlarge"><a href="#data redundancy">Minimize Data Redundancy</a></li>
-                                <li class="text-xlarge"><a href="#snowflake features">Monitor and Tune with Snowflake Features</a></li>
+                            <div id="connector-optimization">
+                                <h2>Use Snowflake Connector 2.0</h2>
+                                <ul type="a" class="indented-list">
+                                    <li class="text-xlarge"><strong>Why:</strong></li>
+                                    <ol type="i">
+                                        <li class="text-large">The <strong>Snowflake Connector 2.0</strong> (based on the ADBC driver) offers significant performance improvements over the legacy ODBC driver, including faster data retrieval and reduced metadata calls.</li>
+                                    </ol>
+                                    <li class="text-xlarge"><strong>How:</strong></li>
+                                    <ol type="i">
+                                        <li class="text-large">Ensure your Power BI Desktop is updated to the latest version (post-July 2025 GA).</li>
+                                        <li class="text-large">Verify the connection uses <strong>Implementation 2.0</strong> in the advanced settings if not selected by default.</li>
+                                    </ol>
+                                </ul>
+                            </div>
 
-                            </ol>
-                            
+                            <div id="fabric-mirroring">
+                                <h2>Leverage Fabric Mirroring</h2>
+                                <ul type="a" class="indented-list">
+                                    <li class="text-xlarge"><strong>Why:</strong></li>
+                                    <ol type="i">
+                                        <li class="text-large"><strong>Mirroring Snowflake in Microsoft Fabric</strong> allows you to replicate data into OneLake in near-real-time without building ETL pipelines. This provides Direct Lake performance (faster than DirectQuery) without the latency.</li>
+                                    </ol>
+                                    <li class="text-xlarge"><strong>How:</strong></li>
+                                    <ol type="i">
+                                        <li class="text-large">Configure Mirroring in your Fabric workspace to replicate Snowflake tables.</li>
+                                        <li class="text-large">Connect Power BI to the mirrored OneLake data using <strong>Direct Lake</strong> mode for blazing fast performance.</li>
+                                    </ol>
+                                </ul>
+                            </div>
+
                             <div id="star schema">
                                 <h2>Using a Star Schema Design</h2>
                                 <ul type="a" class="indented-list">
@@ -117,7 +162,7 @@
                                 <ul type="a" class="indented-list">
                                     <li class="text-xlarge"><strong>Why:</strong></li>
                                     <ol type="i">
-                                        <li class="text-large">Clustering organizes data in Snowflake’s micro-partitions based on specific columns, reducing the amount of data scanned during Power BI queries.</li>
+                                        <li class="text-large">Clustering organizes data in Snowflake’s micro-partitions based on specific columns, reducing the amount of data scanned during Power BI queries (partition pruning).</li>
                                     </ol>
                                     <li class="text-xlarge"><strong>How:</strong></li>
                                 
@@ -129,73 +174,32 @@
                                 </ul>
                             </div>
 
-                            <div id="large tables">
-                                <h2>Partition Large Tables</h2>
+                            <div id="dynamic-tables">
+                                <h2>Use Dynamic Tables & Materialized Views</h2>
                                 <ul type="a" class="indented-list">
                                     <li class="text-xlarge"><strong>Why:</strong></li>
                                     <ol type="i">
-                                        <li class="text-large">Partitioning logically organizes data, making it faster to retrieve specific subsets in Power BI, especially with DirectQuery or incremental refresh.</li>
-                                    </ol>
-                                    <li class="text-xlarge"><strong>How:</strong></li>
-                            
-                                    <ol type="i">
-                                        <li class="text-large">Use a date-based column (e.g., <code class="color-red bkg-grey-ultralight">transaction_date</code>) to partition data naturally in Snowflake.</li>
-                                        <li class="text-large">Combine this with clustering to align physical storage with query patterns (e.g., partition by year or month if Power BI reports focus on time-based analysis).</li>
-                                    </ol>
-                                </ul>
-                            </div>
-                            
-                            <div id="storage compression">
-                                <h2>Optimize Storage with Compression</h2>
-                                <ul type="a" class="indented-list">
-                                    <li class="text-xlarge"><strong>Why:</strong></li>
-                                    <ol type="i">
-                                        <li class="text-large">Snowflake automatically compresses data, but you can enhance this by structuring tables to maximize compression efficiency, reducing storage costs and speeding up data retrieval.</li>
-                                    </ol>
-                                    <li class="text-xlarge"><strong>How:</strong></li>
-
-                                    <ol type="i">
-                                        <li class="text-large">Store columns with low cardinality (e.g., status flags, categories) as smaller data types (e.g., <code 
-                                            class="color-red bkg-grey-ultralight">VARCHAR(10)</code> instead of <code 
-                                            class="color-red bkg-grey-ultralight">VARCHAR(255)</code>).</li>
-                                        <li class="text-large">Avoid over-normalization; keep related data together in wider tables where it makes sense for Power BI’s needs.</li>
-                                    </ol>
-                                </ul>
-                            </div>
-
-                            <div id="materialized views">
-                                <h2>Use Materialized Views for Pre-Aggregated Data</h2>
-                                <ul type="a" class="indented-list">
-                                    <li class="text-xlarge"><strong>Why:</strong></li>
-                                    <ol type="i">
-                                        <li class="text-large">Power BI often requires aggregated data for visualizations. Materialized views store pre-computed results, reducing query time and compute usage.</li>
+                                        <li class="text-large">Pre-aggregating data reduces the compute load on Snowflake during report rendering. <strong>Dynamic Tables</strong> simplify the data engineering pipeline for continuous transformations.</li>
                                     </ol>
                                     <li class="text-xlarge"><strong>How:</strong></li>
                                     
                                     <ol type="i">
-                                        <li class="text-large">Create materialized views for common aggregations (e.g., <code 
-                                            class="color-red bkg-grey-ultralight">SUM(sales) BY date, region</code>).</li>
-                                        <ul style="list-style: none; margin: 0; padding: 0;">
-                                            <li class="text-large">Example: <code 
-                                                class="color-red bkg-grey-ultralight">CREATE MATERIALIZED VIEW sales_summary AS SELECT date, region, SUM(sales) FROM fact_sales GROUP BY date, region;</code></li>
-                                        </ul>
-                                        <li class="text-large">Use these views as the source for Power BI instead of querying raw tables.</li>
+                                        <li class="text-large">Use <strong>Materialized Views</strong> for simple aggregations (e.g., <code class="color-red bkg-grey-ultralight">SUM(sales)</code>) that need instant consistency.</li>
+                                        <li class="text-large">Use <strong>Dynamic Tables</strong> for complex multi-table joins and transformations that can tolerate slight staleness (defined by target lag).</li>
                                     </ol>
                                 </ul>
                             </div>
 
-                            <div id="search optimization">
-                                <h2>Enable Search Optimization for High-Cardinality Lookups</h2>
+                            <div id="query-tags">
+                                <h2>Implement Query Tagging</h2>
                                 <ul type="a" class="indented-list">
                                     <li class="text-xlarge"><strong>Why:</strong></li>
                                     <ol type="i">
-                                        <li class="text-large">If Power BI queries involve filtering on high-cardinality columns (e.g., unique IDs), search optimization can speed up point lookups.</li>
+                                        <li class="text-large">To accurately attribute costs to specific Power BI reports or workspaces in Snowflake.</li>
                                     </ol>
                                     <li class="text-xlarge"><strong>How:</strong></li>
-                                    
                                     <ol type="i">
-                                        <li class="text-large">Enable it on specific columns: <code 
-                                            class="color-red bkg-grey-ultralight">ALTER TABLE <table_name> ADD SEARCH OPTIMIZATION ON (column_name);</code> (Best for dimension tables where Power BI performs frequent lookups).</li>
+                                        <li class="text-large">Use the <strong>Query Tag</strong> feature in the Snowflake connector (supported in V2) to pass context (e.g., Report Name, Workspace ID) with every query.</li>
                                     </ol>
                                 </ul>
                             </div>
@@ -210,9 +214,9 @@
                                     <li class="text-xlarge"><strong>How:</strong></li>
                                     
                                     <ol type="i">
-                                        <li class="text-large"><strong>Import Mode:</strong> Pre-aggregate data in Snowflake to reduce the dataset size Power BI pulls. Use views or tables with only the necessary columns and rows.</li>
-                                        <li class="text-large"><strong>DirectQuery Mode:</strong> Keep raw data in Snowflake and optimize with clustering and materialized views to handle live queries efficiently.</li>
-                                        <li class="text-large"><strong>Composite Mode:</strong> Store large fact tables in DirectQuery mode and smaller dimension tables in Import mode within Power BI, leveraging Snowflake’s scalability for the former.</li>
+                                        <li class="text-large"><strong>Import Mode:</strong> Best for performance. Pre-aggregate data in Snowflake to reduce the dataset size.</li>
+                                        <li class="text-large"><strong>DirectQuery Mode:</strong> Use for real-time requirements. Optimize with clustering and materialized views.</li>
+                                        <li class="text-large"><strong>Composite Mode:</strong> Store large fact tables in DirectQuery and dimensions in Import.</li>
                                     </ol>
                                 </ul>
                             </div>
@@ -227,50 +231,19 @@
                                     <li class="text-xlarge"><strong>How:</strong></li>
                                     
                                     <ol type="i">
-                                        <li class="text-large">Add a last_updated timestamp column to track changes.</li>
-                                        <li class="text-large">Partition data by this column and use it in Power BI’s incremental refresh policy. </li>
-                                        <ul style="list-style: none; margin: 0; padding: 0;">
-                                            <li class="text-large">Example: <code 
-                                                class="color-red bkg-grey-ultralight">WHERE last_updated >= RangeStart AND last_updated < RangeEnd</code></li>
-                                        </ul>
-                                    </ol>
-                                </ul>
-                            </div>
-                    
-                            <div id="data redundancy">
-                                <h2>Minimize Data Redundancy </h2>
-                                <ul type="a" class="indented-list">
-                                    <li class="text-xlarge"><strong>Why:</strong></li>
-                                    <ol type="i">
-                                        <li class="text-large">Redundant data increases storage costs and can slow down queries if Power BI pulls unnecessary rows.</li>
-                                    </ol>
-                                    <li class="text-xlarge"><strong>How:</strong></li>
-                                    
-                                    <ol type="i">
-                                        <li class="text-large">Use views or dynamic tables in Snowflake to transform data on-the-fly instead of duplicating it in separate tables.</li>
-                                        <li class="text-large">Remove unused columns from tables or create leaner views specifically for Power BI.</li>
+                                        <li class="text-large">Add a <code class="color-red bkg-grey-ultralight">last_updated</code> timestamp column to track changes.</li>
+                                        <li class="text-large">Ensure this column is part of the clustering key to speed up the range queries generated by Power BI.</li>
                                     </ol>
                                 </ul>
                             </div>
 
-                            <div id="snowflake features">
-                                <h2>Monitor and Tune with Snowflake Features</h2>
-                                <ul type="a" class="indented-list">
-                                    <li class="text-xlarge"><strong>Why:</strong></li>
-                                    <ol type="i">
-                                        <li class="text-large">Snowflake’s built-in tools can help you identify and resolve inefficiencies in storage and querying.</li>
-                                    </ol>
-                                    <li class="text-xlarge"><strong>How:</strong></li>
-                                    
-                                    <ol type="i">
-                                        <li class="text-large">Use <code 
-                                            class="color-red bkg-grey-ultralight">SHOW TABLES</code> and <code 
-                                            class="color-red bkg-grey-ultralight">DESCRIBE TABLE</code> to review storage usage and column definitions.</li>
-                                        <li class="text-large">Analyze query performance in Snowflake’s Query History to see which Power BI queries scan the most data, then adjust clustering or add materialized views accordingly.</li>
-                                        <li class="text-large">Set up automatic suspension for warehouses used by Power BI to minimize idle compute costs.</li>
-                                    </ol>
-                                </ul>
-                            </div>
+                            <h2>References</h2>
+                            <ul class="defaultBody">
+                                <li class="text-large"><a href="https://learn.microsoft.com/en-us/power-query/connectors/snowflake" target="_blank" rel="noopener noreferrer">Snowflake Connector for Power BI</a> – Microsoft Corporation</li>
+                                <li class="text-large"><a href="https://learn.microsoft.com/en-us/fabric/mirroring/snowflake" target="_blank" rel="noopener noreferrer">Mirroring Snowflake in Microsoft Fabric</a> – Microsoft Corporation</li>
+                                <li class="text-large"><a href="https://docs.snowflake.com/en/user-guide/dynamic-tables-about" target="_blank" rel="noopener noreferrer">Snowflake Dynamic Tables</a> – Snowflake Inc.</li>
+                                <li class="text-large"><a href="https://docs.snowflake.com/en/user-guide/tables-clustering-keys" target="_blank" rel="noopener noreferrer">Clustering Keys & Micro-partitions</a> – Snowflake Inc.</li>
+                            </ul>
 
                             <div class="section-block pt-10 pb-10 bkg-white"></div>
                             <div class="row">
@@ -285,7 +258,7 @@
                             </div>
                             <div class="section-block pt-10 pb-10 bkg-white"></div>
                             <div class="post-info center">
-                                <span class="post-date">Last updated: April 17, 2025</span>
+                                <span class="post-date">Last updated: December 10, 2025</span>
                             </div>
                         </div>
                     </article>
