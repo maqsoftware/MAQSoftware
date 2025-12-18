@@ -10,7 +10,7 @@ var oBlogContainer,
 
 // List of filters/filter IDs from case-studies.html
 // Used to check if filter value exists, error catching for getBlogOnComplete()
-const filterList = ["gen-ai-and-machine-learning", "data-and-analytics", "reporting-and-visualization", "application-modernization", "cloud-optimization", "security"]
+const filterList = ["agentic-ai-and-machine-learning", "data-and-analytics", "reporting-and-visualization", "application-modernization", "cloud-optimization", "security"]
 
 function renderCaseStudy() {
   var entry1,
