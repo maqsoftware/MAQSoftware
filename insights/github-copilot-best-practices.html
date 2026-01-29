@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+
+    <!-- Page-Specific SEO Tags -->
+    <title>GitHub Copilot Best Practices | MAQ Software Insights</title>
+    <meta name="description" content="GitHub Copilot boosts developer productivity with AI-powered coding. Learn how to set it up, key benefits, and best practices for effective adoption.">
+    <meta name="keywords" content="GitHub Copilot, Developer productivity, AI-powered code generation, GitHub Copilot setup, GitHub Copilot best practices, GitHub Copilot benefits, GitHub Copilot for enterprise development, AI-assisted software development, AI tools for developers">
+    <meta name="page-type" content="insight">
+    <meta name="page-topic" content="GitHub Copilot Best Practices | MAQ Software">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="GitHub Copilot Best Practices | MAQ Software Insights">
+    <meta property="og:description" content="GitHub Copilot boosts developer productivity with AI-powered coding. Learn how to set it up, key advantages, and best practices for effective adoption.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://maqsoftware.com/insights/github-copilot-best-practices">
+    <meta property="og:site_name" content="MAQ Software">
+    <meta property="og:image" content="/images/best-practices/GitHub Copilot Best Practices.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="GitHub Copilot Best Practices | MAQ Software Insights">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Theme -->
+    <meta name="twitter:widgets:theme" content="light">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/core.min.css" />
+    <link rel="stylesheet" href="/css/skin.css" />
+    <link rel="stylesheet" href="/css/styles.css"/>
+
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-S0W302CGQG');
+    </script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "oekduyvjws");
+    </script>
+</head>
+
+
+<body class="shop blog">
+
+    <!-- Header -->
+    <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent"
+        data-bkg-threshold="100" data-sticky-threshold="0"></header>
+    <!-- Header End -->
+    <div class="section-block bkg-grey-ultralight"></div>
+    <!-- Content -->
+    <div class="content clearfix best-practices-text">
+        <div class="section-block clearfix pt-0 pb-0 bkg-grey-ultralight">
+            <div class="row">
+                <!-- Content Inner -->
+                <div class="column width-10 offset-1 content-inner blog-single-post bkg-grey-ultralight">
+                    <article class="post">
+                        <div class="post-content with-background">
+                            <h1 class="post-title center">Maximizing Developer Productivity with GitHub Copilot</h1>
+                            <h3 class="post-title center">Setup steps, key benefits, and best practices</h3>
+
+                            <ol class="index">
+                                <li class="text-xlarge"><a href="#introduction">Introduction</a></li>
+                                <li class="text-xlarge"><a href="#setup">How to set up GitHub Copilot</a></li>
+                                <li class="text-xlarge"><a href="#scenarios">Practical applications</a></li>
+                                <li class="text-xlarge"><a href="#advantages">Advantages of using GitHub Copilot</a></li>
+                                <li class="text-xlarge"><a href="#bestpractices">Best practices for adoption</a></li>
+                                <li class="text-xlarge"><a href="#future">The future of AI in development</a></li>
+                            </ol>
+                            <div id="Introduction"></div>
+                            <h2>Introduction</h2>
+                            <p class="text-large">GitHub Copilot is an AI-powered coding assistant designed to help developers write code faster, with more accuracy, and with less manual effort. Built by GitHub in collaboration with OpenAI, Copilot integrates directly into popular development environments such as Visual Studio Code, Visual Studio, JetBrains IDEs, and accessible tools like Copilot Chat. It uses large language models trained on billions of lines of publicly available code and natural language to provide real-time suggestions, autocompletions, code snippets, test cases, documentation, and more—based on the context of what the developer is working on.</p>
+                            <p class="text-large"><strong>In practice, it:</strong>
+                            <ol>
+                                <li class="text-large" style="margin-bottom: 0.25rem;">Suggests lines or blocks of code as you type in your IDE based on context.</li>
+                                <li class="text-large" style="margin-bottom: 0.25rem;">Lets users interact in natural language (chat) to ask for explanations, help, or code modifications.</li>
+                                <li class="text-large" style="margin-bottom: 0.25rem;">Supports multiple languages and integrates into popular editors (e.g., VS Code, JetBrains, etc.).</li></p>
+                            </ol>
+                            <h2>Why it's gaining traction</h2>
+                            <ol>
+                                <li class="text-large" style="margin-bottom: 0.25rem;"><strong>Productivity boost</strong>: Developers can shift more time from repetitive code to higher-value tasks. GitHub’s documentation claims such benefits.</li>
+                                <li class="text-large" style="margin-bottom: 0.25rem;"><strong>Lower barrier for new or unfamiliar code</strong>: If you’re exploring a new library, language or framework, Copilot can help you get started faster rather than digging through docs and examples.</li>
+                                <li class="text-large" style="margin-bottom: 0.25rem;"><strong>Integration & ecosystem</strong>: Because it’s deeply integrated into GitHub & familiar IDEs, the barriers to adopt are relatively low.</li>
+                                <li class="text-large" style="margin-bottom: 0.25rem;"><strong>Context awareness</strong>: It uses your current code context (variables, imports, and comments) to generate smarter suggestions rather than generic autocomplete.</li>
+                                <li class="text-large" style="margin-bottom: 0.25rem;"><strong>Growing maturity of AI models</strong>: As large language models get better at code generation and reasoning, tools like Copilot become more useful.</li>
+
+
+                            </ol>
+
+                            <div class="center">
+                                <img src="../images/best-practices/github-copilot-image1.png" alt="GitHub Copilot Test Screen" />
+                            </div>
+
+
+                                <h2>Accelerating development and improving productivity</h2>
+                                
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Accelerates Development</th>
+                                            <th>Improves Productivity</th>
+                                            <th>Real-World Impact</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="vertical-align: top;">
+                                                <ol>
+                                                    <li>
+                                                        <b>Code Autocompletion:</b> Copilot predicts and suggests entire lines or blocks of code, reducing manual typing and repetitive work.
+                                                    </li>
+                                                    <li>
+                                                        <b>Faster Prototyping:</b> Developers can quickly turn ideas into working code by describing logic in plain English comments (e.g., <i>“Create an API endpoint for user login”</i>).
+                                                    </li>
+                                                    <li>
+                                                        <b>Instant Contextual Help:</b> Instead of searching documentation or Stack Overflow, Copilot suggests relevant syntax and patterns directly in the IDE.
+                                                    </li>
+                                                    <li>
+                                                        <b>Rapid Onboarding:</b> New developers can understand and contribute faster by following Copilot’s context-based recommendations.
+                                                    </li>
+                                                </ol>
+                                            </td>
+                                            <td style="vertical-align: top;">
+                                                <ol>
+                                                    <li>
+                                                        <b>Reduces Cognitive Load:</b> Developers can focus on logic and problem-solving rather than syntax or boilerplate.
+                                                    </li>
+                                                    <li>
+                                                        <b>Encourages Consistency:</b> Generates code that follows common standards and patterns across a project.
+                                                    </li>
+                                                    <li>
+                                                        <b>Error Reduction:</b> Helps catch simple mistakes or incomplete snippets early by providing contextually correct alternatives.
+                                                    </li>
+                                                    <li>
+                                                        <b>Supports Multilingual Work:</b> Works across many languages and frameworks, saving time when switching between tech stacks.
+                                                    </li>
+                                                </ol>
+                                            </td>
+                                           <td style="vertical-align: top;">
+                                                <ol>
+                                                    <li>
+                                                        Studies from GitHub show that over <b><a href="https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/?utm_source=chatgpt.com" 
+                                                            target="_blank" rel="noopener noreferrer">70% of users</a></b> report increased satisfaction and productivity.
+                                                    </li>
+                                                    <li>
+                                                        Achieved a <b>~12% gain in efficiency</b> across the overall SDLC cycle.
+                                                    </li>
+                                                </ol>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                                <h2>AI-powered capabilities</h2>
+
+                                <p class="text-large">
+                                    GitHub Copilot is an AI-powered coding assistant developed by GitHub in collaboration with OpenAI. 
+                                    It integrates directly into popular development environments such as Visual Studio Code, JetBrains IDEs, and Visual Studio, acting as a real-time pair programmer.
+                                </p>
+
+                                <p class="text-large">
+                                    Copilot uses advanced machine learning models (based on OpenAI’s Codex and GPT family) trained on vast amounts of publicly available source code. 
+                                    It helps developers write, understand, and modify code faster by offering intelligent suggestions directly in the editor.
+                                </p>
+
+                        
+                          
+
+                            <p class="text-xlarge">
+                                <ol>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;"><strong>Context-Aware Code Suggestions</strong>
+                                        <ol style="list-style-type: lower-alpha; margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">
+                                                Understands the current file, function, and comments to suggest full lines or blocks of code.
+                                            </li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">
+                                                Learns from variable names, imported libraries, and the project’s structure for relevant, high-quality completions.
+                                            </li>
+                                        </ol>
+                                    </li></p>
+
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">
+                                        <strong>Natural Language to Code</strong>
+                                        <ol style="list-style-type: lower-alpha; margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">
+                                                Developers can write comments in plain English, and Copilot translates them into working code.
+                                            </li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">
+                                                Enables faster experimentation by reducing the need to write boilerplate code manually.
+                                            </li>
+                                        </ol>
+                                    </li>
+
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">
+                                        <strong>Multi-Language Support</strong>
+                                        <ol style="list-style-type: lower-alpha; margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">
+                                                Works across dozens of languages — including Python, JavaScript, TypeScript, Java, C#, Go, SQL, and more.
+                                            </li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">
+                                                Adapts its style to the coding conventions of the language or project.
+                                            </li>
+                                        </ol>
+                                    </li>
+
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">
+                                        <strong>Code Refactoring and Explanation</strong>
+                                        <ol style="list-style-type: lower-alpha; margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">
+                                                Can rewrite or optimize existing code for better readability or efficiency.
+                                            </li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">
+                                                Explains code snippets in plain English, helping developers quickly understand unfamiliar logic.
+                                            </li>
+                                        </ol>
+                                    </li>
+
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">
+                                        <strong>Error Prevention and Best Practices</strong>
+                                        <ol style="list-style-type: lower-alpha; margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">
+                                                Suggests syntax-correct, logically consistent code based on patterns learned from millions of repositories.
+                                            </li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">
+                                                Reduces trivial bugs and repetitive mistakes in everyday coding.
+                                            </li>
+                                        </ol>
+                                    </li>
+
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">
+                                        <strong>Chat-Based Assistance (Copilot Chat)</strong>
+                                        <ol style="list-style-type: lower-alpha; margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">
+                                                Offers an interactive chat experience inside the IDE — developers can ask:
+                                                <ol style="list-style-type: lower-roman; margin-top: 0.25rem; margin-bottom: 0; padding-left: 1.25rem;">
+                                                    <li class="text-large" style="margin-bottom: 0.25rem;">“What does this function do?”</li>
+                                                    <li class="text-large" style="margin-bottom: 0.25rem;">“Can you optimize this loop?”</li>
+                                                    <li class="text-large" style="margin-bottom: 0;">“Write unit tests for this module.”</li>
+                                                </ol>
+                                            </li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">
+                                                The AI provides actionable code and explanations in real time.
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+
+
+
+
+
+                            <div id="setup"></div>
+                                <h2>How to set up GitHub Copilot</h2>
+                                <p class="text-xlarge">
+                                    <strong>Pre-requisites</strong>
+                                </p>
+                                <ol>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;"><strong>GitHub account</strong>
+                                    </li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;"><strong>IDE</strong>
+                                        <ol style="list-style-type: lower-alpha;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">
+                                                Visual Studio Code (VS Code)
+                                                </li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">
+                                                Visual Studio 2022 (v17.6+)
+                                                </li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">
+                                                JetBrains IDEs (e.g., IntelliJ, PyCharm, WebStorm)
+                                                </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                                    <p class="text-xlarge">
+                                    <strong>Installation Steps</strong>
+                                </p>
+                                <ol>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Open VS Code</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Go to the Extensions Marketplace</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Search for “GitHub Copilot”</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Click Install</li>
+                                        <ol style="list-style-type: lower-alpha;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Publisher: GitHub</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Icon: Green + blue Copilot logo</li>
+                                        </ol>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">After installation, click “Sign in to GitHub” when prompted</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">VS Code will open a browser window</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Authorize VS Code to connect to your GitHub account</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Enable Copilot</li>
+                                        <ol style="list-style-type: lower-alpha;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Once signed in you’ll see a popup: “Would you like to enable GitHub Copilot?” → Click “Enable”</li>
+                                        </ol>      
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Start Using Copilot → Open a file (e.g., .py, .js, .java, .sql)</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">You should see something like this:</li>
+                                    
+                                <div class="center">
+                                <img src="../images/best-practices/github-copilot-image2.png" alt="GitHub Copilot Chat" />
+                            </div>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Some useful commands you can try:</li>
+                                    <ol style="list-style-type: lower-alpha;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">/tests - Generate unit tests for the selected code</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">/simplify - Simplify the selected code</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">/fix - Propose a fix for the problems in the selected code</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">/explain - Explain step-by-step how the selected code works</li>
+                                        </ol>
+                                </ol>
+
+                                <p class="text-xlarge">
+                                    <strong>Configuration Tips: GitHub Copilot Chat (for Q&A inside IDE)</strong>
+                                </p>
+                                <ol>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">In VS Code extensions, search “GitHub Copilot Chat” </li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Install and enable it </li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Open the Chat panel to ask natural-language questions like:</li>
+                                        <ol style="list-style-type: lower-alpha;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">“Explain this function” </li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">“Generate SQL for customer revenue report”</li>
+                                        </ol>
+                                </ol>
+                            
+
+                            <div id="scenarios"></div>
+                                <h2>Practical applications</h2>
+                                <p class="text-xlarge">
+                                    <strong>Design and progress tracking</strong>
+                                </p>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Scenarios</th>
+                                            <th>Use Case</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Use Case 1: Design</strong></td>
+                                            <td>Design and create approach documents</td>
+                                            <td>
+                                                Utilizing Mermaid tool with GHCP to create dependency diagrams.<br><br>
+                                                <strong>Impact:</strong> Optimized migration workflow and enhanced process efficiency.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Use Case 2: Progress Tracking</strong></td>
+                                            <td>Feature Vetting</td>
+                                            <td>
+                                                Analyze the current progress of ADO items by fetching and evaluating the linked child items.<br><br>
+                                                <strong>Impact:</strong> Summarized view with detailed progress on active items.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <p class="text-xlarge">
+                                    <strong>Code</strong>
+                                </p>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Scenarios</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Use Case 3: Code Optimization</strong></td>
+                                            <td><strong>Problem Statement</strong><br>
+                                                The existing implementation for handling OData queries—such as count, aggregate, and other complex operations—was becoming difficult to maintain. Code was tightly coupled, lacked modular structure, and documentation was minimal.<br>
+                                                This resulted in:
+                                                <ol>
+                                                    <li style="margin-bottom: 0;">Increased effort to extend or modify query logic</li>
+                                                    <li style="margin-bottom: 0;">Risk of inconsistent implementations across test cases</li>
+                                                    <li style="margin-bottom: 0;">Low developer productivity due to repetitive coding and manual documentation creation</li>
+                                                </ol>
+                                                <br>
+                                                <strong>Approach</strong><br>Used Copilot with the prompt below:<br>
+                                                “I'm using OData client 7.20, and want to create implementation for count, aggregate and other complex queries in context of the Test Cases created.<br>
+                                                <ol>
+                                                    <li style="margin-bottom: 0rem;">Please help me generate the ODataQueryExtensions to support this.</li>
+                                                    <li style="margin-bottom: 0rem;">Create documentations for the implemented code.”</li>
+                                                </ol>
+                                                <strong>Impact</strong>
+                                                <ol>
+                                                    <li style="margin-bottom: 0rem;">Enhanced maintainability</li>
+                                                    <li style="margin-bottom: 0rem;">Consistency</li>
+                                                    <li style="margin-bottom: 0rem;">Higher quality code</li>
+                                                </ol>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Use Case 4: Code Analysis</strong></td>
+                                            <td>
+                                                <strong>Problem Statement</strong><br>
+                                                While developing new controllers for an existing React codebase, manually reviewing large files (e.g., LineItem) to understand component structure, controller usage, and data flow was time-consuming. 
+                                                Additionally, identifying how data returned by fetchFunction_apiFetch was being passed into component props required extensive exploration of the code. 
+                                                These tasks slowed down development and increased cognitive load during onboarding and feature creation.<br><br>
+                                                <strong>Approach</strong><br>Used Copilot with the prompt below:<br>
+                                                “1. I'm developing new controllers for the pre-existing code. I want to identify all the React controllers present in <fileName_eg_matter.tsx> and determine the source from which <fetchFunction_apiFetch> is retrieving data. 
+                                                 2. In what format are the props receiving the data returned by <fetchFunction_apiFetch>?”<br><br>
+                                                <strong>Impact</strong><br>
+                                                <ol>
+                                                    <li style="margin-bottom: 0rem;">Reduced manual analysis</li>
+                                                    <li style="margin-bottom: 0rem;">Faster development</li>
+                                                    <li style="margin-bottom: 0rem;">Better code comprehension</li>
+                                                    <li style="margin-bottom: 0rem;">Improved productivity</li>
+                                                </ol>
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Use Case 5: Initial dev changes and validation</strong></td>
+                                            <td>
+                                                <strong>Problem Statement</strong><br>
+                                                The existing grid selection and export behavior had functional gaps:<br><br>
+                                            
+                                                <ol>
+                                                    <li style="margin-bottom: 0rem;">Row selection was not persistent across paginated views, causing selected rows to be lost when users navigated between pages.</li>
+                                                    <li style="margin-bottom: 0rem;">Export functionality was inconsistent, exporting only the currently selected rows instead of the full dataset despite business requirements.</li>
+                                                    <li style="margin-bottom: 0rem;">Data passed across components (Nested Data Grid, Custom Grid Toolbar) did not maintain a unified selection state, leading to mismatches between UI selection and exported results.</li>
+                                                </ol><br></p>
+                                                These issues created poor user experience, inconsistent data handling, and additional manual effort for users performing multi-page selections or exports. 
+                                                <br><br>
+                                                <strong>Approach</strong><br>Used Copilot with the prompt below:<br>
+                                               “Enhance use Grid Row to persist selection across pages using a Set<string> for global Selected Rows and sync current Page Selection on pagination.<br><br>
+                                                Update Export Button to always export the full dataset in CSV/Excel with bold, center-aligned headers and left-aligned row data—regardless of selection.<br><br>
+                                                Pass global Selected Rows and current page selection from use grid row to nested data grid and custom grid toolbar to reflect consistent selection and export behavior.”<br><br>
+                                                <strong>Impact</strong>
+                                                <ol>
+                                                    <li style="margin-bottom: 0rem;">Consistent user experience</li>
+                                                    <li style="margin-bottom: 0rem;">Reliable exports</li>
+                                                    <li style="margin-bottom: 0rem;">Improved accuracy</li>
+                                                    <li style="margin-bottom: 0rem;">Reduced user effort</li>
+                                                    <li style="margin-bottom: 0rem;">Better maintainability</li>
+                                                </td></ol>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Use Case 6: Code Review</strong></td>
+                                            <td>
+                                                <strong>Problem Statement</strong><br>
+                                                The grid system had multiple independent subcomponents (toolbar, nested grid, row selection logic, export utilities, pagination handlers, etc.) that were difficult to visualize and validate as a complete experience.<br>
+                                                Additionally, several large-scale updates to the nested grid architecture required thorough review to ensure proper integration, performance stability, and UI/UX consistency.<br>
+                                                Without a unified environment: 
+                                                <ol>
+                                                    <li style="margin-bottom: 0rem;">QA and developers could not easily test end-to-end behavior</li>
+                                                    <li style="margin-bottom: 0rem;">Component interactions were difficult to trace</li>
+                                                    <li style="margin-bottom: 0rem;">Regression risk increased significantly</li>
+                                                </ol><br>
+                                                 
+                                                
+                                                <strong>Approach</strong><br>Used Copilot with the prompt below:<br>
+                                               “Assemble and integrate all grid subcomponents into a full-featured Storybook page. Review and refine large-scale nested grid changes”<br><br>
+                                                <strong>Impact</strong><br>
+                                                <ol>
+                                                    <li style="margin-bottom: 0rem;">Accelerated QA and stakeholder review</li>
+                                                    <li style="margin-bottom: 0rem;">Better cross-component alignment</li>
+                                                    <li style="margin-bottom: 0rem;">Higher confidence in code changes</li>
+                                                    <li style="margin-bottom: 0rem;">Maintainable and scalable architecture</li>
+                                                </td></ol>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="text-xlarge">
+                                    <strong>Testing</strong>
+                                </p>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Scenario</th>
+                                            <th>Efficiency gain*</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Use Case 7</strong></td>
+                                            <td>Unit Testing</td>
+                                            <td>75%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Use Case 8</strong></td>
+                                            <td>UI Testing</td>
+                                            <td>60%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Use Case 9</strong></td>
+                                            <td>Accessibility Testing</td>
+                                            <td>70%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Use Case 10</strong></td>
+                                            <td>Creation of API test cases</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Use Case 11</strong></td>
+                                            <td>Creation of test cases in qTest</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Use Case 12</strong></td>
+                                            <td>API testing using Locust</td>
+                                            <td>-</td>
+                                        </tr>
+                                    </tbody>
+                                </table><br>
+                                <p class="text-large"><i>*For the blank efficiency gain values, the test cases were created entirely using Copilot from the start of the project, so there is no benchmark available for comparison.</i></p> 
+                                <p class="text-xlarge">
+                                    <strong>Documentation</strong>
+                                </p>
+                                <p class="text-large"><strong>Use Case 13: Creation of training material</strong><br><br>
+                                <strong>Problem Statement:</strong> Creating consistent, high-quality talk scripts, PPT content, and documentation was time-consuming and varied in tone and structure.<br><br>
+                                <strong>AI-Driven Approach:</strong> Leveraged GitHub Copilot to streamline content creation and standardize communication.<br><br>
+                                <strong>Key Scenarios:</strong>
+                                <ol>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;"><strong>Session structuring</strong>: AI helped identify and group topics, ensuring logical flow across 8 modules and balanced session durations</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;"><strong>Talk tracks and training content</strong>: AI-generated delivery scripts, transitions, and Q&A prompts → ~60% prep time saved</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;"><strong>Presentation slides</strong>: Auto-drafted slide text, benefit statements, and “Why it matters” notes → Clearer storytelling</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;"><strong>Emails and communication</strong>: Rewrote updates and announcements → Consistent tone & faster approvals</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;"><strong>Learning references</strong>: Curated relevant articles, Microsoft docs, and community links for each topic — later embedded in PPTs for audience takeaways</li>
+
+                                </ol>
+                                </p>
+                                <p class="text-large"><strong>Other use cases</strong>
+                                <p class="text-large">
+                                    <ol>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Repetitive tasks</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Rapid prototyping</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Learning new languages</li>
+
+                                </ol>
+                            
+
+                            <div id="advantages"></div>
+                                <h2>Advantages of using GitHub Copilot</h2>
+                                <ol>
+                                    <li class="text-large">
+                                        <strong>Boosts productivity</strong>
+                                        <ol style="list-style-type: lower-alpha; margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Provides real-time suggestions as you type.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Minimizes context-switching between documentation and coding.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Lets developers stay focused on logic rather than syntax.</li>
+                                        </ol>
+                                    </li>
+                                    <li class="text-large">
+                                        <strong>Enhances learning for developers</strong>
+                                        <ol style="list-style-type: lower-alpha; margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Acts as an interactive tutor for junior developers.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Shows alternative ways to write code.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Helps explore unfamiliar libraries, frameworks, or languages.</li>
+                                        </ol>
+                                    </li>
+
+                                    <li class="text-large">
+                                        <strong>Improves code quality</strong>
+                                        <ol style="list-style-type: lower-alpha; margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Suggests well-structured, consistent, and syntactically correct code.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Helps maintain naming standards and coding patterns across the project.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Reduces human errors in repetitive code segments.</li>
+                                        </ol>
+                                    </li>
+
+                                    <li class="text-large">
+                                        <strong>Strengthens testing</strong>
+                                        <ol style="list-style-type: lower-alpha; margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Auto-generates unit tests, API test cases, and automation scripts.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Improves test coverage with minimal manual effort.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Supports frameworks like pytest, JUnit, Selenium, and Locust.</li>
+                                        </ol>
+                                    </li>
+
+                                    <li class="text-large">
+                                        <strong>Seamless integration with IDEs</strong>
+                                        <ol style="list-style-type: lower-alpha; margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Works inside VS Code, Visual Studio, JetBrains, and GitHub.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Fits naturally into existing workflows without extra tools.</li>
+                                        </ol>
+                                    </li>
+
+                                    <li class="text-large">
+                                        <strong>Supports multiple languages and frameworks</strong>
+                                        <ol style="list-style-type: lower-alpha; margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Works across dozens of programming languages.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Adapts to your tech stack automatically.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Useful for backend, frontend, DevOps, data, and test engineers.</li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            
+                            <div id="bestpractices"></div>
+                                <h2>Best practices for adoption</h2>
+                                <ol>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">
+                                        <strong>Use Copilot as an assistant, not a replacement.</strong><br>
+                                        GitHub Copilot is designed to support developers, not replace them. It accelerates repetitive coding but cannot:
+                                        <ol style="list-style-type: lower-alpha; margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Understand business logic or project-specific rules.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Make architectural or design decisions.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Ensure compliance or performance optimization.</li>
+                                        </ol><br>
+                                        Treat Copilot like a pair programmer — let it handle suggestions, but not the final decision-maker for design, structure, and correctness. 
+                                    </li><br>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">
+                                        <strong>Make your prompt more relevant.</strong><br>
+                                        Copilot may not understand the full requirement, so be explicit in your request. Share examples and provide specific instances if you want the output to better match your needs. Dig deeper by asking follow-up questions and making modifications as needed. 
+                                        Remember: the first response may not always be the accurate answer you’re looking for.
+                                        <br>
+                                        <div class="center">
+                                            <img src="../images/best-practices/github-copilot-gif.gif" alt="Refining prompts with GitHub Copilot" />
+                                        </div>
+                                    </li><br>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">
+                                        <strong>Always review and test generated code.</strong><br>
+                                        Copilot’s suggestions come from patterns in public code, not your project’s exact needs. This means the generated code might:
+                                        <ol style="list-style-type: lower-alpha; margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Contain logical or security errors.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Be inefficient or non-compliant with internal standards.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Miss edge cases or error handling.</li>
+                                        </ol><br>
+                                        Always review, debug, and test Copilot-generated code before merging. Treat its output as a draft, not production-ready code.
+                                    </li><br>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">
+                                        <strong>Supplement with code reviews and static analysis tools.</strong><br>
+                                        While Copilot speeds up writing code, human and automated quality checks remain essential. 
+                                        <ol style="list-style-type: lower-alpha; margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Use peer code reviews to validate logic and maintain coding consistency.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Use static analysis tools (like SonarQube, ESLint, or CodeQL) to detect:
+                                                <ol style="list-style-type: lower-roman; margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                                                    <li class="text-large" style="margin-bottom: 0.25rem;">Security vulnerabilities</li>
+                                                    <li class="text-large" style="margin-bottom: 0.25rem;">Style violations</li>
+                                                    <li class="text-large" style="margin-bottom: 0.25rem;">Performance or maintainability issues</li>
+                                                </ol>
+                                            </li>
+                                        </ol><br>
+                                        Integrate Copilot usage into your standard CI/CD quality gates — automation and review together ensure safe, reliable code. 
+                                    </li><br>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">
+                                        <strong>Educating teams on ethical and secure usage</strong><br>
+                                        Copilot can generate code influenced by open-source data. Without awareness, developers might:
+                                        <ol style="list-style-type: lower-alpha; margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Accidentally reuse licensed or proprietary code.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Expose confidential business logic in prompts.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Implement solutions that mishandle sensitive data.</li>
+                                        </ol></li>
+                                        <br>
+                                   <li class="text-large" style="margin-bottom: 0.25rem;">
+                                        <strong>Conduct Copilot awareness sessions to teach teams:</strong>
+                                        <ol style="list-style-type: lower-alpha; margin-top: 0.25rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">When and how to use Copilot safely.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Data privacy guidelines (never paste secrets or client data).</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Copyright and open-source license awareness.</li>
+                                            <li class="text-large" style="margin-bottom: 0.25rem;">Secure coding practices (e.g., avoid hardcoded credentials).</li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                                <br>
+                                <h2>A brief caveat</h2>
+                                <ol>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Some generated codes may have bugs or security issues.</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">You still need to review, test and understand what’s being suggested — it’s an assistant, not a fully autonomous coder.</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">For niche domains or very complex logic, its performance may drop.</li>
+                                </ol>
+
+                            
+                            <div id="future"></div>
+                                <h2>The future of AI in development</h2>
+                                <p class="text-large">AI-powered coding assistants such as GitHub Copilot are fundamentally transforming how software is built. 
+                                    By automating repetitive tasks, generating high-quality code suggestions, and accelerating problem-solving, these tools allow developers to focus more on design, architecture, and innovation rather than boilerplate implementation. 
+                                    They enhance productivity, reduce onboarding time, and democratize access to best practices—making advanced development techniques more accessible even to junior engineers.</p>
+                                <p class="text-large">Tools like GitHub Copilot are rapidly shaping the future of software engineering by transforming how developers write, review, and understand code. 
+                                    With intelligent code suggestions, automated documentation, and context-aware assistance, Copilot significantly accelerates development while improving quality and consistency. 
+                                    Its newer capabilities—such as Copilot Chat for interactive debugging and architectural guidance, and deeper integrations with OpenAI models—are pushing AI-assisted development into more conversational, problem-solving territory. 
+                                    As these tools continue to evolve with features like advanced code refactoring, AI-driven test generation, and multi-modal understanding, they are redefining developer workflows and enabling teams to build complex software faster, more reliably, and with far greater efficiency than before.</p>
+                                    <p class="text-large">As organizations integrate AI deeper into their development workflows, software engineering is shifting toward a more collaborative, intelligent, and efficiency-driven model, where developers and AI work together to deliver faster, more reliable, and more maintainable software.</p>
+                            
+
+                            <div class="row">
+                                <div class="column width-6">
+                                    <img src="/images/best-practices/Power BI Copilot best practice guide.png" alt="Power BI Copilot best practice guide">
+                                </div>
+                                <div class="column width-6">
+                                    <H2>Power BI Copilot Best Practice Guide</H2>
+                                    <p class="text-large">Build AI-ready semantic models with Power BI Copilot</p>
+                                    <a href="/insights/power-bi-copilot-best-practices.html">Read More &rarr;</a><br>
+                                </div>
+                            </div>
+                            <div class="section-block pt-10 pb-10 bkg-white"></div>
+                            <div class="post-info center">
+                                <span class="post-date">Last updated: January 30, 2026</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="section-block bkg-grey-ultralight"></div>
+    </div>
+    <!-- Content End -->
+    <!-- Footer -->
+    <footer id="footer" class="footer footer-light bkg-grey-ultralight"></footer>
+    <!-- Footer End -->
+    <!-- Js -->
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script>
+    <script src="/js/timber.master.min.js"></script>
+    <script src="../js/sidenav.js"></script>
+    <script>
+        // $("#header").load("/header");
+        // $("#footer").load("/footer");
+        // $("#header").load("/header.html");
+        $("#footer").load("/footer.html");
+    </script>
+</body>
+
+</html>
