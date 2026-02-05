@@ -88,7 +88,7 @@
                                 <li class="text-xlarge"><a href="#bestpractices">Best practices for adoption</a></li>
                                 <li class="text-xlarge"><a href="#future">The future of AI in development</a></li>
                             </ol>
-                            <div id="Introduction"></div>
+                            <div id="introduction"></div>
                             <h2>Introduction</h2>
                             <p class="text-large">GitHub Copilot is an AI-powered coding assistant designed to help developers write code faster, with more accuracy, and with less manual effort. Built by GitHub in collaboration with OpenAI, Copilot integrates directly into popular development environments such as Visual Studio Code, Visual Studio, JetBrains IDEs, and accessible tools like Copilot Chat. It uses large language models trained on billions of lines of publicly available code and natural language to provide real-time suggestions, autocompletions, code snippets, test cases, documentation, and more—based on the context of what the developer is working on.</p>
                             <p class="text-large"><strong>In practice, it:</strong>
@@ -109,7 +109,7 @@
                             </ol>
 
                             <div class="center">
-                                <img src="../images/best-practices/github-copilot-image1.png" alt="GitHub Copilot Test Screen" />
+                                <img src="../images/best-practices/github-copilot-img1-blurred.png" alt="GitHub Copilot Test Screen" />
                             </div>
 
 
@@ -511,21 +511,21 @@
                                         <tr>
                                             <td><strong>Use Case 10</strong></td>
                                             <td>Creation of API test cases</td>
-                                            <td>-</td>
+                                            <td>100%</td>
                                         </tr>
                                         <tr>
                                             <td><strong>Use Case 11</strong></td>
                                             <td>Creation of test cases in qTest</td>
-                                            <td>-</td>
+                                            <td>33%</td>
                                         </tr>
                                         <tr>
                                             <td><strong>Use Case 12</strong></td>
                                             <td>API testing using Locust</td>
-                                            <td>-</td>
+                                            <td>80%</td>
                                         </tr>
                                     </tbody>
                                 </table><br>
-                                <p class="text-large"><i>*For the blank efficiency gain values, the test cases were created entirely using Copilot from the start of the project, so there is no benchmark available for comparison.</i></p> 
+                                
                                 <p class="text-xlarge">
                                     <strong>Documentation</strong>
                                 </p>
@@ -542,12 +542,62 @@
 
                                 </ol>
                                 </p>
+                                <p class="text-large"><strong>Use Case 14: Documenting change logs</strong><br><br>
+                                <strong>Problem Statement:</strong> During the SDLC, changes occur across requirements, design, architecture, code, and configurations. Without a standardized mechanism to capture these changes, it becomes difficult to:
+                                <ol>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Trace what changed and why</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Assess downstream impact</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Support audits, compliance, and release validation</li>
+                                </ol></p>
+                                <p class="text-large"><strong>Approach:</strong> Implement a centralized change log mechanism that:
+                                <ol>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Records every approved change with context (reason, scope, impact)</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Links changes to SDLC artifacts (requirements, design docs, code repositories)</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Maintains version history and approval status</li>
+                                </ol>
+                                </p>
+                                <p class="text-large"><strong>Use Case 15: Approach/Design documents</strong><br><br>
+                                <strong>Problem Statement:</strong> New features, enhancements, or system changes are often initiated without a clearly documented approach or design. This can lead to:
+                                <ol>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Misaligned understanding of scope and architecture</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Late-stage rework due to unclear decisions</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Inconsistent implementation across the SDLC</li>
+                                </ol></p>
+                                <p class="text-large"><strong>Approach:</strong> Create a standardized approach/design document that:
+                                <ol>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Defines functional and non-functional scope</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Describes high-level and detailed architecture</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Documents key design decisions, assumptions, and constraints</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Serves as a single source of truth across the SDLC</li>
+                                </ol>
+                                </p>
+                                <p class="text-large"><strong>Use Case 16: Flow diagrams</strong><br><br>
+                                <strong>Problem Statement:</strong> Complex systems involve multiple components, integrations, and data flows. Text-heavy documentation alone makes it difficult to:
+                                <ol>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Visualize end-to-end system behavior</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Understand component interactions</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Perform impact analysis for changes</li>
+                                </ol></p>
+                                <p class="text-large"><strong>Approach:</strong> Develop architecture-focused flow diagrams that:
+                                <ol>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Visually represent component interactions and data flow</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Illustrate request/response paths and integration points</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Highlight key processing steps and dependencies</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;">Complement design documents for faster comprehension</li>
+                                </ol>
+                                </p>
                                 <p class="text-large"><strong>Other use cases</strong>
                                 <p class="text-large">
                                     <ol>
-                                    <li class="text-large" style="margin-bottom: 0.25rem;">Repetitive tasks</li>
-                                    <li class="text-large" style="margin-bottom: 0.25rem;">Rapid prototyping</li>
-                                    <li class="text-large" style="margin-bottom: 0.25rem;">Learning new languages</li>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;"><strong>Repetitive tasks:</strong><br> GitHub Copilot is highly effective for automating repetitive development tasks such as writing boilerplate code, CRUD operations, data models, and configuration files. 
+                                    Developers can rely on Copilot to quickly generate standard patterns, reducing manual effort and minimizing errors. 
+                                    This allows teams to focus more on business logic rather than routine implementation. It is especially useful in large projects where similar code patterns appear across multiple modules. </li> <br>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;"><strong>Rapid prototyping:</strong><br>Copilot enables fast prototyping by converting natural language descriptions into working code. 
+                                    Developers can quickly create proof-of-concepts, UI components, API endpoints, or workflows without spending excessive time on setup. This speeds up experimentation and validation of ideas, making it easier to gather early feedback from stakeholders. 
+                                    Rapid prototyping helps teams iterate faster and de-risk solutions early in the development cycle.</li><br>
+                                    <li class="text-large" style="margin-bottom: 0.25rem;"><strong>Learning new languages:</strong><br>When working with unfamiliar languages or frameworks, Copilot acts as an intelligent learning companion. 
+                                    It provides syntax suggestions, sample implementations, and best-practice patterns in real time. Developers can learn by observing generated examples and refining them, rather than constantly referring to external documentation. 
+                                    This reduces the learning curve and accelerates productivity in new technology stacks.</li><br>
 
                                 </ol>
                             
@@ -627,7 +677,7 @@
                                         Remember: the first response may not always be the accurate answer you’re looking for.
                                         <br>
                                         <div class="center">
-                                            <img src="../images/best-practices/github-copilot-gif.gif" alt="Refining prompts with GitHub Copilot" />
+                                            <img src="../images/best-practices/github-copilot-gif-blurred.gif" alt="Refining prompts with GitHub Copilot" />
                                         </div>
                                     </li><br>
                                     <li class="text-large" style="margin-bottom: 0.25rem;">
@@ -707,7 +757,7 @@
                             </div>
                             <div class="section-block pt-10 pb-10 bkg-white"></div>
                             <div class="post-info center">
-                                <span class="post-date">Last updated: January 30, 2026</span>
+                                <span class="post-date">Last updated: February 5, 2026</span>
                             </div>
                         </div>
                     </article>
