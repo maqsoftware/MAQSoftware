@@ -2153,6 +2153,48 @@ p{
 
 /* Service Icons Section */
 
+.fluent--data-bar-vertical-arrow-down-24-regular {
+  display: inline-block;
+  width: 192px;
+  height: 192px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M18.251 3a2.25 2.25 0 0 0-2.249 2.25v5.924q.722-.172 1.498-.174h.002V5.25a.749.749 0 1 1 1.498 0v5.924c.528.125 1.03.314 1.5.558V5.25A2.25 2.25 0 0 0 18.251 3m-4.25 6.25v2.772a6.5 6.5 0 0 0-1.5 1.324V9.25a.75.75 0 0 0-1.499 0v8.09a7 7 0 0 0 0 .322v1.09c0 .224.098.425.254.562c.173.598.43 1.16.756 1.672q-.128.015-.261.015a2.25 2.25 0 0 1-2.249-2.25v-9.5a2.25 2.25 0 1 1 4.498 0M5.25 11A2.25 2.25 0 0 0 3 13.25v5.5a2.25 2.25 0 1 0 4.5 0v-5.5A2.25 2.25 0 0 0 5.25 11m0 1.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0v-5.5a.75.75 0 0 1 .75-.75m17.75 5a5.5 5.5 0 1 1-11 0a5.5 5.5 0 0 1 11 0m-5-3a.5.5 0 0 0-1 0v4.793l-1.646-1.647a.5.5 0 0 0-.708.708l2.5 2.5a.5.5 0 0 0 .708 0l2.5-2.5a.5.5 0 0 0-.708-.708L18 19.293z'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.fluent--desktop-pulse-24-regular {
+  display: inline-block;
+  width: 192px;
+  height: 192px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M6.75 22a.75.75 0 0 1-.102-1.493l.102-.007h1.749v-2.498H4.25a2.25 2.25 0 0 1-2.245-2.096L2 15.752v-2.751h1.5v2.751c0 .38.282.694.648.743l.102.007h15.499a.75.75 0 0 0 .743-.648l.007-.102v-2.751h1.5v2.751a2.25 2.25 0 0 1-2.096 2.245l-.154.005h-4.25V20.5h1.751a.75.75 0 0 1 .102 1.494L17.25 22zm7.248-3.998h-4l.001 2.498h4zM3.5 9.5H2V5.25a2.25 2.25 0 0 1 2.096-2.245L4.25 3h15.499a2.25 2.25 0 0 1 2.245 2.096l.005.154V9.5h-1.5V5.25a.75.75 0 0 0-.648-.743l-.102-.007H4.25a.75.75 0 0 0-.743.648L3.5 5.25zm6.196-3.028a.75.75 0 0 0-1.38-.029l-1.822 4.058H2.75a.75.75 0 0 0 0 1.5h4.23a.75.75 0 0 0 .684-.443L8.96 8.67l2.344 5.859a.75.75 0 0 0 1.342.103l2.657-4.498l1.083 1.547c.14.2.37.32.614.32h4.25a.75.75 0 0 0 0-1.5h-3.86l-1.526-2.18a.75.75 0 0 0-1.26.048l-2.474 4.187z'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.fluent--cloud-download-24-regular {
+  display: inline-block;
+  width: 192px;
+  height: 192px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 4.5a4.5 4.5 0 0 0-4.495 4.285a.75.75 0 0 1-.75.715H6.5a3 3 0 1 0 0 6h3.576a6.6 6.6 0 0 0-.057 1.5H6.5a4.5 4.5 0 0 1-.42-8.98a6.001 6.001 0 0 1 11.84 0a4.5 4.5 0 0 1 4.053 4.973a6.5 6.5 0 0 0-1.8-1.857A3 3 0 0 0 17.5 9.5h-.256a.75.75 0 0 1-.749-.715A4.5 4.5 0 0 0 12 4.5m10 12a5.5 5.5 0 1 1-11 0a5.5 5.5 0 0 1 11 0m-5-3a.5.5 0 0 0-1 0v4.793l-1.646-1.647a.5.5 0 0 0-.708.708l2.5 2.5a.5.5 0 0 0 .708 0l2.5-2.5a.5.5 0 0 0-.708-.708L17 18.293z'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
 .fluent--cloud-checkmark-24-regular {
   display: inline-block;
   width: 192px;
