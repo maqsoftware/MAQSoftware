@@ -176,6 +176,38 @@ h3.post-title{
   margin-bottom: 0 !important;
 }
 
+/* Reduce top spacer gap for best practices pages */
+.section-block.bkg-grey-ultralight:has(+ .content.best-practices-text) {
+  padding-top: 5rem;
+  padding-bottom: 0;
+}
+
+/* Reduce internal padding of content card for best practices */
+.best-practices-text .with-background {
+  padding: 3rem 5rem;
+}
+
+/* Best practices page title sizing */
+.best-practices-text h1.post-title {
+  font-size: 2.25rem;
+  margin-bottom: 0.4rem;
+}
+
+.best-practices-text h3.post-title {
+  font-size: 1.625rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+/* Best practices section header sizing */
+.best-practices-text h2 {
+  font-size: 1.75rem;
+}
+
+.best-practices-text h3:not(.post-title) {
+  font-size: 1.25rem;
+}
+
 .visualization-page-text{
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   letter-spacing: 0;
