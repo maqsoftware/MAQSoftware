@@ -35,11 +35,16 @@ module.exports = function(grunt) {
 		},
 		imagemin: {
 			dynamic: {
+				options: {
+					optimizationLevel: 3,
+					concurrency: 4
+				},
 				files: [{
 					expand: true,
 					cwd: 'images/',
 					src: ['**/*.{png,jpg,gif}'],
-					dest: 'images/'
+					dest: 'images/',
+					filter: 'isFile'
 				}]
 			}
 		},
