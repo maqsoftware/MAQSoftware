@@ -80,6 +80,42 @@ h1 {
   font-size: 44px;
   width: auto;
 }
+.pill-container {
+  display: flex; 
+  flex-direction: row;
+  gap: 8px;
+}
+
+.pill-sm {
+  display: inline-flex;
+  width: fit-content;
+  background-color: #D9D9D9;
+  border-radius: 24px;
+  font-size: 14px;
+  padding: 4px 16px;
+}
+
+.block-pill-sm {
+  display: inline-flex;
+  width: fit-content;
+  background-color: #D9D9D9;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 4px 16px;
+}
+
+.icon-pill-sm {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  border-radius: 24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 4px 0px;
+  margin-left: 0px !important;
+}
 
 .linked-card {
   gap: 16px;
@@ -2142,6 +2178,14 @@ p{
   background-size: cover;
 }
 
+.pill-sm-icon-size {
+  display: block;
+  max-width: 24px;
+  max-height: 24px;
+  background-position: center;
+  background-size: cover;
+}
+
 .services-icon-img{
   width: 40px;
 }
@@ -3383,6 +3427,20 @@ p{
   mask-size: 100% 100%;
 }
 
+.fluent--calendar-clock-16-regular {
+  display: inline-block;
+  width: 192px;
+  height: 192px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23000' d='M11.5 2A2.5 2.5 0 0 1 14 4.5v2.1a5.5 5.5 0 0 0-1-.393V6H3v5.5A1.5 1.5 0 0 0 4.5 13h1.707q.149.524.393 1H4.5A2.5 2.5 0 0 1 2 11.5v-7A2.5 2.5 0 0 1 4.5 2zm0 1h-7A1.5 1.5 0 0 0 3 4.5V5h10v-.5A1.5 1.5 0 0 0 11.5 3m4.5 8.5a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0M11.5 9a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5H13a.5.5 0 0 0 0-1h-1V9.5a.5.5 0 0 0-.5-.5'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
 
 .checkmark-size{
   max-width: 30px;
@@ -4531,6 +4589,11 @@ img .accordion-img{
 /* ============================== */
 /* SM (max-width: 599px) */
 @media only screen and (max-width: 599px) {
+  .pill-container {
+  display: flex; 
+  flex-direction: column;
+  gap: 8px;
+  }
 
   .notification-banner {
     padding: 0% 10%;
