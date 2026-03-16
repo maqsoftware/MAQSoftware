@@ -3945,6 +3945,12 @@ div.flex{
   font-weight: bold;
 }
 
+.flex-table-header-cell-positive {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+}
+
 .flex-table .flex-table-row:nth-child(odd) {
   background-color: var(--MAQGrey);
 }
