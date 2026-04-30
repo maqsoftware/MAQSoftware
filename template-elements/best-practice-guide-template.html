@@ -1,0 +1,181 @@
+<!--
+    BEST PRACTICE GUIDE — CANONICAL TEMPLATE
+    ----------------------------------------
+    Replace every [BRACKETED] placeholder. Do not introduce:
+      - IE9 conditional shims
+      - <link rel="canonical"> (unless explicitly needed)
+      - Twitter card meta tags
+      - duplicate title/description meta tags
+      - <br> spacers inside list items
+      - <b> tags (use <strong>)
+      - nested <ol>/<ul> inside <p>
+    Each best practice item = one <li class="text-xlarge"><strong>...</strong></li>
+    followed by exactly one <p class="text-large">...</p>.
+    Numbered items continue across sections via <ol start="N">.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+
+    <!-- Page-Specific SEO Tags -->
+    <title>[GUIDE TITLE] | MAQ Software Insights</title>
+    <meta name="description" content="[150–160 char description summarizing the guide.]">
+    <meta name="keywords" content="[comma, separated, keywords, MAQ Software]">
+    <meta name="page-type" content="insight">
+    <meta name="page-topic" content="[GUIDE TITLE] | MAQ Software Insights">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="[GUIDE TITLE] | MAQ Software Insights">
+    <meta property="og:description" content="[Same as meta description.]">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://maqsoftware.com/insights/[guide-slug].html">
+    <meta property="og:site_name" content="MAQ Software">
+    <meta property="og:image" content="/images/expertise/[image].jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="[GUIDE TITLE] | MAQ Software Insights">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "[GUIDE TITLE]",
+      "description": "[Same as meta description.]",
+      "image": "https://maqsoftware.com/images/expertise/[image].jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "MAQ Software",
+        "url": "https://maqsoftware.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "MAQ Software",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://maqsoftware.com/images/logos/MAQ-Software-URL.png"
+        }
+      },
+      "dateModified": "[YYYY-MM-DD]",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://maqsoftware.com/insights/[guide-slug].html"
+      }
+    }
+    </script>
+
+    <!-- Twitter Theme -->
+    <meta name="twitter:widgets:theme" content="light">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/core.min.css" />
+    <link rel="stylesheet" href="/css/skin.css" />
+    <link rel="stylesheet" href="/css/styles.css"/>
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-S0W302CGQG');
+    </script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "oekduyvjws");
+    </script>
+</head>
+
+<body class="shop blog">
+
+    <!-- Header -->
+    <header id="header" class="header header-absolute header-fixed-on-mobile header-transparent" data-bkg-threshold="100" data-sticky-threshold="0"></header>
+    <!-- Header End -->
+    <div class="section-block bkg-grey-ultralight"></div>
+    <!-- Content -->
+    <div class="content clearfix best-practices-text">
+        <div class="section-block clearfix pt-0 pb-0 bkg-grey-ultralight">
+            <div class="row">
+                <!-- Content Inner -->
+                <div class="column width-10 offset-1 content-inner blog-single-post bkg-grey-ultralight">
+                    <article class="post">
+                        <div class="post-content with-background">
+                            <h1 class="post-title center">[GUIDE TITLE]</h1>
+
+                            <p class="text-large">[Intro paragraph: what the reader will learn and why it matters.]</p>
+                            <p class="text-large">[Optional second intro paragraph: MAQ Software experience or scope.]</p>
+
+                            <div id="[section-one-slug]">
+                                <h2>[Section One Heading]</h2>
+                                <ol>
+                                    <li class="text-xlarge"><strong>[Item 1 Title]</strong></li>
+                                    <p class="text-large">[Item 1 description. Use <strong>bold</strong> for emphasis and <code class="color-red bkg-grey-ultralight">code</code> for inline code.]</p>
+
+                                    <li class="text-xlarge"><strong>[Item 2 Title]</strong></li>
+                                    <p class="text-large">[Item 2 description.]</p>
+                                </ol>
+                            </div>
+
+                            <div id="[section-two-slug]">
+                                <h2>[Section Two Heading]</h2>
+                                <ol start="3">
+                                    <li class="text-xlarge"><strong>[Item 3 Title]</strong></li>
+                                    <p class="text-large">[Item 3 description.]</p>
+
+                                    <li class="text-xlarge"><strong>[Item 4 Title]</strong></li>
+                                    <p class="text-large">[Item 4 description.]</p>
+                                </ol>
+                            </div>
+
+                            <h2>References</h2>
+                            <ul class="defaultBody">
+                                <li class="text-large"><a href="[URL]" target="_blank" rel="noopener noreferrer">[Reference Title]</a> – [Source]</li>
+                                <li class="text-large"><a href="[URL]" target="_blank" rel="noopener noreferrer">[Reference Title]</a> – [Source]</li>
+                            </ul>
+
+                            <div class="row">
+                                <div class="column width-6">
+                                    <img src="/images/best-practices/[image].jpg" alt="">
+                                </div>
+                                <div class="column width-5 offset-1">
+                                    <p class="title-medium">Up Next</p><br><p class="title-small">[Next Guide Title]</p><br><a href="/insights/[next-guide-slug]">Learn More &rarr;</a><br>
+                                </div>
+                            </div>
+                            <div class="section-block pt-10 pb-10 bkg-white"></div>
+                            <div class="post-info center">
+                                <span class="post-date">Last updated: [Month DD, YYYY]</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="section-block bkg-grey-ultralight"></div>
+    </div>
+    <!-- Content End -->
+    <!-- Footer -->
+    <footer id="footer" class="footer footer-light bkg-grey-ultralight"></footer>
+    <!-- Footer End -->
+    <!-- Js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/timber.master.min.js"></script>
+    <script src="../js/sidenav.js"></script>
+    <script>
+$("#footer").load("/footer.html");
+    </script>
+</body>
+</html>
