@@ -85,11 +85,8 @@
 }
 
 .card img {
-    width: 56px;
-    height: 56px;
-    object-fit: cover;
-    border-radius: 4px;
-    flex-shrink: 0;
+    max-width: 100%;
+    height: auto;
 }
 
 .card h3 {
