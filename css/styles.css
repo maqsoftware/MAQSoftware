@@ -5092,3 +5092,49 @@ img .accordion-img{
 .scroll-to-top:hover {
   background-color: rgb(0, 0, 0);
 }
+
+/* ============================== */
+/* Shadow Utility Classes         */
+/* ============================== */
+
+/* Static shadows — apply directly to an element */
+.shadow-sm {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-md {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-lg {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-xl {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12), 0 6px 12px rgba(0, 0, 0, 0.07);
+}
+
+/* Hover shadows — element lifts when hovered */
+.shadow-hover-sm {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.shadow-hover-sm:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10), 0 2px 4px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+.shadow-hover-md {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.shadow-hover-md:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.07);
+  transform: translateY(-2px);
+}
+
+.shadow-hover-lg {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.shadow-hover-lg:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14), 0 6px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
