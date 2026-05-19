@@ -6,7 +6,7 @@
   <!-- META TAGS (TOP PRIORITY) -->
   <!-- ========================= -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- SEO, Crawlers, and Attribution -->
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -16,13 +16,8 @@
   <meta name="publisher" content="MAQ Software" />
   <meta name="copyright" content="MAQ Software" />
   <meta name="language" content="en-US" />
-  <meta name="revisit-after" content="7 days" />
-  <meta name="rating" content="general" />
-  <meta name="distribution" content="global" />
   <meta name="page-type" content="homepage" />
   <meta name="page-topic" content="Microsoft Fabric Featured Partner - Data & Artificial Intelligence (AI) Services and Solutions" />
-  <meta name="expires" content="never" />
-  <meta name="cache-control" content="public" />
   
   <!-- Canonical and Sitemap -->
   <link rel="canonical" href="https://maqsoftware.com/" />
@@ -40,7 +35,7 @@
   <!-- Social Sharing (Open Graph & Twitter) -->
   <meta property="og:title" content="Microsoft Fabric Featured Partner | Data & Artificial Intelligence (AI) Services | MAQ Software" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://maqsoftware.com/" />
+  <meta property="og:url" content="https://www.maqsoftware.com/" />
   <meta property="og:site_name" content="MAQ Software" />
   <meta property="og:image" content="https://maqsoftware.com/images/logos/MAQ-Software-URL.png" />
   <meta property="og:image:secure_url" content="https://maqsoftware.com/images/logos/MAQ-Software-URL.png" />
@@ -64,7 +59,6 @@
 
   <!-- Core SEO Metadata -->
   <meta name="description" content="Leading AI & data consulting firm delivering transformative business intelligence solutions. Top 25 Global Microsoft Partner, premier Fabric expert, 1,800+ engineers." />
-  <meta name="keywords" content="AI consulting, Microsoft Fabric, Power BI consulting, Azure AI services, data modernization, enterprise AI solutions" />
 
   <!-- Business and Schema Info -->
   <meta name="company" content="MAQ Software" />
@@ -124,14 +118,66 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/case-studies-carousel.js"></script>
   <script src="js/contact-section.js"></script>
-  <script src="../js/accordion.js"></script>
-  <script src="../js/borderless-centered-cards.js"></script>
-  <script src="../js/image-card.js"></script>
-  <script src="../js/icon-cards.js"></script>
-  <script src="../js/price-card.js"></script>
-  <script src="../js/step-image-card.js"></script>
+  <script defer src="/js/accordion.js"></script>
+  <script defer src="/js/borderless-centered-cards.js"></script>
+  <script defer src="/js/image-card.js"></script>
+  <script defer src="/js/icon-cards.js"></script>
+  <script defer src="/js/price-card.js"></script>
+  <script defer src="/js/step-image-card.js"></script>
   <script src="/js/customer-story-carousel-cards.js"></script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.maqsoftware.com/#organization",
+        "name": "MAQ Software",
+        "url": "https://www.maqsoftware.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://maqsoftware.com/images/logos/MAQ-Software-URL.png",
+          "width": 200,
+          "height": 60
+        },
+        "foundingDate": "2000",
+        "description": "Microsoft Fabric Featured Partner and Top 25 Global Microsoft Partner providing AI, data analytics, and cloud consulting services to Fortune 500 enterprises.",
+        "award": [
+          "Microsoft Fabric Featured Partner",
+          "Top 25 Global Microsoft Partner",
+          "2021 Microsoft Power BI Partner of the Year — Global Award Winner",
+          "Inc. 5000 — 12-time honoree"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "CustomerSuccess@MAQSoftware.com",
+          "contactType": "customer service"
+        },
+        "sameAs": [
+          "https://twitter.com/MAQSoftware",
+          "https://www.linkedin.com/company/maq-software/",
+          "https://appsource.microsoft.com/en-us/marketplace/partner-dir/maqsoftware"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.maqsoftware.com/#website",
+        "url": "https://www.maqsoftware.com/",
+        "name": "MAQ Software",
+        "publisher": { "@id": "https://www.maqsoftware.com/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.maqsoftware.com/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -505,7 +551,7 @@
             </a>
 
             
-            <a class="linked-card" href="/community/best-practices" aria-label="Go to best practice guides"  target="_blank" rel="noopener noreferrer">
+            <a class="linked-card" href="/community/best-practices" aria-label="Go to best practice guides">
                 <div class="img-container-insights">
                   <img src="../images-new/MAQ-homepage-images-webp/power-bi-performance-and-security.webp" alt="Image of a computer and a coffee mug"
                     class="customer-stories-img" loading="lazy">
