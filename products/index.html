@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+
+	<!-- Open Graph -->
+	<meta property="og:title" content="Products | MAQ Software" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="/images/isv/isv-top-image" />
+	<meta property="og:description"
+		content="Six accelerators distilled from 25 years of MAQ engagements — migrate, embed, govern, and operate Microsoft Fabric, Power BI, and agentic AI faster." />
+
+	<!-- Twitter Theme -->
+	<meta name="twitter:widgets:theme" content="light">
+
+	<title>Products | MAQ Software</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/images/logos/MAQ-Software-URL.png">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+		rel="stylesheet">
+
+	<!-- Existing site CSS — kept so header/footer/global chrome match the rest of the site -->
+	<link rel="stylesheet" href="../css/core.min.css" />
+	<link rel="stylesheet" href="../css/skin.css" />
+	<link rel="stylesheet" href="../css/commonstyle.css" />
+	<link rel="stylesheet" href="../css/isvpage.css?v=20230614.1" />
+	<link rel="stylesheet" href="../css/styles.css" />
+
+	<meta name="description"
+		content="Explore the MAQ Software product suite — Fabric Admin Agent, AI-DataLens, EmbedFAST, CertyFAST, LoadFAST, MigrateFAST, RTIFAST, and IngestFAST.">
+	<meta name="keywords"
+		content="MAQ Software products, MigrateFAST, EmbedFAST, LoadFAST, CertyFAST, Fabric Admin Agent, AI-DataLens, RTIFAST, IngestFAST, Microsoft Fabric, Power BI, agentic AI">
+
+	<!-- Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-S0W302CGQG"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-S0W302CGQG');
+	</script>
+	<script type="text/javascript">
+		(function (c, l, a, r, i, t, y) {
+			c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+			t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+			y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+		})(window, document, "clarity", "script", "oekduyvjws");
+	</script>
+
+	<style>
+		/* ===========================================================
+		   Editorial Red — design tokens scoped to .products-v2
+		   Per spec §8. These do not leak to header/footer.
+		   =========================================================== */
+		.products-v2 {
+			--maq-red: #c8102e;
+			--maq-red-dark: #9b0c24;
+			--maq-red-pale: #fde7ea;
+			--maq-red-50: #fff5f6;
+			--maq-surface-cream: #f7f8fa;
+			--maq-surface-soft: #f0f2f5;
+			--maq-off-white: #f7f8fa;
+			--maq-black: #0f172a;
+			--maq-ink: #1f2937;
+			--maq-gray-700: #475467;
+			--maq-gray-500: #667085;
+			--maq-border: #e4e7ec;
+			--maq-border-strong: #cdd2da;
+			--maq-shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+			--maq-shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.05);
+
+			font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+			font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+			color: var(--maq-gray-700);
+			line-height: 1.6;
+		}
+
+		.products-v2 *,
+		.products-v2 *::before,
+		.products-v2 *::after { box-sizing: border-box; }
+
+		.products-v2 h1,
+		.products-v2 h2,
+		.products-v2 h3 { margin: 0; }
+		.products-v2 h1 { line-height: 1.1; letter-spacing: -0.02em; color: var(--maq-black); }
+		.products-v2 h2 { line-height: 1.15; letter-spacing: -0.015em; color: var(--maq-black); }
+		.products-v2 h3 { line-height: 1.25; color: var(--maq-ink); }
+		.products-v2 p { line-height: 1.6; margin: 0; }
+		.products-v2 a { color: inherit; text-decoration: none; }
+
+		/* ----- Hero (§5.1) ----- */
+		.v2-hero {
+			background: linear-gradient(to bottom, #FFFFFF, #F5F6F8);
+			padding: 96px 32px 72px;
+		}
+		.v2-hero-inner {
+			max-width: 1240px;
+			margin: 0 auto;
+		}
+		.v2-eyebrow {
+			display: inline-block;
+			color: var(--maq-red);
+			font-size: 13px;
+			font-weight: 700;
+			letter-spacing: 0.14em;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+		}
+		.v2-hero h1 {
+			font-size: 56px;
+			font-weight: 700;
+			max-width: 880px;
+			margin-bottom: 24px;
+		}
+		.v2-hero-sub {
+			font-size: 18px;
+			color: var(--maq-gray-700);
+			max-width: 720px;
+		}
+
+		/* ----- Aggregated impact strip (§5.2) ----- */
+		.v2-impact-strip {
+			background: #fff;
+			border-top: 1px solid var(--maq-border);
+			border-bottom: 1px solid var(--maq-border);
+			padding: 40px 32px;
+		}
+		.v2-impact-grid {
+			max-width: 1240px;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 16px;
+		}
+		.v2-impact-card {
+			background: var(--maq-surface-cream);
+			border: 1px solid var(--maq-border);
+			border-radius: 12px;
+			padding: 24px 22px;
+			text-align: center;
+		}
+		.v2-impact-value {
+			font-size: 36px;
+			font-weight: 700;
+			color: var(--maq-red);
+			letter-spacing: -0.02em;
+			line-height: 1.05;
+			margin-bottom: 8px;
+		}
+		.v2-impact-label {
+			font-size: 13.5px;
+			color: var(--maq-gray-700);
+			line-height: 1.5;
+		}
+		@media (max-width: 720px) {
+			.v2-impact-grid { grid-template-columns: repeat(2, 1fr); }
+		}
+
+		/* ----- Card grid (§5.3) ----- */
+		.v2-grid-section {
+			background: var(--maq-off-white);
+			padding: 80px 32px;
+		}
+		.v2-grid-inner {
+			max-width: 1240px;
+			margin: 0 auto;
+		}
+		.v2-section-head {
+			margin-bottom: 48px;
+		}
+		.v2-section-head h2 {
+			font-size: 36px;
+			font-weight: 700;
+			margin-bottom: 16px;
+		}
+		.v2-section-head p {
+			font-size: 16px;
+			color: var(--maq-gray-700);
+			max-width: 720px;
+		}
+		.v2-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 24px;
+		}
+		@media (max-width: 960px) {
+			.v2-grid { grid-template-columns: repeat(2, 1fr); }
+		}
+		@media (max-width: 640px) {
+			.v2-grid { grid-template-columns: 1fr; }
+		}
+
+		.v2-card {
+			background: #fff;
+			border: 1px solid var(--maq-border);
+			border-radius: 16px;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+		}
+		.v2-card:hover {
+			transform: translateY(-3px);
+			border-color: #b0b8c4;
+			box-shadow: var(--maq-shadow-md);
+		}
+		.v2-card-thumb {
+			background: #fcfcfd;
+			border-bottom: 1px solid var(--maq-red-pale);
+			padding: 16px 16px 0;
+		}
+		.v2-card-thumb svg {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+		.v2-card-body {
+			padding: 22px 24px 24px;
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			flex: 1;
+		}
+		.v2-card-logo {
+			display: none;
+		}
+		.v2-card-tagline {
+			color: var(--maq-red);
+			font-size: 11.5px;
+			font-weight: 700;
+			letter-spacing: 0.14em;
+			text-transform: uppercase;
+		}
+		.v2-card-title {
+			font-size: 18px;
+			font-weight: 700;
+			color: var(--maq-black);
+		}
+		.v2-card-desc {
+			font-size: 13.5px;
+			color: var(--maq-gray-700);
+			line-height: 1.55;
+			flex: 1;
+		}
+		.v2-card-tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 6px;
+		}
+		.v2-badge {
+			display: inline-flex;
+			align-items: center;
+			padding: 3px 10px;
+			border-radius: 999px;
+			background: var(--maq-surface-soft);
+			color: var(--maq-gray-700);
+			font-size: 11px;
+			font-weight: 500;
+			line-height: 1.4;
+			white-space: nowrap;
+		}
+		.v2-card-link {
+			display: inline-flex;
+			align-items: center;
+			gap: 12px;
+			color: var(--maq-black);
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 1.3;
+			align-self: flex-start;
+			margin-top: 8px;
+		}
+		.v2-card-link-icon {
+			width: 30px;
+			height: 30px;
+			border-radius: 8px;
+			background: var(--maq-red);
+			color: #fff;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			flex-shrink: 0;
+		}
+		.v2-card-link-icon svg {
+			width: 13px;
+			height: 13px;
+		}
+
+		/* ----- CTA band (§5.4) ----- */
+		.v2-cta-section {
+			background: var(--maq-off-white);
+			padding: 80px 32px 100px;
+		}
+		.v2-cta-card {
+			max-width: 1100px;
+			margin: 0 auto;
+			background: #fff;
+			border: 1px solid var(--maq-red-pale);
+			border-radius: 20px;
+			padding: 56px 48px;
+			text-align: center;
+		}
+		.v2-cta-card h2 {
+			font-size: 32px;
+			font-weight: 700;
+			margin-bottom: 16px;
+		}
+		.v2-cta-card p {
+			font-size: 16px;
+			color: var(--maq-gray-700);
+			max-width: 600px;
+			margin: 0 auto 28px;
+		}
+		.products-v2 a.v2-btn-primary {
+			display: inline-block;
+			background: var(--maq-red);
+			color: #fff;
+			padding: 14px 28px;
+			border-radius: 8px;
+			font-size: 15px;
+			font-weight: 600;
+			transition: background 0.2s ease;
+		}
+		.products-v2 a.v2-btn-primary:hover {
+			background: var(--maq-red-dark);
+			color: #fff;
+		}
+
+		/* ----- Responsive tweaks ----- */
+		@media (max-width: 720px) {
+			.v2-hero { padding: 72px 24px 56px; }
+			.v2-hero h1 { font-size: 40px; }
+			.v2-hero-sub { font-size: 16px; }
+			.v2-grid-section { padding: 60px 24px; }
+			.v2-section-head h2 { font-size: 28px; }
+			.v2-cta-section { padding: 60px 24px 80px; }
+			.v2-cta-card { padding: 40px 24px; }
+			.v2-cta-card h2 { font-size: 26px; }
+		}
+	</style>
+</head>
+
+<body class="shop home-page">
+
+	<!-- Header -->
+	<header id="header" class="header header-absolute header-fixed-on-mobile header-transparent"
+		data-bkg-threshold="100" data-sticky-threshold="0"></header>
+
+	<main class="products-v2">
+
+		<!-- ============================================================
+		     Hero — §5.1
+		     ============================================================ -->
+		<section class="v2-hero">
+			<div class="v2-hero-inner">
+				<div class="v2-eyebrow">Our products</div>
+				<h1>Compress time-to-value on Microsoft Fabric, Power BI, and agentic AI.</h1>
+				<p class="v2-hero-sub">
+					Eight accelerators distilled from 25 years of MAQ Software engagements with Fortune 2000
+					customers — each built to take a real initiative from kickoff to measurable outcome in
+					weeks, not quarters.
+				</p>
+			</div>
+		</section>
+
+		<!-- ============================================================
+		     Aggregated impact strip — §5.2
+		     ============================================================ -->
+		<section class="v2-impact-strip" aria-label="Aggregate outcomes">
+			<div class="v2-impact-grid">
+				<div class="v2-impact-card">
+					<div class="v2-impact-value">120+</div>
+					<div class="v2-impact-label">Enterprise migrations delivered</div>
+				</div>
+				<div class="v2-impact-card">
+					<div class="v2-impact-value">200+</div>
+					<div class="v2-impact-label">Sources ingested in production</div>
+				</div>
+				<div class="v2-impact-card">
+					<div class="v2-impact-value">500+</div>
+					<div class="v2-impact-label">Reports certified per month</div>
+				</div>
+				<div class="v2-impact-card">
+					<div class="v2-impact-value">40+</div>
+					<div class="v2-impact-label">SaaS products embedded</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+		     Card grid — §5.3
+		     ============================================================ -->
+		<section class="v2-grid-section">
+			<div class="v2-grid-inner">
+				<div class="v2-section-head">
+					<h2>Explore the product suite</h2>
+					<p>
+						Purpose-built accelerators that help your team migrate, embed, govern, and operate
+						Microsoft Fabric, Power BI, and agentic AI with confidence.
+					</p>
+				</div>
+
+				<div class="v2-grid">
+
+					<!-- ============ 1. Fabric Admin Agent — gauge motif ============ -->
+					<a href="/products/fabricadminagent" class="v2-card" aria-label="Learn more about Fabric Admin Agent">
+						<div class="v2-card-thumb">
+							<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"
+								aria-label="Fabric Admin Agent — illustrative interface preview">
+								<rect x="10" y="10" width="540" height="340" rx="12" fill="#fff" stroke="#e4e7ec"/>
+								<path d="M 10 22 A 12 12 0 0 1 22 10 L 538 10 A 12 12 0 0 1 550 22 L 550 50 L 10 50 Z" fill="#f7f8fa"/>
+								<line x1="10" y1="50" x2="550" y2="50" stroke="#e4e7ec"/>
+								<circle cx="32" cy="30" r="4.5" fill="#c8102e"/>
+								<circle cx="50" cy="30" r="4.5" fill="#fde7ea"/>
+								<circle cx="68" cy="30" r="4.5" fill="#e4e7ec"/>
+								<!-- Donut -->
+								<circle cx="160" cy="200" r="58" fill="none" stroke="#fde7ea" stroke-width="14"/>
+								<circle cx="160" cy="200" r="58" fill="none" stroke="#c8102e" stroke-width="14"
+									stroke-dasharray="357 8" stroke-linecap="round"
+									transform="rotate(-90 160 200)"/>
+								<text x="160" y="207" text-anchor="middle" font-family="Inter, sans-serif"
+									font-size="26" font-weight="700" fill="#0f172a">98%</text>
+								<text x="160" y="285" text-anchor="middle" font-family="Inter, sans-serif"
+									font-size="10" font-weight="700" letter-spacing="2" fill="#475467">CAPACITY HEALTH</text>
+								<!-- Bars -->
+								<g font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#475467">
+									<text x="290" y="115">CAP-PROD-01</text>
+									<rect x="290" y="125" width="230" height="14" rx="4" fill="#f7f8fa"/>
+									<rect x="290" y="125" width="180" height="14" rx="4" fill="#c8102e"/>
+									<text x="290" y="170">CAP-PROD-02</text>
+									<rect x="290" y="180" width="230" height="14" rx="4" fill="#f7f8fa"/>
+									<rect x="290" y="180" width="130" height="14" rx="4" fill="#c8102e"/>
+									<text x="290" y="225">CAP-DEV-01</text>
+									<rect x="290" y="235" width="230" height="14" rx="4" fill="#f7f8fa"/>
+									<rect x="290" y="235" width="70" height="14" rx="4" fill="#fde7ea"/>
+									<text x="290" y="280">CAP-STG-01</text>
+									<rect x="290" y="290" width="230" height="14" rx="4" fill="#f7f8fa"/>
+									<rect x="290" y="290" width="40" height="14" rx="4" fill="#fde7ea"/>
+								</g>
+							</svg>
+						</div>
+						<div class="v2-card-body">
+							<div class="v2-card-logo" aria-hidden="true">FA</div>
+							<div class="v2-card-tagline">Capacity intelligence</div>
+							<div class="v2-card-title">Fabric Admin Agent</div>
+							<p class="v2-card-desc">
+								AI-powered capacity management for Microsoft Fabric admins. Detect anomalies in
+								real time, forecast demand, and act before users are impacted.
+							</p>
+							<div class="v2-card-tags">
+								<span class="v2-badge">Agentic AI</span>
+								<span class="v2-badge">Fabric Admin</span>
+								<span class="v2-badge">Capacity</span>
+							</div>
+							<span class="v2-card-link">
+								<span class="v2-card-link-icon" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+								</span>
+								Learn more about Fabric Admin Agent
+							</span>
+						</div>
+					</a>
+
+					<!-- ============ 2. AI-DataLens — chat motif ============ -->
+					<a href="/products/AI-DataLens" class="v2-card" aria-label="Learn more about AI-DataLens">
+						<div class="v2-card-thumb">
+							<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"
+								aria-label="AI-DataLens — illustrative interface preview">
+								<rect x="10" y="10" width="540" height="340" rx="12" fill="#fff" stroke="#e4e7ec"/>
+								<path d="M 10 22 A 12 12 0 0 1 22 10 L 538 10 A 12 12 0 0 1 550 22 L 550 50 L 10 50 Z" fill="#f7f8fa"/>
+								<line x1="10" y1="50" x2="550" y2="50" stroke="#e4e7ec"/>
+								<circle cx="32" cy="30" r="4.5" fill="#c8102e"/>
+								<circle cx="50" cy="30" r="4.5" fill="#fde7ea"/>
+								<circle cx="68" cy="30" r="4.5" fill="#e4e7ec"/>
+								<!-- Q bubble (right) -->
+								<rect x="280" y="80" width="240" height="44" rx="22" fill="#f7f8fa" stroke="#e4e7ec"/>
+								<text x="300" y="107" font-family="Inter, sans-serif" font-size="12" fill="#475467">
+									Compare Q4 sales by region
+								</text>
+								<!-- A bubble (left) -->
+								<rect x="40" y="140" width="290" height="80" rx="22" fill="#fff" stroke="#c8102e" stroke-width="1.5"/>
+								<text x="60" y="167" font-family="Inter, sans-serif" font-size="12.5"
+									font-weight="700" fill="#0f172a">3 regions beat plan</text>
+								<text x="60" y="187" font-family="Inter, sans-serif" font-size="11" fill="#475467">
+									EMEA +18%, NA +12%, LATAM +9%
+								</text>
+								<rect x="60" y="198" width="200" height="6" rx="3" fill="#fde7ea"/>
+								<rect x="60" y="198" width="140" height="6" rx="3" fill="#c8102e"/>
+								<!-- Input + Ask button -->
+								<rect x="40" y="270" width="370" height="44" rx="22" fill="#f7f8fa" stroke="#e4e7ec"/>
+								<text x="60" y="298" font-family="Inter, sans-serif" font-size="12" fill="#667085">
+									Ask anything about your data…
+								</text>
+								<rect x="420" y="270" width="100" height="44" rx="22" fill="#c8102e"/>
+								<text x="470" y="298" text-anchor="middle" font-family="Inter, sans-serif"
+									font-size="13" font-weight="600" fill="#fff">Ask →</text>
+							</svg>
+						</div>
+						<div class="v2-card-body">
+							<div class="v2-card-logo" aria-hidden="true">AI</div>
+							<div class="v2-card-tagline">Conversational analytics</div>
+							<div class="v2-card-title">AI-DataLens</div>
+							<p class="v2-card-desc">
+								Transform how users interact with data through natural language queries. Deliver
+								instant, intelligent insights and unlock a new way to explore information.
+							</p>
+							<div class="v2-card-tags">
+								<span class="v2-badge">Natural language</span>
+								<span class="v2-badge">Power BI</span>
+								<span class="v2-badge">Multi-tenant</span>
+							</div>
+							<span class="v2-card-link">
+								<span class="v2-card-link-icon" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+								</span>
+								Learn more about AI-DataLens
+							</span>
+						</div>
+					</a>
+
+					<!-- ============ 3. EmbedFAST — embed motif ============ -->
+					<a href="/products/embedFAST" class="v2-card" aria-label="Learn more about EmbedFAST">
+						<div class="v2-card-thumb">
+							<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"
+								aria-label="EmbedFAST — illustrative interface preview">
+								<rect x="10" y="10" width="540" height="340" rx="12" fill="#fff" stroke="#e4e7ec"/>
+								<path d="M 10 22 A 12 12 0 0 1 22 10 L 538 10 A 12 12 0 0 1 550 22 L 550 50 L 10 50 Z" fill="#f7f8fa"/>
+								<line x1="10" y1="50" x2="550" y2="50" stroke="#e4e7ec"/>
+								<circle cx="32" cy="30" r="4.5" fill="#c8102e"/>
+								<circle cx="50" cy="30" r="4.5" fill="#fde7ea"/>
+								<circle cx="68" cy="30" r="4.5" fill="#e4e7ec"/>
+								<!-- Tabs -->
+								<rect x="40" y="80" width="110" height="32" rx="6" fill="#c8102e"/>
+								<text x="95" y="101" text-anchor="middle" font-family="Inter, sans-serif"
+									font-size="11" font-weight="600" fill="#fff">Overview</text>
+								<text x="180" y="101" font-family="Inter, sans-serif" font-size="11" fill="#475467">
+									Performance
+								</text>
+								<text x="280" y="101" font-family="Inter, sans-serif" font-size="11" fill="#475467">
+									Trends
+								</text>
+								<line x1="40" y1="125" x2="520" y2="125" stroke="#e4e7ec"/>
+								<!-- Bar chart -->
+								<g transform="translate(50, 150)">
+									<rect x="0" y="80" width="32" height="60" rx="4" fill="#fde7ea"/>
+									<rect x="42" y="30" width="32" height="110" rx="4" fill="#c8102e"/>
+									<rect x="84" y="55" width="32" height="85" rx="4" fill="#fde7ea"/>
+									<rect x="126" y="10" width="32" height="130" rx="4" fill="#c8102e"/>
+									<rect x="168" y="65" width="32" height="75" rx="4" fill="#fde7ea"/>
+									<rect x="210" y="35" width="32" height="105" rx="4" fill="#c8102e"/>
+								</g>
+								<!-- Donut -->
+								<g transform="translate(420, 220)">
+									<circle r="50" fill="none" stroke="#f7f8fa" stroke-width="14"/>
+									<circle r="50" fill="none" stroke="#c8102e" stroke-width="14"
+										stroke-dasharray="226 88" stroke-linecap="round" transform="rotate(-90)"/>
+									<text y="6" text-anchor="middle" font-family="Inter, sans-serif"
+										font-size="20" font-weight="700" fill="#0f172a">72%</text>
+								</g>
+							</svg>
+						</div>
+						<div class="v2-card-body">
+							<div class="v2-card-logo" aria-hidden="true">EF</div>
+							<div class="v2-card-tagline">Embedded analytics</div>
+							<div class="v2-card-title">EmbedFAST</div>
+							<p class="v2-card-desc">
+								Effortlessly embed Power BI into your apps without writing your own code. Achieve
+								faster time to market and elevate your customer experience.
+							</p>
+							<div class="v2-card-tags">
+								<span class="v2-badge">Embedded BI</span>
+								<span class="v2-badge">SaaS</span>
+								<span class="v2-badge">Multi-tenant</span>
+							</div>
+							<span class="v2-card-link">
+								<span class="v2-card-link-icon" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+								</span>
+								Learn more about EmbedFAST
+							</span>
+						</div>
+					</a>
+
+					<!-- ============ 4. CertyFAST — shield motif ============ -->
+					<a href="/products/certyFAST" class="v2-card" aria-label="Learn more about CertyFAST">
+						<div class="v2-card-thumb">
+							<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"
+								aria-label="CertyFAST — illustrative interface preview">
+								<rect x="10" y="10" width="540" height="340" rx="12" fill="#fff" stroke="#e4e7ec"/>
+								<path d="M 10 22 A 12 12 0 0 1 22 10 L 538 10 A 12 12 0 0 1 550 22 L 550 50 L 10 50 Z" fill="#f7f8fa"/>
+								<line x1="10" y1="50" x2="550" y2="50" stroke="#e4e7ec"/>
+								<circle cx="32" cy="30" r="4.5" fill="#c8102e"/>
+								<circle cx="50" cy="30" r="4.5" fill="#fde7ea"/>
+								<circle cx="68" cy="30" r="4.5" fill="#e4e7ec"/>
+								<!-- Shield -->
+								<g transform="translate(60, 90)">
+									<path d="M 90 0 L 170 30 L 170 110 Q 170 175 90 210 Q 10 175 10 110 L 10 30 Z"
+										fill="#fff" stroke="#c8102e" stroke-width="3"/>
+									<path d="M 55 110 L 85 138 L 135 75"
+										fill="none" stroke="#c8102e" stroke-width="7"
+										stroke-linecap="round" stroke-linejoin="round"/>
+								</g>
+								<!-- Stamp -->
+								<g transform="translate(280, 110)">
+									<rect x="0" y="0" width="240" height="56" rx="8" fill="#fff" stroke="#e4e7ec"/>
+									<rect x="14" y="14" width="100" height="28" rx="4" fill="none"
+										stroke="#c8102e" stroke-width="1.5" stroke-dasharray="3 2"/>
+									<text x="64" y="34" text-anchor="middle" font-family="Inter, sans-serif"
+										font-size="11" font-weight="700" letter-spacing="2" fill="#c8102e">CERTIFIED</text>
+									<text x="130" y="22" font-family="Inter, sans-serif" font-size="10" fill="#475467">
+										Sales · Q4 FY26
+									</text>
+									<text x="130" y="38" font-family="Inter, sans-serif" font-size="10"
+										font-weight="600" fill="#0f172a">v3.2 · 12 checks passed</text>
+								</g>
+								<g transform="translate(280, 180)">
+									<rect x="0" y="0" width="240" height="56" rx="8" fill="#fff" stroke="#e4e7ec"/>
+									<rect x="14" y="14" width="100" height="28" rx="4" fill="none"
+										stroke="#c8102e" stroke-width="1.5" stroke-dasharray="3 2"/>
+									<text x="64" y="34" text-anchor="middle" font-family="Inter, sans-serif"
+										font-size="11" font-weight="700" letter-spacing="2" fill="#c8102e">CERTIFIED</text>
+									<text x="130" y="22" font-family="Inter, sans-serif" font-size="10" fill="#475467">
+										Finance · Q4 FY26
+									</text>
+									<text x="130" y="38" font-family="Inter, sans-serif" font-size="10"
+										font-weight="600" fill="#0f172a">v5.1 · 16 checks passed</text>
+								</g>
+								<g transform="translate(280, 250)">
+									<rect x="0" y="0" width="240" height="56" rx="8" fill="#fff" stroke="#e4e7ec"/>
+									<rect x="14" y="14" width="100" height="28" rx="4" fill="#c8102e"/>
+									<text x="64" y="34" text-anchor="middle" font-family="Inter, sans-serif"
+										font-size="11" font-weight="700" letter-spacing="2" fill="#fff">CERTIFIED</text>
+									<text x="130" y="22" font-family="Inter, sans-serif" font-size="10" fill="#475467">
+										Ops · Q4 FY26
+									</text>
+									<text x="130" y="38" font-family="Inter, sans-serif" font-size="10"
+										font-weight="600" fill="#0f172a">v2.4 · 11 checks passed</text>
+								</g>
+							</svg>
+						</div>
+						<div class="v2-card-body">
+							<div class="v2-card-logo" aria-hidden="true">CF</div>
+							<div class="v2-card-tagline">Certification gates</div>
+							<div class="v2-card-title">CertyFAST</div>
+							<p class="v2-card-desc">
+								Streamline Power BI model development with automated error detection, DAX
+								formatting, and simplified documentation — every report meets the bar before it ships.
+							</p>
+							<div class="v2-card-tags">
+								<span class="v2-badge">Quality gates</span>
+								<span class="v2-badge">DAX</span>
+								<span class="v2-badge">Power BI</span>
+							</div>
+							<span class="v2-card-link">
+								<span class="v2-card-link-icon" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+								</span>
+								Learn more about CertyFAST
+							</span>
+						</div>
+					</a>
+
+					<!-- ============ 5. LoadFAST — ingest motif ============ -->
+					<a href="/products/loadFAST" class="v2-card" aria-label="Learn more about LoadFAST">
+						<div class="v2-card-thumb">
+							<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"
+								aria-label="LoadFAST — illustrative interface preview">
+								<rect x="10" y="10" width="540" height="340" rx="12" fill="#fff" stroke="#e4e7ec"/>
+								<path d="M 10 22 A 12 12 0 0 1 22 10 L 538 10 A 12 12 0 0 1 550 22 L 550 50 L 10 50 Z" fill="#f7f8fa"/>
+								<line x1="10" y1="50" x2="550" y2="50" stroke="#e4e7ec"/>
+								<circle cx="32" cy="30" r="4.5" fill="#c8102e"/>
+								<circle cx="50" cy="30" r="4.5" fill="#fde7ea"/>
+								<circle cx="68" cy="30" r="4.5" fill="#e4e7ec"/>
+								<!-- Sources -->
+								<g font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#475467">
+									<rect x="40" y="85" width="110" height="42" rx="6" fill="#f7f8fa" stroke="#e4e7ec"/>
+									<text x="95" y="111" text-anchor="middle">REST API</text>
+									<rect x="40" y="160" width="110" height="42" rx="6" fill="#f7f8fa" stroke="#e4e7ec"/>
+									<text x="95" y="186" text-anchor="middle">SQL · CDC</text>
+									<rect x="40" y="235" width="110" height="42" rx="6" fill="#f7f8fa" stroke="#e4e7ec"/>
+									<text x="95" y="261" text-anchor="middle">EVENT HUB</text>
+								</g>
+								<!-- Arrows -->
+								<path d="M 155 106 L 230 180" stroke="#c8102e" stroke-width="2" fill="none" stroke-linecap="round"/>
+								<path d="M 155 181 L 230 181" stroke="#c8102e" stroke-width="2" fill="none" stroke-linecap="round"/>
+								<path d="M 155 256 L 230 182" stroke="#c8102e" stroke-width="2" fill="none" stroke-linecap="round"/>
+								<!-- Pipeline box -->
+								<rect x="230" y="158" width="120" height="48" rx="8" fill="#fff" stroke="#c8102e" stroke-width="2"/>
+								<text x="290" y="187" text-anchor="middle" font-family="Inter, sans-serif"
+									font-size="12" font-weight="700" fill="#c8102e">LoadFAST</text>
+								<!-- Arrow to tiers -->
+								<path d="M 352 182 L 400 182" stroke="#c8102e" stroke-width="2" fill="none" stroke-linecap="round"/>
+								<polyline points="395,176 402,182 395,188" stroke="#c8102e" stroke-width="2" fill="none"/>
+								<!-- Medallion tiers -->
+								<g font-family="Inter, sans-serif" font-size="11" font-weight="700" letter-spacing="2">
+									<rect x="410" y="85" width="110" height="46" rx="6" fill="#fde7ea" stroke="#c8102e"/>
+									<text x="465" y="113" text-anchor="middle" fill="#c8102e">BRONZE</text>
+									<rect x="410" y="160" width="110" height="46" rx="6" fill="#fde7ea" stroke="#c8102e"/>
+									<text x="465" y="188" text-anchor="middle" fill="#c8102e">SILVER</text>
+									<rect x="410" y="235" width="110" height="46" rx="6" fill="#c8102e" stroke="#c8102e"/>
+									<text x="465" y="263" text-anchor="middle" fill="#fff">GOLD</text>
+								</g>
+							</svg>
+						</div>
+						<div class="v2-card-body">
+							<div class="v2-card-logo" aria-hidden="true">LF</div>
+							<div class="v2-card-tagline">Pipelines &amp; medallion</div>
+							<div class="v2-card-title">LoadFAST</div>
+							<p class="v2-card-desc">
+								Stand up new data sources in days, not months. A medallion-ready ingestion pattern
+								that drops in alongside Fabric Data Factory and OneLake.
+							</p>
+							<div class="v2-card-tags">
+								<span class="v2-badge">Pipelines</span>
+								<span class="v2-badge">Medallion</span>
+								<span class="v2-badge">Fabric</span>
+							</div>
+							<span class="v2-card-link">
+								<span class="v2-card-link-icon" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+								</span>
+								Learn more about LoadFAST
+							</span>
+						</div>
+					</a>
+
+					<!-- ============ 6. MigrateFAST — swap motif ============ -->
+					<a href="/products/migrateFAST" class="v2-card" aria-label="Learn more about MigrateFAST">
+						<div class="v2-card-thumb">
+							<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"
+								aria-label="MigrateFAST — illustrative interface preview">
+								<rect x="10" y="10" width="540" height="340" rx="12" fill="#fff" stroke="#e4e7ec"/>
+								<path d="M 10 22 A 12 12 0 0 1 22 10 L 538 10 A 12 12 0 0 1 550 22 L 550 50 L 10 50 Z" fill="#f7f8fa"/>
+								<line x1="10" y1="50" x2="550" y2="50" stroke="#e4e7ec"/>
+								<circle cx="32" cy="30" r="4.5" fill="#c8102e"/>
+								<circle cx="50" cy="30" r="4.5" fill="#fde7ea"/>
+								<circle cx="68" cy="30" r="4.5" fill="#e4e7ec"/>
+								<!-- LEGACY card -->
+								<rect x="50" y="110" width="170" height="160" rx="10" fill="#f7f8fa" stroke="#e4e7ec"/>
+								<text x="135" y="146" text-anchor="middle" font-family="Inter, sans-serif"
+									font-size="12" font-weight="700" letter-spacing="2.5" fill="#475467">LEGACY</text>
+								<rect x="70" y="166" width="130" height="6" rx="3" fill="#e4e7ec"/>
+								<rect x="70" y="181" width="90" height="6" rx="3" fill="#e4e7ec"/>
+								<rect x="70" y="196" width="110" height="6" rx="3" fill="#e4e7ec"/>
+								<rect x="70" y="211" width="70" height="6" rx="3" fill="#e4e7ec"/>
+								<rect x="70" y="226" width="100" height="6" rx="3" fill="#e4e7ec"/>
+								<rect x="70" y="241" width="80" height="6" rx="3" fill="#e4e7ec"/>
+								<!-- Swap icon -->
+								<g transform="translate(248, 175)">
+									<circle cx="32" cy="20" r="28" fill="#fff" stroke="#c8102e" stroke-width="2"/>
+									<path d="M 16 14 L 44 14 M 38 8 L 44 14 L 38 20" stroke="#c8102e" stroke-width="2.5"
+										fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M 48 26 L 20 26 M 26 20 L 20 26 L 26 32" stroke="#c8102e" stroke-width="2.5"
+										fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+								</g>
+								<!-- FABRIC card -->
+								<rect x="340" y="110" width="170" height="160" rx="10" fill="#fff"
+									stroke="#c8102e" stroke-width="2"/>
+								<text x="425" y="146" text-anchor="middle" font-family="Inter, sans-serif"
+									font-size="12" font-weight="700" letter-spacing="2.5" fill="#c8102e">FABRIC</text>
+								<rect x="360" y="166" width="130" height="6" rx="3" fill="#fde7ea"/>
+								<rect x="360" y="181" width="90" height="6" rx="3" fill="#c8102e"/>
+								<rect x="360" y="196" width="110" height="6" rx="3" fill="#fde7ea"/>
+								<rect x="360" y="211" width="70" height="6" rx="3" fill="#c8102e"/>
+								<rect x="360" y="226" width="100" height="6" rx="3" fill="#fde7ea"/>
+								<rect x="360" y="241" width="80" height="6" rx="3" fill="#c8102e"/>
+							</svg>
+						</div>
+						<div class="v2-card-body">
+							<div class="v2-card-logo" aria-hidden="true">MF</div>
+							<div class="v2-card-tagline">Platform migration</div>
+							<div class="v2-card-title">MigrateFAST</div>
+							<p class="v2-card-desc">
+								Move Tableau, SAP BusinessObjects, Crystal Reports, Qlik, Alteryx, and Informatica
+								workloads to Power BI and Microsoft Fabric — AI-assisted, lower risk, faster cutover.
+							</p>
+							<div class="v2-card-tags">
+								<span class="v2-badge">Tableau→Power BI</span>
+								<span class="v2-badge">Crystal · Qlik</span>
+								<span class="v2-badge">Fabric Warehouse</span>
+							</div>
+							<span class="v2-card-link">
+								<span class="v2-card-link-icon" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+								</span>
+								Learn more about MigrateFAST
+							</span>
+						</div>
+					</a>
+
+					<!-- ============ 7. RTIFAST — ingest motif (real-time variant) ============ -->
+					<a href="/Fabric-RTI" class="v2-card" aria-label="Learn more about RTIFAST">
+						<div class="v2-card-thumb">
+							<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"
+								aria-label="RTIFAST — illustrative interface preview">
+								<rect x="10" y="10" width="540" height="340" rx="12" fill="#fff" stroke="#e4e7ec"/>
+								<path d="M 10 22 A 12 12 0 0 1 22 10 L 538 10 A 12 12 0 0 1 550 22 L 550 50 L 10 50 Z" fill="#f7f8fa"/>
+								<line x1="10" y1="50" x2="550" y2="50" stroke="#e4e7ec"/>
+								<circle cx="32" cy="30" r="4.5" fill="#c8102e"/>
+								<circle cx="50" cy="30" r="4.5" fill="#fde7ea"/>
+								<circle cx="68" cy="30" r="4.5" fill="#e4e7ec"/>
+								<!-- Streaming source -->
+								<g font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#475467">
+									<rect x="40" y="135" width="120" height="100" rx="6" fill="#f7f8fa" stroke="#e4e7ec"/>
+									<text x="100" y="165" text-anchor="middle">EVENT STREAM</text>
+									<circle cx="65" cy="195" r="4" fill="#c8102e"/>
+									<circle cx="80" cy="195" r="4" fill="#c8102e" opacity="0.7"/>
+									<circle cx="95" cy="195" r="4" fill="#c8102e" opacity="0.4"/>
+									<circle cx="110" cy="195" r="4" fill="#fde7ea"/>
+									<circle cx="125" cy="195" r="4" fill="#fde7ea" opacity="0.6"/>
+									<text x="100" y="220" text-anchor="middle" font-size="10" fill="#667085">~12k events/sec</text>
+								</g>
+								<!-- Dashed flow -->
+								<path d="M 165 185 L 230 185" stroke="#c8102e" stroke-width="2"
+									stroke-dasharray="4 4" fill="none"/>
+								<!-- RTIFAST core -->
+								<rect x="230" y="160" width="120" height="50" rx="8" fill="#fff" stroke="#c8102e" stroke-width="2"/>
+								<text x="290" y="190" text-anchor="middle" font-family="Inter, sans-serif"
+									font-size="12" font-weight="700" fill="#c8102e">RTIFAST</text>
+								<path d="M 352 185 L 400 185" stroke="#c8102e" stroke-width="2"
+									stroke-dasharray="4 4" fill="none"/>
+								<!-- Live chart -->
+								<g transform="translate(410, 105)">
+									<rect x="0" y="0" width="110" height="160" rx="6" fill="#fff" stroke="#e4e7ec"/>
+									<text x="55" y="22" text-anchor="middle" font-family="Inter, sans-serif"
+										font-size="10" font-weight="700" letter-spacing="1.5" fill="#475467">LIVE</text>
+									<polyline points="10,120 25,100 40,110 55,80 70,90 85,55 100,70"
+										stroke="#c8102e" stroke-width="2" fill="none" stroke-linecap="round"/>
+									<line x1="10" y1="140" x2="100" y2="140" stroke="#e4e7ec"/>
+									<circle cx="100" cy="70" r="3" fill="#c8102e"/>
+								</g>
+							</svg>
+						</div>
+						<div class="v2-card-body">
+							<div class="v2-card-logo" aria-hidden="true">RF</div>
+							<div class="v2-card-tagline">Real-time intelligence</div>
+							<div class="v2-card-title">RTIFAST</div>
+							<p class="v2-card-desc">
+								Simplify real-time data ingestion across multiple tenants at lower cost and with
+								greater flexibility, powered by Microsoft Fabric Real-Time Intelligence.
+							</p>
+							<div class="v2-card-tags">
+								<span class="v2-badge">Real-time</span>
+								<span class="v2-badge">Fabric RTI</span>
+								<span class="v2-badge">Multi-tenant</span>
+							</div>
+							<span class="v2-card-link">
+								<span class="v2-card-link-icon" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+								</span>
+								Learn more about RTIFAST
+							</span>
+						</div>
+					</a>
+
+					<!-- ============ 8. IngestFAST — ingest motif (template variant) ============ -->
+					<a href="https://blog.maqsoftware.com/2024/04/simplifying-data-ingestion-with.html"
+						class="v2-card" target="_blank" rel="noopener noreferrer"
+						aria-label="Learn more about IngestFAST">
+						<div class="v2-card-thumb">
+							<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"
+								aria-label="IngestFAST — illustrative interface preview">
+								<rect x="10" y="10" width="540" height="340" rx="12" fill="#fff" stroke="#e4e7ec"/>
+								<path d="M 10 22 A 12 12 0 0 1 22 10 L 538 10 A 12 12 0 0 1 550 22 L 550 50 L 10 50 Z" fill="#f7f8fa"/>
+								<line x1="10" y1="50" x2="550" y2="50" stroke="#e4e7ec"/>
+								<circle cx="32" cy="30" r="4.5" fill="#c8102e"/>
+								<circle cx="50" cy="30" r="4.5" fill="#fde7ea"/>
+								<circle cx="68" cy="30" r="4.5" fill="#e4e7ec"/>
+								<!-- Template card -->
+								<rect x="40" y="85" width="220" height="230" rx="8" fill="#fff" stroke="#c8102e" stroke-width="2"/>
+								<text x="60" y="113" font-family="Inter, sans-serif" font-size="11"
+									font-weight="700" letter-spacing="2" fill="#c8102e">TEMPLATE.YAML</text>
+								<g font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#475467">
+									<text x="60" y="142">source: rest_api</text>
+									<text x="60" y="160">  url: ${API_URL}</text>
+									<text x="60" y="178">  auth: oauth2</text>
+									<text x="60" y="200">target: fabric.bronze</text>
+									<text x="60" y="218">  table: orders</text>
+									<text x="60" y="236">schedule: hourly</text>
+									<text x="60" y="258">validate:</text>
+									<text x="60" y="276">  not_null: [id, ts]</text>
+									<text x="60" y="294">  unique: [id]</text>
+								</g>
+								<!-- Arrow to instances -->
+								<path d="M 270 195 L 320 195" stroke="#c8102e" stroke-width="2" fill="none" stroke-linecap="round"/>
+								<polyline points="315,189 322,195 315,201" stroke="#c8102e" stroke-width="2" fill="none"/>
+								<!-- Generated pipeline instances -->
+								<g font-family="Inter, sans-serif" font-size="10" font-weight="600">
+									<rect x="335" y="100" width="180" height="50" rx="6" fill="#f7f8fa" stroke="#e4e7ec"/>
+									<text x="350" y="121" fill="#0f172a" font-weight="700">orders_pipeline</text>
+									<text x="350" y="138" fill="#475467">✓ 18,402 rows · hourly</text>
+									<rect x="335" y="160" width="180" height="50" rx="6" fill="#f7f8fa" stroke="#e4e7ec"/>
+									<text x="350" y="181" fill="#0f172a" font-weight="700">customers_pipeline</text>
+									<text x="350" y="198" fill="#475467">✓ 7,221 rows · daily</text>
+									<rect x="335" y="220" width="180" height="50" rx="6" fill="#f7f8fa" stroke="#e4e7ec"/>
+									<text x="350" y="241" fill="#0f172a" font-weight="700">products_pipeline</text>
+									<text x="350" y="258" fill="#475467">✓ 1,083 rows · daily</text>
+								</g>
+							</svg>
+						</div>
+						<div class="v2-card-body">
+							<div class="v2-card-logo" aria-hidden="true">IF</div>
+							<div class="v2-card-tagline">Ingestion templates</div>
+							<div class="v2-card-title">IngestFAST</div>
+							<p class="v2-card-desc">
+								Streamline data ingestion with a standardized template — accelerate onboarding of
+								new sources and keep your pipelines consistent and maintainable.
+							</p>
+							<div class="v2-card-tags">
+								<span class="v2-badge">Templates</span>
+								<span class="v2-badge">Pipelines</span>
+								<span class="v2-badge">Ingestion</span>
+							</div>
+							<span class="v2-card-link">
+								<span class="v2-card-link-icon" aria-hidden="true">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+								</span>
+								Learn more about IngestFAST
+							</span>
+						</div>
+					</a>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+		     CTA band — §5.4
+		     ============================================================ -->
+		<section class="v2-cta-section">
+			<div class="v2-cta-card">
+				<h2>Find the right accelerator for your team</h2>
+				<p>
+					Tell us about your initiative and we'll match you to the right product — and a team
+					that's shipped this pattern before.
+				</p>
+				<a href="mailto:customersuccess@maqsoftware.com?subject=MAQ%20Software%20Products&body=Hello%2C%20I%27d%20like%20to%20talk%20about%20which%20accelerator%20fits%20our%20initiative."
+					class="v2-btn-primary">Talk to our team</a>
+			</div>
+		</section>
+
+	</main>
+
+	<!-- Footer -->
+	<footer id="footer" class="footer footer-light bkg-grey-ultralight"></footer>
+
+	<!-- Js -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="/js/common.js?v=20211215.1"></script>
+	<script src="/js/sidenav.js" type="text/javascript"></script>
+	<script>
+		$("#header").load("/header.html");
+		$("#footer").load("/footer.html");
+	</script>
+</body>
+
+</html>
