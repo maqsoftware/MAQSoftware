@@ -1,15 +1,18 @@
 
-window.onscroll = function () { myFunction() };
-
 var navbar = document.getElementById("secondaryNav");
-var sticky = navbar.offsetTop;
+var sticky = navbar ? navbar.offsetTop : 0;
 
 function myFunction() {
+    if (!navbar) return;
     if (window.pageYOffset >= sticky) {
         navbar.classList.add("sticky")
     } else {
         navbar.classList.remove("sticky");
     }
+}
+
+if (navbar) {
+    window.onscroll = function () { myFunction() };
 }
 
 function resourcesClick(id) {

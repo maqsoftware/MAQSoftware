@@ -1,14 +1,13 @@
-$("#header").load("/header.html", function() {
-    $('#header .icon-menu-hamburger').on('click', function() {
-      // console.log('Nav item clicked in header!');
-        const navbar = document.getElementById('navbar-right');
-        navbar.classList.toggle('closed');
-    });
-    $('#header .dismiss-button').on('click', function() {
-      // console.log('Dismiss clicked!');
-        const navbar = document.getElementById('navbar-right');
-        navbar.classList.toggle('closed');
-    });
+$("#header").load("/header.html");
+
+// Delegated handlers — survive any later re-render of #header content
+$(document).on('click', '#header .icon-menu-hamburger', function() {
+    var navbar = document.getElementById('navbar-right');
+    if (navbar) navbar.classList.toggle('closed');
+});
+$(document).on('click', '#header .dismiss-button', function() {
+    var navbar = document.getElementById('navbar-right');
+    if (navbar) navbar.classList.toggle('closed');
 });
 
 // const hamburger = document.getElementById('icon-menu-hamburger');
